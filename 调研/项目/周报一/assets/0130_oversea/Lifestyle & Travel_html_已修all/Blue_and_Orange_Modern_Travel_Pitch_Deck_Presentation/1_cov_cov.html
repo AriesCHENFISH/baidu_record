@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitch Deck Presentation - Thynk Unlimited</title>
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#1e293b',
+                        brandOrange: '#FF8C42',
+                        brandYellow: '#FFB75E',
+                        textLight: '#F8FAFC',
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    },
+                    boxShadow: {
+                        'ticket': '0 25px 50px -12px rgba(0, 0, 0, 0.6)',
+                        'glow': '0 0 30px rgba(255, 140, 66, 0.3)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        ::-webkit-scrollbar { display: none; }
+        
+        #page_container {
+            width: 1280px; height: 720px;
+            margin: 0 auto; position: relative;
+            background-color: #1e293b;
+            overflow: hidden;
+        }
+
+        /* Enhanced Glassmorphism Ticket */
+        .glass-ticket {
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.02) 100%);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 
+                0 25px 50px -12px rgba(0, 0, 0, 0.6),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+        }
+
+        /* Dashed Line */
+        .dashed-divider {
+            background-image: linear-gradient(to bottom, transparent 40%, rgba(255,255,255,0.6) 40%);
+            background-size: 2px 16px;
+            width: 2px;
+            height: 100%;
+        }
+
+        /* Notches */
+        .ticket-notch {
+            width: 40px; height: 40px;
+            background-color: #1e293b; /* Match background color to simulate transparency */
+            border-radius: 50%;
+            position: absolute;
+            left: 65%;
+            transform: translateX(-50%);
+            z-index: 20;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+        }
+
+        .static-glow {
+            position: absolute; border-radius: 50%; filter: blur(90px); z-index: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=2000&auto=format&fit=crop" 
+                 class="w-full h-full object-cover opacity-80 mix-blend-overlay">
+            <div class="absolute inset-0 bg-gradient-to-r from-bgDark via-bgDark/90 to-bgDark/70"></div>
+        </div>
+
+        <div class="static-glow bg-brandOrange/20 w-[600px] h-[600px] -top-40 -left-40"></div>
+        <div class="static-glow bg-blue-500/20 w-[600px] h-[600px] bottom-0 right-0"></div>
+
+        <div class="absolute inset-0 z-30 flex items-center justify-center p-16">
+            
+            <div class="ticket-notch top-[-20px]"></div>
+            <div class="ticket-notch bottom-[-20px]"></div>
+
+            <div class="relative w-full h-full max-w-6xl max-h-[560px] rounded-[3rem] glass-ticket flex overflow-hidden z-10">
+                
+                <div class="w-[65%] h-full flex flex-col justify-center px-20 py-12 relative">
+                    
+                    <div class="absolute top-12 left-20 flex items-center gap-4">
+                        <div class="w-12 h-12 relative flex items-center justify-center bg-white/5 rounded-full border border-white/10 backdrop-blur-sm">
+                            <svg viewBox="0 0 100 100" class="w-8 h-8">
+                                <defs>
+                                    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#FFB75E;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#FF8C42;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="50" cy="50" r="45" fill="none" stroke="url(#logoGradient)" stroke-width="5" stroke-opacity="0.4"/>
+                                <circle cx="50" cy="50" r="22" fill="url(#logoGradient)" />
+                                <path d="M25 58 Q 50 30 75 58" fill="none" stroke="white" stroke-width="3.5" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <div class="text-white font-serif text-lg tracking-wide">Thynk Unlimited</div>
+                    </div>
+
+                    <div class="mt-16">
+                        <span class="text-brandOrange font-bold tracking-[0.3em] uppercase text-sm mb-4 block">Boarding Pass to the Future</span>
+                        <h1 class="text-7xl font-serif font-bold text-white leading-tight mb-6 drop-shadow-lg">
+                            Pitch Deck <br>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandOrange to-brandYellow italic">Presentation</span>
+                        </h1>
+                        <div class="w-24 h-1.5 bg-gradient-to-r from-brandOrange to-brandYellow rounded-full"></div>
+                    </div>
+
+                    <div class="absolute bottom-12 left-20 flex gap-12 text-white/60 font-sans text-sm tracking-wider">
+                        <div>
+                            <span class="block text-white font-bold uppercase text-xs mb-1 text-brandOrange">Date</span>
+                            Oct 26, 2026
+                        </div>
+                        <div>
+                            <span class="block text-white font-bold uppercase text-xs mb-1 text-brandOrange">Flight</span>
+                            TU-X99
+                        </div>
+                        <div>
+                            <span class="block text-white font-bold uppercase text-xs mb-1 text-brandOrange">Gate</span>
+                            A01
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="relative h-full flex flex-col items-center justify-center py-10">
+                    <div class="dashed-divider"></div>
+                </div>
+
+                <div class="w-[35%] h-full flex flex-col items-center justify-center relative overflow-hidden">
+                    
+                    <div class="absolute inset-0 bg-brandOrange/5 z-0"></div>
+
+                    <div class="mb-12 transform rotate-[-30deg] drop-shadow-2xl z-10 animate-pulse">
+                        <i class="fa-solid fa-plane-departure text-7xl text-white"></i>
+                    </div>
+
+                    <div class="border-4 border-white/20 p-8 rounded-2xl rotate-[-10deg] bg-white/5 backdrop-blur-md shadow-lg z-10 group hover:rotate-0 transition-transform duration-500">
+                        <h2 class="text-2xl font-bold text-brandOrange mb-1 font-serif text-center">Priority</h2>
+                        <h2 class="text-4xl font-black text-white uppercase tracking-tighter text-center">Access</h2>
+                    </div>
+
+                    <div class="absolute bottom-12 left-1/2 transform -translate-x-1/2 w-3/4 h-12 bg-white/10 rounded flex items-center justify-evenly px-2">
+                        <div class="w-1 h-full bg-white/30"></div>
+                        <div class="w-2 h-full bg-white/30"></div>
+                        <div class="w-1 h-full bg-white/30"></div>
+                        <div class="w-3 h-full bg-white/30"></div>
+                        <div class="w-1 h-full bg-white/30"></div>
+                        <div class="w-2 h-full bg-white/30"></div>
+                        <div class="w-1 h-full bg-white/30"></div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today's Agenda - Strategic Keynote</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Custom Font -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryStart: '#8C7AE6',
+                        primaryEnd: '#1B3F9B',
+                        neon: '#B33CE0',
+                        darkBg: '#1A1B2E',
+                        bodyText: '#D1D5DB',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px;
+            background-color: #000000;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #FFFFFF 30%, #8C7AE6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .number-gradient {
+            background: linear-gradient(180deg, #FFFFFF 0%, #8C7AE6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* 背景光晕 */
+        .glow-effect {
+            position: absolute;
+            width: 800px; height: 400px;
+            background: radial-gradient(circle, rgba(140, 122, 230, 0.15) 0%, rgba(27, 63, 155, 0.05) 50%, transparent 70%);
+            filter: blur(80px);
+            z-index: 0;
+        }
+
+        .item-border { border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+        
+        .vertical-divider {
+            width: 1px; height: 100%;
+            background: linear-gradient(180deg, transparent, rgba(140, 122, 230, 0.3), transparent);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <!-- 装饰背景 -->
+        <div class="glow-effect" style="bottom: -100px; left: -100px;"></div>
+        <div class="glow-effect" style="top: -100px; right: -100px; opacity: 0.6;"></div>
+
+        <div class="absolute top-12 left-16 z-20">
+            <p class="text-sm tracking-[0.3em] text-white/30 uppercase font-medium">Strategic Roadmap 2026</p>
+        </div>
+
+        <!-- 主内容网格 -->
+        <div class="relative z-10 w-full h-full grid grid-cols-12 gap-8 px-16 pt-32 pb-12">
+
+            <!-- 左侧：标题区域 (4 Columns) -->
+            <div class="col-span-4 flex flex-col justify-center h-full pb-20">
+                <!-- 
+                    修改点：使用 border-l-4 竖线 
+                    pl-11 (44px) 比原本的 pl-6 (24px) 增加了 20px 的间距
+                -->
+                <div class="border-l-4 border-neon pl-11">
+                    <h1 class="text-6xl font-black text-white leading-tight tracking-tight mb-8">
+                        TODAY'S<br>
+                        <span class="text-gradient">AGENDA</span>
+                    </h1>
+                    
+                    <p class="text-bodyText text-lg leading-relaxed font-light pr-8">
+                        A comprehensive overview of our strategic roadmap, financial models, and market positioning.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 右侧：列表项 (8 Columns) -->
+            <div class="col-span-8 h-full flex items-center">
+                <div class="w-full grid grid-cols-2 gap-x-16 h-auto relative">
+                    
+                    <!-- 中间装饰线 -->
+                    <div class="absolute left-1/2 top-0 bottom-0 vertical-divider -translate-x-1/2"></div>
+
+                    <!-- 第一列 (01-05) -->
+                    <div class="flex flex-col justify-between h-[480px] pr-8">
+                        <div class="flex items-center item-border pb-4">
+                            <h2 class="text-4xl font-bold number-gradient w-16">01</h2>
+                            <div class="ml-4">
+                                <h3 class="text-white text-xl font-medium">Introduction</h3>
+                                <p class="text-[10px] text-gray-500 uppercase tracking-widest mt-1">Overview</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center item-border pb-4">
+                            <h2 class="text-4xl font-bold number-gradient w-16">02</h2>
+                            <div class="ml-4">
+                                <h3 class="text-white text-xl font-medium">Problem Statement</h3>
+                                <p class="text-[10px] text-gray-500 uppercase tracking-widest mt-1">Analysis</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center item-border pb-4">
+                            <h2 class="text-4xl font-bold number-gradient w-16">03</h2>
+                            <div class="ml-4">
+                                <h3 class="text-white text-xl font-medium">Innovative Solutions</h3>
+                                <p class="text-[10px] text-gray-500 uppercase tracking-widest mt-1">Product</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center item-border pb-4">
+                            <h2 class="text-4xl font-bold number-gradient w-16">04</h2>
+                            <div class="ml-4">
+                                <h3 class="text-white text-xl font-medium">Our Services</h3>
+                                <p class="text-[10px] text-gray-500 uppercase tracking-widest mt-1">Offerings</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center pb-4">
+                            <h2 class="text-4xl font-bold number-gradient w-16">05</h2>
+                            <div class="ml-4">
+                                <h3 class="text-white text-xl font-medium">Size of Market</h3>
+                                <p class="text-[10px] text-gray-500 uppercase tracking-widest mt-1">Addressable</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 第二列 (06-10) -->
+                    <div class="flex flex-col justify-between h-[480px] pl-8">
+                        <div class="flex items-center item-border pb-4">
+                            <h2 class="text-4xl font-bold number-gradient w-16">06</h2>
+                            <div class="ml-4">
+                                <h3 class="text-white text-xl font-medium">Competitive Advantages</h3>
+                                <p class="text-[10px] text-gray-500 uppercase tracking-widest mt-1">Strategy</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center item-border pb-4">
+                            <h2 class="text-4xl font-bold number-gradient w-16">07</h2>
+                            <div class="ml-4">
+                                <h3 class="text-white text-xl font-medium">Traction</h3>
+                                <p class="text-[10px] text-gray-500 uppercase tracking-widest mt-1">Growth Metrics</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center item-border pb-4">
+                            <h2 class="text-4xl font-bold number-gradient w-16">08</h2>
+                            <div class="ml-4">
+                                <h3 class="text-white text-xl font-medium">Revenue Model</h3>
+                                <p class="text-[10px] text-gray-500 uppercase tracking-widest mt-1">Financials</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center item-border pb-4">
+                            <h2 class="text-4xl font-bold number-gradient w-16">09</h2>
+                            <div class="ml-4">
+                                <h3 class="text-white text-xl font-medium">Accomplishments</h3>
+                                <p class="text-[10px] text-gray-500 uppercase tracking-widest mt-1">Milestones</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center pb-4">
+                            <h2 class="text-4xl font-bold number-gradient w-16">10</h2>
+                            <div class="ml-4">
+                                <h3 class="text-white text-xl font-medium">Use of Funds</h3>
+                                <p class="text-[10px] text-gray-500 uppercase tracking-widest mt-1">Allocation</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部装饰条 -->
+        <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-neon via-primaryEnd to-transparent opacity-50"></div>
+    </div>
+
+</body>
+</html>

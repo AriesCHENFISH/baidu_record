@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Pop Portfolio Slide</title>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        /* CSS Reset & Global Config */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Custom Retro Font Styling Simulation */
+        .retro-font {
+            font-family: 'Georgia', serif;
+            font-style: italic;
+        }
+
+        /* Checkered Pattern CSS for the Photo Frame */
+        .checkered-pattern {
+            background-color: #F0F0F0;
+            background-image: 
+                linear-gradient(45deg, #F28C33 25%, transparent 25%, transparent 75%, #F28C33 75%, #F28C33), 
+                linear-gradient(45deg, #F28C33 25%, transparent 25%, transparent 75%, #F28C33 75%, #F28C33);
+            background-position: 0 0, 10px 10px;
+            background-size: 20px 20px;
+        }
+
+        /* CSS Shapes for Decoration */
+        .shape-star {
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        }
+
+        /* Rainbow Arc Implementation */
+        .rainbow-arc {
+            border-top-left-radius: 999px;
+            border-top-right-radius: 999px;
+        }
+    </style>
+</head>
+<body class="bg-gray-200 flex items-center justify-center min-h-screen">
+
+    <div id="page_container" class="relative overflow-hidden bg-[#111111]" style="width: 1280px; height: 720px; margin: 0 auto;">
+
+        <div class="absolute top-0 left-0 w-full h-20 flex justify-between items-end px-12 z-40">
+            <div class="flex items-center gap-0 mb-2">
+                <div class="bg-[#F28C33] border-2 border-[#F0F0F0] px-4 py-1 transform -rotate-2 shadow-[4px_4px_0px_#3556BC]">
+                    <h6 class="text-[#111111] text-sm font-black uppercase tracking-tighter">Freelance Portfolio</h6>
+                </div>
+                <div class="ml-4 border-2 border-[#F0F0F0] rounded-full px-3 py-0.5 bg-transparent">
+                    <h6 class="text-[#F0F0F0] text-xs font-bold tracking-[0.2em]">2023</h6>
+                </div>
+            </div>
+
+            <div class="relative mb-2">
+                <div class="absolute -top-1 -left-2 w-4 h-4 bg-[#4E9445] rounded-full opacity-80"></div>
+                <div class="flex flex-col items-end">
+                    <span class="text-[#F0F0F0] text-4xl font-black italic retro-font leading-none tracking-tighter relative z-10">01</span>
+                    <div class="w-10 h-2 bg-[#F3A8C3] mt-1 shadow-[2px_2px_0px_#3556BC]"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute top-[-20px] right-[100px] z-30 w-24 h-24 flex items-center justify-center">
+            <div class="absolute w-24 h-24 bg-[#F0F0F0] rounded-full"></div>
+            <div class="absolute w-20 h-20 bg-[#F3A8C3] rounded-full border-4 border-[#111111]"></div>
+            <div class="absolute w-6 h-6 bg-[#F28C33] rounded-full border-2 border-[#111111]"></div>
+        </div>
+
+        <div class="absolute top-20 left-10 right-10 bottom-10 border-2 border-[#F0F0F0] rounded-xl flex flex-col">
+            
+            <div class="h-14 border-b-2 border-[#F0F0F0] flex justify-between items-center px-6">
+                <h3 class="text-[#F0F0F0] text-2xl font-bold">About Me</h3>
+                <div class="text-[#F0F0F0] text-2xl">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                </div>
+            </div>
+
+            <div class="flex-1 grid grid-cols-12 relative overflow-hidden">
+                
+                <div class="col-span-5 relative flex items-center justify-center pl-8">
+                    <div class="absolute top-20 left-4 w-24 h-24 bg-[#4E9445] shape-star transform -rotate-12 z-0 opacity-80"></div>
+                    <div class="absolute top-20 left-4 w-24 h-24 bg-[#F0F0F0] shape-star transform -rotate-12 z-0 translate-x-1 translate-y-1" style="z-index: -1;"></div>
+
+                    <div class="relative w-80 bg-white p-3 shadow-2xl transform -rotate-3 z-10 border-2 border-[#F0F0F0]">
+                        <div class="w-full h-full checkered-pattern p-4 pb-12">
+                            <div class="w-full h-80 bg-gray-300 overflow-hidden border-2 border-[#111111] relative">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                     alt="Olivia Wilson Portrait" 
+                                     class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        
+                        <div class="absolute top-[-20px] left-[-20px] bg-[#F28C33] text-[#111111] px-4 py-1 rounded-full border-2 border-[#111111] font-black transform -rotate-12 text-xl shadow-[4px_4px_0px_#111111]">
+                            <span>LIKE</span>
+                        </div>
+
+                        <div class="absolute bottom-[-30px] right-[-20px] w-48 h-28 bg-[#F3A8C3] transform rotate-6 border-2 border-[#111111] flex items-center justify-center p-2 shadow-[6px_6px_0px_rgba(0,0,0,0.5)]">
+                             <div class="w-full h-full border-2 border-dashed border-[#111111] flex flex-col items-center justify-center">
+                                 <h5 class="text-[#111111] font-bold text-xl leading-tight text-center uppercase">
+                                     Brand<br>Designer
+                                 </h5>
+                             </div>
+                             <div class="absolute -left-3 top-1/2 w-6 h-6 bg-[#111111] rounded-full transform -translate-y-1/2"></div>
+                             <div class="absolute -right-3 top-1/2 w-6 h-6 bg-[#111111] rounded-full transform -translate-y-1/2"></div>
+                        </div>
+                    </div>
+
+                    <div class="absolute bottom-16 left-10 text-[#3556BC] text-6xl z-20">
+                        <i class="fa-solid fa-star-of-life fa-spin" style="animation-duration: 10s;"></i>
+                    </div>
+                </div>
+
+                <div class="col-span-7 flex flex-col justify-center pr-16 pl-4 relative z-10">
+                    <p class="text-[#F0F0F0] text-xl mb-2 font-medium tracking-wide">Hey, I am</p>
+                    <h1 class="text-[#F3A8C3] text-8xl font-black retro-font mb-8 drop-shadow-[4px_4px_0px_#3556BC]">
+                        Olivia Wilson
+                    </h1>
+                    <h4 class="text-[#F0F0F0] text-2xl font-bold leading-relaxed mb-6 border-l-4 border-[#F28C33] pl-6">
+                        It is my mission to bring dreams to life through colors, shapes, and imagination.
+                    </h4>
+                    <p class="text-[#cccccc] text-lg font-light leading-relaxed max-w-xl">
+                        I specialize in creating visually captivating designs that speak volumes without saying a word. My work bridges the gap between classic aesthetics and modern functionality.
+                    </p>
+                </div>
+
+                <div class="absolute -bottom-16 -right-16 w-64 h-64 z-0 pointer-events-none">
+                    <div class="absolute bottom-0 right-0 w-64 h-64 bg-[#F3A8C3] rainbow-arc border-4 border-[#111111]"></div>
+                    <div class="absolute bottom-0 right-0 w-48 h-48 bg-[#3556BC] rainbow-arc border-4 border-[#111111]"></div>
+                    <div class="absolute bottom-0 right-0 w-32 h-32 bg-[#F28C33] rainbow-arc border-4 border-[#111111]"></div>
+                    <div class="absolute bottom-0 right-0 w-16 h-16 bg-[#111111] rainbow-arc border-t-4 border-l-4 border-[#111111]"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

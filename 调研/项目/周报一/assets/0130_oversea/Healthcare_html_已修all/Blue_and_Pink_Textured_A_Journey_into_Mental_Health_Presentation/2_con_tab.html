@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contents - Card Flow Edition</title>
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { 900: '#0F172A', 800: '#1E3A8A' },
+                        slate: { 700: '#334155', 200: '#E2E8F0', 100: '#F1F5F9', 50: '#F8FAFC' }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                        serif: ['"Times New Roman"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px;
+            margin: 0 auto; position: relative;
+            background-color: #FFFFFF; overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* 侧边建筑感装饰线 */
+        .vertical-line {
+            position: absolute;
+            top: 0; left: 80px; width: 1px; height: 100%;
+            background-color: #F1F5F9; z-index: 1;
+        }
+
+        /* 核心卡片样式 - 继承 P11 的精致感 */
+        .toc-card {
+            @apply bg-white rounded-[24px] p-6 shadow-[0_12px_40px_rgba(15,23,42,0.04)] border border-slate-50 flex items-center gap-5 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <div class="vertical-line"></div>
+        <div class="absolute top-0 right-0 w-[400px] h-[400px] bg-slate-50 rounded-full blur-[100px] opacity-60"></div>
+
+        <header class="absolute top-0 left-0 w-full px-20 py-12 flex justify-between items-start z-30">
+            <div class="flex items-center gap-6">
+                <div class="w-16 h-[2px] bg-navy-900 mt-6"></div>
+                <div class="text-navy-900">
+                    <p class="text-xs uppercase tracking-[0.4em] text-slate-700 font-bold opacity-40">Section</p>
+                    <p class="text-6xl font-serif font-bold leading-none">02</p>
+                </div>
+            </div>
+            <div class="flex gap-4">
+                <span class="px-5 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest border border-navy-900 text-navy-900 bg-white">Index Flow</span>
+                <span class="px-5 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest bg-navy-800 text-white shadow-lg">9 Chapters</span>
+            </div>
+        </header>
+
+        <main class="relative z-10 grid grid-cols-12 h-full items-center px-20 pt-20">
+            
+            <div class="col-span-4 flex flex-col justify-center">
+                <h1 class="text-9xl font-serif font-bold text-navy-900 leading-[0.85] mb-8">
+                    The <br>
+                    <span class="italic font-light text-slate-300">Index</span>
+                </h1>
+                <div class="flex flex-col gap-2">
+                    <div class="w-12 h-1 bg-navy-800"></div>
+                    <p class="text-xs font-bold text-navy-800 uppercase tracking-[0.5em] leading-loose">Mental Health <br>Roadmap 2026</p>
+                </div>
+            </div>
+
+            <div class="col-span-8 grid grid-cols-2 gap-x-8 h-[550px] overflow-visible">
+                <div class="flex flex-col gap-6 justify-center">
+                    <div class="toc-card">
+                        <span class="text-xl font-serif font-bold text-navy-800 opacity-20 italic">01</span>
+                        <h3 class="font-bold text-navy-900 text-lg tracking-tight">Introduction</h3>
+                    </div>
+                    <div class="toc-card">
+                        <span class="text-xl font-serif font-bold text-navy-800 opacity-20 italic">02</span>
+                        <h3 class="font-bold text-navy-900 text-lg tracking-tight">Defining Mental Health</h3>
+                    </div>
+                    <div class="toc-card">
+                        <span class="text-xl font-serif font-bold text-navy-800 opacity-20 italic">03</span>
+                        <h3 class="font-bold text-navy-900 text-lg tracking-tight">Core Importance</h3>
+                    </div>
+                    <div class="toc-card">
+                        <span class="text-xl font-serif font-bold text-navy-800 opacity-20 italic">04</span>
+                        <h3 class="font-bold text-navy-900 text-lg tracking-tight">Common Disorders</h3>
+                    </div>
+                    <div class="toc-card">
+                        <span class="text-xl font-serif font-bold text-navy-800 opacity-20 italic">05</span>
+                        <h3 class="font-bold text-navy-900 text-lg tracking-tight">Myths vs. Facts</h3>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-6 justify-center mt-20">
+                    <div class="toc-card">
+                        <span class="text-xl font-serif font-bold text-navy-800 opacity-20 italic">06</span>
+                        <h3 class="font-bold text-navy-900 text-lg tracking-tight">Signs & Red Flags</h3>
+                    </div>
+                    <div class="toc-card">
+                        <span class="text-xl font-serif font-bold text-navy-800 opacity-20 italic">07</span>
+                        <h3 class="font-bold text-navy-900 text-lg tracking-tight">Seeking Professional Help</h3>
+                    </div>
+                    <div class="toc-card">
+                        <span class="text-xl font-serif font-bold text-navy-800 opacity-20 italic">08</span>
+                        <h3 class="font-bold text-navy-900 text-lg tracking-tight">Daily Well-being</h3>
+                    </div>
+                    <div class="toc-card border-navy-900 !bg-navy-900">
+                        <span class="text-xl font-serif font-bold text-white/40 italic">09</span>
+                        <h3 class="font-bold text-white text-lg tracking-tight">Action Roadmap</h3>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div class="absolute bottom-12 left-20">
+            <span class="text-[10px] text-slate-300 tracking-[0.6em] uppercase">Visual Index System v1.0</span>
+        </div>
+    </div>
+
+</body>
+</html>

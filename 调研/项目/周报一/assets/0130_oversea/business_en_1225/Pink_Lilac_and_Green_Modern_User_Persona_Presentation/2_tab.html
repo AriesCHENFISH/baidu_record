@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table of Contents - Grid Layout</title>
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#000000', 
+                        secondary: '#666666',
+                        bgWhite: '#FFFFFF', 
+                        cardGreen: '#326B54', 
+                        cardGray: '#F2F2F2', 
+                        cardLavender: '#E8D5EB', 
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'Inter', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        'xl': '1rem',
+                        '2xl': '1.5rem',
+                        '3xl': '2rem',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Global Styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        /* Page Container */
+        .page-container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FFFFFF;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Vertical Center */
+            align-items: center; /* Horizontal Center */
+        }
+
+        /* Utility for circle icons/numbers */
+        .icon-circle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-container p-16 font-sans">
+        
+        <header class="text-center mb-14">
+            <div class="text-cardGreen font-bold tracking-[0.2em] uppercase mb-4 text-sm">Overview</div>
+            <h1 class="text-6xl font-bold text-primary leading-tight">
+                Table of Contents
+            </h1>
+        </header>
+
+        <div class="grid grid-cols-2 gap-8 w-full max-w-6xl">
+            
+            <div class="bg-cardGreen rounded-[32px] p-8 flex items-center gap-6 text-white transition-transform hover:-translate-y-1 shadow-lg group">
+                <div class="icon-circle bg-white/20 text-white shrink-0 group-hover:bg-white group-hover:text-cardGreen transition-colors">
+                    01
+                </div>
+                <div class="flex-1">
+                    <h3 class="text-2xl font-bold mb-1">User Persona Analysis</h3>
+                    <p class="text-white/80 text-base font-light">Understanding users & needs.</p>
+                </div>
+                <i class="fa-solid fa-users text-2xl opacity-60 group-hover:opacity-100 transition-opacity"></i>
+            </div>
+
+            <div class="bg-cardLavender rounded-[32px] p-8 flex items-center gap-6 text-primary transition-transform hover:-translate-y-1 group">
+                <div class="icon-circle bg-white/60 text-primary shrink-0">
+                    02
+                </div>
+                <div class="flex-1">
+                    <h3 class="text-2xl font-bold mb-1">Pain Points & Challenges</h3>
+                    <p class="text-primary/70 text-base">Identifying key bottlenecks.</p>
+                </div>
+                <i class="fa-solid fa-bolt text-2xl opacity-40 group-hover:opacity-100 transition-opacity"></i>
+            </div>
+
+            <div class="bg-cardGray rounded-[32px] p-8 flex items-center gap-6 text-primary transition-transform hover:-translate-y-1 group">
+                <div class="icon-circle bg-white border border-gray-300 text-secondary shrink-0">
+                    03
+                </div>
+                <div class="flex-1">
+                    <h3 class="text-2xl font-bold mb-1">Strategic Goals</h3>
+                    <p class="text-secondary text-base">Defining success metrics.</p>
+                </div>
+                <i class="fa-solid fa-bullseye text-2xl opacity-40 group-hover:opacity-100 transition-opacity"></i>
+            </div>
+
+            <div class="bg-cardGray rounded-[32px] p-8 flex items-center gap-6 text-primary transition-transform hover:-translate-y-1 group">
+                <div class="icon-circle bg-white border border-gray-300 text-secondary shrink-0">
+                    04
+                </div>
+                <div class="flex-1">
+                    <h3 class="text-2xl font-bold mb-1">Implementation Plan</h3>
+                    <p class="text-secondary text-base">Timeline & next steps.</p>
+                </div>
+                <i class="fa-solid fa-road text-2xl opacity-40 group-hover:opacity-100 transition-opacity"></i>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

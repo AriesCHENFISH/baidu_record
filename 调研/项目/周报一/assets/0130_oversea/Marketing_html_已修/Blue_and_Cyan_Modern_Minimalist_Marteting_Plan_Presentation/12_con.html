@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Gallery</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        /* CSS Reset & Global Settings */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        /* Main Page Container */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            /* Gradient Background: Purple -> Blue -> Green */
+            background: linear-gradient(180deg, #8BA4F9 0%, #A8D0E6 50%, #C8F7C5 100%);
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        .text-primary { color: #000000; }
+        .text-secondary { color: #555555; }
+        .text-white-overlay { color: #FFFFFF; }
+
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01); }
+        .pill-shadow { box-shadow: 0 15px 30px -5px rgba(50, 50, 93, 0.15), 0 8px 16px -8px rgba(0, 0, 0, 0.1); }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <div class="absolute top-0 left-0 w-full h-full pointer-events-none opacity-20">
+            <div class="absolute top-[-150px] left-[200px] w-[500px] h-[500px] rounded-full bg-white blur-3xl opacity-30"></div>
+        </div>
+
+        <div class="w-full h-full flex flex-col px-16 pt-12 pb-10 relative z-10">
+
+            <div class="flex justify-between items-start mb-10">
+                <div class="w-[500px] mt-4">
+                    <p class="text-white-overlay text-xl font-light leading-relaxed tracking-wide opacity-95">
+                        A showcase of applied identity elements across different media channels and touchpoints.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-full px-16 py-6 pill-shadow transform translate-y-2">
+                    <h1 class="text-6xl font-bold tracking-widest text-primary uppercase m-0">
+                        GALLERY
+                    </h1>
+                </div>
+            </div>
+
+            <div class="flex-grow grid grid-cols-3 gap-6 h-[460px]">
+                
+                <div class="bg-white rounded-[40px] p-10 flex flex-col justify-between card-shadow h-full">
+                    <div>
+                        <div class="w-12 h-12 bg-black rounded-full flex items-center justify-center text-white mb-6">
+                            <i class="fa-solid fa-quote-left"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold text-primary mb-4">Market Impact</h2>
+                        <p class="text-secondary text-lg leading-relaxed">
+                            The new visual language has increased brand recognition by <span class="text-black font-bold">45%</span> in the initial testing phase.
+                        </p>
+                    </div>
+                    
+                    <div class="border-t border-gray-100 pt-6">
+                        <div class="flex items-center gap-3 mb-2">
+                            <div class="h-2 w-2 rounded-full bg-green-400"></div>
+                            <span class="text-sm font-bold text-gray-400 uppercase tracking-widest">Status: Approved</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="h-full bg-white rounded-[40px] p-3 card-shadow">
+                    <div class="w-full h-full rounded-[32px] overflow-hidden relative group">
+                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1364&auto=format&fit=crop" 
+                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                             alt="Mobile UI Design">
+                        
+                        <div class="absolute bottom-6 left-6 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm z-10">
+                            <p class="text-xs font-bold text-primary">VISUAL DESIGN</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-6 h-full">
+                    <div class="flex-grow bg-white rounded-[40px] p-3 card-shadow">
+                         <div class="w-full h-full rounded-[32px] overflow-hidden relative group">
+                            <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop" 
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                                 alt="Work Environment">
+                        </div>
+                    </div>
+
+                    <div class="h-[140px] bg-white/40 backdrop-blur-md border border-white/50 rounded-[40px] p-6 flex items-center justify-between card-shadow">
+                        <div>
+                            <p class="text-primary text-sm font-bold uppercase tracking-widest opacity-60">Engagement</p>
+                            <p class="text-primary text-5xl font-bold mt-1">+28%</p>
+                        </div>
+                        <div class="h-12 w-12 bg-white rounded-full flex items-center justify-center text-primary shadow-sm">
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

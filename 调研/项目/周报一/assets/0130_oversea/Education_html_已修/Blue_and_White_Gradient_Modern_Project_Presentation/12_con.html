@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Visual Odyssey - Strategic Map</title>
+    
+    <!-- Google Fonts: Noto Sans SC as requested + Inter for English/Numbers -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgMain: '#F5F7FA',
+                        textPrimary: '#333333',
+                        textSecondary: '#666666',
+                        borderBlue: '#4A6FA5',
+                        deepBlue: '#2E5CBE',
+                        lightBlue: '#89C4F4',
+                        decorativeWhite: '#FFFFFF',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans SC', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(46, 92, 190, 0.1)',
+                        'card': '0 4px 20px rgba(0, 0, 0, 0.03)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Structure */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Hide Scrollbar */
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+
+        /* Decorative Background Blobs */
+        .blur-orb-1 {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(46, 92, 190, 0.15) 0%, rgba(137, 196, 244, 0.05) 70%);
+            top: -100px;
+            left: -100px;
+            border-radius: 50%;
+            filter: blur(60px);
+            z-index: 0;
+        }
+
+        .blur-orb-2 {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(137, 196, 244, 0.12) 0%, rgba(245, 247, 250, 0) 70%);
+            bottom: -150px;
+            right: -100px;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: 0;
+        }
+
+        /* Connection Lines Logic */
+        .connector-lines {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 380px;
+            z-index: 1;
+            pointer-events: none;
+        }
+        
+        .line-path {
+            fill: none;
+            stroke: #4A6FA5;
+            stroke-width: 1;
+            stroke-dasharray: 4 4;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Container: 1280x720 Fixed -->
+    <div id="page_container" class="w-[1280px] h-[720px] bg-bgMain relative mx-auto overflow-hidden font-sans">
+
+        <!-- Background Decor -->
+        <div class="blur-orb-1"></div>
+        <div class="blur-orb-2"></div>
+
+        <!-- Decorative Watermark Number -->
+        <div class="absolute top-[-40px] right-[40px] text-[200px] font-bold text-white opacity-40 select-none z-0 leading-none">
+            06
+        </div>
+
+        <!-- SVG Connectors (Visualizing the logic flow) -->
+        <svg class="connector-lines" viewBox="0 0 600 380">
+            <!-- Left Connections -->
+            <path class="line-path" d="M 10 60 C 150 60, 150 190, 300 190" />
+            <path class="line-path" d="M 10 190 L 300 190" />
+            <path class="line-path" d="M 10 320 C 150 320, 150 190, 300 190" />
+            
+            <!-- Right Connections -->
+            <path class="line-path" d="M 590 60 C 450 60, 450 190, 300 190" />
+            <path class="line-path" d="M 590 190 L 300 190" />
+            <path class="line-path" d="M 590 320 C 450 320, 450 190, 300 190" />
+        </svg>
+
+        <!-- Main Content Grid -->
+        <div class="relative z-10 w-full h-full flex flex-col justify-between px-16 py-12">
+            
+            <!-- Content Area -->
+            <div class="flex-1 grid grid-cols-12 gap-8 items-center mt-4">
+                
+                <!-- Left Column: Nodes A, B, C -->
+                <div class="col-span-4 flex flex-col gap-6">
+                    
+                    <!-- Card A -->
+                    <div class="bg-white rounded-xl p-6 shadow-card border border-white/50 flex flex-row items-start gap-4 relative">
+                        <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-lg bg-bgMain">
+                            <h3 class="text-5xl font-bold bg-gradient-to-br from-deepBlue to-lightBlue bg-clip-text text-transparent">A</h3>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-sm text-textSecondary leading-relaxed">
+                                Id eiusmod ex adipisicing reprehenderit eiusmod veniam velit deserunt nisi eu anim non qui esse mollit et nisi deserunt anim consequat.
+                            </p>
+                        </div>
+                        <!-- Connector Dot -->
+                        <div class="absolute right-[-4px] top-1/2 w-2 h-2 bg-borderBlue rounded-full translate-x-1/2 -translate-y-1/2 opacity-50"></div>
+                    </div>
+
+                    <!-- Card B -->
+                    <div class="bg-white rounded-xl p-6 shadow-card border border-white/50 flex flex-row items-start gap-4 relative">
+                        <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-lg bg-bgMain">
+                            <h3 class="text-5xl font-bold bg-gradient-to-br from-deepBlue to-lightBlue bg-clip-text text-transparent">B</h3>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-sm text-textSecondary leading-relaxed">
+                                Id eiusmod ex adipisicing reprehenderit eiusmod veniam velit deserunt nisi eu anim non qui esse mollit et nisi deserunt anim consequat.
+                            </p>
+                        </div>
+                        <!-- Connector Dot -->
+                        <div class="absolute right-[-4px] top-1/2 w-2 h-2 bg-borderBlue rounded-full translate-x-1/2 -translate-y-1/2 opacity-50"></div>
+                    </div>
+
+                    <!-- Card C -->
+                    <div class="bg-white rounded-xl p-6 shadow-card border border-white/50 flex flex-row items-start gap-4 relative">
+                        <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-lg bg-bgMain">
+                            <h3 class="text-5xl font-bold bg-gradient-to-br from-deepBlue to-lightBlue bg-clip-text text-transparent">C</h3>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-sm text-textSecondary leading-relaxed">
+                                Id eiusmod ex adipisicing reprehenderit eiusmod veniam velit deserunt nisi eu anim non qui esse mollit et nisi deserunt anim consequat.
+                            </p>
+                        </div>
+                        <!-- Connector Dot -->
+                        <div class="absolute right-[-4px] top-1/2 w-2 h-2 bg-borderBlue rounded-full translate-x-1/2 -translate-y-1/2 opacity-50"></div>
+                    </div>
+
+                </div>
+
+                <!-- Center Column: Title Core -->
+                <div class="col-span-4 flex flex-col items-center justify-center text-center z-20">
+                    <div class="mb-4 w-16 h-1 bg-gradient-to-r from-deepBlue to-lightBlue rounded-full"></div>
+                    <h1 class="text-7xl font-extrabold text-textPrimary tracking-tight mb-2 leading-tight">
+                        A VISUAL<br>ODYSSEY
+                    </h1>
+                    <div class="flex items-center gap-3 mt-2">
+                        <span class="h-[1px] w-8 bg-textSecondary opacity-30"></span>
+                        <h2 class="text-sm font-semibold text-textSecondary tracking-[0.2em] uppercase">
+                            Mapping Our Thoughts
+                        </h2>
+                        <span class="h-[1px] w-8 bg-textSecondary opacity-30"></span>
+                    </div>
+                </div>
+
+                <!-- Right Column: Nodes D, E, F -->
+                <div class="col-span-4 flex flex-col gap-6">
+                    
+                    <!-- Card D -->
+                    <div class="bg-white rounded-xl p-6 shadow-card border border-white/50 flex flex-row-reverse items-start gap-4 relative text-right">
+                        <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-lg bg-bgMain">
+                            <h3 class="text-5xl font-bold bg-gradient-to-br from-deepBlue to-lightBlue bg-clip-text text-transparent">D</h3>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-sm text-textSecondary leading-relaxed">
+                                Id eiusmod ex adipisicing reprehenderit eiusmod veniam velit deserunt nisi eu anim non qui esse mollit et nisi deserunt anim consequat.
+                            </p>
+                        </div>
+                        <!-- Connector Dot -->
+                        <div class="absolute left-[-4px] top-1/2 w-2 h-2 bg-borderBlue rounded-full -translate-x-1/2 -translate-y-1/2 opacity-50"></div>
+                    </div>
+
+                    <!-- Card E -->
+                    <div class="bg-white rounded-xl p-6 shadow-card border border-white/50 flex flex-row-reverse items-start gap-4 relative text-right">
+                        <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-lg bg-bgMain">
+                            <h3 class="text-5xl font-bold bg-gradient-to-br from-deepBlue to-lightBlue bg-clip-text text-transparent">E</h3>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-sm text-textSecondary leading-relaxed">
+                                Id eiusmod ex adipisicing reprehenderit eiusmod veniam velit deserunt nisi eu anim non qui esse mollit et nisi deserunt anim consequat.
+                            </p>
+                        </div>
+                        <!-- Connector Dot -->
+                        <div class="absolute left-[-4px] top-1/2 w-2 h-2 bg-borderBlue rounded-full -translate-x-1/2 -translate-y-1/2 opacity-50"></div>
+                    </div>
+
+                    <!-- Card F -->
+                    <div class="bg-white rounded-xl p-6 shadow-card border border-white/50 flex flex-row-reverse items-start gap-4 relative text-right">
+                        <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-lg bg-bgMain">
+                            <h3 class="text-5xl font-bold bg-gradient-to-br from-deepBlue to-lightBlue bg-clip-text text-transparent">F</h3>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-sm text-textSecondary leading-relaxed">
+                                Id eiusmod ex adipisicing reprehenderit eiusmod veniam velit deserunt nisi eu anim non qui esse mollit et nisi deserunt anim consequat.
+                            </p>
+                        </div>
+                        <!-- Connector Dot -->
+                        <div class="absolute left-[-4px] top-1/2 w-2 h-2 bg-borderBlue rounded-full -translate-x-1/2 -translate-y-1/2 opacity-50"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Footer Navigation -->
+            <div class="flex justify-center mt-6">
+                <div class="flex items-center justify-between w-[600px] h-[40px] border border-borderBlue/30 rounded-full px-8 bg-white/50 backdrop-blur-sm shadow-sm">
+                    <div class="text-sm font-medium text-textSecondary flex items-center gap-2">
+                        <i class="fa-solid fa-layer-group text-deepBlue"></i>
+                        <span>Studio Shodwe</span>
+                    </div>
+                    <div class="text-sm font-medium text-textPrimary">
+                        Project.
+                    </div>
+                    <div class="text-sm font-medium text-textSecondary">
+                        2024
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

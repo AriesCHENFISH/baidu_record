@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, initial-scale=1.0">
+    <title>CyberSecurity Directory - Unified Style</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans SC', sans-serif; }
+
+        .page-container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #000000;
+            overflow: hidden;
+            background: radial-gradient(circle at 50% 120%, #1e1b4b 0%, #000000 70%);
+        }
+
+        /* Unified Cyber Card Style */
+        .cyber-card {
+            background: linear-gradient(160deg, rgba(30, 27, 75, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 40px;
+            box-shadow: 0 0 60px rgba(76, 29, 149, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cyber-card::after {
+            content: '';
+            position: absolute;
+            top: -2px; left: -2px; right: -2px; bottom: -2px;
+            background: linear-gradient(45deg, #4f46e5, #d946ef, #4f46e5);
+            z-index: -1;
+            border-radius: 42px;
+            background-size: 400%;
+            opacity: 0.5;
+            filter: blur(10px);
+            animation: borderGlow 10s linear infinite;
+        }
+
+        @keyframes borderGlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .btn-gradient {
+            background: linear-gradient(90deg, #6b21a8 0%, #d946ef 100%);
+        }
+
+        .dir-item {
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .dir-item:hover {
+            background: rgba(139, 92, 246, 0.1);
+            padding-left: 10px;
+        }
+
+        .num-gradient {
+            background: linear-gradient(180deg, #fff 0%, #d946ef 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .glow-sphere {
+            position: absolute;
+            filter: blur(100px);
+            opacity: 0.4;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-container text-white">
+
+        <div class="glow-sphere bg-indigo-600 w-[600px] h-[600px] top-[-200px] right-[-100px]"></div>
+        <div class="glow-sphere bg-purple-600 w-[500px] h-[500px] bottom-[-100px] left-[-100px]"></div>
+
+        <div class="absolute top-0 w-full flex justify-between items-center px-16 pt-10 z-50">
+             <div class="flex flex-col">
+                <h1 class="text-2xl font-bold tracking-widest leading-none text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-300">THYNK</h1>
+                <span class="text-[10px] font-light tracking-[0.3em] text-gray-500 mt-1">CONTENTS.</span>
+            </div>
+            <div class="btn-gradient px-6 py-2 rounded-full shadow-lg shadow-purple-900/40">
+                <span class="text-sm font-bold tracking-wide text-white">Page 02</span>
+            </div>
+        </div>
+
+        <div class="relative z-10 px-16 pt-32 h-full flex flex-row items-start justify-between">
+            
+            <div class="w-[30%] pt-10">
+                <h2 class="text-5xl font-extrabold text-white mb-4 leading-tight">
+                    Overview <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Roadmap</span>
+                </h2>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full mb-8"></div>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    A comprehensive breakdown of our cybersecurity posture, threat analysis, and strategic defense mechanisms for the upcoming fiscal year.
+                </p>
+            </div>
+
+            <div class="w-[65%] h-[540px]">
+                <div class="cyber-card w-full h-full p-8 flex flex-col justify-center">
+                    
+                    <div class="grid grid-cols-2 gap-x-12 gap-y-4 h-full content-center">
+                        
+                        <div class="space-y-2">
+                             <div class="dir-item flex items-center p-3 rounded-lg cursor-pointer group">
+                                <span class="text-2xl font-bold num-gradient w-12 opacity-80 group-hover:opacity-100">01</span>
+                                <span class="text-base text-gray-300 font-medium group-hover:text-white group-hover:tracking-wide transition-all">Threat Landscape Analysis</span>
+                            </div>
+                            <div class="dir-item flex items-center p-3 rounded-lg cursor-pointer group">
+                                <span class="text-2xl font-bold num-gradient w-12 opacity-80 group-hover:opacity-100">02</span>
+                                <span class="text-base text-gray-300 font-medium group-hover:text-white group-hover:tracking-wide transition-all">Network Infrastructure</span>
+                            </div>
+                            <div class="dir-item flex items-center p-3 rounded-lg cursor-pointer group">
+                                <span class="text-2xl font-bold num-gradient w-12 opacity-80 group-hover:opacity-100">03</span>
+                                <span class="text-base text-gray-300 font-medium group-hover:text-white group-hover:tracking-wide transition-all">Cloud Computing Risks</span>
+                            </div>
+                            <div class="dir-item flex items-center p-3 rounded-lg cursor-pointer group">
+                                <span class="text-2xl font-bold num-gradient w-12 opacity-80 group-hover:opacity-100">04</span>
+                                <span class="text-base text-gray-300 font-medium group-hover:text-white group-hover:tracking-wide transition-all">Identity Management</span>
+                            </div>
+                            <div class="dir-item flex items-center p-3 rounded-lg cursor-pointer group">
+                                <span class="text-2xl font-bold num-gradient w-12 opacity-80 group-hover:opacity-100">05</span>
+                                <span class="text-base text-gray-300 font-medium group-hover:text-white group-hover:tracking-wide transition-all">Data Privacy Compliance</span>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <div class="dir-item flex items-center p-3 rounded-lg cursor-pointer group">
+                                <span class="text-2xl font-bold num-gradient w-12 opacity-80 group-hover:opacity-100">06</span>
+                                <span class="text-base text-gray-300 font-medium group-hover:text-white group-hover:tracking-wide transition-all">Application Security</span>
+                            </div>
+                            <div class="dir-item flex items-center p-3 rounded-lg cursor-pointer group">
+                                <span class="text-2xl font-bold num-gradient w-12 opacity-80 group-hover:opacity-100">07</span>
+                                <span class="text-base text-gray-300 font-medium group-hover:text-white group-hover:tracking-wide transition-all">Incident Response</span>
+                            </div>
+                            <div class="dir-item flex items-center p-3 rounded-lg cursor-pointer group">
+                                <span class="text-2xl font-bold num-gradient w-12 opacity-80 group-hover:opacity-100">08</span>
+                                <span class="text-base text-gray-300 font-medium group-hover:text-white group-hover:tracking-wide transition-all">Zero Trust Architecture</span>
+                            </div>
+                            <div class="dir-item flex items-center p-3 rounded-lg cursor-pointer group">
+                                <span class="text-2xl font-bold num-gradient w-12 opacity-80 group-hover:opacity-100">09</span>
+                                <span class="text-base text-gray-300 font-medium group-hover:text-white group-hover:tracking-wide transition-all">AI & Emerging Threats</span>
+                            </div>
+                            <div class="dir-item flex items-center p-3 rounded-lg cursor-pointer group">
+                                <span class="text-2xl font-bold num-gradient w-12 opacity-80 group-hover:opacity-100">10</span>
+                                <span class="text-base text-gray-300 font-medium group-hover:text-white group-hover:tracking-wide transition-all">Future Roadmap 2026</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

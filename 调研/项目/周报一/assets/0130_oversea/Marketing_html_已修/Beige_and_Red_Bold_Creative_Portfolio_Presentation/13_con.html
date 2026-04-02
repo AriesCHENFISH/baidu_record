@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 04 - Project Detail</title>
+    
+    <!-- Resources -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800;900&family=Playfair+Display:ital,wght@1,600&display=swap">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: '#E84A27', dark: '#000000', light: '#FFFFFF', gray: '#CCCCCC', border: '#333333' },
+                    fontFamily: { sans: ['Inter', 'Noto Sans SC', 'sans-serif'], serif: ['Playfair Display', 'serif'] }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; background-color: #000000; position: relative; overflow: hidden; margin: 0 auto; }
+        ::-webkit-scrollbar { display: none; }
+        
+        .text-huge {
+            font-size: 11rem;
+            line-height: 0.85;
+        }
+        .text-script {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+        /* 文字描边效果，增加层次感 */
+        .text-outline-primary {
+            -webkit-text-stroke: 2px #E84A27;
+            color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        
+        <!-- Meta Data Row -->
+        <div class="absolute top-0 left-0 w-full px-16 pt-12 z-50">
+            <div class="flex items-center justify-between text-gray text-xs tracking-[0.2em] font-medium uppercase border-b border-border pb-4">
+                <p>Creative Studio</p>
+                <p>04 / Featured Work</p>
+            </div>
+        </div>
+
+        <div class="w-full h-full flex flex-col justify-end relative">
+            
+            <!-- 1. Huge Background Title (Layered Behind) -->
+            <div class="absolute top-24 left-16 z-10 pointer-events-none">
+                <h1 class="text-huge font-black text-primary tracking-tighter uppercase leading-none opacity-100">
+                    VISUAL
+                </h1>
+            </div>
+
+            <!-- 2. Main Image Area (Overlapping the text slightly) -->
+            <div class="absolute top-32 right-0 w-2/3 h-[500px] bg-zinc-900 z-0">
+                <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                     alt="Fashion Project" 
+                     class="w-full h-full object-cover opacity-80 mix-blend-lighten grayscale hover:grayscale-0 transition-all duration-700">
+                
+                <!-- Decorative Script over the image -->
+                <h2 class="text-script text-7xl text-white absolute -bottom-10 -left-20 z-30 drop-shadow-lg">
+                    Editorial
+                </h2>
+            </div>
+
+            <!-- 3. Project Info (Bottom Left) -->
+            <div class="absolute bottom-20 left-16 z-20 max-w-sm">
+                <div class="border-l-4 border-primary pl-6">
+                    <h3 class="text-white text-2xl font-bold uppercase mb-2">Vogue Noir</h3>
+                    <p class="text-gray text-sm mb-4">Art Direction / Photography</p>
+                    <p class="text-gray text-xs leading-relaxed opacity-60">
+                        A stark exploration of contrast and shadow in modern fashion photography. Shot on location in Berlin.
+                    </p>
+
+                    <div class="mt-6 flex items-center gap-4">
+                        <button class="bg-transparent border border-white text-white text-xs uppercase px-6 py-2 hover:bg-white hover:text-black transition-colors">
+                            View Case
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

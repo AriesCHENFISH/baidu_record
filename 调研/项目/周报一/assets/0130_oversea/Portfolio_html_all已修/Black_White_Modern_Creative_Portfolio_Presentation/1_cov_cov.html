@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, height=720, initial-scale=1.0">
+    <title>Cover Page - Unified Style</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { 
+            width: 1280px; height: 720px; margin: 0 auto; position: relative; overflow: hidden; 
+            background-color: #0F1113; font-family: 'Inter', sans-serif;
+        }
+        /* 保持一致的背景纹理 */
+        .bg-texture {
+            position: absolute; inset: 0; z-index: 0;
+            background-image: url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop');
+            background-size: cover; opacity: 0.5; mix-blend-mode: luminosity;
+        }
+        /* 调整为更中心的径向渐变，突出中心 */
+        .bg-gradient-overlay {
+            position: absolute; inset: 0; z-index: 1;
+            background: radial-gradient(circle at 50% 50%, rgba(42, 26, 46, 0.2) 0%, #0F1113 90%);
+        }
+        .font-retro { font-family: 'Shrikhand', cursive; }
+        
+        /* 中心光环效果 */
+        .center-glow {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(96, 165, 250, 0.1) 0%, transparent 70%);
+            border-radius: 50%; z-index: 2; pointer-events: none;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <div class="bg-texture"></div>
+        <div class="bg-gradient-overlay"></div>
+        <div class="center-glow"></div>
+
+        <div class="relative z-20 w-full h-full flex flex-col p-12 justify-between">
+
+            <nav class="w-full">
+                <div class="flex items-center justify-between px-8 py-5 border border-white/20 rounded-full bg-[#0F1113]/60 backdrop-blur-md shadow-2xl">
+                    <div class="flex items-center gap-3">
+                        <div class="w-2.5 h-2.5 rounded-full bg-white animate-pulse"></div>
+                        <h2 class="text-white text-xl font-bold tracking-widest uppercase">Creative Portfolio</h2>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/20 bg-white/5">
+                            <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
+                            <span class="text-white/80 text-xs font-bold uppercase tracking-tighter">Innovation</span>
+                        </div>
+                        <div class="flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/20 bg-white/5">
+                            <span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>
+                            <span class="text-white/80 text-xs font-bold uppercase tracking-tighter">Excellence</span>
+                        </div>
+                        <div class="flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/20 bg-white/5">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                            <span class="text-white/80 text-xs font-bold uppercase tracking-tighter">Future</span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="flex-1 flex flex-col justify-center items-center text-center relative z-10 pb-20">
+                
+                <p class="text-blue-400 text-xl font-bold tracking-[0.5em] uppercase mb-8 animate-pulse">
+                    2024 — 2025 Collection
+                </p>
+
+                <h1 class="text-white text-[9rem] leading-none font-retro italic drop-shadow-2xl mix-blend-overlay">
+                    Creative<br>Portfolio
+                </h1>
+
+                <div class="mt-12 flex items-center gap-6">
+                    <div class="h-[1px] w-16 bg-white/30"></div>
+                    <p class="text-white/70 text-2xl font-light tracking-widest uppercase">
+                        Alexandr Davis
+                    </p>
+                    <div class="h-[1px] w-16 bg-white/30"></div>
+                </div>
+
+                <div class="absolute bottom-0 flex flex-col items-center gap-4 opacity-50">
+                    <span class="text-white/50 text-xs tracking-[0.3em] uppercase">Scroll to explore</span>
+                    <i class="fa-solid fa-chevron-down text-white animate-bounce"></i>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

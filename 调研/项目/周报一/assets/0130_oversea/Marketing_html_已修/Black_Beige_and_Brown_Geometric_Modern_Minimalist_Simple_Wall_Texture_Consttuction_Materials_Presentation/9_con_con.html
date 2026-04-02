@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glass and Plastics - Material Design Slide</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts CDN (Noto Sans SC as requested) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- CSS Reset & Custom Styles -->
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* Page Container - Fixed Dimensions */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #0A0A0A; /* Primary Background */
+            overflow: hidden;
+            /* No outer shadow as per instructions */
+        }
+
+        /* Utility Helpers for specific visual requirements */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .text-gradient {
+            background: linear-gradient(90deg, #FFFFFF, #8C8C8C);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div id="page_container">
+
+        <!-- Background Decorative Elements -->
+        <!-- Decorative Circle (Subtle Geometry) -->
+        <div class="absolute top-[-100px] right-[-100px] w-[400px] h-[400px] rounded-full bg-[#1a1a1a] opacity-50 z-0"></div>
+        
+        <!-- Header / Navigation Area -->
+        <header class="absolute top-0 left-0 w-full px-12 py-10 flex justify-between items-center z-50">
+            <!-- Brand Logo / Pill -->
+            <div class="flex items-center gap-3">
+                <div class="bg-[#F2F2F2] rounded-full px-6 py-2 flex items-center gap-3 shadow-lg">
+                    <!-- Icon placeholder -->
+                    <div class="w-3 h-3 rounded-full bg-[#6E6C66]"></div> 
+                    <h6 class="text-black font-bold text-sm tracking-wide uppercase">Ingoude Company</h6>
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <nav class="flex items-center gap-4">
+                <!-- Home Button (Active State Simulation) -->
+                <div class="bg-[#333333] border border-[#444444] rounded-full px-6 py-2">
+                    <h6 class="text-white text-xs font-bold tracking-wider">HOME</h6>
+                </div>
+                <!-- Materials Button -->
+                <div class="border border-white/30 rounded-full px-6 py-2">
+                    <h6 class="text-white/70 text-xs font-medium tracking-wider">MATERIALS</h6>
+                </div>
+                <!-- More Button -->
+                <div class="border border-white/30 rounded-full px-6 py-2">
+                    <h6 class="text-white/70 text-xs font-medium tracking-wider">MORE</h6>
+                </div>
+                <!-- Menu Icon -->
+                <div class="ml-2 text-white text-lg">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main Content Grid -->
+        <div class="absolute top-[160px] left-0 w-full px-16 grid grid-cols-12 gap-10 h-[500px]">
+            
+            <!-- Left Column: Visuals & Decoration (Cols 1-4) -->
+            <div class="col-span-5 relative h-full">
+                <!-- Decorative Dark Block (Replaces the black block in original, made subtle grey here) -->
+                <div class="absolute top-20 left-[-64px] w-[120px] h-[200px] bg-[#141414] z-10 border-r border-white/10"></div>
+
+                <!-- Image 1: Glass Texture -->
+                <div class="absolute top-0 left-[60px] w-[240px] h-[240px] z-20 border border-white/20 shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1507919463943-4cc17140026e?q=80&w=600&auto=format&fit=crop" 
+                         alt="Glass Texture" 
+                         class="w-full h-full object-cover grayscale contrast-125">
+                    <!-- 240*240 -->
+                </div>
+
+                <!-- Image 2: Plastic/Polymer Texture -->
+                <div class="absolute top-[200px] left-[120px] w-[220px] h-[220px] z-30 border border-white/20 shadow-2xl bg-[#1a1a1a]">
+                    <img src="https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?q=80&w=600&auto=format&fit=crop" 
+                         alt="Plastic Texture" 
+                         class="w-full h-full object-cover opacity-80">
+                    <!-- 220*220 -->
+                </div>
+            </div>
+
+            <!-- Right Column: Content (Cols 5-12) -->
+            <div class="col-span-7 flex flex-col justify-center z-40 pl-4">
+                
+                <!-- Main Title -->
+                <div class="mb-6">
+                    <h1 class="text-7xl font-bold text-white tracking-tight leading-none mb-2">
+                        Glass <span class="text-[#8C8C8C] font-light">&</span> Plastics
+                    </h1>
+                    <div class="w-20 h-1 bg-[#F2F2F2] mt-4"></div>
+                </div>
+
+                <!-- Subtitle / Headline -->
+                <div class="mb-8">
+                    <h2 class="text-3xl font-medium text-[#E0E0E0] leading-snug">
+                        Glass is transparent, brittle; <br>
+                        <span class="text-[#8C8C8C]">plastics are versatile, lightweight</span>
+                    </h2>
+                </div>
+
+                <!-- Description Text -->
+                <div class="mb-12 max-w-xl">
+                    <p class="text-[#8C8C8C] text-sm leading-relaxed text-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+                    </p>
+                </div>
+
+                <!-- Detailed Comparison Section -->
+                <div class="grid grid-cols-2 gap-8 border-t border-white/10 pt-8">
+                    
+                    <!-- Glass Detail -->
+                    <div class="border-l-2 border-[#F2F2F2] pl-6">
+                        <h4 class="text-white font-bold text-lg mb-2">Glass</h4>
+                        <p class="text-[#8C8C8C] text-sm leading-relaxed">
+                            Used for windows, facades, decoration.
+                        </p>
+                    </div>
+
+                    <!-- Plastics Detail -->
+                    <div class="border-l-2 border-[#6E6C66] pl-6">
+                        <h4 class="text-white font-bold text-lg mb-2">Plastics</h4>
+                        <p class="text-[#8C8C8C] text-sm leading-relaxed">
+                            Used in cables, insulation, pipes.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Footer / Page Number -->
+        <footer class="absolute bottom-10 right-12 z-50">
+            <div class="border border-white/20 rounded-full px-6 py-2 bg-[#0A0A0A]">
+                <h6 class="text-white/60 text-xs font-bold tracking-widest uppercase">Page 9</h6>
+            </div>
+        </footer>
+
+        <!-- Decorative Lines -->
+        <div class="absolute bottom-10 left-12 w-[80%] h-[1px] bg-gradient-to-r from-white/10 to-transparent"></div>
+
+    </div>
+
+</body>
+</html>

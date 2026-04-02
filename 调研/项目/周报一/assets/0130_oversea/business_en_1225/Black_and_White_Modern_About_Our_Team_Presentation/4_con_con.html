@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizational Structure Keynote</title>
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts (Domestic Mirror) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        /* CSS Reset & Global Settings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container - 1280x720 Fixed */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #EBEFF2;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+        }
+
+        /* Typography Utilities */
+        h1 {
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        h2, h3, h4, p {
+            margin: 0;
+        }
+
+        /* Tree Diagram Lines Logic (Pure CSS) */
+        .tree-line-vertical {
+            width: 2px;
+            background-color: #7F8C8D;
+            margin: 0 auto;
+        }
+
+        .tree-connector-horizontal {
+            height: 2px;
+            background-color: #7F8C8D;
+            position: absolute;
+            top: 0;
+            left: 10%; /* Connects from middle of first col */
+            right: 10%; /* To middle of last col */
+        }
+        
+        /* Specific adjustments for the tree connection points */
+        .connector-stem {
+            position: relative;
+            height: 20px; 
+            width: 100%;
+        }
+        .connector-stem::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background-color: #7F8C8D;
+        }
+
+        .sub-connector {
+            position: relative;
+            height: 24px;
+            width: 100%;
+        }
+        .sub-connector::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background-color: #7F8C8D;
+        }
+
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#000000',
+                        accent: '#D8F550',
+                        bgGrey: '#EBEFF2',
+                        lineColor: '#7F8C8D',
+                        accentRed: '#E74C3C',
+                        accentPink: '#FF69B4',
+                        accentBlueDark: '#1E4E9E',
+                        accentBlueLight: '#2980B9'
+                    },
+                    boxShadow: {
+                        'card': '0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)',
+                        'glow': '0 0 15px rgba(216, 245, 80, 0.4)'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <!-- Header Section -->
+        <header class="pt-8 pb-4 text-center z-10">
+            <h1 class="text-5xl text-primary uppercase leading-tight">
+                Department<br>Chart
+            </h1>
+        </header>
+
+        <!-- Main Chart Area -->
+        <div class="flex-1 flex flex-col items-center justify-start px-12 pt-2">
+            
+            <!-- LEVEL 1: CEO -->
+            <div class="w-full max-w-5xl flex flex-col items-center">
+                <!-- CEO Card -->
+                <div class="w-full bg-accent py-4 rounded-lg shadow-glow relative z-20 flex items-center justify-center">
+                    <p class="text-black font-bold text-2xl tracking-widest">CEO</p>
+                </div>
+                <!-- Line from CEO -->
+                <div class="h-8 w-[2px] bg-lineColor"></div>
+            </div>
+
+            <!-- Connector Bus (Horizontal Line) -->
+            <div class="relative w-full max-w-5xl h-6">
+                <!-- The horizontal bar connecting columns -->
+                <div class="absolute top-0 left-[10%] right-[10%] h-[2px] bg-lineColor"></div>
+                
+                <!-- Vertical drops to Level 2 nodes -->
+                <div class="absolute top-0 left-[10%] h-6 w-[2px] bg-lineColor"></div> <!-- To Management -->
+                <div class="absolute top-0 left-[30%] h-6 w-[2px] bg-lineColor"></div> <!-- To Finance -->
+                <div class="absolute top-0 left-[50%] h-6 w-[2px] bg-lineColor"></div> <!-- To Products -->
+                <div class="absolute top-0 left-[70%] h-6 w-[2px] bg-lineColor"></div> <!-- To Marketing -->
+                <div class="absolute top-0 right-[10%] h-6 w-[2px] bg-lineColor"></div> <!-- To HR -->
+            </div>
+
+            <!-- LEVEL 2: Departments Container -->
+            <div class="w-full max-w-6xl grid grid-cols-5 gap-4 items-start">
+
+                <!-- COLUMN 1: Management -->
+                <div class="flex flex-col items-center">
+                    <!-- Parent Node -->
+                    <div class="w-full bg-primary text-white rounded-md shadow-card overflow-hidden relative group">
+                        <div class="p-3 text-center">
+                            <p class="text-xs text-gray-400 mb-1"><i class="fa-solid fa-briefcase"></i></p>
+                            <p class="font-bold text-sm tracking-wide">MANAGEMENT</p>
+                        </div>
+                        <!-- Color Accent -->
+                        <div class="h-1.5 w-full bg-accentRed"></div>
+                    </div>
+                    
+                    <!-- Line -->
+                    <div class="sub-connector"></div>
+
+                    <!-- Child Node -->
+                    <div class="w-full bg-primary text-white rounded-md shadow-card p-3 text-center min-h-[60px] flex items-center justify-center">
+                        <p class="font-medium text-xs leading-tight">OPERATIONS AND ADMIN</p>
+                    </div>
+                </div>
+
+                <!-- COLUMN 2: Finance -->
+                <div class="flex flex-col items-center">
+                    <!-- Parent Node -->
+                    <div class="w-full bg-primary text-white rounded-md shadow-card overflow-hidden relative">
+                        <div class="p-3 text-center">
+                            <p class="text-xs text-gray-400 mb-1"><i class="fa-solid fa-coins"></i></p>
+                            <p class="font-bold text-sm tracking-wide">FINANCE</p>
+                        </div>
+                        <!-- Color Accent -->
+                        <div class="h-1.5 w-full bg-accent"></div>
+                    </div>
+
+                    <!-- Line -->
+                    <div class="sub-connector"></div>
+
+                    <!-- Child Node 1 -->
+                    <div class="w-full bg-primary text-white rounded-md shadow-card p-3 text-center min-h-[60px] flex items-center justify-center">
+                        <p class="font-medium text-xs leading-tight">ACCOUNTING</p>
+                    </div>
+
+                    <!-- Line -->
+                    <div class="sub-connector"></div>
+
+                    <!-- Child Node 2 -->
+                    <div class="w-full bg-primary text-white rounded-md shadow-card p-3 text-center min-h-[60px] flex items-center justify-center">
+                        <p class="font-medium text-xs leading-tight">TAXES AND REIMBURSEMENTS</p>
+                    </div>
+                </div>
+
+                <!-- COLUMN 3: Products & Services -->
+                <div class="flex flex-col items-center">
+                    <!-- Parent Node -->
+                    <div class="w-full bg-primary text-white rounded-md shadow-card overflow-hidden relative">
+                        <div class="p-3 text-center">
+                            <p class="text-xs text-gray-400 mb-1"><i class="fa-solid fa-layer-group"></i></p>
+                            <p class="font-bold text-sm tracking-wide leading-tight">PRODUCTS AND SERVICES</p>
+                        </div>
+                        <!-- Color Accent -->
+                        <div class="h-1.5 w-full bg-accentPink"></div>
+                    </div>
+
+                    <!-- Line -->
+                    <div class="sub-connector"></div>
+
+                    <!-- Child Node 1 (Special Style) -->
+                    <div class="w-full bg-accent text-primary rounded-md shadow-glow p-3 text-center min-h-[60px] flex flex-col items-center justify-center transform scale-105 z-10">
+                        <p class="text-xs opacity-60 mb-1"><i class="fa-solid fa-lightbulb"></i></p>
+                        <p class="font-bold text-sm">CREATIVE</p>
+                    </div>
+
+                    <!-- Line -->
+                    <div class="sub-connector"></div>
+
+                    <!-- Child Node 2 -->
+                    <div class="w-full bg-primary text-white rounded-md shadow-card p-3 text-center min-h-[60px] flex items-center justify-center">
+                        <p class="font-medium text-xs leading-tight">COMPLIANCE</p>
+                    </div>
+                </div>
+
+                <!-- COLUMN 4: Marketing -->
+                <div class="flex flex-col items-center">
+                    <!-- Parent Node -->
+                    <div class="w-full bg-primary text-white rounded-md shadow-card overflow-hidden relative">
+                        <div class="p-3 text-center">
+                            <p class="text-xs text-gray-400 mb-1"><i class="fa-solid fa-bullhorn"></i></p>
+                            <p class="font-bold text-sm tracking-wide">MARKETING</p>
+                        </div>
+                        <!-- Color Accent -->
+                        <div class="h-1.5 w-full bg-accentBlueDark"></div>
+                    </div>
+                    <!-- Empty space to balance layout as per original, or could be used for expansion -->
+                </div>
+
+                <!-- COLUMN 5: Human Resources -->
+                <div class="flex flex-col items-center">
+                    <!-- Parent Node -->
+                    <div class="w-full bg-primary text-white rounded-md shadow-card overflow-hidden relative">
+                        <div class="p-3 text-center">
+                            <p class="text-xs text-gray-400 mb-1"><i class="fa-solid fa-users"></i></p>
+                            <p class="font-bold text-sm tracking-wide">HUMAN RESOURCES</p>
+                        </div>
+                        <!-- Color Accent -->
+                        <div class="h-1.5 w-full bg-accentBlueLight"></div>
+                    </div>
+
+                    <!-- Line -->
+                    <div class="sub-connector"></div>
+
+                    <!-- Child Node 1 -->
+                    <div class="w-full bg-primary text-white rounded-md shadow-card p-3 text-center min-h-[60px] flex items-center justify-center">
+                        <p class="font-medium text-xs leading-tight">RECRUITMENT AND TALENT ACQUISITION</p>
+                    </div>
+
+                    <!-- Line -->
+                    <div class="sub-connector"></div>
+
+                    <!-- Child Node 2 -->
+                    <div class="w-full bg-primary text-white rounded-md shadow-card p-3 text-center min-h-[60px] flex items-center justify-center">
+                        <p class="font-medium text-xs leading-tight">TRAINING AND DEVELOPMENT</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Decorative Background Element (Subtle Geometry) -->
+        <div class="absolute bottom-0 right-0 w-64 h-64 bg-gradient-to-tl from-gray-200 to-transparent opacity-50 rounded-tl-full pointer-events-none -z-0"></div>
+
+        <!-- Footer -->
+        <footer class="w-full px-12 py-6 flex justify-between items-center text-lineColor text-xs z-10 mt-auto">
+            <p class="font-medium">Thynk Unlimited</p>
+            <p class="opacity-60">Chart</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

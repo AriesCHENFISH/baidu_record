@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resource Analytics - Borcelle</title>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { medical: { dark: '#01315B', primary: '#005BB7', light: '#F0F7FF', accent: '#22C55E' } }, fontFamily: { sans: ['"Noto Sans SC"', 'sans-serif'] } } } }
+    </script>
+    <style>
+        .page_container { width: 1280px; height: 720px; background-color: #FDFDFD; position: relative; margin: 0 auto; overflow: hidden; display: flex; flex-direction: column; }
+        .thin-grid { background-image: linear-gradient(#e5e7eb 1px, transparent 1px), linear-gradient(90deg, #e5e7eb 1px, transparent 1px); background-size: 40px 40px; mask-image: radial-gradient(circle at 100% 0%, black, transparent 90%); }
+        .accent-line { position: absolute; width: 4px; height: 80px; background: #22C55E; left: -20px; top: 8px; }
+    </style>
+</head>
+<body>
+    <div class="page_container">
+        <div class="absolute inset-0 thin-grid opacity-30"></div>
+        <header class="relative z-50 pt-10 px-20 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <div class="w-10 h-10 bg-medical-primary flex items-center justify-center rounded-xl shadow-md"><i class="fa-solid fa-hospital text-white text-xl"></i></div>
+                <div><h2 class="text-xl font-black text-medical-dark tracking-tighter leading-none">BORCELLE</h2><p class="text-[14px] text-medical-primary font-bold uppercase">Medical Excellence</p></div>
+            </div>
+        </header>
+
+        <main class="flex-1 grid grid-cols-12 gap-0 px-20 py-10 relative z-10 items-center">
+            <div class="col-span-4">
+                <div class="relative">
+                    <div class="accent-line"></div>
+                    <h1 class="text-[52px] font-black text-medical-dark leading-tight tracking-tighter mb-6">Budgetary <br><span class="text-medical-primary">Distribution.</span></h1>
+                    <div class="space-y-6">
+                        <div class="p-6 bg-medical-dark rounded-3xl text-white shadow-xl">
+                            <p class="text-3xl font-black">$42.5M</p>
+                            <p class="text-sm opacity-60 uppercase font-bold">Annual R&D Investment</p>
+                        </div>
+                        <p class="text-[16px] text-gray-500 leading-relaxed">Systematic allocation of resources ensures that our precision medicine department remains at the global forefront of clinical innovation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-span-5 h-[450px]" id="chartMain"></div>
+
+            <div class="col-span-3 space-y-4">
+                <div class="p-5 bg-white rounded-2xl shadow-sm border-l-4 border-medical-primary">
+                    <h4 class="text-sm font-black text-medical-dark uppercase">AI Research</h4>
+                    <p class="text-sm text-gray-400">Genomic sequencing & AI imaging tools.</p>
+                </div>
+                <div class="p-5 bg-white rounded-2xl shadow-sm border-l-4 border-medical-accent">
+                    <h4 class="text-sm font-black text-medical-dark uppercase">Facility Ops</h4>
+                    <p class="text-sm text-gray-400">Sustainable energy and smart logistics.</p>
+                </div>
+                <div class="p-5 bg-white rounded-2xl shadow-sm border-l-4 border-medical-dark">
+                    <h4 class="text-sm font-black text-medical-dark uppercase">Patient Care</h4>
+                    <p class="text-sm text-gray-400">Support systems and wellness programs.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const chart = echarts.init(document.getElementById('chartMain'));
+        chart.setOption({
+            color: ['#005BB7', '#22C55E', '#01315B', '#E2E8F0'],
+            series: [{
+                name: 'Allocation', type: 'pie', radius: ['50%', '85%'], avoidLabelOverlap: false,
+                itemStyle: { borderRadius: 10, borderColor: '#fff', borderWidth: 5 },
+                label: { show: true, position: 'inside', formatter: '{d}%', color: '#fff', fontWeight: 'bold', fontSize: 16 },
+                data: [
+                    { value: 45, name: 'AI Research' }, { value: 30, name: 'Facility' },
+                    { value: 15, name: 'Patient Care' }, { value: 10, name: 'Others' }
+                ]
+            }]
+        });
+    </script>
+</body>
+</html>

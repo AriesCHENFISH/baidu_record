@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Structure - Keithston and Partners</title>
+    <link href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: '#000000', darkOverlay: '#1C0F0A' },
+                    fontFamily: { sans: ['Inter', 'Noto Sans SC', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; overflow: hidden; background-color: #F5F5F5; }
+    </style>
+</head>
+<body>
+    <div id="page_container" class="flex h-full font-sans">
+        
+        <!-- LEFT SIDEBAR: Navigation (20% Width) -->
+        <div class="w-1/5 bg-[#1C0F0A] h-full p-8 flex flex-col relative text-white z-20 shadow-2xl">
+            <div class="mb-12">
+                <i class="fa-solid fa-baseball text-3xl mb-6 text-white/30"></i>
+                <h2 class="text-2xl font-black uppercase tracking-tight leading-none">Game<br>Phases</h2>
+            </div>
+            
+            <!-- Minimal Nav Steps -->
+            <div class="flex-1 space-y-8 relative">
+                <!-- Vertical Line -->
+                <div class="absolute left-[11px] top-2 bottom-2 w-[1px] bg-white/10 z-0"></div>
+
+                <div class="relative z-10 flex items-center gap-4">
+                    <div class="w-6 h-6 rounded-full bg-white border-4 border-[#1C0F0A] flex items-center justify-center"></div>
+                    <span class="text-sm font-bold opacity-100">Inning Structure</span>
+                </div>
+                <div class="relative z-10 flex items-center gap-4">
+                    <div class="w-6 h-6 rounded-full bg-[#1C0F0A] border border-white/40 flex items-center justify-center"></div>
+                    <span class="text-sm font-light opacity-50">Score Calculation</span>
+                </div>
+                <div class="relative z-10 flex items-center gap-4">
+                    <div class="w-6 h-6 rounded-full bg-[#1C0F0A] border border-white/40 flex items-center justify-center"></div>
+                    <span class="text-sm font-light opacity-50">Extra Innings</span>
+                </div>
+            </div>
+
+            <div class="text-[10px] text-white/30 uppercase tracking-widest">
+                Rule Book Section 4.0
+            </div>
+        </div>
+
+        <!-- RIGHT CONTENT: Split Visual Layout (80% Width) -->
+        <div class="w-4/5 h-full relative bg-white flex flex-col">
+            
+            <!-- Header Area -->
+            <div class="h-24 px-10 flex items-center justify-between border-b border-gray-100">
+                <h1 class="text-3xl font-black text-black uppercase">Standard Inning Flow</h1>
+                <div class="flex items-center gap-2 text-sm font-bold text-gray-400">
+                    <span class="bg-gray-100 px-3 py-1 rounded-full">9 Innings Total</span>
+                </div>
+            </div>
+
+            <!-- Content Split: 2 Images Side by Side -->
+            <div class="flex-1 grid grid-cols-2">
+                
+                <!-- Zone 1: Guest / Top -->
+                <div class="relative group overflow-hidden border-r border-white">
+                    <img src="https://images.unsplash.com/photo-1593539823616-95f1906a5b3a?q=80&w=800&auto=format&fit=crop" 
+                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    
+                    <!-- Overlay -->
+                    <div class="absolute inset-0 bg-black/60 group-hover:bg-black/50 transition-colors"></div>
+                    
+                    <!-- Content -->
+                    <div class="absolute inset-0 p-10 flex flex-col justify-end text-white">
+                        <div class="absolute top-10 left-10">
+                            <span class="px-3 py-1 bg-white text-black text-xs font-bold uppercase tracking-wider">Phase 01</span>
+                        </div>
+                        <h2 class="text-4xl font-black uppercase mb-2">Top of Inning</h2>
+                        <div class="w-12 h-1 bg-white mb-4"></div>
+                        <p class="text-sm text-gray-300 leading-relaxed max-w-sm">
+                            The <span class="text-white font-bold">Visiting Team</span> bats (Offense) while the Home Team fields. The goal is to score runs before 3 outs are recorded.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Zone 2: Home / Bottom -->
+                <div class="relative group overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1508345228704-935cc84bf5e2?q=80&w=800&auto=format&fit=crop" 
+                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    
+                    <!-- Overlay -->
+                    <div class="absolute inset-0 bg-[#1C0F0A]/70 group-hover:bg-[#1C0F0A]/60 transition-colors"></div>
+                    
+                    <!-- Content -->
+                    <div class="absolute inset-0 p-10 flex flex-col justify-end text-white">
+                        <div class="absolute top-10 left-10">
+                            <span class="px-3 py-1 bg-[#1C0F0A] border border-white text-white text-xs font-bold uppercase tracking-wider">Phase 02</span>
+                        </div>
+                        <h2 class="text-4xl font-black uppercase mb-2">Bottom of Inning</h2>
+                        <div class="w-12 h-1 bg-white mb-4"></div>
+                        <p class="text-sm text-gray-300 leading-relaxed max-w-sm">
+                            The <span class="text-white font-bold">Home Team</span> bats. If the home team is winning after the top of the 9th, this phase is skipped (Walk-off).
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer Legend Area -->
+            <div class="h-20 bg-gray-50 border-t border-gray-200 px-10 flex items-center gap-8">
+                <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Winning Criteria:</span>
+                <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-trophy text-black"></i>
+                    <span class="text-sm font-bold text-black">Most Runs Scored</span>
+                </div>
+                <div class="w-[1px] h-4 bg-gray-300"></div>
+                <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-hand text-black"></i>
+                    <span class="text-sm font-bold text-black">3 Outs per Half-Inning</span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expert Team - Giggling Platypus Co.</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <!-- Google Fonts (Noto Sans SC) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryBg: '#151B22',
+                        globalBackdrop: '#6E777D',
+                        primaryText: '#FFFFFF',
+                        secondaryText: '#C9D1D9',
+                        tabInactive: '#4C555C',
+                        accentGreen: '#4A6F52',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    },
+                    spacing: {
+                        '1280': '1280px',
+                        '720': '720px',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Global Standards */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Main Container Styling */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #6E777D; /* Global Backdrop */
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end; /* Align content to bottom to allow tabs at top */
+        }
+
+        /* Custom Scrollbar hide */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Utility for line clamping if text gets too long */
+        .line-clamp-4 {
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Page Container -->
+    <div id="page_container">
+
+        <!-- Top Navigation / Tabs Area -->
+        <!-- Positioned absolutely or using flex to sit on top of the main card -->
+        <div class="w-full h-auto absolute top-0 left-0 right-0 pt-8 pr-16 flex justify-end items-end z-10">
+            
+            <!-- Inactive Tab -->
+            <div class="bg-tabInactive text-secondaryText px-10 py-3 rounded-t-2xl mr-[-15px] z-0 relative shadow-lg">
+                <span class="text-lg font-medium tracking-wide">Giggling Platypus Co.</span>
+            </div>
+
+            <!-- Active Tab -->
+            <div class="bg-primaryBg text-primaryText px-12 py-4 rounded-t-2xl z-10 relative shadow-2xl">
+                <span class="text-lg font-bold tracking-wide">Our Team</span>
+            </div>
+        </div>
+
+        <!-- Main Content Card -->
+        <!-- Occupies the majority of the screen, rounded corners, dark background -->
+        <div class="w-full h-[640px] bg-primaryBg relative z-20 rounded-tl-3xl shadow-[0_-10px_40px_rgba(0,0,0,0.3)] flex flex-col overflow-hidden">
+
+            <!-- Hero Image Section with Overlay -->
+            <div class="relative w-full h-[280px]">
+                <!-- Background Image: Strawberry Picking / Gardening -->
+                <img src="https://images.unsplash.com/photo-1593106578502-27fa8479d060?q=80&w=2574&auto=format&fit=crop" 
+                     alt="Hands picking strawberries" 
+                     class="w-full h-full object-cover object-center opacity-90">
+                <!-- 1280*280 -->
+
+                <!-- Gradient Mask: Fade from transparent to #151B22 (Bottom) and Darken Left side for text -->
+                <div class="absolute inset-0" style="background: linear-gradient(to right, #151B22 10%, rgba(21, 27, 34, 0.4) 50%, rgba(21, 27, 34, 0) 100%);"></div>
+                <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(21, 27, 34, 0) 0%, #151B22 100%);"></div>
+
+                <!-- Main Title -->
+                <div class="absolute top-1/2 left-16 transform -translate-y-1/2 max-w-lg">
+                    <h1 class="text-primaryText text-6xl font-bold leading-tight drop-shadow-lg">
+                        Meet Our Expert Team
+                    </h1>
+                </div>
+            </div>
+
+            <!-- Team Grid Section -->
+            <div class="flex-1 px-16 pb-12 pt-4">
+                <div class="grid grid-cols-3 gap-10 h-full">
+
+                    <!-- Team Member 1: Hannah Morales -->
+                    <div class="flex flex-col group">
+                        <!-- Image Container with soft hover effect -->
+                        <div class="w-full h-44 rounded-xl overflow-hidden mb-5 border border-white/10 shadow-lg">
+                            <img src="https://images.unsplash.com/photo-1594498653385-d5175c532c38?q=80&w=2574&auto=format&fit=crop" 
+                                 alt="Hannah Morales" 
+                                 class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105">
+                            <!-- 350*176 -->
+                        </div>
+                        
+                        <!-- Content -->
+                        <div class="flex flex-col">
+                            <h3 class="text-primaryText text-2xl font-bold mb-1">Hannah Morales</h3>
+                            <p class="text-secondaryText text-sm font-medium tracking-wider uppercase mb-2">Gardener</p>
+                            
+                            <!-- Rating -->
+                            <div class="text-white text-xs mb-3 space-x-1">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+
+                            <!-- Description -->
+                            <p class="text-secondaryText text-xs leading-relaxed opacity-80 line-clamp-4">
+                                A presentation typically refers to the act of demonstrating or explaining something to an audience.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 2: Connor Hamilton -->
+                    <div class="flex flex-col group">
+                        <!-- Image Container -->
+                        <div class="w-full h-44 rounded-xl overflow-hidden mb-5 border border-white/10 shadow-lg">
+                            <img src="https://images.unsplash.com/photo-1592612730825-e51c6e4e08c8?q=80&w=2574&auto=format&fit=crop" 
+                                 alt="Connor Hamilton" 
+                                 class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105">
+                            <!-- 350*176 -->
+                        </div>
+                        
+                        <!-- Content -->
+                        <div class="flex flex-col">
+                            <h3 class="text-primaryText text-2xl font-bold mb-1">Connor Hamilton</h3>
+                            <p class="text-secondaryText text-sm font-medium tracking-wider uppercase mb-2">Gardener</p>
+                            
+                            <!-- Rating -->
+                            <div class="text-white text-xs mb-3 space-x-1">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+
+                            <!-- Description -->
+                            <p class="text-secondaryText text-xs leading-relaxed opacity-80 line-clamp-4">
+                                A presentation typically refers to the act of demonstrating or explaining something to an audience.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 3: Ndemi Otieno -->
+                    <div class="flex flex-col group">
+                        <!-- Image Container -->
+                        <div class="w-full h-44 rounded-xl overflow-hidden mb-5 border border-white/10 shadow-lg">
+                            <img src="https://images.unsplash.com/photo-1623157863589-3286b20894e6?q=80&w=2670&auto=format&fit=crop" 
+                                 alt="Ndemi Otieno" 
+                                 class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105">
+                            <!-- 350*176 -->
+                        </div>
+                        
+                        <!-- Content -->
+                        <div class="flex flex-col">
+                            <h3 class="text-primaryText text-2xl font-bold mb-1">Ndemi Otieno</h3>
+                            <p class="text-secondaryText text-sm font-medium tracking-wider uppercase mb-2">Gardener</p>
+                            
+                            <!-- Rating -->
+                            <div class="text-white text-xs mb-3 space-x-1">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+
+                            <!-- Description -->
+                            <p class="text-secondaryText text-xs leading-relaxed opacity-80 line-clamp-4">
+                                A presentation typically refers to the act of demonstrating or explaining something to an audience.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Footer / Navigation Area -->
+            <div class="absolute bottom-10 right-16 flex items-center space-x-2 cursor-pointer group">
+                <span class="text-primaryText text-lg font-medium group-hover:text-accentGreen transition-colors">Next</span>
+                <i class="fa-solid fa-arrow-right text-primaryText text-sm group-hover:text-accentGreen transition-colors group-hover:translate-x-1 duration-300"></i>
+            </div>
+
+        </div>
+
+        <!-- Decorative background elements (Subtle glow) -->
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-white opacity-5 blur-[120px] rounded-full pointer-events-none z-0 mix-blend-overlay"></div>
+
+    </div>
+</body>
+</html>

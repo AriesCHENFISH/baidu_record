@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear Energy - Introduction Redesign</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { brand: { yellow: '#FFEA4A', black: '#0A0A0A', accent: '#FF3D00' } },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'sans-serif'], mono: ['Courier New', 'monospace'] }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        #page_container { width: 1280px; height: 720px; position: relative; background-color: #FFEA4A; overflow: hidden; margin: 0 auto; font-family: "Noto Sans SC", sans-serif; }
+        .grid-bg { background-image: radial-gradient(rgba(0,0,0,0.2) 1px, transparent 0); background-size: 30px 30px; opacity: 0.3; }
+        #page_container::before, #page_container::after { content: ''; position: absolute; width: 40px; height: 40px; border: 2px solid rgba(0,0,0,0.2); z-index: 5; }
+        #page_container::before { top: 30px; left: 30px; border-right: 0; border-bottom: 0; }
+        #page_container::after { bottom: 30px; right: 30px; border-left: 0; border-top: 0; }
+        .outline-text { -webkit-text-stroke: 1.5px #0A0A0A; color: transparent; text-transform: uppercase; }
+        .step-divider { position: relative; padding-left: 2rem; border-left: 1px solid rgba(0,0,0,0.1); }
+        .step-divider::before { content: ''; position: absolute; left: -3px; top: 10px; width: 5px; height: 5px; background: #0A0A0A; border-radius: 50%; }
+        .img-scan { position: relative; }
+        .img-scan::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: rgba(255, 234, 74, 0.5); box-shadow: 0 0 15px #FFEA4A; animation: scan 4s linear infinite; }
+        @keyframes scan { 0% { top: 0; } 100% { top: 100%; } }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <div class="absolute inset-0 grid-bg"></div>
+        <div class="absolute -left-10 top-1/2 -translate-y-1/2 text-[260px] font-black opacity-[0.04] leading-none select-none tracking-tighter -rotate-90">
+            INTRO
+        </div>
+
+        <div class="relative z-10 w-full h-full p-16 flex flex-col">
+            <!-- Header -->
+            <div class="flex justify-between items-center mb-10">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-black flex items-center justify-center">
+                        <i class="fa-solid fa-earth-americas text-brand-yellow text-2xl"></i>
+                    </div>
+                    <div>
+                        <h6 class="text-xs font-black uppercase tracking-widest">Giggling Platypus Co.</h6>
+                        <p class="text-[9px] font-bold opacity-50 uppercase tracking-tighter">Nuclear Research / Archive 2026</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-6">
+                    <div class="text-right">
+                        <span class="block text-[10px] font-bold opacity-40 uppercase">Global Mix</span>
+                        <span class="block text-sm font-black">10.3%</span>
+                    </div>
+                    <div class="w-px h-8 bg-black/10"></div>
+                    <div class="text-right">
+                        <span class="block text-[10px] font-bold opacity-40 uppercase">Status</span>
+                        <span class="block text-sm font-black text-brand-accent italic font-mono">ACTIVE</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Title -->
+            <div class="mb-12">
+                <h1 class="text-[90px] leading-[0.8] font-[950] text-brand-black tracking-tighter uppercase">
+                    Core <br>
+                    <span class="outline-text">Introduction</span>
+                </h1>
+            </div>
+
+            <div class="grid grid-cols-12 gap-16 flex-1 items-stretch">
+                <div class="col-span-7 flex flex-col justify-center py-4 space-y-12">
+                    <div class="step-divider">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="text-xs font-mono font-bold bg-black text-brand-yellow px-1.5 py-0.5">DEFINITION</span>
+                            <h3 class="text-3xl font-black uppercase">Atomic Energy</h3>
+                        </div>
+                        <p class="text-lg font-bold opacity-80 leading-snug max-w-xl">
+                            Energy released from atomic nuclei through controlled <span class="text-brand-accent">fission</span> or <span class="text-brand-accent">fusion</span>. It represents the ultimate density of power available to modern civilization.
+                        </p>
+                    </div>
+
+                    <div class="step-divider">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="text-xs font-mono font-bold bg-black text-brand-yellow px-1.5 py-0.5">APPLICATIONS</span>
+                            <h3 class="text-3xl font-black uppercase">Multi-Sector Use</h3>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="flex items-center gap-2 font-black text-sm uppercase">
+                                <i class="fa-solid fa-microchip opacity-30"></i> Electricity Generation
+                            </div>
+                            <div class="flex items-center gap-2 font-black text-sm uppercase">
+                                <i class="fa-solid fa-flask opacity-30"></i> Medical Research
+                            </div>
+                            <div class="flex items-center gap-2 font-black text-sm uppercase">
+                                <i class="fa-solid fa-shield-virus opacity-30"></i> National Defense
+                            </div>
+                            <div class="flex items-center gap-2 font-black text-sm uppercase">
+                                <i class="fa-solid fa-satellite opacity-30"></i> Space Exploration
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-span-5 flex flex-col justify-center">
+                    <div class="img-scan border-[2.5px] border-black shadow-[20px_20px_0px_0px_rgba(0,0,0,1)] bg-black overflow-hidden h-[350px]">
+                        <img src="https://images.unsplash.com/photo-1597843658253-157434720924?q=80&w=1000&auto=format&fit=crop" 
+                             class="w-full h-full object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-700">
+                        <div class="absolute bottom-4 left-4 bg-brand-yellow text-black px-2 py-1 font-mono text-[9px] font-bold">
+                            ASSET_ID: NRG_CORE_01
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

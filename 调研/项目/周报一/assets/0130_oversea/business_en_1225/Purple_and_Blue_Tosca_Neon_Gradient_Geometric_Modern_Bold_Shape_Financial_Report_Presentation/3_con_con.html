@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Highlights Dashboard - Fradel Company</title>
+
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+
+    <style>
+        /* CSS Reset & Global Config */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background-color: #05050F;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        /* Ambient Glow Effects */
+        .ambient-glow {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            z-index: 0;
+            opacity: 0.6;
+        }
+        
+        .glow-top-left {
+            top: -100px;
+            left: -100px;
+            width: 500px;
+            height: 500px;
+            background: #18123A;
+        }
+
+        .glow-bottom-right {
+            bottom: -150px;
+            right: -100px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, #18123A 0%, rgba(24,18,58,0) 70%);
+        }
+
+        /* Dot Pattern Decoration */
+        .dot-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            position: absolute;
+            z-index: 1;
+        }
+        .dot {
+            width: 4px;
+            height: 4px;
+            background-color: #64B0CF;
+            border-radius: 50%;
+            opacity: 0.4;
+        }
+        .dots-left { top: 200px; left: 40px; }
+        .dots-right { bottom: 80px; right: 40px; }
+
+        /* Card Glassmorphism Effect */
+        .glass-card {
+            background: linear-gradient(145deg, rgba(30, 27, 51, 0.6) 0%, rgba(30, 27, 51, 0.2) 100%);
+            border: 1px solid rgba(83, 138, 184, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        /* Prevent List Dots from Global FontAwesome Settings */
+        .nav-list { list-style: none !important; }
+        .nav-list li::before { content: none !important; display: none !important; }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <div class="ambient-glow glow-top-left"></div>
+        <div class="ambient-glow glow-bottom-right"></div>
+
+        <div class="dot-grid dots-left">
+            <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+            <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+            <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+            <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+        </div>
+
+        <div class="dot-grid dots-right">
+            <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+            <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+            <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+            <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+        </div>
+
+        <div class="relative z-50 px-12 pt-8 w-full">
+            <nav class="flex items-center justify-between w-full h-20 px-10 rounded-full" 
+                 style="background: linear-gradient(90deg, #6a44f0 0%, #1E1B33 40%, #1E1B33 100%); box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);">
+                
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 flex items-center justify-center rounded-full bg-[#DDFCF2] text-[#05050F]">
+                        <i class="fa-solid fa-layer-group text-xl"></i>
+                    </div>
+                    <h2 class="text-[#DDFCF2] text-xl font-bold tracking-wide">Fradel Company</h2>
+                </div>
+
+                <ul class="nav-list flex items-center gap-12 m-0 p-0">
+                    <li class="cursor-pointer"><b class="text-[#DDFCF2] text-sm tracking-widest hover:text-white transition-colors">HOME</b></li>
+                    <li class="cursor-pointer"><b class="text-[#B0B0B0] text-sm tracking-widest hover:text-[#DDFCF2] transition-colors">ABOUT</b></li>
+                    <li class="cursor-pointer"><b class="text-[#B0B0B0] text-sm tracking-widest hover:text-[#DDFCF2] transition-colors">MORE</b></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="relative z-10 w-full h-[calc(100%-120px)] p-12 grid grid-cols-12 gap-8 items-center">
+            
+            <div class="col-span-5 h-full flex flex-col justify-center relative">
+                <div id="highlightsChart" class="w-full h-[450px]"></div>
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] rounded-full border border-[#18123A] opacity-30 pointer-events-none"></div>
+            </div>
+
+            <div class="col-span-7 flex flex-col justify-center pl-8">
+                <div class="mb-10">
+                    <h1 class="text-[#DDFCF2] text-6xl font-bold leading-[1.1] mb-2">Key Financial <br/><span class="text-[#C8F9E6]">Highlights</span></h1>
+                    <div class="w-20 h-1 bg-[#88DEE3] mt-6 rounded-full"></div>
+                </div>
+
+                <div class="flex flex-col gap-6 w-full max-w-[650px]">
+                    <div class="glass-card rounded-2xl p-6 flex items-start gap-6 transition-transform hover:translate-x-2 duration-300">
+                        <div class="flex-shrink-0 w-16 h-16 rounded-xl bg-[#1E1B33] border border-[#538AB8] flex items-center justify-center text-[#88DEE3] shadow-lg">
+                            <i class="fa-solid fa-sack-dollar text-3xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-[#88DEE3] text-2xl font-semibold mb-2">Revenue growth</h3>
+                            <p class="text-[#B0B0B0] text-sm leading-relaxed font-light">
+                                Significant increase in quarterly revenue streams driven by market expansion. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card rounded-2xl p-6 flex items-start gap-6 transition-transform hover:translate-x-2 duration-300">
+                        <div class="flex-shrink-0 w-16 h-16 rounded-xl bg-[#1E1B33] border border-[#538AB8] flex items-center justify-center text-[#DDFCF2] shadow-lg">
+                            <i class="fa-solid fa-tags text-3xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-[#88DEE3] text-2xl font-semibold mb-2">Cost reduction</h3>
+                            <p class="text-[#B0B0B0] text-sm leading-relaxed font-light">
+                                Optimized operational workflows resulting in 15% lower overheads. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var chartDom = document.getElementById('highlightsChart');
+        var myChart = echarts.init(chartDom);
+        var option;
+
+        const colors = {
+            lightest: '#C8F9E6', 
+            light: '#88DEE3',    
+            medium: '#64B0CF',   
+            dark: '#538AB8',     
+            textMain: '#05050F' // Dark text for contrast inside light slices
+        };
+
+        const chartData = [
+            { value: 62.5, name: 'Item 1\n62.5%', itemStyle: { color: colors.lightest } },
+            { value: 25, name: 'Item 2\n25%', itemStyle: { color: colors.light } },
+            { value: 12.5, name: 'Item 3\n12.5%', itemStyle: { color: colors.medium } }
+        ];
+
+        option = {
+            backgroundColor: 'transparent',
+            tooltip: {
+                trigger: 'item',
+                backgroundColor: 'rgba(30, 27, 51, 0.9)',
+                borderColor: '#538AB8',
+                textStyle: { color: '#DDFCF2' }
+            },
+            series: [
+                {
+                    name: 'Financial Stats',
+                    type: 'pie',
+                    radius: ['0%', '85%'],
+                    center: ['50%', '50%'],
+                    itemStyle: {
+                        borderColor: '#05050F',
+                        borderWidth: 4
+                    },
+                    // Displaying labels inside without arrows
+                    label: {
+                        show: true,
+                        position: 'inside',
+                        color: colors.textMain,
+                        fontSize: 16,
+                        fontWeight: 'bold',
+                        lineHeight: 22,
+                        formatter: '{b}' 
+                    },
+                    labelLine: {
+                        show: false 
+                    },
+                    data: chartData
+                }
+            ],
+            animationType: 'scale',
+            animationEasing: 'elasticOut',
+            animationDelay: function (idx) {
+                return Math.random() * 200;
+            }
+        };
+
+        option && myChart.setOption(option);
+        window.addEventListener('resize', myChart.resize);
+    </script>
+</body>
+</html>

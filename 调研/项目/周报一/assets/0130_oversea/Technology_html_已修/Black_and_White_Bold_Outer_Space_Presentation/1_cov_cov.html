@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outer Space Presentation - Rimberio</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background-color: #050505; /* 更纯净的深空黑 */
+        }
+
+        /* 标题金属渐变效果 */
+        .text-hero {
+            background: linear-gradient(to bottom, #ffffff 40%, #555555 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* 氛围光晕 */
+        .glow-sphere {
+            position: absolute;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        /* 工业准星 */
+        .crosshair {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            pointer-events: none;
+        }
+        .crosshair::before { content: ''; position: absolute; width: 100%; height: 1px; top: 50%; background: rgba(255,255,255,0.1); }
+        .crosshair::after { content: ''; position: absolute; height: 100%; width: 1px; left: 50%; background: rgba(255,255,255,0.1); }
+
+        /* 右侧图片蒙版 */
+        .image-mask {
+            mask-image: linear-gradient(to left, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+            -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+        }
+
+        /* 垂直装饰线 */
+        .v-line {
+            width: 8px;
+            background-color: #EAECEE;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <div class="glow-sphere -top-40 -left-40"></div>
+        <div class="crosshair top-[10%] left-[5%]"></div>
+        <div class="absolute top-20 left-0 w-full h-[1px] bg-white/5"></div>
+        
+        <div class="absolute top-0 right-0 w-[900px] h-full z-0 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1541873676-a18131494184?q=80&w=1000&auto=format&fit=crop" 
+                 class="w-full h-full object-cover grayscale-[30%] contrast-110 image-mask">
+        </div>
+
+        <div class="relative z-10 w-full h-full p-20 flex flex-col justify-between">
+            
+            <div class="flex items-center gap-6">
+                <div class="text-white text-3xl font-black italic tracking-tighter opacity-90">Rimberio</div>
+                <div class="h-[1px] w-24 bg-white/20"></div>
+                <div class="text-white/30 font-mono text-xs tracking-[0.4em] uppercase">Deep Space Expedition // v.01</div>
+            </div>
+
+            <div class="flex flex-col gap-1 opacity-20 ml-1">
+                <div class="w-12 h-[2px] bg-white"></div>
+                <div class="w-8 h-[1px] bg-white"></div>
+                <div class="w-8 h-[1px] bg-white"></div>
+                <div class="w-8 h-[1px] bg-white"></div>
+                <div class="w-12 h-[2px] bg-white"></div>
+            </div>
+
+            <div class="flex gap-10">
+                <div class="v-line h-[240px]"></div>
+                <div class="flex flex-col justify-end">
+                    <h1 class="text-hero text-[140px] font-black leading-[0.8] uppercase tracking-tighter mb-6">
+                        OUTER<br>SPACE
+                    </h1>
+                    <div class="flex items-center gap-8">
+                        <p class="text-white/40 text-2xl font-light tracking-[0.2em] uppercase">
+                            From Rockets to Rovers
+                        </p>
+                        <div class="flex-grow h-[1px] bg-white/10 w-32"></div>
+                        <div class="w-16 h-16 rounded-full border border-white/20 flex items-center justify-center text-white text-xl hover:bg-white hover:text-black transition-all cursor-pointer">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="absolute bottom-10 right-20 text-right font-mono text-[10px] text-white/20 tracking-widest leading-relaxed">
+            SYSTEM_STATUS: NOMINAL<br>
+            COORDINATES: 42.00.89 // TERMINAL_01<br>
+            2026 RIMBERIO SPACE AGENCY
+        </div>
+    </div>
+
+</body>
+</html>

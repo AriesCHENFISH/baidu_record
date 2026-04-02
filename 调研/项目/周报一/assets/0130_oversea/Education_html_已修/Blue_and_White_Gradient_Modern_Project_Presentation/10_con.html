@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Journey Continues - List Layout</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        .page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #F5F7FA;
+            overflow: hidden;
+        }
+
+        /* 左侧视觉块：增加复杂渐变和阴影 */
+        .visual-box {
+            width: 100%;
+            height: 420px;
+            background: linear-gradient(135deg, #2E5CBE 0%, #4A6FA5 50%, #89C4F4 100%);
+            border-bottom-right-radius: 80px;
+            position: relative;
+            box-shadow: 30px 30px 80px rgba(46, 92, 190, 0.15);
+            overflow: hidden;
+        }
+
+        /* 装饰性网格点阵 */
+        .dot-pattern {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: grid;
+            grid-template-columns: repeat(6, 4px);
+            gap: 12px;
+            opacity: 0.2;
+        }
+        .dot { width: 4px; height: 4px; background: white; border-radius: 50%; }
+
+        /* 数字 09 的高级感处理 */
+        .big-number {
+            position: absolute;
+            bottom: -60px;
+            left: -30px;
+            font-size: 420px;
+            font-weight: 900;
+            line-height: 1;
+            /* 渐变描边效果 */
+            background: linear-gradient(to bottom, rgba(255,255,255,1) 30%, rgba(255,255,255,0) 90%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -25px;
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.05));
+        }
+
+        /* 引导线装饰 */
+        .accent-line {
+            width: 2px;
+            height: 80px;
+            background: linear-gradient(to bottom, #2E5CBE, transparent);
+            margin-bottom: 20px;
+        }
+
+        .glass-capsule {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.6);
+            border: 1px solid rgba(74, 111, 165, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page_container">
+        <div style="position: absolute; top: -100px; left: 40%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(235, 160, 100, 0.1) 0%, transparent 70%); filter: blur(80px); z-index: 1;"></div>
+
+        <div style="display: grid; grid-template-columns: 520px 1fr; height: 100%; position: relative; z-index: 10;">
+
+            <div style="display: flex; flex-direction: column; justify-content: space-between;">
+                
+                <div class="visual-box">
+                    <div class="dot-pattern">
+                        <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                        <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                        <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                    </div>
+                    
+                    <div style="position: absolute; top: -50px; left: -50px; width: 300px; height: 300px; background: rgba(255,255,255,0.15); filter: blur(60px); border-radius: 50%;"></div>
+                    
+                    <div class="big-number">08</div>
+                </div>
+
+                <div style="padding: 0 0 100px 80px;">
+                    <h1 style="font-size: 68px; font-weight: 900; color: #1A2B4E; line-height: 1; letter-spacing: -3px; text-transform: uppercase; margin-bottom: 20px;">
+                        The Journey <br><span style="color: #2E5CBE;">Continues</span>
+                    </h1>
+                    <h2 style="font-size: 18px; font-weight: 500; color: #8C99AF; letter-spacing: 4px; text-transform: uppercase;">
+                        Future Plans and Aspirations
+                    </h2>
+                </div>
+            </div>
+
+            <div style="padding: 60px 100px 60px 40px; display: flex; flex-direction: column;">
+                
+                <div style="display: flex; justify-content: flex-end; margin-bottom: 120px;">
+                    <div class="glass-capsule" style="display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 480px; padding: 14px 36px; border-radius: 999px;">
+                        <span style="font-size: 13px; color: #4A6FA5; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;">Studio Shodwe</span>
+                        <div style="width: 1px; height: 12px; background: rgba(74, 111, 165, 0.3);"></div>
+                        <span style="font-size: 13px; color: #666; font-weight: 500;">Project.</span>
+                        <div style="width: 1px; height: 12px; background: rgba(74, 111, 165, 0.3);"></div>
+                        <span style="font-size: 13px; color: #666; font-weight: 500;">2024</span>
+                    </div>
+                </div>
+
+                <div style="max-width: 540px; margin-left: auto;">
+                    
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="position: relative; padding-left: 28px; margin-bottom: 32px; font-size: 16px; line-height: 1.9; color: #4A5568; font-weight: 300;">
+                            <span style="position: absolute; left: 0; top: 11px; width: 8px; height: 8px; background-color: #2E5CBE; border-radius: 50%;"></span>
+                            Culpa ullamco qui in occaecat qui magna elit proident duis ut dolore aute enim proident fugiat elit amet consequat excepteur Lorem quis dolore in nulla amet sunt veniam sit ex sunt aliqua consequat.
+                        </li>
+                        
+                        <li style="position: relative; padding-left: 28px; font-size: 16px; line-height: 1.9; color: #4A5568; font-weight: 300;">
+                            <span style="position: absolute; left: 0; top: 11px; width: 8px; height: 8px; background-color: #2E5CBE; border-radius: 50%;"></span>
+                            Culpa ullamco qui in occaecat qui magna elit proident duis ut dolore aute enim proident fugiat elit amet consequat excepteur Lorem quis dolore in nulla amet sunt veniam sit ex sunt aliqua consequat ea laborum.
+                        </li>
+                    </ul>
+
+                    <div style="margin-top: 50px; width: 80px; height: 2px; background: linear-gradient(to right, #2E5CBE, transparent);"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

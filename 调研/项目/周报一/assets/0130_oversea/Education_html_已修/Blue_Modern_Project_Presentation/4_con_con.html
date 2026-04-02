@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspiration and Creativity Keynote</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- Google Fonts CDN (Domestic Mirror) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+
+    <style>
+        /* CSS Reset & Global Settings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* 
+         * Page Container Logic 
+         * Fixed 1280x720 dimension
+         */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background-color: #F0F0F0; /* Main Background Grey */
+            overflow: hidden;
+            display: flex;
+            margin: 0 auto;
+        }
+
+        /* 
+         * Custom Gradient Logic 
+         * Creating the soft "Aurora" glow on the right side
+         */
+        .aurora-glow {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            /* Radial gradient simulating the soft light source */
+            background: radial-gradient(circle at 80% 50%, #7B8BFF 0%, rgba(240, 240, 240, 0) 70%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* 
+         * Outline Text Logic for "03"
+         * Using webkit-text-stroke for the outline effect
+         */
+        .outline-text {
+            color: transparent; /* Interior is transparent */
+            -webkit-text-stroke: 4px #333333; /* Stroke Color */
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        /* Typography Utilities */
+        h1 {
+            font-weight: 800; /* Extra Bold */
+        }
+        
+        p {
+            font-weight: 400; /* Regular */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div id="page_container">
+
+        <!-- 
+            Left Sidebar Module 
+            Color: Core Brand Blue #001AFF
+            Layout: Flex column for vertical distribution
+        -->
+        <div class="sidebar h-full w-[100px] bg-[#001AFF] flex flex-col justify-between items-center py-12 z-20 relative">
+            <!-- Top Label: Rotated -90deg -->
+            <div class="sidebar-top transform -rotate-90 origin-center translate-y-12">
+                <p class="text-white text-lg font-medium tracking-wide whitespace-nowrap opacity-90">Presentation 2024</p>
+            </div>
+
+            <!-- Middle Separator -->
+            <div class="sidebar-mid">
+                <div class="w-[2px] h-[20px] bg-white opacity-50"></div>
+            </div>
+
+            <!-- Bottom Label: Rotated -90deg -->
+            <div class="sidebar-bottom transform -rotate-90 origin-center -translate-y-12">
+                <p class="text-white text-lg font-medium tracking-wide whitespace-nowrap opacity-90">Thynk Unlimited</p>
+            </div>
+        </div>
+
+        <!-- 
+            Main Content Area 
+            Layout: Relative positioning to hold absolute elements
+        -->
+        <div class="content-area flex-1 relative pl-24 pr-16 pt-24 pb-16 flex flex-col justify-center">
+            
+            <!-- Decorative Background Layer -->
+            <div class="aurora-glow"></div>
+
+            <!-- Text Content Wrapper -->
+            <div class="z-10 max-w-[800px]">
+                
+                <!-- 
+                    Main Heading 
+                    Color: Primary Text Black #222222
+                    Style: Heavy visual weight, tight leading
+                -->
+                <h1 class="text-[#222222] text-[90px] leading-[0.95] tracking-tighter mb-14">
+                    Inspiration <br>
+                    and creativity
+                </h1>
+
+                <!-- 
+                    Body Text 
+                    Color: Dark Grey for readability
+                    Layout: Two paragraphs with margin spacing
+                -->
+                <div class="max-w-[620px]">
+                    <p class="text-[#444444] text-[18px] leading-[1.6] mb-6 text-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+
+                    <p class="text-[#444444] text-[18px] leading-[1.6] text-justify">
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 
+                Decorative Number "03" 
+                Position: Absolute Bottom Right
+                Style: Outline effect
+            -->
+            <div class="absolute bottom-[-60px] right-[-40px] z-0 select-none">
+                <div class="outline-text text-[380px] tracking-tighter opacity-80">
+                    02
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

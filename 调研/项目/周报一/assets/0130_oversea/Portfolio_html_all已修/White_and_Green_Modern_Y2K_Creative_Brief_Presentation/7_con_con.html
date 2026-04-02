@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competition Analysis - Creative Brief</title>
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#E0F285',
+                        darkgreen: '#5B7F3A',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                        serif: ['"Times New Roman"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            font-family: "Noto Sans SC", sans-serif;
+            background-color: #5B7F3A;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo-accent {
+            background: linear-gradient(135deg, #E0F285 0%, #B4D333 100%);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .font-serif-italic {
+            font-family: "Times New Roman", serif;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1516214104703-d870798883c5?q=80&w=1280&auto=format&fit=crop" 
+                 alt="Green Grass Field" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/20"></div>
+        </div>
+
+        <header class="relative z-20 flex justify-between items-center px-12 py-8">
+            <div class="flex items-center space-x-4">
+                <div class="logo-accent w-10 h-10 rounded-lg flex items-center justify-center">
+                    <i class="fa-solid fa-leaf text-darkgreen text-lg"></i>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold text-xl tracking-tight leading-none uppercase">Studio Shodwe</h3>
+                    <p class="text-primary opacity-60 text-[10px] tracking-[0.2em] mt-1 font-bold">CREATIVE BRIEF</p>
+                </div>
+            </div>
+            </header>
+
+        <main class="relative z-10 grid grid-cols-12 gap-12 px-12 mt-4 h-[500px]">
+            
+            <section class="col-span-5 flex flex-col justify-center space-y-6">
+                <div class="glass-panel rounded-full px-10 py-5 inline-block w-full mb-4">
+                    <h1 class="text-6xl text-white font-serif-italic font-light">
+                        Competition
+                    </h1>
+                </div>
+
+                <div class="space-y-6 pl-2">
+                    <div class="border-l-2 border-primary pl-6">
+                        <h2 class="text-xl text-white font-bold mb-1">Competitor #1</h2>
+                        <p class="text-white/80 text-sm font-light">Primary market leader focusing on high-end acquisition.</p>
+                    </div>
+                    <div class="border-l-2 border-white/30 pl-6">
+                        <h2 class="text-xl text-white font-bold mb-1">Competitor #2</h2>
+                        <p class="text-white/80 text-sm font-light">Emerging challenger with aggressive pricing models.</p>
+                    </div>
+                    <div class="border-l-2 border-white/30 pl-6">
+                        <h2 class="text-xl text-white font-bold mb-1">Competitor #3</h2>
+                        <p class="text-white/80 text-sm font-light">Niche specialist targeting vertical integration.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="col-span-7 flex items-center justify-center">
+                <div class="w-full h-[400px] glass-panel rounded-3xl p-6">
+                    <div id="chart-container" class="w-full h-full"></div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="absolute bottom-0 left-0 z-30 w-full px-12 pb-8">
+            <div class="glass-panel rounded-r-full px-8 py-3 inline-block border-l-0 rounded-l-none">
+                <p class="text-white text-base font-medium tracking-wider">
+                    <span class="font-bold mr-2">Page 05</span> | <span class="ml-2 font-light">Creative Brief Presentation</span>
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        var chartDom = document.getElementById('chart-container');
+        var myChart = echarts.init(chartDom);
+        var option = {
+            backgroundColor: 'transparent',
+            grid: { top: '10%', left: '3%', right: '4%', bottom: '10%', containLabel: true },
+            xAxis: { 
+                type: 'value', 
+                splitLine: { show: false },
+                axisLabel: { color: '#ffffff' }
+            },
+            yAxis: { 
+                type: 'category', 
+                data: ['Item 5', 'Item 4', 'Item 3', 'Item 2', 'Item 1'],
+                axisLine: { show: false },
+                axisLabel: { color: '#ffffff', fontSize: 14 }
+            },
+            series: [{
+                type: 'bar',
+                barWidth: '24px',
+                itemStyle: {
+                    borderRadius: [0, 4, 4, 0],
+                    color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+                        { offset: 0, color: 'rgba(224, 242, 133, 0.9)' },
+                        { offset: 1, color: 'rgba(224, 242, 133, 0.2)' }
+                    ])
+                },
+                data: [28000, 22000, 18000, 12000, 7000]
+            }],
+            animation: false
+        };
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, height=720, initial-scale=1.0">
+    <title>Hidden Networks - Keynote Slide</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts (Baidu CDN as requested for Noto Sans, plus Playfair Display for the cinematic title) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Custom Config for Tailwind colors based on Design System -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgPrimary: '#0D110C',
+                        textPrimary: '#F2F2F2',
+                        accent: '#EAD97D',
+                        overlay: '#1A2018',
+                        textSecondary: '#A6AFA3',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans SC', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    boxShadow: {
+                        'glow': '0 0 40px rgba(234, 217, 125, 0.3)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Global Refactoring */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* Page Container - Strict 1280x720 */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #0D110C;
+            overflow: hidden;
+        }
+
+        /* Cinematic Title Styling */
+        .cinematic-title {
+            font-family: 'Playfair Display', serif;
+            background: linear-gradient(to bottom, #FFFFFF, #EAD97D);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0px 0px 15px rgba(234, 217, 125, 0.4));
+        }
+
+        /* Background Texture */
+        .bg-texture {
+            background-image: url('https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.15;
+            mix-blend-mode: overlay;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div id="page_container">
+        
+        <!-- Background Layer: Texture -->
+        <div class="bg-texture absolute inset-0 z-0"></div>
+        
+        <!-- Background Layer: Gradient Overlay (Simulating forest depth) -->
+        <div class="absolute inset-0 z-0" style="background: radial-gradient(circle at 50% 100%, rgba(26, 32, 24, 0) 0%, #0D110C 90%);"></div>
+
+        <!-- Content Layer -->
+        <div class="relative z-10 w-full h-full p-14 flex flex-col justify-between">
+
+            <!-- Top Section: Images and Information Grid -->
+            <div class="flex flex-row gap-12 h-[60%]">
+                
+                <!-- Left: Hero Image (Mother and Child) -->
+                <div class="w-[35%] relative">
+                    <div class="w-full h-full rounded-lg overflow-hidden border border-textSecondary/20 shadow-2xl relative">
+                        <!-- Image Overlay for mood -->
+                        <div class="absolute inset-0 bg-overlay/20 z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?q=80&w=2074&auto=format&fit=crop" 
+                             alt="Mother and child by tree" 
+                             class="w-full h-full object-cover opacity-90">
+                        <!-- 380*360 -->
+                    </div>
+                </div>
+
+                <!-- Right: Content Area -->
+                <div class="w-[65%] flex flex-col pt-2">
+                    
+                    <!-- Subtitle Header -->
+                    <div class="mb-10 border-l-2 border-accent pl-6">
+                        <h2 class="text-textPrimary text-3xl font-light tracking-wide leading-tight">
+                            The Secret Life <br>
+                            <span class="font-serif italic text-accent">Below the Surface</span>
+                        </h2>
+                    </div>
+
+                    <!-- 4-Grid Information Layout -->
+                    <div class="grid grid-cols-2 gap-x-12 gap-y-10">
+                        
+                        <!-- Item 1: Tree Communication -->
+                        <div>
+                            <h3 class="text-textPrimary text-lg font-serif italic mb-2 border-b border-textSecondary/30 pb-1 inline-block">
+                                Tree Communication
+                            </h3>
+                            <p class="text-textSecondary text-sm leading-relaxed font-light">
+                                Trees send warning signals through roots and air to alert nearby trees of danger or environmental changes.
+                            </p>
+                        </div>
+
+                        <!-- Item 2: Mother Trees -->
+                        <div>
+                            <h3 class="text-textPrimary text-lg font-serif italic mb-2 border-b border-textSecondary/30 pb-1 inline-block">
+                                Mother Trees
+                            </h3>
+                            <p class="text-textSecondary text-sm leading-relaxed font-light">
+                                Older trees support younger ones by sending essential nutrients through the complex fungal web.
+                            </p>
+                        </div>
+
+                        <!-- Item 3: Fungal Networks -->
+                        <div>
+                            <h3 class="text-textPrimary text-lg font-serif italic mb-2 border-b border-textSecondary/30 pb-1 inline-block">
+                                Fungal Networks
+                            </h3>
+                            <p class="text-textSecondary text-sm leading-relaxed font-light">
+                                Mycorrhizae connect roots, helping trees exchange water, sugars, and vital information efficiently.
+                            </p>
+                        </div>
+
+                        <!-- Item 4: Soil Microbial Life -->
+                        <div>
+                            <h3 class="text-textPrimary text-lg font-serif italic mb-2 border-b border-textSecondary/30 pb-1 inline-block">
+                                Soil Microbial Life
+                            </h3>
+                            <p class="text-textSecondary text-sm leading-relaxed font-light">
+                                Billions of microorganisms improve soil health, aiding growth, decomposition, and forest resilience.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section: Title, Play Button, Secondary Image -->
+            <div class="relative h-[40%] flex items-end pb-4">
+                
+                <!-- Play Button (Left) -->
+                <div class="absolute left-0 bottom-4 flex items-center gap-3 cursor-pointer group">
+                    <div class="w-14 h-14 rounded-full bg-accent/10 border border-accent/50 flex items-center justify-center group-hover:bg-accent/20 transition-all duration-300 shadow-glow">
+                        <i class="fa-solid fa-play text-accent text-xl pl-1"></i>
+                    </div>
+                    <span class="text-textSecondary text-xs tracking-widest uppercase opacity-60 group-hover:opacity-100 transition-opacity">Watch Film</span>
+                </div>
+
+                <!-- Main Title (Center Bottom) -->
+                <div class="absolute left-1/2 bottom-0 transform -translate-x-1/2 text-center w-full z-20">
+                    <h1 class="cinematic-title text-[7rem] leading-none italic tracking-tighter mix-blend-screen">
+                        Hidden <br>
+                        <span class="text-[8rem] not-italic -mt-8 block">Networks</span>
+                    </h1>
+                </div>
+
+                <!-- Secondary Image & Logo (Right) -->
+                <div class="absolute right-0 bottom-2 flex flex-col items-end gap-6 z-30">
+                    <!-- Mushroom Image -->
+                    <div class="w-48 h-32 rounded-lg overflow-hidden border border-textSecondary/20 shadow-lg relative">
+                         <img src="https://images.unsplash.com/photo-1505820013142-f86a3439c5b2?q=80&w=2071&auto=format&fit=crop" 
+                              alt="Close up of a mushroom" 
+                              class="w-full h-full object-cover">
+                         <!-- 192*128 -->
+                    </div>
+
+                    <!-- Logo -->
+                    <div class="flex items-center gap-2 opacity-80">
+                        <i class="fa-solid fa-leaf text-accent text-sm"></i>
+                        <span class="text-textPrimary text-xs font-medium tracking-wide">Giggling Platypus Co.</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

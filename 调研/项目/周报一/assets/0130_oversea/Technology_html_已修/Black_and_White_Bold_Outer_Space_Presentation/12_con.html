@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Lunar Habitats - Rimberio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Noto Sans SC', sans-serif; }
+        #page_container { width: 1280px; height: 720px; background-color: #000; margin: 0 auto; position: relative; overflow: hidden; }
+        .text-hero { background: linear-gradient(to bottom, #fff 50%, #444 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .light-card { background-color: #EAECEE; color: #1a1a1a; border-radius: 24px; border-left: 8px solid #9ca3af; }
+        .crosshair { position: absolute; width: 30px; height: 30px; }
+        .crosshair::before { content:''; position:absolute; width:100%; height:1px; top:50%; background:rgba(255,255,255,0.2); }
+        .crosshair::after { content:''; position:absolute; height:100%; width:1px; left:50%; background:rgba(255,255,255,0.2); }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <div class="crosshair top-[10%] left-[10%]"></div>
+        <div class="p-16 flex flex-col h-full relative z-10">
+            <div class="flex items-start justify-between">
+                <h1 class="text-hero text-8xl font-black uppercase tracking-tighter leading-none">BUILDING<br>LUNAR HABITATS</h1>
+                <div class="text-right">
+                    <div class="text-white text-3xl font-black italic tracking-tighter opacity-80 mb-2">Rimberio</div>
+                    <div class="text-white/20 font-mono text-xs uppercase tracking-[0.4em]">Section 06 // Deep Space</div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-12 gap-10 mt-auto">
+                <div class="col-span-4">
+                    <div class="light-card p-10 h-full">
+                        <h3 class="font-black italic text-2xl mb-4 uppercase">Sustainable Life Support</h3>
+                        <p class="text-gray-700 text-sm leading-relaxed">Engineers are developing closed-loop ecosystems that recycle 98% of water and oxygen, making long-term lunar residence a reality.</p>
+                        <div class="mt-8 pt-8 border-t border-gray-300">
+                            <span class="font-mono text-[10px] text-gray-500 uppercase tracking-widest">Efficiency Rating: 99.4%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-8">
+                    <div class="w-full h-[360px] rounded-[32px] overflow-hidden border border-white/10 shadow-2xl relative">
+                        <img src="https://images.unsplash.com/photo-1614728853975-69c960c72abc?q=80&w=1000" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-6 right-8 text-right">
+                            <div class="text-white text-sm font-bold italic">Artemis Base Concept v.4</div>
+                            <div class="text-white/40 text-[10px] font-mono">RENDERED DATA // 2026_SIM</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

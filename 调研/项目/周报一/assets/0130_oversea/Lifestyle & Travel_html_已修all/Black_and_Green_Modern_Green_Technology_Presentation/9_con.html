@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Sustainability Keynote</title>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { 'neon-green': '#d4ff3f', 'dark-bg': '#050505' },
+                    fontFamily: { sans: ['Inter', 'Noto Sans SC', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #050505; overflow: hidden; }
+        .neon-text-glow { text-shadow: 0 0 20px rgba(212, 255, 63, 0.4); }
+        ::-webkit-scrollbar { display: none; }
+
+        /* 统一顶部组件样式 */
+        .glass-nav { background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02)); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.08); }
+        @keyframes slow-rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        .logo-gear { animation: slow-rotate 12s linear infinite; }
+        .status-dot { box-shadow: 0 0 8px #d4ff3f; animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(1.2); } 100% { opacity: 1; transform: scale(1); } }
+    </style>
+</head>
+<body class="font-sans">
+
+    <div id="page_container">
+        <!-- 统一修改后的顶部 Header -->
+        <header class="relative z-50 px-16 pt-10 pb-4">
+            <nav class="flex justify-between items-center glass-nav rounded-2xl px-10 py-5">
+                <div class="flex items-center gap-4 group cursor-pointer">
+                    <div class="relative w-10 h-10 flex items-center justify-center">
+                        <div class="absolute inset-0 border border-neon-green/40 rounded-full scale-110"></div>
+                        <div class="text-neon-green text-xl relative z-10 logo-gear"><i class="fa-solid fa-microchip"></i></div>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-white text-xl font-black tracking-tighter leading-none italic uppercase">Arowwai<span class="text-neon-green">.</span></span>
+                        <span class="text-white text-[9px] tracking-[0.4em] uppercase opacity-40 font-bold">Digital Era</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 group cursor-pointer px-6 py-2 rounded-full hover:bg-white/5 transition-all">
+                    <div class="flex gap-1">
+                        <div class="w-1 h-1 bg-neon-green rounded-full"></div>
+                        <div class="w-1 h-1 bg-neon-green/50 rounded-full"></div>
+                    </div>
+                    <span class="text-xs font-bold uppercase tracking-[0.3em] text-gray-200">Explore</span>
+                    <i class="fa-solid fa-plus text-[9px] text-neon-green group-hover:rotate-90 transition-transform"></i>
+                </div>
+                <div class="flex items-center gap-10">
+                    <div class="flex items-center gap-3">
+                        <div class="status-dot w-1.5 h-1.5 bg-neon-green rounded-full"></div>
+                        <span class="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Node: Active</span>
+                    </div>
+                    <button class="bg-neon-green text-black px-8 py-2.5 rounded-full font-black text-[11px] uppercase tracking-widest hover:bg-white transition-all">Connect</button>
+                </div>
+            </nav>
+        </header>
+
+        <!-- 优化的主内容网格 -->
+        <main class="w-full px-16 pt-6 grid grid-cols-12 gap-10 h-[560px]">
+            <!-- 左侧：信息展示卡片 -->
+            <div class="col-span-5 bg-white/5 border border-white/10 rounded-[48px] p-8 backdrop-blur-md relative flex flex-col justify-between">
+                <div class="grid grid-cols-1 gap-8">
+                    <!-- Item 1 -->
+                    <div class="flex gap-6 items-start">
+                        <div class="w-32 h-32 rounded-3xl overflow-hidden shrink-0 border border-white/10">
+                            <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?q=80&w=600" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all">
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <h3 class="text-white font-bold text-base leading-tight">Digital Support</h3>
+                            <p class="text-gray-400 text-sm leading-relaxed">Smart grids, AI-driven analytics, and IoT devices help monitor and control energy use, reducing waste and emissions.</p>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="flex gap-6 items-start">
+                        <div class="w-32 h-32 rounded-3xl overflow-hidden shrink-0 border border-white/10">
+                            <img src="https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?q=80&w=600" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all">
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <h3 class="text-white font-bold text-base leading-tight">Transformation Impact</h3>
+                            <p class="text-gray-400 text-sm leading-relaxed">Virtual collaboration decreases travel needs, leading to reduced carbon footprints and sustainable models.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 底部修饰 -->
+                <div class="text-[10px] font-bold tracking-[0.5em] text-neon-green uppercase opacity-50 px-2 pt-4">Sustainable Metrics</div>
+            </div>
+
+            <!-- 右侧：标题与主图 -->
+            <div class="col-span-7 flex flex-col justify-between">
+                <div class="pt-4">
+                    <h2 class="text-7xl text-white font-black uppercase leading-[0.85] tracking-tighter neon-text-glow">
+                        Digital <span class="text-neon-green italic">Role</span><br>
+                        In Future<br>
+                        Sustainability
+                    </h2>
+                </div>
+                <div class="w-full h-[300px] relative rounded-[48px] overflow-hidden group border border-white/5">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000">
+                    <div class="absolute bottom-8 right-8 z-20 w-14 h-14 rounded-full border border-neon-green flex items-center justify-center text-neon-green backdrop-blur-md hover:bg-neon-green hover:text-black transition-all">
+                        <i class="fa-solid fa-arrow-right -rotate-45"></i>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accomplishments Timeline</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #000000;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 玻璃拟态卡片 */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            background: rgba(140, 122, 230, 0.1);
+            border-color: rgba(140, 122, 230, 0.4);
+            transform: translateY(-10px);
+        }
+
+        /* 文字渐变 */
+        .text-gradient {
+            background: linear-gradient(to bottom right, #FFFFFF 30%, #8C7AE6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* 背景装饰光晕 */
+        .glow {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(120px);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* 时间轴连接线 */
+        .timeline-line {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(140, 122, 230, 0.3), transparent);
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <!-- 背景光晕 -->
+        <div class="glow" style="width: 500px; height: 500px; background: rgba(140, 122, 230, 0.15); top: -100px; right: -100px;"></div>
+        <div class="glow" style="width: 400px; height: 400px; background: rgba(27, 63, 155, 0.2); bottom: -100px; left: -100px;"></div>
+
+        <!-- 顶部标题区域 -->
+        <div class="relative z-10 px-16 pt-16 pb-12">
+            <div class="flex items-end justify-between border-b border-white/10 pb-6">
+                <div>
+                    <h1 class="text-7xl font-black tracking-tighter text-white uppercase m-0 leading-none">
+                        Accomplishments
+                    </h1>
+                    <p class="text-purple-400 font-light tracking-[0.5em] uppercase text-sm mt-4 ml-1">
+                        Timeline & Milestones 2021 — 2026
+                    </p>
+                </div>
+                <div class="text-right">
+                    <span class="text-white/30 text-xs tracking-widest uppercase">Growth Report</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 主内容区域：横向时间轴布局 -->
+        <div class="relative z-10 flex-1 px-16 flex items-center">
+            
+            <!-- 时间轴底线装饰 -->
+            <div class="timeline-line"></div>
+
+            <div class="grid grid-cols-4 gap-6 w-full relative z-20">
+                
+                <!-- 2021 -->
+                <div class="glass-card p-8 flex flex-col h-[320px]">
+                    <div class="flex justify-between items-start mb-6">
+                        <span class="text-4xl font-bold text-white italic">2021</span>
+                        <div class="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center border border-purple-500/30">
+                            <i class="fa-solid fa-rocket text-purple-400"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-white font-bold mb-3 text-lg">Product Launch</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed font-light">
+                        Successfully launched our core product, securing early adopter feedback and establishing initial market presence.
+                    </p>
+                </div>
+
+                <!-- 2023 -->
+                <div class="glass-card p-8 flex flex-col h-[320px]">
+                    <div class="flex justify-between items-start mb-6">
+                        <span class="text-4xl font-bold text-white italic">2023</span>
+                        <div class="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center border border-blue-500/30">
+                            <i class="fa-solid fa-chart-line text-blue-400"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-white font-bold mb-3 text-lg">Market Expansion</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed font-light">
+                        Expanded operations into three new regions while maintaining high customer satisfaction and operational efficiency.
+                    </p>
+                </div>
+
+                <!-- 2025 -->
+                <div class="glass-card p-8 flex flex-col h-[320px]">
+                    <div class="flex justify-between items-start mb-6">
+                        <span class="text-4xl font-bold text-white italic">2025</span>
+                        <div class="w-10 h-10 rounded-full bg-pink-500/20 flex items-center justify-center border border-pink-500/30">
+                            <i class="fa-solid fa-shield-halved text-pink-400"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-white font-bold mb-3 text-lg">Strategic Pivot</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed font-light">
+                        Secured series-B funding and formed strategic partnerships with Fortune 500 companies to refine our service ecosystem.
+                    </p>
+                </div>
+
+                <!-- PRESENT -->
+                <div class="glass-card p-8 flex flex-col h-[320px] border-purple-500/50 bg-gradient-to-br from-purple-900/20 to-transparent">
+                    <div class="flex justify-between items-start mb-6">
+                        <span class="text-4xl font-extrabold text-gradient">PRESENT</span>
+                        <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+                            <i class="fa-solid fa-flag text-black text-sm"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-white font-bold mb-3 text-lg">Market Leadership</h4>
+                    <p class="text-white/80 text-sm leading-relaxed font-normal">
+                        Achieved sustained profitability and recognized as an industry leader in innovation and brand reputation.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 底部装饰信息 -->
+        <div class="relative z-10 px-16 py-8 flex justify-between items-center opacity-40">
+            <div class="text-[10px] text-white tracking-[0.3em] uppercase">Confidential & Internal Use Only</div>
+            <div class="w-12 h-[1px] bg-white/30"></div>
+            <div class="text-[10px] text-white tracking-[0.3em] uppercase">Page 04 / 12</div>
+        </div>
+
+    </div>
+
+</body>
+</html>

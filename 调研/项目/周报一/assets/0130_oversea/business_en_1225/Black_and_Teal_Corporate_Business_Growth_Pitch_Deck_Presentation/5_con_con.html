@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From Concept to Market Strategy</title>
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <!-- FontAwesome (CDN) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+
+    <!-- Google Fonts (Baidu Mirror as requested) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        /* CSS Reset & Global Settings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container Specs */
+        .page-container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #0E1011;
+            overflow: hidden;
+        }
+
+        /* Gradient Utilities (Standard CSS Syntax) */
+        .gradient-overlay {
+            background: linear-gradient(to bottom, rgba(14, 16, 17, 0), #0E1011);
+        }
+
+        .line-accent {
+            background: linear-gradient(180deg, rgba(90, 107, 104, 0), #5A6B68, rgba(90, 107, 104, 0));
+        }
+
+        /* Utility for perfect centering */
+        .flex-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+
+    <!-- Tailwind Config for Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#0E1011',
+                        primary: '#B0E6DC',
+                        primaryDark: '#2C3E3A',
+                        textMain: '#FFFFFF',
+                        textSub: '#D1D5DB',
+                        accentLine: '#5A6B68',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Main Page Container -->
+    <div class="page-container">
+
+        <!-- DECORATION: Background shapes -->
+        <!-- Top Left Dark Circle Variant -->
+        <div class="absolute -top-20 -left-20 w-64 h-64 rounded-full bg-primaryDark opacity-30 blur-3xl z-0"></div>
+        <!-- Bottom Right Dark Circle Variant -->
+        <div class="absolute -bottom-20 -right-20 w-80 h-80 rounded-full bg-primaryDark opacity-20 blur-3xl z-0"></div>
+        
+        <!-- DECORATION: Side Angled Lines (referencing original design lines) -->
+        <div class="absolute top-1/2 left-10 w-[2px] h-64 -translate-y-1/2 line-accent opacity-50 transform -skew-x-12 z-0"></div>
+        <div class="absolute top-1/2 right-10 w-[2px] h-64 -translate-y-1/2 line-accent opacity-50 transform skew-x-12 z-0"></div>
+
+        <!-- CONTENT SECTION -->
+        <div class="relative z-10 w-full h-full flex flex-col">
+
+            <!-- 1. IMAGE AREA (Top 45%) -->
+            <div class="relative w-full h-[320px]">
+                <!-- Image: Diverse team collaboration (Black & White style to match mood) -->
+                <!-- The image is positioned to focus on faces, with a gradient fade at the bottom -->
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1280&auto=format&fit=crop" 
+                     alt="Diverse team collaborating" 
+                     class="w-full h-full object-cover opacity-90 grayscale contrast-110">
+                <!-- 1280*320 -->
+
+                <!-- Gradient Mask to blend image into dark background -->
+                <div class="absolute bottom-0 left-0 w-full h-32 gradient-overlay"></div>
+            </div>
+
+            <!-- 2. TEXT CONTENT AREA (Bottom 55%) -->
+            <div class="flex-1 flex flex-col items-center justify-start pt-4 px-24">
+
+                <!-- Title Section -->
+                <div class="text-center mb-12">
+                    <h1 class="text-6xl font-bold text-primary tracking-tight mb-2">
+                        From Concept to Market
+                    </h1>
+                </div>
+
+                <!-- Timeline / Grid Section -->
+                <div class="w-full grid grid-cols-3 gap-12">
+
+                    <!-- ITEM 1: 2019 -->
+                    <div class="flex flex-col items-center text-center group">
+                        <!-- Icon Container -->
+                        <div class="w-20 h-20 rounded-full bg-primary flex-center mb-6 shadow-[0_0_20px_rgba(176,230,220,0.2)]">
+                            <!-- Icon: Chart/Research -->
+                            <i class="fa-solid fa-chart-pie text-bgDark text-3xl"></i>
+                        </div>
+                        
+                        <!-- Year & Title -->
+                        <h3 class="text-textMain text-xl font-bold mb-2">
+                            2019 — Research
+                        </h3>
+                        
+                        <!-- Description -->
+                        <p class="text-textSub text-base leading-relaxed font-light px-2">
+                            Development of the core idea and validation.
+                        </p>
+                    </div>
+
+                    <!-- ITEM 2: 2021 -->
+                    <div class="flex flex-col items-center text-center group">
+                        <!-- Icon Container -->
+                        <div class="w-20 h-20 rounded-full bg-primary flex-center mb-6 shadow-[0_0_20px_rgba(176,230,220,0.2)]">
+                            <!-- Icon: Pilot/Testing (User focused) -->
+                            <i class="fa-solid fa-flask-vial text-bgDark text-3xl"></i>
+                        </div>
+                        
+                        <!-- Year & Title -->
+                        <h3 class="text-textMain text-xl font-bold mb-2">
+                            2021 — Pilot
+                        </h3>
+                        
+                        <!-- Description -->
+                        <p class="text-textSub text-base leading-relaxed font-light px-2">
+                            Early testing with selected partners and data insights.
+                        </p>
+                    </div>
+
+                    <!-- ITEM 3: 2023 -->
+                    <div class="flex flex-col items-center text-center group">
+                        <!-- Icon Container -->
+                        <div class="w-20 h-20 rounded-full bg-primary flex-center mb-6 shadow-[0_0_20px_rgba(176,230,220,0.2)]">
+                            <!-- Icon: Launch/Market -->
+                            <i class="fa-solid fa-rocket text-bgDark text-3xl"></i>
+                        </div>
+                        
+                        <!-- Year & Title -->
+                        <h3 class="text-textMain text-xl font-bold mb-2">
+                            2023 — Launch
+                        </h3>
+                        
+                        <!-- Description -->
+                        <p class="text-textSub text-base leading-relaxed font-light px-2">
+                            Entry into the market with growing adoption.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

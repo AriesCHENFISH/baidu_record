@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estelle Darcy - Typography Cover</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Inter:wght@300;400;500;600&family=Oswald:wght@400;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* 核心配色变量 */
+        :root {
+            --bg-pink: #FFEBEB;
+            --navy: #1A235F;
+            --accent: #B04E78;
+            --metallic: #A6A9B6;
+            --text-grey: #4A4A6A;
+        }
+
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto;
+            background-color: var(--bg-pink);
+            font-family: 'Inter', sans-serif;
+            overflow: hidden; position: relative;
+            /* subtle gradient background base */
+            background: linear-gradient(to bottom right, #FFF5F5, #FFEBEB);
+        }
+
+        .font-display { font-family: 'Oswald', sans-serif; }
+        .font-script { font-family: 'Allura', cursive; }
+
+        /* 镂空文字效果 */
+        .outline-text {
+            -webkit-text-stroke: 3px var(--navy);
+            color: transparent;
+            /* 稍微降低透明度增加层次感 */
+            opacity: 0.5; 
+        }
+
+        /* 噪点纹理叠加 */
+        .texture-overlay {
+            position: absolute; inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+            pointer-events: none; z-index: 50; mix-blend-mode: overlay;
+        }
+
+        /* 金属渐变文字/图标 */
+        .metallic-gradient {
+            background: linear-gradient(135deg, #A6A9B6 0%, #FFFFFF 50%, #7a7d8a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0px 2px 4px rgba(26, 35, 95, 0.2));
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container" class="flex flex-col justify-between p-14 relative">
+        <div class="texture-overlay"></div>
+
+        <div class="absolute top-[-200px] left-[-100px] w-[700px] h-[700px] rounded-full bg-[#B04E78] opacity-10 blur-[120px] z-0"></div>
+        <div class="absolute bottom-[-200px] right-[-100px] w-[800px] h-[800px] rounded-full bg-[#1A235F] opacity-15 blur-[150px] z-0"></div>
+
+        <header class="flex justify-between items-start z-40 relative">
+            <div class="flex flex-col">
+                <h2 class="text-[#1A235F] font-display font-bold text-3xl tracking-wider uppercase leading-none">Estelle Darcy</h2>
+                <span class="text-[#B04E78] font-script text-3xl -mt-2 ml-1">Visual Designer</span>
+            </div>
+            <div class="text-right border-r-4 border-[#B04E78] pr-4">
+                <p class="text-[#1A235F] text-sm uppercase tracking-[0.3em] font-bold">Portfolio</p>
+                <p class="text-[#4A4A6A] text-xs uppercase tracking-[0.2em]">Vol. 25 — 2025</p>
+            </div>
+        </header>
+
+        <main class="absolute inset-0 flex flex-col items-center justify-center z-10 pointer-events-none select-none">
+            
+            <div class="relative text-center w-full transform -translate-y-8">
+                
+                <div class="absolute top-[35%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 z-30 rotate-[-5deg]">
+                    <span class="font-script text-[150px] text-[#B04E78] whitespace-nowrap drop-shadow-xl opacity-90" style="text-shadow: 3px 3px 0px rgba(255,235,235,0.8);">
+                        Curated Collection
+                    </span>
+                </div>
+
+                <h1 class="relative z-20 font-display text-[220px] leading-[0.85] font-extrabold text-[#1A235F] uppercase tracking-tighter drop-shadow-2xl">
+                    Creative
+                </h1>
+
+                <h1 class="relative z-10 font-display text-[220px] leading-[0.85] font-extrabold outline-text uppercase tracking-tighter -mt-[100px] ml-[150px]">
+                    Portfolio
+                </h1>
+            </div>
+
+            <div class="absolute bottom-[15%] left-[10%] text-7xl animate-pulse z-20 opacity-80">
+                <i class="fa-solid fa-star-of-life metallic-gradient"></i>
+            </div>
+            <div class="absolute top-[18%] right-[12%] text-5xl z-20 opacity-60 fa-spin-slow">
+                <i class="fa-solid fa-star metallic-gradient"></i>
+            </div>
+        </main>
+
+        <footer class="flex justify-between items-end z-40 relative">
+            <div class="flex flex-col items-start">
+                 <p class="text-[#4A4A6A] text-xs uppercase tracking-[0.2em] mb-2 font-bold">Specialization</p>
+                 <div class="flex gap-6 text-[#1A235F] font-display uppercase tracking-wider text-sm font-bold">
+                     <span>Brand Identity</span>
+                     <span class="text-[#B04E78]">•</span>
+                     <span>UI/UX Design</span>
+                     <span class="text-[#B04E78]">•</span>
+                     <span>Art Direction</span>
+                 </div>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <div class="text-right">
+                    <p class="text-[#1A235F] font-bold text-base">hello@estelle.design</p>
+                    <p class="text-[#4A4A6A] text-sm">Available for freelance</p>
+                </div>
+                 <div class="w-12 h-12 bg-[#1A235F] rounded-full flex items-center justify-center text-[#FFEBEB] text-xl">
+                    <i class="fa-solid fa-arrow-right -rotate-45"></i>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <style>
+        /* 添加一个缓慢旋转的动画给小星星 */
+        .fa-spin-slow {
+            animation: fa-spin 10s infinite linear;
+        }
+    </style>
+</body>
+</html>

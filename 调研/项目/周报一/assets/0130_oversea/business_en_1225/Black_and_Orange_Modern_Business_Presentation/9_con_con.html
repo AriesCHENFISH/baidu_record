@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Shodwe - Keynote Slide</title>
+    
+    <!-- Google Fonts (Domestic Mirror) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#D95325', // Primary Orange
+                        dark: '#1A1A1A',    // Text Black
+                        secondary: '#808080', // Secondary Grey
+                        light: '#F5F5F5',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container Styling */
+        .page-container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            background-color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Typography Utilities */
+        .text-justify-last-left {
+            text-align: justify;
+            text-align-last: left;
+        }
+
+        /* Image Grayscale Filter Class */
+        .img-grayscale {
+            filter: grayscale(100%) contrast(110%);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div class="page-container">
+        
+        <!-- TOP SECTION: Orange Geometric Background -->
+        <!-- Logic: Using a split layout where the top 55% acts as a visual header -->
+        <div class="absolute top-0 left-0 w-full h-[55%] bg-primary overflow-hidden">
+            
+            <!-- Decorative Abstract Background Element (Right Side) -->
+            <!-- Using an abstract architectural shape to mimic the 'curved' element in the original, but cleaner -->
+            <div class="absolute top-0 right-0 w-[60%] h-full opacity-30 mix-blend-multiply">
+                 <img src="https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?q=80&w=1280&auto=format&fit=crop" 
+                      alt="Abstract Geometry" 
+                      class="w-full h-full object-cover img-grayscale">
+                 <!-- 768*400 -->
+            </div>
+
+            <!-- Page Number Indicator -->
+            <div class="absolute top-10 left-12 flex items-start gap-2 text-dark">
+                <h2 class="text-6xl font-bold tracking-tighter text-white opacity-90">07</h2>
+                <!-- Minimal geometric decoration -->
+                <div class="w-4 h-4 bg-dark mt-2"></div>
+            </div>
+        </div>
+
+        <!-- MAIN CONTENT LAYER -->
+        <!-- Positioning: Overlapping the boundary between Orange (Top) and White (Bottom) -->
+        <div class="absolute inset-0 flex flex-col justify-end pb-16 px-16 pointer-events-none">
+            
+            <!-- GRID LAYOUT: 2 Columns -->
+            <div class="grid grid-cols-12 gap-8 w-full pointer-events-auto">
+                
+                <!-- Left Column: Headline -->
+                <div class="col-span-7 flex flex-col justify-end pt-12">
+                    <!-- Main Title -->
+                    <!-- Typography: Heavy, industrial sans-serif, high contrast against white background -->
+                    <h1 class="text-[6.5rem] leading-[0.85] font-black tracking-tight text-dark uppercase mb-4">
+                        Real Work.<br>
+                        <span class="text-primary">Real Wins.</span>
+                    </h1>
+                </div>
+
+                <!-- Right Column: Paragraph and Divider -->
+                <div class="col-span-5 flex flex-col justify-end pb-4 pl-8">
+                    <!-- Divider Line -->
+                    <div class="w-full h-[2px] bg-secondary mb-6 opacity-40"></div>
+                    
+                    <!-- Body Text -->
+                    <!-- Content extracted exactly from prompt, styled for readability -->
+                    <p class="text-lg text-dark leading-relaxed font-normal">
+                        Our team of marketing professionals combines experience and passion to deliver results. From strategists to designers, every team member brings unique skills to the table.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FLOATING IMAGE MODULE -->
+        <!-- Visual Logic: A "Real Work" environment photo overlapping the orange/white split to create depth. -->
+        <!-- Positioned absolutely to break the grid visually -->
+        <div class="absolute top-[18%] left-[18%] w-[380px] h-[320px] bg-white p-2 shadow-2xl z-10">
+            <div class="w-full h-full bg-gray-200 overflow-hidden relative">
+                <!-- Image: Modern Office/Studio Interior -->
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop" 
+                     alt="Modern Office Space" 
+                     class="w-full h-full object-cover img-grayscale hover:scale-105 transition-transform duration-700 ease-out">
+                <!-- 380*320 -->
+            </div>
+            
+            <!-- Decorative corner accent -->
+            <div class="absolute -bottom-4 -right-4 w-12 h-12 bg-dark z-20 flex items-center justify-center">
+                 <i class="fa-solid fa-arrow-right text-white text-lg -rotate-45"></i>
+            </div>
+        </div>
+
+        <!-- FOOTER SECTION -->
+        <!-- Fixed at bottom with margins -->
+        <div class="absolute bottom-12 left-0 w-full px-16 flex justify-between items-end">
+            <!-- Footer Center/Left Info -->
+            <div class="flex items-center gap-3">
+                <div class="w-2 h-2 rounded-full bg-primary"></div>
+                <h4 class="text-secondary font-medium tracking-wide text-sm uppercase">Project Highlights</h4>
+            </div>
+
+            <!-- Footer Right Brand -->
+            <div>
+                <h4 class="text-dark font-bold text-lg tracking-tight">Studio Shodwe</h4>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

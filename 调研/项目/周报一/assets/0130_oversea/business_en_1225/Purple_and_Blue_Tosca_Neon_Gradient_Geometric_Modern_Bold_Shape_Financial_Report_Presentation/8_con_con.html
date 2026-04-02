@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profitability Metrics - Executive Dashboard</title>
+
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBg: '#05050F',
+                        primaryText: '#DDFCF2',
+                        secondaryText: '#B0B0B0',
+                        chart1: '#C8F9E6',
+                        chart2: '#88DEE3',
+                        chart3: '#64B0CF',
+                        chart4: '#538AB8',
+                    },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #05050F; overflow: hidden; }
+        .glass-panel { backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .text-gradient { background: linear-gradient(90deg, #DDFCF2, #88DEE3); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <div class="absolute -top-20 -left-20 w-[500px] h-[500px] rounded-full" style="background: radial-gradient(circle, #18123A 0%, transparent 70%); filter: blur(60px); opacity: 0.8;"></div>
+        <div class="absolute -bottom-40 -right-20 w-[600px] h-[600px] rounded-full" style="background: radial-gradient(circle, #1E1B33 0%, transparent 70%); filter: blur(80px); opacity: 0.6;"></div>
+
+        <div class="relative z-50 px-12 pt-8 w-full">
+            <nav class="flex items-center justify-between w-full h-20 px-10 rounded-full" style="background: linear-gradient(90deg, #6a44f0 0%, #1E1B33 40%, #1E1B33 100%); box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);">
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 flex items-center justify-center rounded-full bg-[#DDFCF2] text-[#05050F]">
+                        <i class="fa-solid fa-layer-group text-xl"></i>
+                    </div>
+                    <h2 class="text-[#DDFCF2] text-xl font-bold tracking-wide">Fradel Company</h2>
+                </div>
+                <ul class="flex items-center gap-12 list-none m-0 p-0">
+                    <li class="cursor-pointer"><b class="text-[#DDFCF2] text-sm tracking-widest hover:text-white transition-colors">HOME</b></li>
+                    <li class="cursor-pointer"><b class="text-[#B0B0B0] text-sm tracking-widest hover:text-[#DDFCF2] transition-colors">ABOUT</b></li>
+                    <li class="cursor-pointer"><b class="text-[#B0B0B0] text-sm tracking-widest hover:text-[#DDFCF2] transition-colors">MORE</b></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="relative z-10 grid grid-cols-12 gap-8 px-16 mt-6 h-[560px]">
+            <div class="col-span-7 flex flex-col justify-between">
+                <header class="mb-4">
+                    <h1 class="text-6xl font-bold text-[#DDFCF2] leading-tight tracking-tight">Profitability <br><span class="text-gradient">Metrics</span></h1>
+                    <p class="text-[#B0B0B0] mt-4 text-sm max-w-md leading-relaxed">Comprehensive analysis showing positive growth trends across major sectors.</p>
+                </header>
+                <div class="w-full flex-1 rounded-2xl glass-panel p-4 mt-2" style="background: rgba(5, 5, 15, 0.3);">
+                    <div id="mainChart" class="w-full h-full"></div>
+                </div>
+            </div>
+
+            <div class="col-span-5 flex flex-col justify-center gap-8 pl-8">
+                <div class="flex items-center gap-6 group">
+                    <div class="w-28 h-28 rounded-full flex items-center justify-center shrink-0 shadow-lg" style="background: linear-gradient(135deg, #1E1B33, #05050F); border: 1px solid #18123A;">
+                        <span class="text-3xl font-bold text-[#DDFCF2]">30%</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <h3 class="text-2xl font-bold text-[#DDFCF2] mb-1">Gross Margin</h3>
+                        <p class="text-[#B0B0B0] text-sm">Strong production efficiency indicated.</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-6 group">
+                    <div class="w-28 h-28 rounded-full flex items-center justify-center shrink-0 shadow-lg" style="background: linear-gradient(135deg, #538AB8, #18123A);">
+                        <span class="text-3xl font-bold text-[#DDFCF2]">20%</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <h3 class="text-2xl font-bold text-[#DDFCF2] mb-1">Operating Margin</h3>
+                        <p class="text-[#B0B0B0] text-sm">Efficient management of operating expenses.</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-6 group">
+                    <div class="w-28 h-28 rounded-full flex items-center justify-center shrink-0 shadow-lg" style="background: linear-gradient(135deg, #88DEE3, #538AB8);">
+                        <span class="text-3xl font-bold text-[#05050F]">50%</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <h3 class="text-2xl font-bold text-[#DDFCF2] mb-1">Net Profit Margin</h3>
+                        <p class="text-[#B0B0B0] text-sm">Strategic optimization achieved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var myChart = echarts.init(document.getElementById('mainChart'));
+        var option = {
+            grid: { left: '3%', right: '4%', bottom: '3%', top: '15%', containLabel: true },
+            legend: { data: ['Series 1', 'Series 2', 'Series 3'], textStyle: { color: '#B0B0B0' }, top: 0, right: 10 },
+            xAxis: { type: 'category', boundaryGap: false, data: ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'], axisLine: { lineStyle: { color: '#18123A' } }, axisLabel: { color: '#B0B0B0' } },
+            yAxis: { type: 'value', splitLine: { lineStyle: { color: 'rgba(176, 176, 176, 0.1)' } }, axisLabel: { color: '#B0B0B0' } },
+            series: [
+                { name: 'Series 1', type: 'line', smooth: true, data: [18, 30, 25, 40, 42], itemStyle: { color: '#C8F9E6' } },
+                { name: 'Series 2', type: 'line', smooth: true, data: [12, 4, 20, 15, 50], itemStyle: { color: '#88DEE3' } },
+                { name: 'Series 3', type: 'line', smooth: true, data: [0, 12, 38, 30, 32], itemStyle: { color: '#538AB8' } }
+            ]
+        };
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

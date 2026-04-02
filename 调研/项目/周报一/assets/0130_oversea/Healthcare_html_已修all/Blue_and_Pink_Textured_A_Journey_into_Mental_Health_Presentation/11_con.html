@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Action Plan - Card Layout</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { navy: { 900: '#0F172A', 800: '#1E3A8A' }, slate: { 700: '#334155', 100: '#F1F5F9' } },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'sans-serif'], serif: ['"Times New Roman"', 'serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #FFFFFF; overflow: hidden; }
+        /* 卡片式设计 */
+        .step-card { @apply bg-white rounded-3xl p-6 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-50 flex items-start gap-6 transition-all hover:shadow-xl hover:-translate-x-2; }
+        .keyword-chip { @apply px-3 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider bg-navy-900 text-white whitespace-nowrap; }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <div class="absolute top-0 left-0 w-[480px] h-full bg-slate-100/50 z-0"></div>
+
+        <header class="absolute top-0 left-0 w-full px-16 py-12 flex justify-between items-start z-20">
+            <div class="flex items-center gap-4">
+                <div class="w-12 h-[2px] bg-navy-900 mt-6"></div>
+                <div class="text-navy-900">
+                    <p class="text-xs uppercase tracking-[0.3em] text-slate-700 font-bold opacity-50">Page</p>
+                    <p class="text-6xl font-serif font-bold leading-none">11</p>
+                </div>
+            </div>
+            <div class="keyword-chip !bg-navy-800 !px-5 !py-2 rounded-full !text-xs">Strategic Roadmap</div>
+        </header>
+
+        <main class="relative z-10 grid grid-cols-12 h-full items-center px-16 pt-20 gap-16">
+            <div class="col-span-6 flex flex-col gap-6">
+                <div class="step-card">
+                    <div class="flex flex-col items-center">
+                        <span class="text-4xl font-serif font-bold text-navy-800 leading-none">01</span>
+                        <div class="w-px h-6 bg-slate-200 mt-2"></div>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <div class="flex items-center gap-3">
+                            <h3 class="font-bold text-navy-900 text-xl">Initial Screening</h3>
+                            <span class="keyword-chip bg-slate-400">Awareness</span>
+                        </div>
+                        <p class="text-gl text-slate-600 leading-relaxed">Regular self-assessment helps in identifying emotional triggers and burnout patterns before they escalate.</p>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="flex flex-col items-center">
+                        <span class="text-4xl font-serif font-bold text-navy-800 leading-none">02</span>
+                        <div class="w-px h-6 bg-slate-200 mt-2"></div>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <div class="flex items-center gap-3">
+                            <h3 class="font-bold text-navy-900 text-xl">Community Outreach</h3>
+                            <span class="keyword-chip bg-slate-400">Support</span>
+                        </div>
+                        <p class="text-gl text-slate-600 leading-relaxed">Building professional networks and support groups creates a safety net for those experiencing challenges.</p>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="flex flex-col items-center">
+                        <span class="text-4xl font-serif font-bold text-navy-800 leading-none">03</span>
+                        <div class="w-px h-6 bg-slate-200 mt-2"></div>
+
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <div class="flex items-center gap-3">
+                            <h3 class="font-bold text-navy-900 text-xl">Sustainable Habits</h3>
+                            <span class="keyword-chip bg-slate-400">Routine</span>
+                        </div>
+                        <p class="text-gl text-slate-600 leading-relaxed">Developing micro-habits, such as mindfulness, significantly lowers workplace stress levels.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-span-6 flex flex-col justify-center border-l border-slate-100 pl-16">
+                <h1 class="text-7xl font-serif font-bold text-navy-900 mb-8 leading-tight">Empower <br>The Future</h1>
+                <div class="flex flex-col gap-10">
+                    <p class="text-2xl font-light text-slate-700 leading-relaxed italic opacity-80">
+                        "Sustainable action requires a blend of empathy and professional strategy."
+                    </p>
+                    <div class="flex flex-col gap-4">
+                        <div class="w-20 h-1 bg-navy-900"></div>
+                        <p class="text-sm text-navy-800 font-bold uppercase tracking-[0.3em]">Actionable Solutions</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

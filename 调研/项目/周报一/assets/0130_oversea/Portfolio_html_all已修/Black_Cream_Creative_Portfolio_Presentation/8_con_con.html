@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 3# - Portfolio</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { bgDark: '#050505', primaryText: '#FDF6E3', secondaryText: '#9A9A9A', accent: '#D65DB1' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #050505; overflow: hidden; display: flex; }
+        .vertical-text { writing-mode: vertical-rl; transform: rotate(180deg); }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <!-- 背景巨大的斜杠装饰 -->
+        <div class="absolute inset-0 flex items-center justify-center opacity-[0.03] pointer-events-none">
+            <div class="font-display font-bold text-[800px] text-accent">/</div>
+        </div>
+
+        <!-- 左半部分：双图排列 -->
+        <div class="w-1/2 h-full p-12 flex flex-col gap-6 justify-center">
+            <div class="w-full h-[300px] rounded-br-[80px] rounded-tl-[80px] overflow-hidden border border-gray-800 group">
+                <img src="https://images.unsplash.com/photo-1512428559087-560fa5ce7d5b?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+            </div>
+            <div class="w-full h-[300px] rounded-bl-[80px] rounded-tr-[80px] overflow-hidden border border-gray-800 group">
+                <img src="https://images.unsplash.com/photo-1556656793-02715d8dd660?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+            </div>
+        </div>
+
+        <!-- 右半部分：文字信息流 -->
+        <div class="w-1/2 h-full flex flex-col justify-center px-16 relative">
+            <!-- 装饰元素 -->
+            <div class="absolute top-20 right-20 text-accent text-6xl opacity-20"><i class="fa-solid fa-asterisk"></i></div>
+            
+            <div class="mb-12">
+                <h1 class="font-display font-bold text-8xl text-primaryText uppercase leading-none tracking-tighter mb-4">
+                    Featured<br>Projects
+                </h1>
+                <div class="flex items-center gap-4">
+                    <span class="font-display text-accent text-4xl font-bold italic">03</span>
+                    <div class="h-[2px] flex-1 bg-gradient-to-r from-accent to-transparent"></div>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <h2 class="font-display text-primaryText text-2xl font-light tracking-[0.1em] uppercase">Project 3#</h2>
+                <p class="text-secondaryText text-sm leading-relaxed font-light text-justify pr-10 border-r-2 border-accent/20">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget finibus ligula. Quisque tristique, diam a ornare fringilla, dui nisl condimentum ligula, at ultricies nulla tellus at sem. Curabitur et augue pellentesque tortor imperdiet consectetur ac nec felis. Aliquam erat volutpat. Ut ac nunc et neque sagittis maximus posuere sit amet sapien. Donec venenatis nibh lectus, et mollis orci aliquam ac.
+                </p>
+                <div class="flex gap-4">
+                    <span class="text-[10px] text-accent border border-accent/30 px-3 py-1 rounded-full uppercase tracking-widest">Branding</span>
+                    <span class="text-[10px] text-accent border border-accent/30 px-3 py-1 rounded-full uppercase tracking-widest">Digital Design</span>

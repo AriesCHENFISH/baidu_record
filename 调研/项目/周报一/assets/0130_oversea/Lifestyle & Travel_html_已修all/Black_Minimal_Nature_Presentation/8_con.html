@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Tips - Thynk Unlimited</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative;
+            background-color: #000000; font-family: 'Noto Sans SC', sans-serif; overflow: hidden;
+        }
+
+        /* 玻璃面板优化：增加渐变描边和内阴影 */
+        .glass-panel {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 
+                inset 0 0 20px rgba(255, 255, 255, 0.05),
+                0 25px 50px -12px rgba(0, 0, 0, 0.7);
+        }
+
+        .font-serif-display { font-family: 'Times New Roman', serif; }
+        .travel-tag { background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.1); }
+        
+        /* 装饰用光晕 */
+        .ambient-glow {
+            position: absolute;
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(107, 142, 173, 0.1) 0%, rgba(0,0,0,0) 70%);
+            top: 20%; left: -10%;
+            z-index: 1; pointer-events: none;
+        }
+
+        /* 图片装饰框样式 */
+        .img-frame {
+            position: relative;
+            padding: 8px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <div class="ambient-glow"></div>
+
+        <header class="relative z-20 flex justify-between items-start px-16 py-10 h-24">
+            <div class="flex flex-col">
+                <div class="flex items-center gap-3 mb-1">
+                    <div class="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center bg-white/5 backdrop-blur-md">
+                        <i class="fa-solid fa-mountain-sun text-[#6B8EAD] text-lg"></i>
+                    </div>
+                    <h1 class="font-serif-display text-3xl text-white tracking-widest uppercase font-bold">Thynk<span class="text-[#6B8EAD]">.</span></h1>
+                </div>
+                <span class="text-white/40 text-[10px] tracking-[0.3em] uppercase pl-14">Unlimited Travel</span>
+            </div>
+            <div class="flex gap-3">
+                <div class="travel-tag flex items-center gap-2 px-4 py-2 rounded-full backdrop-blur-sm">
+                    <i class="fa-solid fa-house text-[#6B8EAD] text-[10px]"></i>
+                    <span class="text-white text-[10px] tracking-widest uppercase">Home</span>
+                </div>
+                <div class="travel-tag flex items-center gap-2 px-4 py-2 rounded-full ring-1 ring-[#6B8EAD]/50 bg-[#6B8EAD]/10">
+                    <i class="fa-solid fa-file-lines text-[#6B8EAD] text-[10px]"></i>
+                    <span class="text-white text-[10px] tracking-widest font-bold uppercase">Content</span>
+                </div>
+                <div class="w-9 h-9 flex items-center justify-center rounded-full bg-[#6B8EAD] text-white ml-2 cursor-pointer hover:bg-[#8EAFCE] transition-colors">
+                    <i class="fa-solid fa-bars text-sm"></i>
+                </div>
+            </div>
+        </header>
+
+        <main class="relative z-10 grid grid-cols-12 gap-12 px-16 h-[520px] mt-8">
+            <div class="col-span-5 flex flex-col justify-between">
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-[#6B8EAD] rounded-[2rem] translate-x-3 translate-y-3 opacity-20 group-hover:translate-x-1 group-hover:translate-y-1 transition-transform"></div>
+                    <div class="img-frame rounded-[2rem] overflow-hidden h-60 relative shadow-2xl z-10">
+                        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=600" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="w-16 h-1 bg-[#6B8EAD] mb-6"></div>
+                    <h1 class="text-white text-7xl font-bold leading-[0.85] tracking-tighter">
+                        Practical<br>
+                        <span class="font-serif-display font-thin italic text-[#8EAFCE] tracking-normal">Eco Tips</span>
+                    </h1>
+                </div>
+            </div>
+
+            <div class="col-span-7 flex flex-col justify-between items-end">
+                <div class="glass-panel rounded-[2.5rem] p-12 relative w-full group">
+                    <div class="absolute -top-5 left-10 bg-[#6B8EAD] w-12 h-12 rounded-2xl flex items-center justify-center shadow-[0_10px_20px_rgba(107,142,173,0.4)] transform -rotate-12 group-hover:rotate-0 transition-transform">
+                        <i class="fas fa-seedling text-white text-xl"></i>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <p class="text-white text-2xl font-light leading-snug border-l-2 border-[#6B8EAD] pl-6 mb-6">
+                            Small choices, <span class="text-[#8EAFCE] italic">significant impact.</span>
+                        </p>
+                        <p class="text-white/70 text-lg leading-relaxed font-light text-justify">
+                            Making eco-friendly choices can be simple. Tips like reducing single-use plastic, opting for reusable bags, conserving water, and choosing local products can make a difference. <span class="text-white font-normal">Thynk Unlimited</span> provides resources and products that support these sustainable practices.
+                        </p>
+                    </div>
+
+                    <div class="absolute bottom-6 right-8 opacity-10">
+                        <i class="fa-solid fa-leaf text-6xl"></i>
+                    </div>
+                </div>
+
+                <div class="w-11/12 relative mt-8 group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-[#6B8EAD] to-transparent opacity-20 blur-md rounded-3xl"></div>
+                    <div class="img-frame rounded-3xl overflow-hidden h-48 shadow-2xl relative z-10">
+                        <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=800" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity">
+                        <div class="absolute bottom-4 right-6 bg-black/40 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 text-[10px] text-white/60 tracking-widest uppercase">
+                            Protected Biosphere
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="absolute bottom-8 left-16 right-16 flex justify-between items-center z-20">
+            <div class="flex items-center gap-4 opacity-40">
+                <div class="w-8 h-[1px] bg-white"></div>
+                <p class="text-[10px] tracking-[0.3em] uppercase text-white font-light">Sustainable Lifestyle • 2026</p>
+            </div>
+            
+            <div class="flex gap-8 opacity-20">
+                <i class="fa-brands fa-instagram text-white text-xs"></i>
+                <i class="fa-brands fa-twitter text-white text-xs"></i>
+                <i class="fa-brands fa-facebook text-white text-xs"></i>
+            </div>
+
+            <div class="opacity-40">
+                <p class="font-serif-display italic text-white text-xs tracking-widest">04 / 12</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

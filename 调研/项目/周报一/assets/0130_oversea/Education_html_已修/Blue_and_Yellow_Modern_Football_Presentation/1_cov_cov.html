@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Presentation Keynote</title>
+    
+    <!-- Fonts: Noto Sans SC (Domestic CDN) -->
+    <link href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css" rel="stylesheet">
+    
+    <!-- Icons: FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FFFFFF',
+                        bgBlue: '#4A89C6',
+                        accentGreen: '#7FA956',
+                        darkBlue: '#3A6CA0',
+                        secondaryBlack: '#000000',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    },
+                    letterSpacing: {
+                        tighter: '-0.05em',
+                        widest: '0.25em',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 
+         * Page Container Logic:
+         * 1. Fixed dimensions 1280x720
+         * 2. Centered relative to viewport (for viewing purposes)
+         * 3. No external shadows
+         */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #4A89C6; /* Fallback Sky Blue */
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Text Shadow Utility for readability against sky */
+        .text-shadow-lg {
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+        }
+        
+        /* Decorative Skew Utility */
+        .skew-decor {
+            transform: skewX(-25deg);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div id="page_container">
+
+        <!-- 1. Background Layer -->
+        <!-- Logic: High-quality Unsplash image matching "Football + Sky + Action" theme. 
+             Ideally positioned to leave space for text on the left. -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1518091043644-c1d4457512c6?q=80&w=2832&auto=format&fit=crop" 
+                 alt="Football player heading ball against blue sky" 
+                 class="w-full h-full object-cover object-top opacity-90">
+            <!-- 1280*720 -->
+            
+            <!-- Gradient Overlay for Better Text Contrast -->
+            <div class="absolute inset-0 bg-gradient-to-r from-[#4A89C6]/40 to-transparent"></div>
+        </div>
+
+        <!-- 2. Top Left: Company/Logo Identifier -->
+        <!-- Logic: Pill shape, high contrast white background, dark text for legibility -->
+        <div class="absolute top-10 left-12 z-20">
+            <div class="bg-primary px-5 py-2 rounded-full flex items-center gap-3 shadow-lg">
+                <i class="fa-solid fa-futbol text-secondaryBlack text-lg"></i>
+                <h6 class="text-secondaryBlack text-sm font-bold tracking-wide">Fradel and Spies Co.</h6>
+            </div>
+        </div>
+
+        <!-- 3. Decorative Elements: Speed Lines (Top Right) -->
+        <!-- Logic: CSS Geometric shapes to mimic the reference "Jersey Stripes" or "Motion Lines" -->
+        <div class="absolute top-12 right-12 z-20 flex items-center gap-2 opacity-90">
+            <!-- Short Bars -->
+            <div class="w-3 h-8 bg-primary skew-decor shadow-sm"></div>
+            <div class="w-3 h-8 bg-primary skew-decor shadow-sm"></div>
+            <div class="w-3 h-8 bg-primary skew-decor shadow-sm"></div>
+            <!-- Long Bar -->
+            <div class="w-32 h-8 bg-primary skew-decor shadow-sm flex items-center justify-center">
+                <!-- Inner detail line -->
+                <div class="w-24 h-1 bg-bgBlue/20 rounded"></div>
+            </div>
+        </div>
+
+        <!-- 4. Main Content Area (Typography) -->
+        <!-- Logic: Placing the massive title slightly offset to interact with the subject -->
+        <div class="absolute top-1/2 left-12 transform -translate-y-1/2 z-10 w-full pr-12">
+            
+            <!-- Primary Heading -->
+            <!-- Using extreme font size and heavy weight for impact -->
+            <h1 class="text-primary font-black text-[180px] leading-[0.85] tracking-tighter text-shadow-lg mix-blend-overlay">
+                FOOTBALL
+            </h1>
+            
+            <!-- Secondary Heading -->
+            <!-- Right-aligned relative to the main container or grid flow -->
+            <div class="w-full flex justify-end pr-24 mt-4">
+                <h2 class="text-primary font-light text-[48px] tracking-widest uppercase border-b-2 border-accentGreen/80 pb-2 shadow-sm">
+                    Presentation
+                </h2>
+            </div>
+        </div>
+
+        <!-- 5. Decorative Elements: Speed Lines (Bottom Left) -->
+        <!-- Logic: Mirroring top right for balance -->
+        <div class="absolute bottom-12 left-12 z-20 flex items-center gap-2 opacity-90">
+            <!-- Long Bar -->
+            <div class="w-32 h-8 bg-primary skew-decor shadow-sm"></div>
+            <!-- Short Bars -->
+            <div class="w-3 h-8 bg-primary skew-decor shadow-sm"></div>
+            <div class="w-3 h-8 bg-primary skew-decor shadow-sm"></div>
+            <div class="w-3 h-8 bg-primary skew-decor shadow-sm"></div>
+        </div>
+
+        <!-- 6. Footer Information (Bottom Right) -->
+        <!-- Logic: Clean hierarchy for presenter name -->
+        <div class="absolute bottom-12 right-12 z-20 text-right text-primary drop-shadow-md">
+            <p class="text-lg opacity-90 font-light mb-1">Presented by</p>
+            <h3 class="text-3xl font-bold tracking-wide border-r-4 border-accentGreen pr-4">
+                Aaron Loeb
+            </h3>
+        </div>
+
+    </div>
+
+</body>
+</html>

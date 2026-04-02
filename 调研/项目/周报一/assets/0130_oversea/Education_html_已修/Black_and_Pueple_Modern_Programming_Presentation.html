@@ -1,0 +1,2043 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Responsive Merged HTML
+  </title>
+  <style>
+   body {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .page-wrapper {
+                width: 100%;
+                margin: 15px 0;
+                position: relative;
+            }
+            .page-title {
+                background: #f5f5f5;
+                padding: 5px 10px;
+                border-radius: 3px 3px 0 0;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+            }
+            .responsive-iframe {
+                border: none;
+                width: 100%;
+                display: block;
+            }
+  </style>
+ </head>
+ <body>
+  <!-- 内容将在这里插入 -->
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 1
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Colorful Cover - Programming&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBlack: '#020204',
+                        accentPurple: '#9D50E6',
+                        accentPink: '#FF7EB6',
+                        accentBlue: '#2A3C95',
+                        accentCyan: '#22D3EE',
+                        accentYellow: '#FACC15',
+                        accentGreen: '#10B981'
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        .page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative;
+            background-color: #020204; overflow: hidden; color: #FFF;
+        }
+
+        .bg-grid {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+
+        .glass-card {
+            background: rgba(20, 20, 20, 0.6);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+        }
+
+        /* 动态流光边框 */
+        .gradient-border {
+            position: relative;
+            background: #000;
+            border-radius: 12px;
+        }
+        .gradient-border::before {
+            content: &quot;&quot;;
+            position: absolute;
+            inset: -2px;
+            border-radius: 14px;
+            background: linear-gradient(45deg, #2A3C95, #9D50E6, #FF7EB6, #FACC15, #22D3EE);
+            z-index: -1;
+            filter: blur(2px);
+            opacity: 0.8;
+        }
+
+        .title-gradient {
+            background: linear-gradient(to right, #22D3EE, #9D50E6, #FF7EB6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;page_container bg-grid&quot;&gt;
+        
+        &lt;!-- Colorful Ambient Lights --&gt;
+        &lt;div class=&quot;absolute top-[-200px] left-[-100px] w-[600px] h-[600px] bg-accentBlue opacity-20 blur-[120px] rounded-full&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute bottom-[-100px] right-[-100px] w-[600px] h-[600px] bg-accentPurple opacity-20 blur-[100px] rounded-full&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute top-[20%] right-[20%] w-[300px] h-[300px] bg-accentCyan opacity-10 blur-[80px] rounded-full&quot;&gt;&lt;/div&gt;
+
+        &lt;!-- Top Navigation --&gt;
+        &lt;div class=&quot;relative z-20 px-16 py-10 flex justify-between items-center&quot;&gt;
+            &lt;div class=&quot;flex items-center gap-3&quot;&gt;
+                &lt;div class=&quot;flex gap-1&quot;&gt;
+                    &lt;div class=&quot;w-2 h-2 rounded-full bg-accentCyan&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-2 h-2 rounded-full bg-accentPurple&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-2 h-2 rounded-full bg-accentPink&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;h2 class=&quot;text-xl font-bold tracking-tight text-gray-300&quot;&gt;Thynk&lt;span class=&quot;text-white&quot;&gt;.edu&lt;/span&gt;&lt;/h2&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;px-4 py-1 rounded-full border border-accentYellow/30 bg-accentYellow/5 text-accentYellow text-xs font-mono tracking-widest&quot;&gt;
+                2026 CURRICULUM
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Main Title Section (Centered with Staggered Layout) --&gt;
+        &lt;div class=&quot;absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 w-full max-w-6xl text-center&quot;&gt;
+            
+            &lt;!-- Decorative Tag (Centered) --&gt;
+            &lt;div class=&quot;flex items-center justify-center gap-2 mb-8&quot;&gt;
+                &lt;span class=&quot;px-2 py-0.5 rounded bg-accentBlue text-[10px] font-bold tracking-wide&quot;&gt;CORE MODULE&lt;/span&gt;
+                &lt;span class=&quot;h-px w-10 bg-white/20&quot;&gt;&lt;/span&gt;
+                &lt;span class=&quot;text-accentCyan text-sm font-mono uppercase&quot;&gt;Introduction to Computer Science&lt;/span&gt;
+            &lt;/div&gt;
+            
+            &lt;!-- Multi-color Gradient Title with Misalignment (Offset) --&gt;
+            &lt;!-- Flex column to stack, margin-left/right to creating staggering --&gt;
+            &lt;h1 class=&quot;text-8xl font-bold leading-none mb-8 title-gradient drop-shadow-2xl flex flex-col gap-2&quot;&gt;
+                &lt;span class=&quot;block -ml-40&quot;&gt;Programming&lt;/span&gt;
+                &lt;span class=&quot;block ml-40 text-white&quot;&gt;Fundamentals&lt;/span&gt;
+            &lt;/h1&gt;
+            
+            &lt;p class=&quot;text-gray-400 text-xl max-w-2xl mx-auto font-light leading-relaxed mt-4&quot;&gt;
+                Mastering the syntax of the future. From &lt;span class=&quot;text-accentYellow&quot;&gt;Python&lt;/span&gt; logic to &lt;span class=&quot;text-accentBlue&quot;&gt;C++&lt;/span&gt; performance and &lt;span class=&quot;text-accentPink&quot;&gt;UI&lt;/span&gt; design.
+            &lt;/p&gt;
+
+            &lt;!-- Tech Stack Icons (Centered) --&gt;
+            &lt;div class=&quot;flex justify-center gap-8 mt-12 opacity-80&quot;&gt;
+                &lt;i class=&quot;fa-brands fa-python text-4xl text-blue-400 hover:text-yellow-400 transition-colors transform hover:scale-110 duration-300&quot;&gt;&lt;/i&gt;
+                &lt;i class=&quot;fa-brands fa-js text-4xl text-yellow-400 hover:text-white transition-colors transform hover:scale-110 duration-300&quot;&gt;&lt;/i&gt;
+                &lt;i class=&quot;fa-brands fa-react text-4xl text-cyan-400 hover:text-white transition-colors transform hover:scale-110 duration-300&quot;&gt;&lt;/i&gt;
+                &lt;i class=&quot;fa-brands fa-swift text-4xl text-orange-500 hover:text-white transition-colors transform hover:scale-110 duration-300&quot;&gt;&lt;/i&gt;
+                &lt;i class=&quot;fa-brands fa-rust text-4xl text-white hover:text-red-400 transition-colors transform hover:scale-110 duration-300&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Presenter Card (Multi-color Border) - Kept Unchanged --&gt;
+        &lt;div class=&quot;absolute bottom-16 right-16 z-20&quot;&gt;
+            &lt;div class=&quot;gradient-border p-[1px]&quot;&gt; 
+                &lt;div class=&quot;glass-card p-6 rounded-xl w-[360px] flex items-center gap-5 bg-deepBlack/90&quot;&gt;
+                    &lt;!-- Avatar --&gt;
+                    &lt;div class=&quot;relative flex-shrink-0&quot;&gt;
+                        &lt;div class=&quot;w-16 h-16 rounded-full p-0.5 bg-gradient-to-tr from-accentYellow to-accentPink&quot;&gt;
+                             &lt;img src=&quot;https://ui-avatars.com/api/?name=Alex+Morgan&amp;background=111&amp;color=fff&quot; alt=&quot;Presenter&quot; class=&quot;rounded-full w-full h-full object-cover border-2 border-deepBlack&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;absolute bottom-0 right-0 w-4 h-4 bg-accentGreen border-2 border-deepBlack rounded-full&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                    
+                    &lt;!-- Info --&gt;
+                    &lt;div&gt;
+                        &lt;div class=&quot;flex items-center gap-2 mb-1&quot;&gt;
+                            &lt;span class=&quot;text-xs font-bold text-gray-400 uppercase tracking-wider&quot;&gt;Speaker&lt;/span&gt;
+                            &lt;span class=&quot;px-1.5 py-0.5 rounded bg-accentPurple/20 text-[10px] text-accentPurple font-bold&quot;&gt;LEAD&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;h3 class=&quot;text-xl font-bold text-white leading-tight&quot;&gt;Alex Morgan&lt;/h3&gt;
+                        &lt;div class=&quot;flex items-center gap-2 mt-1 text-xs&quot;&gt;
+                            &lt;span class=&quot;text-accentCyan&quot;&gt;@ThynkUnltd&lt;/span&gt;
+                            &lt;span class=&quot;text-gray-600&quot;&gt;|&lt;/span&gt;
+                            &lt;span class=&quot;text-accentPink&quot;&gt;Full Stack Dev&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 2
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Spectrum TOC&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBlack: '#020204',
+                        // Defining the full spectrum used in previous pages
+                        cBlue: '#2A3C95', cCyan: '#22D3EE', cGreen: '#10B981', 
+                        cYellow: '#FACC15', cOrange: '#F97316', cRed: '#EF4444',
+                        cPink: '#FF7EB6', cPurple: '#9D50E6', cIndigo: '#6366F1'
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        .page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative;
+            background-color: #020204; overflow: hidden; color: #FFF;
+        }
+
+        .bg-grid {
+            background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        .item-box {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-left: 2px solid transparent;
+        }
+        
+        /* 
+           Specific hover effects for each color 
+           (In production CSS this would be generated, here doing inline/tailored style classes) 
+        */
+        .hover-blue:hover   { border-left-color: #2A3C95; background: linear-gradient(90deg, rgba(42,60,149,0.15), transparent); }
+        .hover-cyan:hover   { border-left-color: #22D3EE; background: linear-gradient(90deg, rgba(34,211,238,0.15), transparent); }
+        .hover-green:hover  { border-left-color: #10B981; background: linear-gradient(90deg, rgba(16,185,129,0.15), transparent); }
+        .hover-yellow:hover { border-left-color: #FACC15; background: linear-gradient(90deg, rgba(250,204,21,0.15), transparent); }
+        .hover-orange:hover { border-left-color: #F97316; background: linear-gradient(90deg, rgba(249,115,22,0.15), transparent); }
+        .hover-red:hover    { border-left-color: #EF4444; background: linear-gradient(90deg, rgba(239,68,68,0.15), transparent); }
+        .hover-pink:hover   { border-left-color: #FF7EB6; background: linear-gradient(90deg, rgba(255,126,182,0.15), transparent); }
+        .hover-purple:hover { border-left-color: #9D50E6; background: linear-gradient(90deg, rgba(157,80,230,0.15), transparent); }
+        .hover-indigo:hover { border-left-color: #6366F1; background: linear-gradient(90deg, rgba(99,102,241,0.15), transparent); }
+        .hover-white:hover  { border-left-color: #FFFFFF; background: linear-gradient(90deg, rgba(255,255,255,0.1), transparent); }
+
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;page_container bg-grid&quot;&gt;
+        
+        &lt;!-- Header --&gt;
+        &lt;div class=&quot;relative z-20 px-16 py-10 flex justify-between items-end mb-4 border-b border-white/10 pb-6 mx-16&quot;&gt;
+            &lt;div&gt;
+                &lt;div class=&quot;flex items-center gap-2 mb-2&quot;&gt;
+                    &lt;span class=&quot;w-2 h-2 rounded-full bg-cBlue&quot;&gt;&lt;/span&gt;
+                    &lt;span class=&quot;w-2 h-2 rounded-full bg-cPink&quot;&gt;&lt;/span&gt;
+                    &lt;span class=&quot;w-2 h-2 rounded-full bg-cYellow&quot;&gt;&lt;/span&gt;
+                    &lt;span class=&quot;text-xs text-gray-400 font-mono ml-2 uppercase tracking-widest&quot;&gt;Syllabus Overview&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;h1 class=&quot;text-5xl font-bold&quot;&gt;Table of &lt;span class=&quot;text-transparent bg-clip-text bg-gradient-to-r from-cBlue via-cPurple to-cPink&quot;&gt;Contents&lt;/span&gt;&lt;/h1&gt;
+            &lt;/div&gt;
+            &lt;!-- Decorative Color Bars --&gt;
+            &lt;div class=&quot;flex flex-col items-end gap-1&quot;&gt;
+                &lt;div class=&quot;w-16 h-1 bg-cCyan rounded-full&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;w-10 h-1 bg-cYellow rounded-full&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;w-4 h-1 bg-cPink rounded-full&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Content Grid: 2 Cols x 5 Rows --&gt;
+        &lt;div class=&quot;relative z-10 px-24 py-6 w-full h-full&quot;&gt;
+            &lt;div class=&quot;grid grid-cols-2 gap-x-24 gap-y-5&quot;&gt;
+                
+                &lt;!-- Left Column --&gt;
+                &lt;div class=&quot;space-y-5&quot;&gt;
+                    
+                    &lt;!-- 01: Blue --&gt;
+                    &lt;div class=&quot;item-box hover-blue p-3 rounded-r-lg cursor-pointer group flex items-center&quot;&gt;
+                        &lt;span class=&quot;text-2xl font-mono font-bold text-cBlue w-12 opacity-60 group-hover:opacity-100&quot;&gt;01&lt;/span&gt;
+                        &lt;div&gt;
+                            &lt;h3 class=&quot;text-lg font-bold text-white group-hover:text-cBlue transition-colors&quot;&gt;Computer History&lt;/h3&gt;
+                            &lt;p class=&quot;text-[14px] text-gray-500 font-mono uppercase tracking-wider&quot;&gt;Turing to Quantum&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- 02: Cyan --&gt;
+                    &lt;div class=&quot;item-box hover-cyan p-3 rounded-r-lg cursor-pointer group flex items-center&quot;&gt;
+                        &lt;span class=&quot;text-2xl font-mono font-bold text-cCyan w-12 opacity-60 group-hover:opacity-100&quot;&gt;02&lt;/span&gt;
+                        &lt;div&gt;
+                            &lt;h3 class=&quot;text-lg font-bold text-white group-hover:text-cCyan transition-colors&quot;&gt;Variables &amp; Types&lt;/h3&gt;
+                            &lt;p class=&quot;text-[14px] text-gray-500 font-mono uppercase tracking-wider&quot;&gt;Int, Float, String&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- 03: Green --&gt;
+                    &lt;div class=&quot;item-box hover-green p-3 rounded-r-lg cursor-pointer group flex items-center&quot;&gt;
+                        &lt;span class=&quot;text-2xl font-mono font-bold text-cGreen w-12 opacity-60 group-hover:opacity-100&quot;&gt;03&lt;/span&gt;
+                        &lt;div&gt;
+                            &lt;h3 class=&quot;text-lg font-bold text-white group-hover:text-cGreen transition-colors&quot;&gt;Logic &amp; Loops&lt;/h3&gt;
+                            &lt;p class=&quot;text-[14px] text-gray-500 font-mono uppercase tracking-wider&quot;&gt;Control Flow&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- 04: Yellow --&gt;
+                    &lt;div class=&quot;item-box hover-yellow p-3 rounded-r-lg cursor-pointer group flex items-center&quot;&gt;
+                        &lt;span class=&quot;text-2xl font-mono font-bold text-cYellow w-12 opacity-60 group-hover:opacity-100&quot;&gt;04&lt;/span&gt;
+                        &lt;div&gt;
+                            &lt;h3 class=&quot;text-lg font-bold text-white group-hover:text-cYellow transition-colors&quot;&gt;Functions&lt;/h3&gt;
+                            &lt;p class=&quot;text-[14px] text-gray-500 font-mono uppercase tracking-wider&quot;&gt;Modular Code&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                     &lt;!-- 05: Orange --&gt;
+                     &lt;div class=&quot;item-box hover-orange p-3 rounded-r-lg cursor-pointer group flex items-center&quot;&gt;
+                        &lt;span class=&quot;text-2xl font-mono font-bold text-cOrange w-12 opacity-60 group-hover:opacity-100&quot;&gt;05&lt;/span&gt;
+                        &lt;div&gt;
+                            &lt;h3 class=&quot;text-lg font-bold text-white group-hover:text-cOrange transition-colors&quot;&gt;Data Structures&lt;/h3&gt;
+                            &lt;p class=&quot;text-[14px] text-gray-500 font-mono uppercase tracking-wider&quot;&gt;Arrays &amp; Objects&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Right Column --&gt;
+                &lt;div class=&quot;space-y-5&quot;&gt;
+                    
+                    &lt;!-- 06: Red --&gt;
+                    &lt;div class=&quot;item-box hover-red p-3 rounded-r-lg cursor-pointer group flex items-center&quot;&gt;
+                        &lt;span class=&quot;text-2xl font-mono font-bold text-cRed w-12 opacity-60 group-hover:opacity-100&quot;&gt;06&lt;/span&gt;
+                        &lt;div&gt;
+                            &lt;h3 class=&quot;text-lg font-bold text-white group-hover:text-cRed transition-colors&quot;&gt;OOP Principles&lt;/h3&gt;
+                            &lt;p class=&quot;text-[14px] text-gray-500 font-mono uppercase tracking-wider&quot;&gt;Classes &amp; Inheritance&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- 07: Pink --&gt;
+                    &lt;div class=&quot;item-box hover-pink p-3 rounded-r-lg cursor-pointer group flex items-center&quot;&gt;
+                        &lt;span class=&quot;text-2xl font-mono font-bold text-cPink w-12 opacity-60 group-hover:opacity-100&quot;&gt;07&lt;/span&gt;
+                        &lt;div&gt;
+                            &lt;h3 class=&quot;text-lg font-bold text-white group-hover:text-cPink transition-colors&quot;&gt;UI / UX Design&lt;/h3&gt;
+                            &lt;p class=&quot;text-[14px] text-gray-500 font-mono uppercase tracking-wider&quot;&gt;Frontend Basics&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- 08: Purple --&gt;
+                    &lt;div class=&quot;item-box hover-purple p-3 rounded-r-lg cursor-pointer group flex items-center&quot;&gt;
+                        &lt;span class=&quot;text-2xl font-mono font-bold text-cPurple w-12 opacity-60 group-hover:opacity-100&quot;&gt;08&lt;/span&gt;
+                        &lt;div&gt;
+                            &lt;h3 class=&quot;text-lg font-bold text-white group-hover:text-cPurple transition-colors&quot;&gt;Algorithms&lt;/h3&gt;
+                            &lt;p class=&quot;text-[14px] text-gray-500 font-mono uppercase tracking-wider&quot;&gt;Big O Notation&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- 09: Indigo --&gt;
+                    &lt;div class=&quot;item-box hover-indigo p-3 rounded-r-lg cursor-pointer group flex items-center&quot;&gt;
+                        &lt;span class=&quot;text-2xl font-mono font-bold text-cIndigo w-12 opacity-60 group-hover:opacity-100&quot;&gt;09&lt;/span&gt;
+                        &lt;div&gt;
+                            &lt;h3 class=&quot;text-lg font-bold text-white group-hover:text-cIndigo transition-colors&quot;&gt;Databases&lt;/h3&gt;
+                            &lt;p class=&quot;text-[14px] text-gray-500 font-mono uppercase tracking-wider&quot;&gt;SQL &amp; NoSQL&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                     &lt;!-- 10: White/Multi --&gt;
+                     &lt;div class=&quot;item-box hover-white p-3 rounded-r-lg cursor-pointer group flex items-center&quot;&gt;
+                        &lt;span class=&quot;text-2xl font-mono font-bold text-white w-12 opacity-60 group-hover:opacity-100&quot;&gt;10&lt;/span&gt;
+                        &lt;div&gt;
+                            &lt;h3 class=&quot;text-lg font-bold text-white group-hover:text-gray-300 transition-colors&quot;&gt;Security &amp; AI&lt;/h3&gt;
+                            &lt;p class=&quot;text-[14px] text-gray-500 font-mono uppercase tracking-wider&quot;&gt;Future Tech&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Background Decor (Subtle Spectrum) --&gt;
+        &lt;div class=&quot;absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-cBlue via-cYellow to-cPink opacity-50&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute top-[20%] right-[-100px] w-[300px] h-[300px] bg-cPurple opacity-10 blur-[100px] pointer-events-none&quot;&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 3
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Page 01 - Languages&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { deepBlack: '#020204', accentPurple: '#9D50E6', accentBlue: '#2A3C95', cardBg: 'rgba(255,255,255,0.03)' },
+                    fontFamily: { sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'] }
+                }
+            }
+        }
+    &lt;/script&gt;
+    &lt;style&gt;
+        body { margin: 0; padding: 0; overflow: hidden; }
+        .glass-panel {
+            background: rgba(20, 20, 20, 0.6);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+        }
+        .glow-text { text-shadow: 0 0 20px rgba(157, 80, 230, 0.5); }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;relative w-[1280px] h-[720px] mx-auto bg-deepBlack text-white overflow-hidden font-sans&quot;&gt;
+        
+        &lt;!-- Background Decor --&gt;
+        &lt;div class=&quot;absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute -top-20 -right-20 w-[600px] h-[600px] bg-accentPurple rounded-full opacity-10 blur-[120px]&quot;&gt;&lt;/div&gt;
+        
+        &lt;!-- Content Container --&gt;
+        &lt;div class=&quot;relative z-10 p-16 h-full flex flex-col justify-between&quot;&gt;
+            
+            &lt;!-- Header Section --&gt;
+            &lt;div class=&quot;flex justify-between items-end mb-8&quot;&gt;
+                &lt;div&gt;
+                    &lt;div class=&quot;flex items-center gap-3 mb-4 opacity-70&quot;&gt;
+                        &lt;span class=&quot;h-px w-12 bg-white&quot;&gt;&lt;/span&gt;
+                        &lt;span class=&quot;text-sm tracking-[0.3em] uppercase&quot;&gt;Core Competencies&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;h1 class=&quot;text-7xl font-bold leading-none tracking-tight&quot;&gt;
+                        Programming&lt;br&gt;
+                        &lt;span class=&quot;text-transparent bg-clip-text bg-gradient-to-r from-accentPurple to-blue-400 glow-text&quot;&gt;Languages&lt;/span&gt;
+                    &lt;/h1&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;max-w-md text-gray-400 text-sm leading-relaxed text-right border-r-2 border-white/20 pr-6&quot;&gt;
+                    Our foundation is built on three pillars of modern computing. From system-level architecture to dynamic web interfaces and data intelligence.
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Cards Container --&gt;
+            &lt;div class=&quot;grid grid-cols-3 gap-8 mt-auto h-[320px]&quot;&gt;
+                
+                &lt;!-- Python Card --&gt;
+                &lt;div class=&quot;glass-panel rounded-2xl p-8 relative overflow-hidden group&quot;&gt;
+                    &lt;div class=&quot;absolute top-0 right-0 p-32 bg-blue-500/10 rounded-full blur-2xl -mr-16 -mt-16&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;relative z-10 flex flex-col h-full&quot;&gt;
+                        &lt;div class=&quot;w-14 h-14 rounded-lg bg-gradient-to-br from-blue-600 to-yellow-500 flex items-center justify-center mb-6 shadow-lg&quot;&gt;
+                            &lt;i class=&quot;fa-brands fa-python text-3xl text-white&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;h3 class=&quot;text-3xl font-bold mb-2&quot;&gt;Python&lt;/h3&gt;
+                        &lt;p class=&quot;text-gray-400 text-sm mb-6 flex-grow&quot;&gt;Data Science &amp; AI Logic&lt;/p&gt;
+                        
+                        &lt;!-- Static Visual Data --&gt;
+                        &lt;div class=&quot;w-full bg-white/5 h-1.5 rounded-full mb-2&quot;&gt;
+                            &lt;div class=&quot;w-[95%] h-full bg-blue-400 rounded-full shadow-[0_0_10px_#60A5FA]&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;span class=&quot;text-xs text-blue-300 font-mono text-right&quot;&gt;POPULARITY: 98%&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- JS Card --&gt;
+                &lt;div class=&quot;glass-panel rounded-2xl p-8 relative overflow-hidden&quot;&gt;
+                    &lt;div class=&quot;absolute top-0 right-0 p-32 bg-yellow-500/10 rounded-full blur-2xl -mr-16 -mt-16&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;relative z-10 flex flex-col h-full&quot;&gt;
+                        &lt;div class=&quot;w-14 h-14 rounded-lg bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center mb-6 shadow-lg&quot;&gt;
+                            &lt;i class=&quot;fa-brands fa-js text-3xl text-white&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;h3 class=&quot;text-3xl font-bold mb-2&quot;&gt;JavaScript&lt;/h3&gt;
+                        &lt;p class=&quot;text-gray-400 text-sm mb-6 flex-grow&quot;&gt;Interactive Web Experiences&lt;/p&gt;
+                        
+                        &lt;div class=&quot;w-full bg-white/5 h-1.5 rounded-full mb-2&quot;&gt;
+                            &lt;div class=&quot;w-[90%] h-full bg-yellow-400 rounded-full shadow-[0_0_10px_#FACC15]&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;span class=&quot;text-xs text-yellow-200 font-mono text-right&quot;&gt;VERSATILITY: HIGH&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- C++ Card --&gt;
+                &lt;div class=&quot;glass-panel rounded-2xl p-8 relative overflow-hidden&quot;&gt;
+                    &lt;div class=&quot;absolute top-0 right-0 p-32 bg-purple-500/10 rounded-full blur-2xl -mr-16 -mt-16&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;relative z-10 flex flex-col h-full&quot;&gt;
+                        &lt;div class=&quot;w-14 h-14 rounded-lg bg-gradient-to-br from-blue-700 to-cyan-400 flex items-center justify-center mb-6 shadow-lg&quot;&gt;
+                            &lt;span class=&quot;font-bold text-xl text-white&quot;&gt;C++&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;h3 class=&quot;text-3xl font-bold mb-2&quot;&gt;C++&lt;/h3&gt;
+                        &lt;p class=&quot;text-gray-400 text-sm mb-6 flex-grow&quot;&gt;High-Performance Systems&lt;/p&gt;
+                        
+                        &lt;div class=&quot;w-full bg-white/5 h-1.5 rounded-full mb-2&quot;&gt;
+                            &lt;div class=&quot;w-[85%] h-full bg-cyan-400 rounded-full shadow-[0_0_10px_#22D3EE]&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;span class=&quot;text-xs text-cyan-200 font-mono text-right&quot;&gt;SPEED: EXTREME&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 4
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Page 02 - Frontend&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { deepBlack: '#020204', accentPink: '#FF7EB6', accentPurple: '#9D50E6' },
+                    fontFamily: { sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'] }
+                }
+            }
+        }
+    &lt;/script&gt;
+    &lt;style&gt;
+        body { margin: 0; padding: 0; overflow: hidden;}
+        .clip-shape { clip-path: polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%); }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;relative w-[1280px] h-[720px] mx-auto bg-deepBlack text-white overflow-hidden font-sans&quot;&gt;
+        
+        &lt;!-- Background Gradients --&gt;
+        &lt;div class=&quot;absolute bottom-0 left-0 w-[800px] h-[800px] bg-gradient-to-tr from-accentPurple to-transparent opacity-10 rounded-full blur-3xl&quot;&gt;&lt;/div&gt;
+        
+        &lt;!-- Grid Overlay --&gt;
+        &lt;div class=&quot;absolute inset-0 z-0 opacity-10&quot; style=&quot;background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 30px 30px;&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;grid grid-cols-2 h-full relative z-10&quot;&gt;
+            
+            &lt;!-- Left Column: Content --&gt;
+            &lt;div class=&quot;p-16 flex flex-col justify-center&quot;&gt;
+                &lt;!-- Tag --&gt;
+                &lt;div class=&quot;inline-flex items-center space-x-2 bg-white/5 border border-white/10 rounded-full px-4 py-1 w-fit mb-8&quot;&gt;
+                    &lt;span class=&quot;w-2 h-2 bg-accentPink rounded-full animate-pulse&quot;&gt;&lt;/span&gt;
+                    &lt;span class=&quot;text-xs font-bold tracking-widest text-white/80&quot;&gt;UI / UX DESIGN&lt;/span&gt;
+                &lt;/div&gt;
+
+                &lt;h1 class=&quot;text-6xl font-bold leading-tight mb-6&quot;&gt;
+                    User-Centric&lt;br&gt;
+                    &lt;span class=&quot;text-transparent bg-clip-text bg-gradient-to-r from-accentPink to-purple-400&quot;&gt;Interfaces&lt;/span&gt;
+                &lt;/h1&gt;
+
+                &lt;p class=&quot;text-gray-400 text-lg leading-relaxed mb-10 max-w-md&quot;&gt;
+                    Crafting pixel-perfect, responsive web applications. We bridge the gap between graphical design and technical implementation using modern frameworks like React and Vue.
+                &lt;/p&gt;
+
+                &lt;!-- Visual Tech Stack Tags (Static) --&gt;
+                &lt;div class=&quot;flex flex-wrap gap-3&quot;&gt;
+                    &lt;span class=&quot;px-4 py-2 bg-gray-800 rounded-md text-sm font-mono border border-gray-700 text-blue-300&quot;&gt;#ReactJS&lt;/span&gt;
+                    &lt;span class=&quot;px-4 py-2 bg-gray-800 rounded-md text-sm font-mono border border-gray-700 text-green-300&quot;&gt;#TailwindCSS&lt;/span&gt;
+                    &lt;span class=&quot;px-4 py-2 bg-gray-800 rounded-md text-sm font-mono border border-gray-700 text-yellow-300&quot;&gt;#Motion&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Right Column: Visuals --&gt;
+            &lt;div class=&quot;relative h-full flex items-center justify-center&quot;&gt;
+                
+                &lt;!-- Main Image Container --&gt;
+                &lt;div class=&quot;relative w-[500px] h-[400px]&quot;&gt;
+                    &lt;!-- Decorative Frame --&gt;
+                    &lt;div class=&quot;absolute -inset-4 border-2 border-white/10 rounded-[40px] z-0&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;absolute -inset-4 border-2 border-accentPink/30 rounded-[40px] translate-x-2 translate-y-2 z-0&quot;&gt;&lt;/div&gt;
+                    
+                    &lt;!-- Image Masked --&gt;
+                    &lt;div class=&quot;w-full h-full rounded-[30px] overflow-hidden relative z-10 shadow-2xl&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&amp;w=800&amp;auto=format&amp;fit=crop&quot; 
+                             alt=&quot;Frontend Coding&quot; 
+                             class=&quot;w-full h-full object-cover opacity-80 hover:scale-105 transition-transform duration-700&quot;&gt;
+                        
+                        &lt;!-- Overlay Glass Box --&gt;
+                        &lt;div class=&quot;absolute bottom-0 left-0 right-0 h-1/3 bg-black/60 backdrop-blur-md border-t border-white/10 p-6 flex justify-between items-center&quot;&gt;
+                            &lt;div&gt;
+                                &lt;h4 class=&quot;text-sm font-bold text-white uppercase tracking-wider&quot;&gt;Compile Status&lt;/h4&gt;
+                                &lt;p class=&quot;text-xs text-green-400 mt-1&quot;&gt;● Build Successful (124ms)&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;i class=&quot;fa-solid fa-code text-2xl text-white/20&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Floating Color Palette Element --&gt;
+                    &lt;div class=&quot;absolute -right-12 top-10 bg-gray-900 p-3 rounded-xl border border-white/10 shadow-xl z-20 flex flex-col gap-2&quot;&gt;
+                        &lt;div class=&quot;w-8 h-8 rounded-full bg-accentPink&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;w-8 h-8 rounded-full bg-accentPurple&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;w-8 h-8 rounded-full bg-blue-500&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 5
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Page 03 - Backend (Unified Colors)&lt;/title&gt;
+    
+    &lt;!-- Import Google Fonts --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    
+    &lt;!-- Import FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+
+    &lt;!-- Tailwind Config: Matching Page 1 &amp; 2 Palette --&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBlack: '#020204',       // Unified Background
+                        accentPurple: '#9D50E6',    // Primary Brand Color
+                        accentBlue: '#2A3C95',      // Secondary Depth Color
+                        accentPink: '#FF7EB6',      // Highlight Color
+                        cardBg: 'rgba(255, 255, 255, 0.03)',
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'],
+                        mono: ['monospace']
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        body { margin: 0; padding: 0; overflow: hidden; }
+        
+        /* Glass Panel Style - Consistent across pages */
+        .glass-clean {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(5px);
+            border-top: 1px solid rgba(255,255,255,0.05);
+            border-right: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            /* Left border defined inline for color coding */
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;!-- Main Container 1280x720 --&gt;
+    &lt;div class=&quot;relative w-[1280px] h-[720px] mx-auto bg-deepBlack text-white overflow-hidden font-sans&quot;&gt;
+
+        &lt;!-- Background Decor: Consistent Purple/Blue Glow --&gt;
+        &lt;div class=&quot;absolute top-[-100px] left-[-100px] w-[500px] h-[500px] bg-accentBlue rounded-full opacity-10 blur-[100px] z-0&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute bottom-[-100px] right-[-100px] w-[600px] h-[600px] bg-accentPurple rounded-full opacity-10 blur-[120px] z-0&quot;&gt;&lt;/div&gt;
+
+        &lt;!-- Watermark Code Background --&gt;
+        &lt;div class=&quot;absolute top-0 right-0 p-8 text-right opacity-5 font-mono text-sm leading-8 select-none pointer-events-none z-0&quot;&gt;
+            func init() {&lt;br&gt; connectDB()&lt;br&gt; startServer(:8080)&lt;br&gt; }
+        &lt;/div&gt;
+
+        &lt;!-- Content Grid --&gt;
+        &lt;div class=&quot;flex w-full h-full p-16 relative z-10&quot;&gt;
+            
+            &lt;!-- Left Side: Title &amp; Feature Image (60%) --&gt;
+            &lt;div class=&quot;w-3/5 flex flex-col justify-between pr-12&quot;&gt;
+                
+                &lt;!-- Typography Section --&gt;
+                &lt;div&gt;
+                    &lt;!-- Tag: Changed from Cyan to Pink to match Page 2 --&gt;
+                    &lt;div class=&quot;flex items-center gap-2 mb-4&quot;&gt;
+                        &lt;span class=&quot;w-2 h-2 rounded-full bg-accentPink&quot;&gt;&lt;/span&gt;
+                        &lt;h2 class=&quot;text-accentPink font-mono text-sm tracking-[0.3em] uppercase&quot;&gt;Infrastructure&lt;/h2&gt;
+                    &lt;/div&gt;
+                    
+                    &lt;h1 class=&quot;text-7xl font-bold leading-none mb-2&quot;&gt;Backend&lt;/h1&gt;
+                    &lt;!-- Subtitle: White to Gray gradient look --&gt;
+                    &lt;h1 class=&quot;text-7xl font-light text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-gray-700 leading-none&quot;&gt;Architecture&lt;/h1&gt;
+                    
+                    &lt;p class=&quot;mt-8 text-gray-400 text-lg max-w-md leading-relaxed border-l-2 border-accentPurple pl-6&quot;&gt;
+                        Engineered for stability. We build the invisible logic ensuring data integrity, security, and speed.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Abstract Server Visual (Bottom Left Anchor) --&gt;
+                &lt;div class=&quot;relative w-full h-[250px] mt-8 rounded-tr-[80px] overflow-hidden bg-[#0A0A0F] border-b border-white/10 shadow-2xl&quot;&gt;
+                    &lt;!-- Image with Purple Tint --&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1558494949-ef526b0042a0?q=80&amp;w=800&amp;auto=format&amp;fit=crop&quot; 
+                         class=&quot;w-full h-full object-cover opacity-50 mix-blend-screen&quot;
+                         style=&quot;filter: hue-rotate(20deg) contrast(1.2);&quot;&gt; 
+                    
+                    &lt;!-- Overlay Stats --&gt;
+                    &lt;div class=&quot;absolute bottom-6 left-6 flex gap-8 font-mono text-xs&quot;&gt;
+                        &lt;div&gt;
+                            &lt;span class=&quot;block text-white/40 mb-1&quot;&gt;UPTIME&lt;/span&gt;
+                            &lt;span class=&quot;text-lg font-bold text-accentPink drop-shadow-[0_0_5px_rgba(255,126,182,0.5)]&quot;&gt;99.99%&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;span class=&quot;block text-white/40 mb-1&quot;&gt;LATENCY&lt;/span&gt;
+                            &lt;span class=&quot;text-lg font-bold text-accentPurple drop-shadow-[0_0_5px_rgba(157,80,230,0.5)]&quot;&gt;12ms&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+
+            &lt;!-- Right Side: Vertical Node List (40%) --&gt;
+            &lt;div class=&quot;w-2/5 relative pl-8 flex flex-col justify-center&quot;&gt;
+                
+                &lt;!-- Vertical Connecting Line: Changed to Purple/Blue Gradient --&gt;
+                &lt;div class=&quot;absolute left-[31px] top-[10%] bottom-[10%] w-[2px] bg-gradient-to-b from-transparent via-accentPurple to-transparent opacity-40&quot;&gt;&lt;/div&gt;
+
+                &lt;!-- Node 1: High Performance (Active/Pink) --&gt;
+                &lt;div class=&quot;relative mb-10 pl-12&quot;&gt;
+                    &lt;!-- Node Dot --&gt;
+                    &lt;div class=&quot;absolute left-0 top-1 w-6 h-6 bg-deepBlack border border-accentPink rounded-full flex items-center justify-center z-10 shadow-[0_0_10px_rgba(255,126,182,0.3)]&quot;&gt;
+                        &lt;div class=&quot;w-2 h-2 bg-accentPink rounded-full&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;!-- Card --&gt;
+                    &lt;div class=&quot;glass-clean p-5 pl-6 border-l-2 border-accentPink rounded-r-xl&quot;&gt;
+                        &lt;div class=&quot;flex justify-between items-center mb-1&quot;&gt;
+                            &lt;h3 class=&quot;text-xl font-bold text-white&quot;&gt;High Performance&lt;/h3&gt;
+                            &lt;i class=&quot;fa-solid fa-bolt text-accentPink text-sm&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;p class=&quot;text-sm text-gray-500&quot;&gt;Optimized I/O and caching layers.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Node 2: Security (Purple) --&gt;
+                &lt;div class=&quot;relative mb-10 pl-12&quot;&gt;
+                    &lt;!-- Node Dot --&gt;
+                    &lt;div class=&quot;absolute left-0 top-1 w-6 h-6 bg-deepBlack border border-accentPurple rounded-full flex items-center justify-center z-10&quot;&gt;
+                        &lt;div class=&quot;w-2 h-2 bg-white rounded-full&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;!-- Card --&gt;
+                    &lt;div class=&quot;glass-clean p-5 pl-6 border-l-2 border-accentPurple rounded-r-xl&quot;&gt;
+                        &lt;div class=&quot;flex justify-between items-center mb-1&quot;&gt;
+                            &lt;h3 class=&quot;text-xl font-bold text-white&quot;&gt;Security First&lt;/h3&gt;
+                            &lt;i class=&quot;fa-solid fa-shield-halved text-accentPurple text-sm&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;p class=&quot;text-sm text-gray-500&quot;&gt;Bank-grade encryption &amp; Auth protocols.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Node 3: Scalability (Blue) --&gt;
+                &lt;div class=&quot;relative pl-12&quot;&gt;
+                    &lt;!-- Node Dot --&gt;
+                    &lt;div class=&quot;absolute left-0 top-1 w-6 h-6 bg-deepBlack border border-accentBlue rounded-full flex items-center justify-center z-10&quot;&gt;
+                        &lt;div class=&quot;w-2 h-2 bg-white rounded-full&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;!-- Card --&gt;
+                    &lt;div class=&quot;glass-clean p-5 pl-6 border-l-2 border-accentBlue rounded-r-xl&quot;&gt;
+                        &lt;div class=&quot;flex justify-between items-center mb-1&quot;&gt;
+                            &lt;h3 class=&quot;text-xl font-bold text-white&quot;&gt;Scalability&lt;/h3&gt;
+                            &lt;i class=&quot;fa-solid fa-server text-accentBlue text-sm&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;p class=&quot;text-sm text-gray-500&quot;&gt;Dockerized microservices ready to grow.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 6
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Page 03 - Infrastructure (Refined)&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { deepBlack: '#020204', accentPurple: '#9D50E6', accentBlue: '#2A3C95' },
+                    fontFamily: { sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'] }
+                }
+            }
+        }
+    &lt;/script&gt;
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .page_container {
+            width: 1280px; height: 720px; margin: 0 auto;
+            position: relative; background-color: #000000;
+            overflow: hidden; font-family: 'Noto Sans SC', sans-serif; color: #FFFFFF;
+        }
+        /* Applied Page 1 Card Style */
+        .data-card { 
+            background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, transparent 100%); 
+            border: 1px solid rgba(255,255,255,0.1); 
+        }
+        .glow-text { text-shadow: 0 0 20px rgba(42, 60, 149, 0.5); }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;page_container flex flex-col&quot;&gt;
+        
+        &lt;!-- Header --&gt;
+        &lt;div class=&quot;relative z-20 pt-12 px-16 flex justify-between items-end&quot;&gt;
+            &lt;div&gt;
+                &lt;h1 class=&quot;text-5xl font-bold mb-2 tracking-tight&quot;&gt;System &lt;span class=&quot;text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-cyan-400&quot;&gt;Architecture&lt;/span&gt;&lt;/h1&gt;
+                &lt;p class=&quot;text-gray-500 text-sm tracking-wider uppercase font-mono&quot;&gt;Global Distribution Network&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;flex gap-4&quot;&gt;
+                &lt;span class=&quot;px-3 py-1 rounded border border-white/10 text-cyan-400 text-xs bg-cyan-900/10 font-mono&quot;&gt;● System Online&lt;/span&gt;
+                &lt;span class=&quot;px-3 py-1 rounded border border-white/10 text-gray-500 text-xs font-mono&quot;&gt;v4.2.0 Stable&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Main Content Area --&gt;
+        &lt;div class=&quot;relative z-10 px-16 mt-10 h-full pb-12 flex flex-col&quot;&gt;
+            
+            &lt;!-- Large Central Visual (Map/Data) --&gt;
+            &lt;!-- Changed styling to data-card and rounded-3xl --&gt;
+            &lt;div class=&quot;data-card w-full flex-grow rounded-3xl relative overflow-hidden&quot;&gt;
+                &lt;!-- Background Image --&gt;
+                &lt;img src=&quot;https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&amp;w=2000&amp;auto=format&amp;fit=crop&quot; 
+                     alt=&quot;Global Network&quot; 
+                     class=&quot;absolute inset-0 w-full h-full object-cover opacity-50 mix-blend-screen grayscale-[30%]&quot;&gt;
+                
+                &lt;!-- Map Overlay Gradient --&gt;
+                &lt;div class=&quot;absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent&quot;&gt;&lt;/div&gt;
+
+                &lt;!-- HUD Overlay Elements --&gt;
+                &lt;div class=&quot;absolute top-8 left-8&quot;&gt;
+                    &lt;div class=&quot;text-xs font-mono text-blue-400 mb-1&quot;&gt;DATA FLOW INGESTION&lt;/div&gt;
+                    &lt;div class=&quot;text-3xl font-bold font-mono text-white&quot;&gt;84.2 TB/s&lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;absolute bottom-8 right-8 text-right&quot;&gt;
+                    &lt;div class=&quot;flex gap-1 justify-end mb-1&quot;&gt;
+                        &lt;div class=&quot;w-1 h-4 bg-cyan-400&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;w-1 h-3 bg-cyan-400/50&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;w-1 h-5 bg-cyan-400&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;w-1 h-2 bg-cyan-400/30&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;text-xs font-mono text-gray-500&quot;&gt;ACTIVE NODES: 4,203&lt;/div&gt;
+                &lt;/div&gt;
+                
+                &lt;!-- Central Animated Ring --&gt;
+                &lt;div class=&quot;absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-blue-500/20 rounded-full flex items-center justify-center&quot;&gt;
+                    &lt;div class=&quot;w-48 h-48 border border-accentPurple/50 rounded-full animate-ping opacity-20&quot;&gt;&lt;/div&gt;
+                    &lt;i class=&quot;fa-solid fa-globe text-6xl text-white/10&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Bottom Stats Grid --&gt;
+            &lt;!-- Updated to match Page 1's grid spacing and card style --&gt;
+            &lt;div class=&quot;grid grid-cols-3 gap-8 mt-8 h-[140px]&quot;&gt;
+                
+                &lt;!-- Stat Card 1: Latency (Blue - Matches Page 1 Responsiveness) --&gt;
+                &lt;div class=&quot;data-card p-6 rounded-3xl flex items-center justify-between group&quot;&gt;
+                    &lt;div&gt;
+                        &lt;div class=&quot;text-blue-400 text-xs font-mono mb-2&quot;&gt;/ LATENCY&lt;/div&gt;
+                        &lt;div class=&quot;text-4xl font-bold text-white&quot;&gt;12&lt;span class=&quot;text-xl text-gray-500 font-normal ml-1&quot;&gt;ms&lt;/span&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;w-12 h-12 bg-blue-900/10 rounded-full flex items-center justify-center border border-blue-500/20&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-bolt text-blue-400&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Stat Card 2: Uptime (Purple - Matches Page 1 Stability) --&gt;
+                &lt;!-- Added border-b-4 to match Page 1 style --&gt;
+                &lt;div class=&quot;data-card p-6 rounded-3xl flex items-center justify-between group border-b-4 border-b-[#9D50E6]&quot;&gt;
+                    &lt;div&gt;
+                        &lt;div class=&quot;text-[#9D50E6] text-xs font-mono mb-2&quot;&gt;/ UPTIME&lt;/div&gt;
+                        &lt;div class=&quot;text-4xl font-bold text-white&quot;&gt;99.99&lt;span class=&quot;text-xl text-gray-500 font-normal ml-1&quot;&gt;%&lt;/span&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;w-12 h-12 bg-purple-900/10 rounded-full flex items-center justify-center border border-purple-500/20&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-server text-[#9D50E6]&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Stat Card 3: Security (Cyan - Matches Page 1 Efficiency/Gradient) --&gt;
+                &lt;div class=&quot;data-card p-6 rounded-3xl flex items-center justify-between group&quot;&gt;
+                    &lt;div&gt;
+                        &lt;div class=&quot;text-cyan-400 text-xs font-mono mb-2&quot;&gt;/ SECURITY&lt;/div&gt;
+                        &lt;div class=&quot;text-3xl font-bold text-white&quot;&gt;AES-256&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;w-12 h-12 bg-cyan-900/10 rounded-full flex items-center justify-center border border-cyan-500/20&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-shield-halved text-cyan-400&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 7
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Page 02 - Development Cycle&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { deepBlack: '#020204', accentPurple: '#9D50E6', accentBlue: '#2A3C95', cardBg: 'rgba(255,255,255,0.03)' },
+                    fontFamily: { sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'] }
+                }
+            }
+        }
+    &lt;/script&gt;
+    &lt;style&gt;
+        body { margin: 0; padding: 0; overflow: hidden; }
+        .glass-panel {
+            background: rgba(20, 20, 20, 0.6);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+        }
+        .glow-text { text-shadow: 0 0 20px rgba(157, 80, 230, 0.5); }
+        .code-syntax { font-family: 'Monaco', 'Consolas', monospace; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;relative w-[1280px] h-[720px] mx-auto bg-deepBlack text-white overflow-hidden font-sans&quot;&gt;
+        
+        &lt;!-- Background Decor --&gt;
+        &lt;div class=&quot;absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute top-1/2 left-0 w-[500px] h-[500px] bg-accentBlue rounded-full opacity-10 blur-[100px] -translate-y-1/2&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute bottom-0 right-0 w-[600px] h-[600px] bg-accentPurple rounded-full opacity-10 blur-[120px]&quot;&gt;&lt;/div&gt;
+        
+        &lt;!-- Content Container --&gt;
+        &lt;div class=&quot;relative z-10 p-16 h-full flex gap-12&quot;&gt;
+            
+            &lt;!-- Left Column: Text &amp; Steps --&gt;
+            &lt;div class=&quot;w-5/12 flex flex-col justify-center&quot;&gt;
+                &lt;div class=&quot;flex items-center gap-3 mb-6 opacity-70&quot;&gt;
+                    &lt;span class=&quot;h-px w-12 bg-accentPurple&quot;&gt;&lt;/span&gt;
+                    &lt;span class=&quot;text-sm tracking-[0.3em] uppercase text-accentPurple&quot;&gt;Workflow&lt;/span&gt;
+                &lt;/div&gt;
+                
+                &lt;h1 class=&quot;text-6xl font-bold leading-tight mb-6&quot;&gt;
+                    Agile &lt;br&gt;
+                    &lt;span class=&quot;text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-accentPurple glow-text&quot;&gt;Dev Cycle&lt;/span&gt;
+                &lt;/h1&gt;
+                
+                &lt;p class=&quot;text-gray-400 leading-relaxed mb-10 border-l-2 border-white/10 pl-6&quot;&gt;
+                    Our continuous integration pipeline ensures rapid deployment while maintaining system stability. From prototype to production in record time.
+                &lt;/p&gt;
+
+                &lt;!-- Process Steps --&gt;
+                &lt;div class=&quot;space-y-4&quot;&gt;
+                    &lt;div class=&quot;glass-panel p-4 rounded-xl flex items-center gap-4 border-l-4 border-blue-500&quot;&gt;
+                        &lt;div class=&quot;w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-code&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;h4 class=&quot;font-bold text-sm&quot;&gt;Development&lt;/h4&gt;
+                            &lt;span class=&quot;text-xs text-gray-500&quot;&gt;Clean Architecture&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;glass-panel p-4 rounded-xl flex items-center gap-4 border-l-4 border-purple-500&quot;&gt;
+                        &lt;div class=&quot;w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-flask&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;h4 class=&quot;font-bold text-sm&quot;&gt;Automated Testing&lt;/h4&gt;
+                            &lt;span class=&quot;text-xs text-gray-500&quot;&gt;99.9% Coverage&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Right Column: Visual (The Image) --&gt;
+            &lt;div class=&quot;w-7/12 flex items-center justify-center relative&quot;&gt;
+                &lt;!-- Decorative Elements behind image --&gt;
+                &lt;div class=&quot;absolute inset-0 border border-white/5 rounded-3xl transform rotate-3 scale-95&quot;&gt;&lt;/div&gt;
+                
+                &lt;!-- Main Image Card --&gt;
+                &lt;div class=&quot;glass-panel rounded-2xl w-full h-[500px] overflow-hidden relative group shadow-2xl&quot;&gt;
+                    &lt;!-- Top Bar of Window --&gt;
+                    &lt;div class=&quot;h-10 bg-black/40 border-b border-white/5 flex items-center px-4 gap-2&quot;&gt;
+                        &lt;div class=&quot;w-3 h-3 rounded-full bg-red-500/80&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;w-3 h-3 rounded-full bg-yellow-500/80&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;w-3 h-3 rounded-full bg-green-500/80&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;ml-4 text-xs text-gray-500 font-mono&quot;&gt;main.py - Visual Studio Code&lt;/div&gt;
+                    &lt;/div&gt;
+                    
+                    &lt;!-- The Image --&gt;
+                    &lt;div class=&quot;relative w-full h-full&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1555099962-4199c345e5dd?q=80&amp;w=1000&amp;auto=format&amp;fit=crop&quot; 
+                             alt=&quot;Code Screen&quot; 
+                             class=&quot;w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700&quot;&gt;
+                        
+                        &lt;!-- Overlay UI Elements on top of image --&gt;
+                        &lt;div class=&quot;absolute bottom-8 right-8 glass-panel px-6 py-4 rounded-lg border border-green-500/30&quot;&gt;
+                            &lt;div class=&quot;flex items-center gap-3&quot;&gt;
+                                &lt;div class=&quot;w-2 h-2 bg-green-400 rounded-full animate-pulse&quot;&gt;&lt;/div&gt;
+                                &lt;span class=&quot;text-green-400 font-mono text-sm tracking-widest&quot;&gt;BUILD PASSING&lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        
+                        &lt;!-- Floating Syntax Highlight Decor --&gt;
+                        &lt;div class=&quot;absolute top-10 left-10 p-6 bg-deepBlack/90 rounded-lg border border-white/10 shadow-xl font-mono text-xs text-gray-300 pointer-events-none opacity-90&quot;&gt;
+                            &lt;span class=&quot;text-purple-400&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;text-yellow-400&quot;&gt;init_core&lt;/span&gt;():&lt;br&gt;
+                            &amp;nbsp;&amp;nbsp;&lt;span class=&quot;text-blue-400&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;text-green-400&quot;&gt;&quot;System Ready&quot;&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 8
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Page 03 - Analytics&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { deepBlack: '#020204', accentPink: '#FF7EB6', accentPurple: '#9D50E6', accentCyan: '#00D1FF' },
+                    fontFamily: { sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'] }
+                }
+            }
+        }
+    &lt;/script&gt;
+    &lt;style&gt;
+        body { margin: 0; padding: 0; overflow: hidden; }
+        .chart-ring { transform: rotate(-90deg); transform-origin: 50% 50%; }
+        .chart-segment { transition: stroke-dasharray 1s ease-out; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;relative w-[1280px] h-[720px] mx-auto bg-deepBlack text-white overflow-hidden font-sans&quot;&gt;
+        
+        &lt;!-- Background Decor --&gt;
+        &lt;div class=&quot;absolute top-0 right-0 w-[600px] h-[600px] bg-accentPurple opacity-5 rounded-full blur-[100px]&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute bottom-0 left-0 w-[500px] h-[500px] bg-accentPink opacity-5 rounded-full blur-[80px]&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;flex h-full p-16 relative z-10 gap-16 items-center&quot;&gt;
+            
+            &lt;!-- Left: Text Content --&gt;
+            &lt;div class=&quot;w-5/12&quot;&gt;
+                &lt;div class=&quot;inline-flex items-center space-x-2 border-l-4 border-accentPurple pl-4 mb-6&quot;&gt;
+                    &lt;span class=&quot;text-sm tracking-[0.2em] text-gray-400 uppercase&quot;&gt;Growth Metrics&lt;/span&gt;
+                &lt;/div&gt;
+                
+                &lt;h1 class=&quot;text-6xl font-bold leading-none mb-6&quot;&gt;
+                    Market&lt;br&gt;
+                    &lt;span class=&quot;text-transparent bg-clip-text bg-gradient-to-r from-accentPurple to-accentPink&quot;&gt;Dominance&lt;/span&gt;
+                &lt;/h1&gt;
+                
+                &lt;p class=&quot;text-gray-400 mb-10 leading-relaxed&quot;&gt;
+                    Visualizing our user base distribution across different sectors. Our adaptive algorithms have secured a majority share in the creative tech industry.
+                &lt;/p&gt;
+
+                &lt;!-- Legend --&gt;
+                &lt;div class=&quot;space-y-4&quot;&gt;
+                    &lt;div class=&quot;flex items-center justify-between p-4 bg-white/5 rounded-lg border border-white/5&quot;&gt;
+                        &lt;div class=&quot;flex items-center gap-3&quot;&gt;
+                            &lt;div class=&quot;w-3 h-3 rounded-full bg-accentPink shadow-[0_0_10px_#FF7EB6]&quot;&gt;&lt;/div&gt;
+                            &lt;span class=&quot;font-bold&quot;&gt;Creative SaaS&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;span class=&quot;font-mono text-accentPink&quot;&gt;45%&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;flex items-center justify-between p-4 bg-white/5 rounded-lg border border-white/5&quot;&gt;
+                        &lt;div class=&quot;flex items-center gap-3&quot;&gt;
+                            &lt;div class=&quot;w-3 h-3 rounded-full bg-accentPurple shadow-[0_0_10px_#9D50E6]&quot;&gt;&lt;/div&gt;
+                            &lt;span class=&quot;font-bold&quot;&gt;Enterprise&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;span class=&quot;font-mono text-accentPurple&quot;&gt;35%&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;flex items-center justify-between p-4 bg-white/5 rounded-lg border border-white/5&quot;&gt;
+                        &lt;div class=&quot;flex items-center gap-3&quot;&gt;
+                            &lt;div class=&quot;w-3 h-3 rounded-full bg-accentCyan shadow-[0_0_10px_#00D1FF]&quot;&gt;&lt;/div&gt;
+                            &lt;span class=&quot;font-bold&quot;&gt;Consumer&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;span class=&quot;font-mono text-accentCyan&quot;&gt;20%&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Right: The Pie Chart Visual --&gt;
+            &lt;div class=&quot;w-7/12 flex items-center justify-center relative&quot;&gt;
+                &lt;!-- Glowing Backdrop --&gt;
+                &lt;div class=&quot;absolute inset-0 bg-gradient-to-b from-white/5 to-transparent rounded-full blur-3xl transform scale-75&quot;&gt;&lt;/div&gt;
+                
+                &lt;!-- SVG Chart --&gt;
+                &lt;div class=&quot;relative w-[500px] h-[500px]&quot;&gt;
+                    &lt;svg viewBox=&quot;0 0 100 100&quot; class=&quot;w-full h-full chart-ring&quot;&gt;
+                        &lt;!-- Track --&gt;
+                        &lt;circle cx=&quot;50&quot; cy=&quot;50&quot; r=&quot;40&quot; fill=&quot;transparent&quot; stroke=&quot;rgba(255,255,255,0.05)&quot; stroke-width=&quot;12&quot;&gt;&lt;/circle&gt;
+                        
+                        &lt;!-- Segment 1: Cyan (Consumer 20%) - Dasharray calculation: 2*PI*40 * 0.2 ~= 50 --&gt;
+                        &lt;circle cx=&quot;50&quot; cy=&quot;50&quot; r=&quot;40&quot; fill=&quot;transparent&quot; stroke=&quot;#00D1FF&quot; stroke-width=&quot;12&quot; 
+                                stroke-dasharray=&quot;50 201&quot; stroke-dashoffset=&quot;0&quot; stroke-linecap=&quot;round&quot;&gt;&lt;/circle&gt;
+                                
+                        &lt;!-- Segment 2: Purple (Enterprise 35%) - Starts after Cyan. 20% of circ is ~50. Dasharray: ~88 --&gt;
+                        &lt;circle cx=&quot;50&quot; cy=&quot;50&quot; r=&quot;40&quot; fill=&quot;transparent&quot; stroke=&quot;#9D50E6&quot; stroke-width=&quot;12&quot; 
+                                stroke-dasharray=&quot;88 163&quot; stroke-dashoffset=&quot;-55&quot; stroke-linecap=&quot;round&quot;&gt;&lt;/circle&gt;
+                                
+                        &lt;!-- Segment 3: Pink (Creative 45%) - Starts after others. Dasharray: ~113 --&gt;
+                        &lt;circle cx=&quot;50&quot; cy=&quot;50&quot; r=&quot;40&quot; fill=&quot;transparent&quot; stroke=&quot;#FF7EB6&quot; stroke-width=&quot;12&quot; 
+                                stroke-dasharray=&quot;113 138&quot; stroke-dashoffset=&quot;-148&quot; stroke-linecap=&quot;round&quot;&gt;&lt;/circle&gt;
+                    &lt;/svg&gt;
+
+                    &lt;!-- Center Stats --&gt;
+                    &lt;div class=&quot;absolute inset-0 flex flex-col items-center justify-center pointer-events-none&quot;&gt;
+                        &lt;div class=&quot;text-5xl font-bold text-white mb-1&quot;&gt;2.4M&lt;/div&gt;
+                        &lt;div class=&quot;text-sm text-gray-400 uppercase tracking-widest&quot;&gt;Active Users&lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Floating Card Decor --&gt;
+                    &lt;div class=&quot;absolute top-10 right-0 bg-gray-900/80 backdrop-blur-md p-4 rounded-xl border border-white/10 shadow-2xl animate-bounce&quot; style=&quot;animation-duration: 3s;&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-arrow-trend-up text-green-400 mr-2&quot;&gt;&lt;/i&gt;
+                        &lt;span class=&quot;text-sm font-bold text-white&quot;&gt;+12.5% YoY&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 9
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Page 03 - Mobile Development (Balanced)&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { deepBlack: '#020204', accentPink: '#FF7EB6', accentPurple: '#9D50E6', accentBlue: '#2A3C95' },
+                    fontFamily: { sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'] }
+                }
+            }
+        }
+    &lt;/script&gt;
+    &lt;style&gt;
+        body { margin: 0; padding: 0; overflow: hidden; }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+        }
+        .glow-text { text-shadow: 0 0 30px rgba(157, 80, 230, 0.6); }
+        .bg-grid {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;relative w-[1280px] h-[720px] mx-auto bg-deepBlack text-white overflow-hidden font-sans bg-grid&quot;&gt;
+        
+        &lt;!-- Background Decor --&gt;
+        &lt;div class=&quot;absolute -top-20 -left-20 w-[600px] h-[600px] bg-accentPurple opacity-10 rounded-full blur-[120px]&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute bottom-0 right-0 w-[600px] h-[600px] bg-accentPink opacity-10 rounded-full blur-[100px]&quot;&gt;&lt;/div&gt;
+
+        &lt;!-- Content Container --&gt;
+        &lt;div class=&quot;relative z-10 px-16 py-12 h-full flex flex-col&quot;&gt;
+            
+            &lt;!-- Header Section --&gt;
+            &lt;div class=&quot;flex items-end justify-between mb-10&quot;&gt;
+                &lt;div&gt;
+                    &lt;div class=&quot;flex items-center gap-3 mb-2 opacity-80&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-mobile-screen text-accentPink&quot;&gt;&lt;/i&gt;
+                        &lt;span class=&quot;text-sm tracking-[0.3em] uppercase&quot;&gt;Cross-Platform Solutions&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;h1 class=&quot;text-5xl font-bold leading-none&quot;&gt;
+                        Mobile &lt;span class=&quot;text-transparent bg-clip-text bg-gradient-to-r from-accentPink to-purple-400 glow-text&quot;&gt;Engineering&lt;/span&gt;
+                    &lt;/h1&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;text-right text-gray-400 text-sm max-w-sm leading-relaxed border-r-2 border-white/20 pr-4&quot;&gt;
+                    Delivering native-performance applications with a single shared codebase strategy.
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Content Grid (Checkerboard Layout) --&gt;
+            &lt;div class=&quot;grid grid-cols-2 gap-10 flex-grow&quot;&gt;
+                
+                &lt;!-- Column 1: Text Top, Image Bottom --&gt;
+                &lt;div class=&quot;flex flex-col gap-6&quot;&gt;
+                    
+                    &lt;!-- Text Box 1 --&gt;
+                    &lt;div class=&quot;glass-panel p-8 rounded-2xl border-t-4 border-accentPink h-[180px] flex flex-col justify-center relative overflow-hidden group&quot;&gt;
+                        &lt;div class=&quot;absolute right-0 top-0 p-16 bg-accentPink/10 rounded-full blur-2xl -mr-10 -mt-10 transition-all group-hover:bg-accentPink/20&quot;&gt;&lt;/div&gt;
+                        &lt;h3 class=&quot;text-2xl font-bold mb-3 flex items-center gap-3&quot;&gt;
+                            &lt;span class=&quot;w-2 h-8 bg-accentPink rounded-full&quot;&gt;&lt;/span&gt;
+                            Unified Core
+                        &lt;/h3&gt;
+                        &lt;p class=&quot;text-gray-300 text-sm leading-relaxed relative z-10&quot;&gt;
+                            Utilizing React Native to deploy strictly typed, high-performance logic across iOS and Android, reducing maintenance overhead by 40%.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Image 1 --&gt;
+                    &lt;div class=&quot;relative h-[240px] w-full rounded-2xl overflow-hidden shadow-2xl border border-white/10 group&quot;&gt;
+                        &lt;div class=&quot;absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10&quot;&gt;&lt;/div&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&amp;w=1000&amp;auto=format&amp;fit=crop&quot; 
+                             alt=&quot;Wireframing&quot; 
+                             class=&quot;w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90&quot;&gt;
+                        
+                        &lt;div class=&quot;absolute bottom-5 left-5 z-20&quot;&gt;
+                            &lt;div class=&quot;text-xs text-accentPink font-bold uppercase tracking-widest mb-1&quot;&gt;Design System&lt;/div&gt;
+                            &lt;div class=&quot;text-lg font-bold&quot;&gt;Pixel Perfect UI&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+
+                &lt;!-- Column 2: Image Top, Text Bottom --&gt;
+                &lt;div class=&quot;flex flex-col gap-6&quot;&gt;
+                    
+                    &lt;!-- Image 2 --&gt;
+                    &lt;div class=&quot;relative h-[240px] w-full rounded-2xl overflow-hidden shadow-2xl border border-white/10 group&quot;&gt;
+                        &lt;div class=&quot;absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10&quot;&gt;&lt;/div&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1526498460520-4c246339dccb?q=80&amp;w=1000&amp;auto=format&amp;fit=crop&quot; 
+                             alt=&quot;Mobile Coding&quot; 
+                             class=&quot;w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90&quot;&gt;
+                        
+                        &lt;div class=&quot;absolute bottom-5 left-5 z-20&quot;&gt;
+                            &lt;div class=&quot;text-xs text-accentPurple font-bold uppercase tracking-widest mb-1&quot;&gt;Performance&lt;/div&gt;
+                            &lt;div class=&quot;text-lg font-bold&quot;&gt;Native Compilation&lt;/div&gt;
+                        &lt;/div&gt;
+                        
+                        &lt;!-- Floating Badge --&gt;
+                        &lt;div class=&quot;absolute top-4 right-4 z-20 bg-black/60 backdrop-blur px-3 py-1 rounded-lg border border-white/20&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-bolt text-yellow-400 mr-1&quot;&gt;&lt;/i&gt; &lt;span class=&quot;text-xs font-mono&quot;&gt;60 FPS&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Text Box 2 --&gt;
+                    &lt;div class=&quot;glass-panel p-8 rounded-2xl border-b-4 border-accentPurple h-[180px] flex flex-col justify-center relative overflow-hidden group&quot;&gt;
+                        &lt;div class=&quot;absolute right-0 bottom-0 p-16 bg-accentPurple/10 rounded-full blur-2xl -mr-10 -mb-10 transition-all group-hover:bg-accentPurple/20&quot;&gt;&lt;/div&gt;
+                        &lt;h3 class=&quot;text-2xl font-bold mb-3 flex items-center gap-3&quot;&gt;
+                            &lt;span class=&quot;w-2 h-8 bg-accentPurple rounded-full&quot;&gt;&lt;/span&gt;
+                            Fluid Motion
+                        &lt;/h3&gt;
+                        &lt;p class=&quot;text-gray-300 text-sm leading-relaxed relative z-10&quot;&gt;
+                            Advanced gesture handling and reanimated libraries ensure that interactions feel instantaneous and natural, matching native platform expectations.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 10
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Page 03 - Core Performance&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { deepBlack: '#020204', accentPurple: '#9D50E6', accentBlue: '#2A3C95', cardBg: 'rgba(255,255,255,0.03)' },
+                    fontFamily: { sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'] }
+                }
+            }
+        }
+    &lt;/script&gt;
+    &lt;style&gt;
+        body { margin: 0; padding: 0; overflow: hidden; }
+        .glass-panel {
+            background: rgba(20, 20, 20, 0.6);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+        }
+        .glow-text { text-shadow: 0 0 20px rgba(157, 80, 230, 0.5); }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;relative w-[1280px] h-[720px] mx-auto bg-deepBlack text-white overflow-hidden font-sans&quot;&gt;
+        
+        &lt;!-- Background Decor --&gt;
+        &lt;div class=&quot;absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute top-0 right-0 w-[600px] h-[600px] bg-accentBlue opacity-10 rounded-full blur-[120px] -mr-20 -mt-20&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute bottom-0 left-0 w-[500px] h-[500px] bg-accentPurple opacity-5 rounded-full blur-[100px] -ml-20 -mb-20&quot;&gt;&lt;/div&gt;
+
+        &lt;!-- Content Container --&gt;
+        &lt;div class=&quot;relative z-10 p-16 h-full flex flex-col justify-between&quot;&gt;
+            
+            &lt;!-- Header Section --&gt;
+            &lt;div class=&quot;flex justify-between items-end mb-12&quot;&gt;
+                &lt;div&gt;
+                    &lt;div class=&quot;flex items-center gap-3 mb-4 opacity-70&quot;&gt;
+                        &lt;span class=&quot;h-px w-12 bg-white&quot;&gt;&lt;/span&gt;
+                        &lt;span class=&quot;text-sm tracking-[0.3em] uppercase&quot;&gt;Metrics Report V2.0&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;h1 class=&quot;text-7xl font-bold leading-none tracking-tight&quot;&gt;
+                        Performance&lt;br&gt;
+                        &lt;span class=&quot;text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-cyan-400 glow-text&quot;&gt;Benchmarks&lt;/span&gt;
+                    &lt;/h1&gt;
+                &lt;/div&gt;
+                &lt;!-- Top Right Tag --&gt;
+                &lt;div class=&quot;text-right&quot;&gt;
+                     &lt;span class=&quot;inline-block px-4 py-1 rounded-full border border-white/10 bg-white/5 text-xs text-gray-400 font-mono tracking-widest&quot;&gt;
+                        Q4 2025 ANALYSIS
+                     &lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Cards Container --&gt;
+            &lt;div class=&quot;grid grid-cols-4 gap-8 flex-grow&quot;&gt;
+                
+                &lt;!-- Card 1: Responsiveness --&gt;
+                &lt;div class=&quot;glass-panel rounded-2xl p-8 relative overflow-hidden flex flex-col justify-center group&quot;&gt;
+                    &lt;div class=&quot;absolute top-0 right-0 p-24 bg-blue-500/10 rounded-full blur-2xl -mr-12 -mt-12 transition-all group-hover:bg-blue-500/20&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;relative z-10&quot;&gt;
+                        &lt;div class=&quot;text-xs font-mono text-blue-400 mb-2 tracking-widest&quot;&gt;/ LATENCY&lt;/div&gt;
+                        &lt;div class=&quot;text-6xl font-bold mb-4 text-white group-hover:scale-105 transition-transform origin-left&quot;&gt;120&lt;span class=&quot;text-2xl text-gray-400 font-normal ml-1&quot;&gt;ms&lt;/span&gt;&lt;/div&gt;
+                        &lt;p class=&quot;text-gray-400 text-xs leading-relaxed border-t border-white/10 pt-4&quot;&gt;Global response time reduction achieved across all edge nodes.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Card 2: Stability --&gt;
+                &lt;div class=&quot;glass-panel rounded-2xl p-8 relative overflow-hidden flex flex-col justify-center group&quot;&gt;
+                    &lt;div class=&quot;absolute top-0 right-0 p-24 bg-purple-500/10 rounded-full blur-2xl -mr-12 -mt-12 transition-all group-hover:bg-purple-500/20&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;relative z-10&quot;&gt;
+                        &lt;div class=&quot;text-xs font-mono text-accentPurple mb-2 tracking-widest&quot;&gt;/ UPTIME&lt;/div&gt;
+                        &lt;div class=&quot;text-6xl font-bold mb-4 text-white group-hover:scale-105 transition-transform origin-left&quot;&gt;99.9&lt;span class=&quot;text-2xl text-gray-400 font-normal ml-1&quot;&gt;%&lt;/span&gt;&lt;/div&gt;
+                        &lt;p class=&quot;text-gray-400 text-xs leading-relaxed border-t border-white/10 pt-4&quot;&gt;Guaranteed availability with redundant failover clusters.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Card 3: Capacity --&gt;
+                &lt;div class=&quot;glass-panel rounded-2xl p-8 relative overflow-hidden flex flex-col justify-center group&quot;&gt;
+                    &lt;div class=&quot;absolute top-0 right-0 p-24 bg-yellow-500/10 rounded-full blur-2xl -mr-12 -mt-12 transition-all group-hover:bg-yellow-500/20&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;relative z-10&quot;&gt;
+                        &lt;div class=&quot;text-xs font-mono text-yellow-500 mb-2 tracking-widest&quot;&gt;/ THROUGHPUT&lt;/div&gt;
+                        &lt;div class=&quot;text-6xl font-bold mb-4 text-white group-hover:scale-105 transition-transform origin-left&quot;&gt;15&lt;span class=&quot;text-2xl text-gray-400 font-normal ml-1&quot;&gt;PB&lt;/span&gt;&lt;/div&gt;
+                        &lt;p class=&quot;text-gray-400 text-xs leading-relaxed border-t border-white/10 pt-4&quot;&gt;Total data processed per cycle through AI inference pipelines.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Card 4: Efficiency --&gt;
+                &lt;div class=&quot;glass-panel rounded-2xl p-8 relative overflow-hidden flex flex-col justify-center group&quot;&gt;
+                    &lt;div class=&quot;absolute top-0 right-0 p-24 bg-cyan-500/10 rounded-full blur-2xl -mr-12 -mt-12 transition-all group-hover:bg-cyan-500/20&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;relative z-10&quot;&gt;
+                        &lt;div class=&quot;text-xs font-mono text-cyan-400 mb-2 tracking-widest&quot;&gt;/ OPTIMIZATION&lt;/div&gt;
+                        &lt;div class=&quot;text-6xl font-bold mb-4 text-white group-hover:scale-105 transition-transform origin-left&quot;&gt;4.2&lt;span class=&quot;text-2xl text-gray-400 font-normal ml-1&quot;&gt;x&lt;/span&gt;&lt;/div&gt;
+                        &lt;p class=&quot;text-gray-400 text-xs leading-relaxed border-t border-white/10 pt-4&quot;&gt;Increase in system efficiency after core kernel updates.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+
+            &lt;!-- Footer Section --&gt;
+            &lt;div class=&quot;flex justify-between items-center mt-8 pt-4 border-t border-white/10 opacity-50 text-[10px] uppercase tracking-[0.2em] text-gray-400 font-mono&quot;&gt;
+                &lt;span&gt;&lt;i class=&quot;fa-solid fa-shield-halved mr-2&quot;&gt;&lt;/i&gt;System Log: Secure&lt;/span&gt;
+                &lt;span&gt;All modules operating at peak efficiency&lt;/span&gt;
+                &lt;span&gt;2026 Internal Audit&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 11
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Page 02 - Tech Architecture&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { deepBlack: '#020204', accentPurple: '#9D50E6', accentBlue: '#2A3C95', cardBg: 'rgba(255,255,255,0.03)' },
+                    fontFamily: { sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'] }
+                }
+            }
+        }
+    &lt;/script&gt;
+    &lt;style&gt;
+        body { margin: 0; padding: 0; overflow: hidden; }
+        .glass-panel {
+            background: rgba(20, 20, 20, 0.6);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+        }
+        .glow-text { text-shadow: 0 0 20px rgba(157, 80, 230, 0.5); }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;relative w-[1280px] h-[720px] mx-auto bg-deepBlack text-white overflow-hidden font-sans&quot;&gt;
+        
+        &lt;!-- Background Decor --&gt;
+        &lt;div class=&quot;absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute -top-40 -left-40 w-[600px] h-[600px] bg-accentPurple rounded-full opacity-10 blur-[120px]&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute bottom-0 right-0 w-[500px] h-[500px] bg-accentBlue rounded-full opacity-10 blur-[100px]&quot;&gt;&lt;/div&gt;
+
+        &lt;!-- Content Container --&gt;
+        &lt;div class=&quot;relative z-10 p-16 h-full flex flex-col justify-between&quot;&gt;
+            
+            &lt;!-- Header Section --&gt;
+            &lt;div class=&quot;flex justify-between items-end mb-8&quot;&gt;
+                &lt;div&gt;
+                    &lt;div class=&quot;flex items-center gap-3 mb-4 opacity-70&quot;&gt;
+                        &lt;span class=&quot;h-px w-12 bg-white&quot;&gt;&lt;/span&gt;
+                        &lt;span class=&quot;text-sm tracking-[0.3em] uppercase&quot;&gt;Ecosystem Overview&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;h1 class=&quot;text-7xl font-bold leading-none tracking-tight&quot;&gt;
+                        Integrated&lt;br&gt;
+                        &lt;span class=&quot;text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-accentPurple glow-text&quot;&gt;Architecture&lt;/span&gt;
+                    &lt;/h1&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;max-w-md text-gray-400 text-sm leading-relaxed text-right border-r-2 border-white/20 pr-6&quot;&gt;
+                    Orchestrating a seamless flow between user interactions and data logic through our four-pillar system design.
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Cards Container --&gt;
+            &lt;div class=&quot;grid grid-cols-4 gap-6 mt-auto h-[340px]&quot;&gt;
+                
+                &lt;!-- Frontend Card --&gt;
+                &lt;div class=&quot;glass-panel rounded-2xl p-6 relative overflow-hidden flex flex-col&quot;&gt;
+                    &lt;div class=&quot;absolute top-0 right-0 p-24 bg-purple-500/10 rounded-full blur-2xl -mr-12 -mt-12&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;relative z-10 flex flex-col h-full&quot;&gt;
+                        &lt;div class=&quot;w-12 h-12 rounded-lg bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center mb-4 shadow-lg&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-code text-xl text-white&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;h3 class=&quot;text-2xl font-bold mb-2&quot;&gt;Frontend&lt;/h3&gt;
+                        &lt;p class=&quot;text-gray-400 text-xs mb-4 flex-grow leading-relaxed&quot;&gt;User-centric interfaces built with React and Next.js.&lt;/p&gt;
+                        
+                        &lt;div class=&quot;w-full bg-white/5 h-1.5 rounded-full mb-2&quot;&gt;
+                            &lt;div class=&quot;w-[98%] h-full bg-purple-400 rounded-full shadow-[0_0_10px_#A78BFA]&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;span class=&quot;text-xs text-purple-300 font-mono text-right&quot;&gt;SPEED: 98%&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Backend Card --&gt;
+                &lt;div class=&quot;glass-panel rounded-2xl p-6 relative overflow-hidden flex flex-col&quot;&gt;
+                    &lt;div class=&quot;absolute top-0 right-0 p-24 bg-blue-500/10 rounded-full blur-2xl -mr-12 -mt-12&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;relative z-10 flex flex-col h-full&quot;&gt;
+                        &lt;div class=&quot;w-12 h-12 rounded-lg bg-gradient-to-br from-blue-600 to-indigo-500 flex items-center justify-center mb-4 shadow-lg&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-gears text-xl text-white&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;h3 class=&quot;text-2xl font-bold mb-2&quot;&gt;Backend&lt;/h3&gt;
+                        &lt;p class=&quot;text-gray-400 text-xs mb-4 flex-grow leading-relaxed&quot;&gt;Robust server-side logic and API orchestration.&lt;/p&gt;
+                        
+                        &lt;div class=&quot;w-full bg-white/5 h-1.5 rounded-full mb-2&quot;&gt;
+                            &lt;div class=&quot;w-[100%] h-full bg-blue-400 rounded-full shadow-[0_0_10px_#60A5FA]&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;span class=&quot;text-xs text-blue-300 font-mono text-right&quot;&gt;LOAD: MAX&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Database Card --&gt;
+                &lt;div class=&quot;glass-panel rounded-2xl p-6 relative overflow-hidden flex flex-col&quot;&gt;
+                    &lt;div class=&quot;absolute top-0 right-0 p-24 bg-yellow-500/10 rounded-full blur-2xl -mr-12 -mt-12&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;relative z-10 flex flex-col h-full&quot;&gt;
+                        &lt;div class=&quot;w-12 h-12 rounded-lg bg-gradient-to-br from-yellow-500 to-orange-500 flex items-center justify-center mb-4 shadow-lg&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-database text-xl text-white&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;h3 class=&quot;text-2xl font-bold mb-2&quot;&gt;Database&lt;/h3&gt;
+                        &lt;p class=&quot;text-gray-400 text-xs mb-4 flex-grow leading-relaxed&quot;&gt;Distributed storage clusters with real-time sync.&lt;/p&gt;
+                        
+                        &lt;div class=&quot;w-full bg-white/5 h-1.5 rounded-full mb-2&quot;&gt;
+                            &lt;div class=&quot;w-[85%] h-full bg-yellow-400 rounded-full shadow-[0_0_10px_#FACC15]&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;span class=&quot;text-xs text-yellow-200 font-mono text-right&quot;&gt;IOPS: 85K&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Cloud Card --&gt;
+                &lt;div class=&quot;glass-panel rounded-2xl p-6 relative overflow-hidden flex flex-col&quot;&gt;
+                    &lt;div class=&quot;absolute top-0 right-0 p-24 bg-cyan-500/10 rounded-full blur-2xl -mr-12 -mt-12&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;relative z-10 flex flex-col h-full&quot;&gt;
+                        &lt;div class=&quot;w-12 h-12 rounded-lg bg-gradient-to-br from-cyan-500 to-teal-400 flex items-center justify-center mb-4 shadow-lg&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-cloud-bolt text-xl text-white&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;h3 class=&quot;text-2xl font-bold mb-2&quot;&gt;Cloud Native&lt;/h3&gt;
+                        &lt;p class=&quot;text-gray-400 text-xs mb-4 flex-grow leading-relaxed&quot;&gt;Automated deployment pipelines and scaling.&lt;/p&gt;
+                        
+                        &lt;div class=&quot;w-full bg-white/5 h-1.5 rounded-full mb-2&quot;&gt;
+                            &lt;div class=&quot;w-[95%] h-full bg-cyan-400 rounded-full shadow-[0_0_10px_#22D3EE]&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;span class=&quot;text-xs text-cyan-200 font-mono text-right&quot;&gt;AUTO: ACTIVE&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 12
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Core Programming Languages - Redesigned&lt;/title&gt;
+    
+    &lt;!-- Import Google Fonts --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    
+    &lt;!-- Import FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+
+    &lt;!-- Tailwind Configuration --&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBlack: '#050505',
+                        cardBg: 'rgba(255, 255, 255, 0.03)',
+                        accentPurple: '#B265FF',
+                        accentBlue: '#4E8AFF',
+                        accentPink: '#FF7EB6',
+                        textGray: '#9CA3AF',
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'Inter', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        /* CSS Reset &amp; Basics */
+        body { margin: 0; padding: 0; overflow: hidden; }
+        
+        /* Custom Utilities for Glassmorphism */
+        .glass-card {
+            background: rgba(20, 20, 20, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        /* Subtle Grid Background Pattern */
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
+
+        /* Text Gradient Utility */
+        .text-gradient {
+            background: linear-gradient(135deg, #B265FF 0%, #FF7EB6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;!-- Main Container (1280x720) --&gt;
+    &lt;div class=&quot;relative w-[1280px] h-[720px] mx-auto bg-deepBlack text-white overflow-hidden font-sans&quot;&gt;
+
+        &lt;!-- =========================================
+             BACKGROUND LAYERS
+             ========================================= --&gt;
+        
+        &lt;!-- Grid Pattern --&gt;
+        &lt;div class=&quot;absolute inset-0 bg-grid z-0&quot;&gt;&lt;/div&gt;
+
+        &lt;!-- Ambient Glow (Top Right - Pink/Purple) --&gt;
+        &lt;div class=&quot;absolute -top-[200px] -right-[200px] w-[800px] h-[800px] bg-accentPurple rounded-full opacity-20 blur-[120px] z-0&quot;&gt;&lt;/div&gt;
+
+        &lt;!-- Ambient Glow (Bottom Left - Blue) --&gt;
+        &lt;div class=&quot;absolute -bottom-[300px] -left-[100px] w-[700px] h-[700px] bg-accentBlue rounded-full opacity-15 blur-[100px] z-0&quot;&gt;&lt;/div&gt;
+
+
+        &lt;!-- =========================================
+             MAIN CONTENT GRID
+             ========================================= --&gt;
+        &lt;div class=&quot;relative z-10 w-full h-full flex items-center px-20&quot;&gt;
+            
+            &lt;div class=&quot;grid grid-cols-12 gap-16 w-full items-center&quot;&gt;
+                
+                &lt;!-- LEFT COLUMN: Typography &amp; Intro (Col-5) --&gt;
+                &lt;div class=&quot;col-span-5 space-y-8&quot;&gt;
+                    
+                    &lt;!-- Decorative Tag --&gt;
+                    &lt;div class=&quot;inline-flex items-center space-x-2 border border-white/20 rounded-full px-4 py-1.5 bg-white/5 backdrop-blur-sm&quot;&gt;
+                        &lt;span class=&quot;w-2 h-2 rounded-full bg-accentPink animate-pulse&quot;&gt;&lt;/span&gt;
+                        &lt;span class=&quot;text-xs font-semibold tracking-widest uppercase text-white/80&quot;&gt;Tech Stack 2025&lt;/span&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Main Title --&gt;
+                    &lt;h1 class=&quot;text-7xl font-bold leading-tight tracking-tight&quot;&gt;
+                        Core &lt;br&gt;
+                        &lt;span class=&quot;font-light italic text-white/90&quot;&gt;Programming&lt;/span&gt; &lt;br&gt;
+                        &lt;span class=&quot;text-gradient&quot;&gt;Languages&lt;/span&gt;
+                    &lt;/h1&gt;
+
+                    &lt;!-- Description --&gt;
+                    &lt;p class=&quot;text-lg text-textGray leading-relaxed font-light pr-4 border-l-2 border-white/10 pl-6&quot;&gt;
+                        Building the future requires the right tools. We leverage a robust triad of languages to deliver high-performance, scalable, and intelligent solutions tailored to complex demands.
+                    &lt;/p&gt;
+
+                    &lt;!-- Decorative Signature/Detail --&gt;
+                    &lt;div class=&quot;pt-8 opacity-60&quot;&gt;
+                         &lt;div class=&quot;text-xs font-mono tracking-widest text-accentBlue&quot;&gt;
+                             &amp;lt;SYSTEM_READY&amp;gt;
+                         &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+
+                &lt;!-- RIGHT COLUMN: Language Cards (Col-7) --&gt;
+                &lt;div class=&quot;col-span-7 flex flex-col gap-5 justify-center pl-8&quot;&gt;
+                    
+                    &lt;!-- CARD 1: Python --&gt;
+                    &lt;div class=&quot;glass-card rounded-2xl p-6 flex items-center space-x-6 hover:bg-white/5 group&quot;&gt;
+                        &lt;!-- Icon Container --&gt;
+                        &lt;div class=&quot;w-16 h-16 rounded-xl bg-gradient-to-br from-blue-600/20 to-yellow-500/20 flex items-center justify-center border border-white/10 group-hover:scale-105 transition-transform duration-300&quot;&gt;
+                            &lt;i class=&quot;fa-brands fa-python text-3xl text-white&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;!-- Text --&gt;
+                        &lt;div&gt;
+                            &lt;h3 class=&quot;text-2xl font-bold text-white mb-1&quot;&gt;Python&lt;/h3&gt;
+                            &lt;p class=&quot;text-sm text-textGray&quot;&gt;The backbone of our &lt;span class=&quot;text-white/80&quot;&gt;Data Science&lt;/span&gt; &amp; &lt;span class=&quot;text-white/80&quot;&gt;AI&lt;/span&gt; initiatives. Unmatched versatility.&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;!-- Arrow visual --&gt;
+                        &lt;div class=&quot;ml-auto opacity-0 group-hover:opacity-100 transition-opacity -translate-x-4 group-hover:translate-x-0 duration-300&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-arrow-right text-white/50&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- CARD 2: JavaScript --&gt;
+                    &lt;div class=&quot;glass-card rounded-2xl p-6 flex items-center space-x-6 hover:bg-white/5 group translate-x-4&quot;&gt; &lt;!-- Offset for visual interest --&gt;
+                        &lt;!-- Icon Container --&gt;
+                        &lt;div class=&quot;w-16 h-16 rounded-xl bg-gradient-to-br from-yellow-400/20 to-orange-500/20 flex items-center justify-center border border-white/10 group-hover:scale-105 transition-transform duration-300&quot;&gt;
+                            &lt;i class=&quot;fa-brands fa-js text-3xl text-yellow-400&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;!-- Text --&gt;
+                        &lt;div&gt;
+                            &lt;h3 class=&quot;text-2xl font-bold text-white mb-1&quot;&gt;JavaScript&lt;/h3&gt;
+                            &lt;p class=&quot;text-sm text-textGray&quot;&gt;Powering interactive &lt;span class=&quot;text-white/80&quot;&gt;Web Experiences&lt;/span&gt;. The universal language of the browser.&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;ml-auto opacity-0 group-hover:opacity-100 transition-opacity -translate-x-4 group-hover:translate-x-0 duration-300&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-arrow-right text-white/50&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- CARD 3: C++ --&gt;
+                    &lt;div class=&quot;glass-card rounded-2xl p-6 flex items-center space-x-6 hover:bg-white/5 group&quot;&gt;
+                        &lt;!-- Icon Container --&gt;
+                        &lt;div class=&quot;w-16 h-16 rounded-xl bg-gradient-to-br from-blue-700/20 to-cyan-500/20 flex items-center justify-center border border-white/10 group-hover:scale-105 transition-transform duration-300&quot;&gt;
+                            &lt;!-- Using a code icon for C++ generic representation or text --&gt;
+                            &lt;span class=&quot;font-bold text-xl text-blue-400&quot;&gt;C++&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;!-- Text --&gt;
+                        &lt;div&gt;
+                            &lt;h3 class=&quot;text-2xl font-bold text-white mb-1&quot;&gt;C++&lt;/h3&gt;
+                            &lt;p class=&quot;text-sm text-textGray&quot;&gt;High-performance &lt;span class=&quot;text-white/80&quot;&gt;System Architecture&lt;/span&gt;. For when speed and resource control matter most.&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;ml-auto opacity-0 group-hover:opacity-100 transition-opacity -translate-x-4 group-hover:translate-x-0 duration-300&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-arrow-right text-white/50&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Geometric Accent (Bottom Right Corner) --&gt;
+        &lt;div class=&quot;absolute bottom-10 right-10 flex gap-2&quot;&gt;
+            &lt;div class=&quot;w-2 h-2 rounded-full bg-white/20&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;w-2 h-2 rounded-full bg-white/40&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;w-2 h-2 rounded-full bg-accentPurple&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 13
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Page 03 - Core Performance&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .page_container {
+            width: 1280px; height: 720px; margin: 0 auto;
+            position: relative; background-color: #000000;
+            overflow: hidden; font-family: 'Noto Sans SC', sans-serif; color: #FFFFFF;
+        }
+        .data-card { background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, transparent 100%); border: 1px solid rgba(255,255,255,0.1); }
+        .glow-text-purple { text-shadow: 0 0 15px rgba(157, 80, 230, 0.6); }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;page_container p-16 flex flex-col&quot;&gt;
+        &lt;div class=&quot;flex justify-between items-end border-b border-white/10 pb-8 mb-16&quot;&gt;
+            &lt;div&gt;
+                &lt;h1 class=&quot;text-6xl font-bold leading-none&quot;&gt;Performance&lt;br&gt;&lt;span class=&quot;text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-cyan-400&quot;&gt;Benchmarks&lt;/span&gt;&lt;/h1&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;text-right&quot;&gt;
+                &lt;span class=&quot;text-gray-500 font-mono text-sm tracking-tighter&quot;&gt;METRICS_REPORT_v2.0&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;grid grid-cols-4 gap-8&quot;&gt;
+            &lt;div class=&quot;data-card rounded-3xl p-8&quot;&gt;
+                &lt;div class=&quot;text-sm font-mono text-blue-400 mb-4&quot;&gt;/ RESPONSIVENESS&lt;/div&gt;
+                &lt;div class=&quot;text-6xl font-bold mb-4&quot;&gt;120&lt;span class=&quot;text-xl font-normal&quot;&gt;ms&lt;/span&gt;&lt;/div&gt;
+                &lt;p class=&quot;text-gray-500 text-xs uppercase tracking-widest leading-relaxed&quot;&gt;Average global latency reduction recorded in Q4 2025.&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;data-card rounded-3xl p-8 border-b-4 border-b-[#9D50E6]&quot;&gt;
+                &lt;div class=&quot;text-sm font-mono text-[#9D50E6] mb-4&quot;&gt;/ STABILITY&lt;/div&gt;
+                &lt;div class=&quot;text-6xl font-bold mb-4&quot;&gt;99.9&lt;span class=&quot;text-xl font-normal&quot;&gt;%&lt;/span&gt;&lt;/div&gt;
+                &lt;p class=&quot;text-gray-500 text-xs uppercase tracking-widest leading-relaxed&quot;&gt;Guaranteed uptime across distributed cloud clusters.&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;data-card rounded-3xl p-8&quot;&gt;
+                &lt;div class=&quot;text-sm font-mono text-yellow-500 mb-4&quot;&gt;/ CAPACITY&lt;/div&gt;
+                &lt;div class=&quot;text-6xl font-bold mb-4&quot;&gt;15&lt;span class=&quot;text-xl font-normal&quot;&gt;PB&lt;/span&gt;&lt;/div&gt;
+                &lt;p class=&quot;text-gray-500 text-xs uppercase tracking-widest leading-relaxed&quot;&gt;Total data processed per cycle through AI pipelines.&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;data-card rounded-3xl p-8&quot;&gt;
+                &lt;div class=&quot;text-sm font-mono text-cyan-400 mb-4&quot;&gt;/ EFFICIENCY&lt;/div&gt;
+                &lt;div class=&quot;text-6xl font-bold mb-4&quot;&gt;4.2&lt;span class=&quot;text-xl font-normal&quot;&gt;x&lt;/span&gt;&lt;/div&gt;
+                &lt;p class=&quot;text-gray-500 text-xs uppercase tracking-widest leading-relaxed&quot;&gt;Increase in system throughput after core optimization.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;mt-auto flex justify-between text-[10px] text-gray-600 tracking-[0.4em] uppercase&quot;&gt;
+            &lt;span&gt;System Log: Secure&lt;/span&gt;
+            &lt;span&gt;All modules operating at peak efficiency&lt;/span&gt;
+            &lt;span&gt;2026 Internal Audit&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 14
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Page 04 - Case Studies&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { deepBlack: '#020204', accentPurple: '#9D50E6', accentBlue: '#2A3C95', accentCyan: '#22D3EE' },
+                    fontFamily: { sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'] }
+                }
+            }
+        }
+    &lt;/script&gt;
+    &lt;style&gt;
+        body { margin: 0; padding: 0; overflow: hidden; }
+        .glass-panel {
+            background: rgba(20, 20, 20, 0.6);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+        }
+        .glow-text { text-shadow: 0 0 20px rgba(34, 211, 238, 0.5); }
+        .image-mask {
+            mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;relative w-[1280px] h-[720px] mx-auto bg-deepBlack text-white overflow-hidden font-sans&quot;&gt;
+        
+        &lt;!-- Background Decor --&gt;
+        &lt;div class=&quot;absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-accentBlue opacity-10 blur-[120px] rounded-full&quot;&gt;&lt;/div&gt;
+        
+        &lt;!-- Content Container --&gt;
+        &lt;div class=&quot;relative z-10 p-14 h-full flex flex-col&quot;&gt;
+            
+            &lt;!-- Header --&gt;
+            &lt;div class=&quot;text-center mb-10&quot;&gt;
+                &lt;div class=&quot;inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 mb-4&quot;&gt;
+                    &lt;span class=&quot;w-2 h-2 rounded-full bg-accentCyan animate-pulse&quot;&gt;&lt;/span&gt;
+                    &lt;span class=&quot;text-xs font-mono text-gray-400 uppercase tracking-widest&quot;&gt;Selected Works&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;h1 class=&quot;text-5xl font-bold&quot;&gt;
+                    Innovation &lt;span class=&quot;text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 glow-text&quot;&gt;Showcase&lt;/span&gt;
+                &lt;/h1&gt;
+            &lt;/div&gt;
+
+            &lt;!-- 3 Columns Grid --&gt;
+            &lt;div class=&quot;grid grid-cols-3 gap-8 h-[420px]&quot;&gt;
+                
+                &lt;!-- Card 1: Fintech --&gt;
+                &lt;div class=&quot;glass-panel rounded-2xl overflow-hidden group relative flex flex-col&quot;&gt;
+                    &lt;div class=&quot;h-[60%] w-full relative overflow-hidden&quot;&gt;
+                        &lt;div class=&quot;absolute inset-0 bg-blue-900/20 z-10 mix-blend-color&quot;&gt;&lt;/div&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&amp;w=800&amp;auto=format&amp;fit=crop&quot; 
+                             class=&quot;w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 image-mask&quot;&gt;
+                        &lt;div class=&quot;absolute top-4 left-4 z-20&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-building-columns text-white/80 text-2xl drop-shadow-md&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;p-6 flex flex-col flex-grow -mt-6 relative z-20&quot;&gt;
+                        &lt;div class=&quot;text-xs font-bold text-cyan-400 tracking-widest mb-1&quot;&gt;FINTECH&lt;/div&gt;
+                        &lt;h3 class=&quot;text-xl font-bold mb-2&quot;&gt;NeoBank Dashboard&lt;/h3&gt;
+                        &lt;p class=&quot;text-gray-400 text-xs leading-relaxed line-clamp-3&quot;&gt;
+                            A real-time trading platform processing 50k transactions per second with sub-ms latency using WebSocket clusters.
+                        &lt;/p&gt;
+                        &lt;div class=&quot;mt-auto pt-4 border-t border-white/10 flex gap-2&quot;&gt;
+                            &lt;span class=&quot;text-[10px] bg-white/10 px-2 py-1 rounded text-gray-300&quot;&gt;Vue.js&lt;/span&gt;
+                            &lt;span class=&quot;text-[10px] bg-white/10 px-2 py-1 rounded text-gray-300&quot;&gt;D3.js&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Card 2: IoT --&gt;
+                &lt;div class=&quot;glass-panel rounded-2xl overflow-hidden group relative flex flex-col border-t-4 border-accentPurple&quot;&gt;
+                    &lt;div class=&quot;h-[60%] w-full relative overflow-hidden&quot;&gt;
+                        &lt;div class=&quot;absolute inset-0 bg-purple-900/20 z-10 mix-blend-color&quot;&gt;&lt;/div&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?q=80&amp;w=800&amp;auto=format&amp;fit=crop&quot; 
+                             class=&quot;w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 image-mask&quot;&gt;
+                        &lt;div class=&quot;absolute top-4 left-4 z-20&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-wifi text-white/80 text-2xl drop-shadow-md&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;p-6 flex flex-col flex-grow -mt-6 relative z-20&quot;&gt;
+                        &lt;div class=&quot;text-xs font-bold text-accentPurple tracking-widest mb-1&quot;&gt;SMART HOME&lt;/div&gt;
+                        &lt;h3 class=&quot;text-xl font-bold mb-2&quot;&gt;IoT Control Hub&lt;/h3&gt;
+                        &lt;p class=&quot;text-gray-400 text-xs leading-relaxed line-clamp-3&quot;&gt;
+                            Centralized management system for 500+ smart devices, featuring automated energy optimization algorithms.
+                        &lt;/p&gt;
+                        &lt;div class=&quot;mt-auto pt-4 border-t border-white/10 flex gap-2&quot;&gt;
+                            &lt;span class=&quot;text-[10px] bg-white/10 px-2 py-1 rounded text-gray-300&quot;&gt;MQTT&lt;/span&gt;
+                            &lt;span class=&quot;text-[10px] bg-white/10 px-2 py-1 rounded text-gray-300&quot;&gt;Node&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Card 3: Health --&gt;
+                &lt;div class=&quot;glass-panel rounded-2xl overflow-hidden group relative flex flex-col&quot;&gt;
+                    &lt;div class=&quot;h-[60%] w-full relative overflow-hidden&quot;&gt;
+                        &lt;div class=&quot;absolute inset-0 bg-green-900/20 z-10 mix-blend-color&quot;&gt;&lt;/div&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&amp;w=800&amp;auto=format&amp;fit=crop&quot; 
+                             class=&quot;w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 image-mask&quot;&gt;
+                        &lt;div class=&quot;absolute top-4 left-4 z-20&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-heart-pulse text-white/80 text-2xl drop-shadow-md&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;p-6 flex flex-col flex-grow -mt-6 relative z-20&quot;&gt;
+                        &lt;div class=&quot;text-xs font-bold text-green-400 tracking-widest mb-1&quot;&gt;MEDTECH&lt;/div&gt;
+                        &lt;h3 class=&quot;text-xl font-bold mb-2&quot;&gt;Patient AI Analytics&lt;/h3&gt;
+                        &lt;p class=&quot;text-gray-400 text-xs leading-relaxed line-clamp-3&quot;&gt;
+                            AI-driven diagnostic assistance tool analyzing medical imaging data to support doctors in early detection.
+                        &lt;/p&gt;
+                        &lt;div class=&quot;mt-auto pt-4 border-t border-white/10 flex gap-2&quot;&gt;
+                            &lt;span class=&quot;text-[10px] bg-white/10 px-2 py-1 rounded text-gray-300&quot;&gt;Python&lt;/span&gt;
+                            &lt;span class=&quot;text-[10px] bg-white/10 px-2 py-1 rounded text-gray-300&quot;&gt;TensorFlow&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <script>
+   // 自动调整iframe高度
+    function resizeIframes() {
+        document.querySelectorAll('.responsive-iframe').forEach(iframe => {
+            try {
+                const doc = iframe.contentDocument || iframe.contentWindow.document;
+                const height = Math.max(
+                    doc.body.scrollHeight,
+                    doc.documentElement.scrollHeight,
+                    doc.body.offsetHeight,
+                    doc.documentElement.offsetHeight,
+                    doc.body.clientHeight,
+                    doc.documentElement.clientHeight
+                );
+                iframe.style.height = height + 'px';
+            } catch (e) {
+                console.log('无法调整iframe高度:', e);
+            }
+        });
+    }
+    
+    // 初始调整
+    window.addEventListener('load', resizeIframes);
+    
+    // 内容加载后调整
+    document.querySelectorAll('.responsive-iframe').forEach(iframe => {
+        iframe.addEventListener('load', function() {
+            resizeIframes();
+            // 对动态内容进行定期检查
+            setInterval(resizeIframes, 1000);
+        });
+    });
+  </script>
+ </body>
+</html>

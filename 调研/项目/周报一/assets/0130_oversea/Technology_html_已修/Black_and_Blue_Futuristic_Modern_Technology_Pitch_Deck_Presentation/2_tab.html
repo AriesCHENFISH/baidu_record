@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Directory - Fixed</title>
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { cyber: { black: '#000000', cyan: '#4DEEEA', text: '#94A3B8', darkblue: '#0F172A' } },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'sans-serif'], mono: ['monospace'] }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative;
+            background-color: #000000; overflow: hidden; font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* 背景网格 */
+        .bg-grid-css {
+            position: absolute; inset: 0; z-index: 0;
+            background-image: 
+                linear-gradient(rgba(77, 238, 234, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(77, 238, 234, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+            mask-image: radial-gradient(circle at 50% 50%, black, transparent 85%);
+            -webkit-mask-image: radial-gradient(circle at 50% 50%, black, transparent 85%);
+        }
+
+        .marker-line { height: 4px; background: #4DEEEA; transform: skew(-20deg); margin-bottom: 4px; }
+        .glow-text { text-shadow: 0 0 15px rgba(77, 238, 234, 0.7); }
+
+        /* 目录项容器 */
+        .toc-module {
+            position: relative;
+            display: flex; align-items: center;
+            background: linear-gradient(90deg, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.1) 100%);
+            border-left: 2px solid #4DEEEA;
+            padding: 16px 24px;
+            clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);
+            transition: all 0.3s ease;
+        }
+        .toc-module:hover {
+            transform: translateX(10px);
+            background: linear-gradient(90deg, rgba(15, 23, 42, 1) 0%, rgba(77, 238, 234, 0.1) 100%);
+            box-shadow: -5px 0 15px rgba(77, 238, 234, 0.2);
+        }
+
+        .toc-num {
+            font-family: monospace; font-size: 24px; font-weight: 800; color: #4DEEEA;
+            text-shadow: 0 0 10px rgba(77, 238, 234, 0.5); margin-right: 16px;
+            position: relative;
+        }
+        /* 修复点 1: 将 bg-cyber-cyan 修改为标准的 CSS 颜色 */
+        .toc-num::after {
+            content: ''; position: absolute; top: 50%; right: -10px; width: 8px; height: 2px; 
+            background-color: #4DEEEA; opacity: 0.5;
+        }
+
+        /* 修复点 2: 将 rounded-full 修改为标准的 CSS 属性 */
+        .hud-ring {
+            position: absolute; border: 1px dashed rgba(77, 238, 234, 0.2); 
+            border-radius: 9999px;
+            animation: spin 30s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <div class="bg-grid-css"></div>
+        <div class="absolute top-[-200px] left-[-200px] w-[600px] h-[600px] bg-cyber-darkblue opacity-50 rounded-full blur-[150px] z-0"></div>
+        <div class="absolute bottom-[-200px] right-[-200px] w-[600px] h-[600px] bg-cyber-cyan opacity-10 rounded-full blur-[150px] z-0"></div>
+        
+        <div class="hud-ring w-[700px] h-[700px] left-[-200px] top-[50px] opacity-20 z-0"></div>
+        <div class="hud-ring w-[500px] h-[500px] left-[-100px] top-[150px] opacity-10 z-0" style="animation-direction: reverse; animation-duration: 20s;"></div>
+
+        <div class="relative z-10 h-full w-full flex p-16">
+            
+            <div class="w-1/3 flex flex-col justify-center">
+                <div class="marker-line w-20"></div>
+                <div class="marker-line w-12 opacity-60 mb-6"></div>
+                
+                <h1 class="text-7xl font-black text-white tracking-tighter leading-none mb-4">
+                    SYSTEM<br>
+                    <span class="text-cyber-cyan glow-text">DIRECTORY</span>
+                </h1>
+                <div class="w-32 h-1 bg-gradient-to-r from-cyber-cyan to-transparent mb-6"></div>
+                <p class="text-cyber-text font-mono text-sm tracking-widest uppercase opacity-80">
+                    // Main Index Protocol<br>
+                    // V.2026.01.14
+                </p>
+            </div>
+
+            <div class="w-2/3 grid grid-cols-2 gap-x-12 gap-y-6 content-center pl-12 border-l border-cyber-cyan/10 relative">
+                <div class="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-32 bg-cyber-cyan/30"></div>
+
+                <div class="flex flex-col gap-5">
+                    <div class="toc-module group cursor-pointer">
+                        <div class="toc-num">01</div>
+                        <div>
+                            <h2 class="text-xl font-bold text-white tracking-wider group-hover:text-cyber-cyan transition-colors">EXECUTIVE SUMMARY</h2>
+                            <p class="text-xs text-cyber-text font-mono opacity-60">Mission Overview & Vision</p>
+                        </div>
+                    </div>
+                    <div class="toc-module group cursor-pointer">
+                        <div class="toc-num">02</div>
+                        <div>
+                            <h2 class="text-xl font-bold text-white tracking-wider group-hover:text-cyber-cyan transition-colors">PROBLEM ANALYSIS</h2>
+                            <p class="text-xs text-cyber-text font-mono opacity-60">Core System Vulnerabilities</p>
+                        </div>
+                    </div>
+                    <div class="toc-module group cursor-pointer">
+                        <div class="toc-num">03</div>
+                        <div>
+                            <h2 class="text-xl font-bold text-white tracking-wider group-hover:text-cyber-cyan transition-colors">MARKET OPPORTUNITY</h2>
+                            <p class="text-xs text-cyber-text font-mono opacity-60">Global Data Landscape</p>
+                        </div>
+                    </div>
+                    <div class="toc-module group cursor-pointer">
+                        <div class="toc-num">04</div>
+                        <div>
+                            <h2 class="text-xl font-bold text-white tracking-wider group-hover:text-cyber-cyan transition-colors">TECHNOLOGY CORE</h2>
+                            <p class="text-xs text-cyber-text font-mono opacity-60">Neural Architecture V4</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-5">
+                    <div class="toc-module group cursor-pointer">
+                        <div class="toc-num">05</div>
+                        <div>
+                            <h2 class="text-xl font-bold text-white tracking-wider group-hover:text-cyber-cyan transition-colors">STRATEGIC OBJECTIVES</h2>
+                            <p class="text-xs text-cyber-text font-mono opacity-60">Key Performance Targets</p>
+                        </div>
+                    </div>
+                    <div class="toc-module group cursor-pointer">
+                        <div class="toc-num">06</div>
+                        <div>
+                            <h2 class="text-xl font-bold text-white tracking-wider group-hover:text-cyber-cyan transition-colors">DEPLOYMENT ROADMAP</h2>
+                            <p class="text-xs text-cyber-text font-mono opacity-60">Phased Execution Plan</p>
+                        </div>
+                    </div>
+                    <div class="toc-module group cursor-pointer">
+                        <div class="toc-num">07</div>
+                        <div>
+                            <h2 class="text-xl font-bold text-white tracking-wider group-hover:text-cyber-cyan transition-colors">FINANCIAL PROJECTIONS</h2>
+                            <p class="text-xs text-cyber-text font-mono opacity-60">Growth & ROI Analysis</p>
+                        </div>
+                    </div>
+                    <div class="toc-module group cursor-pointer">
+                        <div class="toc-num">08</div>
+                        <div>
+                            <h2 class="text-xl font-bold text-white tracking-wider group-hover:text-cyber-cyan transition-colors">CORE OPERATIVES</h2>
+                            <p class="text-xs text-cyber-text font-mono opacity-60">Leadership & Team Structure</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="absolute bottom-8 left-16 right-16 flex justify-between items-center opacity-40 font-mono text-[10px] text-cyber-cyan tracking-widest uppercase">
+            <div>Index Status: Loaded</div>
+            <div class="flex gap-4 items-center">
+                <span>Total Modules: 08</span>
+                <div class="w-24 h-[1px] bg-cyber-cyan/50"></div>
+                <span>Secure Access</span>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

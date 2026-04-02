@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traction - Coffee Brand Strategy</title>
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- Tailwind Config for Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#A3332A',      // Main Red
+                        deepBlack: '#050505',    // Deep Black
+                        creamyWhite: '#FDF5E6',  // Background/Text
+                        glowOrange: '#E07A5F',   // Accent/Glow
+                        coffeeBrown: '#5D4037',  // Shadow/Darker tones
+                        divider: '#4A4A4A'       // Lines
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'soft': '0 20px 40px -10px rgba(0, 0, 0, 0.1)',
+                        'card-glow': '0 20px 50px -12px rgba(163, 51, 42, 0.5)',
+                        'floating': '0 10px 30px rgba(5, 5, 5, 0.2)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* Fixed Canvas Container */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            margin: 0 auto;
+            background-color: #050505;
+            overflow: hidden;
+        }
+
+        /* Decorative Background Gradient */
+        .bg-gradient-overlay {
+            background: linear-gradient(135deg, rgba(5,5,5,0.8), rgba(93, 64, 55, 0.9));
+        }
+        
+        /* Sparkle Animation Element */
+        .sparkle-shape {
+            position: absolute;
+            background: radial-gradient(circle, #E07A5F 0%, rgba(224, 122, 95, 0) 70%);
+            filter: blur(8px);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Canvas -->
+    <div id="page_container">
+        
+        <!-- Background Layer: Coffee Shop Ambiance -->
+        <div class="absolute inset-0 z-0">
+            <!-- Background Image -->
+            <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=1280&auto=format&fit=crop" 
+                 class="w-full h-full object-cover opacity-40" 
+                 alt="Blurred coffee shop background">
+            <!-- 1280*720 -->
+            
+            <!-- Dark Overlay to ensure content pop -->
+            <div class="absolute inset-0 bg-gradient-overlay mix-blend-multiply"></div>
+        </div>
+
+        <!-- Main Content Card -->
+        <!-- Using Creamy White as base, rounded, centered -->
+        <div class="absolute z-10 top-10 bottom-10 left-12 right-12 bg-creamyWhite rounded-[40px] shadow-2xl flex flex-col p-12 overflow-hidden">
+            
+            <!-- Decorative Visual: Top Right Floating Beans -->
+            <div class="absolute top-[-20px] right-[-20px] w-96 h-96 z-0 opacity-10 pointer-events-none">
+                 <!-- Using a FontAwesome icon as a subtle watermark since cutting out actual beans via code is complex -->
+                 <i class="fa-solid fa-mug-hot text-[400px] text-coffeeBrown transform rotate-12"></i>
+            </div>
+            
+            <!-- Visual Element: High Quality Coffee Image (Replacing the floating beans with a styled image) -->
+            <div class="absolute top-12 right-12 z-10 w-64 h-40 rounded-2xl overflow-hidden shadow-floating transform rotate-2 border-4 border-white">
+                <img src="https://images.unsplash.com/photo-1559525839-8f897d5a363a?q=80&w=400&auto=format&fit=crop" 
+                     class="w-full h-full object-cover" 
+                     alt="Roasted coffee beans detail">
+                <!-- 400*250 -->
+            </div>
+
+            <!-- Header Section -->
+            <div class="relative z-10 mb-12">
+                <!-- Decorative Sparkle (CSS Gradient) -->
+                <div class="absolute -top-6 -left-6 w-32 h-32 sparkle-shape opacity-60"></div>
+                <div class="absolute top-0 left-24 w-20 h-20 sparkle-shape opacity-40"></div>
+
+                <h1 class="text-7xl font-bold text-deepBlack tracking-tighter relative">
+                    Traction
+                    <span class="text-primary text-2xl align-top ml-2"><i class="fa-solid fa-star"></i></span>
+                </h1>
+                <div class="w-24 h-2 bg-primary mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Content Grid: 4 Columns -->
+            <div class="grid grid-cols-4 gap-6 h-full items-stretch relative z-10">
+                
+                <!-- Column 1: Standard -->
+                <div class="flex flex-col gap-6 p-4 rounded-2xl border border-transparent hover:border-gray-200 transition-colors">
+                    <div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-lg shrink-0">
+                        <i class="fa-solid fa-check text-creamyWhite text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-deepBlack leading-tight mb-2">Prototype Testing</h3>
+                        <div class="w-8 h-1 bg-gray-200 mb-3 rounded-full"></div>
+                        <p class="text-gray-700 text-lg font-medium leading-relaxed">
+                            Prototype tested with <span class="text-primary font-bold">strong satisfaction</span> ratings across all key metrics.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Column 2: Standard -->
+                <div class="flex flex-col gap-6 p-4 rounded-2xl border border-transparent hover:border-gray-200 transition-colors">
+                    <div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-lg shrink-0">
+                        <i class="fa-solid fa-check text-creamyWhite text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-deepBlack leading-tight mb-2">Community Interest</h3>
+                        <div class="w-8 h-1 bg-gray-200 mb-3 rounded-full"></div>
+                        <p class="text-gray-700 text-lg font-medium leading-relaxed">
+                            Early interest generated from influential <span class="text-coffeeBrown font-bold">coffee hobbyist</span> communities.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Column 3: HIGHLIGHTED (The Pre-order Card) -->
+                <!-- Recreating the red card logic from the original image -->
+                <div class="flex flex-col gap-6 p-8 bg-primary rounded-3xl shadow-card-glow transform scale-105 -translate-y-2 relative overflow-hidden">
+                    <!-- Background texture for the card -->
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-glowOrange opacity-20 rounded-full blur-2xl transform translate-x-10 -translate-y-10"></div>
+                    
+                    <div class="w-16 h-16 rounded-full bg-creamyWhite flex items-center justify-center shadow-md z-10 shrink-0">
+                        <i class="fa-solid fa-check text-primary text-2xl"></i>
+                    </div>
+                    <div class="z-10">
+                        <h3 class="text-xl font-bold text-creamyWhite leading-tight mb-2">Pre-orders</h3>
+                        <div class="w-8 h-1 bg-glowOrange mb-3 rounded-full opacity-60"></div>
+                        <p class="text-white text-xl font-bold leading-relaxed tracking-wide">
+                            Multiple pre-orders secured directly from <span class="text-creamyWhite border-b-2 border-glowOrange">demo events</span>.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Column 4: Standard -->
+                <div class="flex flex-col gap-6 p-4 rounded-2xl border border-transparent hover:border-gray-200 transition-colors">
+                    <div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-lg shrink-0">
+                        <i class="fa-solid fa-check text-creamyWhite text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-deepBlack leading-tight mb-2">Social Growth</h3>
+                        <div class="w-8 h-1 bg-gray-200 mb-3 rounded-full"></div>
+                        <p class="text-gray-700 text-lg font-medium leading-relaxed">
+                            Social media engagement growing <span class="text-primary font-bold">steadily</span> month over month.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer / Bottom Decoration -->
+            <div class="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-primary via-glowOrange to-primary"></div>
+        </div>
+
+    </div>
+
+</body>
+</html>

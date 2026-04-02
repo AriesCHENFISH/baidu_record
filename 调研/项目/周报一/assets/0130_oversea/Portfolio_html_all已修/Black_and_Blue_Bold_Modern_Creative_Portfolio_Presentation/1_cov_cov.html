@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, height=720, initial-scale=1.0">
+    <title>Creative Portfolio - Refined Cover</title>
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { 
+                        brandBlue: '#3B71F3', 
+                        brandBlack: '#000000', 
+                        brandDark: '#111111'
+                    },
+                    boxShadow: { 
+                        'pop-blue': '10px 10px 0px 0px #3B71F3',
+                        'pop-white': '4px 4px 0px 0px #FFFFFF'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto;
+            position: relative; background-color: #000000; overflow: hidden;
+            background-image: radial-gradient(rgba(59, 113, 243, 0.1) 1.5px, transparent 1.5px);
+            background-size: 30px 30px;
+        }
+        /* 主标题字号控制 */
+        .mega-title { font-size: 120px; line-height: 0.85; letter-spacing: -0.04em; }
+        /* 标题带遮罩的色块设计 */
+        .hero-stripe {
+            clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container" class="flex flex-col">
+        
+        <header class="w-full flex justify-between items-center px-12 py-10 z-50">
+            <div class="flex items-center gap-4">
+                <div class="bg-brandBlue text-white p-2 px-4 rotate-[-2deg] font-black text-2xl border-2 border-white shadow-pop-white italic">C.P</div>
+                <div class="h-[2px] w-24 bg-brandBlue"></div>
+            </div>
+            
+            <div class="flex gap-4">
+                <span class="bg-white border-2 border-brandBlue px-6 py-1 rounded-full font-bold uppercase tracking-widest text-sm text-black">Portfolio</span>
+                <span class="bg-brandBlue border-2 border-white px-6 py-1 rounded-full font-bold uppercase tracking-widest text-sm text-white">Edition 01</span>
+            </div>
+
+            <div class="flex gap-6 text-white text-2xl">
+                <i class="fa-solid fa-star-of-life animate-spin-slow"></i>
+            </div>
+        </header>
+
+        <main class="flex-1 flex items-center justify-center z-10 relative">
+            <div class="absolute w-full h-[400px] bg-brandBlue hero-stripe z-0 flex items-center justify-center">
+                <div class="w-full h-full border-y-[10px] border-black/10"></div>
+            </div>
+
+            <div class="relative z-10 text-center">
+                <h1 class="mega-title font-black text-black uppercase italic">
+                    CREATIVE
+                </h1>
+                <h1 class="mega-title font-black text-white uppercase mt-2">
+                    PORTFOLIO
+                </h1>
+                <h1 class="mega-title font-black text-black uppercase italic mt-2">
+                    SHOWCASE
+                </h1>
+            </div>
+        </main>
+
+        <footer class="w-full px-12 pb-16 flex justify-between items-end z-20">
+            <div class="flex gap-4">
+                <div class="w-14 h-14 rounded-full border-2 border-brandBlue flex items-center justify-center text-brandBlue bg-black">
+                    <i class="fa-solid fa-terminal text-2xl"></i>
+                </div>
+            </div>
+
+            <div class="flex gap-6">
+                <div class="bg-white border-2 border-black p-6 shadow-pop-blue transform rotate-[-2deg] min-w-[240px]">
+                    <span class="block text-brandBlue font-black text-[10px] uppercase tracking-widest mb-1 border-b border-brandBlue/10">Project Lead</span>
+                    <span class="text-black font-black text-3xl uppercase italic tracking-tighter">Harper Russo</span>
+                </div>
+
+                <div class="bg-brandBlue border-2 border-white p-6 shadow-pop-white transform rotate-[1deg] min-w-[180px]">
+                    <span class="block text-black font-black text-[10px] uppercase tracking-widest mb-1 border-b border-white/20">Date Issued</span>
+                    <span class="text-white font-black text-3xl italic tracking-tighter">JAN 2026</span>
+                </div>
+            </div>
+        </footer>
+
+        <div class="absolute -bottom-20 -left-20 z-0">
+            <span class="text-[300px] font-black text-white/5 uppercase select-none">DESIGN</span>
+        </div>
+    </div>
+
+</body>
+</html>

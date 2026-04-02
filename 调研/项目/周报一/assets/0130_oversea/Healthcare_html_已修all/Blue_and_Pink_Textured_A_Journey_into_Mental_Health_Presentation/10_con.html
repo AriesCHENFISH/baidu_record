@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics - Professional Layout</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { navy: { 900: '#0F172A', 800: '#1E3A8A' }, slate: { 700: '#334155', 200: '#E2E8F0', 100: '#F1F5F9' } },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'sans-serif'], serif: ['"Times New Roman"', 'serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #FFFFFF; overflow: hidden; }
+        /* 恢复大圆角和宽敞感 */
+        .stat-card { @apply flex flex-col justify-center items-center p-8 rounded-[40px] transition-all duration-500; }
+        .card-outline { @apply border border-slate-200 bg-white hover:border-navy-800 shadow-sm; }
+        .card-filled { @apply bg-slate-100 border-transparent hover:shadow-lg; }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-slate-50 rounded-bl-full z-0"></div>
+
+        <header class="absolute top-0 left-0 w-full px-16 py-12 flex justify-between items-start z-20">
+            <div class="flex items-center gap-4">
+                <div class="w-12 h-[2px] bg-navy-900 mt-6"></div>
+                <div class="text-navy-900">
+                    <p class="text-xs uppercase tracking-[0.3em] text-slate-700 font-bold opacity-50">Page</p>
+                    <p class="text-6xl font-serif font-bold leading-none">10</p>
+                </div>
+            </div>
+            <div class="flex gap-3">
+                <span class="px-5 py-2 rounded-full text-xs font-bold uppercase tracking-widest border border-navy-900 text-navy-900 bg-white">Statistics</span>
+                <span class="px-5 py-2 rounded-full text-xs font-bold uppercase tracking-widest bg-navy-800 text-white">Insights</span>
+            </div>
+        </header>
+
+        <main class="relative z-10 h-full flex flex-col justify-center px-16 pt-24">
+            <div class="mb-12">
+                <h1 class="text-6xl font-serif font-bold text-navy-900 mb-4">The Global Scale</h1>
+                <div class="flex items-center gap-4">
+                    <span class="w-10 h-[2px] bg-navy-800"></span>
+                    <p class="text-xl text-slate-700 font-light italic opacity-80">Quantifying the urgency of mental health awareness</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-3 gap-8">
+                <div class="stat-card card-outline">
+                    <span class="text-5xl font-serif font-bold text-navy-800 mb-2">1 / 4</span>
+                    <p class="text-sm uppercase tracking-[0.2em] font-bold text-slate-400 mb-3">Prevalence</p>
+                    <p class="text-center text-sm text-slate-500 leading-relaxed px-4">People globally will face mental health challenges.</p>
+                </div>
+                <div class="stat-card card-filled">
+                    <span class="text-5xl font-serif font-bold text-navy-900 mb-2">80%</span>
+                    <p class="text-sm uppercase tracking-[0.2em] font-bold text-navy-800 mb-3">Care Gap</p>
+                    <p class="text-center text-sm text-slate-600 leading-relaxed px-4 italic">Lack access to support in developing regions.</p>
+                </div>
+                <div class="stat-card card-outline">
+                    <span class="text-5xl font-serif font-bold text-navy-800 mb-2">$1T</span>
+                    <p class="text-sm uppercase tracking-[0.2em] font-bold text-slate-400 mb-3">Economy</p>
+                    <p class="text-center text-sm text-slate-500 leading-relaxed px-4">Annual global loss in economic productivity.</p>
+                </div>
+                <div class="stat-card card-filled">
+                    <span class="text-5xl font-serif font-bold text-navy-900 mb-2">75%</span>
+                    <p class="text-sm uppercase tracking-[0.2em] font-bold text-navy-800 mb-3">Early Onset</p>
+                    <p class="text-center text-sm text-slate-600 leading-relaxed px-4">Of conditions emerge before the age of 24.</p>
+                </div>
+                <div class="stat-card card-outline">
+                    <span class="text-5xl font-serif font-bold text-navy-800 mb-2">12B</span>
+                    <p class="text-sm uppercase tracking-[0.2em] font-bold text-slate-400 mb-3">Workdays</p>
+                    <p class="text-center text-sm text-slate-500 leading-relaxed px-4">Lost annually to untreated mental distress.</p>
+                </div>
+                <div class="stat-card card-filled bg-navy-900">
+                    <span class="text-5xl font-serif font-bold text-white mb-2">65%</span>
+                    <p class="text-sm uppercase tracking-[0.2em] font-bold text-slate-400 mb-3">Recovery</p>
+                    <p class="text-center text-sm text-slate-100 leading-relaxed px-4">Success rate with early professional intervention.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

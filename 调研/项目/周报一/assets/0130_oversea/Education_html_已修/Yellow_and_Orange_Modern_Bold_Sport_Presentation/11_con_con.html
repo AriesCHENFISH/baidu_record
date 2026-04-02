@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenges in Sports - Retro Sports Design</title>
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        /* CSS Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* Page Container - Strict 1280x720 */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #F9FA5D; /* High-light Lemon Yellow */
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+            /* No external shadows as per request */
+        }
+
+        /* Utilities */
+        .text-shadow-retro {
+            text-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+        }
+        
+        /* Custom Tracking for Impact */
+        .tracking-tight-custom {
+            letter-spacing: -0.04em;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <!-- 1. Background Geometry (Top Orange Block) -->
+        <!-- Occupies top ~48% to house the title and text, creating the retro split look -->
+        <div class="absolute top-0 left-0 w-full h-[340px] bg-[#E05320] z-0">
+            <!-- Subtle decorative lines for texture -->
+            <div class="absolute inset-0 opacity-10" style="background: repeating-linear-gradient(45deg, transparent, transparent 10px, #000 10px, #000 11px);"></div>
+        </div>
+
+        <!-- 2. Content Grid: Title & Body Text -->
+        <div class="relative z-10 w-full px-16 pt-12 grid grid-cols-12 gap-12">
+            
+            <!-- Left Column: Main Title -->
+            <div class="col-span-6 flex flex-col justify-center">
+                <!-- Decorative Icon -->
+                <div class="mb-4">
+                    <i class="fa-solid fa-star text-[#F9FA5D] text-3xl"></i>
+                    <i class="fa-solid fa-star text-[#F9FA5D] text-3xl ml-2"></i>
+                    <i class="fa-solid fa-star text-[#F9FA5D] text-3xl ml-2"></i>
+                </div>
+                
+                <h1 class="text-[6rem] leading-[0.85] font-black uppercase text-[#F9FA5D] tracking-tight-custom text-shadow-retro transform -rotate-1 origin-bottom-left">
+                    Challenges<br>
+                    <span class="text-white">In Sports</span>
+                </h1>
+            </div>
+
+            <!-- Right Column: Body Paragraph -->
+            <div class="col-span-6 pt-4">
+                <!-- Semantic container for text -->
+                <div class="bg-black/10 p-6 rounded-tr-3xl border-l-4 border-[#F9FA5D]">
+                    <p class="text-white text-gl font-medium leading-relaxed text-justify">
+                        Sports present challenges such as injuries, pressure to perform, and maintaining fair competition. Ethical concerns, financial struggles, and the demand for continuous improvement test athletes at all levels. Overcoming these obstacles requires resilience, proper training, and strong support systems that allow players to stay motivated and focused.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Diagonal Banner Strip (The "Sporty Blue" Element) -->
+        <!-- Rotated to create dynamic tension -->
+        <div class="absolute top-[310px] left-[-50px] w-[1400px] h-14 bg-[#3131C6] transform -rotate-2 z-20 flex items-center justify-center border-y-4 border-white shadow-lg overflow-hidden">
+            <div class="flex gap-8 whitespace-nowrap">
+                <!-- Repeated text pattern -->
+                <span class="text-white font-bold tracking-widest text-lg italic opacity-90">SPORT PRESENTATION</span>
+                <span class="text-[#F9FA5D] text-lg">•</span>
+                <span class="text-white font-bold tracking-widest text-lg italic opacity-90">SPORT PRESENTATION</span>
+                <span class="text-[#F9FA5D] text-lg">•</span>
+                <span class="text-white font-bold tracking-widest text-lg italic opacity-90">SPORT PRESENTATION</span>
+                <span class="text-[#F9FA5D] text-lg">•</span>
+                <span class="text-white font-bold tracking-widest text-lg italic opacity-90">SPORT PRESENTATION</span>
+                <span class="text-[#F9FA5D] text-lg">•</span>
+                <span class="text-white font-bold tracking-widest text-lg italic opacity-90">SPORT PRESENTATION</span>
+            </div>
+        </div>
+
+        <!-- 4. Main Image Section -->
+        <!-- Positioned at the bottom, overlapping the diagonal strip slightly visually -->
+        <div class="absolute bottom-[50px] left-[40px] right-[40px] h-[330px] z-10">
+            <!-- Image Container with retro border -->
+            <div class="w-full h-full bg-gray-200 border-4 border-[#3131C6] rounded-xl overflow-hidden relative shadow-[8px_8px_0px_0px_rgba(224,83,32,1)]">
+                <!-- Image Overlay for Tint -->
+                <div class="absolute inset-0 bg-[#3131C6] mix-blend-multiply opacity-20 pointer-events-none z-10"></div>
+                
+                <!-- Main Image -->
+                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1200&auto=format&fit=crop" 
+                     alt="Athlete Pushing Limits" 
+                     class="w-full h-full object-cover object-top filter contrast-125 grayscale-[20%]">
+                <!-- 1200*330 -->
+            </div>
+        </div>
+
+        <!-- 5. Footer Elements -->
+        <!-- Integrating the Yellow Background into the footer area -->
+        <div class="absolute bottom-0 left-0 w-full h-[50px] flex items-center justify-between px-12 z-20">
+            <!-- Left Footer Text -->
+            <div class="flex items-center gap-2">
+                <div class="w-3 h-3 bg-[#E05320] rounded-full"></div>
+                <h3 class="text-[#E05320] font-bold uppercase tracking-wider text-sm">Pushing Through</h3>
+            </div>
+
+            <!-- Center Decoration -->
+            <div class="w-1/3 h-[2px] bg-[#E05320] opacity-30"></div>
+
+            <!-- Right Footer Text -->
+            <div class="flex items-center gap-2">
+                <h3 class="text-[#E05320] font-bold uppercase tracking-wider text-sm">The Obstacles</h3>
+                <div class="w-3 h-3 bg-[#E05320] rounded-full"></div>
+            </div>
+        </div>
+
+        <!-- Geometric Decoration (Bottom Right Corner) -->
+        <div class="absolute -bottom-10 -right-10 w-32 h-32 bg-[#3131C6] rounded-full z-0 opacity-20"></div>
+    </div>
+
+</body>
+</html>

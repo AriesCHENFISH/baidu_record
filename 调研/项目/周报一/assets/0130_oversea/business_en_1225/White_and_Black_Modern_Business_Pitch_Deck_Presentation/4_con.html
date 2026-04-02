@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Insights - Compact Layout</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background-color: #111111;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+        .tight-leading { line-height: 0.85; }
+    </style>
+</head>
+<body>
+
+    <div id="page_container" class="flex flex-col p-12 justify-between">
+        
+        <div class="flex h-[340px] gap-8">
+            
+            <div class="w-[60%] h-full relative rounded-[2rem] overflow-hidden group border border-white/5 shadow-lg">
+                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                     alt="Analysis" 
+                     class="w-full h-full object-cover grayscale opacity-80 transition-transform duration-1000 group-hover:scale-110 group-hover:opacity-100">
+                <div class="absolute inset-0 bg-gradient-to-tr from-black/80 via-black/20 to-transparent"></div>
+                <div class="absolute bottom-6 left-8">
+                    <p class="text-white/40 text-xs tracking-[0.4em] uppercase font-bold mb-2">Q4 Strategic Overview</p>
+                    <h2 class="text-white text-2xl font-bold tracking-tight">Market Expansion & Data Intelligence</h2>
+                </div>
+            </div>
+
+            <div class="w-[40%] h-full bg-[#1A1A1A] rounded-[2rem] p-6 flex flex-col items-center justify-between border border-white/10 shadow-xl">
+                <div class="w-full flex justify-between items-center px-2">
+                    <span class="text-white/30 text-[10px] font-black uppercase tracking-widest italic">Core Metric</span>
+                    <i class="fa-solid fa-circle-nodes text-white/20 text-sm"></i>
+                </div>
+                
+                <div id="chart-container" class="w-full h-[180px]"></div>
+                
+                <div class="w-full text-center px-4">
+                    <p class="text-white text-sm font-medium opacity-60 leading-relaxed uppercase tracking-tighter">
+                        Priority Segment: <span class="text-white border-b border-white">Authentic Content</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent my-4"></div>
+
+        <div class="flex items-end justify-between h-[260px]">
+            
+            <div class="flex-shrink-0">
+                <h1 class="text-white text-[100px] font-black tight-leading tracking-tighter uppercase italic">
+                    Market<br>
+                    <span class="text-transparent" style="-webkit-text-stroke: 1.5px rgba(255,255,255,0.8);">Insights</span>
+                </h1>
+            </div>
+
+            <div class="max-w-sm pb-2">
+                <div class="flex gap-2 mb-6">
+                    <div class="w-8 h-1 bg-white"></div>
+                    <div class="w-2 h-1 bg-white/20"></div>
+                </div>
+                <p class="text-white/50 text-base leading-relaxed font-light mb-10 text-justify border-l border-white/20 pl-6">
+                    Bridging the gap between raw data and actionable intelligence. Our Q4 study highlights a pivotal shift toward consumer-driven authenticity.
+                </p>
+                <div class="flex items-center justify-between border-t border-white/5 pt-4">
+                    <span class="text-white/20 text-[10px] uppercase tracking-[0.2em]">© 2025 Larana Global</span>
+                    <div class="flex gap-3 text-white/40 text-xs">
+                        <i class="fa-solid fa-share-nodes cursor-pointer hover:text-white transition-colors"></i>
+                        <i class="fa-solid fa-expand cursor-pointer hover:text-white transition-colors"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="absolute top-[-20%] right-[-10%] w-[500px] h-[500px] bg-white/5 rounded-full blur-[100px] pointer-events-none"></div>
+    </div>
+
+    <script>
+        var chartDom = document.getElementById('chart-container');
+        var myChart = echarts.init(chartDom);
+        var option = {
+            series: [{
+                type: 'pie',
+                radius: ['72%', '88%'],
+                avoidLabelOverlap: false,
+                itemStyle: { borderRadius: 8, borderColor: '#1A1A1A', borderWidth: 4 },
+                label: {
+                    show: true,
+                    position: 'center',
+                    formatter: '60%',
+                    color: '#FFFFFF',
+                    fontSize: 48,
+                    fontWeight: '900',
+                    fontFamily: 'Inter, sans-serif'
+                },
+                silent: true,
+                data: [
+                    { value: 60, itemStyle: { color: '#FFFFFF' } },
+                    { value: 40, itemStyle: { color: '#333333' } }
+                ]
+            }]
+        };
+        myChart.setOption(option);
+        window.addEventListener('resize', function() { myChart.resize(); });
+    </script>
+</body>
+</html>

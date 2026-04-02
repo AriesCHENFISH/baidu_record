@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Summary - Keynote Slide</title>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts (Domestic Mirror as requested) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <!-- Tailwind Configuration for Design System -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBlack: '#000000',
+                        brightWhite: '#FFFFFF',
+                        electricPurple: '#8C66FF',
+                        deepPurple: '#4A2C8A',
+                        mutedGrey: '#B0B0B0',
+                        darkViolet: '#3E3454',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'Inter', 'Roboto', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Global Settings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* Page Container - Strict 1280x720 */
+        .page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #000000;
+            overflow: hidden;
+        }
+
+        /* Custom Utilities for Gradients and Shadows */
+        .text-gradient {
+            background: linear-gradient(90deg, #8C66FF, #FFFFFF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .circle-gradient {
+            background: linear-gradient(135deg, #4A2C8A, #000000);
+            box-shadow: 0 10px 30px rgba(140, 102, 255, 0.2);
+        }
+
+        .bg-overlay-gradient {
+            background: linear-gradient(90deg, #000000 30%, rgba(0,0,0,0) 100%);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Container -->
+    <div class="page_container">
+
+        <!-- Background Decor: Abstract 3D Ribbon Image -->
+        <!-- Using a high-quality abstract 3D render to match the 'ribbon' concept in the original image but with higher aesthetics -->
+        <div class="absolute right-0 top-0 h-full w-[60%] z-0">
+            <img src="https://images.unsplash.com/photo-1634152962476-4b8a00e1915c?q=80&w=1280&auto=format&fit=crop" 
+                 alt="Abstract 3D Purple Gradient Ribbon" 
+                 class="w-full h-full object-cover opacity-90 mask-image-gradient"
+                 style="mask-image: linear-gradient(to right, transparent, black 40%); -webkit-mask-image: linear-gradient(to right, transparent, black 40%);">
+            <!-- 800*720 -->
+        </div>
+
+        <!-- Content Grid System -->
+        <div class="relative z-10 grid grid-cols-12 h-full w-full p-16">
+            
+            <!-- Left Column: Content (Span 8) -->
+            <div class="col-span-8 flex flex-col justify-between h-full">
+                
+                <!-- 1. Header Section -->
+                <div class="mt-8">
+                    <!-- Decorative Line -->
+                    <div class="w-16 h-1 bg-electricPurple mb-6"></div>
+                    
+                    <!-- Title Group -->
+                    <h1 class="text-8xl font-bold leading-tight tracking-tight">
+                        <span class="block text-electricPurple italic transform -skew-x-6 origin-left" style="font-family: serif;">Executive</span>
+                        <span class="block text-brightWhite">Summary</span>
+                    </h1>
+                </div>
+
+                <!-- 2. Text Content Section -->
+                <div class="grid grid-cols-2 gap-12 pr-10 mt-8">
+                    <!-- Column 1 -->
+                    <div>
+                        <p class="text-mutedGrey text-sm leading-relaxed text-justify">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                        </p>
+                    </div>
+                    <!-- Column 2 -->
+                    <div>
+                        <p class="text-mutedGrey text-sm leading-relaxed text-justify">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Orem ipsum dolor sit amet, consectetur adipiscing.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 3. Key Metrics / Data Section -->
+                <div class="flex gap-12 mt-auto mb-4 items-center">
+                    
+                    <!-- KPI Item 1: Growth -->
+                    <div class="flex items-center gap-6">
+                        <!-- Circle Container -->
+                        <div class="w-32 h-32 rounded-full circle-gradient border border-electricPurple/30 flex flex-col items-center justify-center relative">
+                            <!-- Glow Effect -->
+                            <div class="absolute inset-0 rounded-full bg-electricPurple blur-2xl opacity-20"></div>
+                            
+                            <!-- Value -->
+                            <span class="text-brightWhite text-4xl font-bold z-10">78<span class="text-2xl">%</span></span>
+                            <!-- Label inside circle for compactness -->
+                            <span class="text-mutedGrey text-sm uppercase tracking-widest mt-1 z-10">Growth</span>
+                        </div>
+                        
+                        <!-- Description/Icon next to circle (Visual Enhancement) -->
+                        <div class="flex flex-col">
+                            <i class="fa-solid fa-arrow-trend-up text-electricPurple text-2xl mb-2"></i>
+                            <span class="text-darkViolet text-sm italic">Year Over Year</span>
+                        </div>
+                    </div>
+
+                    <!-- KPI Item 2: Revenue -->
+                    <div class="flex items-center gap-6">
+                        <!-- Circle Container -->
+                        <div class="w-32 h-32 rounded-full circle-gradient border border-electricPurple/30 flex flex-col items-center justify-center relative">
+                            <!-- Glow Effect -->
+                            <div class="absolute inset-0 rounded-full bg-electricPurple blur-2xl opacity-20"></div>
+                            
+                            <!-- Value -->
+                            <span class="text-brightWhite text-4xl font-bold z-10"><span class="text-2xl">$</span>10K</span>
+                            <!-- Label inside circle -->
+                            <span class="text-mutedGrey text-sm uppercase tracking-widest mt-1 z-10">Revenue</span>
+                        </div>
+                         <!-- Description/Icon next to circle -->
+                         <div class="flex flex-col">
+                            <i class="fa-solid fa-coins text-electricPurple text-2xl mb-2"></i>
+                            <span class="text-darkViolet text-sm italic">Net Profit</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Right Column: Visual Balance Space (Span 4) -->
+            <!-- Mostly empty to let the background image shine, but adding a subtle watermark -->
+            <div class="col-span-4 flex flex-col justify-end items-end pb-4">
+                <div class="text-right">
+                    <p class="text-darkViolet font-mono text-xs tracking-[0.3em] uppercase opacity-50">
+                        Financial Report 2024
+                    </p>
+                    <div class="h-[1px] w-24 bg-darkViolet mt-2 ml-auto"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Decorative background elements (Subtle Geometry) -->
+        <div class="absolute bottom-[-100px] left-[20%] w-[500px] h-[500px] rounded-full bg-deepPurple blur-[120px] opacity-20 pointer-events-none z-0"></div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI in Retail - Keynote Slide</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative; overflow: hidden;
+            background-color: #0F1A2E; font-family: 'Inter', 'Noto Sans SC', sans-serif;
+            color: #FFFFFF;
+        }
+        .font-tech { font-family: 'Orbitron', sans-serif; }
+
+        .bg-pattern {
+            position: absolute; inset: 0; opacity: 0.05; pointer-events: none;
+            background-image: linear-gradient(90deg, #5AD0F9 1px, transparent 1px), linear-gradient(#5AD0F9 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        /* 原有的 HUD 文本容器 */
+        .retail-hud-box {
+            background: rgba(43, 65, 98, 0.2); border-left: 3px solid #5AD0F9;
+            backdrop-filter: blur(8px); padding: 15px 20px; position: relative;
+        }
+        .retail-hud-box::after {
+            content: ''; position: absolute; right: 0; top: 0; width: 10px; height: 10px;
+            border-top: 1px solid rgba(90, 208, 249, 0.5); border-right: 1px solid rgba(90, 208, 249, 0.5);
+        }
+
+        .tech-ring {
+            border-radius: 50%; border: 2px solid rgba(90, 208, 249, 0.2);
+            position: relative; padding: 6px;
+        }
+        .tech-ring::before {
+            content: ''; position: absolute; inset: -4px; border-radius: 50%;
+            border: 1px dashed rgba(90, 208, 249, 0.4); animation: spin 20s linear infinite;
+        }
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+
+        /* 新增：底部宽总结文本框 */
+        .bottom-summary-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(90, 208, 249, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 20px 30px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            margin-top: auto; /* 推到底部 */
+        }
+        /* 底部框角标装饰 */
+        .bottom-summary-box::before { content: ''; position: absolute; top: -1px; left: -1px; width: 15px; height: 15px; border-top: 2px solid #5AD0F9; border-left: 2px solid #5AD0F9; }
+        .bottom-summary-box::after { content: ''; position: absolute; bottom: -1px; right: -1px; width: 15px; height: 15px; border-bottom: 2px solid #5AD0F9; border-right: 2px solid #5AD0F9; }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <div class="bg-pattern"></div>
+
+        <div class="relative z-10 p-12 h-full flex flex-col">
+            <div class="flex items-center gap-5 mb-8">
+                <div class="relative w-14 h-14 flex items-center justify-center">
+                    <div class="absolute inset-0 bg-gradient-to-br from-[#5AD0F9]/30 via-transparent to-[#5AD0F9]/10 rounded-lg border border-[#5AD0F9]/40 shadow-[0_0_20px_rgba(90,208,249,0.3)] rotate-[25deg]"></div>
+                    <div class="relative z-10 w-11 h-11 border-2 border-[#5AD0F9] flex items-center justify-center rounded-md bg-[#192A45] shadow-[inset_0_0_15px_rgba(90,208,249,0.4)]">
+                        <i class="fa-solid fa-microchip text-[#5AD0F9] text-2xl drop-shadow-[0_0_8px_#5AD0F9]"></i>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-[#5AD0F9] font-bold tracking-[0.35em] text-lg font-tech leading-tight">STUDIO</span>
+                    <span class="text-[#E0E0E0] font-light tracking-[0.4em] text-xs opacity-70 pl-0.5 uppercase">Shodwe</span>
+                </div>
+            </div>
+
+            <div class="text-center mb-12">
+                <h1 class="text-6xl font-black font-tech tracking-wider text-white">
+                    <span class="text-[#5AD0F9] drop-shadow-[0_0_15px_rgba(90,208,249,0.5)]">AI</span> IN RETAIL
+                </h1>
+                <div class="w-24 h-1 bg-[#5AD0F9] mx-auto mt-4 shadow-[0_0_10px_#5AD0F9]"></div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-16 px-6 mb-8">
+                <div class="flex items-center gap-6">
+                    <div class="tech-ring w-40 h-40 flex-shrink-0">
+                        <div class="w-full h-full rounded-full overflow-hidden border border-[#5AD0F9]/40">
+                            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="retail-hud-box mb-3">
+                            <h3 class="text-[#5AD0F9] font-tech text-sm tracking-widest mb-1">01. DATA_CORE</h3>
+                            <h2 class="text-white text-lg font-bold uppercase tracking-wide">Customer Insights</h2>
+                        </div>
+                        <p class="text-[#E0E0E0] text-sm leading-relaxed opacity-80 text-justify">
+                            Advanced algorithms analyze purchasing behavior and foot traffic patterns to predict consumer needs with surgical precision.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-6">
+                    <div class="tech-ring w-40 h-40 flex-shrink-0">
+                        <div class="w-full h-full rounded-full overflow-hidden border border-[#5AD0F9]/40">
+                            <img src="https://images.unsplash.com/photo-1535378437323-9555f3e7f5bb?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="retail-hud-box mb-3">
+                            <h3 class="text-[#5AD0F9] font-tech text-sm tracking-widest mb-1">02. LOGISTICS_AI</h3>
+                            <h2 class="text-white text-lg font-bold uppercase tracking-wide">Stock Control</h2>
+                        </div>
+                        <p class="text-[#E0E0E0] text-sm leading-relaxed opacity-80 text-justify">
+                            Automated inventory scanning reduces human error, optimizing stock levels and ensuring supply chain transparency.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bottom-summary-box mx-6">
+                <div class="w-14 h-14 rounded-md border border-[#5AD0F9]/50 flex items-center justify-center bg-[#5AD0F9]/10 shrink-0">
+                    <i class="fa-solid fa-chart-line text-2xl text-[#5AD0F9]"></i>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold uppercase tracking-wider mb-2 font-tech">Market Impact Summary</h3>
+                    <p class="text-[#E0E0E0] text-sm leading-relaxed opacity-80">
+                        AI integration in retail sectors is projected to drive a 35% increase in operational efficiency by 2026, significantly boosting customer retention through hyper-personalized experiences and streamlined supply chains.
+                    </p>
+                </div>
+                <div class="ml-auto flex flex-col items-end gap-1 opacity-50 shrink-0">
+                     <span class="text-[10px] font-tech text-[#5AD0F9] tracking-[0.2em] uppercase">Status: Optimizing</span>
+                     <div class="flex gap-1 h-2">
+                        <div class="w-4 h-full bg-[#5AD0F9]"></div>
+                        <div class="w-2 h-full bg-[#5AD0F9]/50"></div>
+                        <div class="w-1 h-full bg-[#5AD0F9]/20"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

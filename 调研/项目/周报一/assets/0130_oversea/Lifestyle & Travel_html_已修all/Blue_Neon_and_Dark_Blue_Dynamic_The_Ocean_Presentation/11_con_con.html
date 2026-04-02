@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocean Geography - Refined Experience</title>
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;800&family=Libre+Baskerville:ital,wght@1,400&display=swap">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        #page_container {
+            width: 1280px; height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background: #010510; /* 更深邃的底色 */
+            overflow: hidden;
+            color: #FFFFFF;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* 核心渐变标题 */
+        .main-title {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 84px;
+            background: linear-gradient(180deg, #FFFFFF 20%, rgba(79, 189, 242, 0.4) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+            letter-spacing: -3px;
+            filter: drop-shadow(0 0 20px rgba(79, 189, 242, 0.3));
+        }
+
+        /* 有机流体卡片：使用复杂的 border-radius 模拟水滴 */
+        .fluid-card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(79, 189, 242, 0.2);
+            box-shadow: inset 0 0 20px rgba(79, 189, 242, 0.1);
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            position: relative;
+        }
+
+        .fluid-card:hover {
+            border-color: rgba(79, 189, 242, 0.5);
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateY(-5px) scale(1.02);
+        }
+
+        /* 动态背景光晕 */
+        .glow-sphere {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: 0;
+            opacity: 0.15;
+            animation: pulse 8s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.1; }
+            100% { transform: scale(1.3); opacity: 0.25; }
+        }
+
+        /* 扫描线纹理 */
+        .overlay-texture {
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(0deg, rgba(0,0,0,0.1) 0px, rgba(0,0,0,0.1) 1px, transparent 1px, transparent 2px);
+            pointer-events: none;
+            z-index: 5;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <div class="overlay-texture"></div>
+        <div class="glow-sphere w-[500px] h-[500px] bg-blue-500 -top-20 -left-20"></div>
+        <div class="glow-sphere w-[400px] h-[400px] bg-cyan-400 bottom-10 right-10" style="animation-delay: -2s;"></div>
+
+        <svg class="absolute inset-0 w-full h-full opacity-10 pointer-events-none" viewBox="0 0 1280 720">
+            <circle cx="640" cy="360" r="300" fill="none" stroke="#4FBDF2" stroke-width="1" stroke-dasharray="4 8" />
+            <line x1="0" y1="360" x2="1280" y2="360" stroke="#4FBDF2" stroke-width="0.5" />
+            <line x1="640" y1="0" x2="640" y2="720" stroke="#4FBDF2" stroke-width="0.5" />
+        </svg>
+
+        <div class="relative z-10 w-full h-full flex flex-col px-20 py-16">
+            
+            <div class="flex justify-between items-end mb-16">
+                <div class="space-y-2">
+                    <div class="flex items-center gap-3">
+                        <span class="w-10 h-[1px] bg-cyanNeon/50 bg-[#4FBDF2]"></span>
+                        <span class="text-[10px] tracking-[0.4em] font-bold text-[#4FBDF2] uppercase">Global Database v.2.0</span>
+                    </div>
+                    <h1 class="main-title italic">Ocean Geography</h1>
+                </div>
+                <div class="text-right pb-2">
+                    <p class="text-[10px] text-white/30 tracking-widest uppercase mb-1">Chapter</p>
+                    <p class="text-3xl font-light font-serif text-white/60">03</p>
+                </div>
+            </div>
+
+            <div class="flex-1 flex gap-12 items-center">
+                
+                <div class="w-1/4">
+                    <div class="fluid-card p-10 h-[380px] flex flex-col justify-center text-center"
+                         style="border-radius: 65% 35% 45% 55% / 55% 45% 55% 45%;">
+                        <div class="text-[#4FBDF2] mb-6 text-4xl opacity-50">
+                            <i class="fa-solid fa-expand"></i>
+                        </div>
+                        <h3 class="text-white text-xl font-light leading-relaxed">
+                            The <span class="font-bold text-2xl block mt-1">Pacific</span> 
+                            <span class="text-sm opacity-50 uppercase tracking-widest block my-3">— Largest —</span>
+                            The <span class="font-bold text-2xl block mt-1">Arctic</span>
+                            <span class="text-sm opacity-50 uppercase tracking-widest block mt-3">— Smallest —</span>
+                        </h3>
+                    </div>
+                </div>
+
+                <div class="w-2/5 relative">
+                    <div class="absolute -inset-4 bg-[#4FBDF2]/5 blur-2xl rounded-full"></div>
+                    <div class="fluid-card p-12 h-[480px] flex flex-col items-center justify-center text-center overflow-hidden"
+                         style="border-radius: 40% 60% 60% 40% / 45% 45% 55% 55%;">
+                        
+                        <div class="bg-white text-black px-4 py-1 text-[9px] font-black uppercase tracking-[0.3em] mb-10">
+                            Five Major Systems
+                        </div>
+
+                        <ul class="space-y-3">
+                            <li class="group">
+                                <span class="text-6xl font-extrabold text-white tracking-tighter opacity-100 group-hover:text-[#4FBDF2] transition-colors">Pacific</span>
+                            </li>
+                            <li class="flex items-center justify-center gap-6">
+                                <span class="text-3xl font-light text-white/70 italic serif">Atlantic</span>
+                                <span class="w-2 h-2 rounded-full bg-[#4FBDF2]/30"></span>
+                                <span class="text-3xl font-light text-white/70 italic serif">Indian</span>
+                            </li>
+                            <li class="flex items-center justify-center gap-6 mt-2">
+                                <span class="text-xl font-medium text-white/40 tracking-widest uppercase">Southern</span>
+                                <span class="text-xl font-medium text-white/40 tracking-widest uppercase">Arctic</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="w-1/3 pl-8">
+                    <div class="space-y-8 relative">
+                        <div class="absolute -left-6 top-0 bottom-0 w-[1px] bg-gradient-to-b from-transparent via-[#4FBDF2]/40 to-transparent"></div>
+                        
+                        <div class="relative group">
+                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#E88523] to-orange-700 flex items-center justify-center text-2xl shadow-[0_0_30px_rgba(232,133,35,0.3)] mb-6 transition-transform group-hover:rotate-12">
+                                <i class="fa-solid fa-globe-americas text-white"></i>
+                            </div>
+                            <h4 class="text-white text-2xl font-bold mb-4">Unified System</h4>
+                            <p class="text-white/50 text-base font-light leading-relaxed">
+                                Our oceans are not isolated basins but <span class="text-[#4FBDF2] italic">interconnected</span> pathways, forming a single global circulatory body.
+                            </p>
+                        </div>
+
+                        <div class="pt-8">
+                            <div class="flex items-center gap-4 text-[#6A80B5]">
+                                <span class="text-[10px] font-black uppercase tracking-[0.4em]">Data Integrity</span>
+                                <div class="flex-1 h-[1px] bg-[#6A80B5]/20"></div>
+                            </div>
+                            <p class="text-[10px] text-white/30 mt-4 leading-loose">
+                                SALFORD & CO. OCEANOGRAPHIC DIVISION<br>
+                                SURVEY REF: 092-MARINE-GEO
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-auto flex justify-between items-center">
+                <div class="flex items-center gap-6 opacity-40">
+                    <i class="fa-solid fa-water text-xl text-[#4FBDF2]"></i>
+                    <div class="flex flex-col">
+                        <span class="text-[9px] font-bold tracking-widest uppercase">Planetary Scale</span>
+                        <span class="text-[8px] opacity-60">71% Earth Surface Coverage</span>
+                    </div>
+                </div>
+                <div class="flex gap-1">
+                    <div class="w-12 h-[2px] bg-[#4FBDF2]"></div>
+                    <div class="w-4 h-[2px] bg-[#4FBDF2]/40"></div>
+                    <div class="w-2 h-[2px] bg-[#4FBDF2]/20"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

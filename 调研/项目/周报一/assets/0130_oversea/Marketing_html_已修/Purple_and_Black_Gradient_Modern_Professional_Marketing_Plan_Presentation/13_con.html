@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dual Strategy</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgMain: '#050505',
+                        primaryPurple: '#A962E3',
+                        lightPurple: '#C98BF2',
+                        textMain: '#FFFFFF',
+                        textSec: '#B0A8C8',
+                        cardBg: 'rgba(255, 255, 255, 0.03)',
+                        strokeColor: 'rgba(224, 224, 224, 0.1)'
+                    },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'sans-serif'] },
+                    boxShadow: {
+                        'glow': '0 0 40px -10px rgba(169, 98, 227, 0.3)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .page_container { width: 1280px; height: 720px; margin: 0 auto; background: #050505; position: relative; overflow: hidden; }
+        .bg-gradient-primary { background: linear-gradient(90deg, #A962E3, #C98BF2); }
+        .text-gradient { background: linear-gradient(90deg, #A962E3, #C98BF2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .glass-panel { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.08); }
+        .deco-blob { position: absolute; width: 600px; height: 600px; background: radial-gradient(circle, rgba(169, 98, 227, 0.15) 0%, rgba(5, 5, 5, 0) 70%); border-radius: 50%; top: -200px; left: -200px; pointer-events: none; }
+    </style>
+</head>
+<body>
+    <div class="page_container flex flex-col px-16 py-12">
+        <div class="deco-blob"></div>
+
+        <header class="mb-10 z-10">
+            <div class="w-12 h-1 bg-gradient-primary mb-6 rounded-full"></div>
+            <h1 class="text-6xl font-bold text-textMain mb-4 leading-tight tracking-tight">
+                Dual <br> <span class="text-gradient">Strategy</span>
+            </h1>
+            <p class="text-textSec text-lg font-light max-w-lg">
+                Balancing rapid innovation cycles with sustainable global scaling initiatives.
+            </p>
+        </header>
+
+        <div class="flex-1 grid grid-cols-2 gap-10 z-10 pb-6 h-full">
+            
+            <div class="flex flex-col h-full group">
+                <div class="relative flex-1 rounded-3xl overflow-hidden glass-panel border border-primaryPurple/20 shadow-lg mb-6">
+                    <img src="https://images.unsplash.com/photo-1581093458791-9d58946cc975?q=80&w=1000&auto=format&fit=crop" 
+                         alt="Innovation Lab R&D" 
+                         class="w-full h-[200px] object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-40"></div>
+                    <div class="absolute top-4 left-4 glass-panel px-3 py-1 rounded-full">
+                         <span class="text-primaryPurple text-xs font-bold uppercase tracking-widest">Focus Area 01</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-primaryPurple transition-colors">Continuous Innovation</h3>
+                    <div class="w-12 h-1 bg-primaryPurple/50 mb-4 rounded-full"></div>
+                    <p class="text-textSec text-base leading-relaxed font-light">
+                        Investing heavily in R&D to maintain technological leadership and develop next-generation product pipelines.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex flex-col h-full group">
+                <div class="relative flex-1 rounded-3xl overflow-hidden glass-panel border border-primaryPurple/20 shadow-lg mb-6">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1000&auto=format&fit=crop" 
+                         alt="Global Scaling Infrastructure" 
+                         class="w-full h-[200px] object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-40"></div>
+                    <div class="absolute top-4 left-4 glass-panel px-3 py-1 rounded-full">
+                         <span class="text-white text-xs font-bold uppercase tracking-widest">Focus Area 02</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-primaryPurple transition-colors">Global Scaling</h3>
+                    <div class="w-12 h-1 bg-white/50 group-hover:bg-primaryPurple/50 transition-colors mb-4 rounded-full"></div>
+                    <p class="text-textSec text-base leading-relaxed font-light">
+                        Expanding operational infrastructure and strategic partnerships to capture emerging market opportunities efficiently.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, initial-scale=1.0">
+    <title>Esports Audiences - Refined</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgPrimary: '#050214',
+                        neonPurple: '#B14AED',
+                        neonOrange: '#FF9E64',
+                        textGrey: '#94A3B8'
+                    },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        .writing-vertical { writing-mode: vertical-rl; transform: rotate(180deg); }
+        .stat-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); }
+    </style>
+</head>
+<body>
+    <div id="page_container" class="relative mx-auto overflow-hidden bg-bgPrimary text-white font-sans" style="width: 1280px; height: 720px;">
+        
+        <div class="absolute inset-0 z-0 bg-[radial-gradient(circle_at_50%_-20%,rgba(177,74,237,0.15)_0%,transparent_60%)]"></div>
+
+        <header class="relative z-20 px-16 pt-12 flex justify-between items-start">
+            <div class="flex items-center gap-3 group cursor-pointer">
+                <div class="relative">
+                    <i class="fa-solid fa-gamepad text-neonPurple text-3xl drop-shadow-[0_0_8px_rgba(177,74,237,0.8)]"></i>
+                    <div class="absolute -top-1 -right-1 w-2 h-2 bg-neonOrange rounded-full blur-[1px]"></div>
+                </div>
+                <div class="flex flex-col">
+                    <h2 class="text-white text-xl font-bold tracking-[0.2em] leading-none">SHODWE</h2>
+                    <span class="text-[10px] text-textGrey tracking-[0.3em] uppercase opacity-60">Studio</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="relative z-10 px-16 mt-8">
+            <div class="text-center mb-10">
+                <h1 class="text-6xl font-black text-white uppercase tracking-widest leading-none drop-shadow-lg mb-6">
+                    Esports <span class="text-transparent bg-clip-text bg-gradient-to-r from-neonPurple to-neonOrange">Audiences</span>
+                </h1>
+                <p class="text-textGrey text-sm max-w-2xl mx-auto opacity-80 leading-relaxed">
+                    Analyzing the exponential growth of digital spectatorship across multiple platforms and demographics globally.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-3 gap-6 mb-8 max-w-4xl mx-auto">
+                <div class="stat-card p-4 rounded-lg text-center">
+                    <span class="text-[10px] text-neonPurple uppercase tracking-[0.2em] block mb-1">Growth Rate</span>
+                    <span class="text-2xl font-black">+14.5%</span>
+                </div>
+                <div class="stat-card p-4 rounded-lg text-center border-t-2 border-t-neonOrange">
+                    <span class="text-[10px] text-neonOrange uppercase tracking-[0.2em] block mb-1">Live Peak</span>
+                    <span class="text-2xl font-black">74.1M</span>
+                </div>
+                <div class="stat-card p-4 rounded-lg text-center">
+                    <span class="text-[10px] text-neonPurple uppercase tracking-[0.2em] block mb-1">Avg. Watchtime</span>
+                    <span class="text-2xl font-black">1.2H</span>
+                </div>
+            </div>
+
+            <div id="main-chart" class="w-full h-[260px] max-w-5xl mx-auto"></div>
+        </main>
+
+        <div class="absolute right-10 top-1/2 transform -translate-y-1/2 flex flex-col items-center gap-3 opacity-40">
+            <div class="w-[1px] h-12 bg-white/50"></div>
+            <p class="writing-vertical text-[10px] font-bold tracking-[0.3em] uppercase">06 / 07</p>
+            <div class="w-[1px] h-12 bg-white/50"></div>
+        </div>
+
+        <footer class="absolute bottom-10 left-16">
+            <p class="text-textGrey text-[10px] font-bold tracking-[0.3em] uppercase border-l-2 border-neonOrange pl-3">
+                Audience Metrics
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        var chartDom = document.getElementById('main-chart');
+        var myChart = echarts.init(chartDom);
+        var option = {
+            grid: { left: '10%', right: '10%', top: '5%', bottom: '5%', containLabel: true },
+            xAxis: { show: false, type: 'value' },
+            yAxis: {
+                type: 'category',
+                data: ['Platforms', 'Engagement', 'Demographics'],
+                axisLine: { show: false }, axisTick: { show: false },
+                axisLabel: { color: '#94A3B8', fontSize: 13, fontWeight: 'bold', padding: [0, 20, 0, 0] },
+                inverse: true
+            },
+            series: [
+                {
+                    type: 'bar', barWidth: 16, z: 1, silent: true,
+                    itemStyle: { color: 'rgba(255,255,255,0.05)', borderRadius: 8 },
+                    data: [100, 100, 100]
+                },
+                {
+                    type: 'bar', barWidth: 16, barGap: '-100%', z: 2,
+                    data: [82, 74, 91],
+                    itemStyle: {
+                        borderRadius: 8,
+                        color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+                            { offset: 0, color: '#7B2CBF' },
+                            { offset: 1, color: '#FF9E64' }
+                        ]),
+                        shadowBlur: 15, shadowColor: 'rgba(177, 74, 237, 0.4)'
+                    },
+                    label: { show: true, position: 'right', formatter: '{c}%', color: '#FFF', fontSize: 14, fontWeight: 'bold', offset: [15, 0] }
+                }
+            ]
+        };
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

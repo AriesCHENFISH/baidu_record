@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Building Exercises</title>
+    <!-- Google Fonts CDN (Provided) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2D3A7C', // Deep Blue
+                        accent: '#F5AD41',  // Yellow/Orange
+                        bgLight: '#FFFFFF', // White
+                        decoration: '#E8E8E8', // Light Gray
+                        textSecondary: '#666666'
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(45, 58, 124, 0.15)',
+                        'card': '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* CSS Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 形状只支持div，特定形状样式 */
+        .puzzle-node {
+            clip-path: polygon(10% 0, 100% 0, 100% 80%, 90% 100%, 0 100%, 0 20%);
+            transition: transform 0.3s ease;
+        }
+
+        /* 装饰背景圆环 */
+        .decorative-circle {
+            position: absolute;
+            border: 1px solid #E8E8E8;
+            border-radius: 50%;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Page Container: Fixed 1280x720 -->
+    <div id="page_container" class="w-[1280px] h-[720px] mx-auto relative bg-white overflow-hidden font-sans text-left">
+
+        <!-- Background Decorations (Geometric Lines) -->
+        <div class="decorative-circle w-[800px] h-[800px] -top-[200px] -right-[200px] opacity-60"></div>
+        <div class="decorative-circle w-[600px] h-[600px] -top-[100px] -right-[100px] opacity-60"></div>
+        
+        <!-- Top Decoration Bar -->
+        <div class="absolute top-12 left-16 z-20">
+            <div class="w-24 h-3 bg-accent rounded-full shadow-sm"></div>
+        </div>
+
+
+        <!-- Main Content Wrapper -->
+        <div class="relative z-10 h-full flex flex-col px-16 pt-24 pb-12">
+            
+            <!-- Header Section -->
+            <header class="mb-12">
+                <h1 class="text-[64px] leading-[1.1] font-bold text-primary tracking-tight">
+                    3 Team-Building Exercises<br>
+                    for The Workplace
+                </h1>
+            </header>
+
+            <!-- Grid Content -->
+            <div class="grid grid-cols-12 gap-12 h-full">
+                
+                <!-- Left Column: Visual Representation (The Triangle Puzzle Reimagined) -->
+                <div class="col-span-5 relative flex items-center justify-center">
+                    <!-- Triangle Layout Container -->
+                    <div class="relative w-full h-[350px]">
+                        <!-- Connecting Lines (Visual styling using borders on absolute divs) -->
+                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 border-2 border-dashed border-gray-200 rounded-full z-0"></div>
+
+                        <!-- Node 1: Top -->
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 z-10 w-48">
+                            <div class="bg-primary text-white p-6 rounded-2xl shadow-soft text-center h-32 flex flex-col justify-center items-center border-b-4 border-accent">
+                                <i class="fa-solid fa-masks-theater text-accent text-2xl mb-2"></i>
+                                <h3 class="text-lg font-bold leading-tight">Two truths<br>and a lie</h3>
+                            </div>
+                        </div>
+
+                        <!-- Node 2: Bottom Left -->
+                        <div class="absolute bottom-0 left-0 z-10 w-48">
+                            <div class="bg-primary text-white p-6 rounded-2xl shadow-soft text-center h-32 flex flex-col justify-center items-center border-l-4 border-accent">
+                                <i class="fa-solid fa-share-nodes text-accent text-2xl mb-2"></i>
+                                <h3 class="text-lg font-bold leading-tight">Introduce new<br>sharing platforms</h3>
+                            </div>
+                        </div>
+
+                        <!-- Node 3: Bottom Right -->
+                        <div class="absolute bottom-0 right-0 z-10 w-48">
+                            <div class="bg-primary text-white p-6 rounded-2xl shadow-soft text-center h-32 flex flex-col justify-center items-center border-r-4 border-accent">
+                                <i class="fa-solid fa-puzzle-piece text-accent text-2xl mb-2"></i>
+                                <h3 class="text-lg font-bold leading-tight">Picture<br>piece game</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Text Content -->
+                <div class="col-span-7 flex flex-col justify-between pl-8">
+                    
+                    <!-- Text Paragraphs -->
+                    <div class="space-y-8 mt-4">
+                        <div class="flex items-start gap-4">
+                            <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-accent shrink-0"></div>
+                            <p class="text-textSecondary text-sm leading-relaxed text-justify">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper orci sapien, vel volutpat diam euismod lobortis. Praesent auctor massa sed nisl auctor dictum. Mauris ut tempus risus. Donec iaculis tincidunt odio vel dapibus. Curabitur accumsan aliquam convallis. Phasellus nec arcu tortor. Aliquam placerat quam ut auctor ornare.
+                            </p>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-accent shrink-0"></div>
+                            <p class="text-textSecondary text-sm leading-relaxed text-justify">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper orci sapien, vel volutpat diam euismod lobortis. Praesent auctor massa sed nisl auctor dictum. Mauris ut tempus risus. Donec iaculis tincidunt odio vel dapibus. Curabitur accumsan aliquam convallis. Phasellus nec arcu tortor. Aliquam placerat quam ut auctor ornare.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Footer Action Button -->
+                    <div class="flex justify-end mt-auto mb-4">
+                        <div class="bg-primary rounded-full pr-8 pl-2 py-2 flex items-center gap-4 shadow-lg cursor-pointer group">
+                            <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center text-primary group-hover:bg-white transition-colors duration-300">
+                                <i class="fa-solid fa-chevron-right text-sm"></i>
+                            </div>
+                            <span class="text-white text-sm font-medium tracking-wide">Business</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

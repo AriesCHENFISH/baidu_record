@@ -1,0 +1,2346 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Responsive Merged HTML
+  </title>
+  <style>
+   body {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .page-wrapper {
+                width: 100%;
+                margin: 15px 0;
+                position: relative;
+            }
+            .page-title {
+                background: #f5f5f5;
+                padding: 5px 10px;
+                border-radius: 3px 3px 0 0;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+            }
+            .responsive-iframe {
+                border: none;
+                width: 100%;
+                display: block;
+            }
+  </style>
+ </head>
+ <body>
+  <!-- 内容将在这里插入 -->
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 1
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Technology Pitch Deck - Cover&lt;/title&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: {
+                            black: '#000000',
+                            white: '#FFFFFF',
+                            cyan: '#4DEEEA',
+                            text: '#94A3B8',
+                            darkblue: '#0F172A',
+                        }
+                    },
+                    fontFamily: { sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'] }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .page_container {
+            width: 1280px; height: 720px;
+            margin: 0 auto; position: relative;
+            background-color: #000000; overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* 统一背景网格 */
+        .bg-grid {
+            background-image: linear-gradient(rgba(77, 238, 234, 0.05) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(77, 238, 234, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            position: absolute; inset: 0; z-index: 5;
+            mask-image: radial-gradient(circle at 30% 50%, black, transparent 90%);
+        }
+
+        /* 动态扫描线 */
+        .scan-line {
+            position: absolute; width: 100%; height: 2px;
+            background: linear-gradient(90deg, transparent, #4DEEEA, transparent);
+            top: -2px; z-index: 10; opacity: 0.3;
+            animation: scan 8s linear infinite;
+        }
+        @keyframes scan { 0% { top: 0; } 100% { top: 100%; } }
+
+        /* 旋转HUD */
+        .hud-rotate { animation: spin 20s linear infinite; }
+        @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+        /* 统一装饰类 */
+        .marker-line { height: 4px; background: #4DEEEA; transform: skew(-20deg); margin-bottom: 4px; }
+        .glow-text { text-shadow: 0 0 20px rgba(77, 238, 234, 0.6); }
+        
+        .card-tag { 
+            background: #4DEEEA; color: #000; font-size: 12px; font-weight: 800; 
+            padding: 4px 12px; font-family: monospace; 
+            clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div class=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;scan-line&quot;&gt;&lt;/div&gt;
+        
+        &lt;div class=&quot;absolute inset-0 z-0 opacity-60&quot;&gt;
+            &lt;img src=&quot;https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&amp;w=1280&amp;auto=format&amp;fit=crop&quot; class=&quot;w-full h-full object-cover&quot;&gt;
+            &lt;div class=&quot;absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;div class=&quot;bg-grid&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;absolute top-12 left-20 z-20&quot;&gt;
+            &lt;div class=&quot;marker-line w-16&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;marker-line w-10 opacity-60&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;text-[10px] text-cyber-cyan font-mono tracking-[0.5em] mt-2&quot;&gt;SYSTEM_ID: X-9920&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute top-1/2 right-[-100px] transform -translate-y-1/2 w-[600px] h-[600px] opacity-20 z-10&quot;&gt;
+            &lt;div class=&quot;w-full h-full border border-cyber-cyan rounded-full hud-rotate&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;absolute inset-10 border border-dashed border-cyber-cyan/50 rounded-full hud-rotate&quot; style=&quot;animation-direction: reverse;&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;relative z-30 flex flex-col justify-center h-full pl-20 pt-10&quot;&gt;
+            &lt;div class=&quot;absolute left-16 top-1/2 -translate-y-1/2 opacity-[0.03] pointer-events-none&quot;&gt;
+                &lt;h1 class=&quot;text-[240px] font-black tracking-tighter leading-none italic&quot;&gt;PROTO&lt;/h1&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;mb-2&quot;&gt;
+                &lt;span class=&quot;card-tag uppercase tracking-widest mb-4 inline-block&quot;&gt;Future Digital Solution&lt;/span&gt;
+                &lt;h1 class=&quot;text-[120px] font-black text-white tracking-tighter leading-[0.9] italic&quot;&gt;
+                    TECH&lt;span class=&quot;text-cyber-cyan glow-text&quot;&gt;NOLOGY&lt;/span&gt;
+                &lt;/h1&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;flex items-center gap-6 mt-6&quot;&gt;
+                &lt;div class=&quot;h-[2px] w-24 bg-cyber-cyan shadow-[0_0_10px_#4DEEEA]&quot;&gt;&lt;/div&gt;
+                &lt;h2 class=&quot;text-4xl font-bold text-white tracking-[0.15em] uppercase italic&quot;&gt;
+                    Pitch &lt;span class=&quot;text-cyber-cyan&quot;&gt;Deck&lt;/span&gt;
+                &lt;/h2&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;mt-12 max-w-lg border-l border-cyber-cyan/30 pl-8&quot;&gt;
+                &lt;p class=&quot;text-xl text-cyber-text font-light tracking-wide leading-relaxed&quot;&gt;
+                    Transforming ideas into digital reality through neural networks and global connectivity protocols.
+                &lt;/p&gt;
+                &lt;div class=&quot;flex gap-8 mt-8 items-center&quot;&gt;
+                    &lt;div&gt;
+                        &lt;p class=&quot;text-[10px] text-cyber-cyan font-mono tracking-widest uppercase mb-1&quot;&gt;Version&lt;/p&gt;
+                        &lt;p class=&quot;text-white font-bold font-mono&quot;&gt;2026.REL_01&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;w-[1px] h-8 bg-white/10&quot;&gt;&lt;/div&gt;
+                    &lt;div&gt;
+                        &lt;p class=&quot;text-[10px] text-cyber-cyan font-mono tracking-widest uppercase mb-1&quot;&gt;Status&lt;/p&gt;
+                        &lt;p class=&quot;text-white font-bold font-mono&quot;&gt;READY_FOR_DEPLOY&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute bottom-12 left-20 z-30 flex items-center gap-4&quot;&gt;
+            &lt;div class=&quot;w-10 h-[2px] bg-cyber-cyan&quot;&gt;&lt;/div&gt;
+            &lt;p class=&quot;text-sm font-bold tracking-[0.3em] text-white uppercase font-mono&quot;&gt;
+                WWW.TECH-DECK-CORE.COM
+            &lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute bottom-12 right-20 grid grid-cols-4 gap-1 opacity-40&quot;&gt;
+            &lt;div class=&quot;w-1 h-1 bg-cyber-cyan&quot;&gt;&lt;/div&gt;&lt;div class=&quot;w-1 h-1 bg-cyber-cyan&quot;&gt;&lt;/div&gt;&lt;div class=&quot;w-1 h-1 bg-cyber-cyan opacity-20&quot;&gt;&lt;/div&gt;&lt;div class=&quot;w-1 h-1 bg-cyber-cyan opacity-20&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;w-1 h-1 bg-cyber-cyan&quot;&gt;&lt;/div&gt;&lt;div class=&quot;w-1 h-1 bg-cyber-cyan&quot;&gt;&lt;/div&gt;&lt;div class=&quot;w-1 h-1 bg-cyber-cyan&quot;&gt;&lt;/div&gt;&lt;div class=&quot;w-1 h-1 bg-cyber-cyan&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 2
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;System Directory - Fixed&lt;/title&gt;
+    
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { cyber: { black: '#000000', cyan: '#4DEEEA', text: '#94A3B8', darkblue: '#0F172A' } },
+                    fontFamily: { sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'], mono: ['monospace'] }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative;
+            background-color: #000000; overflow: hidden; font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* 背景网格 */
+        .bg-grid-css {
+            position: absolute; inset: 0; z-index: 0;
+            background-image: 
+                linear-gradient(rgba(77, 238, 234, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(77, 238, 234, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+            mask-image: radial-gradient(circle at 50% 50%, black, transparent 85%);
+            -webkit-mask-image: radial-gradient(circle at 50% 50%, black, transparent 85%);
+        }
+
+        .marker-line { height: 4px; background: #4DEEEA; transform: skew(-20deg); margin-bottom: 4px; }
+        .glow-text { text-shadow: 0 0 15px rgba(77, 238, 234, 0.7); }
+
+        /* 目录项容器 */
+        .toc-module {
+            position: relative;
+            display: flex; align-items: center;
+            background: linear-gradient(90deg, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.1) 100%);
+            border-left: 2px solid #4DEEEA;
+            padding: 16px 24px;
+            clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);
+            transition: all 0.3s ease;
+        }
+        .toc-module:hover {
+            transform: translateX(10px);
+            background: linear-gradient(90deg, rgba(15, 23, 42, 1) 0%, rgba(77, 238, 234, 0.1) 100%);
+            box-shadow: -5px 0 15px rgba(77, 238, 234, 0.2);
+        }
+
+        .toc-num {
+            font-family: monospace; font-size: 24px; font-weight: 800; color: #4DEEEA;
+            text-shadow: 0 0 10px rgba(77, 238, 234, 0.5); margin-right: 16px;
+            position: relative;
+        }
+        /* 修复点 1: 将 bg-cyber-cyan 修改为标准的 CSS 颜色 */
+        .toc-num::after {
+            content: ''; position: absolute; top: 50%; right: -10px; width: 8px; height: 2px; 
+            background-color: #4DEEEA; opacity: 0.5;
+        }
+
+        /* 修复点 2: 将 rounded-full 修改为标准的 CSS 属性 */
+        .hud-ring {
+            position: absolute; border: 1px dashed rgba(77, 238, 234, 0.2); 
+            border-radius: 9999px;
+            animation: spin 30s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;bg-grid-css&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute top-[-200px] left-[-200px] w-[600px] h-[600px] bg-cyber-darkblue opacity-50 rounded-full blur-[150px] z-0&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute bottom-[-200px] right-[-200px] w-[600px] h-[600px] bg-cyber-cyan opacity-10 rounded-full blur-[150px] z-0&quot;&gt;&lt;/div&gt;
+        
+        &lt;div class=&quot;hud-ring w-[700px] h-[700px] left-[-200px] top-[50px] opacity-20 z-0&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;hud-ring w-[500px] h-[500px] left-[-100px] top-[150px] opacity-10 z-0&quot; style=&quot;animation-direction: reverse; animation-duration: 20s;&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;relative z-10 h-full w-full flex p-16&quot;&gt;
+            
+            &lt;div class=&quot;w-1/3 flex flex-col justify-center&quot;&gt;
+                &lt;div class=&quot;marker-line w-20&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;marker-line w-12 opacity-60 mb-6&quot;&gt;&lt;/div&gt;
+                
+                &lt;h1 class=&quot;text-7xl font-black text-white tracking-tighter leading-none mb-4&quot;&gt;
+                    SYSTEM&lt;br&gt;
+                    &lt;span class=&quot;text-cyber-cyan glow-text&quot;&gt;DIRECTORY&lt;/span&gt;
+                &lt;/h1&gt;
+                &lt;div class=&quot;w-32 h-1 bg-gradient-to-r from-cyber-cyan to-transparent mb-6&quot;&gt;&lt;/div&gt;
+                &lt;p class=&quot;text-cyber-text font-mono text-sm tracking-widest uppercase opacity-80&quot;&gt;
+                    // Main Index Protocol&lt;br&gt;
+                    // V.2026.01.14
+                &lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;w-2/3 grid grid-cols-2 gap-x-12 gap-y-6 content-center pl-12 border-l border-cyber-cyan/10 relative&quot;&gt;
+                &lt;div class=&quot;absolute left-0 top-1/2 -translate-y-1/2 w-1 h-32 bg-cyber-cyan/30&quot;&gt;&lt;/div&gt;
+
+                &lt;div class=&quot;flex flex-col gap-5&quot;&gt;
+                    &lt;div class=&quot;toc-module group cursor-pointer&quot;&gt;
+                        &lt;div class=&quot;toc-num&quot;&gt;01&lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;h2 class=&quot;text-xl font-bold text-white tracking-wider group-hover:text-cyber-cyan transition-colors&quot;&gt;EXECUTIVE SUMMARY&lt;/h2&gt;
+                            &lt;p class=&quot;text-xs text-cyber-text font-mono opacity-60&quot;&gt;Mission Overview &amp; Vision&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;toc-module group cursor-pointer&quot;&gt;
+                        &lt;div class=&quot;toc-num&quot;&gt;02&lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;h2 class=&quot;text-xl font-bold text-white tracking-wider group-hover:text-cyber-cyan transition-colors&quot;&gt;PROBLEM ANALYSIS&lt;/h2&gt;
+                            &lt;p class=&quot;text-xs text-cyber-text font-mono opacity-60&quot;&gt;Core System Vulnerabilities&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;toc-module group cursor-pointer&quot;&gt;
+                        &lt;div class=&quot;toc-num&quot;&gt;03&lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;h2 class=&quot;text-xl font-bold text-white tracking-wider group-hover:text-cyber-cyan transition-colors&quot;&gt;MARKET OPPORTUNITY&lt;/h2&gt;
+                            &lt;p class=&quot;text-xs text-cyber-text font-mono opacity-60&quot;&gt;Global Data Landscape&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;toc-module group cursor-pointer&quot;&gt;
+                        &lt;div class=&quot;toc-num&quot;&gt;04&lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;h2 class=&quot;text-xl font-bold text-white tracking-wider group-hover:text-cyber-cyan transition-colors&quot;&gt;TECHNOLOGY CORE&lt;/h2&gt;
+                            &lt;p class=&quot;text-xs text-cyber-text font-mono opacity-60&quot;&gt;Neural Architecture V4&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;flex flex-col gap-5&quot;&gt;
+                    &lt;div class=&quot;toc-module group cursor-pointer&quot;&gt;
+                        &lt;div class=&quot;toc-num&quot;&gt;05&lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;h2 class=&quot;text-xl font-bold text-white tracking-wider group-hover:text-cyber-cyan transition-colors&quot;&gt;STRATEGIC OBJECTIVES&lt;/h2&gt;
+                            &lt;p class=&quot;text-xs text-cyber-text font-mono opacity-60&quot;&gt;Key Performance Targets&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;toc-module group cursor-pointer&quot;&gt;
+                        &lt;div class=&quot;toc-num&quot;&gt;06&lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;h2 class=&quot;text-xl font-bold text-white tracking-wider group-hover:text-cyber-cyan transition-colors&quot;&gt;DEPLOYMENT ROADMAP&lt;/h2&gt;
+                            &lt;p class=&quot;text-xs text-cyber-text font-mono opacity-60&quot;&gt;Phased Execution Plan&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;toc-module group cursor-pointer&quot;&gt;
+                        &lt;div class=&quot;toc-num&quot;&gt;07&lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;h2 class=&quot;text-xl font-bold text-white tracking-wider group-hover:text-cyber-cyan transition-colors&quot;&gt;FINANCIAL PROJECTIONS&lt;/h2&gt;
+                            &lt;p class=&quot;text-xs text-cyber-text font-mono opacity-60&quot;&gt;Growth &amp; ROI Analysis&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;toc-module group cursor-pointer&quot;&gt;
+                        &lt;div class=&quot;toc-num&quot;&gt;08&lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;h2 class=&quot;text-xl font-bold text-white tracking-wider group-hover:text-cyber-cyan transition-colors&quot;&gt;CORE OPERATIVES&lt;/h2&gt;
+                            &lt;p class=&quot;text-xs text-cyber-text font-mono opacity-60&quot;&gt;Leadership &amp; Team Structure&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute bottom-8 left-16 right-16 flex justify-between items-center opacity-40 font-mono text-[10px] text-cyber-cyan tracking-widest uppercase&quot;&gt;
+            &lt;div&gt;Index Status: Loaded&lt;/div&gt;
+            &lt;div class=&quot;flex gap-4 items-center&quot;&gt;
+                &lt;span&gt;Total Modules: 08&lt;/span&gt;
+                &lt;div class=&quot;w-24 h-[1px] bg-cyber-cyan/50&quot;&gt;&lt;/div&gt;
+                &lt;span&gt;Secure Access&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 3
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;High-End Tech Presentation Slide&lt;/title&gt;
+    
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #000000;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* 统一背景网格 */
+        .bg-grid {
+            background-image: 
+                linear-gradient(rgba(77, 238, 234, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(77, 238, 234, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0.2));
+            -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0.2));
+        }
+
+        /* 统一顶部 Marker 样式 */
+        .marker-line {
+            height: 4px;
+            background: #4DEEEA;
+            transform: skew(-20deg);
+            margin-bottom: 4px;
+        }
+
+        /* 统一文本发光效果 */
+        .glow-text {
+            text-shadow: 0 0 10px rgba(77, 238, 234, 0.6);
+        }
+        
+        .box-glow {
+            box-shadow: 0 0 25px rgba(77, 238, 234, 0.2);
+        }
+
+        /* 装饰圆环旋转动画 */
+        @keyframes rotate-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-rotate {
+            animation: rotate-slow 20s linear infinite;
+        }
+    &lt;/style&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: {
+                            black: '#000000',
+                            white: '#FFFFFF',
+                            cyan: '#4DEEEA',
+                            text: '#D1D5DB',
+                            darkblue: '#0F172A',
+                        }
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;bg-grid&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;absolute top-[-100px] right-[-100px] w-[500px] h-[500px] bg-[#4DEEEA] opacity-10 rounded-full blur-[100px] z-0&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute bottom-[-100px] left-[-100px] w-[600px] h-[600px] bg-[#0F172A] opacity-80 rounded-full blur-[80px] z-0&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;relative z-10 grid grid-cols-12 h-full w-full&quot;&gt;
+            
+            &lt;div class=&quot;col-span-5 flex flex-col pl-16 pt-12 relative&quot;&gt;
+                
+                &lt;div class=&quot;w-16 mb-8 opacity-80&quot;&gt;
+                    &lt;div class=&quot;marker-line w-12&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;marker-line w-8 opacity-60&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;mt-4&quot;&gt;
+                    &lt;h1 class=&quot;text-6xl font-bold text-white mb-8 tracking-tight&quot;&gt;
+                        Core &lt;span class=&quot;text-cyber-cyan glow-text&quot;&gt;Introduction&lt;/span&gt;
+                    &lt;/h1&gt;
+
+                    &lt;p class=&quot;text-cyber-text text-lg leading-relaxed mb-6 font-light&quot;&gt;
+                        Our advanced neural architecture provides unprecedented scalability for high-density computing tasks. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+                    &lt;/p&gt;
+
+                    &lt;p class=&quot;text-cyber-text text-lg leading-relaxed mb-10 font-light opacity-60 border-l border-cyber-cyan/30 pl-6&quot;&gt;
+                        Integrating next-generation hardware acceleration with seamless API protocols to redefine the boundaries of autonomous systems.
+                    &lt;/p&gt;
+
+                    &lt;div class=&quot;flex items-center group cursor-pointer&quot;&gt;
+                        &lt;div class=&quot;relative px-10 py-3 border border-cyber-cyan rounded-sm text-cyber-cyan font-bold tracking-[0.2em] transition-all hover:bg-cyber-cyan hover:text-black box-glow uppercase text-sm&quot;&gt;
+                            &lt;span class=&quot;mr-3&quot;&gt;Initiate Protocol&lt;/span&gt;
+                            &lt;i class=&quot;fa-solid fa-chevron-right text-xs&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;absolute -bottom-16 -left-16 w-64 h-64 border border-cyber-cyan/10 rounded-full pointer-events-none&quot;&gt;
+                    &lt;div class=&quot;absolute inset-4 border border-dashed border-cyber-cyan/20 rounded-full&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;col-span-7 relative flex items-center justify-center&quot;&gt;
+                
+                &lt;div class=&quot;absolute w-[620px] h-[620px] rounded-full border border-cyber-cyan/10 animate-rotate&quot;&gt;
+                    &lt;div class=&quot;absolute -top-1 left-1/2 w-2 h-2 bg-cyber-cyan rounded-full box-glow&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;absolute w-[550px] h-[550px] rounded-full border border-dashed border-white/5 rotate-45&quot;&gt;&lt;/div&gt;
+
+                &lt;div class=&quot;relative w-[480px] h-[480px] rounded-full p-1 bg-gradient-to-tr from-cyber-cyan/40 to-transparent&quot;&gt;
+                    &lt;div class=&quot;w-full h-full rounded-full overflow-hidden bg-black relative shadow-2xl&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1555664424-778a69022365?q=80&amp;w=1000&amp;auto=format&amp;fit=crop&quot; 
+                             alt=&quot;Advanced Microchip&quot; 
+                             class=&quot;w-full h-full object-cover opacity-80 filter brightness-110 contrast-125&quot;
+                             style=&quot;mix-blend-mode: luminosity;&quot;&gt;
+                        
+                        &lt;div class=&quot;absolute inset-0 bg-gradient-to-t from-cyber-black via-transparent to-transparent opacity-60&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;absolute bottom-12 left-0 w-full flex justify-center&quot;&gt;
+                            &lt;div class=&quot;px-4 py-1 bg-cyber-cyan/10 border border-cyber-cyan/40 backdrop-blur-md&quot;&gt;
+                                &lt;span class=&quot;text-[10px] text-cyber-cyan font-mono tracking-[0.4em]&quot;&gt;SYSTEM_CORE_V.09&lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;absolute right-0 top-1/2 w-24 h-[1px] bg-gradient-to-r from-cyber-cyan/50 to-transparent&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute bottom-8 right-16 flex items-center gap-6 opacity-40&quot;&gt;
+             &lt;p class=&quot;text-cyber-cyan text-xs font-mono tracking-widest uppercase&quot;&gt;Node: 0x882_Alpha&lt;/p&gt;
+             &lt;div class=&quot;flex gap-1.5 items-end h-4&quot;&gt;
+                 &lt;div class=&quot;w-1.5 h-full bg-cyber-cyan&quot;&gt;&lt;/div&gt;
+                 &lt;div class=&quot;w-1.5 h-[70%] bg-cyber-cyan&quot;&gt;&lt;/div&gt;
+                 &lt;div class=&quot;w-1.5 h-[40%] bg-cyber-cyan&quot;&gt;&lt;/div&gt;
+             &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 4
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Our Timeline - Cyberpunk Tech Slide&lt;/title&gt;
+
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: {
+                            black: '#000000',
+                            white: '#FFFFFF',
+                            cyan: '#4DEEEA',
+                            text: '#94A3B8',
+                            darkblue: '#0F172A',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'sans-serif']
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px;
+            margin: 0 auto; position: relative;
+            background-color: #000000; overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        .bg-grid {
+            background-image: 
+                linear-gradient(rgba(77, 238, 234, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(77, 238, 234, 0.03) 1px, transparent 1px);
+            background-size: 30px 30px;
+            position: absolute; inset: 0; z-index: 0;
+            mask-image: radial-gradient(circle at center, black, transparent 80%);
+        }
+
+        /* --- 核心美化：科技感文本框 --- */
+        .tech-card-v2 {
+            position: relative;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.7) 100%);
+            border-left: 2px solid #4DEEEA;
+            /* 裁切右上角，增加设计感 */
+            clip-path: polygon(0% 0%, 90% 0%, 100% 15%, 100% 100%, 0% 100%);
+            padding: 24px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .tech-card-v2:hover {
+            transform: translateX(10px);
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
+            box-shadow: -5px 0 20px rgba(77, 238, 234, 0.15);
+        }
+
+        /* 卡片顶部的编号装饰 */
+        .card-tag {
+            position: absolute;
+            top: 0; left: 24px;
+            background: #4DEEEA;
+            color: #000;
+            font-size: 10px;
+            font-weight: 800;
+            padding: 2px 8px;
+            font-family: monospace;
+            clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+        }
+
+        /* 标题下方的扫描线装饰 */
+        .title-accent {
+            height: 2px;
+            width: 40px;
+            background: #4DEEEA;
+            display: inline-block;
+            margin-right: 8px;
+            box-shadow: 0 0 8px #4DEEEA;
+        }
+
+        /* 点状装饰矩阵 */
+        .dot-matrix {
+            display: grid;
+            grid-template-columns: repeat(4, 3px);
+            gap: 2px;
+            position: absolute;
+            bottom: 12px; right: 12px;
+            opacity: 0.5;
+        }
+        .dot { width: 3px; height: 3px; background: #4DEEEA; }
+
+        /* --- 原有装饰类 --- */
+        .glow-text { text-shadow: 0 0 15px rgba(77, 238, 234, 0.5); }
+        .hud-circle { border: 1px solid rgba(77, 238, 234, 0.2); border-radius: 50%; position: absolute; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;bg-grid&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;relative z-10 grid grid-cols-12 h-full w-full&quot;&gt;
+            &lt;div class=&quot;col-span-7 flex flex-col pl-20 pt-16&quot;&gt;
+                &lt;div class=&quot;mb-2 flex items-center gap-3&quot;&gt;
+                    &lt;div class=&quot;w-10 h-[1px] bg-cyber-cyan opacity-50&quot;&gt;&lt;/div&gt;
+                    &lt;span class=&quot;text-cyber-cyan text-xs tracking-[0.3em] font-mono&quot;&gt;ARCHIVE_FILE: 2026&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;h1 class=&quot;text-7xl font-bold tracking-tighter text-white mb-12&quot;&gt;
+                    Our &lt;span class=&quot;text-cyber-cyan glow-text&quot;&gt;Timeline&lt;/span&gt;
+                &lt;/h1&gt;
+
+                &lt;div class=&quot;relative w-full h-[400px] flex items-center justify-center&quot;&gt;
+                    &lt;div class=&quot;hud-circle w-[450px] h-[450px] animate-[spin_20s_linear_infinite]&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;hud-circle w-[380px] h-[380px] border-dashed border-cyber-cyan/30 animate-[spin_15s_linear_infinite_reverse]&quot;&gt;&lt;/div&gt;
+                    
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1579829366248-204fe8413f31?q=80&amp;w=1280&amp;auto=format&amp;fit=crop&quot; 
+                         class=&quot;relative z-20 w-[520px] drop-shadow-[0_0_30px_rgba(77,238,234,0.2)]&quot;&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;col-span-5 flex flex-col justify-center pr-20 pl-4 gap-10&quot;&gt;
+                
+                &lt;div class=&quot;tech-card-v2 group&quot;&gt;
+                    &lt;div class=&quot;card-tag&quot;&gt;STATUS: HISTORICAL&lt;/div&gt;
+                    
+                    &lt;div class=&quot;flex items-center mb-4 mt-2&quot;&gt;
+                        &lt;div class=&quot;title-accent&quot;&gt;&lt;/div&gt;
+                        &lt;h2 class=&quot;text-3xl font-black text-white tracking-tighter italic&quot;&gt;2019 &lt;span class=&quot;text-cyber-cyan opacity-40 mx-2&quot;&gt;/&lt;/span&gt; 2027&lt;/h2&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;relative&quot;&gt;
+                        &lt;p class=&quot;text-cyber-text text-sm leading-relaxed border-l border-white/10 pl-4&quot;&gt;
+                            Initial deployment of the Aero-X neural network. Research focused on multi-modal environmental perception and autonomous decision-making in high-density urban zones.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;dot-matrix&quot;&gt;
+                        &lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;ml-10 flex flex-col gap-1&quot;&gt;
+                    &lt;div class=&quot;w-1 h-1 bg-cyber-cyan rounded-full animate-pulse&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-px h-6 bg-gradient-to-b from-cyber-cyan to-transparent ml-[1.5px]&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;tech-card-v2 group&quot;&gt;
+                    &lt;div class=&quot;card-tag&quot;&gt;STATUS: CURRENT&lt;/div&gt;
+                    
+                    &lt;div class=&quot;flex items-center mb-4 mt-2&quot;&gt;
+                        &lt;div class=&quot;title-accent&quot;&gt;&lt;/div&gt;
+                        &lt;h2 class=&quot;text-3xl font-black text-white tracking-tighter italic&quot;&gt;2027 &lt;span class=&quot;text-cyber-cyan opacity-40 mx-2&quot;&gt;/&lt;/span&gt; NOW&lt;/h2&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;relative&quot;&gt;
+                        &lt;p class=&quot;text-cyber-text text-sm leading-relaxed border-l border-white/10 pl-4&quot;&gt;
+                            Global synchronization achieved. Integrating deep-space relay protocols to ensure zero-latency command overrides for the entire drone fleet across terrestrial boundaries.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;dot-matrix&quot;&gt;
+                        &lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute bottom-10 left-20 flex gap-10 items-center opacity-30&quot;&gt;
+            &lt;div class=&quot;text-[10px] text-cyber-cyan font-mono tracking-widest&quot;&gt;ENCRYPTION: AES-256&lt;/div&gt;
+            &lt;div class=&quot;text-[10px] text-cyber-cyan font-mono tracking-widest&quot;&gt;OS: NEURAL_LINK_V4&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 5
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Cyberpunk Problems Analysis&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { cyber: { black: '#000', white: '#FFF', cyan: '#4DEEEA', text: '#94A3B8', darkblue: '#0F172A' } },
+                    fontFamily: { sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'] }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #000; overflow: hidden; }
+        .bg-grid {
+            background-image: linear-gradient(rgba(77, 238, 234, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(77, 238, 234, 0.03) 1px, transparent 1px);
+            background-size: 30px 30px; position: absolute; inset: 0; z-index: 0; mask-image: radial-gradient(circle at center, black, transparent 80%);
+        }
+        /* 参考页面的核心文本框设计 */
+        .tech-card-v2 {
+            position: relative; background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.7) 100%);
+            border-left: 2px solid #4DEEEA; clip-path: polygon(0% 0%, 92% 0%, 100% 15%, 100% 100%, 0% 100%);
+            padding: 24px; transition: all 0.3s ease; backdrop-filter: blur(10px);
+        }
+        .tech-card-v2:hover { transform: translateX(10px); background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%); box-shadow: -5px 0 20px rgba(77, 238, 234, 0.15); }
+        .card-tag { position: absolute; top: 0; left: 24px; background: #4DEEEA; color: #000; font-size: 10px; font-weight: 800; padding: 2px 8px; font-family: monospace; clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%); }
+        .title-accent { height: 2px; width: 30px; background: #4DEEEA; display: inline-block; margin-right: 8px; box-shadow: 0 0 8px #4DEEEA; }
+        .dot-matrix { display: grid; grid-template-columns: repeat(4, 3px); gap: 2px; position: absolute; bottom: 12px; right: 12px; opacity: 0.5; }
+        .dot { width: 3px; height: 3px; background: #4DEEEA; }
+        .marker-line { height: 4px; background: #4DEEEA; transform: skew(-20deg); margin-bottom: 4px; }
+        .glow-text { text-shadow: 0 0 15px rgba(77, 238, 234, 0.5); }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;bg-grid&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute top-[-50px] left-[-50px] w-[400px] h-[400px] bg-cyber-cyan opacity-5 rounded-full blur-[100px]&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;relative z-10 grid grid-cols-12 h-full w-full px-20&quot;&gt;
+            &lt;div class=&quot;col-span-7 flex flex-col justify-center gap-8 pr-12&quot;&gt;
+                &lt;div class=&quot;tech-card-v2&quot;&gt;
+                    &lt;div class=&quot;card-tag&quot;&gt;ISSUE_ID: 01&lt;/div&gt;
+                    &lt;div class=&quot;flex items-center mb-3 mt-2&quot;&gt;
+                        &lt;div class=&quot;title-accent&quot;&gt;&lt;/div&gt;
+                        &lt;h2 class=&quot;text-2xl font-black text-white tracking-tighter italic uppercase&quot;&gt;Complexity&lt;/h2&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-cyber-text text-sm leading-relaxed border-l border-white/10 pl-4&quot;&gt;
+                        Structural bottlenecks in neural processing layers. Increasing data density leads to significant latency spikes during real-time analysis.
+                    &lt;/p&gt;
+                    &lt;div class=&quot;dot-matrix&quot;&gt;
+                        &lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;tech-card-v2 ml-8&quot;&gt;
+                    &lt;div class=&quot;card-tag&quot;&gt;ISSUE_ID: 02&lt;/div&gt;
+                    &lt;div class=&quot;flex items-center mb-3 mt-2&quot;&gt;
+                        &lt;div class=&quot;title-accent&quot;&gt;&lt;/div&gt;
+                        &lt;h2 class=&quot;text-2xl font-black text-white tracking-tighter italic uppercase&quot;&gt;Vulnerability&lt;/h2&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-cyber-text text-sm leading-relaxed border-l border-white/10 pl-4&quot;&gt;
+                        External frequency interference threatening encrypted node integrity. Signal bleed-through detected in Phase 1 deployment.
+                    &lt;/p&gt;
+                    &lt;div class=&quot;dot-matrix&quot;&gt;
+                        &lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;tech-card-v2&quot;&gt;
+                    &lt;div class=&quot;card-tag&quot;&gt;ISSUE_ID: 03&lt;/div&gt;
+                    &lt;div class=&quot;flex items-center mb-3 mt-2&quot;&gt;
+                        &lt;div class=&quot;title-accent&quot;&gt;&lt;/div&gt;
+                        &lt;h2 class=&quot;text-2xl font-black text-white tracking-tighter italic uppercase&quot;&gt;Dependency&lt;/h2&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-cyber-text text-sm leading-relaxed border-l border-white/10 pl-4&quot;&gt;
+                        Critical reliance on legacy satellite protocols. Zero-latency synchronization is currently unachievable without hardware upgrades.
+                    &lt;/p&gt;
+                    &lt;div class=&quot;dot-matrix&quot;&gt;
+                        &lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;col-span-5 flex flex-col justify-center pl-10 border-l border-white/5 relative&quot;&gt;
+                &lt;div class=&quot;absolute top-24 left-10 w-16 opacity-80&quot;&gt;
+                    &lt;div class=&quot;marker-line w-12&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;marker-line w-8 opacity-60&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;h1 class=&quot;text-7xl font-bold tracking-tighter text-white mb-8&quot;&gt;
+                    Main &lt;span class=&quot;text-cyber-cyan glow-text block mt-2&quot;&gt;Problems&lt;/span&gt;
+                &lt;/h1&gt;
+                &lt;p class=&quot;text-cyber-text text-lg font-light leading-relaxed mb-10&quot;&gt;
+                    System audit results indicate core vulnerabilities that must be neutralized before the 2027 global synchronization event.
+                &lt;/p&gt;
+                &lt;div class=&quot;flex items-center gap-3&quot;&gt;
+                    &lt;div class=&quot;w-12 h-[1px] bg-cyber-cyan/30&quot;&gt;&lt;/div&gt;
+                    &lt;span class=&quot;text-cyber-cyan text-[10px] font-mono tracking-[0.3em]&quot;&gt;SECURE_ACCESS_REQUIRED&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute bottom-10 left-20 flex gap-10 items-center opacity-30&quot;&gt;
+            &lt;div class=&quot;text-[10px] text-cyber-cyan font-mono tracking-widest uppercase&quot;&gt;Scan_Mode: Deep_Audit&lt;/div&gt;
+            &lt;div class=&quot;flex gap-1&quot;&gt;
+                &lt;div class=&quot;w-1 h-3 bg-cyber-cyan&quot;&gt;&lt;/div&gt;&lt;div class=&quot;w-1 h-3 bg-cyber-cyan&quot;&gt;&lt;/div&gt;&lt;div class=&quot;w-1 h-2 bg-cyber-cyan opacity-50&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 6
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Cyberpunk Strategic Objectives&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { cyber: { black: '#000', white: '#FFF', cyan: '#4DEEEA', text: '#94A3B8', darkblue: '#0F172A' } },
+                    fontFamily: { sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'] }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #000; overflow: hidden; }
+        .bg-grid {
+            background-image: linear-gradient(rgba(77, 238, 234, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(77, 238, 234, 0.03) 1px, transparent 1px);
+            background-size: 30px 30px; position: absolute; inset: 0; z-index: 0; mask-image: radial-gradient(circle at center, black, transparent 80%);
+        }
+        /* 统一样式的科技文本框 */
+        .tech-card-v2 {
+            position: relative; background: linear-gradient(180deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.7) 100%);
+            border-left: 2px solid #4DEEEA; clip-path: polygon(0% 0%, 90% 0%, 100% 12%, 100% 100%, 0% 100%);
+            padding: 32px 24px; transition: all 0.3s ease; backdrop-filter: blur(10px); height: 100%;
+        }
+        .tech-card-v2:hover { transform: translateY(-10px); box-shadow: 0 10px 30px rgba(77, 238, 234, 0.1); }
+        .card-tag { position: absolute; top: 0; left: 24px; background: #4DEEEA; color: #000; font-size: 10px; font-weight: 800; padding: 2px 8px; font-family: monospace; clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%); }
+        .title-accent { height: 2px; width: 30px; background: #4DEEEA; display: inline-block; margin-right: 8px; box-shadow: 0 0 8px #4DEEEA; }
+        .dot-matrix { display: grid; grid-template-columns: repeat(4, 3px); gap: 2px; position: absolute; bottom: 12px; right: 12px; opacity: 0.5; }
+        .dot { width: 3px; height: 3px; background: #4DEEEA; }
+        .marker-line { height: 4px; background: #4DEEEA; transform: skew(-20deg); margin-bottom: 4px; }
+        .glow-text { text-shadow: 0 0 15px rgba(77, 238, 234, 0.5); }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;bg-grid&quot;&gt;&lt;/div&gt;
+        
+        &lt;div class=&quot;absolute top-12 left-20 w-16 opacity-80&quot;&gt;
+            &lt;div class=&quot;marker-line w-12&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;marker-line w-8 opacity-60&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;relative z-10 flex flex-col items-center pt-24 px-20&quot;&gt;
+            &lt;div class=&quot;text-center mb-16&quot;&gt;
+                &lt;h1 class=&quot;text-7xl font-bold tracking-tighter text-white mb-6&quot;&gt;
+                    Strategic &lt;span class=&quot;text-cyber-cyan glow-text&quot;&gt;Objectives&lt;/span&gt;
+                &lt;/h1&gt;
+                &lt;div class=&quot;w-24 h-[1px] bg-cyber-cyan/40 mx-auto&quot;&gt;&lt;/div&gt;
+                &lt;p class=&quot;text-cyber-text mt-6 max-w-2xl mx-auto font-light&quot;&gt;
+                    Our mission protocols define the roadmap for systemic evolution and terrestrial dominance through three primary directives.
+                &lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;grid grid-cols-3 gap-10 w-full max-w-6xl&quot;&gt;
+                &lt;div class=&quot;tech-card-v2&quot;&gt;
+                    &lt;div class=&quot;card-tag&quot;&gt;GOAL_ID: ALPHA&lt;/div&gt;
+                    &lt;div class=&quot;w-16 h-16 rounded-full border border-cyber-cyan/20 flex items-center justify-center mb-8 bg-cyber-cyan/5&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-user-shield text-2xl text-cyber-cyan&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;flex items-center mb-4&quot;&gt;
+                        &lt;div class=&quot;title-accent&quot;&gt;&lt;/div&gt;
+                        &lt;h2 class=&quot;text-xl font-black text-white italic uppercase tracking-widest&quot;&gt;Protection&lt;/h2&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-cyber-text text-sm leading-relaxed&quot;&gt;
+                        Implement military-grade neural firewalls across all user nodes to ensure absolute data sovereignty.
+                    &lt;/p&gt;
+                    &lt;div class=&quot;dot-matrix&quot;&gt;
+                        &lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;tech-card-v2&quot;&gt;
+                    &lt;div class=&quot;card-tag&quot;&gt;GOAL_ID: BETA&lt;/div&gt;
+                    &lt;div class=&quot;w-16 h-16 rounded-full border border-cyber-cyan/20 flex items-center justify-center mb-8 bg-cyber-cyan/5&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-brain text-2xl text-cyber-cyan&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;flex items-center mb-4&quot;&gt;
+                        &lt;div class=&quot;title-accent&quot;&gt;&lt;/div&gt;
+                        &lt;h2 class=&quot;text-xl font-black text-white italic uppercase tracking-widest&quot;&gt;Intelligence&lt;/h2&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-cyber-text text-sm leading-relaxed&quot;&gt;
+                        Scale processing power to achieve predictive modeling of environmental threats with 99.9% accuracy.
+                    &lt;/p&gt;
+                    &lt;div class=&quot;dot-matrix&quot;&gt;
+                        &lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;tech-card-v2&quot;&gt;
+                    &lt;div class=&quot;card-tag&quot;&gt;GOAL_ID: GAMMA&lt;/div&gt;
+                    &lt;div class=&quot;w-16 h-16 rounded-full border border-cyber-cyan/20 flex items-center justify-center mb-8 bg-cyber-cyan/5&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-cloud-bolt text-2xl text-cyber-cyan&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;flex items-center mb-4&quot;&gt;
+                        &lt;div class=&quot;title-accent&quot;&gt;&lt;/div&gt;
+                        &lt;h2 class=&quot;text-xl font-black text-white italic uppercase tracking-widest&quot;&gt;Efficiency&lt;/h2&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-cyber-text text-sm leading-relaxed&quot;&gt;
+                        Optimize deep-space relay protocols to maintain zero-latency control over the autonomous drone fleet.
+                    &lt;/p&gt;
+                    &lt;div class=&quot;dot-matrix&quot;&gt;
+                        &lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute bottom-10 left-20 flex gap-10 items-center opacity-30&quot;&gt;
+            &lt;div class=&quot;text-[10px] text-cyber-cyan font-mono tracking-widest uppercase&quot;&gt;Target: 2027_Operational&lt;/div&gt;
+            &lt;div class=&quot;flex gap-1&quot;&gt;
+                &lt;div class=&quot;w-1 h-3 bg-cyber-cyan&quot;&gt;&lt;/div&gt;&lt;div class=&quot;w-1 h-3 bg-cyber-cyan&quot;&gt;&lt;/div&gt;&lt;div class=&quot;w-1 h-2 bg-cyber-cyan opacity-50&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 7
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;System Deployment - Cyberpunk Process&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { cyber: { black: '#000', white: '#FFF', cyan: '#4DEEEA', text: '#94A3B8', darkblue: '#0F172A' } },
+                    fontFamily: { sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'] }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #000; overflow: hidden; font-family: 'Noto Sans SC', sans-serif; }
+        .bg-grid {
+            background-image: linear-gradient(rgba(77, 238, 234, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(77, 238, 234, 0.03) 1px, transparent 1px);
+            background-size: 30px 30px; position: absolute; inset: 0; z-index: 0; mask-image: radial-gradient(circle at center, black, transparent 80%);
+        }
+        /* 核心卡片样式 */
+        .tech-card-v2 {
+            position: relative; background: linear-gradient(180deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.7) 100%);
+            border-top: 2px solid #4DEEEA; clip-path: polygon(0 0, 100% 0, 100% 85%, 88% 100%, 0 100%);
+            padding: 24px; transition: all 0.3s ease; backdrop-filter: blur(10px); height: 100%;
+        }
+        .tech-card-v2:hover { transform: translateY(-5px); box-shadow: 0 5px 20px rgba(77, 238, 234, 0.2); border-top-width: 4px; }
+        .card-tag { position: absolute; top: 0; right: 12px; background: #4DEEEA; color: #000; font-size: 10px; font-weight: 800; padding: 2px 8px; font-family: monospace; clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%); }
+        .title-accent { height: 2px; width: 20px; background: #4DEEEA; display: inline-block; margin-right: 8px; }
+        .dot-matrix { display: grid; grid-template-columns: repeat(4, 3px); gap: 2px; position: absolute; bottom: 12px; left: 12px; opacity: 0.5; }
+        .dot { width: 3px; height: 3px; background: #4DEEEA; }
+        .marker-line { height: 4px; background: #4DEEEA; transform: skew(-20deg); margin-bottom: 4px; }
+        .glow-text { text-shadow: 0 0 15px rgba(77, 238, 234, 0.5); }
+        
+        /* 连接线动画 */
+        @keyframes flow { from { background-position: 0 0; } to { background-position: 50px 0; } }
+        .flow-line {
+            height: 2px; background: linear-gradient(90deg, transparent, #4DEEEA, transparent);
+            background-size: 50px 100%; animation: flow 2s linear infinite; opacity: 0.6;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;bg-grid&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute top-[-100px] left-1/3 w-[600px] h-[300px] bg-cyber-cyan opacity-10 rounded-full blur-[100px] z-0&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;relative z-10 flex flex-col pt-16 px-20 h-full&quot;&gt;
+            &lt;div class=&quot;flex flex-col items-center text-center mb-16&quot;&gt;
+                &lt;h1 class=&quot;text-7xl font-bold text-white tracking-tighter&quot;&gt;
+                    System &lt;span class=&quot;text-cyber-cyan glow-text&quot;&gt;Deployment&lt;/span&gt; Protocol
+                &lt;/h1&gt;
+                &lt;div class=&quot;w-32 h-1 bg-gradient-to-r from-transparent via-cyber-cyan to-transparent mt-4&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;relative grid grid-cols-4 gap-6 items-center h-80&quot;&gt;
+                
+                &lt;div class=&quot;absolute top-1/2 left-[22%] w-[12%] flow-line z-0&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;absolute top-1/2 left-[47%] w-[12%] flow-line z-0&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;absolute top-1/2 left-[72%] w-[12%] flow-line z-0&quot;&gt;&lt;/div&gt;
+
+                &lt;div class=&quot;tech-card-v2 flex flex-col z-10&quot;&gt;
+                    &lt;div class=&quot;card-tag&quot;&gt;PHASE 01&lt;/div&gt;
+                    &lt;div class=&quot;mb-6 text-cyber-cyan opacity-80&quot;&gt;&lt;i class=&quot;fa-solid fa-seedling text-4xl&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                    &lt;h3 class=&quot;text-2xl font-bold text-white mb-2 tracking-wider&quot;&gt;Initialization&lt;/h3&gt;
+                    &lt;p class=&quot;text-cyber-text text-sm leading-relaxed&quot;&gt;Core kernel boot and secure handshake protocols established. Base infrastructure ready.&lt;/p&gt;
+                    &lt;div class=&quot;dot-matrix&quot;&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;tech-card-v2 flex flex-col z-10 mt-10&quot;&gt; &lt;div class=&quot;card-tag&quot;&gt;PHASE 02&lt;/div&gt;
+                    &lt;div class=&quot;mb-6 text-cyber-cyan opacity-80&quot;&gt;&lt;i class=&quot;fa-solid fa-network-wired text-4xl&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                    &lt;h3 class=&quot;text-2xl font-bold text-white mb-2 tracking-wider&quot;&gt;Integration&lt;/h3&gt;
+                    &lt;p class=&quot;text-cyber-text text-sm leading-relaxed&quot;&gt;Neural link connection and module synchronization. Data pipelines activated.&lt;/p&gt;
+                    &lt;div class=&quot;dot-matrix&quot;&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+                 &lt;div class=&quot;tech-card-v2 flex flex-col z-10&quot;&gt;
+                    &lt;div class=&quot;card-tag&quot;&gt;PHASE 03&lt;/div&gt;
+                    &lt;div class=&quot;mb-6 text-cyber-cyan opacity-80&quot;&gt;&lt;i class=&quot;fa-solid fa-satellite-dish text-4xl&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                    &lt;h3 class=&quot;text-2xl font-bold text-white mb-2 tracking-wider&quot;&gt;Broadcast&lt;/h3&gt;
+                    &lt;p class=&quot;text-cyber-text text-sm leading-relaxed&quot;&gt;Global signal propagation and node override procedures initiated. Wider coverage achieved.&lt;/p&gt;
+                    &lt;div class=&quot;dot-matrix&quot;&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+                 &lt;div class=&quot;tech-card-v2 flex flex-col z-10 mt-10&quot;&gt; &lt;div class=&quot;card-tag&quot;&gt;PHASE 04&lt;/div&gt;
+                    &lt;div class=&quot;mb-6 text-cyber-cyan opacity-80&quot;&gt;&lt;i class=&quot;fa-solid fa-crown text-4xl&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                    &lt;h3 class=&quot;text-2xl font-bold text-white mb-2 tracking-wider&quot;&gt;Dominance&lt;/h3&gt;
+                    &lt;p class=&quot;text-cyber-text text-sm leading-relaxed&quot;&gt;System stabilization and full operational control achieved. Protocol complete.&lt;/p&gt;
+                    &lt;div class=&quot;dot-matrix&quot;&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute bottom-8 right-20 flex gap-10 items-center opacity-30&quot;&gt;
+            &lt;div class=&quot;text-[10px] text-cyber-cyan font-mono tracking-widest uppercase&quot;&gt;Sequence: Executing&lt;/div&gt;
+            &lt;div class=&quot;flex gap-1 items-center h-2&quot;&gt;
+                &lt;div class=&quot;w-8 h-full bg-cyber-cyan animate-pulse&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;w-2 h-full bg-cyber-cyan/50&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;w-2 h-full bg-cyber-cyan/30&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 8
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Our Services - Tech System&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { cyber: { black: '#000', white: '#FFF', cyan: '#4DEEEA', text: '#94A3B8', darkblue: '#0F172A' } },
+                    fontFamily: { sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'] }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #000; overflow: hidden; font-family: 'Noto Sans SC', sans-serif; }
+        .bg-grid {
+            background-image: linear-gradient(rgba(77, 238, 234, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(77, 238, 234, 0.03) 1px, transparent 1px);
+            background-size: 30px 30px; position: absolute; inset: 0; z-index: 0; mask-image: radial-gradient(circle at center, black, transparent 80%);
+        }
+        /* 您最满意的文本框设计 */
+        .tech-card-v2 {
+            position: relative; background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.7) 100%);
+            border-left: 2px solid #4DEEEA; clip-path: polygon(0% 0%, 92% 0%, 100% 15%, 100% 100%, 0% 100%);
+            padding: 24px; transition: all 0.3s ease; backdrop-filter: blur(10px);
+        }
+        .tech-card-v2:hover { transform: translateX(10px); background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%); box-shadow: -5px 0 20px rgba(77, 238, 234, 0.15); }
+        .card-tag { position: absolute; top: 0; left: 24px; background: #4DEEEA; color: #000; font-size: 10px; font-weight: 800; padding: 2px 8px; font-family: monospace; clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%); }
+        .title-accent { height: 2px; width: 30px; background: #4DEEEA; display: inline-block; margin-right: 8px; box-shadow: 0 0 8px #4DEEEA; }
+        .dot-matrix { display: grid; grid-template-columns: repeat(4, 3px); gap: 2px; position: absolute; bottom: 12px; right: 12px; opacity: 0.5; }
+        .dot { width: 3px; height: 3px; background: #4DEEEA; }
+        .glow-text { text-shadow: 0 0 15px rgba(77, 238, 234, 0.5); }
+        .marker-line { height: 4px; background: #4DEEEA; transform: skew(-20deg); margin-bottom: 4px; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;bg-grid&quot;&gt;&lt;/div&gt;
+        
+        &lt;div class=&quot;absolute top-0 right-0 w-[600px] h-[600px] bg-cyber-darkblue opacity-40 rounded-full blur-[120px]&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;relative z-10 flex h-full w-full&quot;&gt;
+            &lt;div class=&quot;w-[60%] flex flex-col pl-20 pt-16 gap-10&quot;&gt;
+                &lt;div class=&quot;flex flex-col&quot;&gt;
+                    &lt;div class=&quot;marker-line w-12&quot;&gt;&lt;/div&gt;
+                    &lt;h1 class=&quot;text-6xl font-bold text-white tracking-tighter&quot;&gt;
+                        Our &lt;span class=&quot;text-cyber-cyan glow-text&quot;&gt;Services&lt;/span&gt;
+                    &lt;/h1&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;flex flex-col gap-8 pr-10&quot;&gt;
+                    &lt;div class=&quot;tech-card-v2&quot;&gt;
+                        &lt;div class=&quot;card-tag&quot;&gt;SERVICE_01&lt;/div&gt;
+                        &lt;div class=&quot;flex items-center mb-3 mt-2&quot;&gt;
+                            &lt;div class=&quot;title-accent&quot;&gt;&lt;/div&gt;
+                            &lt;h2 class=&quot;text-2xl font-black text-white italic uppercase tracking-widest&quot;&gt;Innovation&lt;/h2&gt;
+                        &lt;/div&gt;
+                        &lt;p class=&quot;text-cyber-text text-sm border-l border-white/10 pl-4&quot;&gt;Advanced AI integration and neural pathfinding for complex structural problem solving.&lt;/p&gt;
+                        &lt;div class=&quot;dot-matrix&quot;&gt;
+                            &lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;tech-card-v2 ml-10&quot;&gt;
+                        &lt;div class=&quot;card-tag&quot;&gt;SERVICE_02&lt;/div&gt;
+                        &lt;div class=&quot;flex items-center mb-3 mt-2&quot;&gt;
+                            &lt;div class=&quot;title-accent&quot;&gt;&lt;/div&gt;
+                            &lt;h2 class=&quot;text-2xl font-black text-white italic uppercase tracking-widest&quot;&gt;Efficiency&lt;/h2&gt;
+                        &lt;/div&gt;
+                        &lt;p class=&quot;text-cyber-text text-sm border-l border-white/10 pl-4&quot;&gt;Optimization of cloud data relays to achieve near-zero latency in global operations.&lt;/p&gt;
+                        &lt;div class=&quot;dot-matrix&quot;&gt;
+                            &lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;tech-card-v2&quot;&gt;
+                        &lt;div class=&quot;card-tag&quot;&gt;SERVICE_03&lt;/div&gt;
+                        &lt;div class=&quot;flex items-center mb-3 mt-2&quot;&gt;
+                            &lt;div class=&quot;title-accent&quot;&gt;&lt;/div&gt;
+                            &lt;h2 class=&quot;text-2xl font-black text-white italic uppercase tracking-widest&quot;&gt;Security&lt;/h2&gt;
+                        &lt;/div&gt;
+                        &lt;p class=&quot;text-cyber-text text-sm border-l border-white/10 pl-4&quot;&gt;Implementing multi-layer encryption protocols for high-density information protection.&lt;/p&gt;
+                        &lt;div class=&quot;dot-matrix&quot;&gt;
+                            &lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;w-[40%] relative flex items-center justify-end&quot;&gt;
+                &lt;img src=&quot;https://images.unsplash.com/photo-1531746790731-6c087fecd65a?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80&quot; 
+                     class=&quot;h-[600px] w-auto object-contain opacity-80&quot;
+                     style=&quot;mask-image: linear-gradient(to right, transparent, black 40%); -webkit-mask-image: linear-gradient(to right, transparent, black 40%);&quot;&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute bottom-10 left-20 flex gap-10 items-center opacity-30&quot;&gt;
+            &lt;div class=&quot;text-[10px] text-cyber-cyan font-mono tracking-widest&quot;&gt;ENCRYPTION: ACTIVE&lt;/div&gt;
+            &lt;div class=&quot;text-[10px] text-cyber-cyan font-mono tracking-widest&quot;&gt;OS: NEURAL_V4&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 9
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Marketing Strategies - Advanced Data UI&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { cyber: { black: '#000', white: '#FFF', cyan: '#4DEEEA', text: '#94A3B8', darkblue: '#0F172A' } },
+                    fontFamily: { sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'] }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #000; overflow: hidden; font-family: 'Noto Sans SC', sans-serif; }
+        
+        /* 科技感背景 */
+        .bg-grid {
+            background-image: linear-gradient(rgba(77, 238, 234, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(77, 238, 234, 0.03) 1px, transparent 1px);
+            background-size: 30px 30px; position: absolute; inset: 0; z-index: 0;
+            mask-image: radial-gradient(circle at 20% 30%, black, transparent 80%);
+        }
+
+        /* 核心科技卡片 - 用于描述区 */
+        .tech-panel {
+            position: relative; background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.4) 100%);
+            border-left: 2px solid #4DEEEA; clip-path: polygon(0% 0%, 95% 0%, 100% 20%, 100% 100%, 0% 100%);
+            padding: 20px 24px; backdrop-filter: blur(10px);
+        }
+
+        /* 装饰标签 */
+        .card-tag { 
+            background: #4DEEEA; color: #000; font-size: 10px; font-weight: 800; padding: 2px 8px; 
+            font-family: monospace; clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+        }
+
+        .marker-line { height: 4px; background: #4DEEEA; transform: skew(-20deg); margin-bottom: 4px; }
+        .glow-text { text-shadow: 0 0 15px rgba(77, 238, 234, 0.6); }
+
+        .dot-matrix { display: grid; grid-template-columns: repeat(4, 3px); gap: 2px; position: absolute; bottom: 10px; right: 10px; opacity: 0.3; }
+        .dot { width: 3px; height: 3px; background: #4DEEEA; }
+
+        /* 装饰性数据流 */
+        .data-stream { font-family: monospace; font-size: 10px; color: rgba(77, 238, 234, 0.3); writing-mode: vertical-rl; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;bg-grid&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;absolute top-[-100px] left-[-100px] w-[500px] h-[500px] bg-cyber-cyan opacity-5 rounded-full blur-[100px]&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;relative z-10 w-full h-full p-16 flex flex-col&quot;&gt;
+            
+            &lt;div class=&quot;flex justify-between items-start mb-10&quot;&gt;
+                &lt;div class=&quot;flex flex-col&quot;&gt;
+                    &lt;div class=&quot;mb-4&quot;&gt;
+                        &lt;div class=&quot;marker-line w-16&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;marker-line w-8 opacity-50&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;span class=&quot;card-tag w-fit mb-3 uppercase tracking-widest&quot;&gt;Growth Forecast Mode: Active&lt;/span&gt;
+                    &lt;h1 class=&quot;text-7xl font-black text-white tracking-tighter italic leading-[0.9]&quot;&gt;
+                        MARKETING&lt;br&gt;
+                        &lt;span class=&quot;text-cyber-cyan glow-text mt-2 block&quot;&gt;STRATEGIES&lt;/span&gt;
+                    &lt;/h1&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;w-[45%] mt-12&quot;&gt;
+                    &lt;div class=&quot;tech-panel relative&quot;&gt;
+                        &lt;div class=&quot;flex items-center gap-3 mb-3&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-satellite text-cyber-cyan text-xs&quot;&gt;&lt;/i&gt;
+                            &lt;span class=&quot;text-white font-bold text-xs tracking-widest uppercase&quot;&gt;System Briefing&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;p class=&quot;text-cyber-text text-sm leading-relaxed border-l border-white/10 pl-4 italic&quot;&gt;
+                            Cross-sector growth analysis simulated via neural prediction models. Significant peaks expected in Q3 2026 due to the synchronized release of Project Aero-X.
+                        &lt;/p&gt;
+                        &lt;div class=&quot;dot-matrix&quot;&gt;
+                            &lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;
+                            &lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;relative flex-grow mt-4&quot;&gt;
+                &lt;div id=&quot;main-chart&quot; class=&quot;w-full h-full&quot;&gt;&lt;/div&gt;
+                
+                &lt;div class=&quot;absolute left-[-40px] top-1/2 -translate-y-1/2 data-stream&quot;&gt;
+                    10010110 08:44:21 COORDINATE_X_LOCKED
+                &lt;/div&gt;
+
+                &lt;div class=&quot;absolute top-0 right-0 flex gap-8&quot;&gt;
+                    &lt;div class=&quot;flex items-center gap-3&quot;&gt;
+                        &lt;div class=&quot;w-8 h-[1px] bg-white opacity-50&quot;&gt;&lt;/div&gt;
+                        &lt;span class=&quot;text-[10px] text-white/40 font-mono tracking-widest uppercase italic&quot;&gt;Growth_Index&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;flex items-center gap-3&quot;&gt;
+                        &lt;div class=&quot;w-8 h-[2px] bg-cyber-cyan shadow-[0_0_8px_#4DEEEA]&quot;&gt;&lt;/div&gt;
+                        &lt;span class=&quot;text-[10px] text-cyber-cyan font-mono tracking-widest uppercase italic&quot;&gt;Strategy_Sync&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute bottom-8 left-16 flex items-center gap-6 opacity-30&quot;&gt;
+            &lt;div class=&quot;text-[10px] text-cyber-cyan font-mono tracking-widest uppercase&quot;&gt;Encryption: AES-256_ACTIVE&lt;/div&gt;
+            &lt;div class=&quot;flex gap-1 items-end h-3&quot;&gt;
+                &lt;div class=&quot;w-1 h-full bg-cyber-cyan&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;w-1 h-[60%] bg-cyber-cyan&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;w-1 h-[30%] bg-cyber-cyan&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script&gt;
+        document.addEventListener('DOMContentLoaded', function() {
+            const chartDom = document.getElementById('main-chart');
+            const myChart = echarts.init(chartDom);
+            const option = {
+                backgroundColor: 'transparent',
+                grid: { left: '2%', right: '2%', bottom: '5%', top: '15%', containLabel: true },
+                xAxis: {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
+                    axisLine: { lineStyle: { color: 'rgba(255,255,255,0.1)' } },
+                    axisLabel: { color: 'rgba(255,255,255,0.3)', fontFamily: 'monospace', fontSize: 10 }
+                },
+                yAxis: {
+                    type: 'value',
+                    splitLine: { lineStyle: { color: 'rgba(255,255,255,0.05)', type: 'dashed' } },
+                    axisLabel: { show: false }
+                },
+                series: [
+                    {
+                        name: 'Growth',
+                        type: 'line',
+                        smooth: 0.4,
+                        symbol: 'circle',
+                        symbolSize: 4,
+                        lineStyle: { color: '#FFF', width: 2, opacity: 0.3 },
+                        itemStyle: { color: '#FFF' },
+                        areaStyle: { color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{ offset: 0, color: 'rgba(255,255,255,0.05)' }, { offset: 1, color: 'transparent' }]) },
+                        data: [10, 30, 20, 45, 35, 80, 70, 40, 60, 20, 10, 5],
+                        label: { show: true, position: 'top', color: 'rgba(255,255,255,0.3)', fontSize: 9, fontFamily: 'monospace' }
+                    },
+                    {
+                        name: 'Strategy',
+                        type: 'line',
+                        smooth: 0.4,
+                        symbol: 'circle',
+                        symbolSize: 6,
+                        lineStyle: { color: '#4DEEEA', width: 4, shadowBlur: 10, shadowColor: '#4DEEEA' },
+                        itemStyle: { color: '#4DEEEA' },
+                        areaStyle: { color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{ offset: 0, color: 'rgba(77,238,234,0.2)' }, { offset: 1, color: 'transparent' }]) },
+                        data: [5, 15, 55, 30, 45, 50, 40, 85, 95, 40, 15, 0],
+                        label: {
+                            show: true,
+                            position: 'top',
+                            color: '#4DEEEA',
+                            fontSize: 11,
+                            fontWeight: 'bold',
+                            fontFamily: 'monospace',
+                            textShadowBlur: 5,
+                            textShadowColor: '#4DEEEA'
+                        }
+                    }
+                ]
+            };
+            myChart.setOption(option);
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 10
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Cyberpunk Team Presentation&lt;/title&gt;
+    
+    &lt;!-- Google Fonts (Domestic Mirror as requested) --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+
+    &lt;!-- Tailwind Configuration --&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: {
+                            black: '#000000',
+                            cyan: '#4DEEEA',
+                            darkblue: '#0F172A',
+                            text: '#D1D5DB',
+                            white: '#FFFFFF',
+                            metallic: '#A3A3A3'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'neon': '0 0 10px rgba(77, 238, 234, 0.5), 0 0 20px rgba(77, 238, 234, 0.3)',
+                        'glow-text': '0 0 5px rgba(77, 238, 234, 0.4)'
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        /* CSS Reset &amp; Basic Setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Tech Grid Background Pattern */
+        .tech-grid {
+            background-size: 40px 40px;
+            background-image:
+                linear-gradient(to right, rgba(15, 23, 42, 1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(15, 23, 42, 1) 1px, transparent 1px);
+            mask-image: linear-gradient(to top, black 0%, transparent 80%);
+            -webkit-mask-image: linear-gradient(to top, black 0%, transparent 80%);
+        }
+
+        /* Slanted decoration lines */
+        .slant-stripes {
+            background: repeating-linear-gradient(
+                45deg,
+                #4DEEEA,
+                #4DEEEA 4px,
+                transparent 4px,
+                transparent 8px
+            );
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;!-- Main Page Container --&gt;
+    &lt;div id=&quot;page_container&quot; class=&quot;relative mx-auto overflow-hidden bg-cyber-black font-sans text-cyber-text&quot; style=&quot;width: 1280px; height: 720px;&quot;&gt;
+
+        &lt;!-- 1. Background Layers --&gt;
+        &lt;!-- Floor Grid Simulation --&gt;
+        &lt;div class=&quot;absolute bottom-0 left-0 w-full h-[300px] tech-grid opacity-50 z-0&quot;&gt;&lt;/div&gt;
+        &lt;!-- Ambient Glow Bottom --&gt;
+        &lt;div class=&quot;absolute bottom-0 left-0 w-full h-[200px] z-0&quot; style=&quot;background: linear-gradient(0deg, rgba(15, 23, 42, 0.8), rgba(0,0,0,0));&quot;&gt;&lt;/div&gt;
+
+        &lt;!-- 2. Decorative Elements (HUD &amp; Graphics) --&gt;
+        
+        &lt;!-- Top Left: Tech Decor --&gt;
+        &lt;div class=&quot;absolute top-[50px] left-[60px] flex flex-col gap-2 z-10&quot;&gt;
+            &lt;div class=&quot;flex items-center gap-2&quot;&gt;
+                &lt;!-- Slanted stripes block --&gt;
+                &lt;div class=&quot;w-[60px] h-[12px] slant-stripes rounded-sm shadow-neon&quot;&gt;&lt;/div&gt;
+                &lt;!-- Connecting line --&gt;
+                &lt;div class=&quot;w-[100px] h-[1px] bg-cyber-darkblue relative&quot;&gt;
+                    &lt;div class=&quot;absolute right-0 top-[-2px] w-[5px] h-[5px] rounded-full bg-cyber-cyan&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Top Right: HUD Circle --&gt;
+        &lt;div class=&quot;absolute top-[-50px] right-[-50px] w-[200px] h-[200px] z-10 opacity-80&quot;&gt;
+            &lt;!-- Outer partial ring --&gt;
+            &lt;div class=&quot;absolute inset-0 border-[4px] border-cyber-darkblue rounded-full border-t-cyber-cyan border-r-transparent border-b-cyber-darkblue border-l-transparent transform rotate-45&quot;&gt;&lt;/div&gt;
+            &lt;!-- Inner dashed ring --&gt;
+            &lt;div class=&quot;absolute inset-[20px] border-[2px] border-dashed border-cyber-cyan rounded-full opacity-40 animate-spin-slow&quot;&gt;&lt;/div&gt;
+            &lt;!-- Core solid ring segments --&gt;
+            &lt;div class=&quot;absolute inset-[10px] border-[8px] border-transparent border-t-cyber-cyan rounded-full opacity-60&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+
+        &lt;!-- 3. Main Content Grid --&gt;
+        &lt;div class=&quot;absolute top-0 left-0 w-full h-full z-20 flex px-[100px] items-center&quot;&gt;
+            
+            &lt;!-- Left Column: Text Content --&gt;
+            &lt;div class=&quot;w-[45%] pr-[40px] flex flex-col justify-center&quot;&gt;
+                
+                &lt;!-- Headline --&gt;
+                &lt;h1 class=&quot;text-[64px] leading-[1.1] font-bold text-cyber-white mb-6 tracking-tight&quot;&gt;
+                    Our Best &lt;br&gt;
+                    &lt;span class=&quot;text-cyber-cyan text-shadow-glow&quot;&gt;Team&lt;/span&gt;
+                &lt;/h1&gt;
+
+                &lt;!-- Body Text --&gt;
+                &lt;p class=&quot;text-[16px] leading-[1.8] text-gray-400 mb-10 font-light max-w-[480px]&quot;&gt;
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                &lt;/p&gt;
+
+                &lt;!-- Button --&gt;
+                &lt;div class=&quot;flex&quot;&gt;
+                    &lt;div class=&quot;group relative overflow-hidden rounded-full border border-cyber-cyan px-8 py-3 cursor-pointer transition-all hover:bg-cyber-cyan hover:bg-opacity-10 shadow-neon&quot;&gt;
+                        &lt;span class=&quot;text-cyber-cyan font-medium text-[16px] tracking-wide group-hover:text-white transition-colors&quot;&gt;
+                            Learn More
+                        &lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+
+            &lt;!-- Right Column: Profile Cards --&gt;
+            &lt;div class=&quot;w-[55%] flex gap-[40px] items-end justify-center pl-4&quot;&gt;
+
+                &lt;!-- Profile 1: Olivia --&gt;
+                &lt;div class=&quot;flex flex-col items-center group&quot;&gt;
+                    &lt;!-- Tech Frame Wrapper --&gt;
+                    &lt;div class=&quot;relative p-[10px] mb-6&quot;&gt;
+                        &lt;!-- Top Left Bracket --&gt;
+                        &lt;div class=&quot;absolute top-0 left-0 w-[30px] h-[30px] border-t-[4px] border-l-[4px] border-cyber-cyan shadow-neon&quot;&gt;&lt;/div&gt;
+                        &lt;!-- Top Right Vertical Bar (Decorative) --&gt;
+                        &lt;div class=&quot;absolute top-[10px] right-[-10px] w-[4px] h-[40px] bg-cyber-cyan opacity-50&quot;&gt;&lt;/div&gt;
+                        &lt;!-- Bottom Right Bracket --&gt;
+                        &lt;div class=&quot;absolute bottom-0 right-0 w-[80px] h-[30px] border-b-[4px] border-r-[4px] border-cyber-cyan shadow-neon&quot;&gt;&lt;/div&gt;
+                        &lt;!-- Bottom Left Vertical Bar (Decorative) --&gt;
+                        &lt;div class=&quot;absolute bottom-[20px] left-[-10px] w-[4px] h-[30px] bg-cyber-cyan opacity-50&quot;&gt;&lt;/div&gt;
+
+                        &lt;!-- Image Container --&gt;
+                        &lt;div class=&quot;w-[240px] h-[300px] overflow-hidden bg-gray-800 relative z-10 grayscale hover:grayscale-0 transition-all duration-500 ease-in-out&quot;&gt;
+                             &lt;!-- Image: Cyberpunk Female Portrait --&gt;
+                             &lt;img src=&quot;https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&amp;w=764&amp;auto=format&amp;fit=crop&quot; 
+                                  alt=&quot;Olivia Wilson&quot; 
+                                  class=&quot;w-full h-full object-cover opacity-90 hover:opacity-100 hover:scale-105 transition-transform duration-700&quot;&gt;
+                             &lt;!-- 240*300 --&gt;
+                             &lt;!-- Overlay gradient for depth --&gt;
+                             &lt;div class=&quot;absolute bottom-0 left-0 w-full h-[100px]&quot; style=&quot;background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Text Info --&gt;
+                    &lt;h3 class=&quot;text-[22px] font-bold text-cyber-cyan mb-1 shadow-glow-text&quot;&gt;Olivia Wilson&lt;/h3&gt;
+                    &lt;p class=&quot;text-[14px] text-gray-400 font-light tracking-wider uppercase&quot;&gt;Founder Borcelle&lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Profile 2: Rufus --&gt;
+                &lt;div class=&quot;flex flex-col items-center group mt-[40px]&quot;&gt;
+                    &lt;!-- Tech Frame Wrapper --&gt;
+                    &lt;div class=&quot;relative p-[10px] mb-6&quot;&gt;
+                         &lt;!-- Top Left Bracket --&gt;
+                         &lt;div class=&quot;absolute top-0 left-0 w-[30px] h-[30px] border-t-[4px] border-l-[4px] border-cyber-cyan shadow-neon&quot;&gt;&lt;/div&gt;
+                         &lt;!-- Top Right Vertical Bar (Decorative) --&gt;
+                         &lt;div class=&quot;absolute top-[10px] right-[-10px] w-[4px] h-[40px] bg-cyber-cyan opacity-50&quot;&gt;&lt;/div&gt;
+                         &lt;!-- Bottom Right Bracket --&gt;
+                         &lt;div class=&quot;absolute bottom-0 right-0 w-[80px] h-[30px] border-b-[4px] border-r-[4px] border-cyber-cyan shadow-neon&quot;&gt;&lt;/div&gt;
+                         &lt;!-- Bottom Left Vertical Bar (Decorative) --&gt;
+                         &lt;div class=&quot;absolute bottom-[20px] left-[-10px] w-[4px] h-[30px] bg-cyber-cyan opacity-50&quot;&gt;&lt;/div&gt;
+
+                        &lt;!-- Image Container --&gt;
+                        &lt;div class=&quot;w-[240px] h-[300px] overflow-hidden bg-gray-800 relative z-10 grayscale hover:grayscale-0 transition-all duration-500 ease-in-out&quot;&gt;
+                            &lt;!-- Image: Cyberpunk Male Portrait --&gt;
+                            &lt;img src=&quot;https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&amp;w=687&amp;auto=format&amp;fit=crop&quot; 
+                                 alt=&quot;Rufus Stewart&quot; 
+                                 class=&quot;w-full h-full object-cover opacity-90 hover:opacity-100 hover:scale-105 transition-transform duration-700&quot;&gt;
+                            &lt;!-- 240*300 --&gt;
+                             &lt;!-- Overlay gradient for depth --&gt;
+                             &lt;div class=&quot;absolute bottom-0 left-0 w-full h-[100px]&quot; style=&quot;background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Text Info --&gt;
+                    &lt;h3 class=&quot;text-[22px] font-bold text-cyber-cyan mb-1 shadow-glow-text&quot;&gt;Rufus Stewart&lt;/h3&gt;
+                    &lt;p class=&quot;text-[14px] text-gray-400 font-light tracking-wider uppercase&quot;&gt;Manager&lt;/p&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 11
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=1280, height=720, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=1280, height=720, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Concept In Business - Tech Keynote&lt;/title&gt;
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;!-- Google Fonts (Baidu Mirror) --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        /* CSS Reset &amp; Global Settings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container - Fixed Dimensions */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #000000;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        /* Utility: Cyberpunk Glow Text */
+        .text-glow {
+            text-shadow: 0 0 10px rgba(77, 238, 234, 0.6);
+        }
+
+        /* Utility: HUD Box Shadow */
+        .hud-glow {
+            box-shadow: 0 0 15px rgba(77, 238, 234, 0.3);
+        }
+
+        /* Background Grid Pattern */
+        .bg-grid {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background-image: 
+                linear-gradient(rgba(77, 238, 234, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(77, 238, 234, 0.1) 1px, transparent 1px);
+            background-size: 60px 60px;
+            transform: perspective(500px) rotateX(60deg) scale(1.5);
+            transform-origin: bottom center;
+            opacity: 0.3;
+            z-index: 0;
+            pointer-events: none;
+        }
+        
+        /* Gradient Overlay to fade grid into black */
+        .bg-vignette {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, transparent 40%, #000000 90%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* Decorative Stripe Gradient */
+        .stripe-gradient {
+            background: linear-gradient(90deg, #4DEEEA, transparent);
+        }
+
+        /* Custom Bullet Icon styling */
+        .icon-ring {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 64px;
+            height: 64px;
+            border: 2px solid rgba(77, 238, 234, 0.3);
+            border-radius: 50%;
+        }
+
+        .icon-ring::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border: 1px dashed rgba(77, 238, 234, 0.6);
+            border-radius: 50%;
+        }
+
+        /* Vertical Connector Line */
+        .timeline-connector {
+            position: absolute;
+            left: 32px;
+            top: 64px;
+            bottom: -32px;
+            width: 1px;
+            background: linear-gradient(to bottom, rgba(77, 238, 234, 0.3) 50%, transparent);
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;!-- 0. Background Effects --&gt;
+        &lt;div class=&quot;bg-grid&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;bg-vignette&quot;&gt;&lt;/div&gt;
+
+        &lt;!-- 1. Top Left HUD Decoration --&gt;
+        &lt;div class=&quot;absolute top-10 left-12 z-10 flex flex-col gap-2&quot;&gt;
+            &lt;!-- Slanted stripes --&gt;
+            &lt;div class=&quot;flex gap-2&quot;&gt;
+                &lt;div class=&quot;w-4 h-2 bg-[#4DEEEA] transform skew-x-[-20deg]&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;w-4 h-2 bg-[#4DEEEA] transform skew-x-[-20deg] opacity-80&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;w-4 h-2 bg-[#4DEEEA] transform skew-x-[-20deg] opacity-60&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!-- Thin line --&gt;
+            &lt;div class=&quot;h-[1px] w-64 bg-gradient-to-r from-[#4DEEEA] to-transparent relative&quot;&gt;
+                &lt;div class=&quot;absolute right-0 top-[-2px] w-1 h-1 bg-[#4DEEEA] rounded-full&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 2. Top Right HUD Decoration (Concentric Circles) --&gt;
+        &lt;div class=&quot;absolute -top-16 -right-16 w-80 h-80 z-10 opacity-60&quot;&gt;
+            &lt;!-- Outer Ring --&gt;
+            &lt;div class=&quot;absolute inset-0 border border-gray-700 rounded-full flex items-center justify-center&quot;&gt;
+                &lt;!-- Middle Ring --&gt;
+                &lt;div class=&quot;w-48 h-48 border-[2px] border-t-[#4DEEEA] border-r-transparent border-b-gray-800 border-l-[#4DEEEA] rounded-full rotate-45&quot;&gt;&lt;/div&gt;
+                &lt;!-- Inner Ring --&gt;
+                &lt;div class=&quot;absolute w-32 h-32 border border-dashed border-gray-600 rounded-full&quot;&gt;&lt;/div&gt;
+                &lt;!-- Core --&gt;
+                &lt;div class=&quot;absolute w-12 h-12 bg-gray-900 border border-[#4DEEEA] rounded-full shadow-[0_0_15px_#4DEEEA]&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 3. Main Layout Grid --&gt;
+        &lt;div class=&quot;relative z-20 grid grid-cols-12 h-full w-full px-16 pt-24 pb-12&quot;&gt;
+            
+            &lt;!-- LEFT COLUMN: Title &amp; Visual --&gt;
+            &lt;div class=&quot;col-span-5 flex flex-col justify-center pr-8&quot;&gt;
+                &lt;!-- Title Section --&gt;
+                &lt;div class=&quot;mb-12&quot;&gt;
+                    &lt;h1 class=&quot;text-6xl font-bold text-white leading-tight&quot;&gt;
+                        Concept In &lt;br&gt;
+                        &lt;span class=&quot;text-[#4DEEEA] text-glow&quot;&gt;Business&lt;/span&gt;
+                    &lt;/h1&gt;
+                    &lt;div class=&quot;w-24 h-1 mt-6 stripe-gradient&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 3D Isometric Image Placeholder --&gt;
+                &lt;div class=&quot;relative w-full flex justify-center items-center&quot;&gt;
+                    &lt;!-- Holographic Platform Effect (CSS) --&gt;
+                    &lt;div class=&quot;absolute bottom-4 w-64 h-24 bg-[#4DEEEA] opacity-10 blur-xl rounded-[100%] transform scale-y-50&quot;&gt;&lt;/div&gt;
+                    
+                    &lt;!-- Main Image --&gt;
+                    &lt;div class=&quot;relative z-10 transition-transform hover:scale-105 duration-500&quot;&gt;
+                        &lt;img 
+                            src=&quot;https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&amp;w=800&amp;auto=format&amp;fit=crop&quot; 
+                            alt=&quot;Futuristic Isometric Cube Data&quot; 
+                            class=&quot;w-auto h-auto max-w-[400px] object-contain drop-shadow-[0_0_20px_rgba(77,238,234,0.3)]&quot;
+                        &gt;
+                        &lt;!-- 400*320 --&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Decorative Data Lines connecting to image --&gt;
+                    &lt;div class=&quot;absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#4DEEEA] to-transparent opacity-20 z-0&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- RIGHT COLUMN: Content List --&gt;
+            &lt;div class=&quot;col-span-7 flex flex-col justify-center pl-12 pt-8&quot;&gt;
+                &lt;ul class=&quot;space-y-12&quot;&gt;
+                    
+                    &lt;!-- Item 1 --&gt;
+                    &lt;li class=&quot;relative flex items-start gap-8 group&quot;&gt;
+                        &lt;!-- Connecting Line (except last item) --&gt;
+                        &lt;div class=&quot;timeline-connector&quot;&gt;&lt;/div&gt;
+                        
+                        &lt;!-- Icon --&gt;
+                        &lt;div class=&quot;flex-shrink-0&quot;&gt;
+                            &lt;div class=&quot;icon-ring&quot;&gt;
+                                &lt;i class=&quot;fa-solid fa-check text-[#4DEEEA] text-2xl drop-shadow-[0_0_5px_#4DEEEA]&quot;&gt;&lt;/i&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        
+                        &lt;!-- Text --&gt;
+                        &lt;div class=&quot;pt-1&quot;&gt;
+                            &lt;h3 class=&quot;text-2xl font-bold text-[#4DEEEA] mb-3 tracking-wide&quot;&gt;
+                                Digital Transformation
+                            &lt;/h3&gt;
+                            &lt;p class=&quot;text-gray-300 text-gl leading-relaxed font-light&quot;&gt;
+                                Comprehensive modernization of legacy systems to integrate advanced cloud computing architectures, enhancing operational agility and scalability across the enterprise.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/li&gt;
+
+                    &lt;!-- Item 2 --&gt;
+                    &lt;li class=&quot;relative flex items-start gap-8 group&quot;&gt;
+                        &lt;div class=&quot;timeline-connector&quot;&gt;&lt;/div&gt;
+                        
+                        &lt;div class=&quot;flex-shrink-0&quot;&gt;
+                            &lt;div class=&quot;icon-ring&quot;&gt;
+                                &lt;i class=&quot;fa-solid fa-microchip text-[#4DEEEA] text-2xl drop-shadow-[0_0_5px_#4DEEEA]&quot;&gt;&lt;/i&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        
+                        &lt;div class=&quot;pt-1&quot;&gt;
+                            &lt;h3 class=&quot;text-2xl font-bold text-[#4DEEEA] mb-3 tracking-wide&quot;&gt;
+                                Artificial Intelligence
+                            &lt;/h3&gt;
+                            &lt;p class=&quot;text-gray-300 text-gl leading-relaxed font-light&quot;&gt;
+                                Leveraging neural networks and machine learning algorithms to automate complex decision-making processes and derive predictive insights from big data.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/li&gt;
+
+                    &lt;!-- Item 3 --&gt;
+                    &lt;li class=&quot;relative flex items-start gap-8 group&quot;&gt;
+                        &lt;!-- No connector for last item --&gt;
+                        
+                        &lt;div class=&quot;flex-shrink-0&quot;&gt;
+                            &lt;div class=&quot;icon-ring&quot;&gt;
+                                &lt;i class=&quot;fa-solid fa-shield-halved text-[#4DEEEA] text-2xl drop-shadow-[0_0_5px_#4DEEEA]&quot;&gt;&lt;/i&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        
+                        &lt;div class=&quot;pt-1&quot;&gt;
+                            &lt;h3 class=&quot;text-2xl font-bold text-[#4DEEEA] mb-3 tracking-wide&quot;&gt;
+                                Cybersecurity
+                            &lt;/h3&gt;
+                            &lt;p class=&quot;text-gray-300 text-gl leading-relaxed font-light&quot;&gt;
+                                Implementing zero-trust architecture and real-time threat detection protocols to safeguard critical infrastructure against evolving digital vulnerabilities.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/li&gt;
+
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 4. Bottom Right Decorative Element --&gt;
+        &lt;div class=&quot;absolute bottom-8 right-12 z-10 flex items-end gap-2 opacity-50&quot;&gt;
+            &lt;div class=&quot;flex flex-col items-end gap-1&quot;&gt;
+                &lt;div class=&quot;w-16 h-[2px] bg-[#4DEEEA]&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;w-8 h-[2px] bg-[#4DEEEA]&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;text-[#4DEEEA] text-xs font-mono tracking-widest&quot;&gt;
+                SYS.RDY // V.2.0
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 12
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Core Operatives - Cyberpunk Team&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { cyber: { black: '#000', white: '#FFF', cyan: '#4DEEEA', text: '#94A3B8', darkblue: '#0F172A' } },
+                    fontFamily: { sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'] }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #000; overflow: hidden; font-family: 'Noto Sans SC', sans-serif; }
+        .bg-grid {
+            background-image: linear-gradient(rgba(77, 238, 234, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(77, 238, 234, 0.03) 1px, transparent 1px);
+            background-size: 30px 30px; position: absolute; inset: 0; z-index: 0; mask-image: radial-gradient(circle at center, black, transparent 80%);
+        }
+        /* 核心卡片样式 */
+        .tech-card-v2 {
+            position: relative; background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.7) 100%);
+            border-left: 2px solid #4DEEEA; clip-path: polygon(0% 0%, 92% 0%, 100% 15%, 100% 100%, 0% 100%);
+            padding: 24px; transition: all 0.3s ease; backdrop-filter: blur(10px);
+        }
+        .tech-card-v2:hover { transform: translateY(-5px); background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%); box-shadow: 0 10px 30px rgba(77, 238, 234, 0.15); }
+        .card-tag { position: absolute; top: 0; left: 24px; background: #4DEEEA; color: #000; font-size: 10px; font-weight: 800; padding: 2px 8px; font-family: monospace; clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%); }
+        .title-accent { height: 2px; width: 20px; background: #4DEEEA; display: inline-block; margin-right: 8px; }
+        .dot-matrix { display: grid; grid-template-columns: repeat(4, 3px); gap: 2px; position: absolute; bottom: 12px; right: 12px; opacity: 0.5; }
+        .dot { width: 3px; height: 3px; background: #4DEEEA; }
+        .marker-line { height: 4px; background: #4DEEEA; transform: skew(-20deg); margin-bottom: 4px; }
+        .glow-text { text-shadow: 0 0 15px rgba(77, 238, 234, 0.5); }
+        
+        /* 头像六边形裁切 */
+        .hexagon-mask {
+             clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;bg-grid&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute bottom-[-100px] right-[-100px] w-[500px] h-[500px] bg-cyber-cyan opacity-10 rounded-full blur-[120px] z-0&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;relative z-10 flex flex-col pt-16 px-20 h-full&quot;&gt;
+            &lt;div class=&quot;flex flex-col items-start mb-12&quot;&gt;
+                &lt;div class=&quot;marker-line w-16 opacity-80&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;marker-line w-10 opacity-60&quot;&gt;&lt;/div&gt;
+                &lt;h1 class=&quot;text-6xl font-bold text-white tracking-tighter mt-4&quot;&gt;
+                    Core &lt;span class=&quot;text-cyber-cyan glow-text&quot;&gt;Operatives&lt;/span&gt;
+                &lt;/h1&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;grid grid-cols-3 gap-8 flex-grow items-start&quot;&gt;
+                
+                &lt;div class=&quot;tech-card-v2 flex flex-col items-center&quot;&gt;
+                    &lt;div class=&quot;card-tag&quot;&gt;UNIT_ID: 01 // LEAD&lt;/div&gt;
+                    &lt;div class=&quot;w-36 h-36 hexagon-mask bg-cyber-cyan/10 p-1 mb-6 relative overflow-hidden&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&amp;w=256&amp;auto=format&amp;fit=crop&quot; class=&quot;w-full h-full object-cover hexagon-mask opacity-90 grayscale contrast-125 hover:grayscale-0 transition-all duration-500&quot;&gt;
+                        &lt;div class=&quot;absolute inset-0 bg-gradient-to-t from-cyber-darkblue/80 to-transparent pointer-events-none&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;text-center mb-6&quot;&gt;
+                        &lt;h2 class=&quot;text-2xl font-bold text-white tracking-wide&quot;&gt;Alex Chen&lt;/h2&gt;
+                        &lt;p class=&quot;text-cyber-cyan text-sm font-mono tracking-wider opacity-80&quot;&gt;Neural Architect&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;w-full flex flex-col gap-3 px-4&quot;&gt;
+                        &lt;div&gt;
+                            &lt;div class=&quot;flex justify-between text-sm text-cyber-text mb-1&quot;&gt;&lt;span&gt;System Link&lt;/span&gt;&lt;span&gt;98%&lt;/span&gt;&lt;/div&gt;
+                            &lt;div class=&quot;h-1 w-full bg-cyber-darkblue/50 rounded-full overflow-hidden&quot;&gt;&lt;div class=&quot;h-full bg-cyber-cyan w-[98%] shadow-[0_0_10px_#4DEEEA]&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;div class=&quot;flex justify-between text-sm text-cyber-text mb-1&quot;&gt;&lt;span&gt;Encryption&lt;/span&gt;&lt;span&gt;92%&lt;/span&gt;&lt;/div&gt;
+                            &lt;div class=&quot;h-1 w-full bg-cyber-darkblue/50 rounded-full overflow-hidden&quot;&gt;&lt;div class=&quot;h-full bg-cyber-cyan w-[92%] opacity-80&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;dot-matrix&quot;&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;tech-card-v2 flex flex-col items-center mt-12&quot;&gt; &lt;div class=&quot;card-tag&quot;&gt;UNIT_ID: 02 // OPS&lt;/div&gt;
+                    &lt;div class=&quot;w-36 h-36 hexagon-mask bg-cyber-cyan/10 p-1 mb-6 relative overflow-hidden&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&amp;w=256&amp;auto=format&amp;fit=crop&quot; class=&quot;w-full h-full object-cover hexagon-mask opacity-90 grayscale contrast-125 hover:grayscale-0 transition-all duration-500&quot;&gt;
+                        &lt;div class=&quot;absolute inset-0 bg-gradient-to-t from-cyber-darkblue/80 to-transparent pointer-events-none&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;text-center mb-6&quot;&gt;
+                        &lt;h2 class=&quot;text-2xl font-bold text-white tracking-wide&quot;&gt;Sarah Vance&lt;/h2&gt;
+                        &lt;p class=&quot;text-cyber-cyan text-sm font-mono tracking-wider opacity-80&quot;&gt;Field Operations&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;w-full flex flex-col gap-3 px-4&quot;&gt;
+                        &lt;div&gt;
+                            &lt;div class=&quot;flex justify-between text-sm text-cyber-text mb-1&quot;&gt;&lt;span&gt;Tactical&lt;/span&gt;&lt;span&gt;95%&lt;/span&gt;&lt;/div&gt;
+                            &lt;div class=&quot;h-1 w-full bg-cyber-darkblue/50 rounded-full overflow-hidden&quot;&gt;&lt;div class=&quot;h-full bg-cyber-cyan w-[95%] shadow-[0_0_10px_#4DEEEA]&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;div class=&quot;flex justify-between text-sm text-cyber-text mb-1&quot;&gt;&lt;span&gt;Hardware&lt;/span&gt;&lt;span&gt;88%&lt;/span&gt;&lt;/div&gt;
+                            &lt;div class=&quot;h-1 w-full bg-cyber-darkblue/50 rounded-full overflow-hidden&quot;&gt;&lt;div class=&quot;h-full bg-cyber-cyan w-[88%] opacity-80&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;dot-matrix&quot;&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;tech-card-v2 flex flex-col items-center&quot;&gt;
+                    &lt;div class=&quot;card-tag&quot;&gt;UNIT_ID: 03 // SEC&lt;/div&gt;
+                    &lt;div class=&quot;w-36 h-36 hexagon-mask bg-cyber-cyan/10 p-1 mb-6 relative overflow-hidden&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&amp;w=256&amp;auto=format&amp;fit=crop&quot; class=&quot;w-full h-full object-cover hexagon-mask opacity-90 grayscale contrast-125 hover:grayscale-0 transition-all duration-500&quot;&gt;
+                        &lt;div class=&quot;absolute inset-0 bg-gradient-to-t from-cyber-darkblue/80 to-transparent pointer-events-none&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;text-center mb-6&quot;&gt;
+                        &lt;h2 class=&quot;text-2xl font-bold text-white tracking-wide&quot;&gt;Marcus Thorne&lt;/h2&gt;
+                        &lt;p class=&quot;text-cyber-cyan text-sm font-mono tracking-wider opacity-80&quot;&gt;Cyber Security&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;w-full flex flex-col gap-3 px-4&quot;&gt;
+                        &lt;div&gt;
+                            &lt;div class=&quot;flex justify-between text-sm text-cyber-text mb-1&quot;&gt;&lt;span&gt;Firewall&lt;/span&gt;&lt;span&gt;99%&lt;/span&gt;&lt;/div&gt;
+                            &lt;div class=&quot;h-1 w-full bg-cyber-darkblue/50 rounded-full overflow-hidden&quot;&gt;&lt;div class=&quot;h-full bg-cyber-cyan w-[99%] shadow-[0_0_10px_#4DEEEA]&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;div class=&quot;flex justify-between text-sm text-cyber-text mb-1&quot;&gt;&lt;span&gt;Counter-Intel&lt;/span&gt;&lt;span&gt;90%&lt;/span&gt;&lt;/div&gt;
+                            &lt;div class=&quot;h-1 w-full bg-cyber-darkblue/50 rounded-full overflow-hidden&quot;&gt;&lt;div class=&quot;h-full bg-cyber-cyan w-[90%] opacity-80&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;dot-matrix&quot;&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute bottom-8 left-20 flex gap-10 items-center opacity-30&quot;&gt;
+            &lt;div class=&quot;text-[10px] text-cyber-cyan font-mono tracking-widest uppercase&quot;&gt;Personnel Status: Active&lt;/div&gt;
+            &lt;div class=&quot;flex gap-1 items-end h-3&quot;&gt;&lt;div class=&quot;w-1 h-full bg-cyber-cyan&quot;&gt;&lt;/div&gt;&lt;div class=&quot;w-1 h-[60%] bg-cyber-cyan&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 13
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Get In Touch - Cyberpunk Edition&lt;/title&gt;
+    
+    &lt;!-- Tailwind CSS CDN --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;!-- FontAwesome CDN --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;!-- Google Fonts CDN (Specific Requirement) --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;!-- Tailwind Config for Custom Colors --&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: {
+                            black: '#000000',
+                            cyan: '#4DEEEA',
+                            blue: '#0F172A',
+                            text: '#D1D5DB',
+                            metal: '#A3A3A3'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'Roboto', 'sans-serif'],
+                    },
+                    spacing: {
+                        '1280': '1280px',
+                        '720': '720px',
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        /* Global Reset &amp; Basic Settings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container - Fixed Size */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #000000;
+            overflow: hidden;
+        }
+
+        /* Custom Gradients (Strict Adherence to Guidelines) */
+        .bg-glow-radial {
+            background: radial-gradient(circle at center, rgba(15, 23, 42, 1) 0%, rgba(0, 0, 0, 0) 70%);
+        }
+        
+        .bg-grid-floor {
+            background-image: 
+                linear-gradient(rgba(77, 238, 234, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(77, 238, 234, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+            perspective: 1000px;
+            transform: perspective(500px) rotateX(60deg) translateY(100px) scale(2);
+            opacity: 0.2;
+        }
+
+        /* Tech Decoration Striped Pattern */
+        .tech-stripes {
+            background: repeating-linear-gradient(
+                -45deg,
+                #4DEEEA,
+                #4DEEEA 4px,
+                transparent 4px,
+                transparent 8px
+            );
+        }
+
+        /* Text Glow Effect */
+        .text-glow {
+            text-shadow: 0 0 20px rgba(77, 238, 234, 0.4);
+        }
+        
+        /* Circle HUD Border */
+        .hud-circle {
+            border: 2px solid rgba(77, 238, 234, 0.3);
+            border-top: 4px solid #4DEEEA;
+            border-right: 4px solid #4DEEEA;
+            box-shadow: 0 0 15px rgba(77, 238, 234, 0.2);
+        }
+
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;!-- Main Slide Container --&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+
+        &lt;!-- Layer 1: Ambient Background --&gt;
+        &lt;!-- Deep blue glow in the bottom right to support the image --&gt;
+        &lt;div class=&quot;absolute bottom-0 right-0 w-[800px] h-[800px] bg-glow-radial opacity-60 translate-x-1/4 translate-y-1/4 pointer-events-none&quot;&gt;&lt;/div&gt;
+        
+        &lt;!-- Layer 2: Grid Floor Effect (Simulating depth) --&gt;
+        &lt;div class=&quot;absolute bottom-[-200px] left-0 w-full h-[400px] bg-grid-floor pointer-events-none&quot;&gt;&lt;/div&gt;
+
+        &lt;!-- Layer 3: Main Layout Grid --&gt;
+        &lt;div class=&quot;relative z-10 grid grid-cols-12 h-full w-full&quot;&gt;
+            
+            &lt;!-- Left Column: Content (5 Columns) --&gt;
+            &lt;div class=&quot;col-span-5 pl-20 pt-16 flex flex-col justify-center h-full&quot;&gt;
+                
+                &lt;!-- Tech Decorator Top Left --&gt;
+                &lt;div class=&quot;absolute top-16 left-20 flex items-center mb-12&quot; style=&quot;width: 200px;&quot;&gt;
+                    &lt;!-- Striped Box --&gt;
+                    &lt;div class=&quot;w-12 h-3 tech-stripes rounded-sm transform -skew-x-12 mr-2&quot;&gt;&lt;/div&gt;
+                    &lt;!-- Thin Line --&gt;
+                    &lt;div class=&quot;h-[1px] bg-cyber-cyan w-full opacity-50 relative&quot;&gt;
+                        &lt;!-- Dot at end --&gt;
+                        &lt;div class=&quot;absolute right-0 top-1/2 transform -translate-y-1/2 w-1 h-1 bg-cyber-cyan rounded-full&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Title Section --&gt;
+                &lt;div class=&quot;mb-8 mt-12&quot;&gt;
+                    &lt;h1 class=&quot;text-6xl font-bold text-white tracking-tight leading-tight&quot;&gt;
+                        Get In &lt;span class=&quot;text-cyber-cyan text-glow&quot;&gt;Touch&lt;/span&gt;
+                    &lt;/h1&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Body Paragraph --&gt;
+                &lt;div class=&quot;mb-12 pr-10&quot;&gt;
+                    &lt;p class=&quot;text-cyber-text text-lg leading-relaxed font-light&quot;&gt;
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Contact Info List --&gt;
+                &lt;ul class=&quot;space-y-8&quot;&gt;
+                    &lt;!-- Phone --&gt;
+                    &lt;li class=&quot;flex items-center group&quot;&gt;
+                        &lt;!-- Icon Container --&gt;
+                        &lt;div class=&quot;w-12 h-12 rounded-full bg-cyber-cyan flex items-center justify-center shadow-lg shadow-cyan-500/20&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-phone text-cyber-black text-xl&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;!-- Text --&gt;
+                        &lt;div class=&quot;ml-6&quot;&gt;
+                            &lt;h6 class=&quot;text-white text-xl font-medium tracking-wide&quot;&gt;+123-456-7890&lt;/h6&gt;
+                        &lt;/div&gt;
+                    &lt;/li&gt;
+
+                    &lt;!-- Website --&gt;
+                    &lt;li class=&quot;flex items-center group&quot;&gt;
+                        &lt;div class=&quot;w-12 h-12 rounded-full border border-cyber-cyan flex items-center justify-center text-cyber-cyan&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-globe text-xl&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;ml-6&quot;&gt;
+                            &lt;h6 class=&quot;text-white text-xl font-medium tracking-wide&quot;&gt;www.reallygreatsite.com&lt;/h6&gt;
+                        &lt;/div&gt;
+                    &lt;/li&gt;
+
+                    &lt;!-- Email --&gt;
+                    &lt;li class=&quot;flex items-center group&quot;&gt;
+                        &lt;div class=&quot;w-12 h-12 rounded-full border border-cyber-cyan flex items-center justify-center text-cyber-cyan&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-envelope text-xl&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;ml-6&quot;&gt;
+                            &lt;h6 class=&quot;text-white text-xl font-medium tracking-wide&quot;&gt;hello@reallygreatsite.com&lt;/h6&gt;
+                        &lt;/div&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Right Column: Visuals (7 Columns) --&gt;
+            &lt;div class=&quot;col-span-7 relative flex items-center justify-center h-full overflow-hidden&quot;&gt;
+                
+                &lt;!-- Main Circular HUD Container --&gt;
+                &lt;!-- Positioned to the right and slightly cut off for dynamic feel --&gt;
+                &lt;div class=&quot;absolute right-[-100px] w-[850px] h-[850px] rounded-full hud-circle flex items-center justify-center&quot;&gt;
+                    
+                    &lt;!-- Inner Rotating Ring (Static for CSS only) --&gt;
+                    &lt;div class=&quot;absolute w-[95%] h-[95%] rounded-full border border-white opacity-10 border-dashed&quot;&gt;&lt;/div&gt;
+                    
+                    &lt;!-- Decorative HUD Nodes --&gt;
+                    &lt;div class=&quot;absolute top-[14%] right-[14%] w-4 h-4 bg-cyber-cyan rounded-full shadow-[0_0_10px_#4DEEEA]&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;absolute bottom-[14%] left-[14%] w-3 h-3 bg-cyber-cyan rounded-full shadow-[0_0_10px_#4DEEEA]&quot;&gt;&lt;/div&gt;
+
+                &lt;/div&gt;
+
+                &lt;!-- The &quot;AI&quot; Wireframe Head Image --&gt;
+                &lt;!-- Using a high-quality Unsplash image representing AI/Data Mesh --&gt;
+                &lt;div class=&quot;relative z-10 translate-x-10 translate-y-10 w-[600px] h-[700px] flex items-end justify-center&quot;&gt;
+                    &lt;!-- Image Mask Gradient (Fade bottom) --&gt;
+                    &lt;div class=&quot;absolute inset-0 z-20&quot; style=&quot;background: linear-gradient(to top, #000000 0%, transparent 40%);&quot;&gt;&lt;/div&gt;
+                    
+                    &lt;img 
+                        src=&quot;https://images.unsplash.com/photo-1531746790731-6c087fecd65a?q=80&amp;w=1000&amp;auto=format&amp;fit=crop&quot; 
+                        alt=&quot;Artificial Intelligence Wireframe Representation&quot; 
+                        class=&quot;object-contain w-full h-full opacity-90 drop-shadow-[0_0_30px_rgba(77,238,234,0.3)]&quot;
+                        style=&quot;mix-blend-mode: screen;&quot;
+                    &gt;
+                    &lt;!-- 600*700 --&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Floating Abstract City/Data Elements at bottom right --&gt;
+                &lt;div class=&quot;absolute bottom-0 right-0 w-full h-48 flex items-end justify-end px-12 pb-0 opacity-40 z-0&quot;&gt;
+                    &lt;!-- Abstract Bars representing data city --&gt;
+                    &lt;div class=&quot;w-8 h-24 bg-gradient-to-t from-cyber-blue to-transparent mx-1&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-6 h-32 bg-gradient-to-t from-cyber-blue to-transparent mx-1&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-10 h-16 bg-gradient-to-t from-cyber-blue to-transparent mx-1&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-12 h-40 bg-gradient-to-t from-cyber-cyan/30 to-transparent mx-1&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-8 h-20 bg-gradient-to-t from-cyber-blue to-transparent mx-1&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Decorative Corners --&gt;
+        &lt;!-- Bottom Left Corner Marker --&gt;
+        &lt;div class=&quot;absolute bottom-8 left-8 w-4 h-4 border-b-2 border-l-2 border-cyber-text opacity-30&quot;&gt;&lt;/div&gt;
+        &lt;!-- Top Right Corner Marker --&gt;
+        &lt;div class=&quot;absolute top-8 right-8 w-4 h-4 border-t-2 border-r-2 border-cyber-text opacity-30&quot;&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <script>
+   // 自动调整iframe高度
+    function resizeIframes() {
+        document.querySelectorAll('.responsive-iframe').forEach(iframe => {
+            try {
+                const doc = iframe.contentDocument || iframe.contentWindow.document;
+                const height = Math.max(
+                    doc.body.scrollHeight,
+                    doc.documentElement.scrollHeight,
+                    doc.body.offsetHeight,
+                    doc.documentElement.offsetHeight,
+                    doc.body.clientHeight,
+                    doc.documentElement.clientHeight
+                );
+                iframe.style.height = height + 'px';
+            } catch (e) {
+                console.log('无法调整iframe高度:', e);
+            }
+        });
+    }
+    
+    // 初始调整
+    window.addEventListener('load', resizeIframes);
+    
+    // 内容加载后调整
+    document.querySelectorAll('.responsive-iframe').forEach(iframe => {
+        iframe.addEventListener('load', function() {
+            resizeIframes();
+            // 对动态内容进行定期检查
+            setInterval(resizeIframes, 1000);
+        });
+    });
+  </script>
+ </body>
+</html>

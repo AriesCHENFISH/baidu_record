@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanover and Tyke - Best Sellers</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- ECharts -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+
+    <!-- Google Fonts (Baidu Mirror as requested) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        /* CSS Reset & Global Settings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Page Container - Fixed Dimensions */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background-color: #F3F3F3;
+            margin: 0 auto;
+            overflow: hidden;
+            /* No outer shadow as requested */
+        }
+
+        /* Ambient Light Effect (simulating the soft light in the reference) */
+        .ambient-light {
+            position: absolute;
+            top: -20%;
+            left: -10%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(243,243,243,0) 70%);
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.6;
+        }
+
+        .ambient-light-2 {
+            position: absolute;
+            bottom: -20%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255,255,255,0.6) 0%, rgba(243,243,243,0) 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Typography Utilities */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            color: #4A3520;
+        }
+
+        p {
+            color: #5C5248;
+            line-height: 1.6;
+        }
+
+        /* Card Hover Effect (Visual Polish only, no functional interaction needed) */
+        .product-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        /* Grid Layout Fixes */
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 1.3fr 1fr 1fr 1fr; /* Chart takes more space */
+            gap: 24px;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <!-- Ambient Decoration -->
+        <div class="ambient-light"></div>
+        <div class="ambient-light-2"></div>
+
+        <!-- Main Content Wrapper -->
+        <div class="relative z-10 w-full h-full flex flex-col px-16 py-10">
+            
+            <!-- Header Section -->
+            <div class="flex flex-col items-center mb-8">
+                <!-- Brand Pill -->
+                <div class="flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#4A3520] mb-5 bg-white/50 backdrop-blur-sm">
+                    <i class="fa-solid fa-clover text-[#4A3520] text-sm"></i>
+                    <span class="text-[#4A3520] text-xs font-bold tracking-widest uppercase">Hanover and Tyke</span>
+                </div>
+                
+                <!-- Main Title -->
+                <h1 class="text-5xl tracking-tight text-[#4A3520]">Our Best Seller Products</h1>
+            </div>
+
+            <!-- Content Grid -->
+            <div class="grid-layout w-full h-full pb-8">
+                
+                <!-- Column 1: Data Chart -->
+                <div class="bg-white rounded-3xl p-6 shadow-sm border border-gray-100 flex flex-col justify-between">
+                    <div class="flex items-center justify-between mb-2">
+                        <h2 class="text-lg font-bold text-[#4A3520]">Sales Analysis</h2>
+                        <i class="fa-solid fa-chart-simple text-[#8B6D51]"></i>
+                    </div>
+                    <!-- ECharts Container -->
+                    <div id="chart-container" style="width: 100%; height: 350px;"></div>
+                    <!-- Legend/Footer for Chart -->
+                    <div class="flex justify-center gap-4 mt-2">
+                         <div class="flex items-center gap-2">
+                            <div class="w-2 h-2 rounded-full bg-[#8B6D51]"></div>
+                            <span class="text-xs text-[#5C5248]">Volume</span>
+                         </div>
+                         <div class="flex items-center gap-2">
+                            <div class="w-2 h-2 rounded-full bg-[#4A3520]"></div>
+                            <span class="text-xs text-[#5C5248]">Growth</span>
+                         </div>
+                    </div>
+                </div>
+
+                <!-- Column 2: Product Card 1 -->
+                <div class="product-card bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 flex flex-col">
+                    <div class="h-[65%] w-full relative overflow-hidden bg-[#F8F5F2]">
+                        <img src="https://images.unsplash.com/photo-1594035910387-fea4779426e9?q=80&w=600&auto=format&fit=crop" 
+                             alt="Rose Perfume" 
+                             class="w-full h-full object-cover">
+                        <!-- 280*350 -->
+                    </div>
+                    <div class="h-[35%] p-5 flex flex-col justify-center">
+                        <h3 class="text-xl mb-1 text-[#4A3520]">Rose Eau de Perfume</h3>
+                        <p class="text-sm text-[#8B6D51] font-medium">Floral Collection</p>
+                    </div>
+                </div>
+
+                <!-- Column 3: Product Card 2 (Middle - Highlighted Style in original, keeping it elegant here) -->
+                <div class="product-card bg-[#4A3520] rounded-3xl overflow-hidden shadow-md flex flex-col">
+                    <div class="h-[65%] w-full relative overflow-hidden bg-[#D4C4B7]">
+                        <img src="https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?q=80&w=600&auto=format&fit=crop" 
+                             alt="Daisy Perfume" 
+                             class="w-full h-full object-cover opacity-90">
+                        <!-- 280*350 -->
+                    </div>
+                    <!-- Using dark background for variety as per original visual hierarchy -->
+                    <div class="h-[35%] p-5 flex flex-col justify-center">
+                        <h3 class="text-xl mb-1 text-white">Daisy Perfume Mist</h3>
+                        <p class="text-sm text-[#B09276] font-medium">Summer Edition</p>
+                    </div>
+                </div>
+
+                <!-- Column 4: Product Card 3 -->
+                <div class="product-card bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 flex flex-col">
+                    <div class="h-[65%] w-full relative overflow-hidden bg-[#F8F5F2]">
+                        <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=600&auto=format&fit=crop" 
+                             alt="Jasmine Perfume" 
+                             class="w-full h-full object-cover">
+                        <!-- 280*350 -->
+                    </div>
+                    <div class="h-[35%] p-5 flex flex-col justify-center">
+                        <h3 class="text-xl mb-1 text-[#4A3520]">Jasmine Eau de Toilette</h3>
+                        <p class="text-sm text-[#8B6D51] font-medium">Classic Series</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Script for ECharts -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var chartDom = document.getElementById('chart-container');
+            var myChart = echarts.init(chartDom);
+            var option;
+
+            option = {
+                grid: {
+                    left: '5%',
+                    right: '5%',
+                    bottom: '10%',
+                    top: '15%',
+                    containLabel: true
+                },
+                xAxis: {
+                    type: 'category',
+                    data: ['Item 1', 'Item 2', 'Item 3', 'Item 4'],
+                    axisLine: { show: false },
+                    axisTick: { show: false },
+                    axisLabel: {
+                        color: '#8B6D51',
+                        fontSize: 12,
+                        margin: 15
+                    }
+                },
+                yAxis: {
+                    type: 'value',
+                    splitLine: {
+                        lineStyle: {
+                            color: '#F3F3F3',
+                            type: 'dashed'
+                        }
+                    },
+                    axisLabel: {
+                        color: '#8B6D51',
+                        fontSize: 12
+                    }
+                },
+                series: [
+                    {
+                        data: [
+                            {value: 8, itemStyle: {color: '#B09276'}}, 
+                            {value: 12, itemStyle: {color: '#8B6D51'}}, 
+                            {value: 16, itemStyle: {color: '#6D543B'}}, 
+                            {value: 20, itemStyle: {color: '#4A3520'}}
+                        ],
+                        type: 'bar',
+                        barWidth: '60%',
+                        itemStyle: {
+                            borderRadius: [8, 8, 0, 0]
+                        },
+                        label: {
+                            show: true,
+                            position: 'top',
+                            color: '#4A3520',
+                            fontWeight: 'bold',
+                            formatter: '{c}'
+                        },
+                        showBackground: true,
+                        backgroundStyle: {
+                            color: 'rgba(243, 243, 243, 0.5)',
+                            borderRadius: [8, 8, 0, 0]
+                        }
+                    }
+                ],
+                animation: false // No animation strictly required, but usually ECharts has it. Setting false per strict "No animation" rule in prompt if interpreted as CSS animation, but chart rendering usually implies transition. I'll keep it false to be safe.
+            };
+
+            myChart.setOption(option);
+            
+            // Handle Resize logic if needed, though container is fixed.
+            window.addEventListener('resize', function() {
+                myChart.resize();
+            });
+        });
+    </script>
+</body>
+</html>

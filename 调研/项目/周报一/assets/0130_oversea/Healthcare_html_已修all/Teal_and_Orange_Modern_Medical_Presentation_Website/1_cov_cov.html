@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Presentation - Cover Slide</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        .font-main { font-family: 'Noto Sans SC', sans-serif; }
+        
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        @keyframes spin-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes spin-reverse {
+            from { transform: rotate(360deg); }
+            to { transform: rotate(0deg); }
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 0.5; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.1); }
+        }
+
+        /* Composition Classes */
+        .hero-icon-container {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* Outer Rings */
+        .ring-outer {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 2px dashed #E2E8F0;
+            border-radius: 50%;
+            animation: spin-slow 20s linear infinite;
+        }
+
+        .ring-inner {
+            position: absolute;
+            width: 70%;
+            height: 70%;
+            border-top: 4px solid #71B7C5;
+            border-right: 4px solid transparent;
+            border-bottom: 4px solid #71B7C5;
+            border-left: 4px solid transparent;
+            border-radius: 50%;
+            animation: spin-reverse 15s linear infinite;
+        }
+
+        /* Glowing Background Blob */
+        .glow-bg {
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background: radial-gradient(circle, #71B7C5 0%, transparent 70%);
+            opacity: 0.2;
+            filter: blur(40px);
+            animation: pulse-glow 4s ease-in-out infinite;
+        }
+
+        /* Floating Particles */
+        .particle {
+            position: absolute;
+            color: #71B7C5;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Container 1280x720 -->
+    <div id="page_container" class="relative w-[1280px] h-[720px] mx-auto overflow-hidden flex items-center px-20">
+        
+        <!-- Background Geometric Lines -->
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#EAECEE] to-transparent -z-10 skew-x-[-20deg] origin-top"></div>
+        <div class="absolute bottom-0 left-0 w-full h-[1px] bg-gray-200"></div>
+
+        <!-- Main Grid Layout -->
+        <div class="grid grid-cols-2 gap-10 w-full h-full items-center">
+
+            <!-- Left Column: The Large Dynamic Icon -->
+            <div class="flex justify-center items-center h-full">
+                <div class="hero-icon-container">
+                    <!-- Glow -->
+                    <div class="glow-bg"></div>
+                    
+                    <!-- Spinning Rings -->
+                    <div class="ring-outer"></div>
+                    <div class="ring-inner"></div>
+                    
+                    <!-- Center Icon (Snake Staff / Medical Cross composite) -->
+                    <div class="z-10 relative flex flex-col items-center justify-center text-[#2D3236]">
+                        <!-- Main Symbol -->
+                        <i class="fa-solid fa-staff-snake text-9xl drop-shadow-xl"></i>
+                        
+                        <!-- Floating small icons around -->
+                        <div class="particle top-0 right-0 animate-bounce" style="animation-duration: 3s;">
+                            <i class="fa-solid fa-plus text-2xl"></i>
+                        </div>
+                        <div class="particle bottom-10 left-0 animate-bounce" style="animation-duration: 4s;">
+                            <i class="fa-solid fa-dna text-xl"></i>
+                        </div>
+                        <div class="particle -top-10 left-10 animate-bounce" style="animation-duration: 5s;">
+                            <i class="fa-solid fa-heart-pulse text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Typography & Info -->
+            <div class="flex flex-col justify-center pl-10">
+                
+                <!-- Decor Line -->
+                <div class="w-20 h-2 bg-[#71B7C5] mb-8 rounded-full"></div>
+
+                <!-- Topic Tag -->
+                <div class="flex items-center gap-3 mb-4 text-gray-400 font-bold uppercase tracking-[0.3em] text-sm">
+                    <i class="fa-solid fa-file-medical"></i>
+                    Annual Report 2025
+                </div>
+
+                <!-- Main Title -->
+                <h1 class="text-7xl font-extrabold text-[#2D3236] leading-[1.1] mb-6 tracking-tight">
+                    Medical <br>
+                    <span class="text-[#71B7C5]">Presentation</span>
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="text-xl text-gray-500 font-light max-w-lg leading-relaxed mb-12">
+                    Comprehensive analysis on public hygiene, disease prevention, and healthcare protocols.
+                </p>
+
+                <!-- Presenter Info / Footer -->
+                <div class="flex items-center gap-6 border-t border-gray-300 pt-8">
+                    <!-- Avatar Placeholder (Icon based) -->
+                    <div class="w-14 h-14 bg-[#2D3236] rounded-full flex items-center justify-center text-white text-2xl shadow-lg">
+                        <i class="fa-regular fa-user"></i>
+                    </div>
+                    <div>
+                        <p class="text-base font-bold text-[#2D3236]">Dr. Alexander Smith</p>
+                        <p class="text-sm text-[#71B7C5] font-medium">Chief Medical Officer</p>
+                    </div>
+                    
+                    <div class="h-10 w-[1px] bg-gray-300 mx-2"></div>
+                    
+                    <div>
+                        <p class="text-sm font-bold text-gray-400 uppercase tracking-wide">Date</p>
+                        <p class="text-base text-[#2D3236] font-medium">October 24, 2025</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Branding Top Left -->
+        <div class="absolute top-10 left-10 flex items-center gap-2 opacity-50">
+            <i class="fa-solid fa-hospital text-xl"></i>
+            <span class="font-bold tracking-widest">FAUGET MED.</span>
+        </div>
+
+    </div>
+
+</body>
+</html>

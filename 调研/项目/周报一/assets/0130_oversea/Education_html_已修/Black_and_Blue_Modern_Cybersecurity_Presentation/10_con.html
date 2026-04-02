@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Threat Statistics - Page 10</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Noto Sans SC', sans-serif; }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background-color: #000000;
+            margin: 0 auto;
+            overflow: hidden;
+            background: radial-gradient(circle at 50% 120%, #1e1b4b 0%, #000000 70%);
+        }
+
+        .cyber-card-large {
+            background: linear-gradient(160deg, rgba(30, 27, 75, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 40px;
+            box-shadow: 0 0 60px rgba(76, 29, 149, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cyber-card-large::after {
+            content: '';
+            position: absolute;
+            top: -2px; left: -2px; right: -2px; bottom: -2px;
+            background: linear-gradient(45deg, #4f46e5, #d946ef, #4f46e5);
+            z-index: -1;
+            border-radius: 42px;
+            background-size: 400%;
+            opacity: 0.5;
+            filter: blur(10px);
+            animation: borderGlow 10s linear infinite;
+        }
+
+        @keyframes borderGlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .btn-gradient {
+            background: linear-gradient(90deg, #6b21a8 0%, #d946ef 100%);
+        }
+
+        .glow-sphere {
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, rgba(0, 0, 0, 0) 70%);
+            filter: blur(80px);
+            position: absolute;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+
+        <div class="glow-sphere" style="top: -100px; left: -100px; width: 600px; height: 600px;"></div>
+        <div class="glow-sphere" style="bottom: -100px; right: -100px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(217, 70, 239, 0.15) 0%, rgba(0,0,0,0) 70%);"></div>
+
+        <div class="absolute top-0 w-full flex justify-end items-center px-16 pt-12 pb-4 z-50">
+            <div class="btn-gradient px-8 py-3 rounded-full text-white font-bold shadow-lg" style="box-shadow: 0 4px 20px rgba(217, 70, 239, 0.4);">
+                Page 10
+            </div>
+        </div>
+
+        <div class="relative w-full h-full flex justify-center items-center z-20 pt-6">
+            
+            <div class="cyber-card-large w-[1100px] h-[560px] flex p-12">
+                
+                <div class="w-1/2 h-full flex items-center justify-center relative">
+                    <div class="absolute w-[300px] h-[300px] bg-indigo-500/20 rounded-full filter blur-[60px]"></div>
+                    <div id="threatPieChart" style="width: 100%; height: 100%;"></div>
+                </div>
+
+                <div class="w-1/2 h-full flex flex-col justify-center pl-12 relative z-10">
+                    <div class="mb-6">
+                        <h1 class="text-5xl font-extrabold text-white mb-4 drop-shadow-xl tracking-tight leading-tight">
+                            Global <span style="color: #E879F9;">Threat</span> Distribution
+                        </h1>
+                        <div class="w-24 h-1.5 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full"></div>
+                    </div>
+                    
+                    <p class="text-gray-300 text-lg font-light leading-relaxed mb-8">
+                        Visualizing the landscape of digital threats reveals that social engineering tactics like <strong>Phishing</strong> remain the most prevalent weapon. Understanding this distribution is crucial for prioritizing defense strategies.
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="w-4 h-4 rounded-full bg-[#5470c6] mr-4 shadow-[0_0_10px_#5470c6]"></div>
+                            <span class="text-white text-lg">Phishing & Social Eng.</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-4 h-4 rounded-full bg-[#91cc75] mr-4 shadow-[0_0_10px_#91cc75]"></div>
+                            <span class="text-white text-lg">Malware Attacks</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-4 h-4 rounded-full bg-[#fac858] mr-4 shadow-[0_0_10px_#fac858]"></div>
+                            <span class="text-white text-lg">Ransomware</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // ECharts 初始化
+        var chartDom = document.getElementById('threatPieChart');
+        var myChart = echarts.init(chartDom);
+        var option;
+
+        option = {
+            // 保持背景透明
+            backgroundColor: 'transparent',
+            tooltip: {
+                trigger: 'item',
+                backgroundColor: 'rgba(15, 23, 42, 0.9)',
+                borderColor: '#8b5cf6',
+                textStyle: {
+                    color: '#fff'
+                }
+            },
+            legend: {
+                show: false // 使用自定义的右侧列表代替图例
+            },
+            series: [
+                {
+                    name: 'Threat Type',
+                    type: 'pie',
+                    radius: ['45%', '75%'], // 环形图
+                    center: ['50%', '50%'],
+                    avoidLabelOverlap: false,
+                    itemStyle: {
+                        borderRadius: 10,
+                        borderColor: '#0f172a',
+                        borderWidth: 3,
+                        shadowBlur: 20,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    },
+                    label: {
+                        show: false,
+                        position: 'center'
+                    },
+                    emphasis: {
+                        label: {
+                            show: true,
+                            fontSize: 24,
+                            fontWeight: 'bold',
+                            color: '#fff',
+                            formatter: '{b}\n{d}%'
+                        },
+                        itemStyle: {
+                            shadowBlur: 30,
+                            shadowOffsetX: 0,
+                            shadowColor: 'rgba(255, 255, 255, 0.3)'
+                        }
+                    },
+                    labelLine: {
+                        show: false
+                    },
+                    data: [
+                        // 使用符合主题的配色
+                        { value: 40, name: 'Phishing', itemStyle: { color: '#5470c6' } },
+                        { value: 25, name: 'Malware', itemStyle: { color: '#91cc75' } },
+                        { value: 20, name: 'Ransomware', itemStyle: { color: '#fac858' } },
+                        { value: 10, name: 'DDoS', itemStyle: { color: '#ee6666' } },
+                        { value: 5,  name: 'Others', itemStyle: { color: '#73c0de' } }
+                    ]
+                }
+            ]
+        };
+
+        option && myChart.setOption(option);
+    </script>
+
+</body>
+</html>

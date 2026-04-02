@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, height=720, initial-scale=1.0">
+    <title>Studio Shodwe - Portfolio v3</title>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { bgPrimary: '#050202', accentRed: '#D32F2F', textSec: '#C0C0C0', cardBg: '#121212' },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        .page_container { width: 1280px; height: 720px; position: relative; background-color: #050202; margin: 0 auto; overflow: hidden; border: 1px solid #1a1a1a; }
+        .pixel-corner { width: 4px; height: 4px; background: #D32F2F; position: absolute; }
+    </style>
+</head>
+<body>
+    <div class="page_container p-12 flex flex-col">
+        <header class="relative z-50 flex justify-between items-center mb-10 pb-6 border-b border-white/5">
+            <div class="flex items-center gap-4">
+                <div class="w-10 h-10 bg-accentRed flex items-center justify-center rotate-45">
+                    <i class="fa-solid fa-layer-group text-white -rotate-45 text-sm"></i>
+                </div>
+                <div>
+                    <h2 class="text-white font-bold text-xl tracking-wider uppercase">Studio Shodwe</h2>
+                    <div class="h-[1px] bg-accentRed mt-0.5 w-full"></div>
+                </div>
+            </div>
+            <div class="border-l-2 border-accentRed pl-4">
+                <span class="text-white text-xs tracking-[0.4em] uppercase opacity-50 block">Showcase</span>
+                <span class="text-white text-2xl font-bold tracking-[0.2em] uppercase">INNOVATION</span>
+            </div>
+        </header>
+
+        <main class="flex-1 grid grid-cols-12 gap-6 relative">
+            <div class="col-span-4 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-1 bg-accentRed mb-6"></div>
+                    <h1 class="text-6xl font-black text-white leading-tight uppercase tracking-tighter mb-8">
+                        Immersive<br>Digital<br><span class="text-accentRed">Works</span>
+                    </h1>
+                    <div class="p-5 border border-white/10 bg-white/5 relative group">
+                        <div class="pixel-corner top-0 left-0"></div>
+                        <p class="text-textSec text-xs leading-6 text-justify italic">
+                            Explore our collection of groundbreaking creations, where intuition meets innovation to form digital journeys built for enterprise and entertainment.
+                        </p>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4 group">
+                        <div class="w-1 h-8 bg-accentRed group-hover:h-12 transition-all"></div>
+                        <div>
+                            <h4 class="text-white text-sm font-bold tracking-widest uppercase">Our Philosophy</h4>
+                            <p class="text-textSec text-xs opacity-60">Merging creative vision with technical precision to forge unrivaled digital landscapes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-span-8 grid grid-cols-2 grid-rows-2 gap-6">
+                <div class="col-span-2 row-span-1 relative bg-cardBg border border-white/5 overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1622979135225-d2ba269fb1bd?w=1000" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-1000">
+                    <div class="absolute inset-0 bg-gradient-to-t from-bgPrimary via-transparent to-transparent"></div>
+                    <div class="absolute bottom-6 left-6">
+                        <span class="text-accentRed text-[10px] font-bold tracking-widest">FEATURED_PROJECT</span>
+                        <h3 class="text-white text-2xl font-black tracking-widest uppercase">NEURAL LINK VR HEADSET</h3>
+                    </div>
+                </div>
+                <div class="bg-cardBg border border-white/5 p-4 flex flex-col justify-between">
+                    <div class="w-full h-32 bg-black mb-4 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=500" class="w-full h-full object-cover grayscale opacity-50">
+                    </div>
+                    <div><h5 class="text-white text-xs font-bold uppercase mb-2">VR Social Hub</h5></div>
+                </div>
+                <div class="flex flex-col gap-6">
+                    <div class="flex-1 bg-accentRed/10 border border-accentRed/20 p-4 relative overflow-hidden">
+                        <h5 class="text-accentRed text-xs font-bold uppercase mb-2">Architecting Emotions</h5>
+                        <p class="text-white text-sm leading-relaxed">Spatial computing optimized for emotional resonance.</p>
+                    </div>
+                    <div class="h-12 border border-white/10 flex items-center justify-between px-4 group cursor-pointer hover:bg-white/5 transition-colors">
+                        <span class="text-white text-sm font-bold tracking-[0.3em] uppercase">Browse All Projects</span>
+                        <i class="fa-solid fa-arrow-right text-accentRed group-hover:translate-x-2 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

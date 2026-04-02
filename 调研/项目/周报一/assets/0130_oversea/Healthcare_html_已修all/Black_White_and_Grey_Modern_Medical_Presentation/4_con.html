@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaborative Health Ecosystems</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        .font-serif-display { font-family: 'Playfair Display', serif; }
+        .font-sans-body { font-family: 'Inter', sans-serif; }
+        .star-shape { clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); }
+        /* 这里的卡片采用微透明处理，增加呼吸感 */
+        .content-card-glass { 
+            background-color: rgba(242, 227, 213, 0.95); 
+            backdrop-filter: blur(10px);
+            border-radius: 40px; 
+            box-shadow: 0 30px 60px rgba(0,0,0,0.4); 
+        }
+        .image-mask {
+            clip-path: inset(0 0 0 0 round 40px);
+        }
+    </style>
+</head>
+<body>
+    <div id="page_container" class="relative w-[1280px] h-[720px] mx-auto bg-[#1E1B1C] overflow-hidden flex items-center justify-center">
+        
+        <!-- 背景装饰文字 -->
+        <div class="absolute top-10 left-10 text-white/5 text-[150px] font-serif-display italic select-none">Ecosystem</div>
+
+        <!-- 核心容器 -->
+        <div class="relative w-[1100px] h-[580px] flex items-center">
+            
+            <!-- 底层配图：大面积视觉引导 -->
+            <div class="absolute right-0 w-[700px] h-full image-mask overflow-hidden z-10">
+                <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=1200&auto=format&fit=crop" 
+                     alt="Medical Professional Team" 
+                     class="w-full h-full object-cover grayscale-[20%] contrast-110">
+                <!-- 图片上的暗色渐变，确保文字可读性（如果图片延伸到文字下方） -->
+                <div class="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-[#1E1B1C]/50"></div>
+            </div>
+
+            <!-- 悬浮内容卡片：重叠在图片上 -->
+            <div class="content-card-glass w-[550px] p-16 z-20 relative">
+                <div class="absolute -top-6 -right-6 w-12 h-12 bg-[#E76F51] star-shape animate-pulse"></div>
+                
+                <header class="mb-8">
+                    <h1 class="text-[#1E1B1C] text-7xl font-serif-display leading-tight">
+                        Building a <br>
+                        <span class="italic font-light text-[#E76F51]">Sustainable</span> 
+                    </h1>
+                    <div class="w-12 h-1 bg-[#1E1B1C] mt-6"></div>
+                </header>
+
+                <div class="space-y-6">
+                    <p class="text-[#1E1B1C] font-sans-body text-lg leading-relaxed text-justify font-medium">
+                        A truly collaborative health ecosystem integrates primary care, specialized medicine, and community support into a single, seamless journey for the patient. 
+                    </p>
+                    <p class="text-[#1E1B1C]/70 font-sans-body text-sm leading-relaxed">
+                        By removing institutional silos and fostering open data exchange, we create a resilient framework that prioritizes human well-being over administrative complexity.
+                    </p>
+                </div>
+
+                <div class="mt-10 pt-8 border-t border-[#1E1B1C]/10 flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-circle-nodes text-[#E76F51]"></i>
+                        <span class="text-[10px] font-bold tracking-widest text-[#1E1B1C] uppercase">Integrated Care Network</span>
+                    </div>
+                    <div class="w-8 h-8 rounded-full border border-[#1E1B1C]/20 flex items-center justify-center">
+                        <i class="fa-solid fa-arrow-right text-[#1E1B1C] text-xs"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右侧装饰元素 -->
+            <div class="absolute top-1/2 -right-12 -translate-y-1/2 flex flex-col gap-4 z-30">
+                <div class="w-1 h-12 bg-white/20"></div>
+                <div class="w-1 h-24 bg-[#F2E3D5]"></div>
+                <div class="w-1 h-12 bg-white/20"></div>
+            </div>
+        </div>
+
+        <!-- 底部信息 -->
+        <div class="absolute bottom-10 w-full px-20 flex justify-between items-center">
+            <p class="text-[#FFFFFF] opacity-20 text-[10px] font-sans-body tracking-[0.2em] uppercase">Healthcare Sustainability Vision 2026</p>
+        </div>
+    </div>
+</body>
+</html>

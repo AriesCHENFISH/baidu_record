@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, initial-scale=1.0">
+    <title>Salford & Co. Keynote Slide</title>
+    <!-- Google Fonts Mirror (Strictly following instruction) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <style>
+        /* CSS Reset & Global Settings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Font Family Application */
+        body, #page_container {
+            font-family: 'Noto Sans SC', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Decorative Sparkle Shape (CSS Drawing) */
+        .sparkle {
+            position: absolute;
+            background: #E07A5F;
+            border-radius: 50%;
+            filter: blur(1px);
+        }
+        .sparkle::after, .sparkle::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background: #E07A5F;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 10px 2px rgba(224, 122, 95, 0.6);
+        }
+        .sparkle::before {
+            width: 4px;
+            height: 50px;
+        }
+        .sparkle::after {
+            width: 50px;
+            height: 4px;
+        }
+
+        /* Specific container styling */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background: #050505; /* Deep Black Background */
+            overflow: hidden;
+        }
+
+        /* Soft Gradient Background Mesh */
+        .bg-mesh {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #050505 0%, #1a1a1a 100%);
+            z-index: 0;
+        }
+
+        /* Glassy Texture Overlay */
+        .texture-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.4;
+            background-image: radial-gradient(#4A4A4A 1px, transparent 1px);
+            background-size: 30px 30px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Container -->
+    <div id="page_container">
+        
+        <!-- Background Elements -->
+        <div class="bg-mesh"></div>
+        <div class="texture-overlay"></div>
+
+        <!-- Main Content Card: Using Primary Color #A3332A -->
+        <!-- Flex layout to center the card, but card itself uses Grid -->
+        <div class="relative z-10 w-full h-full flex items-center justify-center">
+            
+            <!-- Red Card Container -->
+            <div class="w-[1100px] h-[580px] bg-[#A3332A] rounded-[32px] shadow-2xl relative p-12 flex flex-col justify-between">
+                
+                <!-- Decoration: Soft glow gradient behind the card for depth -->
+                <div style="position: absolute; top: -50px; right: -50px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(224,122,95,0.4) 0%, rgba(163,51,42,0) 70%); z-index: -1;"></div>
+
+                <!-- Header: Brand Name -->
+                <div class="w-full flex justify-between items-start mb-4">
+                    <h2 class="text-[#FDF5E6] text-xl font-medium tracking-widest uppercase opacity-90">
+                        Salford & Co.
+                    </h2>
+                    <!-- Top Right Decorative Sparkle -->
+                    <div class="sparkle" style="top: 20px; right: 20px; transform: scale(0.8);"></div>
+                </div>
+
+                <!-- Main Content Grid -->
+                <div class="flex-1 grid grid-cols-12 gap-10 items-center">
+                    
+                    <!-- Left Column: Visual (Barista Image + Contact) -->
+                    <div class="col-span-5 flex flex-col h-full justify-between">
+                        <!-- Image Container with Elevation -->
+                        <div class="w-full h-[320px] rounded-2xl overflow-hidden shadow-lg border border-[#FDF5E6]/10 relative group">
+                             <!-- Placeholder for coffee making process -->
+                            <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=800&auto=format&fit=crop" 
+                                 alt="Barista crafting coffee" 
+                                 class="w-full h-full object-cover" 
+                                 style="filter: sepia(20%) contrast(110%);">
+                            <!-- 400*320 -->
+                        </div>
+
+                        <!-- Contact Information List -->
+                        <div class="mt-8">
+                            <ul class="space-y-4">
+                                <li class="flex items-center text-[#FDF5E6] group">
+                                    <div class="w-8 h-8 rounded-full bg-[#5D4037] flex items-center justify-center mr-3 shadow-md">
+                                        <i class="fa-solid fa-at text-[#E07A5F] text-sm"></i>
+                                    </div>
+                                    <span class="text-sm font-light tracking-wide">@reallygreatsite</span>
+                                </li>
+                                <li class="flex items-center text-[#FDF5E6] group">
+                                    <div class="w-8 h-8 rounded-full bg-[#5D4037] flex items-center justify-center mr-3 shadow-md">
+                                        <i class="fa-solid fa-globe text-[#E07A5F] text-sm"></i>
+                                    </div>
+                                    <span class="text-sm font-light tracking-wide">reallygreatsite.com</span>
+                                </li>
+                                <li class="flex items-center text-[#FDF5E6] group">
+                                    <div class="w-8 h-8 rounded-full bg-[#5D4037] flex items-center justify-center mr-3 shadow-md">
+                                        <i class="fa-solid fa-location-dot text-[#E07A5F] text-sm"></i>
+                                    </div>
+                                    <span class="text-sm font-light tracking-wide">123 Anywhere St., Any City</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Text Content -->
+                    <div class="col-span-7 flex flex-col justify-center pl-4 relative h-full">
+                        
+                        <!-- Mission Statement -->
+                        <div class="mb-12 relative">
+                            <!-- Decorative vertical line -->
+                            <div class="absolute -left-8 top-1 h-full w-[1px] bg-[#FDF5E6] opacity-30"></div>
+                            
+                            <p class="text-[#FDF5E6] text-2xl leading-relaxed font-light">
+                                We bring <b class="text-[#E07A5F] font-semibold">café-quality coffee</b> into every home, personalized to perfection.
+                            </p>
+                            <p class="text-[#FDF5E6] text-lg leading-relaxed mt-4 font-light opacity-80">
+                                Join us in redefining the daily coffee experience.
+                            </p>
+                        </div>
+
+                        <!-- Big Headline: Thank You -->
+                        <div class="relative mt-auto">
+                            <!-- Large Sparkle Decoration near title -->
+                            <div class="sparkle" style="top: -20px; right: 40px; transform: scale(1.2);"></div>
+                            
+                            <h1 class="text-[#FDF5E6] text-7xl font-bold leading-tight tracking-tight">
+                                Thank You<br>
+                                <span class="text-[#050505]" style="text-shadow: 1px 1px 0px rgba(255,255,255,0.2);">Very Much</span>
+                            </h1>
+                            
+                            <!-- Bottom decorative bar -->
+                            <div class="w-24 h-2 bg-[#E07A5F] mt-6 rounded-full"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

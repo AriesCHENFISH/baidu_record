@@ -1,0 +1,1787 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Responsive Merged HTML
+  </title>
+  <style>
+   body {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .page-wrapper {
+                width: 100%;
+                margin: 15px 0;
+                position: relative;
+            }
+            .page-title {
+                background: #f5f5f5;
+                padding: 5px 10px;
+                border-radius: 3px 3px 0 0;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+            }
+            .responsive-iframe {
+                border: none;
+                width: 100%;
+                display: block;
+            }
+  </style>
+ </head>
+ <body>
+  <!-- 内容将在这里插入 -->
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 1
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Creative Portfolio - Typography Edition&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,900&amp;family=Inter:wght@300;400;700;900&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryBg: '#9E2A22',
+                        primaryText: '#FDF9E5',
+                        secondaryText: '#E0C0BB',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans SC', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background-color: #9E2A22;
+            overflow: hidden;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 装饰性背景大字 */
+        .bg-watermark {
+            position: absolute;
+            font-size: 600px;
+            font-weight: 900;
+            color: rgba(253, 249, 229, 0.03);
+            line-height: 0.8;
+            pointer-events: none;
+            z-index: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* 主标题错落动效 */
+        .staggered-title {
+            font-size: 180px;
+            line-height: 0.85;
+            letter-spacing: -0.05em;
+            z-index: 10;
+        }
+
+        /* 极细装饰线 */
+        .decorative-line {
+            position: absolute;
+            background-color: rgba(253, 249, 229, 0.2);
+            z-index: 5;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;div class=&quot;decorative-line w-full h-[1px] top-12 left-0&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;decorative-line w-full h-[1px] bottom-12 left-0&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;decorative-line h-full w-[1px] left-12 top-0&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;decorative-line h-full w-[1px] right-12 top-0&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;decorative-line w-24 h-[1px] top-1/2 left-0&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;decorative-line w-24 h-[1px] top-1/2 right-0&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;bg-watermark -left-20 -top-20&quot;&gt;C&lt;/div&gt;
+        &lt;div class=&quot;bg-watermark -right-20 -bottom-20&quot;&gt;P&lt;/div&gt;
+
+        &lt;nav class=&quot;absolute top-0 left-0 w-full px-20 py-16 flex justify-between items-center z-20&quot;&gt;
+            &lt;div class=&quot;flex items-center gap-10&quot;&gt;
+                &lt;span class=&quot;text-secondaryText text-xs font-bold tracking-[0.5em] uppercase&quot;&gt;2028 Edition&lt;/span&gt;
+                &lt;div class=&quot;w-12 h-[1px] bg-secondaryText/30&quot;&gt;&lt;/div&gt;
+                &lt;span class=&quot;text-primaryText text-xs font-medium tracking-[0.3em] uppercase&quot;&gt;Visual Arts&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;flex items-center gap-8&quot;&gt;
+                &lt;span class=&quot;text-primaryText text-xs tracking-widest uppercase&quot;&gt;vol. 04&lt;/span&gt;
+                &lt;i class=&quot;fa-solid fa-asterisk text-primaryText/40 text-[10px] animate-spin-slow&quot;&gt;&lt;/i&gt;
+                &lt;span class=&quot;text-primaryText text-xs tracking-widest uppercase italic font-serif&quot;&gt;Aesthetics&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/nav&gt;
+
+        &lt;div class=&quot;flex flex-col items-center justify-center relative w-full&quot;&gt;
+            &lt;h1 class=&quot;staggered-title font-black text-primaryText uppercase -translate-x-24&quot;&gt;
+                Creative
+            &lt;/h1&gt;
+            
+            &lt;div class=&quot;w-32 h-[2px] bg-primaryText my-6 opacity-80&quot;&gt;&lt;/div&gt;
+
+            &lt;h1 class=&quot;staggered-title font-black text-primaryText uppercase translate-x-24 flex items-baseline&quot;&gt;
+                Portf&lt;span class=&quot;font-serif italic font-normal text-secondaryText/80&quot;&gt;o&lt;/span&gt;lio
+            &lt;/h1&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute bottom-16 w-full px-20 flex justify-between items-end z-20&quot;&gt;
+            &lt;div class=&quot;max-w-xs&quot;&gt;
+                &lt;p class=&quot;text-secondaryText text-[11px] leading-relaxed tracking-wider uppercase&quot;&gt;
+                    Exploring the intersection of visual narrative &lt;br&gt; 
+                    and digital craftsmanship in the modern era.
+                &lt;/p&gt;
+            &lt;/div&gt;
+            
+            &lt;div class=&quot;text-right flex flex-col items-end&quot;&gt;
+                &lt;div class=&quot;flex gap-4 mb-3&quot;&gt;
+                    &lt;div class=&quot;w-2 h-2 bg-primaryText&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-2 h-2 bg-primaryText opacity-50&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-2 h-2 bg-primaryText opacity-20&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;p class=&quot;text-primaryText font-bold text-lg tracking-[0.2em] uppercase&quot;&gt;
+                    Selected Works
+                &lt;/p&gt;
+                &lt;p class=&quot;text-secondaryText text-[9px] tracking-[0.4em] uppercase opacity-60&quot;&gt;
+                    © All Rights Reserved 2028
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute top-1/2 left-20 -translate-y-1/2 rotate-90 origin-left&quot;&gt;
+            &lt;span class=&quot;text-[9px] text-secondaryText opacity-30 tracking-[1em] uppercase&quot;&gt;Structural Integrity&lt;/span&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+    &lt;style&gt;
+        @keyframes spin-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-spin-slow {
+            animation: spin-slow 12s linear infinite;
+        }
+    &lt;/style&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 2
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Index - Premium Portfolio&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+    
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryBg: '#9E2A22',
+                        primaryText: '#FDF9E5',
+                        bodyText: '#E0C0BB',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #9E2A22;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+            background-image: linear-gradient(135deg, #9E2A22 0%, #85221b 100%);
+        }
+
+        .nav-item-text { font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; }
+        
+        /* 背景水印 */
+        .bg-watermark {
+            position: absolute;
+            font-family: 'Playfair Display';
+            font-size: 380px;
+            font-weight: 900;
+            color: rgba(253, 249, 229, 0.02);
+            line-height: 1;
+            z-index: 0;
+            pointer-events: none;
+            left: 50%;
+            top: 55%;
+            transform: translate(-50%, -50%);
+            white-space: nowrap;
+        }
+
+        ::-webkit-scrollbar { display: none; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;bg-watermark uppercase italic&quot;&gt;Index&lt;/div&gt;
+        &lt;div class=&quot;absolute top-0 left-[33%] w-[1px] h-full bg-bodyText opacity-10&quot;&gt;&lt;/div&gt;
+
+        &lt;header class=&quot;absolute top-0 left-0 w-full h-24 flex items-center px-12 z-20 justify-between&quot;&gt;
+            &lt;div class=&quot;flex items-center gap-8&quot;&gt;
+                &lt;div class=&quot;text-2xl font-serif font-black text-primaryText tracking-tighter&quot;&gt;CP.&lt;/div&gt;
+                &lt;div class=&quot;h-8 w-[1px] bg-bodyText opacity-30&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;nav-item-text text-primaryText font-semibold&quot;&gt;2028 Portfolio&lt;/div&gt;
+            &lt;/div&gt;
+            
+            &lt;nav class=&quot;flex gap-10 items-center&quot;&gt;
+                &lt;div class=&quot;nav-item-text text-primaryText opacity-50 hover:opacity-100 cursor-pointer transition-all&quot;&gt;Creative&lt;/div&gt;
+                &lt;div class=&quot;nav-item-text text-primaryText opacity-50 hover:opacity-100 cursor-pointer transition-all&quot;&gt;Photography&lt;/div&gt;
+                &lt;div class=&quot;flex items-center gap-4 bg-primaryText text-primaryBg px-5 py-1.5 rounded-full shadow-lg&quot;&gt;
+                    &lt;span class=&quot;nav-item-text font-bold text-[10px]&quot;&gt;Index&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/nav&gt;
+
+            &lt;div class=&quot;nav-item-text text-primaryText font-bold&quot;&gt;PAGE — INDEX&lt;/div&gt;
+            &lt;div class=&quot;absolute bottom-0 left-12 right-12 h-[1px] bg-bodyText opacity-20&quot;&gt;&lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;main class=&quot;grid grid-cols-12 h-full pt-24 pb-12 px-12 relative z-10&quot;&gt;
+            
+            &lt;div class=&quot;col-span-4 flex flex-col justify-center pr-12&quot;&gt;
+                &lt;div class=&quot;flex items-center gap-3 mb-4&quot;&gt;
+                    &lt;div class=&quot;w-8 h-[1px] bg-primaryText&quot;&gt;&lt;/div&gt;
+                    &lt;span class=&quot;nav-item-text text-[10px] text-bodyText tracking-[0.5em]&quot;&gt;Directory&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;h1 class=&quot;font-serif text-[100px] leading-[0.8] font-black text-primaryText uppercase tracking-tighter mb-8&quot;&gt;
+                    Con&lt;br&gt;tents
+                &lt;/h1&gt;
+                &lt;p class=&quot;font-sans text-bodyText text-[12px] leading-relaxed opacity-60 max-w-[200px]&quot;&gt;
+                    A curated journey through visual storytelling, strategic vision, and technical mastery.
+                &lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;col-span-8 grid grid-cols-2 gap-x-12 items-center py-6&quot;&gt;
+                
+                &lt;div class=&quot;space-y-2&quot;&gt;
+                    &lt;div class=&quot;group border-b border-bodyText/20 py-5 flex justify-between items-end cursor-pointer&quot;&gt;
+                        &lt;div class=&quot;flex items-baseline gap-4&quot;&gt;
+                            &lt;span class=&quot;font-serif italic text-primaryText text-lg opacity-40&quot;&gt;01&lt;/span&gt;
+                            &lt;h2 class=&quot;text-2xl font-serif font-bold text-primaryText uppercase tracking-tight group-hover:translate-x-2 transition-transform&quot;&gt;About Me&lt;/h2&gt;
+                        &lt;/div&gt;
+                        &lt;i class=&quot;fa-solid fa-arrow-right text-primaryText opacity-0 group-hover:opacity-100 -rotate-45 transition-all&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;group border-b border-bodyText/20 py-5 flex justify-between items-end cursor-pointer&quot;&gt;
+                        &lt;div class=&quot;flex items-baseline gap-4&quot;&gt;
+                            &lt;span class=&quot;font-serif italic text-primaryText text-lg opacity-40&quot;&gt;02&lt;/span&gt;
+                            &lt;h2 class=&quot;text-2xl font-serif font-bold text-primaryText uppercase tracking-tight group-hover:translate-x-2 transition-transform&quot;&gt;Highlights&lt;/h2&gt;
+                        &lt;/div&gt;
+                        &lt;i class=&quot;fa-solid fa-arrow-right text-primaryText opacity-0 group-hover:opacity-100 -rotate-45 transition-all&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;group border-b border-bodyText/20 py-5 flex justify-between items-end cursor-pointer&quot;&gt;
+                        &lt;div class=&quot;flex items-baseline gap-4&quot;&gt;
+                            &lt;span class=&quot;font-serif italic text-primaryText text-lg opacity-40&quot;&gt;03&lt;/span&gt;
+                            &lt;h2 class=&quot;text-2xl font-serif font-bold text-primaryText uppercase tracking-tight group-hover:translate-x-2 transition-transform&quot;&gt;Philosophy&lt;/h2&gt;
+                        &lt;/div&gt;
+                        &lt;i class=&quot;fa-solid fa-arrow-right text-primaryText opacity-0 group-hover:opacity-100 -rotate-45 transition-all&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;group border-b border-bodyText/20 py-5 flex justify-between items-end cursor-pointer&quot;&gt;
+                        &lt;div class=&quot;flex items-baseline gap-4&quot;&gt;
+                            &lt;span class=&quot;font-serif italic text-primaryText text-lg opacity-40&quot;&gt;04&lt;/span&gt;
+                            &lt;h2 class=&quot;text-2xl font-serif font-bold text-primaryText uppercase tracking-tight group-hover:translate-x-2 transition-transform&quot;&gt;Experience&lt;/h2&gt;
+                        &lt;/div&gt;
+                        &lt;i class=&quot;fa-solid fa-arrow-right text-primaryText opacity-0 group-hover:opacity-100 -rotate-45 transition-all&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;space-y-2&quot;&gt;
+                    &lt;div class=&quot;group border-b border-bodyText/20 py-5 flex justify-between items-end cursor-pointer&quot;&gt;
+                        &lt;div class=&quot;flex items-baseline gap-4&quot;&gt;
+                            &lt;span class=&quot;font-serif italic text-primaryText text-lg opacity-40&quot;&gt;05&lt;/span&gt;
+                            &lt;h2 class=&quot;text-2xl font-serif font-bold text-primaryText uppercase tracking-tight group-hover:translate-x-2 transition-transform&quot;&gt;Honors&lt;/h2&gt;
+                        &lt;/div&gt;
+                        &lt;i class=&quot;fa-solid fa-arrow-right text-primaryText opacity-0 group-hover:opacity-100 -rotate-45 transition-all&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;group border-b border-bodyText/20 py-5 flex justify-between items-end cursor-pointer&quot;&gt;
+                        &lt;div class=&quot;flex items-baseline gap-4&quot;&gt;
+                            &lt;span class=&quot;font-serif italic text-primaryText text-lg opacity-40&quot;&gt;06&lt;/span&gt;
+                            &lt;h2 class=&quot;text-2xl font-serif font-bold text-primaryText uppercase tracking-tight group-hover:translate-x-2 transition-transform&quot;&gt;Services&lt;/h2&gt;
+                        &lt;/div&gt;
+                        &lt;i class=&quot;fa-solid fa-arrow-right text-primaryText opacity-0 group-hover:opacity-100 -rotate-45 transition-all&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;group border-b border-bodyText/20 py-5 flex justify-between items-end cursor-pointer&quot;&gt;
+                        &lt;div class=&quot;flex items-baseline gap-4&quot;&gt;
+                            &lt;span class=&quot;font-serif italic text-primaryText text-lg opacity-40&quot;&gt;07&lt;/span&gt;
+                            &lt;h2 class=&quot;text-2xl font-serif font-bold text-primaryText uppercase tracking-tight group-hover:translate-x-2 transition-transform&quot;&gt;Impact&lt;/h2&gt;
+                        &lt;/div&gt;
+                        &lt;i class=&quot;fa-solid fa-arrow-right text-primaryText opacity-0 group-hover:opacity-100 -rotate-45 transition-all&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;group border-b border-bodyText/20 py-5 flex justify-between items-end cursor-pointer&quot;&gt;
+                        &lt;div class=&quot;flex items-baseline gap-4&quot;&gt;
+                            &lt;span class=&quot;font-serif italic text-primaryText text-lg opacity-40&quot;&gt;08&lt;/span&gt;
+                            &lt;h2 class=&quot;text-2xl font-serif font-bold text-primaryText uppercase tracking-tight group-hover:translate-x-2 transition-transform&quot;&gt;Inquiry&lt;/h2&gt;
+                        &lt;/div&gt;
+                        &lt;i class=&quot;fa-solid fa-arrow-right text-primaryText opacity-0 group-hover:opacity-100 -rotate-45 transition-all&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/main&gt;
+
+        &lt;footer class=&quot;absolute bottom-8 left-12 right-12 flex justify-between items-end&quot;&gt;
+            &lt;div class=&quot;flex flex-col gap-1&quot;&gt;
+                &lt;p class=&quot;text-[9px] text-bodyText uppercase tracking-widest opacity-40&quot;&gt;A Selection of Strategic Visual Works&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;text-[9px] text-bodyText uppercase tracking-[0.5em] opacity-40 italic&quot;&gt;Evolution 2028 ©&lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 3
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;About Me - Rachelle Beaudry Portfolio&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryBg: '#9E2A22',
+                        primaryText: '#FDF9E5',
+                        bodyText: '#E0C0BB',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #9E2A22;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .vintage-filter {
+            filter: sepia(0.2) contrast(1.1) brightness(0.7);
+        }
+        
+        .nav-item-text { font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; }
+
+        /* 背景修饰文字 */
+        .watermark {
+            position: absolute;
+            font-family: 'Playfair Display';
+            font-size: 320px;
+            font-weight: 900;
+            color: rgba(253, 249, 229, 0.03);
+            line-height: 1;
+            z-index: 0;
+            pointer-events: none;
+            bottom: -80px;
+            left: -40px;
+        }
+
+        .center-content-box {
+            background-color: #9E2A22;
+            box-shadow: 40px 0 80px rgba(0,0,0,0.3);
+        }
+
+        ::-webkit-scrollbar { display: none; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot; class=&quot;flex justify-center&quot;&gt;
+        &lt;div class=&quot;absolute inset-0 z-0&quot;&gt;
+            &lt;img src=&quot;https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&amp;w=2528&amp;auto=format&amp;fit=crop&quot; 
+                 class=&quot;w-full h-full object-cover vintage-filter&quot; alt=&quot;Photographer Background&quot;&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;watermark uppercase italic&quot;&gt;Rachelle&lt;/div&gt;
+
+        &lt;div class=&quot;center-content-box relative z-10 w-[65%] h-full flex flex-col&quot;&gt;
+            
+            &lt;header class=&quot;w-full h-24 flex items-center px-12 justify-between&quot;&gt;
+                &lt;div class=&quot;flex items-center gap-8&quot;&gt;
+                    &lt;div class=&quot;text-2xl font-serif font-black text-primaryText tracking-tighter&quot;&gt;CP.&lt;/div&gt;
+                    &lt;div class=&quot;h-8 w-[1px] bg-bodyText opacity-30&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;nav-item-text text-primaryText font-semibold&quot;&gt;2028 Portfolio&lt;/div&gt;
+                &lt;/div&gt;
+                
+                &lt;nav class=&quot;flex gap-10 items-center&quot;&gt;
+                    &lt;div class=&quot;nav-item-text text-primaryText opacity-50 hover:opacity-100 cursor-pointer transition-all&quot;&gt;Creative&lt;/div&gt;
+                    &lt;div class=&quot;nav-item-text text-primaryText opacity-50 hover:opacity-100 cursor-pointer transition-all&quot;&gt;Photography&lt;/div&gt;
+                    &lt;div class=&quot;flex items-center gap-4 bg-primaryText text-primaryBg px-5 py-1.5 rounded-full shadow-lg&quot;&gt;
+                        &lt;span class=&quot;nav-item-text font-bold text-[10px]&quot;&gt;About Me&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/nav&gt;
+
+                &lt;div class=&quot;nav-item-text text-primaryText font-bold&quot;&gt;PAGE — 01&lt;/div&gt;
+            &lt;/header&gt;
+
+            &lt;div class=&quot;absolute top-24 left-12 right-12 h-[1px] bg-bodyText opacity-20&quot;&gt;&lt;/div&gt;
+
+            &lt;main class=&quot;flex-1 flex flex-col justify-center px-16 relative&quot;&gt;
+                
+                &lt;div class=&quot;absolute top-1/2 left-0 w-32 h-32 border border-primaryText/10 rounded-full -translate-y-1/2 -translate-x-1/2&quot;&gt;&lt;/div&gt;
+
+                &lt;div class=&quot;relative mb-12&quot;&gt;
+                    &lt;h1 class=&quot;font-serif text-[130px] leading-[0.8] font-black text-primaryText uppercase tracking-tighter&quot;&gt;
+                        About&lt;br&gt;
+                        &lt;span class=&quot;italic font-normal opacity-30 ml-32 text-[90px]&quot;&gt;Me&lt;/span&gt;
+                    &lt;/h1&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;grid grid-cols-2 gap-12 border-l border-bodyText/30 pl-10 relative&quot;&gt;
+                    &lt;div class=&quot;space-y-4&quot;&gt;
+                        &lt;h4 class=&quot;nav-item-text font-bold text-primaryText text-[10px] flex items-center gap-2&quot;&gt;
+                            &lt;span class=&quot;w-2 h-2 bg-primaryText rotate-45&quot;&gt;&lt;/span&gt;
+                            The Identity
+                        &lt;/h4&gt;
+                        &lt;p class=&quot;font-sans text-bodyText text-[14px] leading-relaxed text-justify&quot;&gt;
+                            I am &lt;span class=&quot;text-primaryText font-semibold italic&quot;&gt;Rachelle Beaudry&lt;/span&gt;, a visual storyteller based in the intersection of light and emotion. With a decade of exploration through the lens, I capture the unspoken narratives of the human experience.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;space-y-4 pt-8&quot;&gt;
+                        &lt;h4 class=&quot;nav-item-text font-bold text-primaryText text-[10px] flex items-center gap-2&quot;&gt;
+                            &lt;span class=&quot;w-2 h-2 bg-primaryText rotate-45&quot;&gt;&lt;/span&gt;
+                            The Philosophy
+                        &lt;/h4&gt;
+                        &lt;p class=&quot;font-sans text-bodyText text-[14px] leading-relaxed text-justify&quot;&gt;
+                            Every shot is a commitment to authenticity. My approach blends technical precision with a vintage-warm aesthetic, ensuring that genuine moments are not just recorded, but preserved as timeless art for generations.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/main&gt;
+
+            &lt;footer class=&quot;w-full px-12 py-8 flex justify-between items-end&quot;&gt;
+                &lt;div class=&quot;flex items-center gap-6&quot;&gt;
+                    &lt;div class=&quot;flex flex-col gap-1&quot;&gt;
+                        &lt;div class=&quot;w-10 h-[1px] bg-primaryText&quot;&gt;&lt;/div&gt;
+                        &lt;span class=&quot;text-[9px] text-bodyText uppercase tracking-widest&quot;&gt;Visual Artist&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;flex gap-4&quot;&gt;
+                        &lt;i class=&quot;fa-brands fa-instagram text-primaryText opacity-50 hover:opacity-100 cursor-pointer text-lg&quot;&gt;&lt;/i&gt;
+                        &lt;i class=&quot;fa-brands fa-twitter text-primaryText opacity-50 hover:opacity-100 cursor-pointer text-lg&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;text-right&quot;&gt;
+                    &lt;p class=&quot;font-serif text-2xl text-primaryText font-black tracking-tighter italic&quot;&gt;RB Studio.&lt;/p&gt;
+                    &lt;p class=&quot;text-[9px] text-bodyText opacity-40 uppercase tracking-[0.3em]&quot;&gt;Defining Visual Standards&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/footer&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute inset-y-0 left-0 w-[17.5%] bg-black/30 z-20 pointer-events-none border-r border-white/5&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute inset-y-0 right-0 w-[17.5%] bg-black/30 z-20 pointer-events-none border-l border-white/5&quot;&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 4
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Vision &amp; Mission - Premium Portfolio&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryBg: '#9E2A22',
+                        primaryText: '#FDF9E5',
+                        bodyText: '#E0C0BB',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #9E2A22;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+            background-image: linear-gradient(135deg, #9E2A22 0%, #85221b 100%);
+        }
+
+        .vintage-filter {
+            filter: sepia(0.2) contrast(1.1) brightness(0.9);
+            transition: transform 0.8s ease;
+        }
+        
+        .nav-item-text { font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; }
+
+        /* 背景水印 */
+        .watermark {
+            position: absolute;
+            font-family: 'Playfair Display';
+            font-size: 260px;
+            font-weight: 900;
+            color: rgba(253, 249, 229, 0.03);
+            line-height: 1;
+            z-index: 0;
+            pointer-events: none;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            letter-spacing: -0.05em;
+        }
+
+        ::-webkit-scrollbar { display: none; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;watermark uppercase&quot;&gt;Philosophy&lt;/div&gt;
+        &lt;div class=&quot;absolute top-0 left-[45%] w-[1px] h-full bg-[#E0C0BB] opacity-10&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute top-[50%] left-0 w-full h-[1px] bg-[#E0C0BB] opacity-10&quot;&gt;&lt;/div&gt;
+
+        &lt;header class=&quot;absolute top-0 left-0 w-full h-24 flex items-center px-12 z-20 justify-between&quot;&gt;
+            &lt;div class=&quot;flex items-center gap-8&quot;&gt;
+                &lt;div class=&quot;text-2xl font-serif font-black text-primaryText tracking-tighter&quot;&gt;CP.&lt;/div&gt;
+                &lt;div class=&quot;h-8 w-[1px] bg-bodyText opacity-30&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;nav-item-text text-primaryText font-semibold&quot;&gt;2028 Portfolio&lt;/div&gt;
+            &lt;/div&gt;
+            
+            &lt;nav class=&quot;flex gap-10 items-center&quot;&gt;
+                &lt;div class=&quot;nav-item-text text-primaryText opacity-50 hover:opacity-100 cursor-pointer transition-all&quot;&gt;Creative&lt;/div&gt;
+                &lt;div class=&quot;nav-item-text text-primaryText opacity-50 hover:opacity-100 cursor-pointer transition-all&quot;&gt;Photography&lt;/div&gt;
+                &lt;div class=&quot;flex items-center gap-4 bg-primaryText text-primaryBg px-5 py-1.5 rounded-full shadow-lg&quot;&gt;
+                    &lt;span class=&quot;nav-item-text font-bold text-[10px]&quot;&gt;Vision &amp; Mission&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/nav&gt;
+
+            &lt;div class=&quot;nav-item-text text-primaryText font-bold&quot;&gt;PAGE — 02&lt;/div&gt;
+            &lt;div class=&quot;absolute bottom-0 left-12 right-12 h-[1px] bg-bodyText opacity-20&quot;&gt;&lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;main class=&quot;grid grid-cols-12 h-full pt-24 px-12 relative z-10&quot;&gt;
+            
+            &lt;div class=&quot;col-span-5 flex flex-col justify-center pb-12&quot;&gt;
+                &lt;h1 class=&quot;font-serif text-[110px] leading-[0.85] font-black text-primaryText uppercase tracking-tighter mb-6&quot;&gt;
+                    Vision&lt;br&gt;
+                    &lt;span class=&quot;italic font-normal opacity-40 ml-12 text-[80px]&quot;&gt;Statement&lt;/span&gt;
+                &lt;/h1&gt;
+                &lt;div class=&quot;w-12 h-[2px] bg-primaryText mb-6&quot;&gt;&lt;/div&gt;
+                &lt;p class=&quot;font-sans text-bodyText text-[15px] leading-relaxed max-w-sm opacity-90 text-justify&quot;&gt;
+                    To capture the essence of life’s moments, turning them into timeless visual stories that inspire, connect, and preserve memories for generations.
+                &lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;col-span-3 relative h-full flex items-center justify-center&quot;&gt;
+                &lt;div class=&quot;relative w-full aspect-[3/4]&quot;&gt;
+                    &lt;div class=&quot;absolute top-0 right-0 w-[85%] h-[70%] overflow-hidden border border-primaryText/20 shadow-xl group&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1550963295-019d8a8a61c5?q=80&amp;w=600&amp;auto=format&amp;fit=crop&quot; 
+                             class=&quot;w-full h-full object-cover vintage-filter group-hover:scale-105&quot; alt=&quot;Details&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;absolute bottom-10 left-0 w-[85%] h-[70%] overflow-hidden border border-primaryText/20 shadow-2xl z-10 group&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&amp;w=600&amp;auto=format&amp;fit=crop&quot; 
+                             class=&quot;w-full h-full object-cover vintage-filter group-hover:scale-105&quot; alt=&quot;Mood&quot;&gt;
+                        &lt;div class=&quot;absolute bottom-4 left-4 text-[9px] text-primaryText font-bold tracking-widest uppercase bg-black/40 px-2 py-1&quot;&gt;Mood Study&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;col-span-4 flex flex-col justify-center items-end text-right pl-12&quot;&gt;
+                &lt;div class=&quot;w-12 h-[2px] bg-primaryText mb-6&quot;&gt;&lt;/div&gt;
+                &lt;h1 class=&quot;font-serif text-[100px] leading-[0.85] font-black text-primaryText uppercase tracking-tighter mb-8&quot;&gt;
+                    Our&lt;br&gt;
+                    &lt;span class=&quot;italic font-normal opacity-40 mr-12 text-[70px]&quot;&gt;Mission&lt;/span&gt;
+                &lt;/h1&gt;
+                
+                &lt;ul class=&quot;space-y-6&quot;&gt;
+                    &lt;li class=&quot;flex flex-col items-end&quot;&gt;
+                        &lt;span class=&quot;text-[10px] text-primaryText font-bold tracking-[0.3em] uppercase mb-1&quot;&gt;Creativity&lt;/span&gt;
+                        &lt;p class=&quot;font-sans text-bodyText text-[12px] leading-relaxed opacity-80 max-w-[260px]&quot;&gt;
+                            To provide exceptional photography services that blend creativity, emotion, and authenticity.
+                        &lt;/p&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;flex flex-col items-end&quot;&gt;
+                        &lt;span class=&quot;text-[10px] text-primaryText font-bold tracking-[0.3em] uppercase mb-1&quot;&gt;Collaboration&lt;/span&gt;
+                        &lt;p class=&quot;font-sans text-bodyText text-[12px] leading-relaxed opacity-80 max-w-[260px]&quot;&gt;
+                            To collaborate with clients to bring their vision to life through meaningful visuals.
+                        &lt;/p&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/main&gt;
+
+        &lt;footer class=&quot;absolute bottom-8 left-12 right-12 flex justify-between items-end&quot;&gt;
+            &lt;div class=&quot;flex items-center gap-4&quot;&gt;
+                &lt;div class=&quot;w-2 h-2 bg-primaryText rotate-45&quot;&gt;&lt;/div&gt;
+                &lt;span class=&quot;text-[9px] text-bodyText uppercase tracking-widest opacity-60 italic underline decoration-1 underline-offset-4&quot;&gt;Artistic Core Values&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;text-[10px] text-bodyText opacity-30 uppercase tracking-[0.5em]&quot;&gt;2028 Strategic Narrative&lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 5
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Work Experience - Premium Portfolio&lt;/title&gt;
+    &lt;link href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&amp;family=Inter:wght@300;400;600&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        .page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #9E2A22;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+            color: #FDF9E5;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .font-display { font-family: 'Oswald', sans-serif; }
+        
+        /* 装饰性背景文字 */
+        .bg-text {
+            position: absolute;
+            font-size: 400px;
+            font-family: 'Oswald';
+            font-weight: 700;
+            color: rgba(253, 249, 229, 0.03);
+            line-height: 1;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* 细线装饰 */
+        .grid-line {
+            position: absolute;
+            background-color: rgba(224, 192, 187, 0.2);
+        }
+
+        /* 导航文字样式 */
+        .nav-item-text {
+            font-size: 11px;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div class=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;bg-text -bottom-20 -left-10&quot;&gt;02&lt;/div&gt;
+        &lt;div class=&quot;grid-line w-[1px] h-full left-12 top-0&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;grid-line w-[1px] h-full right-12 top-0&quot;&gt;&lt;/div&gt;
+
+        &lt;header class=&quot;absolute top-0 left-0 w-full h-24 flex items-center px-12 z-20 justify-between&quot;&gt;
+            &lt;div class=&quot;flex items-center gap-8&quot;&gt;
+                &lt;div class=&quot;text-2xl font-display font-bold text-[#FDF9E5] tracking-tighter&quot;&gt;CP.&lt;/div&gt;
+                &lt;div class=&quot;h-8 w-[1px] bg-[#E0C0BB] opacity-30&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;nav-item-text text-[#FDF9E5] font-semibold&quot;&gt;2028 Portfolio&lt;/div&gt;
+            &lt;/div&gt;
+            
+            &lt;nav class=&quot;flex gap-10 items-center&quot;&gt;
+                &lt;div class=&quot;nav-item-text text-[#FDF9E5] opacity-50 hover:opacity-100 cursor-pointer transition-opacity&quot;&gt;Creative&lt;/div&gt;
+                &lt;div class=&quot;nav-item-text text-[#FDF9E5] opacity-50 hover:opacity-100 cursor-pointer transition-opacity&quot;&gt;Photography&lt;/div&gt;
+                &lt;div class=&quot;flex items-center gap-4 bg-[#FDF9E5] text-[#9E2A22] px-5 py-1.5 rounded-full shadow-lg&quot;&gt;
+                    &lt;span class=&quot;nav-item-text font-bold text-[10px]&quot;&gt;Experience&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/nav&gt;
+
+            &lt;div class=&quot;nav-item-text text-[#FDF9E5] font-bold&quot;&gt;PAGE — 03&lt;/div&gt;
+            
+            &lt;div class=&quot;absolute bottom-0 left-12 right-12 h-[1px] bg-[#E0C0BB] opacity-20&quot;&gt;&lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;main class=&quot;grid grid-cols-12 h-full pt-24&quot;&gt;
+            
+            &lt;div class=&quot;col-span-5 flex flex-col justify-center px-20 relative z-10&quot;&gt;
+                &lt;div class=&quot;flex items-center gap-4 mb-4&quot;&gt;
+                    &lt;div class=&quot;w-8 h-[2px] bg-[#FDF9E5]&quot;&gt;&lt;/div&gt;
+                    &lt;span class=&quot;text-xs tracking-[0.4em] uppercase opacity-70&quot;&gt;Professional Path&lt;/span&gt;
+                &lt;/div&gt;
+                
+                &lt;h1 class=&quot;font-display text-[110px] leading-[0.9] tracking-tighter uppercase mb-8 text-[#FDF9E5]&quot;&gt;
+                    Work&lt;br&gt;
+                    &lt;span class=&quot;opacity-50 italic&quot;&gt;Expe-&lt;/span&gt;&lt;br&gt;
+                    rience
+                &lt;/h1&gt;
+                
+                &lt;div class=&quot;flex items-start gap-4 p-4 border border-[#E0C0BB] border-opacity-30 rounded-br-3xl&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-quote-left text-[#E0C0BB] text-sm mt-1&quot;&gt;&lt;/i&gt;
+                    &lt;p class=&quot;text-[13px] leading-relaxed tracking-wide text-[#E0C0BB]&quot;&gt;
+                        Capturing the essence of moments through &lt;br&gt;
+                        a decade of visual storytelling and technical &lt;br&gt;
+                        mastery in commercial photography.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;col-span-7 flex flex-col justify-center pr-20 pl-4 space-y-6 relative z-10&quot;&gt;
+                
+                &lt;div class=&quot;group relative bg-white bg-opacity-[0.03] p-8 border border-[#E0C0BB] border-opacity-10 hover:border-opacity-40 transition-all duration-500&quot;&gt;
+                    &lt;span class=&quot;absolute top-4 right-6 font-display text-4xl opacity-10&quot;&gt;01&lt;/span&gt;
+                    &lt;div class=&quot;flex flex-col&quot;&gt;
+                        &lt;span class=&quot;text-[#E0C0BB] text-xs font-bold tracking-widest mb-1&quot;&gt;2024 - PRESENT&lt;/span&gt;
+                        &lt;h2 class=&quot;font-display text-4xl uppercase mb-4 text-[#FDF9E5] group-hover:translate-x-2 transition-transform&quot;&gt;
+                            Freelance Photographer
+                        &lt;/h2&gt;
+                        &lt;ul class=&quot;grid grid-cols-2 gap-y-3&quot;&gt;
+                            &lt;li class=&quot;flex items-center gap-3 opacity-80 text-sm&quot;&gt;
+                                &lt;div class=&quot;w-1.5 h-1.5 rounded-full bg-[#FDF9E5]&quot;&gt;&lt;/div&gt;
+                                Diverse Client Collaboration
+                            &lt;/li&gt;
+                            &lt;li class=&quot;flex items-center gap-3 opacity-80 text-sm&quot;&gt;
+                                &lt;div class=&quot;w-1.5 h-1.5 rounded-full bg-[#FDF9E5]&quot;&gt;&lt;/div&gt;
+                                27+ Successful Campaigns
+                            &lt;/li&gt;
+                            &lt;li class=&quot;flex items-center gap-3 opacity-80 text-sm col-span-2&quot;&gt;
+                                &lt;div class=&quot;w-1.5 h-1.5 rounded-full bg-[#FDF9E5]&quot;&gt;&lt;/div&gt;
+                                Custom Creative Concepts &amp; Art Direction
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;group relative bg-white bg-opacity-[0.03] p-8 border border-[#E0C0BB] border-opacity-10 hover:border-opacity-40 transition-all duration-500&quot;&gt;
+                    &lt;span class=&quot;absolute top-4 right-6 font-display text-4xl opacity-10&quot;&gt;02&lt;/span&gt;
+                    &lt;div class=&quot;flex flex-col&quot;&gt;
+                        &lt;span class=&quot;text-[#E0C0BB] text-xs font-bold tracking-widest mb-1&quot;&gt;2021 - 2023&lt;/span&gt;
+                        &lt;h2 class=&quot;font-display text-4xl uppercase mb-4 text-[#FDF9E5] group-hover:translate-x-2 transition-transform&quot;&gt;
+                            Assistant Photographer
+                        &lt;/h2&gt;
+                        &lt;div class=&quot;space-y-3 opacity-80 text-sm leading-relaxed text-[#E0C0BB]&quot;&gt;
+                            &lt;p class=&quot;flex items-start gap-3&quot;&gt;
+                                &lt;i class=&quot;fa-solid fa-chevron-right text-[10px] mt-1 text-[#E0C0BB]&quot;&gt;&lt;/i&gt;
+                                Expert lighting setup for high-end studio and on-location productions.
+                            &lt;/p&gt;
+                            &lt;p class=&quot;flex items-start gap-3&quot;&gt;
+                                &lt;i class=&quot;fa-solid fa-chevron-right text-[10px] mt-1 text-[#E0C0BB]&quot;&gt;&lt;/i&gt;
+                                Professional retouching and digital asset management for luxury brands.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/main&gt;
+
+        &lt;footer class=&quot;absolute bottom-8 left-12 right-12 flex justify-between items-end&quot;&gt;
+            &lt;div class=&quot;flex gap-2&quot;&gt;
+                &lt;div class=&quot;w-2 h-2 bg-[#FDF9E5]&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;w-2 h-2 bg-[#FDF9E5] opacity-40&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;w-2 h-2 bg-[#FDF9E5] opacity-20&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;text-[10px] tracking-[0.5em] opacity-40 uppercase&quot;&gt;Design Excellence 2028 ©&lt;/div&gt;
+        &lt;/footer&gt;
+
+        &lt;div class=&quot;absolute bottom-16 right-16 w-32 h-32 border border-[#E0C0BB] border-opacity-20 flex items-center justify-center&quot;&gt;
+            &lt;div class=&quot;w-24 h-24 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-700 cursor-pointer&quot;&gt;
+                &lt;img src=&quot;https://images.unsplash.com/photo-1520390138845-fd2d229dd552?q=80&amp;w=300&amp;auto=format&amp;fit=crop&quot; 
+                     alt=&quot;Detail&quot; class=&quot;w-full h-full object-cover&quot;&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 6
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Portfolio Highlights - Design Excellence&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryBg: '#9E2A22',
+                        primaryText: '#FDF9E5',
+                        bodyText: '#E0C0BB',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #9E2A22;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+            background-image: linear-gradient(135deg, #9E2A22 0%, #85221b 100%);
+        }
+
+        .vintage-filter {
+            filter: sepia(0.2) contrast(1.1) brightness(0.9);
+            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .nav-item-text { font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; }
+
+        /* 装饰性水印 */
+        .watermark {
+            position: absolute;
+            font-family: 'Playfair Display';
+            font-size: 300px;
+            font-weight: 900;
+            color: rgba(253, 249, 229, 0.03);
+            line-height: 1;
+            z-index: 0;
+            pointer-events: none;
+            bottom: -50px;
+            right: -20px;
+        }
+
+        ::-webkit-scrollbar { display: none; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;watermark uppercase italic&quot;&gt;Highlights&lt;/div&gt;
+        &lt;div class=&quot;absolute top-0 left-[35%] w-[1px] h-full bg-[#E0C0BB] opacity-10&quot;&gt;&lt;/div&gt;
+
+        &lt;header class=&quot;absolute top-0 left-0 w-full h-24 flex items-center px-12 z-20 justify-between&quot;&gt;
+            &lt;div class=&quot;flex items-center gap-8&quot;&gt;
+                &lt;div class=&quot;text-2xl font-serif font-black text-primaryText tracking-tighter&quot;&gt;CP.&lt;/div&gt;
+                &lt;div class=&quot;h-8 w-[1px] bg-bodyText opacity-30&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;nav-item-text text-primaryText font-semibold&quot;&gt;2028 Portfolio&lt;/div&gt;
+            &lt;/div&gt;
+            
+            &lt;nav class=&quot;flex gap-10 items-center&quot;&gt;
+                &lt;div class=&quot;nav-item-text text-primaryText opacity-50 hover:opacity-100 cursor-pointer transition-all&quot;&gt;Creative&lt;/div&gt;
+                &lt;div class=&quot;nav-item-text text-primaryText opacity-50 hover:opacity-100 cursor-pointer transition-all&quot;&gt;Photography&lt;/div&gt;
+                &lt;div class=&quot;flex items-center gap-4 bg-primaryText text-primaryBg px-5 py-1.5 rounded-full shadow-lg&quot;&gt;
+                    &lt;span class=&quot;nav-item-text font-bold text-[10px]&quot;&gt;Highlights&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/nav&gt;
+
+            &lt;div class=&quot;nav-item-text text-primaryText font-bold&quot;&gt;PAGE — 04&lt;/div&gt;
+            &lt;div class=&quot;absolute bottom-0 left-12 right-12 h-[1px] bg-bodyText opacity-20&quot;&gt;&lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;main class=&quot;grid grid-cols-12 h-full pt-24&quot;&gt;
+            
+            &lt;div class=&quot;col-span-4 relative h-full p-12 flex items-center&quot;&gt;
+                &lt;div class=&quot;relative w-full h-[85%] overflow-hidden group shadow-2xl border border-primaryText/10&quot;&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&amp;w=800&amp;auto=format&amp;fit=crop&quot; 
+                         class=&quot;w-full h-full object-cover vintage-filter group-hover:scale-110&quot; alt=&quot;Main Work&quot;&gt;
+                    &lt;div class=&quot;absolute top-6 left-6 w-10 h-[1px] bg-primaryText&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;absolute bottom-6 left-6&quot;&gt;
+                        &lt;span class=&quot;nav-item-text text-[9px] text-primaryText font-bold&quot;&gt;Visual Study No. 01&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;col-span-8 px-12 pt-8 flex flex-col justify-between pb-16&quot;&gt;
+                
+                &lt;div class=&quot;relative&quot;&gt;
+                    &lt;h2 class=&quot;font-serif text-[110px] leading-[0.8] font-black text-primaryText uppercase tracking-tighter&quot;&gt;
+                        Portfolio&lt;br&gt;
+                        &lt;span class=&quot;italic font-normal opacity-40 ml-20&quot;&gt;Highlights&lt;/span&gt;
+                    &lt;/h2&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;grid grid-cols-2 gap-16 mt-12 relative z-10&quot;&gt;
+                    &lt;div class=&quot;space-y-10&quot;&gt;
+                        &lt;section&gt;
+                            &lt;h4 class=&quot;nav-item-text font-bold text-primaryText mb-3 flex items-center gap-3&quot;&gt;
+                                &lt;span class=&quot;w-2 h-2 bg-primaryText rotate-45&quot;&gt;&lt;/span&gt;
+                                Artistic Vision
+                            &lt;/h4&gt;
+                            &lt;p class=&quot;font-sans text-bodyText text-[12px] leading-relaxed text-justify opacity-80&quot;&gt;
+                                This collection represents the delicate balance between raw human emotion and digital precision. Each frame is a curated dialogue between light and subject, designed to evoke a timeless sense of nostalgia through a contemporary lens.
+                            &lt;/p&gt;
+                        &lt;/section&gt;
+
+                        &lt;section&gt;
+                            &lt;h4 class=&quot;nav-item-text font-bold text-primaryText mb-3 flex items-center gap-3&quot;&gt;
+                                &lt;span class=&quot;w-2 h-2 bg-primaryText rotate-45&quot;&gt;&lt;/span&gt;
+                                Technical Mastery
+                            &lt;/h4&gt;
+                            &lt;p class=&quot;font-sans text-bodyText text-[12px] leading-relaxed text-justify opacity-80&quot;&gt;
+                                Beyond the aesthetic surface, we emphasize technical excellence in post-production and lighting. Our signature &quot;Vintage-Warm&quot; workflow preserves skin textures while introducing rich, filmic color grading for a premium finish.
+                            &lt;/p&gt;
+                        &lt;/section&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;space-y-8&quot;&gt;
+                        &lt;div class=&quot;w-full h-44 overflow-hidden border border-primaryText/20 shadow-xl group&quot;&gt;
+                            &lt;img src=&quot;https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&amp;w=800&amp;auto=format&amp;fit=crop&quot; 
+                                 class=&quot;w-full h-full object-cover vintage-filter group-hover:scale-105&quot; alt=&quot;Detail Shot&quot;&gt;
+                        &lt;/div&gt;
+
+                        &lt;section&gt;
+                            &lt;h4 class=&quot;nav-item-text font-bold text-primaryText mb-3 flex items-center gap-3&quot;&gt;
+                                &lt;span class=&quot;w-2 h-2 bg-primaryText rotate-45&quot;&gt;&lt;/span&gt;
+                                Cultural Narrative
+                            &lt;/h4&gt;
+                            &lt;p class=&quot;font-sans text-bodyText text-[12px] leading-relaxed text-justify opacity-80&quot;&gt;
+                                We believe every project tells a story that transcends the visual medium. 
+                            &lt;/p&gt;
+                        &lt;/section&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/main&gt;
+
+        &lt;footer class=&quot;absolute bottom-8 left-12 right-12 flex justify-between items-end&quot;&gt;
+            &lt;div class=&quot;flex flex-col gap-1&quot;&gt;
+                &lt;div class=&quot;flex gap-1&quot;&gt;
+                    &lt;div class=&quot;w-6 h-[1px] bg-primaryText self-center&quot;&gt;&lt;/div&gt;
+                    &lt;span class=&quot;text-[9px] text-primaryText opacity-60 uppercase tracking-widest&quot;&gt;Selected Works 2028&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;text-[10px] text-bodyText opacity-30 uppercase tracking-[0.5em]&quot;&gt;Defining the Future of Visuals&lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 7
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Awards - Premium Portfolio&lt;/title&gt;
+    &lt;link href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&amp;family=Inter:wght@300;400;600&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .page_container { width: 1280px; height: 720px; background-color: #9E2A22; position: relative; margin: 0 auto; overflow: hidden; color: #FDF9E5; font-family: 'Inter', sans-serif; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .vintage-filter { filter: sepia(0.2) contrast(1.1) brightness(0.85); }
+        .nav-item-text { font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; }
+        ::-webkit-scrollbar { display: none; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;page_container&quot;&gt;
+        &lt;header class=&quot;absolute top-0 left-0 w-full h-24 flex items-center px-12 z-20 justify-between&quot;&gt;
+            &lt;div class=&quot;flex items-center gap-8&quot;&gt;
+                &lt;div class=&quot;text-2xl font-serif font-black tracking-tighter&quot;&gt;CP.&lt;/div&gt;
+                &lt;div class=&quot;h-8 w-[1px] bg-[#E0C0BB] opacity-30&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;nav-item-text font-semibold&quot;&gt;2028 Portfolio&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;nav class=&quot;flex gap-10&quot;&gt;
+                &lt;div class=&quot;nav-item-text opacity-50&quot;&gt;Creative&lt;/div&gt;
+                &lt;div class=&quot;nav-item-text opacity-50&quot;&gt;Photography&lt;/div&gt;
+                &lt;div class=&quot;flex items-center bg-[#FDF9E5] text-[#9E2A22] px-5 py-1.5 rounded-full shadow-lg&quot;&gt;
+                    &lt;span class=&quot;nav-item-text font-bold text-[10px]&quot;&gt;Awards&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/nav&gt;
+            &lt;div class=&quot;nav-item-text font-bold&quot;&gt;PAGE — 05&lt;/div&gt;
+            &lt;div class=&quot;absolute bottom-0 left-12 right-12 h-[1px] bg-[#E0C0BB] opacity-20&quot;&gt;&lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;main class=&quot;grid grid-cols-12 h-full pt-24 px-12&quot;&gt;
+            &lt;div class=&quot;col-span-5 flex items-center justify-center p-12&quot;&gt;
+                &lt;div class=&quot;relative w-full h-[85%] overflow-hidden border border-[#E0C0BB]/20 group&quot;&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1579541814924-49fef17c5be5?q=80&amp;w=800&quot; class=&quot;w-full h-full object-cover vintage-filter group-hover:scale-105 transition-all duration-700&quot; alt=&quot;Award Detail&quot;&gt;
+                    &lt;div class=&quot;absolute inset-0 bg-black/10&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;absolute top-6 left-6 w-10 h-[1px] bg-[#FDF9E5]&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-span-7 flex flex-col justify-center pl-16 pr-8&quot;&gt;
+                &lt;h1 class=&quot;font-serif text-[110px] leading-[0.85] font-black uppercase tracking-tighter mb-12&quot;&gt;
+                    Industry&lt;br&gt;&lt;span class=&quot;opacity-40 italic font-normal ml-12&quot;&gt;Honors&lt;/span&gt;
+                &lt;/h1&gt;
+                &lt;div class=&quot;space-y-10 border-l border-[#E0C0BB]/30 pl-8&quot;&gt;
+                    &lt;div&gt;
+                        &lt;span class=&quot;nav-item-text text-[10px] text-[#E0C0BB] font-bold&quot;&gt;2027 WINNER&lt;/span&gt;
+                        &lt;h3 class=&quot;text-2xl font-bold uppercase mt-1&quot;&gt;World Photography Organization&lt;/h3&gt;
+                        &lt;p class=&quot;text-xs text-[#E0C0BB] opacity-70 mt-2 italic max-w-sm&quot;&gt;Awarded for 'The Silent City' series in the Professional Commercial category.&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div&gt;
+                        &lt;span class=&quot;nav-item-text text-[10px] text-[#E0C0BB] font-bold&quot;&gt;2026 GOLD MASK&lt;/span&gt;
+                        &lt;h3 class=&quot;text-2xl font-bold uppercase mt-1&quot;&gt;Digital Arts Exhibition&lt;/h3&gt;
+                        &lt;p class=&quot;text-xs text-[#E0C0BB] opacity-70 mt-2 italic max-w-sm&quot;&gt;Honored for innovative artistic direction and film-to-digital post-processing excellence.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/main&gt;
+        &lt;div class=&quot;absolute -bottom-20 -left-10 font-serif text-[300px] font-black opacity-[0.03] italic pointer-events-none uppercase&quot;&gt;Awards&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 8
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Service Portfolio Presentation&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&amp;family=Inter:wght@300;400;500;600&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryBg: '#9E2A22',
+                        primaryText: '#FDF9E5',
+                        bodyText: '#E0C0BB',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #9E2A22;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+            background-image: linear-gradient(135deg, #9E2A22 0%, #7d1f19 100%);
+        }
+
+        .vintage-filter {
+            filter: sepia(0.2) contrast(1.1) saturate(0.9);
+            transition: all 0.5s ease;
+        }
+        
+        /* 导航文字样式 */
+        .nav-item-text {
+            font-size: 11px;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+        }
+
+        ::-webkit-scrollbar { display: none; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;absolute top-[-100px] left-[-100px] w-[400px] h-[400px] rounded-full bg-[#FDF9E5] opacity-[0.03] blur-3xl pointer-events-none&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute bottom-[-50px] right-[-50px] w-[500px] h-[500px] rounded-full bg-[#000000] opacity-[0.1] blur-3xl pointer-events-none&quot;&gt;&lt;/div&gt;
+
+        &lt;header class=&quot;absolute top-0 left-0 w-full h-24 flex items-center px-10 z-20 justify-between&quot;&gt;
+            &lt;div class=&quot;flex items-center gap-8&quot;&gt;
+                &lt;div class=&quot;text-2xl font-serif font-black text-primaryText tracking-tighter&quot;&gt;CP.&lt;/div&gt;
+                &lt;div class=&quot;h-8 w-[1px] bg-[#E0C0BB] opacity-30&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;nav-item-text text-primaryText font-semibold&quot;&gt;2028 Portfolio&lt;/div&gt;
+            &lt;/div&gt;
+            
+            &lt;nav class=&quot;flex gap-10 items-center&quot;&gt;
+                &lt;div class=&quot;nav-item-text text-primaryText opacity-60 hover:opacity-100 cursor-pointer transition-opacity&quot;&gt;Creative&lt;/div&gt;
+                &lt;div class=&quot;nav-item-text text-primaryText opacity-60 hover:opacity-100 cursor-pointer transition-opacity&quot;&gt;Photography&lt;/div&gt;
+                &lt;div class=&quot;flex items-center gap-4 bg-primaryText text-primaryBg px-5 py-1.5 rounded-full shadow-lg&quot;&gt;
+                    &lt;span class=&quot;nav-item-text font-bold text-[10px]&quot;&gt;Service&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/nav&gt;
+
+            &lt;div class=&quot;nav-item-text text-primaryText font-bold&quot;&gt;PAGE — 06&lt;/div&gt;
+            
+            &lt;div class=&quot;absolute bottom-0 left-10 right-10 h-[1px] bg-[#E0C0BB] opacity-20&quot;&gt;&lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;div class=&quot;grid grid-cols-12 h-full pt-24 pb-10 px-10 gap-8 relative z-10&quot;&gt;
+
+            &lt;div class=&quot;col-span-7 flex flex-col justify-between pt-4&quot;&gt;
+                
+                &lt;div class=&quot;relative mb-6&quot;&gt;
+                    &lt;h1 class=&quot;font-serif text-[135px] leading-[0.8] font-black text-primaryText tracking-tighter uppercase select-none&quot;&gt;
+                        Service
+                    &lt;/h1&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;flex flex-row items-end gap-8 h-full&quot;&gt;
+                    &lt;div class=&quot;relative w-[340px] h-[360px] shrink-0 bg-black/20 rounded-sm overflow-hidden shadow-2xl border border-[#FDF9E5] border-opacity-10 group&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1572116469696-958721b7d6ca?q=80&amp;w=800&amp;auto=format&amp;fit=crop&quot; 
+                             alt=&quot;Luxury vintage cocktail lifestyle&quot; 
+                             class=&quot;w-full h-full object-cover vintage-filter group-hover:scale-105 transition-transform duration-700&quot;&gt;
+                        &lt;div class=&quot;absolute bottom-4 left-4 w-12 h-[1px] bg-primaryText&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;flex-1 pb-4&quot;&gt;
+                        &lt;div class=&quot;mb-4&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-camera-retro text-2xl text-[#E0C0BB] mb-3&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;h2 class=&quot;font-serif text-3xl text-primaryText font-bold mb-4 leading-tight uppercase&quot;&gt;
+                            Lifestyle &amp;&lt;br&gt;Branding
+                        &lt;/h2&gt;
+                        &lt;div class=&quot;w-12 h-[2px] bg-[#E0C0BB] opacity-50 mb-4&quot;&gt;&lt;/div&gt;
+                        &lt;p class=&quot;font-sans text-bodyText text-[13px] leading-relaxed text-justify opacity-90&quot;&gt;
+                            Ideal for influencers, entrepreneurs, or businesses looking to elevate their visual identity. We craft narratives that resonate with your audience through authentic imagery.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;col-span-5 flex flex-col justify-end gap-8 h-full&quot;&gt;
+                
+                &lt;div class=&quot;flex flex-row items-center gap-6 group bg-white bg-opacity-0 hover:bg-opacity-[0.03] p-2 transition-all rounded-sm&quot;&gt;
+                    &lt;div class=&quot;w-[160px] h-[200px] shrink-0 relative rounded-sm overflow-hidden border border-[#FDF9E5] border-opacity-10 shadow-md&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&amp;w=500&amp;auto=format&amp;fit=crop&quot; 
+                             alt=&quot;Vintage fashion portrait&quot; 
+                             class=&quot;w-full h-full object-cover vintage-filter group-hover:scale-110 transition-transform duration-700&quot;&gt;
+                    &lt;/div&gt;
+                    
+                    &lt;div class=&quot;flex flex-col justify-center&quot;&gt;
+                        &lt;h3 class=&quot;font-serif text-xl text-primaryText font-bold mb-2 uppercase tracking-wide&quot;&gt;
+                            Portrait&lt;br&gt;Sessions
+                        &lt;/h3&gt;
+                        &lt;p class=&quot;font-sans text-bodyText text-[12px] leading-relaxed opacity-80&quot;&gt;
+                            Capturing the essence of personality in every frame. Perfect for professional headshots.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;flex flex-row items-center gap-6 group bg-white bg-opacity-0 hover:bg-opacity-[0.03] p-2 transition-all rounded-sm&quot;&gt;
+                    &lt;div class=&quot;w-[160px] h-[200px] shrink-0 relative rounded-sm overflow-hidden border border-[#FDF9E5] border-opacity-10 shadow-md&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1493863641943-9b68992a8d07?q=80&amp;w=500&amp;auto=format&amp;fit=crop&quot; 
+                             alt=&quot;Abstract artistic double exposure&quot; 
+                             class=&quot;w-full h-full object-cover vintage-filter group-hover:scale-110 transition-transform duration-700&quot;&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;flex flex-col justify-center&quot;&gt;
+                        &lt;h3 class=&quot;font-serif text-xl text-primaryText font-bold mb-2 uppercase tracking-wide&quot;&gt;
+                            Custom&lt;br&gt;Packages
+                        &lt;/h3&gt;
+                        &lt;p class=&quot;font-sans text-bodyText text-[12px] leading-relaxed opacity-80&quot;&gt;
+                            Tailored photography experiences and unique concepts designed specifically for you.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute bottom-6 right-10 flex items-center gap-2 opacity-40&quot;&gt;
+            &lt;span class=&quot;text-[#E0C0BB] text-[10px] tracking-widest uppercase italic&quot;&gt;The Art of Vision&lt;/span&gt;
+            &lt;div class=&quot;w-8 h-[1px] bg-[#E0C0BB]&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 9
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Global Impact - Extended Edition&lt;/title&gt;
+    &lt;link href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&amp;family=Inter:wght@300;400;500;600&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .page_container { width: 1280px; height: 720px; background-color: #9E2A22; position: relative; margin: 0 auto; overflow: hidden; color: #FDF9E5; font-family: 'Inter', sans-serif; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .vintage-filter { filter: sepia(0.2) contrast(1.1) brightness(0.8); }
+        .nav-item-text { font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; }
+        ::-webkit-scrollbar { display: none; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;page_container&quot;&gt;
+        &lt;header class=&quot;absolute top-0 left-0 w-full h-24 flex items-center px-12 z-20 justify-between&quot;&gt;
+            &lt;div class=&quot;flex items-center gap-8&quot;&gt;
+                &lt;div class=&quot;text-2xl font-serif font-black tracking-tighter&quot;&gt;CP.&lt;/div&gt;
+                &lt;div class=&quot;h-8 w-[1px] bg-[#E0C0BB] opacity-30&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;nav-item-text font-semibold&quot;&gt;2028 Portfolio&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;nav class=&quot;flex gap-10&quot;&gt;
+                &lt;div class=&quot;nav-item-text opacity-50&quot;&gt;Creative&lt;/div&gt;
+                &lt;div class=&quot;nav-item-text opacity-50&quot;&gt;Photography&lt;/div&gt;
+                &lt;div class=&quot;flex items-center bg-[#FDF9E5] text-[#9E2A22] px-5 py-1.5 rounded-full shadow-lg&quot;&gt;
+                    &lt;span class=&quot;nav-item-text font-bold text-[10px]&quot;&gt;Global&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/nav&gt;
+            &lt;div class=&quot;nav-item-text font-bold&quot;&gt;PAGE — 07&lt;/div&gt;
+            &lt;div class=&quot;absolute bottom-0 left-12 right-12 h-[1px] bg-[#E0C0BB] opacity-20&quot;&gt;&lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;main class=&quot;grid grid-cols-12 h-full pt-24 px-12 relative z-10&quot;&gt;
+            &lt;div class=&quot;col-span-5 flex flex-col justify-center pr-12&quot;&gt;
+                &lt;h1 class=&quot;font-serif text-[100px] leading-[0.85] font-black uppercase tracking-tighter mb-10&quot;&gt;
+                    Global&lt;br&gt;&lt;span class=&quot;opacity-40 italic font-normal ml-12&quot;&gt;Horizon&lt;/span&gt;
+                &lt;/h1&gt;
+                
+                &lt;div class=&quot;space-y-8 border-l border-[#E0C0BB]/30 pl-8&quot;&gt;
+                    &lt;div&gt;
+                        &lt;h4 class=&quot;nav-item-text text-[10px] font-bold mb-3 tracking-widest&quot;&gt;The Vision&lt;/h4&gt;
+                        &lt;p class=&quot;text-[13px] leading-relaxed text-justify opacity-80 italic&quot;&gt;
+                            Our global network serves as a vital bridge between diverse cultures, allowing us to translate localized aesthetics into a universal visual language that resonates with sophisticated international audiences across four continents.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div&gt;
+                        &lt;h4 class=&quot;nav-item-text text-[10px] font-bold mb-3 tracking-widest&quot;&gt;Connectivity&lt;/h4&gt;
+                        &lt;p class=&quot;text-[13px] leading-relaxed text-justify opacity-80 italic&quot;&gt;
+                            By establishing strategic creative hubs in the world’s most influential capitals, we ensure seamless production workflows and consistent artistic quality, maintaining a 24-hour creative cycle for our premium global partners.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;col-span-7 flex flex-col justify-center&quot;&gt;
+                &lt;div class=&quot;grid grid-cols-4 gap-4 mb-8&quot;&gt;
+                    &lt;div class=&quot;border-b border-[#E0C0BB]/20 pb-4&quot;&gt;
+                        &lt;span class=&quot;text-xs font-bold tracking-widest block&quot;&gt;LONDON&lt;/span&gt;
+                        &lt;span class=&quot;text-[9px] opacity-40 uppercase&quot;&gt;Strategy&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;border-b border-[#E0C0BB]/20 pb-4&quot;&gt;
+                        &lt;span class=&quot;text-xs font-bold tracking-widest block&quot;&gt;TOKYO&lt;/span&gt;
+                        &lt;span class=&quot;text-[9px] opacity-40 uppercase&quot;&gt;Innovation&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;border-b border-[#E0C0BB]/20 pb-4&quot;&gt;
+                        &lt;span class=&quot;text-xs font-bold tracking-widest block&quot;&gt;PARIS&lt;/span&gt;
+                        &lt;span class=&quot;text-[9px] opacity-40 uppercase&quot;&gt;Editorial&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;border-b border-[#E0C0BB]/20 pb-4&quot;&gt;
+                        &lt;span class=&quot;text-xs font-bold tracking-widest block&quot;&gt;SHANGHAI&lt;/span&gt;
+                        &lt;span class=&quot;text-[9px] opacity-40 uppercase&quot;&gt;Production&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                
+                &lt;div class=&quot;relative w-full h-[380px] overflow-hidden shadow-2xl vintage-filter border border-[#FDF9E5]/10 group&quot;&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&amp;w=1200&quot; class=&quot;w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110&quot; alt=&quot;Global Hub&quot;&gt;
+                    &lt;div class=&quot;absolute bottom-6 left-6 flex items-center gap-3&quot;&gt;
+                        &lt;div class=&quot;w-8 h-[1px] bg-white&quot;&gt;&lt;/div&gt;
+                        &lt;span class=&quot;nav-item-text text-[9px] text-white&quot;&gt;Cross-Border Production 2028&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/main&gt;
+        &lt;div class=&quot;absolute -bottom-20 -left-10 font-serif text-[320px] font-black opacity-[0.03] italic pointer-events-none&quot;&gt;IMPACT&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 10
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Future Vision - Strategic Roadmap&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryBg: '#9E2A22',
+                        primaryText: '#FDF9E5',
+                        bodyText: '#E0C0BB',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #9E2A22;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+            background-image: linear-gradient(135deg, #9E2A22 0%, #7d1f19 100%);
+        }
+
+        .vintage-filter {
+            filter: sepia(0.2) contrast(1.1) saturate(0.9);
+            transition: all 0.5s ease;
+        }
+        
+        .nav-item-text {
+            font-size: 11px;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+        }
+        
+        /* Right column heading style */
+        .future-heading {
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #FDF9E5;
+            margin-bottom: 8px;
+        }
+        
+        /* Right column body text style */
+        .future-body {
+            font-size: 11px;
+            line-height: 1.7;
+            color: #E0C0BB;
+            opacity: 0.8;
+            text-align: justify;
+        }
+
+        ::-webkit-scrollbar { display: none; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;absolute top-[-100px] left-[-100px] w-[400px] h-[400px] rounded-full bg-[#FDF9E5] opacity-[0.03] blur-3xl pointer-events-none&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute bottom-[-50px] right-[-50px] w-[500px] h-[500px] rounded-full bg-[#000000] opacity-[0.1] blur-3xl pointer-events-none&quot;&gt;&lt;/div&gt;
+
+        &lt;header class=&quot;absolute top-0 left-0 w-full h-24 flex items-center px-10 z-20 justify-between&quot;&gt;
+            &lt;div class=&quot;flex items-center gap-8&quot;&gt;
+                &lt;div class=&quot;text-2xl font-serif font-black text-primaryText tracking-tighter&quot;&gt;CP.&lt;/div&gt;
+                &lt;div class=&quot;h-8 w-[1px] bg-[#E0C0BB] opacity-30&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;nav-item-text text-primaryText font-semibold&quot;&gt;2028 Portfolio&lt;/div&gt;
+            &lt;/div&gt;
+            
+            &lt;nav class=&quot;flex gap-10 items-center&quot;&gt;
+                &lt;div class=&quot;nav-item-text text-primaryText opacity-60 hover:opacity-100 cursor-pointer transition-opacity&quot;&gt;Creative&lt;/div&gt;
+                &lt;div class=&quot;nav-item-text text-primaryText opacity-60 hover:opacity-100 cursor-pointer transition-opacity&quot;&gt;Photography&lt;/div&gt;
+                &lt;div class=&quot;flex items-center gap-4 bg-primaryText text-primaryBg px-5 py-1.5 rounded-full shadow-lg&quot;&gt;
+                    &lt;span class=&quot;nav-item-text font-bold text-[10px]&quot;&gt;Future Vision&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/nav&gt;
+
+            &lt;div class=&quot;nav-item-text text-primaryText font-bold&quot;&gt;PAGE — 04&lt;/div&gt;
+            &lt;div class=&quot;absolute bottom-0 left-10 right-10 h-[1px] bg-[#E0C0BB] opacity-20&quot;&gt;&lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;div class=&quot;grid grid-cols-12 h-full pt-24 pb-10 px-10 gap-8 relative z-10&quot;&gt;
+
+            &lt;div class=&quot;col-span-7 flex flex-col justify-between pt-4&quot;&gt;
+                
+                &lt;div class=&quot;relative mb-6&quot;&gt;
+                    &lt;h1 class=&quot;font-serif text-[135px] leading-[0.8] font-black text-primaryText tracking-tighter uppercase select-none&quot;&gt;
+                        Future
+                    &lt;/h1&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;flex flex-row items-end gap-8 h-full&quot;&gt;
+                    &lt;div class=&quot;relative w-[340px] h-[360px] shrink-0 bg-black/20 rounded-sm overflow-hidden shadow-2xl border border-[#FDF9E5] border-opacity-10 group&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&amp;w=800&amp;auto=format&amp;fit=crop&quot; 
+                             alt=&quot;Abstract future architecture&quot; 
+                             class=&quot;w-full h-full object-cover vintage-filter group-hover:scale-105 transition-transform duration-700&quot;&gt;
+                        &lt;div class=&quot;absolute bottom-4 left-4 w-12 h-[1px] bg-primaryText&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;flex-1 pb-4&quot;&gt;
+                        &lt;div class=&quot;mb-4&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-compass-drafting text-2xl text-[#E0C0BB] mb-3&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;h2 class=&quot;font-serif text-3xl text-primaryText font-bold mb-4 leading-tight uppercase&quot;&gt;
+                            Strategic&lt;br&gt;Roadmap
+                        &lt;/h2&gt;
+                        &lt;div class=&quot;w-12 h-[2px] bg-[#E0C0BB] opacity-50 mb-4&quot;&gt;&lt;/div&gt;
+                        &lt;p class=&quot;font-sans text-bodyText text-[13px] leading-relaxed text-justify opacity-90&quot;&gt;
+                            Defining the next decade of visual aesthetics through technology, global collaboration, and sustainable talent development.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;col-span-5 flex flex-col justify-start h-full pt-12&quot;&gt;
+                &lt;div class=&quot;grid grid-cols-2 gap-x-10 gap-y-14&quot;&gt;
+                    
+                    &lt;div&gt;
+                        &lt;div class=&quot;flex items-center gap-2 mb-3 opacity-50&quot;&gt;
+                             &lt;i class=&quot;fa-solid fa-microchip text-[#E0C0BB] text-xs&quot;&gt;&lt;/i&gt;
+                             &lt;span class=&quot;font-serif text-[#E0C0BB] italic&quot;&gt;01.&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;h3 class=&quot;future-heading&quot;&gt;Digital Frontier&lt;/h3&gt;
+                        &lt;p class=&quot;future-body&quot;&gt;
+                            Integrating AI rendering with traditional film textures to build a hyper-realistic visual asset platform. This is not a replacement, but an infinite extension of creative dimensions, breaking physical limitations.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div&gt;
+                        &lt;div class=&quot;flex items-center gap-2 mb-3 opacity-50&quot;&gt;
+                             &lt;i class=&quot;fa-solid fa-globe text-[#E0C0BB] text-xs&quot;&gt;&lt;/i&gt;
+                             &lt;span class=&quot;font-serif text-[#E0C0BB] italic&quot;&gt;02.&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;h3 class=&quot;future-heading&quot;&gt;Global Presence&lt;/h3&gt;
+                        &lt;p class=&quot;future-body&quot;&gt;
+                            Establishing a cross-timezone cloud creative network. Through real-time remote monitoring, we break geographical barriers to provide instant, localized creative insights for international brands.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                     &lt;div&gt;
+                        &lt;div class=&quot;flex items-center gap-2 mb-3 opacity-50&quot;&gt;
+                             &lt;i class=&quot;fa-solid fa-seedling text-[#E0C0BB] text-xs&quot;&gt;&lt;/i&gt;
+                             &lt;span class=&quot;font-serif text-[#E0C0BB] italic&quot;&gt;03.&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;h3 class=&quot;future-heading&quot;&gt;Talent Ecosystem&lt;/h3&gt;
+                        &lt;p class=&quot;future-body&quot;&gt;
+                            Launching an open creative community. Empowering new creators through mentorship to keep the team's artistic blood avant-garde and incubate the next generation of visual language.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div&gt;
+                        &lt;div class=&quot;flex items-center gap-2 mb-3 opacity-50&quot;&gt;
+                             &lt;i class=&quot;fa-solid fa-gem text-[#E0C0BB] text-xs&quot;&gt;&lt;/i&gt;
+                             &lt;span class=&quot;font-serif text-[#E0C0BB] italic&quot;&gt;04.&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;h3 class=&quot;future-heading&quot;&gt;Brand Synergy&lt;/h3&gt;
+                        &lt;p class=&quot;future-body&quot;&gt;
+                            Transforming from single shoots to visual strategy. Deeply participating in brand asset management to convert momentary imagery into artistic assets with long-term commercial value.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute bottom-6 right-10 flex items-center gap-2 opacity-40&quot;&gt;
+            &lt;span class=&quot;text-[#E0C0BB] text-[10px] tracking-widest uppercase italic&quot;&gt;The Next Chapter 2028-2030&lt;/span&gt;
+            &lt;div class=&quot;w-8 h-[1px] bg-[#E0C0BB]&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 11
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Contact - Premium Portfolio&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+    
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryBg: '#9E2A22',
+                        primaryText: '#FDF9E5',
+                        bodyText: '#E0C0BB',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #9E2A22;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .nav-item-text { font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; }
+        
+        /* 装饰性遮罩 */
+        .aperture-overlay {
+            background: radial-gradient(circle at center, transparent 40%, rgba(15, 15, 15, 0.4) 100%);
+        }
+
+        .bg-watermark {
+            position: absolute;
+            font-family: 'Playfair Display';
+            font-size: 450px;
+            font-weight: 900;
+            color: rgba(253, 249, 229, 0.03);
+            line-height: 1;
+            z-index: 0;
+            pointer-events: none;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot; class=&quot;flex&quot;&gt;
+        
+        &lt;div class=&quot;bg-watermark -left-20 -bottom-20&quot;&gt;05&lt;/div&gt;
+
+        &lt;header class=&quot;absolute top-0 left-0 w-full h-24 flex items-center px-12 z-20 justify-between&quot;&gt;
+            &lt;div class=&quot;flex items-center gap-8&quot;&gt;
+                &lt;div class=&quot;text-2xl font-serif font-black text-primaryText tracking-tighter&quot;&gt;CP.&lt;/div&gt;
+                &lt;div class=&quot;h-8 w-[1px] bg-bodyText opacity-30&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;nav-item-text text-primaryText font-semibold&quot;&gt;2028 Portfolio&lt;/div&gt;
+            &lt;/div&gt;
+            
+            &lt;nav class=&quot;flex gap-10 items-center&quot;&gt;
+                &lt;div class=&quot;nav-item-text text-primaryText opacity-50 hover:opacity-100 cursor-pointer transition-all&quot;&gt;Creative&lt;/div&gt;
+                &lt;div class=&quot;nav-item-text text-primaryText opacity-50 hover:opacity-100 cursor-pointer transition-all&quot;&gt;Photography&lt;/div&gt;
+                &lt;div class=&quot;flex items-center gap-4 bg-primaryText text-primaryBg px-5 py-1.5 rounded-full shadow-lg&quot;&gt;
+                    &lt;span class=&quot;nav-item-text font-bold text-[10px]&quot;&gt;Contact&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/nav&gt;
+
+            &lt;div class=&quot;nav-item-text text-primaryText font-bold&quot;&gt;PAGE — 05&lt;/div&gt;
+            &lt;div class=&quot;absolute bottom-0 left-12 right-12 h-[1px] bg-bodyText opacity-20&quot;&gt;&lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;div class=&quot;relative w-[40%] h-full bg-[#0f0f0f] overflow-hidden&quot;&gt;
+            &lt;img src=&quot;https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&amp;w=1000&amp;auto=format&amp;fit=crop&quot; 
+                 class=&quot;w-full h-full object-cover opacity-60 grayscale-[40%]&quot; alt=&quot;Photographer&quot;&gt;
+            &lt;div class=&quot;aperture-overlay absolute inset-0&quot;&gt;&lt;/div&gt;
+            
+            &lt;div class=&quot;absolute bottom-12 left-12 right-12 flex justify-between items-end z-10&quot;&gt;
+                &lt;div class=&quot;flex flex-col gap-1&quot;&gt;
+                    &lt;div class=&quot;w-12 h-[1px] bg-primaryText&quot;&gt;&lt;/div&gt;
+                    &lt;span class=&quot;nav-item-text text-[9px] text-primaryText&quot;&gt;Visual Artist&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;span class=&quot;text-primaryText font-serif italic text-sm opacity-60&quot;&gt;Established 2018&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;relative w-[60%] h-full pt-32 pb-12 px-20 flex flex-col justify-between z-10&quot;&gt;
+            
+            &lt;div class=&quot;flex flex-col&quot;&gt;
+                &lt;span class=&quot;nav-item-text text-bodyText mb-4 block&quot;&gt;Get in touch&lt;/span&gt;
+                &lt;h1 class=&quot;font-serif text-[150px] leading-[0.8] font-black text-primaryText uppercase tracking-tighter mb-12&quot;&gt;
+                    Contact
+                &lt;/h1&gt;
+
+                &lt;div class=&quot;grid grid-cols-2 gap-12 border-t border-bodyText border-opacity-20 pt-8&quot;&gt;
+                    &lt;div class=&quot;space-y-4&quot;&gt;
+                        &lt;h4 class=&quot;nav-item-text font-bold text-primaryText tracking-widest text-[10px]&quot;&gt;The Studio&lt;/h4&gt;
+                        &lt;p class=&quot;font-sans text-bodyText text-[12px] leading-relaxed opacity-80 text-justify&quot;&gt;
+                            Based in a space where light meets architecture, our studio is dedicated to capturing the raw essence of human emotion and brand identity through a contemporary lens.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;space-y-4&quot;&gt;
+                        &lt;h4 class=&quot;nav-item-text font-bold text-primaryText tracking-widest text-[10px]&quot;&gt;New Projects&lt;/h4&gt;
+                        &lt;p class=&quot;font-sans text-bodyText text-[12px] leading-relaxed opacity-80 text-justify&quot;&gt;
+                            We are currently accepting new bookings for 2028-2029 global campaigns. Let's collaborate to transform your vision into an enduring visual narrative.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;flex flex-col gap-8&quot;&gt;
+                &lt;div class=&quot;flex justify-between items-end border-b border-bodyText border-opacity-20 pb-8&quot;&gt;
+                    &lt;div class=&quot;space-y-2&quot;&gt;
+                        &lt;div class=&quot;flex items-center gap-4 group cursor-pointer&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-phone text-xs text-primaryText opacity-40 group-hover:opacity-100 transition-opacity&quot;&gt;&lt;/i&gt;
+                            &lt;span class=&quot;font-sans text-primaryText text-lg tracking-wider font-medium&quot;&gt;+123-456-7890&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;flex items-center gap-4 group cursor-pointer&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-envelope text-xs text-primaryText opacity-40 group-hover:opacity-100 transition-opacity&quot;&gt;&lt;/i&gt;
+                            &lt;span class=&quot;font-sans text-primaryText text-lg tracking-wider font-medium&quot;&gt;hello@creativeportfolio.com&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    
+                    &lt;div class=&quot;flex items-center gap-6 group cursor-pointer&quot;&gt;
+                        &lt;span class=&quot;nav-item-text text-primaryText font-bold text-[10px] opacity-0 group-hover:opacity-100 transition-all -translate-x-4 group-hover:translate-x-0&quot;&gt;Start Project&lt;/span&gt;
+                        &lt;div class=&quot;w-16 h-16 rounded-full border border-bodyText border-opacity-30 flex items-center justify-center group-hover:border-primaryText group-hover:bg-primaryText transition-all&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-arrow-right text-primaryText group-hover:text-primaryBg -rotate-45 transition-all text-xl&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;flex justify-between items-center text-[9px] text-bodyText opacity-50 tracking-[0.4em] uppercase&quot;&gt;
+                    &lt;span&gt;© 2028 Creative Portfolio&lt;/span&gt;
+                    &lt;span&gt;All Rights Reserved&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <script>
+   // 自动调整iframe高度
+    function resizeIframes() {
+        document.querySelectorAll('.responsive-iframe').forEach(iframe => {
+            try {
+                const doc = iframe.contentDocument || iframe.contentWindow.document;
+                const height = Math.max(
+                    doc.body.scrollHeight,
+                    doc.documentElement.scrollHeight,
+                    doc.body.offsetHeight,
+                    doc.documentElement.offsetHeight,
+                    doc.body.clientHeight,
+                    doc.documentElement.clientHeight
+                );
+                iframe.style.height = height + 'px';
+            } catch (e) {
+                console.log('无法调整iframe高度:', e);
+            }
+        });
+    }
+    
+    // 初始调整
+    window.addEventListener('load', resizeIframes);
+    
+    // 内容加载后调整
+    document.querySelectorAll('.responsive-iframe').forEach(iframe => {
+        iframe.addEventListener('load', function() {
+            resizeIframes();
+            // 对动态内容进行定期检查
+            setInterval(resizeIframes, 1000);
+        });
+    });
+  </script>
+ </body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High-End Tech Persona Cover</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    
+    <style>
+        /* CSS Reset & Global Restructure */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }        
+        #page_container {
+            width: 1280px; height: 720px;
+            background-color: #050505;
+            position: relative; overflow: hidden;
+            /* Subtle Grid Background */
+            background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            margin: 0 auto;
+            display: flex; justify-content: center; align-items: center; height: 100vh; font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Typography */
+        .text-glow { text-shadow: 0 0 25px rgba(251, 213, 125, 0.4); }
+
+        /* Persona Card Styling */
+        .persona-card {
+            position: relative;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid #222;
+            overflow: hidden;
+            /* Added transition for hover effect */
+            transition: all 0.3s ease;
+        }
+        .persona-card::before {
+            content: ''; position: absolute; inset:0;
+            background: linear-gradient(to bottom, transparent 60%, #050505 100%);
+            z-index: 2;
+        }
+        /* Tech Corner Accents */
+        .corner-accent {
+            position: absolute; width: 15px; height: 15px; border-color: #FBD57D; z-index: 10; opacity: 0.7;
+        }
+        .tl { top: 0; left: 0; border-top-width: 2px; border-left-width: 2px; }
+        .br { bottom: 0; right: 0; border-bottom-width: 2px; border-right-width: 2px; }
+
+        /* Image Processing for Tech Feel */
+        .tech-img {
+            width: 100%; height: 100%; object-fit: cover;
+            filter: grayscale(100%) contrast(120%) sepia(20%) hue-rotate(5deg);
+            opacity: 0.8; mix-blend-mode: luminosity;
+        }
+        /* Scanline Overlay */
+        .scanlines {
+            position: absolute; inset: 0; z-index: 3; pointer-events: none;
+            background: repeating-linear-gradient(to bottom, transparent 0px, transparent 2px, rgba(0,0,0,0.3) 3px);
+        }
+
+        /* Name Label */
+        .name-label {
+            position: absolute; bottom: 0; left: 0; right: 0;
+            padding: 12px 16px; z-index: 10;
+            background: rgba(5, 5, 5, 0.9);
+            border-top: 1px solid #333;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="page_container" class="flex flex-col px-6 py-12">
+        
+        <div class="flex justify-between items-center border-b border-[#222] pb-4 mb-8 z-10 mx-6">
+            <div class="text-xs text-[#666] font-mono flex items-center gap-4">
+                <span class="text-[#FBD57D]">/// INITIALIZING MODULE</span>
+            </div>
+            <div class="text-xs text-[#666] font-mono tracking-widest">PROJECT: 2030 ARCHETYPES</div>
+        </div>
+
+        <div class="flex flex-grow relative z-10 h-full">
+            
+            <div class="w-[38%] flex flex-col justify-center relative pl-4">
+                <div class="absolute -left-20 top-0 text-[200px] font-bold text-[#FFFFFF] opacity-[0.02] select-none leading-none z-0">
+                    DATA
+                </div>
+                
+                <div class="relative z-10">
+                    <div class="text-[#FBD57D] font-mono text-sm mb-4 tracking-[0.3em] uppercase">
+                        // Strategic Framework
+                    </div>
+                    <h1 class="text-white text-[110px] font-bold leading-[0.85] tracking-tight mb-8">
+                        User<br>
+                        <span class="text-[#FBD57D] text-glow">Personas</span>
+                    </h1>
+                    <div class="w-20 h-1 bg-[#FBD57D] mb-6"></div>
+                    <p class="text-gray-400 text-lg leading-relaxed max-w-sm">
+                        Defining the four core profiles that drive our future ecosystem landscape.
+                    </p>
+                </div>
+            </div>
+
+            <div class="w-[62%] h-full grid grid-cols-2 grid-rows-2 gap-6 relative pl-24 border-l border-[#222]">
+                
+                <div class="persona-card group">
+                    <div class="corner-accent tl"></div>
+                    <div class="scanlines"></div>
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=500&auto=format&fit=crop" class="tech-img">
+                    <div class="name-label">
+                        <span class="text-white font-bold tracking-wider">01 // THE INNOVATOR</span>
+                        <i class="fa-solid fa-microchip text-[#FBD57D]"></i>
+                    </div>
+                </div>
+
+                <div class="persona-card group">
+                    <div class="corner-accent br"></div>
+                    <div class="scanlines"></div>
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=500&auto=format&fit=crop" class="tech-img">
+                     <div class="name-label">
+                        <span class="text-white font-bold tracking-wider">02 // THE STRATEGIST</span>
+                        <i class="fa-solid fa-chess text-[#FBD57D]"></i>
+                    </div>
+                </div>
+
+                <div class="persona-card group">
+                    <div class="corner-accent br"></div>
+                    <div class="scanlines"></div>
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=500&auto=format&fit=crop" class="tech-img">
+                     <div class="name-label">
+                        <span class="text-white font-bold tracking-wider">03 // THE CREATOR</span>
+                        <i class="fa-solid fa-palette text-[#FBD57D]"></i>
+                    </div>
+                </div>
+
+                <div class="persona-card group">
+                    <div class="corner-accent tl"></div>
+                    <div class="scanlines"></div>
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=500&auto=format&fit=crop" class="tech-img">
+                     <div class="name-label">
+                        <span class="text-white font-bold tracking-wider">04 // THE ANALYST</span>
+                        <i class="fa-solid fa-chart-pie text-[#FBD57D]"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="absolute bottom-8 right-12 text-[#333] text-[10px] tracking-[0.3em] uppercase flex items-center">
+            <i class="fa-solid fa-crosshairs mr-2"></i> Target Acquisition Mode Active
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salford & Co. - Introduction Redesign</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans SC', sans-serif; background: #fff; }
+        #page_container {
+            width: 1280px; height: 720px;
+            margin: 0 auto; position: relative;
+            background-color: #FFFFFF; overflow: hidden;
+            display: flex;
+        }
+        /* 继承第一页的标题样式 */
+        .title-stroke {
+            -webkit-text-stroke: 1.5px #0A2342;
+            color: transparent;
+        }
+        /* 纵向文字 */
+        .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        
+        <!-- 1. 左侧：极端的大标题区 (占据视觉重心) -->
+        <div class="w-[45%] h-full flex flex-col justify-center pl-20 relative z-20">
+            <!-- 品牌标识 -->
+            <div class="absolute top-16 left-20">
+                <div class="flex items-center space-x-3">
+                    <span class="w-8 h-8 bg-[#0A2342] flex items-center justify-center">
+                        <i class="fa-solid fa-anchor text-white text-[10px]"></i>
+                    </span>
+                    <span class="text-[#0A2342] text-xs font-bold tracking-[0.4em] uppercase">Salford & Co.</span>
+                </div>
+            </div>
+
+            <!-- 主标题：延续第一页的 font-black 和紧凑行高 -->
+            <h1 class="text-[#0A2342] text-[110px] font-black leading-[0.85] tracking-tighter uppercase mb-12">
+                INTRO<br>
+                <span class="title-stroke">DUCTION</span>
+            </h1>
+
+            <!-- 描述文案：更加通透的排版 -->
+            <div class="max-w-xs space-y-6">
+                <p class="text-[#6A8FAF] font-bold tracking-widest text-sm">— EXPLORING THE DEPTHS</p>
+                <p class="text-gray-500 text-base leading-relaxed text-justify font-light italic border-l border-gray-200 pl-6">
+                    The ocean hides extraordinary mysteries. From shallow coral reefs to dark trenches, every layer reveals unique habitats where diverse life thrives. 
+                </p>
+                <div class="pt-4">
+                    <button class="px-6 py-3 bg-[#0A2342] text-white text-[10px] tracking-[0.3em] font-bold uppercase hover:bg-[#1a3a5f] transition-colors">
+                        Discover More
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. 右侧：构图核心 (大面积图像与几何色块) -->
+        <div class="w-[55%] h-full relative">
+            <!-- 装饰色块 -->
+            <div class="absolute top-0 right-0 w-[80%] h-full bg-[#F8FAFC]"></div>
+            
+            <!-- 纵向装饰文字 -->
+            <div class="absolute right-8 bottom-16 vertical-text text-gray-200 text-6xl font-black uppercase select-none opacity-40">
+                Deep Ocean Research
+            </div>
+
+            <!-- 核心图像：非规则尺寸，增加空间感 -->
+            <div class="absolute top-[15%] right-[15%] w-[80%] h-[70%] z-10">
+                <div class="w-full h-full relative">
+                    <!-- 图像主体 -->
+                    <div class="absolute inset-0 rounded-sm overflow-hidden shadow-[30px_30px_60px_-15px_rgba(10,35,66,0.3)]">
+                        <img src="https://images.unsplash.com/photo-1437622643429-be0ee1fab143?q=80&w=1280&auto=format&fit=crop" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    
+                    <!-- 浮动的小图/装饰元素 (增加层次) -->
+                    <div class="absolute -left-12 -bottom-12 w-48 h-64 bg-white p-3 shadow-xl transform rotate-3 z-20">
+                        <img src="https://images.unsplash.com/photo-1546500840-ae38253aba9b?q=80&w=400&auto=format&fit=crop" 
+                             class="w-full h-full object-cover">
+                    </div>
+
+                    <!-- 几何线条 -->
+                    <div class="absolute -top-10 -right-10 w-40 h-40 border-t-2 border-right-2 border-[#B0C4DE] opacity-30"></div>
+                </div>
+            </div>
+
+            <!-- 补充详情文本 (放置在图像右侧，打破平衡) -->
+            <div class="absolute bottom-16 left-0 w-48 text-[10px] text-gray-400 leading-relaxed uppercase tracking-widest">
+                Every layer reveals unique habitats where diverse life thrives. Humanity continues learning from this realm.
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

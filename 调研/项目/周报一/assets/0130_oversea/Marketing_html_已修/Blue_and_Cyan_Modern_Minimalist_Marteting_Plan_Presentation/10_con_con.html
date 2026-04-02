@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Performance Indicators</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts via Baidu CDN (Required) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- ECharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+
+    <style>
+        /* CSS Reset & Basic Setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container Specs */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            /* Gradient Background as per Palette Definition */
+            background: linear-gradient(180deg, #8BA4F9 0%, #A8D0E6 50%, #C8F7C5 100%);
+        }
+
+        /* Utility for centering grid items vertically/horizontally */
+        .flex-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Custom Scrollbar hide */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <!-- Decoration: Subtle geometric shapes for depth -->
+        <div class="absolute top-[-50px] left-[-50px] w-64 h-64 rounded-full bg-white opacity-10 blur-3xl"></div>
+        <div class="absolute bottom-[-50px] right-[-50px] w-96 h-96 rounded-full bg-blue-500 opacity-5 blur-3xl"></div>
+
+        <!-- Main Content Wrapper -->
+        <div class="relative w-full h-full flex flex-col items-center pt-16 px-16">
+            
+            <!-- 1. Header Section -->
+            <!-- White Pill Container for Title -->
+            <div class="bg-white rounded-full px-16 py-6 shadow-xl mb-12 transform hover:scale-[1.01] transition-transform duration-500 border border-white/50">
+                <h1 class="text-5xl font-bold text-slate-900 tracking-tight text-center uppercase">
+                    Key Performance Indicators
+                </h1>
+            </div>
+
+            <!-- 2. KPI Cards Grid -->
+            <div class="w-full max-w-[1100px] grid grid-cols-3 gap-12 mt-4">
+                
+                <!-- KPI Card #1 -->
+                <div class="bg-white/80 backdrop-blur-md rounded-3xl p-8 shadow-lg border border-white/60 flex flex-col items-center justify-between h-[400px]">
+                    <!-- Chart Container -->
+                    <div id="chart1" class="w-[220px] h-[220px]"></div>
+                    
+                    <!-- Content -->
+                    <div class="text-center w-full">
+                        <!-- Label Pill -->
+                        <div class="bg-white border border-gray-100 shadow-sm rounded-full px-8 py-2 mb-4 inline-block">
+                            <h2 class="text-lg font-bold text-slate-800 tracking-wider">KPI # 1</h2>
+                        </div>
+                        <!-- Description -->
+                        <p class="text-slate-500 text-sm font-medium leading-relaxed">
+                            Briefly elaborate on the KPI.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- KPI Card #2 -->
+                <div class="bg-white/90 backdrop-blur-md rounded-3xl p-8 shadow-2xl border border-white/80 flex flex-col items-center justify-between h-[420px] -mt-5 transform scale-105 z-10">
+                    <!-- Chart Container -->
+                    <div id="chart2" class="w-[240px] h-[240px]"></div>
+                    
+                    <!-- Content -->
+                    <div class="text-center w-full">
+                         <!-- Label Pill -->
+                         <div class="bg-white border border-gray-100 shadow-sm rounded-full px-8 py-2 mb-4 inline-block">
+                            <h2 class="text-xl font-bold text-slate-900 tracking-wider">KPI # 2</h2>
+                        </div>
+                        <p class="text-slate-600 text-base font-medium leading-relaxed">
+                            Briefly elaborate on the KPI.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- KPI Card #3 -->
+                <div class="bg-white/80 backdrop-blur-md rounded-3xl p-8 shadow-lg border border-white/60 flex flex-col items-center justify-between h-[400px]">
+                    <!-- Chart Container -->
+                    <div id="chart3" class="w-[220px] h-[220px]"></div>
+                    
+                    <!-- Content -->
+                    <div class="text-center w-full">
+                         <!-- Label Pill -->
+                         <div class="bg-white border border-gray-100 shadow-sm rounded-full px-8 py-2 mb-4 inline-block">
+                            <h2 class="text-lg font-bold text-slate-800 tracking-wider">KPI # 3</h2>
+                        </div>
+                        <p class="text-slate-500 text-sm font-medium leading-relaxed">
+                            Briefly elaborate on the KPI.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            
+            <!-- Bottom Decoration/Footer Area -->
+            <div class="absolute bottom-8 text-slate-500/50 text-xs tracking-widest uppercase">
+                <p><i class="fa-solid fa-chart-pie mr-2"></i>Performance Analysis Report</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ECharts Implementation -->
+    <script>
+        // Common function to generate gauge chart options
+        function getGaugeOption(value, colorStart, colorEnd) {
+            return {
+                series: [
+                    {
+                        type: 'pie',
+                        radius: ['65%', '85%'], // Donut shape
+                        center: ['50%', '50%'],
+                        avoidLabelOverlap: false,
+                        hoverAnimation: false,
+                        label: {
+                            show: true,
+                            position: 'center',
+                            formatter: '{d}%', // Show percentage
+                            fontSize: 36,
+                            fontWeight: 'bold',
+                            fontFamily: 'Noto Sans SC',
+                            color: '#1e293b' // Slate-800
+                        },
+                        data: [
+                            {
+                                value: value,
+                                name: 'Completed',
+                                itemStyle: {
+                                    color: new echarts.graphic.LinearGradient(0, 0, 1, 1, [
+                                        { offset: 0, color: colorStart },
+                                        { offset: 1, color: colorEnd }
+                                    ]),
+                                    borderRadius: 50 // Rounded ends
+                                }
+                            },
+                            {
+                                value: 100 - value,
+                                name: 'Remaining',
+                                itemStyle: {
+                                    color: '#F1F5F9', // Light slate gray background
+                                    borderRadius: 50
+                                },
+                                label: {
+                                    show: false // Hide label for empty part
+                                },
+                                cursor: 'default',
+                                emphasis: {
+                                    itemStyle: { color: '#F1F5F9' } // Disable hover effect color change
+                                }
+                            }
+                        ]
+                    }
+                ]
+            };
+        }
+
+        // Initialize Chart 1 (69%) - Blue to Indigo
+        const chart1 = echarts.init(document.getElementById('chart1'));
+        chart1.setOption(getGaugeOption(69, '#60A5FA', '#818CF8'));
+
+        // Initialize Chart 2 (85%) - Primary Highlight - Indigo to Purple
+        const chart2 = echarts.init(document.getElementById('chart2'));
+        chart2.setOption(getGaugeOption(85, '#818CF8', '#A78BFA'));
+
+        // Initialize Chart 3 (32%) - Cyan to Blue
+        const chart3 = echarts.init(document.getElementById('chart3'));
+        chart3.setOption(getGaugeOption(32, '#22d3ee', '#60A5FA'));
+
+        // Handle Resize (Optional for this fixed resolution task, but good practice)
+        window.addEventListener('resize', function() {
+            chart1.resize();
+            chart2.resize();
+            chart3.resize();
+        });
+    </script>
+</body>
+</html>

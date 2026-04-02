@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web3 Architecture</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #000000; overflow: hidden; font-family: 'Noto Sans SC', sans-serif; }
+        .bg-aurora { position: absolute; width: 1200px; height: 1200px; top: -400px; left: -200px; background: radial-gradient(circle at 50% 50%, #0011FF, #00008B, transparent 60%); opacity: 0.5; filter: blur(90px); z-index: 1; }
+        .glass-panel { background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01)); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+        .text-glow { text-shadow: 0 0 40px rgba(0, 80, 255, 0.5); }
+        .image-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, #000000, transparent); }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <!-- Background Elements -->
+        <div class="bg-aurora"></div>
+        <div class="absolute bottom-0 right-0 w-full h-1/2 bg-gradient-to-t from-blue-900/20 to-transparent z-0"></div>
+        <i class="fa-solid fa-cube absolute -top-10 -right-20 text-[400px] text-white/5 transform rotate-12 z-0"></i>
+
+        <div class="relative z-10 grid grid-cols-12 h-full w-full p-12 gap-8">
+            
+            <!-- Left Column: Image Visualization -->
+            <div class="col-span-5 h-full relative group">
+                <div class="glass-panel w-full h-full rounded-2xl overflow-hidden relative p-2">
+                    <div class="w-full h-full rounded-xl overflow-hidden relative">
+                        <!-- Image Source -->
+                        <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=2664&auto=format&fit=crop" 
+                             alt="Blockchain Network" 
+                             class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 opacity-80">
+                        <div class="image-overlay"></div>
+                        
+                        <div class="absolute bottom-8 left-8">
+                            <div class="bg-blue-600/90 text-white text-xs font-bold px-3 py-1 inline-block rounded mb-2">INFRASTRUCTURE</div>
+                            <h3 class="text-3xl font-bold text-white leading-tight">Decentralized<br>Consensus</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Content -->
+            <div class="col-span-7 flex flex-col justify-center pl-8">
+                <h1 class="text-8xl font-bold text-white leading-[0.9] tracking-tighter mb-8 text-glow">
+                    Trustless<br>
+                    <span class="text-blue-500">Architecture</span>
+                </h1>
+
+                <p class="text-gray-300 text-xl leading-relaxed max-w-2xl mb-12 font-light">
+                    Building a foundation where code is law. Smart contracts automate processes, removing intermediaries and reducing costs by <span class="text-white font-bold">90%</span> compared to traditional systems.
+                </p>
+
+                <div class="grid grid-cols-2 gap-6">
+                    <!-- Stat Card 1 -->
+                    <div class="glass-panel p-6 rounded-xl border-l-4 border-blue-500">
+                        <i class="fa-solid fa-link text-blue-400 text-2xl mb-3"></i>
+                        <h4 class="text-white font-bold text-lg">Immutable Ledger</h4>
+                        <p class="text-gray-400 text-sm mt-1">Permanent, transparent records.</p>
+                    </div>
+                    
+                    <!-- Stat Card 2 -->
+                    <div class="glass-panel p-6 rounded-xl border-l-4 border-purple-500">
+                        <i class="fa-solid fa-microchip text-purple-400 text-2xl mb-3"></i>
+                        <h4 class="text-white font-bold text-lg">Smart Nodes</h4>
+                        <p class="text-gray-400 text-sm mt-1">Distributed computing power.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

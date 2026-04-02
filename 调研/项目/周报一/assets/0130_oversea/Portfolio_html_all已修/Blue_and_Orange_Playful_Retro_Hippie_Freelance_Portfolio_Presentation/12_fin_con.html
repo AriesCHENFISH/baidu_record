@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work With Me - Retro Pop Portfolio</title>
+    
+    <!-- Google Fonts (Mandated Source) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <!-- Tailwind Config for Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#111111',
+                        textLight: '#F0F0F0',
+                        textDark: '#111111',
+                        accentPink: '#F3A8C3',
+                        accentOrange: '#F28C33',
+                        accentBlue: '#3556BC',
+                        accentGreen: '#4E9445',
+                        borderColor: '#F0F0F0',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Global Settings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000; /* Outer context background */
+            font-family: 'Noto Sans SC', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Page Container */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #111111;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        /* Utility: Sticker Effect for Decorations */
+        .sticker {
+            filter: drop-shadow(4px 4px 0px rgba(0,0,0,0.5));
+            transition: transform 0.3s ease;
+        }
+
+        /* Custom Text Shadow for Retro Feel */
+        .retro-shadow {
+            text-shadow: 3px 3px 0px #3556BC;
+        }
+
+        .outline-text {
+             -webkit-text-stroke: 1px #F0F0F0;
+             color: transparent;
+        }
+
+        /* Memphis Pattern Background */
+        .bg-pattern {
+            background-image: radial-gradient(#F0F0F0 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.05;
+        }
+
+        /* Custom Shape: Burst */
+        .shape-burst {
+            clip-path: polygon(20% 0%, 30% 20%, 50% 0%, 60% 25%, 80% 5%, 80% 30%, 100% 30%, 85% 50%, 100% 70%, 80% 75%, 70% 100%, 50% 80%, 30% 100%, 25% 75%, 0% 70%, 15% 50%, 0% 30%, 20% 25%);
+        }
+        
+        /* Custom Shape: Star */
+        .shape-star {
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 bg-pattern z-0 pointer-events-none"></div>
+
+        <!-- Main Layout Grid -->
+        <div class="relative z-10 grid grid-cols-12 h-full w-full p-12 gap-10 items-center">
+            
+            <!-- Left Column: Image Area -->
+            <div class="col-span-5 h-full relative flex items-center justify-center">
+                <!-- Decorative Elements for Image -->
+                <div class="absolute -top-4 -left-8 w-24 h-24 bg-accentOrange shape-burst sticker z-20 animate-pulse"></div>
+                
+                <!-- Main Image Container -->
+                <div class="relative w-full aspect-[4/5] border-2 border-borderColor rounded-t-full rounded-b-xl overflow-hidden bg-gray-800 shadow-[10px_10px_0px_0px_#3556BC]">
+                    <!-- Image Placeholder -->
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1280&auto=format&fit=crop" 
+                         alt="Designer working at desk" 
+                         class="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-700">
+                    <!-- 450*580 -->
+                </div>
+
+                <!-- Floating Sticker: Smiley -->
+                <div class="absolute bottom-10 -right-6 z-30 transform rotate-12">
+                     <div class="w-20 h-20 bg-accentOrange rounded-full border-2 border-borderColor flex items-center justify-center shadow-[4px_4px_0px_0px_#F0F0F0]">
+                        <i class="fa-solid fa-face-smile text-5xl text-bgDark"></i>
+                     </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Content Area -->
+            <div class="col-span-7 h-full flex flex-col justify-center relative">
+                
+                <!-- Card Container -->
+                <div class="border border-borderColor bg-[#111111] p-12 rounded-lg relative shadow-[12px_12px_0px_0px_#4E9445]">
+                    
+                    <!-- Top Icon Decoration -->
+                    <div class="absolute top-8 right-8 text-borderColor opacity-50">
+                        <i class="fa-solid fa-arrow-right-from-bracket text-3xl"></i>
+                    </div>
+
+                    <!-- Heading -->
+                    <h1 class="font-black text-7xl text-accentPink mb-6 tracking-tighter retro-shadow italic transform -rotate-1">
+                        Work with me!
+                    </h1>
+
+                    <!-- Description -->
+                    <div class="mb-8 pr-10 border-l-4 border-accentOrange pl-6">
+                        <p class="text-textLight text-xl leading-relaxed font-light">
+                            Join me as we bring your ideas to life and create <strong class="text-accentPink font-bold">visual magic</strong> that leaves a lasting impression.
+                        </p>
+                    </div>
+
+                    <!-- Call to Action -->
+                    <div class="mb-10">
+                        <h2 class="text-accentBlue text-3xl font-bold tracking-wide uppercase border-b-2 border-accentBlue inline-block pb-2">
+                            Feel free to reach out!
+                        </h2>
+                    </div>
+
+                    <!-- Contact List -->
+                    <ul class="space-y-6">
+                        <!-- Phone -->
+                        <li class="flex items-center group">
+                            <div class="w-12 h-12 rounded-full bg-accentGreen text-bgDark flex items-center justify-center mr-6 text-xl border border-borderColor group-hover:bg-textLight transition-colors">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <span class="text-textLight text-xl tracking-wide font-mono">+123-456-7890</span>
+                        </li>
+
+                        <!-- Website -->
+                        <li class="flex items-center group">
+                            <div class="w-12 h-12 rounded-full bg-accentOrange text-bgDark flex items-center justify-center mr-6 text-xl border border-borderColor group-hover:bg-textLight transition-colors">
+                                <i class="fa-solid fa-globe"></i>
+                            </div>
+                            <span class="text-textLight text-xl tracking-wide font-mono">www.reallygreatsite.com</span>
+                        </li>
+
+                        <!-- Email -->
+                        <li class="flex items-center group">
+                            <div class="w-12 h-12 rounded-full bg-accentBlue text-textLight flex items-center justify-center mr-6 text-xl border border-borderColor group-hover:bg-textLight group-hover:text-bgDark transition-colors">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <span class="text-textLight text-xl tracking-wide font-mono">hello@reallygreatsite.com</span>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <!-- Bottom Right Floating Star -->
+                <div class="absolute -bottom-8 -right-8 w-32 h-32 bg-accentPink shape-star z-20 transform rotate-[15deg] border-2 border-borderColor flex items-center justify-center shadow-lg">
+                    <div class="w-16 h-16 bg-accentOrange shape-star transform rotate-[45deg]"></div>
+                </div>
+
+                <!-- Decorative Explosion Graphic -->
+                <div class="absolute top-0 -left-12 text-accentBlue opacity-80 z-0">
+                     <i class="fa-solid fa-star-of-life text-6xl fa-spin-pulse" style="animation-duration: 10s;"></i>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer / Page Number Mockup -->
+        <div class="absolute bottom-6 left-12 text-borderColor opacity-40 font-mono text-sm">
+            <span>FREELANCE PORTFOLIO</span>
+        </div>
+        <div class="absolute bottom-6 right-12 text-borderColor opacity-40 font-mono text-sm">
+            <span>04 / CONTACT</span>
+        </div>
+    </div>
+
+</body>
+</html>

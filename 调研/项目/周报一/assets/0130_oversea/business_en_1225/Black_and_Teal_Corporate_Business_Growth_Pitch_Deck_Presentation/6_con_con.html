@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Right Time to Scale - Warner & Spencer</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Config for Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#0E1011',
+                        primary: '#B0E6DC',
+                        primaryDark: '#2C3E3A',
+                        textMain: '#FFFFFF',
+                        textSec: '#D1D5DB',
+                        accentLine: '#5A6B68',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans SC', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    spacing: {
+                        '128': '32rem',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container - Strict Dimensions */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #0E1011;
+            overflow: hidden;
+            /* No shadow on outer container as per instructions */
+        }
+
+        /* Custom Utilities */
+        .glass-panel {
+            background: rgba(44, 62, 58, 0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(176, 230, 220, 0.1);
+        }
+
+        .text-gradient {
+            background: linear-gradient(90deg, #B0E6DC, #FFFFFF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Line Gradient */
+        .accent-line-gradient {
+            background: linear-gradient(180deg, rgba(90, 107, 104, 0), #5A6B68, rgba(90, 107, 104, 0));
+        }
+        
+        .accent-line-diagonal {
+             background: linear-gradient(90deg, transparent, #5A6B68, transparent);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div id="page_container">
+
+        <!-- Background Decorations (Shapes) -->
+        <!-- Large Dark Circle Top Right -->
+        <div class="absolute -top-32 -right-32 w-[600px] h-[600px] rounded-full bg-primaryDark opacity-40 z-0"></div>
+        <!-- Small Accent Circle Left -->
+        <div class="absolute bottom-32 -left-12 w-24 h-24 rounded-full bg-primaryDark opacity-60 z-0"></div>
+        <!-- Small Accent Dot -->
+        <div class="absolute top-24 right-[28%] w-6 h-6 rounded-full bg-primary z-20 shadow-[0_0_15px_rgba(176,230,220,0.6)]"></div>
+
+        <!-- Decorative Diagonal Line (Visual Flow) -->
+        <div class="absolute top-[45%] left-[40%] w-[2px] h-[300px] accent-line-gradient transform -rotate-[25deg] opacity-60 z-0"></div>
+
+        <!-- Main Grid Layout -->
+        <div class="relative z-10 w-full h-full flex flex-col p-16 justify-between">
+
+            <!-- Top Section: Images -->
+            <div class="flex flex-row gap-8 h-[320px] items-start">
+                
+                <!-- Left Image: Office Context -->
+                <div class="w-[35%] h-full relative group overflow-hidden rounded-2xl border border-[#2C3E3A]">
+                    <!-- Image Wrapper -->
+                    <div class="absolute inset-0 bg-black opacity-20 z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                         alt="Team collaborating at desk" 
+                         class="w-full h-full object-cover grayscale opacity-90 filter contrast-125" />
+                    <!-- w*h comment -->
+                    <!-- 448*320 -->
+                </div>
+
+                <!-- Right Image: Team Portrait -->
+                <div class="w-[65%] h-[90%] relative overflow-hidden rounded-2xl border border-[#2C3E3A] translate-y-4">
+                     <!-- Image Wrapper -->
+                     <div class="absolute inset-0 bg-black opacity-10 z-10"></div>
+                     <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" 
+                          alt="Diverse team standing together" 
+                          class="w-full h-full object-cover grayscale opacity-90 filter contrast-125" />
+                     <!-- w*h comment -->
+                     <!-- 832*288 -->
+                </div>
+            </div>
+
+            <!-- Bottom Section: Content & Typography -->
+            <div class="flex flex-row items-end justify-between w-full mt-4">
+
+                <!-- Bottom Left: Headlines -->
+                <div class="w-[45%] flex flex-col gap-2">
+                    <!-- Brand Name -->
+                    <div class="flex items-center gap-3 mb-2">
+                        <div class="w-8 h-[2px] bg-primary"></div>
+                        <h3 class="text-sm font-bold tracking-[0.2em] uppercase text-textSec">
+                            Warner & Spencer
+                        </h3>
+                    </div>
+
+                    <!-- Main Title -->
+                    <h1 class="text-7xl font-bold text-primary leading-[0.95] tracking-tight">
+                        The Right <br/>
+                        <span class="text-white">Time to Scale</span>
+                    </h1>
+                </div>
+
+                <!-- Bottom Right: Detailed Content -->
+                <div class="w-[45%] flex flex-col gap-6 relative">
+                    <!-- Decorative Vertical Bar / Icon -->
+                    <div class="absolute -left-8 top-2 w-1 h-16 bg-gradient-to-b from-primary to-transparent opacity-80 rounded-full"></div>
+                    
+                    <!-- Icon graphic from original (abstract logo) -->
+                    <div class="absolute -right-4 -top-24 text-primary opacity-80 text-5xl">
+                        <i class="fa-solid fa-quote-right"></i>
+                    </div>
+
+                    <!-- Subhead -->
+                    <h2 class="text-2xl font-bold text-white tracking-wide border-b border-[#2C3E3A] pb-4">
+                        Market Timing Matters
+                    </h2>
+
+                    <!-- Body Paragraph -->
+                    <p class="text-lg text-textSec leading-relaxed font-light">
+                        The global shift toward digital transformation, combined with increased awareness of efficiency and sustainability, creates the perfect environment to expand innovative business solutions.
+                    </p>
+
+                    <!-- Subtle Footer Data/Tag -->
+                    <div class="flex items-center gap-2 mt-2 opacity-60">
+                         <i class="fa-solid fa-arrow-trend-up text-primary text-xs"></i>
+                         <span class="text-xs text-textSec uppercase tracking-widest">Q3 Growth Strategy</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Geometric overlay for texture (Scanline effect simulated via gradient) -->
+        <div class="absolute inset-0 z-50 pointer-events-none opacity-[0.03]" 
+             style="background: repeating-linear-gradient(0deg, transparent, transparent 2px, #B0E6DC 3px);">
+        </div>
+
+    </div>
+
+</body>
+</html>

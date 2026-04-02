@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Learnings - Premium Y2K</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --y2k-pink: #E685B5; --y2k-blue: #5E7CB3; --y2k-yellow: #F2E96B; --y2k-dark: #1B2A59; }
+        body { font-family: 'Space+Grotesk', sans-serif; }
+        .font-sync { font-family: 'Syncopate', sans-serif; }
+        .bg-grid-pattern { background-size: 50px 50px; background-image: linear-gradient(to right, rgba(255, 255, 255, 0.15) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 1px, transparent 1px); }
+        .paper-overlay { background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"); opacity: 0.05; pointer-events: none; }
+        .shadow-y2k { box-shadow: 8px 8px 0px var(--y2k-dark); }
+        .shadow-y2k-pink { box-shadow: 8px 8px 0px var(--y2k-pink); }
+        .glass-card { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(10px); border: 2px solid rgba(255, 255, 255, 0.5); }
+        @keyframes float { 0% { transform: translateY(0px) rotate(var(--tw-rotate)); } 50% { transform: translateY(-10px) rotate(var(--tw-rotate)); } 100% { transform: translateY(0px) rotate(var(--tw-rotate)); } }
+        .animate-float { animation: float 3s ease-in-out infinite; }
+    </style>
+</head>
+<body>
+    <div id="page_container" class="relative overflow-hidden mx-auto" style="width: 1280px; height: 720px;">
+        <div class="absolute top-0 left-0 w-full h-1/2 bg-[#5E7CB3] z-0"></div>
+        <div class="absolute bottom-0 left-0 w-full h-1/2 bg-[#E685B5] bg-grid-pattern z-0"></div>
+        <div class="absolute inset-0 paper-overlay z-10"></div>
+
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[52%] w-[92%] h-[80%] glass-card rounded-2xl shadow-y2k z-20 flex flex-col p-10 border-4 border-white">
+            <div class="flex justify-between items-end mb-8">
+                <div class="relative">
+                    <div class="absolute -top-6 -left-6 text-[#F2E96B] text-4xl animate-bounce"><i class="fa-solid fa-brain"></i></div>
+                    <div class="bg-[#1B2A59] px-10 py-4 transform -rotate-1 shadow-y2k-pink">
+                        <h1 class="text-white text-5xl font-sync font-bold tracking-tighter">PHASE_02 <span class="text-[#F2E96B]">LEARNINGS</span></h1>
+                    </div>
+                </div>
+                <div class="text-right text-[#1B2A59]">
+                    <p class="font-bold text-sm tracking-widest uppercase">Archive Node: 77-B</p>
+                    <p class="opacity-60 text-xs font-mono italic">#DataRetrieval_Complete</p>
+                </div>
+            </div>
+
+            <div class="flex flex-row gap-10 h-full overflow-hidden">
+                <div class="flex-1 space-y-6">
+                    <div class="bg-white/50 p-6 border-l-4 border-[#1B2A59] rounded-r-lg">
+                        <h3 class="text-[#1B2A59] font-bold text-xl mb-2 italic underline decoration-[#F2E96B] decoration-4">01. Aesthetic Resonance</h3>
+                        <p class="text-[#1B2A59] leading-relaxed font-medium">We discovered that Y2K visual elements act as a "nostalgia bridge," increasing initial user trust by 35% among Gen-Z demographics compared to flat minimalism.</p>
+                    </div>
+                    <div class="bg-[#1B2A59] p-6 rounded-lg text-white shadow-y2k-pink">
+                        <h3 class="text-[#F2E96B] font-bold text-xl mb-2 italic">02. Complex Hierarchy</h3>
+                        <p class="text-white/80 leading-relaxed font-medium">The use of overlapping windows and diverse textures doesn't hinder usability if core navigation remains high-contrast. Chaos can be functional when structured correctly.</p>
+                    </div>
+                    <div class="bg-white/50 p-6 border-l-4 border-[#E685B5] rounded-r-lg">
+                        <h3 class="text-[#1B2A59] font-bold text-xl mb-2 italic underline decoration-[#5E7CB3] decoration-4">03. Interactive Feedback</h3>
+                        <p class="text-[#1B2A59] leading-relaxed font-medium">Micro-interactions (hover, float, and bounce) are critical for making the "Retro-Future" interface feel alive rather than just a static throwback.</p>
+                    </div>
+                </div>
+
+                <div class="w-[420px] bg-[#1B2A59] rounded-xl border-4 border-white shadow-y2k overflow-hidden flex flex-col relative group">
+                    <div class="p-2 bg-gray-200 border-b-2 border-[#1B2A59] flex justify-between items-center">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-image text-[#1B2A59] text-xs"></i>
+                            <span class="text-[10px] font-black font-mono text-[#1B2A59]">ANALYSIS_RENDER_v0.2.JPG</span>
+                        </div>
+                        <div class="flex gap-1">
+                            <div class="w-3 h-3 bg-gray-400 border border-gray-600"></div>
+                            <div class="w-3 h-3 bg-[#E685B5] border border-gray-600"></div>
+                        </div>
+                    </div>
+                    <div class="flex-1 relative overflow-hidden">
+                        <img 
+                            src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1280&auto=format&fit=crop" 
+                            alt="Y2K Aesthetic Visual" 
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        >
+                        <div class="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.1)_50%),linear-gradient(90deg,rgba(255,0,0,0.03),rgba(0,255,0,0.01),rgba(0,0,255,0.03))] bg-[length:100%_2px,3px_100%]"></div>
+                        
+                        <div class="absolute bottom-4 left-4 bg-[#F2E96B] border-2 border-[#1B2A59] px-3 py-1 shadow-hard transform -rotate-2">
+                            <p class="text-[#1B2A59] font-mono text-[10px] font-black uppercase tracking-tighter">Engagement_Peak: 88.2%</p>
+                        </div>
+                    </div>
+                    <div class="p-2 bg-[#1B2A59] text-white/50 font-mono text-[9px] flex justify-between border-t border-white/20">
+                        <span>SIZE: 1024x1024</span>
+                        <span>FORMAT: SYNERGY_TYPE</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute top-[12%] right-[5%] z-30 transform rotate-12 animate-float [--tw-rotate:12deg] text-white/40 text-8xl">
+            <i class="fa-solid fa-floppy-disk"></i>
+        </div>
+
+        <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 w-[90%] z-30">
+            <div class="bg-[#1B2A59] h-16 rounded-xl flex items-center justify-between px-8 shadow-y2k border-2 border-white/30">
+                <div class="flex items-center space-x-4">
+                    <div class="flex space-x-1">
+                        <div class="w-3 h-3 bg-[#E685B5] rounded-full"></div>
+                        <div class="w-3 h-3 bg-[#F2E96B] rounded-full"></div>
+                        <div class="w-3 h-3 bg-[#5E7CB3] rounded-full"></div>
+                    </div>
+                    <span class="text-white/60 font-mono text-xs uppercase tracking-[0.3em]">Directory: root/project_v1</span>
+                </div>
+                <h4 class="text-white font-bold text-lg tracking-widest uppercase italic">NEXT: TARGET_OBJECTIVES <i class="fa-solid fa-chevron-right ml-2 animate-pulse"></i></h4>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

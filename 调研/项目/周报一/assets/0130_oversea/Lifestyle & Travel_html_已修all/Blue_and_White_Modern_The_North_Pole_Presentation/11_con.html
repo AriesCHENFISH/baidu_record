@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polar Logistics - Top/Bottom Layout</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { arctic: '#4D9BE6', deep: '#03070E', slate: '#8A9BB0', ghost: '#F2F4F8' },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'sans-serif'] },
+                    borderRadius: { '4xl': '2.5rem' }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; background: linear-gradient(135deg, #0B1521 0%, #03070E 100%); margin: 0 auto; overflow: hidden; color: #F2F4F8; }
+        .glass-tech { background: rgba(11, 21, 33, 0.6); backdrop-filter: blur(16px); border: 1px solid rgba(77, 155, 230, 0.1); transition: all 0.3s ease; }
+        .glass-tech:hover { background: rgba(11, 21, 33, 0.8); border-color: rgba(77, 155, 230, 0.5); box-shadow: 0 10px 30px -10px rgba(77, 155, 230, 0.2); }
+        .text-outline { -webkit-text-stroke: 1px rgba(242, 244, 248, 0.2); color: transparent; }
+        .grid-overlay { background-image: linear-gradient(to right, rgba(77, 155, 230, 0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(77, 155, 230, 0.03) 1px, transparent 1px); background-size: 40px 40px; }
+    </style>
+</head>
+<body>
+    <div id="page_container" class="flex flex-col grid-overlay">
+        
+        <div class="h-[55%] relative overflow-hidden rounded-b-4xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-20 group">
+            <img src="https://images.unsplash.com/photo-1544216717-3bbf52512659?q=80&w=1280&auto=format&fit=crop" 
+                 class="w-full h-full object-cover opacity-90 grayscale-[20%] group-hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100">
+            <div class="absolute inset-0 bg-gradient-to-t from-deep via-deep/50 to-transparent"></div>
+            
+            <div class="absolute bottom-8 right-12 text-right">
+                <div class="w-16 h-1 bg-arctic mb-6 ml-auto shadow-[0_0_15px_rgba(77,155,230,0.5)]"></div>
+                <div class="relative">
+                    <h1 class="text-[100px] font-black uppercase text-outline absolute -top-12 right-0 opacity-30 tracking-tighter leading-none">ENGINEERING</h1>
+                    <h1 class="text-7xl font-black uppercase tracking-tighter leading-none relative z-10">
+                        POLAR<br><span class="text-transparent bg-clip-text bg-gradient-to-l from-ghost to-arctic">LOGISTICS</span>
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex-1 p-12 relative z-10 flex items-center">
+            
+            <div class="grid grid-cols-3 gap-8 w-full">
+                <div class="glass-tech p-8 rounded-3xl flex flex-col group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-30 transition-opacity"><i class="fa-solid fa-ship text-5xl text-arctic"></i></div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fa-solid fa-anchor text-arctic text-2xl"></i>
+                        <h3 class="text-arctic text-xs font-bold tracking-[0.2em] uppercase">Maritime</h3>
+                    </div>
+                    <h4 class="text-ghost font-bold text-xl mb-3">Nuclear Icebreakers</h4>
+                    <p class="text-slate text-sm leading-relaxed opacity-90">
+                        Massive, powerful vessels capable of crushing through multi-year ice up to 3 meters thick to maintain essential supply channels.
+                    </p>
+                </div>
+                <div class="glass-tech p-8 rounded-3xl flex flex-col group relative overflow-hidden border-t-2 border-arctic/30">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-30 transition-opacity"><i class="fa-solid fa-plane-arrival text-5xl text-arctic"></i></div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fa-solid fa-plane text-arctic text-2xl"></i>
+                        <h3 class="text-arctic text-xs font-bold tracking-[0.2em] uppercase">Aerial</h3>
+                    </div>
+                    <h4 class="text-ghost font-bold text-xl mb-3">Ski-Equipped Aircraft</h4>
+                    <p class="text-slate text-sm leading-relaxed opacity-90">
+                        Specialized planes providing rapid transit for personnel and cargo across the vast, roadless ice sheets and remote stations.
+                    </p>
+                </div>
+                <div class="glass-tech p-8 rounded-3xl flex flex-col group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-30 transition-opacity"><i class="fa-solid fa-truck-monster text-5xl text-arctic"></i></div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fa-solid fa-snowflake text-arctic text-2xl"></i>
+                        <h3 class="text-arctic text-xs font-bold tracking-[0.2em] uppercase">Ground</h3>
+                    </div>
+                    <h4 class="text-ghost font-bold text-xl mb-3">Heavy Snowcats</h4>
+                    <p class="text-slate text-sm leading-relaxed opacity-90">
+                        High-traction tracked vehicles acting as mobile laboratories and supply carriers for deep-field scientific expeditions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

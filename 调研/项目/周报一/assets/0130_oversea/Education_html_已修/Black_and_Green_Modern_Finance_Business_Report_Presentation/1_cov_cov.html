@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, initial-scale=1.0">
+    <title>Ginyard - Business Report Cover</title>
+
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#101214',
+                        cardBg: '#1B1E21',
+                        textPrimary: '#FFFFFF',
+                        textSecondary: '#C8CACC',
+                        brand: '#61C3C6',
+                        brandDark: '#3B8E99',
+                    },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #101214;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        .gradient-ring {
+            background: linear-gradient(135deg, #101214 0%, #1B1E21 40%, #3B8E99 80%, #61C3C6 100%);
+        }
+        .hero-title {
+            line-height: 0.9;
+            letter-spacing: -0.05em;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+
+        <!-- Background Decor -->
+        <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+            <!-- Glow -->
+            <div class="absolute rounded-full opacity-20 blur-3xl" 
+                 style="width: 1000px; height: 1000px; right: -300px; top: -200px; background: radial-gradient(circle, #3B8E99, transparent 70%);">
+            </div>
+            <!-- Ring Shape -->
+            <div class="absolute rounded-full gradient-ring" 
+                 style="width: 900px; height: 900px; right: -300px; top: 50%; transform: translateY(-50%);">
+            </div>
+            <div class="absolute rounded-full bg-bgDark" 
+                 style="width: 700px; height: 700px; right: -200px; top: 50%; transform: translateY(-50%);">
+            </div>
+        </div>
+
+        <!-- Content Layer -->
+        <div class="relative z-10 w-full h-full flex flex-col justify-between px-16 py-10">
+
+            <!-- Header -->
+            <nav class="flex justify-between items-center w-full">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-cardBg flex items-center justify-center border border-brand text-brand">
+                        <i class="fa-solid fa-layer-group text-lg"></i>
+                    </div>
+                    <h2 class="text-textPrimary font-bold text-xl tracking-wide">ginyard</h2>
+                </div>
+                
+                <div class="flex items-center gap-12">
+                    <ul class="flex gap-10 list-none text-textSecondary text-sm font-medium">
+                        <li>Menu</li>
+                        <li>About Us</li>
+                    </ul>
+                    <div class="border border-brand rounded-full px-6 py-2 text-brand text-sm font-medium">
+                        @reallygreatsite
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Main Title Area -->
+            <div class="flex-1 flex flex-col justify-center mt-[-40px]">
+                <div class="mb-6">
+                    <span class="text-brand uppercase tracking-[0.3em] text-sm font-bold pl-1">Finance Division</span>
+                </div>
+                
+                <h1 class="hero-title text-textPrimary font-bold text-[120px] mb-8 drop-shadow-2xl">
+                    Business<br>
+                    <span class="text-gray-500">Report</span>
+                </h1>
+
+                <!-- Presenter Info Block (New) -->
+                <div class="flex items-center gap-12 mt-8">
+                    <!-- Presenter -->
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-cardBg border border-gray-700 flex items-center justify-center overflow-hidden">
+                            <!-- Placeholder Avatar Icon -->
+                            <i class="fa-solid fa-user text-gray-400 text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-gray-500 text-xs uppercase tracking-wider mb-1">Presenter</p>
+                            <p class="text-white text-base font-medium">Alex Morgan</p>
+                            <p class="text-gray-400 text-xs">Chief Financial Officer</p>
+                        </div>
+                    </div>
+
+                    <!-- Divider -->
+                    <div class="w-[1px] h-10 bg-gray-700"></div>
+
+                    <!-- Date -->
+                    <div>
+                        <p class="text-gray-500 text-xs uppercase tracking-wider mb-1">Date</p>
+                        <p class="text-white text-base font-medium">October 24, 2024</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Small Print -->
+            <div class="w-full flex justify-between items-end opacity-40 text-xs text-textSecondary">
+                <p>CONFIDENTIAL - INTERNAL USE ONLY</p>
+                <div class="flex gap-2">
+                    <div class="w-1.5 h-1.5 rounded-full bg-brand"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-gray-600"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-gray-600"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

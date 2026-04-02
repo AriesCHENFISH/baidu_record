@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema Theme Thank You Slide</title>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts Mirror (Domestic) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FFFFFF',
+                        accent: '#8B1C1C', // Dark Red
+                        secondary: '#DCDCDC', // Soft Gray
+                        highlight: '#8B4513', // Brownish
+                        deepblack: '#000000',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    },
+                    letterSpacing: {
+                        'cinema': '0.2em',
+                        'ultra-wide': '0.35em',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Vertical Writing Mode Utility */
+        .writing-vertical-rl {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            transform: rotate(180deg);
+        }
+
+        /* Custom Text Stroke for the "Outline" effect if needed, 
+           but we will use solid color for better aesthetics per instructions */
+        .text-outline {
+            -webkit-text-stroke: 1px #8B1C1C;
+            color: transparent;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Page Container -->
+    <!-- 1280x720 Fixed Dimension, Centered, Black Background -->
+    <div id="page_container" class="relative w-[1280px] h-[720px] mx-auto bg-deepblack overflow-hidden flex flex-col justify-between">
+
+        <!-- Top Section: Typography & Info (Approx 55% Height) -->
+        <div class="h-[55%] w-full flex items-center justify-between px-16 pt-12 pb-4 relative z-20">
+            
+            <!-- Left Element: Business Proposal Label -->
+            <!-- Using border radius and flex layout for pill shape -->
+            <div class="h-full flex items-center justify-center">
+                <div class="border border-secondary/50 rounded-full py-8 px-3 h-[240px] flex items-center justify-center transition-opacity opacity-80">
+                    <p class="writing-vertical-rl text-secondary text-xs font-bold tracking-cinema uppercase">
+                        Business Proposal
+                    </p>
+                </div>
+            </div>
+
+            <!-- Center Element: Main Headlines -->
+            <div class="flex flex-col items-center justify-center z-10 -mt-4">
+                <!-- Main Title: Huge, White, Condensed -->
+                <h1 class="text-white text-[130px] leading-[0.85] font-black uppercase tracking-tighter text-center" style="font-family: 'Noto Sans SC', sans-serif;">
+                    Thank You
+                </h1>
+                
+                <!-- Sub Title: Accent Red, Wide Spacing -->
+                <!-- Aesthetic Upgrade: Using solid accent color with heavy weight instead of outline for readability and impact -->
+                <div class="mt-4 border-t-2 border-accent/30 w-full pt-4 flex justify-center">
+                    <h2 class="text-accent text-4xl font-bold uppercase tracking-ultra-wide text-center">
+                        For Your Attention
+                    </h2>
+                </div>
+            </div>
+
+            <!-- Right Element: Website URL -->
+            <div class="h-full flex items-center justify-center">
+                <p class="writing-vertical-rl text-secondary text-xs font-bold tracking-cinema opacity-60 hover:text-accent transition-colors">
+                    WWW.REALLYGREATSITE.COM
+                </p>
+            </div>
+        </div>
+
+        <!-- Bottom Section: Cinematic Image (Approx 45% Height) -->
+        <!-- Visual Upgrade: Added a gradient fade at the top of the image to blend seamlessly with the black background -->
+        <div class="h-[45%] w-full relative">
+            
+            <!-- Gradient Overlay for smooth transition from black bg to image -->
+            <div class="absolute top-0 left-0 w-full h-24 z-10" style="background: linear-gradient(black, transparent);"></div>
+
+            <!-- Cinematic Image -->
+            <!-- Theme: Cinema Audience / 3D Glasses / Red Seats to match Accent Color -->
+            <div class="w-full h-full overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1517604931442-7105376f2611?q=80&w=1280&auto=format&fit=crop" 
+                     alt="Audience in cinema wearing 3d glasses" 
+                     class="w-full h-full object-cover object-top opacity-90 filter contrast-125 saturate-110">
+                <!-- 1280*324 -->
+            </div>
+
+            <!-- Decorative Elements on Image (Subtle) -->
+            <div class="absolute bottom-6 left-10 z-20 flex gap-4">
+                <!-- Icon decoration using FontAwesome -->
+                <div class="w-10 h-10 rounded-full bg-accent/80 flex items-center justify-center backdrop-blur-sm">
+                    <i class="fa-solid fa-clapperboard text-white text-sm"></i>
+                </div>
+                <div class="flex flex-col justify-center">
+                    <p class="text-white text-xs font-bold tracking-widest uppercase">The End</p>
+                    <p class="text-secondary/70 text-[10px] tracking-wide">Q&A Session</p>
+                </div>
+            </div>
+
+            <!-- Right Bottom subtle branding or page mark -->
+            <div class="absolute bottom-6 right-10 z-20">
+                <div class="w-12 h-1 bg-accent rounded-full mb-1"></div>
+                <div class="w-6 h-1 bg-secondary/50 rounded-full ml-auto"></div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Exploration Keynote</title>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts (Domestic Mirror as requested) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepNavy: '#0B132B',
+                        crispWhite: '#FFFFFF',
+                        electricCyan: '#5BC0EB',
+                        techBlue: '#2D6A9F',
+                        silverGrey: '#B0C4DE',
+                        metallic: '#E0E0E0',
+                        overlayBlack: 'rgba(0, 0, 0, 0.5)',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'Roboto', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'glow': '0 0 15px rgba(91, 192, 235, 0.3)',
+                        'card': '0 10px 30px rgba(0, 0, 0, 0.3)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* CSS Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Hexagon Clip Path Utility */
+        .hexagon-clip {
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        }
+        
+        /* Specific positioning for the page container */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #0B132B;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Custom scrollbar hiding just in case */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Container -->
+    <div id="page_container">
+
+        <!-- DECORATIVE BACKGROUND ELEMENTS (Tech Lines) -->
+        <!-- Top Left Horizontal Line -->
+        <div class="absolute top-[160px] left-0 w-[200px] h-[2px] bg-electricCyan opacity-60"></div>
+        <!-- Angled Line Connection -->
+        <div class="absolute top-[160px] left-[200px] w-[50px] h-[2px] bg-electricCyan opacity-60 origin-left rotate-45"></div>
+        <!-- Vertical Line Down -->
+        <div class="absolute top-[196px] left-[234px] w-[2px] h-[300px] bg-electricCyan opacity-30"></div>
+        
+        <!-- Right Side Tech Lines -->
+        <div class="absolute top-[40px] right-[300px] w-[2px] h-[80px] bg-electricCyan opacity-40 rotate-[30deg]"></div>
+        <div class="absolute top-[250px] right-0 w-[100px] h-[2px] bg-electricCyan opacity-40"></div>
+
+        <!-- Decorative "XX" Markers -->
+        <div class="absolute top-[300px] left-[80px] text-silverGrey opacity-50 tracking-[4px] text-xs">
+            <b>XX</b>
+        </div>
+        <div class="absolute bottom-[200px] right-[100px] text-silverGrey opacity-50 tracking-[4px] text-xs">
+            <b>XX</b>
+        </div>
+
+        <!-- HEADER / LOGO AREA -->
+        <div class="absolute top-10 left-12 flex items-center gap-3">
+            <div class="text-electricCyan text-2xl">
+                <i class="fa-brands fa-space-awesome"></i>
+            </div>
+            <h3 class="text-white text-xl font-bold tracking-wide">ALDENAIRE</h3>
+        </div>
+
+        <!-- CENTER CONTENT: Headline & Intro -->
+        <div class="absolute top-[160px] left-[350px] z-10">
+            <h2 class="text-white text-4xl font-bold uppercase leading-tight tracking-wide mb-2">
+                Beyond<br>Our Planet
+            </h2>
+        </div>
+
+        <div class="absolute top-[300px] left-[350px] w-[420px] z-10">
+            <p class="text-silverGrey text-sm leading-6 font-light">
+                The final frontier is closer than ever. Space exploration is moving from dream to reality, expanding human reach beyond Earth.
+            </p>
+        </div>
+
+        <!-- HEXAGON IMAGE SECTION (Top Right) -->
+        <!-- Hexagon Border (Simulated via slightly larger container) -->
+        <div class="absolute top-[48px] right-[148px] w-[504px] h-[404px] bg-transparent flex items-center justify-center hexagon-clip bg-gradient-to-br from-electricCyan to-transparent p-[2px] opacity-30">
+             <!-- Border effect container -->
+        </div>
+
+        <!-- Actual Image Container -->
+        <div class="absolute top-[50px] right-[150px] w-[500px] h-[400px] hexagon-clip bg-deepNavy shadow-2xl z-20">
+            <img src="https://images.unsplash.com/photo-1614728853913-1e221a652410?q=80&w=1000&auto=format&fit=crop" 
+                 alt="Spacecraft view of Mars" 
+                 class="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-700">
+            <!-- 500*400 -->
+            
+            <!-- Inner Hexagon Overlay Gradient for depth -->
+            <div class="absolute inset-0 bg-gradient-to-t from-deepNavy via-transparent to-transparent opacity-60"></div>
+        </div>
+
+        <!-- Small Decorative Hexagon -->
+        <div class="absolute top-[380px] right-[280px] w-[60px] h-[60px] hexagon-clip border-2 border-white flex items-center justify-center z-30 bg-deepNavy">
+             <!-- Empty decoraive hex -->
+        </div>
+
+        <!-- BOTTOM LEFT: INFO CARD -->
+        <div class="absolute bottom-[60px] left-[100px] w-[500px] bg-overlayBlack backdrop-blur-sm rounded-xl p-8 border border-white/10 shadow-card">
+            <!-- Floating Capsule Accent (Progress Bar Style) -->
+            <div class="absolute -top-[6px] left-[40px] w-[120px] h-[12px] rounded-full" 
+                 style="background: linear-gradient(90deg, #5BC0EB, #2D6A9F);">
+            </div>
+
+            <!-- List Content -->
+            <ul class="space-y-5 mt-2">
+                <li class="flex items-start gap-4">
+                    <span class="text-electricCyan mt-1 text-xs"><i class="fa-solid fa-satellite"></i></span>
+                    <p class="text-silverGrey text-sm font-light">Over 6,900 active satellites orbiting Earth</p>
+                </li>
+                <li class="flex items-start gap-4">
+                    <span class="text-electricCyan mt-1 text-xs"><i class="fa-solid fa-rocket"></i></span>
+                    <p class="text-silverGrey text-sm font-light">Missions to the Moon and Mars shaping interplanetary travel</p>
+                </li>
+                <li class="flex items-start gap-4">
+                    <span class="text-electricCyan mt-1 text-xs"><i class="fa-solid fa-microchip"></i></span>
+                    <p class="text-silverGrey text-sm font-light">Miniaturized tech cutting launch costs</p>
+                </li>
+                <li class="flex items-start gap-4">
+                    <span class="text-electricCyan mt-1 text-xs"><i class="fa-solid fa-user-astronaut"></i></span>
+                    <p class="text-silverGrey text-sm font-light">Space tourism emerging as a new industry</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- BOTTOM RIGHT: GIANT TITLE -->
+        <div class="absolute bottom-[60px] right-[50px] text-right z-10">
+            <h1 class="text-white text-[80px] font-bold leading-[0.85] tracking-tighter uppercase select-none" style="text-shadow: 0 0 40px rgba(11, 19, 43, 0.8);">
+                Space<br>
+                <span class="text-white">Exploration</span>
+            </h1>
+        </div>
+
+    </div>
+
+</body>
+</html>

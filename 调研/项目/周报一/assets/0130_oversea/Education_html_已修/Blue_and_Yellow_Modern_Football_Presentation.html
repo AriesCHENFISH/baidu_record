@@ -1,0 +1,2152 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Responsive Merged HTML
+  </title>
+  <style>
+   body {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .page-wrapper {
+                width: 100%;
+                margin: 15px 0;
+                position: relative;
+            }
+            .page-title {
+                background: #f5f5f5;
+                padding: 5px 10px;
+                border-radius: 3px 3px 0 0;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+            }
+            .responsive-iframe {
+                border: none;
+                width: 100%;
+                display: block;
+            }
+  </style>
+ </head>
+ <body>
+  <!-- 内容将在这里插入 -->
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 1
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Football Presentation Keynote&lt;/title&gt;
+    
+    &lt;!-- Fonts: Noto Sans SC (Domestic CDN) --&gt;
+    &lt;link href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot; rel=&quot;stylesheet&quot;&gt;
+    
+    &lt;!-- Icons: FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+
+    &lt;!-- Tailwind Configuration --&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FFFFFF',
+                        bgBlue: '#4A89C6',
+                        accentGreen: '#7FA956',
+                        darkBlue: '#3A6CA0',
+                        secondaryBlack: '#000000',
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'],
+                    },
+                    letterSpacing: {
+                        tighter: '-0.05em',
+                        widest: '0.25em',
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        /* CSS Reset &amp; Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 
+         * Page Container Logic:
+         * 1. Fixed dimensions 1280x720
+         * 2. Centered relative to viewport (for viewing purposes)
+         * 3. No external shadows
+         */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #4A89C6; /* Fallback Sky Blue */
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Text Shadow Utility for readability against sky */
+        .text-shadow-lg {
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+        }
+        
+        /* Decorative Skew Utility */
+        .skew-decor {
+            transform: skewX(-25deg);
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;!-- Main Slide Container --&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+
+        &lt;!-- 1. Background Layer --&gt;
+        &lt;!-- Logic: High-quality Unsplash image matching &quot;Football + Sky + Action&quot; theme. 
+             Ideally positioned to leave space for text on the left. --&gt;
+        &lt;div class=&quot;absolute inset-0 z-0&quot;&gt;
+            &lt;img src=&quot;https://images.unsplash.com/photo-1518091043644-c1d4457512c6?q=80&amp;w=2832&amp;auto=format&amp;fit=crop&quot; 
+                 alt=&quot;Football player heading ball against blue sky&quot; 
+                 class=&quot;w-full h-full object-cover object-top opacity-90&quot;&gt;
+            &lt;!-- 1280*720 --&gt;
+            
+            &lt;!-- Gradient Overlay for Better Text Contrast --&gt;
+            &lt;div class=&quot;absolute inset-0 bg-gradient-to-r from-[#4A89C6]/40 to-transparent&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 2. Top Left: Company/Logo Identifier --&gt;
+        &lt;!-- Logic: Pill shape, high contrast white background, dark text for legibility --&gt;
+        &lt;div class=&quot;absolute top-10 left-12 z-20&quot;&gt;
+            &lt;div class=&quot;bg-primary px-5 py-2 rounded-full flex items-center gap-3 shadow-lg&quot;&gt;
+                &lt;i class=&quot;fa-solid fa-futbol text-secondaryBlack text-lg&quot;&gt;&lt;/i&gt;
+                &lt;h6 class=&quot;text-secondaryBlack text-sm font-bold tracking-wide&quot;&gt;Fradel and Spies Co.&lt;/h6&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 3. Decorative Elements: Speed Lines (Top Right) --&gt;
+        &lt;!-- Logic: CSS Geometric shapes to mimic the reference &quot;Jersey Stripes&quot; or &quot;Motion Lines&quot; --&gt;
+        &lt;div class=&quot;absolute top-12 right-12 z-20 flex items-center gap-2 opacity-90&quot;&gt;
+            &lt;!-- Short Bars --&gt;
+            &lt;div class=&quot;w-3 h-8 bg-primary skew-decor shadow-sm&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;w-3 h-8 bg-primary skew-decor shadow-sm&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;w-3 h-8 bg-primary skew-decor shadow-sm&quot;&gt;&lt;/div&gt;
+            &lt;!-- Long Bar --&gt;
+            &lt;div class=&quot;w-32 h-8 bg-primary skew-decor shadow-sm flex items-center justify-center&quot;&gt;
+                &lt;!-- Inner detail line --&gt;
+                &lt;div class=&quot;w-24 h-1 bg-bgBlue/20 rounded&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 4. Main Content Area (Typography) --&gt;
+        &lt;!-- Logic: Placing the massive title slightly offset to interact with the subject --&gt;
+        &lt;div class=&quot;absolute top-1/2 left-12 transform -translate-y-1/2 z-10 w-full pr-12&quot;&gt;
+            
+            &lt;!-- Primary Heading --&gt;
+            &lt;!-- Using extreme font size and heavy weight for impact --&gt;
+            &lt;h1 class=&quot;text-primary font-black text-[180px] leading-[0.85] tracking-tighter text-shadow-lg mix-blend-overlay&quot;&gt;
+                FOOTBALL
+            &lt;/h1&gt;
+            
+            &lt;!-- Secondary Heading --&gt;
+            &lt;!-- Right-aligned relative to the main container or grid flow --&gt;
+            &lt;div class=&quot;w-full flex justify-end pr-24 mt-4&quot;&gt;
+                &lt;h2 class=&quot;text-primary font-light text-[48px] tracking-widest uppercase border-b-2 border-accentGreen/80 pb-2 shadow-sm&quot;&gt;
+                    Presentation
+                &lt;/h2&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 5. Decorative Elements: Speed Lines (Bottom Left) --&gt;
+        &lt;!-- Logic: Mirroring top right for balance --&gt;
+        &lt;div class=&quot;absolute bottom-12 left-12 z-20 flex items-center gap-2 opacity-90&quot;&gt;
+            &lt;!-- Long Bar --&gt;
+            &lt;div class=&quot;w-32 h-8 bg-primary skew-decor shadow-sm&quot;&gt;&lt;/div&gt;
+            &lt;!-- Short Bars --&gt;
+            &lt;div class=&quot;w-3 h-8 bg-primary skew-decor shadow-sm&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;w-3 h-8 bg-primary skew-decor shadow-sm&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;w-3 h-8 bg-primary skew-decor shadow-sm&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 6. Footer Information (Bottom Right) --&gt;
+        &lt;!-- Logic: Clean hierarchy for presenter name --&gt;
+        &lt;div class=&quot;absolute bottom-12 right-12 z-20 text-right text-primary drop-shadow-md&quot;&gt;
+            &lt;p class=&quot;text-lg opacity-90 font-light mb-1&quot;&gt;Presented by&lt;/p&gt;
+            &lt;h3 class=&quot;text-3xl font-bold tracking-wide border-r-4 border-accentGreen pr-4&quot;&gt;
+                Aaron Loeb
+            &lt;/h3&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 2
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Soccer Presentation - Table of Contents&lt;/title&gt;
+    
+    &lt;!-- Google Fonts Mirror --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FFFFFF',
+                        bgBlue: '#4A89C6',
+                        accentGreen: '#7FA956',
+                        darkBlue: '#3A6CA0',
+                        inkBlack: '#000000',
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background: linear-gradient(135deg, #4A89C6 0%, #3A6CA0 100%);
+            overflow: hidden;
+            font-family: &quot;Noto Sans SC&quot;, sans-serif;
+            color: #FFFFFF;
+        }
+        .skew-bar { transform: skewX(-25deg); }
+        /* 保持页面整洁，不使用滚动条 */
+        ::-webkit-scrollbar { display: none; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;!-- 背景装饰：巨大的半透明足球水印 --&gt;
+        &lt;div class=&quot;absolute -right-24 -bottom-24 opacity-5 pointer-events-none&quot;&gt;
+            &lt;i class=&quot;fa-solid fa-futbol&quot; style=&quot;font-size: 700px;&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 顶部装饰条 --&gt;
+        &lt;div class=&quot;absolute top-12 right-12 z-10 flex gap-2 opacity-40&quot;&gt;
+            &lt;div class=&quot;w-3 h-6 bg-white skew-bar&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;w-48 h-6 bg-white skew-bar&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;w-3 h-6 bg-accentGreen skew-bar&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 1. 标志性 Logo 区域 (与之前页面完全一致) --&gt;
+        &lt;div class=&quot;absolute top-10 left-12 z-30&quot;&gt;
+            &lt;div class=&quot;bg-white text-inkBlack rounded-full px-6 py-2 flex items-center gap-3 shadow-xl&quot;&gt;
+                &lt;i class=&quot;fa-solid fa-futbol text-lg&quot;&gt;&lt;/i&gt;
+                &lt;span class=&quot;font-bold text-sm tracking-widest uppercase&quot;&gt;Fradel and Spies Co.&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 主要内容区域 --&gt;
+        &lt;div class=&quot;relative z-20 h-full flex items-center px-24&quot;&gt;
+            
+            &lt;div class=&quot;grid grid-cols-12 w-full gap-12&quot;&gt;
+                
+                &lt;!-- 左侧标题栏 --&gt;
+                &lt;div class=&quot;col-span-4 flex flex-col justify-center&quot;&gt;
+                    &lt;h1 class=&quot;text-[100px] font-black tracking-tightest leading-none mb-4 text-shadow-lg&quot;&gt;
+                        CONT&lt;br&gt;ENTS
+                    &lt;/h1&gt;
+                    &lt;!-- 装饰绿条 --&gt;
+                    &lt;div class=&quot;w-24 h-3 bg-accentGreen rounded-full mb-6&quot;&gt;&lt;/div&gt;
+                    &lt;p class=&quot;text-white/50 text-base font-light tracking-[0.4em] uppercase&quot;&gt;
+                        Technical Report
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 右侧目录列表 (2列 x 4行 = 8个) --&gt;
+                &lt;div class=&quot;col-span-8 grid grid-cols-2 gap-x-16 gap-y-12&quot;&gt;
+                    
+                    &lt;!-- 第1项 --&gt;
+                    &lt;div class=&quot;flex items-start gap-5 border-b border-white/10 pb-4&quot;&gt;
+                        &lt;span class=&quot;text-accentGreen font-black text-2xl mt-1&quot;&gt;01&lt;/span&gt;
+                        &lt;div&gt;
+                            &lt;h2 class=&quot;text-2xl font-bold tracking-tight mb-1&quot;&gt;Introduction&lt;/h2&gt;
+                            &lt;p class=&quot;text-white/40 text-xs uppercase tracking-widest&quot;&gt;Overview &amp; Goals&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- 第5项 --&gt;
+                    &lt;div class=&quot;flex items-start gap-5 border-b border-white/10 pb-4&quot;&gt;
+                        &lt;span class=&quot;text-accentGreen font-black text-2xl mt-1&quot;&gt;05&lt;/span&gt;
+                        &lt;div&gt;
+                            &lt;h2 class=&quot;text-2xl font-bold tracking-tight mb-1&quot;&gt;Scoring &amp; Points&lt;/h2&gt;
+                            &lt;p class=&quot;text-white/40 text-xs uppercase tracking-widest&quot;&gt;Winning Criteria&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- 第2项 --&gt;
+                    &lt;div class=&quot;flex items-start gap-5 border-b border-white/10 pb-4&quot;&gt;
+                        &lt;span class=&quot;text-accentGreen font-black text-2xl mt-1&quot;&gt;02&lt;/span&gt;
+                        &lt;div&gt;
+                            &lt;h2 class=&quot;text-2xl font-bold tracking-tight mb-1&quot;&gt;What is Football?&lt;/h2&gt;
+                            &lt;p class=&quot;text-white/40 text-xs uppercase tracking-widest&quot;&gt;Definition &amp; History&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- 第6项 --&gt;
+                    &lt;div class=&quot;flex items-start gap-5 border-b border-white/10 pb-4&quot;&gt;
+                        &lt;span class=&quot;text-accentGreen font-black text-2xl mt-1&quot;&gt;06&lt;/span&gt;
+                        &lt;div&gt;
+                            &lt;h2 class=&quot;text-2xl font-bold tracking-tight mb-1&quot;&gt;Tactical Analysis&lt;/h2&gt;
+                            &lt;p class=&quot;text-white/40 text-xs uppercase tracking-widest&quot;&gt;Formation Strategy&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- 第3项 --&gt;
+                    &lt;div class=&quot;flex items-start gap-5 border-b border-white/10 pb-4&quot;&gt;
+                        &lt;span class=&quot;text-accentGreen font-black text-2xl mt-1&quot;&gt;03&lt;/span&gt;
+                        &lt;div&gt;
+                            &lt;h2 class=&quot;text-2xl font-bold tracking-tight mb-1&quot;&gt;The Field&lt;/h2&gt;
+                            &lt;p class=&quot;text-white/40 text-xs uppercase tracking-widest&quot;&gt;Pitch Dimensions&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- 第7项 --&gt;
+                    &lt;div class=&quot;flex items-start gap-5 border-b border-white/10 pb-4&quot;&gt;
+                        &lt;span class=&quot;text-accentGreen font-black text-2xl mt-1&quot;&gt;07&lt;/span&gt;
+                        &lt;div&gt;
+                            &lt;h2 class=&quot;text-2xl font-bold tracking-tight mb-1&quot;&gt;Training Drills&lt;/h2&gt;
+                            &lt;p class=&quot;text-white/40 text-xs uppercase tracking-widest&quot;&gt;Performance Growth&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- 第4项 --&gt;
+                    &lt;div class=&quot;flex items-start gap-5 border-b border-white/10 pb-4&quot;&gt;
+                        &lt;span class=&quot;text-accentGreen font-black text-2xl mt-1&quot;&gt;04&lt;/span&gt;
+                        &lt;div&gt;
+                            &lt;h2 class=&quot;text-2xl font-bold tracking-tight mb-1&quot;&gt;Player Positions&lt;/h2&gt;
+                            &lt;p class=&quot;text-white/40 text-xs uppercase tracking-widest&quot;&gt;Roles &amp; Responsibilities&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- 第8项 --&gt;
+                    &lt;div class=&quot;flex items-start gap-5 border-b border-white/10 pb-4&quot;&gt;
+                        &lt;span class=&quot;text-accentGreen font-black text-2xl mt-1&quot;&gt;08&lt;/span&gt;
+                        &lt;div&gt;
+                            &lt;h2 class=&quot;text-2xl font-bold tracking-tight mb-1&quot;&gt;Conclusion&lt;/h2&gt;
+                            &lt;p class=&quot;text-white/40 text-xs uppercase tracking-widest&quot;&gt;Summary &amp; Future&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 底部装饰条 --&gt;
+        &lt;div class=&quot;absolute bottom-12 left-12 flex items-center gap-2 opacity-50&quot;&gt;
+            &lt;div class=&quot;w-64 h-5 bg-white skew-bar&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;w-3 h-5 bg-accentGreen skew-bar&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;w-3 h-5 bg-white skew-bar&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 3
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;History of Football - Keynote Slide&lt;/title&gt;
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;!-- Google Fonts (Domestic Mirror as requested) --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        /* CSS Reset &amp; Basic Setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Font Family Definition */
+        body {
+            font-family: 'Noto Sans SC', 'Inter', 'Roboto', sans-serif;
+            /* No styling on body allowed per rules, leaving clean */
+        }
+
+        /* Page Container - 1280x720 Fixed */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background: linear-gradient(135deg, #4A89C6 0%, #3A6CA0 100%); /* Blue Gradient based on palette */
+            overflow: hidden;
+        }
+
+        /* Utility for the slanted design elements */
+        .skew-strip {
+            transform: skewX(-20deg);
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;!-- Background Geometric Decorations (Subtle) --&gt;
+        &lt;div class=&quot;absolute top-[-100px] right-[-100px] w-[600px] h-[600px] rounded-full bg-white opacity-5 blur-3xl&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute bottom-[-50px] left-[200px] w-[300px] h-[300px] rounded-full bg-[#7FA956] opacity-10 blur-3xl&quot;&gt;&lt;/div&gt;
+
+        &lt;!-- Header Section: Logo --&gt;
+        &lt;div class=&quot;absolute top-10 left-12 z-20&quot;&gt;
+            &lt;div class=&quot;bg-white rounded-full py-2 px-6 flex items-center shadow-lg&quot;&gt;
+                &lt;i class=&quot;fa-solid fa-futbol text-black text-lg mr-3&quot;&gt;&lt;/i&gt;
+                &lt;span class=&quot;text-black font-bold text-sm tracking-wide uppercase&quot;&gt;Fradel and Spies Co.&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Main Content Area: Grid Layout --&gt;
+        &lt;div class=&quot;absolute top-32 left-12 right-12 h-[300px] flex justify-between items-start&quot;&gt;
+            
+            &lt;!-- Left Side: Title --&gt;
+            &lt;div class=&quot;w-1/2 pt-4 relative z-10&quot;&gt;
+                &lt;h1 class=&quot;text-white font-black text-8xl leading-[0.85] tracking-tighter drop-shadow-md&quot;&gt;
+                    HISTORY &lt;br&gt;
+                    &lt;span class=&quot;text-white/90&quot;&gt;OF FOOTBALL&lt;/span&gt;
+                &lt;/h1&gt;
+                
+                &lt;!-- Decorative Graphic (Middle) --&gt;
+                &lt;div class=&quot;flex items-center gap-2 mt-12 ml-2&quot;&gt;
+                    &lt;!-- Three slashes --&gt;
+                    &lt;div class=&quot;w-4 h-6 bg-white skew-strip&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-4 h-6 bg-white skew-strip&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-4 h-6 bg-white skew-strip&quot;&gt;&lt;/div&gt;
+                    &lt;!-- Long bar --&gt;
+                    &lt;div class=&quot;w-64 h-6 bg-white skew-strip ml-2&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Right Side: Imagery --&gt;
+            &lt;div class=&quot;w-1/2 flex justify-end gap-6 relative&quot;&gt;
+                &lt;!-- Image 1: Players --&gt;
+                &lt;div class=&quot;relative group&quot;&gt;
+                    &lt;div class=&quot;absolute inset-0 border-2 border-white/20 transform translate-x-2 translate-y-2 rounded-lg&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-[260px] h-[260px] overflow-hidden rounded-lg shadow-2xl relative z-10&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1517466787929-bc90951d0974?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=80&quot; 
+                             alt=&quot;Vintage Football Players&quot; 
+                             class=&quot;w-full h-full object-cover grayscale contrast-125 hover:scale-110 transition-transform duration-700&quot;&gt;
+                             &lt;!-- 260*260 --&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Image 2: Stadium --&gt;
+                &lt;div class=&quot;relative group mt-12&quot;&gt;
+                    &lt;div class=&quot;absolute inset-0 border-2 border-white/20 transform translate-x-2 translate-y-2 rounded-lg&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-[260px] h-[260px] overflow-hidden rounded-lg shadow-2xl relative z-10&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1517466787929-bc90951d0974?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=80&quot; 
+                             alt=&quot;Historic Stadium View&quot; 
+                             class=&quot;w-full h-full object-cover grayscale contrast-125 hover:scale-110 transition-transform duration-700&quot;&gt;
+                             &lt;!-- 260*260 --&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Text Content Columns --&gt;
+        &lt;div class=&quot;absolute bottom-12 left-12 right-12&quot;&gt;
+            &lt;div class=&quot;grid grid-cols-4 gap-10&quot;&gt;
+                
+                &lt;!-- Column 1: Origin --&gt;
+                &lt;div&gt;
+                    &lt;div class=&quot;flex items-center gap-2 mb-3&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-hourglass-start text-[#7FA956] text-sm&quot;&gt;&lt;/i&gt;
+                        &lt;h2 class=&quot;text-white font-bold text-xl tracking-tight&quot;&gt;Origin&lt;/h2&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-white/80 text-sm leading-relaxed font-light text-justify&quot;&gt;
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. The roots of the game trace back to ancient times.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Column 2: Modern Era --&gt;
+                &lt;div&gt;
+                    &lt;div class=&quot;flex items-center gap-2 mb-3&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-trophy text-[#7FA956] text-sm&quot;&gt;&lt;/i&gt;
+                        &lt;h2 class=&quot;text-white font-bold text-xl tracking-tight&quot;&gt;Modern Era&lt;/h2&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-white/80 text-sm leading-relaxed font-light text-justify&quot;&gt;
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Standardization of rules began in England.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Column 3: Global --&gt;
+                &lt;div&gt;
+                    &lt;div class=&quot;flex items-center gap-2 mb-3&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-earth-americas text-[#7FA956] text-sm&quot;&gt;&lt;/i&gt;
+                        &lt;h2 class=&quot;text-white font-bold text-xl tracking-tight&quot;&gt;Global&lt;/h2&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-white/80 text-sm leading-relaxed font-light text-justify&quot;&gt;
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. FIFA was founded to oversee international competition.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Column 4: Reach --&gt;
+                &lt;div&gt;
+                    &lt;div class=&quot;flex items-center gap-2 mb-3&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-users text-[#7FA956] text-sm&quot;&gt;&lt;/i&gt;
+                        &lt;h2 class=&quot;text-white font-bold text-xl tracking-tight&quot;&gt;Reach&lt;/h2&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-white/80 text-sm leading-relaxed font-light text-justify&quot;&gt;
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. It is now the most popular sport in the world.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 4
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;The Field Football - Keynote Slide&lt;/title&gt;
+
+    &lt;!-- Tailwind CSS (CDN) --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+
+    &lt;!-- FontAwesome (Icons) --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+
+    &lt;!-- Google Fonts (Domestic Mirror) --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        /* CSS Reset &amp; Basic Setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans SC', 'Inter', sans-serif;
+        }
+
+        /* Page Container - 1280x720 Fixed */
+        .page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #4A89C6, #3A6CA0);
+            color: #FFFFFF;
+        }
+
+        /* Utility: Decoration Bars */
+        .decor-bar {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transform: skewX(-30deg);
+        }
+        .decor-stripe-sm {
+            width: 8px;
+            height: 16px;
+            background-color: #FFFFFF;
+        }
+        .decor-stripe-lg {
+            width: 120px;
+            height: 16px;
+            background-color: #FFFFFF;
+        }
+
+        /* Layout Grid Helper - Optimized 50/50 split */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            height: 100%;
+            padding: 60px 80px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div class=&quot;page_container&quot;&gt;
+
+        &lt;!-- Background Elements --&gt;
+        &lt;div style=&quot;position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 70% 50%, rgba(255,255,255,0.1), transparent); pointer-events: none;&quot;&gt;&lt;/div&gt;
+
+        &lt;!-- 1. Top Right Decoration --&gt;
+        &lt;div style=&quot;position: absolute; top: 50px; right: 60px;&quot;&gt;
+            &lt;div class=&quot;decor-bar opacity-40&quot;&gt;
+                &lt;div class=&quot;decor-stripe-sm&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;decor-stripe-lg&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;decor-stripe-sm&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 2. Logo Area (Top Left) --&gt;
+        &lt;div style=&quot;position: absolute; top: 50px; left: 60px;&quot;&gt;
+            &lt;div class=&quot;bg-white text-black px-6 py-2 rounded-full flex items-center gap-3 shadow-lg&quot;&gt;
+                &lt;i class=&quot;fa-regular fa-futbol text-xl&quot;&gt;&lt;/i&gt;
+                &lt;span class=&quot;font-bold text-sm tracking-wide uppercase&quot;&gt;Fradel and Spies Co.&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 3. Main Content Grid --&gt;
+        &lt;div class=&quot;main-grid&quot;&gt;
+            
+            &lt;!-- Left Column: Typography &amp; Text --&gt;
+            &lt;div class=&quot;flex flex-col justify-center pr-12 z-10&quot;&gt;
+                
+                &lt;!-- Hero Title (Redesigned to avoid horizontal overlap) --&gt;
+                &lt;div class=&quot;mb-10&quot;&gt;
+                    &lt;div class=&quot;flex flex-col leading-[0.8]&quot;&gt;
+                        &lt;span class=&quot;text-3xl font-light opacity-80 tracking-[0.3em] mb-2&quot;&gt;THE FIELD&lt;/span&gt;
+                        &lt;h1 class=&quot;text-8xl font-black tracking-tighter text-shadow-lg&quot;&gt;FOOTBALL&lt;/h1&gt;
+                    &lt;/div&gt;
+                    &lt;!-- Underline accent --&gt;
+                    &lt;div class=&quot;w-32 h-2.5 bg-[#7FA956] mt-6 rounded-full&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Text Content Grid --&gt;
+                &lt;div class=&quot;grid grid-cols-2 gap-8&quot;&gt;
+                    &lt;!-- Text Block 1 --&gt;
+                    &lt;div&gt;
+                        &lt;h3 class=&quot;text-lg font-bold mb-3 text-[#7FA956] uppercase tracking-wider&quot;&gt;Tactical View&lt;/h3&gt;
+                        &lt;p class=&quot;text-gl font-light leading-relaxed opacity-90 text-justify&quot;&gt;
+                            Understanding the pitch dimensions and zones is crucial for modern football strategy. Every meter of the field offers unique tactical advantages.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Text Block 2 --&gt;
+                    &lt;div&gt;
+                        &lt;h3 class=&quot;text-lg font-bold mb-3 text-[#7FA956] uppercase tracking-wider&quot;&gt;Field Standards&lt;/h3&gt;
+                        &lt;p class=&quot;text-gl font-light leading-relaxed opacity-90 text-justify&quot;&gt;
+                            From the grass quality to the precision of the lines, the field of play is the foundation of professional excellence and athletic performance.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Right Column: Visual (Optimized size to prevent overlap) --&gt;
+            &lt;div class=&quot;flex items-center justify-center relative&quot;&gt;
+                &lt;!-- Depth shadow --&gt;
+                &lt;div style=&quot;position: absolute; width: 450px; height: 350px; background: #2D5A88; filter: blur(50px); opacity: 0.5; border-radius: 50%; z-index: 0;&quot;&gt;&lt;/div&gt;
+
+                &lt;!-- Image Container --&gt;
+                &lt;div class=&quot;relative z-10 w-full max-w-[500px]&quot;&gt;
+                    &lt;div class=&quot;bg-white p-2 rounded-xl shadow-2xl transform rotate-2&quot;&gt;
+                        &lt;div class=&quot;overflow-hidden rounded-lg border border-gray-100 relative&quot;&gt;
+                            &lt;img src=&quot;https://images.unsplash.com/photo-1551972873-b7e8754e8e26?q=80&amp;w=1200&amp;auto=format&amp;fit=crop&quot; 
+                                 alt=&quot;Top down view of football field&quot; 
+                                 class=&quot;w-full h-[360px] object-cover block&quot;&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Floating Icon Decoration --&gt;
+                    &lt;div class=&quot;absolute -bottom-4 -right-4 bg-[#7FA956] w-14 h-14 rounded-full flex items-center justify-center shadow-lg text-white text-xl&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-expand&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 4. Bottom Left Decoration --&gt;
+        &lt;div style=&quot;position: absolute; bottom: 50px; left: 60px;&quot;&gt;
+            &lt;div class=&quot;decor-bar opacity-60&quot;&gt;
+                &lt;div class=&quot;decor-stripe-sm&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;decor-stripe-sm&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;decor-stripe-sm&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;decor-stripe-lg&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;decor-stripe-sm&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 5
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Basic Rules - Football Keynote&lt;/title&gt;
+    
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;!-- Google Fonts via Baidu CDN --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;!-- Tailwind Config for Custom Colors --&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        skyBlue: '#4A89C6',
+                        darkBlue: '#3A6CA0',
+                        grassGreen: '#7FA956',
+                        pureWhite: '#FFFFFF',
+                        blackAccent: '#000000'
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        /* CSS Reset &amp; Global Refactoring */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f0f0f0; /* Neutral background for viewing context */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Page Container - Strict 1280x720 */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background: linear-gradient(160deg, #4A89C6 0%, #3A6CA0 100%); /* Gradient to simulate sky depth */
+            overflow: hidden;
+            color: #FFFFFF;
+        }
+
+        /* Utility Helpers */
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .text-shadow-sm {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;!-- Main Slide Container --&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;!-- Grid Layout System: 12 Columns --&gt;
+        &lt;div class=&quot;grid grid-cols-12 gap-8 h-full p-12&quot;&gt;
+            
+            &lt;!-- LEFT COLUMN: Branding, Title, Detail Image (Span 4) --&gt;
+            &lt;div class=&quot;col-span-4 flex flex-col justify-between h-full relative z-10&quot;&gt;
+                
+                &lt;!-- Logo Area --&gt;
+                &lt;div class=&quot;flex items-center space-x-3 bg-white text-black px-4 py-2 rounded-full w-max shadow-lg&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-futbol text-lg&quot;&gt;&lt;/i&gt;
+                    &lt;h6 class=&quot;font-bold text-xs tracking-wider uppercase&quot;&gt;Fradel and Spies Co.&lt;/h6&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Main Title Section --&gt;
+                &lt;div class=&quot;mt-8&quot;&gt;
+                    &lt;h1 class=&quot;text-8xl font-black leading-none tracking-tighter text-shadow-sm&quot;&gt;
+                        BASIC&lt;br&gt;RULES
+                    &lt;/h1&gt;
+                    
+                    &lt;!-- Decorative Element: Motion Stripes --&gt;
+                    &lt;div class=&quot;flex space-x-2 mt-6 mb-8&quot;&gt;
+                        &lt;div class=&quot;h-4 w-12 bg-white -skew-x-12 opacity-80 rounded-sm&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;h-4 w-8 bg-white -skew-x-12 opacity-60 rounded-sm&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;h-4 w-4 bg-grassGreen -skew-x-12 rounded-sm&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;h-4 w-2 bg-grassGreen -skew-x-12 opacity-50 rounded-sm&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Secondary Image (Bottom Left) --&gt;
+                &lt;div class=&quot;mt-auto relative rounded-2xl overflow-hidden border-4 border-white/20 h-64 w-56 shadow-2xl&quot;&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1517466787929-bc90951d0974?q=80&amp;w=600&amp;auto=format&amp;fit=crop&quot; 
+                         alt=&quot;Player holding ball&quot; 
+                         class=&quot;w-full h-full object-cover&quot;&gt;
+                    &lt;!-- 224*256 --&gt;
+                    &lt;!-- Overlay gradient for corner --&gt;
+                    &lt;div class=&quot;absolute inset-0 bg-gradient-to-t from-black/30 to-transparent&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- MIDDLE COLUMN: Hero Image (Span 4) --&gt;
+            &lt;div class=&quot;col-span-4 h-full flex items-end relative&quot;&gt;
+                &lt;!-- Decorative Circle Background --&gt;
+                &lt;div class=&quot;absolute top-20 left-1/2 -translate-x-1/2 w-96 h-96 bg-white opacity-10 rounded-full blur-3xl&quot;&gt;&lt;/div&gt;
+
+                &lt;!-- Main Hero Image --&gt;
+                &lt;div class=&quot;w-full h-[85%] relative rounded-t-3xl overflow-hidden shadow-2xl border-x-4 border-t-4 border-white/20&quot;&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1579952363873-27f3bde9be2e?q=80&amp;w=800&amp;auto=format&amp;fit=crop&quot; 
+                         alt=&quot;Football player juggling&quot; 
+                         class=&quot;w-full h-full object-cover object-center&quot;&gt;
+                    &lt;!-- 400*600 --&gt;
+                    
+                    &lt;!-- Caption Overlay --&gt;
+                    &lt;div class=&quot;absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/80 to-transparent&quot;&gt;
+                        &lt;div class=&quot;flex items-center space-x-2 text-grassGreen&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-bolt&quot;&gt;&lt;/i&gt;
+                            &lt;span class=&quot;text-xs font-bold uppercase tracking-widest text-white&quot;&gt;Pro Technique&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- RIGHT COLUMN: Content Rules (Span 4) --&gt;
+            &lt;div class=&quot;col-span-4 flex flex-col justify-center h-full pl-4&quot;&gt;
+                
+                &lt;!-- Section 1 --&gt;
+                &lt;div class=&quot;mb-8 pb-8 border-b border-white/30&quot;&gt;
+                    &lt;h3 class=&quot;text-2xl font-bold mb-3 flex items-center&quot;&gt;
+                        &lt;i class=&quot;fa-regular fa-clock mr-3 text-grassGreen text-xl&quot;&gt;&lt;/i&gt;
+                        Duration
+                    &lt;/h3&gt;
+                    &lt;p class=&quot;text-sm font-light leading-relaxed opacity-90 text-justify&quot;&gt;
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. The match lasts for two equal periods of 45 minutes.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Section 2 --&gt;
+                &lt;div class=&quot;mb-8 pb-8 border-b border-white/30&quot;&gt;
+                    &lt;h3 class=&quot;text-2xl font-bold mb-3 flex items-center&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-flag mr-3 text-grassGreen text-xl&quot;&gt;&lt;/i&gt;
+                        Offside Rules
+                    &lt;/h3&gt;
+                    &lt;p class=&quot;text-sm font-light leading-relaxed opacity-90 text-justify&quot;&gt;
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. A player is in an offside position if they are nearer to the opponents' goal line.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Section 3 --&gt;
+                &lt;div&gt;
+                    &lt;h3 class=&quot;text-2xl font-bold mb-3 flex items-center&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-exclamation-triangle mr-3 text-grassGreen text-xl&quot;&gt;&lt;/i&gt;
+                        Fouls
+                    &lt;/h3&gt;
+                    &lt;p class=&quot;text-sm font-light leading-relaxed opacity-90 text-justify&quot;&gt;
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Direct and indirect free kicks and penalty kicks can only be awarded for offences committed when the ball is in play.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Background Texture (Optional Noise/Grain for texture) --&gt;
+        &lt;div class=&quot;absolute inset-0 pointer-events-none opacity-5 mix-blend-overlay&quot; 
+             style=&quot;background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E');&quot;&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 6
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Player Position - Digital Strategy Slide&lt;/title&gt;
+    
+    &lt;!-- Domestic Google Fonts Mirror --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FFFFFF',
+                        bgBlue: '#4A89C6',
+                        accentGreen: '#7FA956',
+                        darkBlue: '#3A6CA0',
+                        secBlack: '#000000',
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #4A89C6;
+            background: linear-gradient(135deg, #4A89C6 0%, #3A6CA0 100%);
+            overflow: hidden;
+            font-family: &quot;Noto Sans SC&quot;, sans-serif;
+            color: #FFFFFF;
+        }
+
+        .bg-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0));
+            z-index: 1;
+        }
+
+        .deco-stripe {
+            transform: skewX(-20deg);
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;!-- Decorative Background Elements --&gt;
+        &lt;div class=&quot;bg-circle&quot; style=&quot;width: 800px; height: 800px; top: -200px; right: -200px;&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;bg-circle&quot; style=&quot;width: 400px; height: 400px; bottom: -100px; left: -100px;&quot;&gt;&lt;/div&gt;
+
+        &lt;!-- Layout Grid: 12 Columns --&gt;
+        &lt;div class=&quot;relative z-10 w-full h-full grid grid-cols-12 gap-8 p-12&quot;&gt;
+            
+            &lt;!-- Left Column --&gt;
+            &lt;div class=&quot;col-span-5 flex flex-col justify-between h-full pr-8&quot;&gt;
+                
+                &lt;!-- Logo Area (Updated to match previous pages) --&gt;
+                &lt;div class=&quot;flex items-start&quot;&gt;
+                    &lt;div class=&quot;bg-white text-black rounded-full px-5 py-2 flex items-center gap-3 shadow-lg&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-futbol text-lg&quot;&gt;&lt;/i&gt;
+                        &lt;span class=&quot;font-bold text-sm tracking-wide uppercase&quot;&gt;Fradel and Spies Co.&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Main Content Group --&gt;
+                &lt;div class=&quot;flex flex-col space-y-6 mt-8&quot;&gt;
+                    &lt;div class=&quot;flex flex-col&quot;&gt;
+                        &lt;h1 class=&quot;text-7xl font-bold tracking-tighter leading-none text-white/90&quot;&gt;
+                            PLAYER
+                        &lt;/h1&gt;
+                        &lt;h1 class=&quot;text-7xl font-bold tracking-tighter leading-none text-white&quot;&gt;
+                            POSITION
+                        &lt;/h1&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;mt-4&quot;&gt;
+                        &lt;p class=&quot;text-white/80 text-base leading-relaxed font-light&quot;&gt;
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Footer Decorative Element --&gt;
+                &lt;div class=&quot;mt-auto mb-4&quot;&gt;
+                    &lt;div class=&quot;flex items-center space-x-2 h-4&quot;&gt;
+                        &lt;div class=&quot;w-3 h-full bg-white deco-stripe&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;w-3 h-full bg-white/60 deco-stripe&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;w-3 h-full bg-white/30 deco-stripe&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;w-32 h-full bg-white deco-stripe ml-2&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;w-3 h-full bg-accentGreen deco-stripe&quot;&gt;&lt;/div&gt; &lt;!-- Added Accent Green for consistency --&gt;
+                        &lt;div class=&quot;w-3 h-full bg-white/60 deco-stripe&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;w-3 h-full bg-white deco-stripe&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Right Column: The 2x2 Matrix --&gt;
+            &lt;div class=&quot;col-span-7 h-full flex flex-col justify-center&quot;&gt;
+                
+                &lt;div class=&quot;grid grid-cols-2 grid-rows-2 w-full h-[90%] border-2 border-white/30 rounded-lg overflow-hidden backdrop-blur-sm bg-white/5&quot;&gt;
+                    
+                    &lt;!-- Top Left: Goalkeeper --&gt;
+                    &lt;div class=&quot;p-8 border-r-2 border-b-2 border-white/30 flex flex-col hover:bg-white/10 transition-colors duration-300&quot;&gt;
+                        &lt;div class=&quot;flex items-center justify-between mb-4&quot;&gt;
+                            &lt;h2 class=&quot;text-2xl font-bold text-white&quot;&gt;Goalkeeper&lt;/h2&gt;
+                            &lt;div class=&quot;w-10 h-10 rounded-full bg-white/10 flex items-center justify-center border border-white/20&quot;&gt;
+                                &lt;i class=&quot;fa-solid fa-hand text-accentGreen text-lg&quot;&gt;&lt;/i&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;p class=&quot;text-sm text-white/80 leading-relaxed&quot;&gt;
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. The last line of defense.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Top Right: Midfielders --&gt;
+                    &lt;div class=&quot;p-8 border-b-2 border-white/30 flex flex-col hover:bg-white/10 transition-colors duration-300&quot;&gt;
+                        &lt;div class=&quot;flex items-center justify-between mb-4&quot;&gt;
+                            &lt;h2 class=&quot;text-2xl font-bold text-white&quot;&gt;Midfielders&lt;/h2&gt;
+                            &lt;div class=&quot;w-10 h-10 rounded-full bg-white/10 flex items-center justify-center border border-white/20&quot;&gt;
+                                &lt;i class=&quot;fa-solid fa-arrows-left-right-to-line text-accentGreen text-lg&quot;&gt;&lt;/i&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;p class=&quot;text-sm text-white/80 leading-relaxed&quot;&gt;
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. The engine of the team.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Bottom Left: Defenders --&gt;
+                    &lt;div class=&quot;p-8 border-r-2 border-white/30 flex flex-col hover:bg-white/10 transition-colors duration-300&quot;&gt;
+                        &lt;div class=&quot;flex items-center justify-between mb-4&quot;&gt;
+                            &lt;h2 class=&quot;text-2xl font-bold text-white&quot;&gt;Defenders&lt;/h2&gt;
+                            &lt;div class=&quot;w-10 h-10 rounded-full bg-white/10 flex items-center justify-center border border-white/20&quot;&gt;
+                                &lt;i class=&quot;fa-solid fa-shield-halved text-accentGreen text-lg&quot;&gt;&lt;/i&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;p class=&quot;text-sm text-white/80 leading-relaxed&quot;&gt;
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Strong protection line.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Bottom Right: Forwards --&gt;
+                    &lt;div class=&quot;p-8 flex flex-col hover:bg-white/10 transition-colors duration-300&quot;&gt;
+                        &lt;div class=&quot;flex items-center justify-between mb-4&quot;&gt;
+                            &lt;h2 class=&quot;text-2xl font-bold text-white&quot;&gt;Forwards&lt;/h2&gt;
+                            &lt;div class=&quot;w-10 h-10 rounded-full bg-white/10 flex items-center justify-center border border-white/20&quot;&gt;
+                                &lt;i class=&quot;fa-solid fa-bullseye text-accentGreen text-lg&quot;&gt;&lt;/i&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;p class=&quot;text-sm text-white/80 leading-relaxed&quot;&gt;
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scoring goals is the mission.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 7
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc='&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Scoring and Points - Interactive Keynote&lt;/title&gt;
+    
+    &lt;!-- Tailwind CSS CDN --&gt;
+    &lt;script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"&gt;&lt;/script&gt;
+    
+    &lt;!-- FontAwesome CDN --&gt;
+    &lt;link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css"&gt;
+    
+    &lt;!-- Google Fonts (Domestic Mirror) --&gt;
+    &lt;link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css"&gt;
+
+    &lt;style&gt;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+            background-color: #4A89C6;
+            background: linear-gradient(135deg, #4A89C6 0%, #3A6CA0 100%);
+        }
+
+        .skew-x-20 {
+            transform: skewX(-20deg);
+        }
+
+        h1 {
+            line-height: 0.9;
+            letter-spacing: -0.02em;
+        }
+        
+        p {
+            line-height: 1.6;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id="page_container"&gt;
+        
+        &lt;!-- Background Decorative Element --&gt;
+        &lt;div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0"&gt;
+            &lt;div class="absolute -top-40 -left-40 w-[800px] h-[800px] rounded-full border border-white opacity-5"&gt;&lt;/div&gt;
+            &lt;div class="absolute top-1/2 left-1/4 w-[400px] h-[400px] rounded-full bg-[#7FA956] opacity-10 blur-3xl"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="relative z-10 w-full h-full grid grid-cols-12"&gt;
+
+            &lt;!-- Left Content Section --&gt;
+            &lt;div class="col-span-7 flex flex-col justify-between p-16 h-full"&gt;
+                
+                &lt;!-- 1. Header / Logo Area --&gt;
+                &lt;div class="flex items-start"&gt;
+                    &lt;div class="bg-white rounded-full py-2 px-6 flex items-center gap-3 shadow-lg transform transition-transform hover:scale-105 duration-300"&gt;
+                        &lt;i class="fa-solid fa-futbol text-black text-xl"&gt;&lt;/i&gt;
+                        &lt;h6 class="text-black font-bold text-sm tracking-wide uppercase"&gt;Fradel and Spies Co.&lt;/h6&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 2. Body Text Content (Modified with Green Titles) --&gt;
+                &lt;div class="grid grid-cols-2 gap-8 mt-12 mb-auto"&gt;
+                    &lt;article&gt;
+                        &lt;!-- Added Green Small Title --&gt;
+                        &lt;h3 class="text-[#7FA956] text-sm font-bold uppercase tracking-widest mb-3 flex items-center gap-2"&gt;
+                            &lt;span class="w-1.5 h-1.5 bg-[#7FA956] rounded-full"&gt;&lt;/span&gt;
+                            Match Rules
+                        &lt;/h3&gt;
+                        &lt;p class="text-white text-base font-light text-justify opacity-90"&gt;
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        &lt;/p&gt;
+                    &lt;/article&gt;
+                    &lt;article&gt;
+                        &lt;!-- Added Green Small Title --&gt;
+                        &lt;h3 class="text-[#7FA956] text-sm font-bold uppercase tracking-widest mb-3 flex items-center gap-2"&gt;
+                            &lt;span class="w-1.5 h-1.5 bg-[#7FA956] rounded-full"&gt;&lt;/span&gt;
+                            League Points
+                        &lt;/h3&gt;
+                        &lt;p class="text-white text-base font-light text-justify opacity-90"&gt;
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        &lt;/p&gt;
+                    &lt;/article&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 3. Main Title &amp; Graphical Elements --&gt;
+                &lt;div class="flex flex-col gap-6 mt-8"&gt;
+                    &lt;h1 class="text-white text-8xl font-black uppercase tracking-tighter drop-shadow-md"&gt;
+                        Scoring &lt;br&gt;
+                        &lt;span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-[#E0E0E0]"&gt;And Points&lt;/span&gt;
+                    &lt;/h1&gt;
+
+                    &lt;div class="flex items-center gap-2 h-4 mt-2"&gt;
+                        &lt;div class="w-3 h-full bg-white skew-x-20 opacity-80"&gt;&lt;/div&gt;
+                        &lt;div class="w-3 h-full bg-white skew-x-20 opacity-60"&gt;&lt;/div&gt;
+                        &lt;div class="w-3 h-full bg-white skew-x-20 opacity-40"&gt;&lt;/div&gt;
+                        &lt;div class="w-48 h-full bg-white skew-x-20 flex overflow-hidden"&gt;
+                            &lt;div class="w-full h-full bg-white"&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="w-3 h-full bg-[#7FA956] skew-x-20"&gt;&lt;/div&gt;
+                        &lt;div class="w-3 h-full bg-white skew-x-20 opacity-60"&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Right Content Section --&gt;
+            &lt;div class="col-span-5 h-full relative"&gt;
+                &lt;div class="absolute inset-0 h-full w-full bg-black/10 z-0"&gt;&lt;/div&gt;
+                &lt;div class="w-full h-full relative overflow-hidden"&gt;
+                    &lt;img 
+                        src="https://images.unsplash.com/photo-1518091043644-c1d4457512c6?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" 
+                        alt="Soccer player holding a ball" 
+                        class="w-full h-full object-cover object-center transform scale-105"
+                    &gt;
+                    &lt;div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#3A6CA0]/50 to-transparent"&gt;&lt;/div&gt;
+                    &lt;div class="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-[#4A89C6]/30 to-transparent"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class="absolute bottom-16 -left-12 bg-white p-4 shadow-xl border-l-4 border-[#7FA956]"&gt;
+                    &lt;div class="flex flex-col"&gt;
+                        &lt;span class="text-[#3A6CA0] text-xs font-bold uppercase tracking-widest"&gt;Match Day&lt;/span&gt;
+                        &lt;span class="text-black text-2xl font-black"&gt;03:00 PM&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+
+        &lt;div class="absolute inset-0 border-[1px] border-white/20 pointer-events-none z-50"&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;'>
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 8
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Equipment Needed - Keynote Slide&lt;/title&gt;
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;!-- Google Fonts (Baidu Mirror) --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    
+    &lt;style&gt;
+        /* CSS Reset &amp; Global Rules */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Font Definition */
+        body {
+            font-family: 'Noto Sans SC', 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Page Container - Fixed Size 1280x720 */
+        .page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #4A89C6, #3A6CA0); /* Sky Blue to Dark Blue Gradient */
+        }
+
+        /* Decorative Stripes (CSS Shapes) */
+        .stripe-container {
+            position: absolute;
+            top: 0;
+            right: 25%;
+            display: flex;
+            gap: 15px;
+            transform: skewX(-20deg);
+            opacity: 0.9;
+            z-index: 1;
+        }
+
+        .stripe {
+            width: 30px;
+            height: 120px;
+            background-color: #FFFFFF;
+        }
+        
+        .stripe-bottom {
+            position: absolute;
+            bottom: -20px;
+            right: 50px;
+            display: flex;
+            gap: 20px;
+            transform: skewX(-20deg);
+            z-index: 10;
+        }
+
+        .stripe-b {
+            height: 60px;
+            background-color: #FFFFFF;
+        }
+
+        /* Typography Utilities */
+        .text-shadow-sm {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* Image Masking */
+        .img-mask-circle {
+            mask-image: radial-gradient(circle, white 100%, black 100%);
+            -webkit-mask-image: radial-gradient(circle, white 100%, black 100%);
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div class=&quot;page_container&quot;&gt;
+        &lt;!-- Background Decoration: Subtle Large Circle --&gt;
+        &lt;div style=&quot;position: absolute; top: -100px; left: -100px; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%); z-index: 0;&quot;&gt;&lt;/div&gt;
+
+        &lt;!-- Top Right Decorative Stripes --&gt;
+        &lt;div class=&quot;stripe-container&quot;&gt;
+            &lt;div class=&quot;stripe&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;stripe&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;stripe&quot; style=&quot;width: 200px;&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Logo Section --&gt;
+        &lt;div style=&quot;position: absolute; top: 40px; left: 50px; z-index: 20;&quot;&gt;
+            &lt;div style=&quot;background-color: white; padding: 10px 24px; border-radius: 50px; display: flex; align-items: center; gap: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);&quot;&gt;
+                &lt;i class=&quot;fa-solid fa-futbol&quot; style=&quot;color: #000000; font-size: 20px;&quot;&gt;&lt;/i&gt;
+                &lt;p style=&quot;color: #000000; font-weight: 700; font-size: 16px; letter-spacing: -0.5px;&quot;&gt;Fradel and Spies Co.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Main Layout Grid --&gt;
+        &lt;div style=&quot;display: grid; grid-template-columns: 1fr 400px; height: 100%; position: relative; z-index: 10;&quot;&gt;
+            
+            &lt;!-- Left Column: Title, Small Images, Text --&gt;
+            &lt;div style=&quot;padding: 120px 0 60px 60px; display: flex; flex-direction: column; justify-content: space-between;&quot;&gt;
+                
+                &lt;!-- Header Area --&gt;
+                &lt;div&gt;
+                    &lt;h1 style=&quot;font-size: 96px; line-height: 0.9; font-weight: 900; color: #FFFFFF; font-style: italic; letter-spacing: -3px; text-transform: uppercase; margin-bottom: 40px; text-shadow: 0 10px 30px rgba(0,0,0,0.15);&quot;&gt;
+                        Equipment &lt;br&gt; Needed
+                    &lt;/h1&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Middle Visuals (Floating Images) --&gt;
+                &lt;div style=&quot;position: absolute; top: 180px; left: 620px; z-index: 5;&quot;&gt;
+                    &lt;!-- Image 2: Feet with ball --&gt;
+                    &lt;div style=&quot;width: 220px; height: 220px; border-radius: 12px; overflow: hidden; border: 4px solid #FFFFFF; box-shadow: 0 10px 20px rgba(0,0,0,0.2);&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1511886929837-354d827aae26?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=400&amp;q=80&quot; alt=&quot;Soccer ball control&quot; style=&quot;width: 100%; height: 100%; object-fit: cover;&quot;&gt;
+                        &lt;!-- 220*220 --&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div style=&quot;position: absolute; top: 350px; left: 60px; z-index: 5;&quot;&gt;
+                     &lt;!-- Image 3: Hand with ball --&gt;
+                     &lt;div style=&quot;width: 180px; height: 180px; border-radius: 50%; overflow: hidden; border: 4px solid #FFFFFF; box-shadow: 0 10px 20px rgba(0,0,0,0.2);&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1614632537423-1e6c2e7e0aab?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=400&amp;q=80&quot; alt=&quot;Hand balancing soccer ball&quot; style=&quot;width: 100%; height: 100%; object-fit: cover;&quot;&gt;
+                        &lt;!-- 180*180 --&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Text Columns --&gt;
+                &lt;div style=&quot;display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: auto; padding-right: 60px; padding-left: 180px;&quot;&gt;
+                    
+                    &lt;!-- Col 1 --&gt;
+                    &lt;div&gt;
+                        &lt;div style=&quot;display: flex; align-items: center; gap: 10px; margin-bottom: 12px;&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-circle&quot; style=&quot;color: #7FA956; font-size: 10px;&quot;&gt;&lt;/i&gt;
+                            &lt;h3 style=&quot;color: #FFFFFF; font-size: 20px; font-weight: 700;&quot;&gt;Ball&lt;/h3&gt;
+                        &lt;/div&gt;
+                        &lt;p style=&quot;color: rgba(255,255,255,0.9); font-size: 14px; line-height: 1.6; font-weight: 300;&quot;&gt;
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Col 2 --&gt;
+                    &lt;div&gt;
+                        &lt;div style=&quot;display: flex; align-items: center; gap: 10px; margin-bottom: 12px;&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-shoe-prints&quot; style=&quot;color: #7FA956; font-size: 18px;&quot;&gt;&lt;/i&gt;
+                            &lt;h3 style=&quot;color: #FFFFFF; font-size: 20px; font-weight: 700;&quot;&gt;Footwear&lt;/h3&gt;
+                        &lt;/div&gt;
+                        &lt;p style=&quot;color: rgba(255,255,255,0.9); font-size: 14px; line-height: 1.6; font-weight: 300;&quot;&gt;
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Col 3 --&gt;
+                    &lt;div&gt;
+                        &lt;div style=&quot;display: flex; align-items: center; gap: 10px; margin-bottom: 12px;&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-shirt&quot; style=&quot;color: #7FA956; font-size: 18px;&quot;&gt;&lt;/i&gt;
+                            &lt;h3 style=&quot;color: #FFFFFF; font-size: 20px; font-weight: 700;&quot;&gt;Kit&lt;/h3&gt;
+                        &lt;/div&gt;
+                        &lt;p style=&quot;color: rgba(255,255,255,0.9); font-size: 14px; line-height: 1.6; font-weight: 300;&quot;&gt;
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Right Column: Hero Image --&gt;
+            &lt;div style=&quot;position: relative; height: 100%;&quot;&gt;
+                &lt;div style=&quot;width: 100%; height: 100%; overflow: hidden; position: relative;&quot;&gt;
+                    &lt;!-- Image 1: Main Hero --&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1614632537423-1e6c2e7e0aab?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=400&amp;q=80&quot; alt=&quot;Soccer Player Portrait&quot; style=&quot;width: 100%; height: 100%; object-fit: cover; object-position: center top;&quot;&gt;
+                    &lt;!-- 400*720 --&gt;
+                    
+                    &lt;!-- Gradient Overlay on Image for text readability if needed, or style --&gt;
+                    &lt;div style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(74,137,198,0.4), transparent);&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+
+        &lt;!-- Bottom Right Decorative Stripes --&gt;
+        &lt;div class=&quot;stripe-bottom&quot;&gt;
+            &lt;div class=&quot;stripe-b&quot; style=&quot;width: 25px;&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;stripe-b&quot; style=&quot;width: 25px;&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;stripe-b&quot; style=&quot;width: 300px;&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 9
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc='&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Fundamental Soccer Skills - Presentation Slide&lt;/title&gt;
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"&gt;&lt;/script&gt;
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css"&gt;
+    &lt;!-- Fonts: Noto Sans SC (Domestic CDN as requested) --&gt;
+    &lt;link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css"&gt;
+
+    &lt;style&gt;
+        /* CSS Reset &amp; Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container - Strict 1280x720 */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #4A89C6 0%, #3A6CA0 100%); /* Sky Blue Gradient */
+            overflow: hidden;
+            color: #FFFFFF;
+        }
+
+        /* Custom Utilities not in standard Tailwind configuration */
+        .skew-box {
+            transform: skewX(-25deg);
+        }
+        
+        /* Typography adjustments */
+        h1 {
+            line-height: 0.9;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id="page_container"&gt;
+        
+        &lt;!-- Logo Section (Top Left) --&gt;
+        &lt;div class="absolute top-10 left-10 z-20"&gt;
+            &lt;div class="bg-white text-black px-6 py-2 rounded-full flex items-center gap-3 shadow-lg"&gt;
+                &lt;i class="fa-solid fa-futbol text-lg"&gt;&lt;/i&gt;
+                &lt;span class="font-bold tracking-wide text-sm"&gt;Fradel and Spies Co.&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Main Grid Layout --&gt;
+        &lt;div class="grid grid-cols-12 h-full w-full"&gt;
+            
+            &lt;!-- Left Column: Visual Imagery Gallery (5 Columns) --&gt;
+            &lt;div class="col-span-5 relative h-full flex flex-col justify-center pl-10 pr-4"&gt;
+                &lt;!-- Decorative Geometric Backdrop for Images --&gt;
+                &lt;div class="absolute top-1/2 left-4 -translate-y-1/2 w-full h-[85%] bg-white/10 rounded-3xl -z-10 backdrop-blur-sm border border-white/20"&gt;&lt;/div&gt;
+
+                &lt;div class="grid grid-cols-2 gap-4 h-[75%]"&gt;
+                    &lt;!-- Main Vertical Image --&gt;
+                    &lt;div class="row-span-2 relative overflow-hidden rounded-xl shadow-2xl group"&gt;
+                        &lt;img src="https://images.unsplash.com/photo-1560272564-c83b66b1ad12?q=80&amp;w=800&amp;auto=format&amp;fit=crop" 
+                             alt="Soccer player heading ball" 
+                             class="w-full h-full object-cover"&gt;
+                        &lt;!-- 400*600 --&gt;
+                        &lt;div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Top Small Image --&gt;
+                    &lt;div class="relative overflow-hidden rounded-xl shadow-xl border-2 border-white/20"&gt;
+                        &lt;img src="https://images.unsplash.com/photo-1511886929837-354d827aae26?q=80&amp;w=400&amp;auto=format&amp;fit=crop" 
+                             alt="Feet controlling soccer ball" 
+                             class="w-full h-full object-cover"&gt;
+                        &lt;!-- 250*250 --&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Bottom Small Image --&gt;
+                    &lt;div class="relative overflow-hidden rounded-xl shadow-xl border-2 border-white/20"&gt;
+                        &lt;img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&amp;w=400&amp;auto=format&amp;fit=crop" 
+                             alt="Soccer ball in net" 
+                             class="w-full h-full object-cover"&gt;
+                        &lt;!-- 250*250 --&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Right Column: Content &amp; Logic (7 Columns) --&gt;
+            &lt;div class="col-span-7 flex flex-col justify-center pr-16 pl-8 relative"&gt;
+                
+                &lt;!-- Background Geometric Decoration (Circle) --&gt;
+                &lt;div class="absolute top-0 right-0 w-[500px] h-[500px] bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 pointer-events-none"&gt;&lt;/div&gt;
+
+                &lt;!-- Title Section --&gt;
+                &lt;div class="mb-12"&gt;
+                    &lt;h1 class="text-[90px] font-black uppercase tracking-tighter text-white drop-shadow-md"&gt;
+                        Fundamental&lt;br&gt;
+                        &lt;span class="text-white/90"&gt;Skill&lt;/span&gt;
+                    &lt;/h1&gt;
+                &lt;/div&gt;
+
+                &lt;!-- List Section --&gt;
+                &lt;div class="w-full max-w-xl mb-10"&gt;
+                    &lt;ul class="flex flex-col"&gt;
+                        &lt;!-- List Item 1 --&gt;
+                        &lt;li class="border-b border-white/30 py-4 flex items-center justify-between group"&gt;
+                            &lt;div class="flex items-center gap-4"&gt;
+                                &lt;i class="fa-solid fa-circle text-[10px] text-[#7FA956]"&gt;&lt;/i&gt;
+                                &lt;span class="text-2xl font-bold tracking-wide"&gt;Dribbling&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;i class="fa-solid fa-arrow-right text-white/0 group-hover:text-white transition-colors duration-300"&gt;&lt;/i&gt;
+                        &lt;/li&gt;
+
+                        &lt;!-- List Item 2 --&gt;
+                        &lt;li class="border-b border-white/30 py-4 flex items-center justify-between group"&gt;
+                            &lt;div class="flex items-center gap-4"&gt;
+                                &lt;i class="fa-solid fa-circle text-[10px] text-[#7FA956]"&gt;&lt;/i&gt;
+                                &lt;span class="text-2xl font-bold tracking-wide"&gt;Passing&lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/li&gt;
+
+                        &lt;!-- List Item 3 --&gt;
+                        &lt;li class="border-b border-white/30 py-4 flex items-center justify-between group"&gt;
+                            &lt;div class="flex items-center gap-4"&gt;
+                                &lt;i class="fa-solid fa-circle text-[10px] text-[#7FA956]"&gt;&lt;/i&gt;
+                                &lt;span class="text-2xl font-bold tracking-wide"&gt;Shooting&lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/li&gt;
+
+                        &lt;!-- List Item 4 --&gt;
+                        &lt;li class="border-b border-white/30 py-4 flex items-center justify-between group"&gt;
+                            &lt;div class="flex items-center gap-4"&gt;
+                                &lt;i class="fa-solid fa-circle text-[10px] text-[#7FA956]"&gt;&lt;/i&gt;
+                                &lt;span class="text-2xl font-bold tracking-wide"&gt;Tackling&lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Description Text --&gt;
+                &lt;div class="max-w-lg mb-8"&gt;
+                    &lt;p class="text-gl text-white/80 leading-relaxed font-light"&gt;
+                        Mastering the basics is crucial for player development. 
+                        Effective training focuses on precision, control, and tactical awareness 
+                        to build a strong foundation for competitive play.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Footer Decoration / Stripes --&gt;
+                &lt;div class="absolute bottom-12 right-12 flex items-center gap-3"&gt;
+                    &lt;!-- Skewed Stripes --&gt;
+                    &lt;div class="w-4 h-10 bg-white skew-box opacity-60"&gt;&lt;/div&gt;
+                    &lt;div class="w-4 h-10 bg-white skew-box opacity-80"&gt;&lt;/div&gt;
+                    &lt;!-- Long Bar --&gt;
+                    &lt;div class="w-64 h-10 bg-white skew-box flex items-center justify-center"&gt;
+                        &lt;!-- Decorative thin line inside --&gt;
+                        &lt;div class="w-[90%] h-[2px] bg-[#4A89C6]"&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="w-4 h-10 bg-white skew-box opacity-80"&gt;&lt;/div&gt;
+                    &lt;div class="w-4 h-10 bg-white skew-box opacity-60"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;'>
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 10
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;What is Football - Keynote Optimized&lt;/title&gt;
+    
+    &lt;!-- Google Fonts --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FFFFFF',
+                        bgBlue: '#4A89C6',
+                        accentGreen: '#7FA956',
+                        darkBlue: '#3A6CA0',
+                        inkBlack: '#000000',
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background: linear-gradient(105deg, #4A89C6 0%, #4A89C6 45%, #3A6CA0 100%);
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+            color: #FFFFFF;
+        }
+        .skew-strip { transform: skewX(-25deg); }
+        .text-shadow-sm { text-shadow: 0 2px 10px rgba(58, 108, 160, 0.3); }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;!-- Background Decoration --&gt;
+        &lt;div class=&quot;absolute inset-0 z-0 pointer-events-none&quot; style=&quot;background: linear-gradient(90deg, #4A89C6 40%, rgba(74, 137, 198, 0.1) 100%);&quot;&gt;&lt;/div&gt;
+
+        &lt;!-- Dynamic Image Layer (Right Side) --&gt;
+        &lt;div class=&quot;absolute right-[-50px] top-0 bottom-0 w-[800px] h-[720px] z-0 flex items-center justify-center&quot;&gt;
+            &lt;img src=&quot;https://images.unsplash.com/photo-1614632537423-1e6c2e7e0aab?q=80&amp;w=1280&amp;auto=format&amp;fit=crop&quot; 
+                 alt=&quot;Football hitting the net&quot; 
+                 class=&quot;w-full h-full object-cover object-left opacity-90&quot;
+                 style=&quot;-webkit-mask-image: linear-gradient(to right, transparent, black 25%); mask-image: linear-gradient(to right, transparent, black 25%);&quot;&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Main Content --&gt;
+        &lt;div class=&quot;relative z-10 w-full h-full p-16 flex flex-col justify-between&quot;&gt;
+            
+            &lt;!-- Header --&gt;
+            &lt;div class=&quot;flex items-start&quot;&gt;
+                &lt;div class=&quot;bg-white text-inkBlack rounded-full px-5 py-2 flex items-center gap-3 shadow-lg&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-futbol&quot;&gt;&lt;/i&gt;
+                    &lt;span class=&quot;font-bold text-sm tracking-wide uppercase&quot;&gt;Fradel and Spies Co.&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Central Content: Typography &amp; Boxes --&gt;
+            &lt;div class=&quot;w-[52%]&quot;&gt;
+                &lt;!-- Title --&gt;
+                &lt;div class=&quot;mb-10&quot;&gt;
+                    &lt;h1 class=&quot;text-8xl font-black leading-[0.85] tracking-tighter text-shadow-sm&quot;&gt;
+                        &lt;span class=&quot;block&quot;&gt;WHAT&lt;/span&gt;
+                        &lt;div class=&quot;flex items-baseline gap-4&quot;&gt;
+                            &lt;span class=&quot;block text-primary&quot;&gt;FOOTBALL&lt;/span&gt;
+                            &lt;span class=&quot;text-4xl font-light italic opacity-80 translate-y-[-10px]&quot;&gt;IS?&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/h1&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Text Boxes Container --&gt;
+                &lt;div class=&quot;space-y-8&quot;&gt;
+                    &lt;!-- Box 1: Highlighted Concept --&gt;
+                    &lt;div class=&quot;relative bg-white/10 backdrop-blur-sm border-l-4 border-accentGreen p-6 rounded-r-xl shadow-xl&quot;&gt;
+                        &lt;div class=&quot;flex gap-4&quot;&gt;
+                            &lt;div class=&quot;mt-1 text-accentGreen text-xl&quot;&gt;
+                                &lt;i class=&quot;fa-solid fa-quote-left&quot;&gt;&lt;/i&gt;
+                            &lt;/div&gt;
+                            &lt;p class=&quot;text-gl leading-relaxed font-medium&quot;&gt;
+                                Football is more than just a game; it's a global language of passion and discipline. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Box 2: Detail Description --&gt;
+                    &lt;div class=&quot;relative p-6 border border-white/20 rounded-xl bg-black/5&quot;&gt;
+                        &lt;div class=&quot;flex gap-4&quot;&gt;
+                            &lt;div class=&quot;mt-1 text-white/50 text-xl&quot;&gt;
+                                &lt;i class=&quot;fa-solid fa-circle-info&quot;&gt;&lt;/i&gt;
+                            &lt;/div&gt;
+                            &lt;p class=&quot;text-gl leading-relaxed font-light opacity-80&quot;&gt;
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Footer Decoration --&gt;
+            &lt;div class=&quot;flex items-end pt-4&quot;&gt;
+                &lt;div class=&quot;flex gap-3 h-6&quot;&gt;
+                    &lt;div class=&quot;w-6 h-full bg-white skew-strip&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-16 h-full bg-white skew-strip&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-2 h-full bg-white skew-strip opacity-50&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-24 h-full bg-white skew-strip&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-2 h-full bg-accentGreen skew-strip&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 11
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Soccer Presentation - Conclusion&lt;/title&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FFFFFF',
+                        bgBlue: '#4A89C6',
+                        accentGreen: '#7FA956',
+                        darkBlue: '#3A6CA0',
+                        detailBlack: '#000000',
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #4A89C6;
+            overflow: hidden;
+            font-family: &quot;Noto Sans SC&quot;, sans-serif;
+        }
+        .skew-bar { transform: skew(-30deg); }
+        
+        /* Glassmorphism Card Style */
+        .glass-box {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;absolute inset-0 z-0&quot; style=&quot;background: linear-gradient(145deg, #4A89C6 0%, #2D5A88 100%);&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;absolute -top-20 -right-20 w-[500px] h-[500px] rounded-full opacity-10 blur-3xl z-0 bg-white&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;absolute top-8 left-10 z-30 bg-primary px-5 py-2 rounded-full shadow-xl flex items-center gap-3&quot;&gt;
+            &lt;i class=&quot;fa-solid fa-futbol&quot;&gt;&lt;/i&gt;
+            &lt;h2 class=&quot;text-detailBlack font-bold text-sm tracking-widest uppercase&quot;&gt;Fradel and Spies Co.&lt;/h2&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute top-28 left-10 z-10 flex items-center gap-1.5 opacity-60&quot;&gt;
+            &lt;div class=&quot;w-2 h-5 bg-primary skew-bar&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;w-32 h-5 bg-primary skew-bar ml-1&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;w-2 h-5 bg-accentGreen skew-bar&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute inset-0 z-20 flex flex-col justify-center items-center&quot;&gt;
+            &lt;div class=&quot;w-full max-w-[700px] text-center&quot;&gt;
+                
+                &lt;div class=&quot;relative inline-block mb-10&quot;&gt;
+                    &lt;h1 class=&quot;text-primary text-7xl font-black tracking-tight drop-shadow-lg&quot;&gt;
+                        CONCLUSION
+                    &lt;/h1&gt;
+                    &lt;div class=&quot;absolute -bottom-3 left-0 w-full h-1.5 bg-accentGreen rounded-full&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;space-y-6 px-4&quot;&gt;
+                    
+                    &lt;div class=&quot;glass-box rounded-xl p-6 transition-transform hover:scale-[1.02] duration-300&quot;&gt;
+                        &lt;p class=&quot;text-primary text-base font-medium leading-relaxed opacity-95&quot;&gt;
+                            In summary, the strategies discussed underscore the dynamic evolution of modern football. From tactical innovations to the integration of data analytics, the game continues to reach new heights of professional excellence.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;w-16 h-1 bg-white/30 mx-auto rounded-full&quot;&gt;&lt;/div&gt;
+
+                    &lt;div class=&quot;glass-box rounded-xl p-6 transition-transform hover:scale-[1.02] duration-300&quot;&gt;
+                        &lt;p class=&quot;text-primary text-sm font-light leading-relaxed opacity-90&quot;&gt;
+                            As we look forward, the synergy between athletic performance and strategic management will remain the cornerstone of success for clubs worldwide. Thank you for joining our deep dive into the beautiful game.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute top-10 right-10 z-10 w-[240px] h-[300px] bg-white p-2 rounded-lg shadow-2xl rotate-3 transition-transform hover:rotate-0 duration-500&quot;&gt;
+            &lt;div class=&quot;w-full h-full overflow-hidden rounded-md bg-gray-200&quot;&gt;
+                &lt;img src=&quot;https://images.unsplash.com/photo-1518091043644-c1d4457512c6?q=80&amp;w=600&amp;auto=format&amp;fit=crop&quot; 
+                     alt=&quot;Soccer Action&quot; 
+                     class=&quot;w-full h-full object-cover&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;absolute -bottom-2 -left-2 w-5 h-5 bg-accentGreen rounded-full border-2 border-white&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute bottom-10 left-10 z-10 w-[240px] h-[300px] bg-white p-2 rounded-lg shadow-2xl -rotate-3 transition-transform hover:rotate-0 duration-500&quot;&gt;
+            &lt;div class=&quot;w-full h-full overflow-hidden rounded-md bg-gray-200&quot;&gt;
+                &lt;img src=&quot;https://images.unsplash.com/photo-1560272564-c83b66b1ad12?q=80&amp;w=600&amp;auto=format&amp;fit=crop&quot; 
+                     alt=&quot;Soccer Player&quot; 
+                     class=&quot;w-full h-full object-cover&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;absolute -top-2 -right-2 w-5 h-5 bg-accentGreen rounded-full border-2 border-white&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute bottom-10 right-10 z-10 flex items-center gap-1.5 opacity-60&quot;&gt;
+            &lt;div class=&quot;w-32 h-5 bg-primary skew-bar mr-1&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;w-2 h-5 bg-accentGreen skew-bar&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;w-2 h-5 bg-primary skew-bar&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 12
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Thank You - Sports Keynote&lt;/title&gt;
+    
+    &lt;!-- Google Fonts (Domestic CDN) --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+
+    &lt;!-- Tailwind Config for Custom Colors --&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FFFFFF',
+                        bgBlue: '#4A89C6',
+                        accentGreen: '#7FA956',
+                        darkBlue: '#3A6CA0',
+                        inkBlack: '#000000',
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        /* CSS Reset &amp; Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* No styles on body allowed per rules, keep clean */
+            font-family: 'Noto Sans SC', sans-serif;
+            background-color: #f0f0f0; /* Just for preview contrast outside container */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Page Container Specs */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #4A89C6, #3A6CA0); /* Sky Blue to Dark Blue Gradient */
+        }
+
+        /* Utility Helpers */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .text-shadow-lg {
+            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;!-- Main Slide Container --&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;!-- Decorative Background Elements (Abstract Clouds/Wind) --&gt;
+        &lt;div class=&quot;absolute top-[-100px] right-[-100px] w-[500px] h-[500px] rounded-full opacity-20&quot; style=&quot;background: radial-gradient(circle, #FFFFFF, transparent);&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute bottom-[-50px] left-[-50px] w-[400px] h-[400px] rounded-full opacity-10&quot; style=&quot;background: radial-gradient(circle, #FFFFFF, transparent);&quot;&gt;&lt;/div&gt;
+
+        &lt;!-- Header / Logo Area --&gt;
+        &lt;div class=&quot;absolute top-10 left-12 z-20&quot;&gt;
+            &lt;div class=&quot;bg-primary px-6 py-2 rounded-full shadow-lg flex items-center gap-3&quot;&gt;
+                &lt;i class=&quot;fa-solid fa-futbol text-inkBlack text-xl&quot;&gt;&lt;/i&gt;
+                &lt;h6 class=&quot;text-inkBlack font-bold text-sm tracking-wide uppercase&quot;&gt;Fradel and Spies Co.&lt;/h6&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Grid Layout for Content --&gt;
+        &lt;div class=&quot;grid grid-cols-12 h-full w-full relative z-10 p-12 pt-24&quot;&gt;
+            
+            &lt;!-- Left Column: Big Title &amp; Bottom Image --&gt;
+            &lt;div class=&quot;col-span-7 flex flex-col justify-between h-full relative&quot;&gt;
+                
+                &lt;!-- Main Typography --&gt;
+                &lt;div class=&quot;mt-4 relative z-20&quot;&gt;
+                    &lt;!-- Top Decorative Lines --&gt;
+                    &lt;div class=&quot;flex gap-2 mb-4 opacity-80&quot;&gt;
+                        &lt;div class=&quot;w-8 h-2 bg-primary transform -skew-x-[20deg]&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;w-4 h-2 bg-accentGreen transform -skew-x-[20deg]&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;w-32 h-2 bg-primary transform -skew-x-[20deg]&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;h1 class=&quot;text-[140px] leading-[0.85] font-black text-primary tracking-tighter text-shadow-lg&quot;&gt;
+                        THANK&lt;br&gt;
+                        &lt;span class=&quot;text-transparent&quot; style=&quot;-webkit-text-stroke: 3px #FFFFFF;&quot;&gt;YOU&lt;/span&gt;
+                    &lt;/h1&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Bottom Left Image (Sitting Player) --&gt;
+                &lt;!-- Positioning absolute relative to column to achieve overlap effect --&gt;
+                &lt;div class=&quot;relative w-[420px] h-[280px] mt-8 group&quot;&gt;
+                    &lt;div class=&quot;absolute inset-0 bg-accentGreen rounded-xl transform rotate-[-3deg] translate-x-3 translate-y-3 opacity-80&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;relative w-full h-full rounded-xl overflow-hidden shadow-2xl border-4 border-white/20&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1517466787929-bc90951d6dbb?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80&quot; 
+                             alt=&quot;Soccer player sitting on field&quot; 
+                             class=&quot;w-full h-full object-cover&quot;&gt;
+                        &lt;!-- 420*280 --&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Right Column: Top Image &amp; Contact Info --&gt;
+            &lt;div class=&quot;col-span-5 flex flex-col justify-between h-full pl-8 pb-8&quot;&gt;
+                
+                &lt;!-- Top Right Image (Looking away) --&gt;
+                &lt;div class=&quot;relative w-[440px] h-[260px] self-end mt-4 mb-8&quot;&gt;
+                    &lt;div class=&quot;absolute inset-0 bg-primary rounded-xl transform rotate-[2deg] translate-x-2 translate-y-2 opacity-30&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;relative w-full h-full rounded-xl overflow-hidden shadow-2xl border-4 border-white/20&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1579952363873-27f3bade9f55?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80&quot; 
+                             alt=&quot;Soccer player resting&quot; 
+                             class=&quot;w-full h-full object-cover&quot;&gt;
+                        &lt;!-- 440*260 --&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Contact Information Grid --&gt;
+                &lt;div class=&quot;bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/10 shadow-lg mt-auto&quot;&gt;
+                    &lt;h5 class=&quot;text-accentGreen font-bold tracking-widest uppercase text-sm mb-6 border-b border-white/20 pb-2&quot;&gt;Get in Touch&lt;/h5&gt;
+                    
+                    &lt;div class=&quot;grid grid-cols-1 gap-y-6&quot;&gt;
+                        &lt;!-- Row 1 --&gt;
+                        &lt;div class=&quot;grid grid-cols-2 gap-4&quot;&gt;
+                            &lt;div&gt;
+                                &lt;h6 class=&quot;text-primary/70 text-xs font-semibold uppercase tracking-wider mb-1&quot;&gt;
+                                    &lt;i class=&quot;fa-solid fa-envelope mr-2&quot;&gt;&lt;/i&gt;Email
+                                &lt;/h6&gt;
+                                &lt;p class=&quot;text-primary font-medium text-sm&quot;&gt;hello@reallygreatsite.com&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div&gt;
+                                &lt;h6 class=&quot;text-primary/70 text-xs font-semibold uppercase tracking-wider mb-1&quot;&gt;
+                                    &lt;i class=&quot;fa-solid fa-phone mr-2&quot;&gt;&lt;/i&gt;Phone
+                                &lt;/h6&gt;
+                                &lt;p class=&quot;text-primary font-medium text-sm&quot;&gt;+123-456-7890&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;!-- Row 2 --&gt;
+                        &lt;div class=&quot;grid grid-cols-2 gap-4&quot;&gt;
+                            &lt;div&gt;
+                                &lt;h6 class=&quot;text-primary/70 text-xs font-semibold uppercase tracking-wider mb-1&quot;&gt;
+                                    &lt;i class=&quot;fa-solid fa-globe mr-2&quot;&gt;&lt;/i&gt;Website
+                                &lt;/h6&gt;
+                                &lt;p class=&quot;text-primary font-medium text-sm&quot;&gt;www.reallygreatsite.com&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div&gt;
+                                &lt;h6 class=&quot;text-primary/70 text-xs font-semibold uppercase tracking-wider mb-1&quot;&gt;
+                                    &lt;i class=&quot;fa-solid fa-location-dot mr-2&quot;&gt;&lt;/i&gt;Address
+                                &lt;/h6&gt;
+                                &lt;p class=&quot;text-primary font-medium text-sm leading-snug&quot;&gt;123 Anywhere St., Any City&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Bottom Decorative Lines --&gt;
+                &lt;div class=&quot;flex gap-2 mt-8 justify-end opacity-80&quot;&gt;
+                    &lt;div class=&quot;w-32 h-2 bg-primary transform -skew-x-[20deg]&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-4 h-2 bg-accentGreen transform -skew-x-[20deg]&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-8 h-2 bg-primary transform -skew-x-[20deg]&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <script>
+   // 自动调整iframe高度
+    function resizeIframes() {
+        document.querySelectorAll('.responsive-iframe').forEach(iframe => {
+            try {
+                const doc = iframe.contentDocument || iframe.contentWindow.document;
+                const height = Math.max(
+                    doc.body.scrollHeight,
+                    doc.documentElement.scrollHeight,
+                    doc.body.offsetHeight,
+                    doc.documentElement.offsetHeight,
+                    doc.body.clientHeight,
+                    doc.documentElement.clientHeight
+                );
+                iframe.style.height = height + 'px';
+            } catch (e) {
+                console.log('无法调整iframe高度:', e);
+            }
+        });
+    }
+    
+    // 初始调整
+    window.addEventListener('load', resizeIframes);
+    
+    // 内容加载后调整
+    document.querySelectorAll('.responsive-iframe').forEach(iframe => {
+        iframe.addEventListener('load', function() {
+            resizeIframes();
+            // 对动态内容进行定期检查
+            setInterval(resizeIframes, 1000);
+        });
+    });
+  </script>
+ </body>
+</html>

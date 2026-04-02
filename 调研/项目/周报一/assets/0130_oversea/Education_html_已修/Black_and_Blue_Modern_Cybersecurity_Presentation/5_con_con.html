@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, height=720, initial-scale=1.0">
+    <title>Common Cybersecurity Challenges - Grid Layout</title>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #000000;
+            overflow: hidden;
+            background: radial-gradient(circle at 50% 120%, #1e1b4b 0%, #000000 70%);
+            font-family: 'Noto Sans SC', sans-serif;
+            color: #FFFFFF;
+        }
+
+        .glow-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Styles copied from Reference Page 10 */
+        .cyber-card {
+            background: linear-gradient(160deg, rgba(30, 27, 75, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 40px;
+            box-shadow: 0 0 60px rgba(76, 29, 149, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cyber-card::after {
+            content: '';
+            position: absolute;
+            top: -2px; left: -2px; right: -2px; bottom: -2px;
+            background: linear-gradient(45deg, #4f46e5, #d946ef, #4f46e5);
+            z-index: -1;
+            border-radius: 42px;
+            background-size: 400%;
+            opacity: 0.5;
+            filter: blur(10px);
+            animation: borderGlow 10s linear infinite;
+        }
+
+        @keyframes borderGlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .text-gradient {
+            background: linear-gradient(90deg, #FFFFFF 0%, #E879F9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .cyber-border {
+            background: linear-gradient(135deg, #06b6d4 0%, #8b5cf6 50%, #d946ef 100%);
+            padding: 2px;
+            border-radius: 24px;
+            box-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
+        }
+
+        .icon-box {
+            background: linear-gradient(135deg, rgba(76, 29, 149, 0.6) 0%, rgba(139, 92, 246, 0.4) 100%);
+            border: 1px solid rgba(255,255,255,0.1);
+            backdrop-filter: blur(4px);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+
+        <div class="glow-orb" style="top: -100px; right: -100px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(138, 43, 226, 0.25) 0%, rgba(0,0,0,0) 70%);"></div>
+        <div class="glow-orb" style="bottom: -150px; left: -100px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(76, 29, 149, 0.3) 0%, rgba(0,0,0,0) 70%);"></div>
+
+        <header class="relative z-20 flex justify-end items-center px-16 py-8 w-full">
+            <div class="rounded-full px-8 py-2 font-bold text-white shadow-lg" 
+                 style="background: linear-gradient(90deg, #6b21a8 0%, #d946ef 100%); box-shadow: 0 4px 15px rgba(217, 70, 239, 0.4);">
+                Page 05
+            </div>
+        </header>
+
+        <main class="relative z-10 px-16 flex flex-col justify-start h-full pb-10">
+            
+            <div class="w-full mb-8 cyber-border h-[260px] flex-shrink-0">
+                <div class="w-full h-full bg-gray-900 rounded-[22px] overflow-hidden relative">
+                    <div class="absolute inset-0 bg-indigo-900/20 mix-blend-overlay z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1558494949-ef526b0042a0?q=80&w=2668&auto=format&fit=crop" 
+                         alt="Cybersecurity Abstract Lock and Data Blocks" 
+                         class="w-full h-full object-cover opacity-90">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-12 gap-10 items-start flex-grow">
+                
+                <div class="col-span-4 pt-4">
+                    <h1 class="text-6xl font-bold text-white leading-[1.1] tracking-tight drop-shadow-lg">
+                        Common<br>
+                        <span class="text-gradient">Cybersecurity</span><br>
+                        Challenges
+                    </h1>
+                </div>
+
+                <div class="col-span-8 h-[300px]">
+                    <div class="cyber-card p-8 h-full flex flex-col justify-between">
+                        <div class="grid grid-cols-2 gap-x-8 gap-y-6">
+                            
+                            <div class="flex items-start space-x-4 group">
+                                <div class="icon-box w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                                    <i class="fa-solid fa-user-graduate text-[#D946EF] text-lg"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-white font-bold text-lg mb-1">Skills Gap</h3>
+                                    <p class="text-sm text-gray-300 leading-snug">
+                                        Significant shortage of qualified cybersecurity professionals to handle complex threats.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4 group">
+                                <div class="icon-box w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                                    <i class="fa-solid fa-sack-dollar text-[#8A2BE2] text-lg"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-white font-bold text-lg mb-1">Limited Budgets</h3>
+                                    <p class="text-sm text-gray-300 leading-snug">
+                                        Financial constraints often prevent necessary upgrades to security infrastructure.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4 group">
+                                <div class="icon-box w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                                    <i class="fa-solid fa-bug text-cyan-400 text-lg"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-white font-bold text-lg mb-1">Evolving Threats</h3>
+                                    <p class="text-sm text-gray-300 leading-snug">
+                                        Attack techniques change rapidly, often outpacing defensive capabilities.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4 group">
+                                <div class="icon-box w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                                    <i class="fa-solid fa-user-injured text-red-400 text-lg"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-white font-bold text-lg mb-1">Human Error</h3>
+                                    <p class="text-sm text-gray-300 leading-snug">
+                                        Phishing and social engineering remain the most effective attack vectors.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="flex justify-end mt-2">
+                            <div class="w-12 h-12 rounded-full flex items-center justify-center text-white text-lg cursor-pointer hover:bg-white hover:text-black transition-colors duration-300"
+                                 style="background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%); border: 1px solid rgba(255,255,255,0.2);">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+</body>
+</html>

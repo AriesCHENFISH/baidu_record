@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The North Pole - Final Cover</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        arctic: '#4D9BE6',
+                        deep: '#03070E',
+                        slate: '#8A9BB0',
+                        ghost: '#F2F4F8',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background: #03070E;
+            margin: 0 auto;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        /* 模拟深冰层的复杂渐变背景，不依赖图片 */
+        .deep-ice-bg {
+            background: 
+                radial-gradient(circle at 50% -20%, rgba(77, 155, 230, 0.2) 0%, transparent 60%), /* 顶部光照 */
+                radial-gradient(circle at 100% 100%, rgba(11, 21, 33, 0.8) 0%, transparent 50%), /* 右下深渊 */
+                linear-gradient(135deg, #03070E 0%, #081224 100%); /* 基础底色 */
+        }
+        /* 标题镂空效果 */
+        .text-outline {
+            -webkit-text-stroke: 1.5px rgba(242, 244, 248, 0.3);
+            color: transparent;
+        }
+        /* 玻璃卡片 */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container" class="deep-ice-bg">
+        
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1px] h-40 bg-gradient-to-b from-transparent via-arctic/50 to-transparent opacity-70"></div>
+        <div class="absolute bottom-[-30%] left-[-20%] w-[800px] h-[800px] bg-arctic opacity-5 blur-[150px] rounded-full pointer-events-none"></div>
+
+        <div class="relative z-10 w-full h-full flex flex-col items-center justify-center text-center pb-20">
+            <div class="flex items-center gap-3 mb-16 opacity-60">
+                <div class="w-8 h-[1px] bg-arctic"></div>
+                <p class="text-arctic font-bold tracking-[0.4em] uppercase text-[10px] italic">
+                    Scientific Expedition Report
+                </p>
+                <div class="w-8 h-[1px] bg-arctic"></div>
+            </div>
+            
+            <div class="relative mb-12">
+                <h1 class="text-[160px] font-black uppercase text-outline leading-none tracking-tighter absolute -top-24 left-1/2 -translate-x-1/2 w-full opacity-10 italic select-none">
+                    NORTH POLE
+                </h1>
+                <h1 class="text-[120px] font-black uppercase leading-[0.9] tracking-tight relative z-10 text-ghost drop-shadow-2xl">
+                    THE NORTH<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-ghost via-ghost to-arctic">POLE</span>
+                </h1>
+            </div>
+
+            <p class="text-slate text-xl font-light tracking-[0.4em] uppercase italic opacity-70 max-w-2xl">
+                Journey into the frozen horizon
+            </p>
+        </div>
+
+        <div class="absolute bottom-12 left-12 z-20 glass-card p-5 rounded-2xl flex items-center gap-5 pr-10">
+            <div class="w-14 h-14 rounded-full bg-arctic/10 border border-arctic/20 flex items-center justify-center shadow-[0_0_15px_rgba(77,155,230,0.2)]">
+                <i class="fa-solid fa-user-astronaut text-arctic text-xl"></i>
+            </div>
+            <div class="text-left">
+                <h4 class="text-ghost font-bold text-base uppercase tracking-wider mb-1">Dr. Alex Chen</h4>
+                <div class="h-[1px] w-full bg-white/10 my-1"></div>
+                <p class="text-slate text-xs font-light opacity-80 leading-tight">
+                    Lead Polar Scientist<br>
+                    Arctic Research Institute
+                </p>
+            </div>
+        </div>
+
+        <div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 z-20 opacity-80">
+            <div class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white backdrop-blur-md bg-white/5">
+                <i class="fa-solid fa-chevron-down animate-bounce text-[10px]"></i>
+            </div>
+            <span class="text-[8px] text-slate tracking-[0.4em] uppercase font-bold opacity-50">Start</span>
+        </div>
+
+        <div class="absolute bottom-12 right-12 flex flex-col items-end gap-2 opacity-40">
+            <div class="w-1 h-8 bg-arctic/50"></div>
+            <div class="text-[9px] text-arctic font-mono tracking-widest uppercase vertical-text" style="writing-mode: vertical-rl;">
+                90°N / 135°W
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision & Approach - Portfolio</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { bgDark: '#050505', primaryText: '#FDF6E3', secondaryText: '#9A9A9A', accent: '#D65DB1', footerAccent: '#FEF3D5' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #050505; overflow: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        .fade-in-up { animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <!-- 背景装饰 -->
+        <div class="absolute top-[80px] left-1/2 -translate-x-1/2 z-0 pointer-events-none opacity-40">
+            <svg width="600" height="200" viewBox="0 0 400 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50 100C100 20 300 150 350 50" stroke="#D65DB1" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+
+        <main class="w-full px-24 z-10 fade-in-up flex flex-col items-center">
+            <!-- 统一居中标题 -->
+            <div class="text-center mb-10">
+                <h1 class="font-display font-bold text-7xl text-primaryText leading-none tracking-tighter uppercase inline-block relative">
+                    Vision <span class="text-accent">/</span> Creative Approach
+                </h1>
+                <div class="w-24 h-1 bg-accent mx-auto mt-6"></div>
+            </div>
+
+            <!-- 内容区：图片在上，文字在下分栏 -->
+            <div class="w-full max-w-5xl">
+                <!-- 单张大图：横向宽幅 -->
+                <div class="group relative w-full h-[280px] rounded-[32px] overflow-hidden border border-gray-800 shadow-2xl mb-10">
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200&auto=format&fit=crop" 
+                         alt="Vision" 
+                         class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                    <!-- 装饰星号 -->
+                    <div class="absolute top-6 right-6 text-accent text-4xl animate-pulse"><i class="fa-solid fa-asterisk"></i></div>
+                </div>
+
+                <!-- 文本设计：左右双栏 -->
+                <div class="grid grid-cols-2 gap-16">
+                    <div class="border-l-2 border-accent pl-6">
+                        <p class="text-primaryText font-display text-2xl leading-snug font-light italic">
+                            "Transforming abstract concepts into tangible digital experiences."
+                        </p>
+                    </div>
+                    <div>
+                        <p class="text-secondaryText text-sm leading-relaxed font-light text-justify">
+                            Our philosophy embraces the chaos of creativity while maintaining the precision of engineering. Every pixel serves a purpose, bridging the gap between human emotion and digital interfaces to craft stories that resonate.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div class="absolute bottom-12 left-1/2 -translate-x-1/2 w-48 h-[1px] bg-accent/30"></div>
+    </div>
+</body>
+</html>

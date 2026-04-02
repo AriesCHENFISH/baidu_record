@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Tennis Court - Content Layout</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        /* Tennis Ball CSS Art */
+        .tennis-ball { background: #DDEE56; position: relative; overflow: hidden; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+        .tennis-ball::before, .tennis-ball::after { content: ""; position: absolute; border: 3px solid white; border-radius: 50%; width: 70%; height: 70%; top: 15%; left: 15%; opacity: 0.8; }
+        .tennis-ball::before { border-color: transparent transparent transparent white; transform: rotate(-45deg) scale(1.4) translate(-10%, -10%); }
+        .tennis-ball::after { border-color: white transparent transparent transparent; transform: rotate(-45deg) scale(1.4) translate(10%, 10%); }
+        
+        .title-shadow { text-shadow: 4px 4px 0px #324E68; }
+        
+        /* Custom Scrollbar hide */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        t_primary: '#3F6283',
+                        t_container: '#6292C2',
+                        t_accent: '#DDEE56',
+                        t_highlight: '#F0F4C3',
+                        t_shadow: '#324E68',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="page_container" class="w-[1280px] h-[720px] mx-auto relative bg-t_primary overflow-hidden">
+        
+        <header class="relative z-30 w-full h-[100px] bg-t_accent p-3">
+            <div class="w-full h-full border-2 border-dashed border-white rounded-lg flex items-center justify-center gap-16">
+                <nav class="flex gap-12">
+                    <div class="bg-t_highlight px-10 py-2 rounded-full shadow-sm text-t_primary font-bold uppercase tracking-wide text-sm cursor-default">home</div>
+                    <div class="bg-t_highlight px-10 py-2 rounded-full shadow-sm text-t_primary font-bold uppercase tracking-wide text-sm opacity-80 cursor-default">content</div>
+                    <div class="bg-t_highlight px-10 py-2 rounded-full shadow-sm text-t_primary font-bold uppercase tracking-wide text-sm opacity-80 cursor-default">contact</div>
+                </nav>
+            </div>
+        </header>
+
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none z-0">
+            <div class="absolute top-[20%] right-[-5%] w-[600px] h-[600px] border-[20px] border-white rounded-full opacity-20"></div>
+            <div class="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] bg-t_container rounded-full opacity-30 blur-3xl"></div>
+        </div>
+
+        <div class="relative z-10 w-full h-[calc(720px-100px)] flex px-16 py-10 gap-12 items-center">
+            
+            <div class="w-1/3 flex flex-col justify-center relative">
+                <div class="absolute -top-12 -left-8 w-20 h-20 rounded-full tennis-ball z-0 opacity-80 animate-bounce" style="animation-duration: 3s;"></div>
+                
+                <h1 class="relative z-10 text-7xl font-black italic text-white leading-[0.9] title-shadow mb-8 tracking-tight">
+                    The<br><span class="text-t_accent">Tennis</span><br>Court
+                </h1>
+                
+                <p class="text-white text-lg font-light leading-relaxed opacity-90 text-justify border-l-4 border-t_accent pl-6">
+                    Understanding the dimensions and zones of a standard tennis court is essential for mastering the game's strategy and movement.
+                </p>
+
+                <div class="mt-8 flex flex-col gap-4">
+                    <div class="flex items-center gap-4 text-white/80">
+                        <i class="fa-solid fa-ruler-combined text-t_accent text-xl"></i>
+                        <span class="text-sm font-medium tracking-wide uppercase">23.77m Length</span>
+                    </div>
+                    <div class="flex items-center gap-4 text-white/80">
+                        <i class="fa-solid fa-arrows-left-right text-t_accent text-xl"></i>
+                        <span class="text-sm font-medium tracking-wide uppercase">8.23m Width (Singles)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-2/3 grid grid-cols-2 grid-rows-2 gap-6 h-full">
+                
+                <div class="w-full h-full bg-t_container/80 backdrop-blur-sm p-8 rounded-3xl border border-white/20 shadow-lg group hover:bg-t_container transition-all duration-300 flex flex-col justify-center">
+                    <div class="w-12 h-12 bg-t_shadow rounded-full flex items-center justify-center mb-4 text-t_accent text-2xl group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <h3 class="text-white text-xl font-bold mb-2">Court Surfaces</h3>
+                    <p class="text-white/80 text-sm leading-relaxed">
+                        Tennis is played on a variety of surfaces including grass and clay. Each surface affects the speed and bounce of the ball differently.
+                    </p>
+                </div>
+
+                <div class="w-full h-full bg-t_container/80 backdrop-blur-sm p-8 rounded-3xl border border-white/20 shadow-lg group hover:bg-t_container transition-all duration-300 flex flex-col justify-center">
+                    <div class="w-12 h-12 bg-t_shadow rounded-full flex items-center justify-center mb-4 text-t_accent text-2xl group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-border-all"></i>
+                    </div>
+                    <h3 class="text-white text-xl font-bold mb-2">The Net</h3>
+                    <p class="text-white/80 text-sm leading-relaxed">
+                        The net divides the court into two equal halves. It stands 3 feet (0.914 m) high at the center and 3.5 feet (1.07 m) at the posts.
+                    </p>
+                </div>
+
+                <div class="w-full h-full bg-t_container/80 backdrop-blur-sm p-8 rounded-3xl border border-white/20 shadow-lg group hover:bg-t_container transition-all duration-300 flex flex-col justify-center">
+                    <div class="w-12 h-12 bg-t_shadow rounded-full flex items-center justify-center mb-4 text-t_accent text-2xl group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <h3 class="text-white text-xl font-bold mb-2">Service Zones</h3>
+                    <p class="text-white/80 text-sm leading-relaxed">
+                        The service boxes are crucial for starting the point. Serving into the correct box diagonally is the first rule of play.
+                    </p>
+                </div>
+
+                <div class="w-full h-full bg-t_accent p-8 rounded-3xl shadow-lg flex flex-col justify-center items-center text-center relative overflow-hidden">
+                    <div class="absolute -right-4 -bottom-4 text-t_highlight opacity-40 text-8xl">
+                        <i class="fa-solid fa-table-tennis-paddle-ball"></i>
+                    </div>
+                    <h3 class="text-t_shadow text-5xl font-black mb-1 z-10">78<span class="text-3xl">ft</span></h3>
+                    <p class="text-t_shadow font-bold uppercase tracking-widest text-sm z-10">Total Length</p>
+                </div>
+
+            </div>
+        </div>
+
+        <footer class="absolute bottom-4 left-0 w-full text-center z-30">
+        </footer>
+    </div>
+</body>
+</html>

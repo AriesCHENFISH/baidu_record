@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tournament Ecosystem - 2x2 Grid</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .page_container {
+            width: 1280px; height: 720px;
+            margin: 0 auto; position: relative;
+            background-color: #050314; overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        .info-card {
+            background: linear-gradient(135deg, rgba(45,108,223,0.1) 0%, rgba(5,3,20,0.8) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative; overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .info-card:hover {
+            border-color: #2D6CDF;
+            background: linear-gradient(135deg, rgba(45,108,223,0.2) 0%, rgba(5,3,20,0.9) 100%);
+            transform: translateY(-5px);
+        }
+        .info-card::after {
+            content: ''; position: absolute; bottom: 0; right: 0;
+            width: 30px; height: 30px;
+            background: #2D6CDF;
+            clip-path: polygon(100% 0, 100% 100%, 0 100%);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page_container">
+        <div class="absolute inset-0 z-0 opacity-30">
+            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1280&auto=format&fit=crop" class="w-full h-full object-cover">
+        </div>
+
+        <div class="absolute bottom-0 left-0 z-10 flex flex-col items-start">
+            <div class="w-56 h-12 bg-[#2D6CDF] transform -skew-x-45 -translate-x-12 translate-y-6"></div>
+            <div class="w-72 h-2 bg-white transform -skew-x-45 -translate-x-10 translate-y-2 opacity-80"></div>
+        </div>
+
+        <div class="absolute top-10 left-12 z-50 flex items-center gap-4">
+            <div class="w-12 h-12 flex items-center justify-center bg-white/5 border border-white/20 rounded-lg backdrop-blur-sm">
+                <i class="fa-solid fa-gamepad text-[#2D6CDF] text-2xl"></i>
+            </div>
+            <div class="flex flex-col">
+                <span class="text-white font-black text-2xl tracking-[0.2em] leading-none">LICERIA</span>
+                <span class="text-[#2D6CDF] text-[9px] font-bold tracking-[0.4em] uppercase mt-1">Esports Division</span>
+            </div>
+        </div>
+
+        <div class="relative z-20 w-full h-full flex flex-col justify-center items-center px-24">
+            <div class="mb-14 text-center">
+                <h1 class="text-6xl font-[900] text-white uppercase italic tracking-tighter">
+                    Tournament <span class="text-[#2D6CDF]">Ecosystem</span>
+                </h1>
+                <p class="text-white/40 text-sm tracking-[0.4em] uppercase mt-2">Professional Standards & Operations</p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-x-16 gap-y-10 w-full max-w-5xl">
+                
+                <div class="relative group">
+                    <div class="absolute -left-8 -top-8 w-16 h-16 bg-white rounded-full flex items-center justify-center z-30 shadow-lg border-[4px] border-[#050314]">
+                        <span class="text-[#2D6CDF] font-black italic text-2xl">01</span>
+                    </div>
+                    <div class="info-card p-8 pl-10 rounded-2xl">
+                        <i class="fa-solid fa-broadcast-tower absolute -right-4 -bottom-4 text-7xl text-white opacity-[0.03]"></i>
+                        <h3 class="text-white font-black text-xl uppercase mb-3 tracking-widest">Broadcast Production</h3>
+                        <p class="text-white/60 text-sm leading-relaxed">High-definition live streaming with augmented reality overlays and professional commentary teams.</p>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <div class="absolute -left-8 -top-8 w-16 h-16 bg-white rounded-full flex items-center justify-center z-30 shadow-lg border-[4px] border-[#050314]">
+                        <span class="text-[#2D6CDF] font-black italic text-2xl">02</span>
+                    </div>
+                    <div class="info-card p-8 pl-10 rounded-2xl">
+                        <i class="fa-solid fa-shield-halved absolute -right-4 -bottom-4 text-7xl text-white opacity-[0.03]"></i>
+                        <h3 class="text-white font-black text-xl uppercase mb-3 tracking-widest">Competitive Integrity</h3>
+                        <p class="text-white/60 text-sm leading-relaxed">Strict anti-cheat protocols, licensed referees, and standardized hardware for every pro player.</p>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <div class="absolute -left-8 -top-8 w-16 h-16 bg-white rounded-full flex items-center justify-center z-30 shadow-lg border-[4px] border-[#050314]">
+                        <span class="text-[#2D6CDF] font-black italic text-2xl">03</span>
+                    </div>
+                    <div class="info-card p-8 pl-10 rounded-2xl">
+                        <i class="fa-solid fa-vr-cardboard absolute -right-4 -bottom-4 text-7xl text-white opacity-[0.03]"></i>
+                        <h3 class="text-white font-black text-xl uppercase mb-3 tracking-widest">Fan Engagement</h3>
+                        <p class="text-white/60 text-sm leading-relaxed">In-game drops, live voting, and VIP arena experiences that bridge the gap between fans and idols.</p>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <div class="absolute -left-8 -top-8 w-16 h-16 bg-white rounded-full flex items-center justify-center z-30 shadow-lg border-[4px] border-[#050314]">
+                        <span class="text-[#2D6CDF] font-black italic text-2xl">04</span>
+                    </div>
+                    <div class="info-card p-8 pl-10 rounded-2xl">
+                        <i class="fa-solid fa-hand-holding-dollar absolute -right-4 -bottom-4 text-7xl text-white opacity-[0.03]"></i>
+                        <h3 class="text-white font-black text-xl uppercase mb-3 tracking-widest">Commercial Growth</h3>
+                        <p class="text-white/60 text-sm leading-relaxed">Diversified revenue streams including media rights, global sponsorships, and digital merchandise.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

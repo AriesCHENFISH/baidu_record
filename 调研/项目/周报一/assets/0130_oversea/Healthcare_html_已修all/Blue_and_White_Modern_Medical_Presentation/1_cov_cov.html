@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Presentation - Typography Cover</title>
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome (CDN) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+            border: 20px solid #F8FAFC; /* 装饰性外边框 */
+        }
+
+        /* 背景装饰：技术感十字参考线 */
+        .bg-grid-lines {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(to right, #F1F5F9 1px, transparent 1px),
+                linear-gradient(to bottom, #F1F5F9 1px, transparent 1px);
+            background-size: 100px 100px;
+            z-index: 0;
+            opacity: 0.6;
+        }
+
+        .logo-text { color: #1E2B9D; }
+        .sub-logo-text { color: #64748B; }
+
+        .title-gradient {
+            background: linear-gradient(135deg, #1E2B9D 30%, #3B82F6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* 核心装饰条 */
+        .accent-box {
+            width: 80px;
+            height: 8px;
+            background: #1E2B9D;
+            margin-bottom: 40px;
+        }
+
+        /* 汇报人信息区域 */
+        .info-footer {
+            background: #1E2B9D;
+            height: 140px;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            padding: 0 100px;
+            z-index: 10;
+        }
+
+        .presenter-meta {
+            border-left: 1px solid rgba(255, 255, 255, 0.2);
+            padding-left: 40px;
+            margin-left: 40px;
+        }
+
+        /* 页面右侧装饰大图标水印 */
+        .watermark-icon {
+            position: absolute;
+            right: -50px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 500px;
+            color: #F1F5F9;
+            z-index: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <!-- 背景网格与水印 -->
+        <div class="bg-grid-lines"></div>
+        <div class="watermark-icon">
+            <i class="fa-solid fa-staff-snake"></i>
+        </div>
+        
+        <!-- Header Logo (居左) -->
+        <div class="absolute top-16 left-20 z-20 flex items-center gap-4">
+            <div class="text-4xl logo-text">
+                <i class="fa-solid fa-staff-snake"></i>
+            </div>
+            <div class="flex flex-col items-start">
+                <h6 class="text-base font-bold tracking-[0.2em] uppercase logo-text">Borcelle Hospital</h6>
+                <p class="text-[10px] sub-logo-text tracking-widest uppercase font-medium">Healthcare Excellence Since 1995</p>
+            </div>
+        </div>
+
+        <!-- 主标题区域 (垂直居中靠左) -->
+        <div class="absolute top-[200px] left-20 z-10">
+            <div class="accent-box"></div>
+            <div class="space-y-2">
+                <span class="text-sm font-black tracking-[0.8em] text-blue-400 uppercase">Annual Medical Review</span>
+                <h1 class="text-[100px] font-black text-slate-900 leading-[0.9] tracking-tighter">
+                    Medical <br> 
+                    <span class="title-gradient">Presentation</span>
+                </h1>
+                <div class="mt-8 flex items-center gap-4">
+                    <span class="h-[1px] w-20 bg-slate-300"></span>
+                    <p class="text-xl text-slate-400 font-light tracking-wide">Innovating Patient Outcomes Through Precision Data</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 汇报人信息底栏 -->
+        <div class="info-footer">
+            <!-- 汇报人 1 -->
+            <div class="flex items-center gap-6">
+                <div class="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white">
+                    <i class="fa-solid fa-user-md text-xl"></i>
+                </div>
+                <div>
+                    <p class="text-[10px] font-bold text-blue-300 uppercase tracking-widest">Presenter Name</p>
+                    <h4 class="text-xl font-bold text-white">Dr. Julian Thorne</h4>
+                </div>
+            </div>
+
+            <!-- 详细职位 -->
+            <div class="presenter-meta">
+                <p class="text-[10px] font-bold text-blue-300 uppercase tracking-widest">Department & Role</p>
+                <h4 class="text-lg font-medium text-white/90">Chief of Clinical Research Operations</h4>
+            </div>
+
+            <!-- 日期与地点 (靠右) -->
+            <div class="ml-auto flex flex-col items-end text-right">
+                <p class="text-[10px] font-bold text-blue-300 uppercase tracking-widest">Symposium Schedule</p>
+                <h4 class="text-lg font-bold text-white">January 2025 • Conference Hall A</h4>
+            </div>
+        </div>
+
+        <!-- 右下角装饰性小字 -->
+        <div class="absolute bottom-[160px] right-20 text-right opacity-40">
+            <p class="text-[10px] font-bold tracking-[0.4em] text-slate-400 uppercase">Document Ref: BH-2025-CORE</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

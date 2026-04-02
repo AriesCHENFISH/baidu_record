@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football's Impact on Society - Liceria & Co.</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryBg: '#2A4029', 
+                        contentBox: '#617360', 
+                        mainText: '#FFFFFF', 
+                        bodyText: '#E0E6DF', 
+                        decoLine: '#8C9B8A', 
+                        accentRed: '#D9463E',
+                    },
+                    fontFamily: { sans: ['Roboto', 'sans-serif'], display: ['Montserrat', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background-color: #2A4029;
+        }
+        .glass-card {
+            background-color: rgba(97, 115, 96, 0.6);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        /* 旋转动画 */
+        @keyframes rotate-text {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-rotate { animation: rotate-text 20s linear infinite; }
+        
+        .image-overlay {
+            background: linear-gradient(90deg, rgba(42,64,41,0.8) 0%, rgba(42,64,41,0.2) 50%, rgba(42,64,41,0.8) 100%);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container" class="shadow-2xl">
+        
+        <!-- 1. 背景层 -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1529900748604-07564a03e7a6?q=80&w=2070&auto=format&fit=crop" alt="Grass" class="w-full h-full object-cover opacity-20 mix-blend-overlay">
+        </div>
+
+        <!-- 2. 内容主体 -->
+        <div class="relative z-20 w-full h-full flex flex-col justify-between py-10">
+
+            <!-- [Top Section] 顶部四卡片区域 (px-16) -->
+            <div class="flex justify-between items-start gap-6 px-16">
+                <div class="w-1/4 glass-card border-t-2 border-accentRed rounded-b-lg p-5 h-28 flex flex-col items-center justify-center text-center shadow-lg">
+                    <i class="fa-solid fa-hand-holding-heart text-accentRed text-lg mb-2"></i>
+                    <h3 class="text-mainText font-display font-semibold text-base leading-tight">Humanitarian<br>Mission</h3>
+                </div>
+                <div class="w-1/4 glass-card border-t-2 border-decoLine rounded-b-lg p-5 h-28 flex flex-col items-center justify-center text-center shadow-lg">
+                    <i class="fa-solid fa-users text-decoLine text-lg mb-2"></i>
+                    <h3 class="text-mainText font-display font-semibold text-base leading-tight">Unifying<br>Tool</h3>
+                </div>
+                <div class="w-1/4 glass-card border-t-2 border-decoLine rounded-b-lg p-5 h-28 flex flex-col items-center justify-center text-center shadow-lg">
+                    <i class="fa-solid fa-seedling text-decoLine text-lg mb-2"></i>
+                    <h3 class="text-mainText font-display font-semibold text-base leading-tight">Talent<br>Development</h3>
+                </div>
+                <div class="w-1/4 glass-card border-t-2 border-decoLine rounded-b-lg p-5 h-28 flex flex-col items-center justify-center text-center shadow-lg">
+                    <i class="fa-solid fa-coins text-decoLine text-lg mb-2"></i>
+                    <h3 class="text-mainText font-display font-semibold text-base leading-tight">Economic<br>Driver</h3>
+                </div>
+            </div>
+
+            <!-- [Middle Section] 全宽长配图 (1280x180) -->
+            <div class="relative w-full h-[180px] my-6 shadow-2xl overflow-hidden border-y border-white/10">
+                <img src="https://images.unsplash.com/photo-1510051646601-9d522a3e8431?q=80&w=2070&auto=format&fit=crop" 
+                     alt="Football Stadium Crowd" 
+                     class="w-full h-full object-cover grayscale-[20%]">
+                <!-- 图片上的渐变层，增强科技感并过渡背景 -->
+                <div class="absolute inset-0 image-overlay"></div>
+                <!-- 装饰线条 -->
+                <div class="absolute top-0 left-0 w-full h-[1px] bg-white/20"></div>
+                <div class="absolute bottom-0 left-0 w-full h-[1px] bg-white/20"></div>
+            </div>
+
+            <!-- [Bottom Section] 底部主要内容区 (px-16) -->
+            <div class="grid grid-cols-12 gap-8 items-end px-16">
+                
+                <!-- 左侧：统一动态 Logo + 副标题 -->
+                <div class="col-span-3 flex flex-col justify-between h-full min-h-[200px]">
+                    <div class="mb-auto">
+                        <h2 class="text-decoLine font-display text-xl font-bold uppercase tracking-wider leading-tight">
+                            More Than<br><span class="text-mainText text-2xl">Just a Sport</span>
+                        </h2>
+                        <div class="w-10 h-1 bg-accentRed mt-3"></div>
+                    </div>
+                    
+                    <!-- 统一化旋转徽章 Logo -->
+                    <div class="relative w-28 h-28 flex items-center justify-center -ml-2 mb-2">
+                        <svg class="absolute w-full h-full animate-rotate" viewBox="0 0 100 100">
+                            <defs><path id="socialPath" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" /></defs>
+                            <text fill="#E0E6DF" font-size="7.5" font-weight="500" letter-spacing="2" class="opacity-60 uppercase">
+                                <textPath xlink:href="#socialPath">• LICERIA SPORTS & CO • GLOBAL IMPACT •</textPath>
+                            </text>
+                        </svg>
+                        <div class="w-14 h-14 bg-accentRed shadow-xl rounded-full border border-white/20 flex flex-col items-center justify-center backdrop-blur-md">
+                            <i class="fa-solid fa-globe text-white text-base"></i>
+                            <span class="text-white font-bold text-[7px] mt-0.5 tracking-tighter uppercase">EST. 1992</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 中间正文说明 -->
+                <div class="col-span-5">
+                    <div class="bg-contentBox/40 p-7 rounded-lg border-l-4 border-accentRed backdrop-blur-sm shadow-xl">
+                        <p class="text-bodyText font-sans text-sm leading-6 mb-4 text-justify">
+                            Football acts as a global catalyst for social change. It bridges cultures, inspires youth development, and provides economic opportunities in every corner of the planet.
+                        </p>
+                        <p class="text-white font-sans text-sm leading-6 text-justify italic font-medium">
+                            "The pitch is where the world speaks one language, breaking down barriers that politics cannot."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 右侧主标题 -->
+                <div class="col-span-4 flex flex-col items-end text-right">
+                    <div class="mb-4">
+                        <div class="w-14 h-14 rounded-full border border-white/30 flex items-center justify-center bg-white/5 group cursor-pointer hover:border-accentRed transition-all">
+                            <i class="fa-solid fa-arrow-right text-mainText text-xl transform -rotate-45 group-hover:text-accentRed transition-colors"></i>
+                        </div>
+                    </div>
+                    <h1 class="text-mainText font-display font-extrabold text-5xl leading-[0.9] tracking-tighter uppercase">
+                        Football’s<br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-decoLine">Impact</span><br>
+                        on Society
+                    </h1>
+                    <p class="text-decoLine text-[10px] tracking-[0.4em] uppercase mt-4 opacity-50 font-bold">Presentation Page 05</p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

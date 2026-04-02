@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Future Horizon - Studio Shodwe</title>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgPrimary: '#211545',
+                        accent: '#6D3BFE',
+                        neonCyan: '#84D9FF',
+                        borderDeco: '#A5A6C4',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px;
+            margin: 0 auto; position: relative;
+            background-color: #211545; overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Glassmorphism Panel */
+        .glass-panel {
+            background: rgba(60, 44, 122, 0.4);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(165, 166, 196, 0.2);
+        }
+
+        /* Hero Image Mask */
+        .hero-mask {
+            clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
+        }
+
+        /* Neon Text Glow */
+        .neon-glow {
+            text-shadow: 0 0 15px rgba(132, 217, 255, 0.5), 0 0 30px rgba(109, 59, 254, 0.3);
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #FFFFFF, #84D9FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Animated Grid Overlay */
+        .grid-overlay {
+            position: absolute; inset: 0;
+            background-image: linear-gradient(rgba(109, 59, 254, 0.1) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(109, 59, 254, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            transform: perspective(500px) rotateX(60deg) translateY(-100px);
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <div class="grid-overlay"></div>
+        <div class="absolute top-0 right-0 w-[800px] h-[400px] bg-gradient-to-b from-accent/20 to-transparent blur-[120px]"></div>
+
+        <div class="absolute top-0 left-0 w-full h-[320px] hero-mask overflow-hidden border-b border-neonCyan/20">
+            <img src="https://images.unsplash.com/photo-1614726365723-49cfae967a5b?q=80&w=1280&auto=format&fit=crop" 
+                 class="w-full h-full object-cover opacity-60">
+            <div class="absolute inset-0 bg-gradient-to-r from-bgPrimary via-bgPrimary/40 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 flex flex-col h-full px-20 pt-16 pb-12">
+            
+            <header class="mb-12">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-10 h-[2px] bg-neonCyan"></div>
+                    <h6 class="text-neonCyan tracking-[0.5em] text-xs font-bold uppercase">Strategic Roadmap 2026</h6>
+                </div>
+                <h1 class="text-7xl font-bold text-white neon-glow leading-tight italic">
+                    THE FUTURE <span class="gradient-text font-black not-italic">HORIZON</span>
+                </h1>
+            </header>
+
+            <div class="grid grid-cols-3 gap-8 mt-auto">
+                
+                <div class="glass-panel p-8 rounded-tr-[40px] relative group border-t-2 border-t-neonCyan">
+                    <div class="flex items-center justify-between mb-6">
+                        <i class="fa-solid fa-rocket text-2xl text-neonCyan"></i>
+                        <span class="text-white/20 font-mono text-xl">01</span>
+                    </div>
+                    <h3 class="text-white text-2xl font-bold mb-4 tracking-wider uppercase">Market Velocity</h3>
+                    <h4 class="text-neonCyan text-4xl font-black mb-4">$800B+</h4>
+                    <p class="text-borderDeco text-sm leading-relaxed font-light">
+                        Projected global market capitalization by 2026. Acceleration driven by hyper-realistic social synthesis and decentralized finance integration.
+                    </p>
+                </div>
+
+                <div class="glass-panel p-8 rounded-tr-[40px] relative group border-t-2 border-t-accent">
+                    <div class="flex items-center justify-between mb-6">
+                        <i class="fa-solid fa-microchip text-2xl text-accent"></i>
+                        <span class="text-white/20 font-mono text-xl">02</span>
+                    </div>
+                    <h3 class="text-white text-2xl font-bold mb-4 tracking-wider uppercase">Corporate Shift</h3>
+                    <h4 class="text-accent text-4xl font-black mb-4">70%</h4>
+                    <p class="text-borderDeco text-sm leading-relaxed font-light">
+                        Adoption rate among Fortune 500 companies. Shift from legacy digital presence to immersive spatial operations and employee training.
+                    </p>
+                </div>
+
+                <div class="glass-panel p-8 rounded-tr-[40px] relative group border-t-2 border-t-white">
+                    <div class="flex items-center justify-between mb-6">
+                        <i class="fa-solid fa-user-astronaut text-2xl text-white"></i>
+                        <span class="text-white/20 font-mono text-xl">03</span>
+                    </div>
+                    <h3 class="text-white text-2xl font-bold mb-4 tracking-wider uppercase">User Synthesis</h3>
+                    <h4 class="text-white text-4xl font-black mb-4">5.2B</h4>
+                    <p class="text-borderDeco text-sm leading-relaxed font-light">
+                        Potential daily active users interacting within open protocols. Identity interoperability becomes the new standard for digital citizenship.
+                    </p>
+                </div>
+
+            </div>
+
+            <footer class="mt-12 pt-6 border-t border-borderDeco/10 flex justify-between items-center">
+                <div class="flex items-center gap-6">
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                        <span class="text-[10px] text-white/40 font-mono tracking-widest uppercase">System: Operational</span>
+                    </div>
+                    <div class="text-[10px] text-white/40 font-mono tracking-widest uppercase">Nodes: 1,420 Active</div>
+                </div>
+                <div class="flex items-center gap-4 text-white/40">
+                    <i class="fa-solid fa-fingerprint hover:text-neonCyan cursor-pointer"></i>
+                    <i class="fa-solid fa-shield-halved hover:text-neonCyan cursor-pointer"></i>
+                    <p class="text-[10px] font-mono ml-4 tracking-[0.3em]">STUDIO SHODWE // LABS</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+</body>
+</html>

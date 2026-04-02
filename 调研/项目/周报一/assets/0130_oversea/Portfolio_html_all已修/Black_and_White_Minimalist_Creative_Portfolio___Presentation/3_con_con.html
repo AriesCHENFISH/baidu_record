@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazine Style Keynote</title>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgMain: '#FFFFFF',
+                        textPrimary: '#000000',
+                        textSecondary: '#555555',
+                        accent: '#E5E5E5',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                        serif: ['serif'], // 模拟衬线体效果
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #FFFFFF;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+            display: flex;
+        }
+        /* 杂志风格特有的垂直文字 */
+        .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+        /* 文字重叠图片的艺术效果 */
+        .text-overlay {
+            text-shadow: 0 0 20px rgba(255,255,255,0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <div class="w-[58%] h-full relative p-20 flex flex-col justify-between z-20">
+            
+            <div class="flex items-center gap-4">
+                <div class="w-12 h-[2px] bg-black"></div>
+                <span class="uppercase tracking-[0.3em] text-xs font-bold">Editorial Issue 2026</span>
+            </div>
+
+            <div class="mt-12">
+                <h1 class="text-[110px] leading-[0.85] font-black tracking-tighter textPrimary italic">
+                    I AM <br>
+                    MARIANA <br>
+                    <span class="text-transparent" style="-webkit-text-stroke: 1.5px black;">NAPOLITANI</span>
+                </h1>
+                
+                <p class="mt-8 text-lg font-medium tracking-widest uppercase text-textSecondary border-l-4 border-black pl-4">
+                    Creative Director & Visionary
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-10 mt-auto">
+                <div class="text-xs leading-relaxed text-textSecondary text-justify">
+                    <p class="mb-4 font-bold text-black uppercase">About her craft</p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+                </div>
+                <div class="relative">
+                    <span class="text-6xl font-serif absolute -top-6 -left-4 opacity-20">“</span>
+                    <p class="italic text-sm text-textPrimary leading-snug">
+                        Design is not just what it looks like and feels like. Design is how it works.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-[42%] h-full relative">
+            
+            <div class="absolute top-0 right-0 w-3/4 h-full bg-accent -z-10"></div>
+            
+            <div class="absolute left-[-40px] top-1/2 -translate-y-1/2 vertical-text">
+                <span class="uppercase tracking-[0.5em] text-[10px] font-light text-textSecondary">
+                    Photography by Studio Creative / Milan, Italy
+                </span>
+            </div>
+
+            <div class="absolute inset-0 top-20 bottom-20 left-10 right-0 overflow-hidden shadow-[30px_30px_60px_-15px_rgba(0,0,0,0.3)]">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop" 
+                     alt="Mariana" 
+                     class="w-full h-full object-cover scale-110">
+            </div>
+
+            <div class="absolute bottom-10 right-10 flex flex-col items-end">
+                <span class="text-6xl font-black textPrimary leading-none">01</span>
+                <span class="text-[10px] uppercase tracking-tighter">Portfolio Selection</span>
+            </div>
+        </div>
+
+        <div class="absolute top-[15%] left-0 w-full h-[1px] bg-black opacity-5 pointer-events-none"></div>
+        <div class="absolute top-0 left-[58%] w-[1px] h-full bg-black opacity-5 pointer-events-none"></div>
+
+    </div>
+
+</body>
+</html>

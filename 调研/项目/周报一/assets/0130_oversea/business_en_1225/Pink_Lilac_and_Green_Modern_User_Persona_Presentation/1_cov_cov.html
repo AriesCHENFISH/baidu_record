@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Persona - Minimalist Cover</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        /* CSS Reset & Basic Setup */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FFFFFF;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 装饰性背景圆球 */
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: 0;
+            opacity: 0.4;
+        }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#000000',
+                        secondary: '#666666',
+                        accentGreen: '#326B54',
+                        accentLavender: '#E8D5EB',
+                        bgGray: '#F2F2F2',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans SC', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="flex items-center justify-center min-h-screen">
+
+    <div id="page_container" class="font-sans">
+        
+        <div class="blob bg-accentLavender w-[500px] h-[500px] -top-48 -left-24"></div>
+        <div class="blob bg-accentGreen w-[400px] h-[400px] -bottom-24 -right-24 opacity-20"></div>
+
+        <header class="w-full flex justify-between items-center p-12 z-10">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white">
+                    <i class="fa-solid fa-asterisk"></i>
+                </div>
+                <p class="text-sm font-bold tracking-widest uppercase">Design System v1.0</p>
+            </div>
+            <div class="text-secondary text-sm font-medium">2025-2030 Portfolio</div>
+        </header>
+
+        <main class="flex-1 flex flex-col items-center justify-center text-center px-20 z-10 relative">
+            
+            <div class="w-12 h-1 bg-accentGreen mb-10"></div>
+
+            <h1 class="text-[120px] font-bold text-primary tracking-tighter leading-none mb-6">
+                User Persona
+            </h1>
+
+            <p class="text-2xl text-secondary max-w-2xl font-light tracking-wide leading-relaxed">
+                A comprehensive analysis of digital learning behaviors, <br>
+                shaping the future of educational interface design.
+            </p>
+
+            <div class="mt-12 flex items-center justify-center gap-4">
+                <span class="px-6 py-2 rounded-full border border-gray-200 text-sm font-bold uppercase tracking-widest text-primary">Research</span>
+                <span class="px-6 py-2 rounded-full bg-accentLavender text-sm font-bold uppercase tracking-widest text-primary">Case Study</span>
+                <span class="px-6 py-2 rounded-full bg-accentGreen text-white text-sm font-bold uppercase tracking-widest flex items-center gap-2 shadow-lg">
+                    <i class="fa-regular fa-clock"></i>
+                    Dec 2025
+                </span>
+            </div>
+        </main>
+
+        <footer class="w-full p-12 flex justify-between items-end z-10">
+            <div class="flex flex-col gap-1">
+                <p class="text-xs font-bold text-secondary uppercase tracking-tighter">Prepared by</p>
+                <p class="text-lg font-bold text-primary">Curriculum Development Team</p>
+            </div>
+            
+            <div class="flex gap-4">
+                <div class="w-12 h-12 rounded-full border border-gray-100 flex items-center justify-center hover:bg-bgGray transition-colors cursor-pointer">
+                    <i class="fa-solid fa-arrow-down"></i>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>

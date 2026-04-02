@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Good Food Hygiene - Redesign</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .font-main { font-family: 'Noto Sans SC', sans-serif; }
+        ::-webkit-scrollbar { display: none; }
+        .img-cover { width: 100%; height: 100%; object-fit: cover; }
+        
+        /* Glassmorphism & Card Styles */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+        
+        .step-card {
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+        .step-card:hover {
+            background: white;
+            border-left: 3px solid #71B7C5;
+            box-shadow: 0 10px 15px -3px rgba(113, 183, 197, 0.15);
+            transform: translateX(5px);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Container: 1280x720 Fixed -->
+    <div id="page_container" class="relative w-[1280px] h-[720px] bg-[#F3F5F7] mx-auto overflow-hidden font-main text-[#2D3236] flex items-center px-16 py-12">
+        
+        <!-- Background Decorations (Fluid/Organic for Water/Hygiene Theme) -->
+        <div class="absolute top-[-20%] left-[20%] w-[600px] h-[600px] bg-[#EAECEE] opacity-70 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-[#71B7C5] opacity-10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <!-- Main Grid: 7 (Content) : 5 (Visual) -->
+        <div class="grid grid-cols-12 gap-16 w-full h-full z-10">
+            
+            <!-- Left Column: Content (7 Cols) -->
+            <div class="col-span-7 flex flex-col justify-center h-full relative">
+                
+                <!-- Tag -->
+                <div class="flex items-center gap-2 mb-4 opacity-60">
+                    <i class="fa-solid fa-carrot text-[#71B7C5]"></i>
+                    <span class="text-xs font-bold tracking-widest uppercase">Food Safety</span>
+                </div>
+
+                <!-- Title -->
+                <h1 class="text-5xl font-bold leading-tight mb-6 text-[#2D3236]">
+                    Practice Good <br>
+                    <span class="text-[#71B7C5]">Food Hygiene</span>
+                </h1>
+
+                <!-- Intro Text -->
+                <p class="text-base text-gray-600 leading-relaxed mb-8 pr-8">
+                    Proper food handling is the first line of defense against foodborne illnesses. From washing produce to cooking temperatures, small steps make a big difference in health.
+                </p>
+
+                <!-- 4 Pillars Grid (Structured Content) -->
+                <div class="grid grid-cols-2 gap-4 mb-8">
+                    <!-- Step 1 -->
+                    <div class="step-card glass-panel p-4 rounded-xl flex items-start gap-3">
+                        <div class="text-[#71B7C5] text-xl mt-1"><i class="fa-solid fa-hands-bubbles"></i></div>
+                        <div>
+                            <h3 class="font-bold text-sm text-[#2D3236]">Clean</h3>
+                            <p class="text-sm text-gray-500 mt-1">Wash hands and surfaces often. Rinse fruits and veggies.</p>
+                        </div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="step-card glass-panel p-4 rounded-xl flex items-start gap-3">
+                        <div class="text-[#71B7C5] text-xl mt-1"><i class="fa-solid fa-arrows-split-up-and-left"></i></div>
+                        <div>
+                            <h3 class="font-bold text-sm text-[#2D3236]">Separate</h3>
+                            <p class="text-sm text-gray-500 mt-1">Don't cross-contaminate. Keep raw meat apart from other foods.</p>
+                        </div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="step-card glass-panel p-4 rounded-xl flex items-start gap-3">
+                        <div class="text-[#71B7C5] text-xl mt-1"><i class="fa-solid fa-temperature-arrow-up"></i></div>
+                        <div>
+                            <h3 class="font-bold text-sm text-[#2D3236]">Cook</h3>
+                            <p class="text-sm text-gray-500 mt-1">Cook to the right temperature to kill harmful bacteria.</p>
+                        </div>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="step-card glass-panel p-4 rounded-xl flex items-start gap-3">
+                        <div class="text-[#71B7C5] text-xl mt-1"><i class="fa-solid fa-snowflake"></i></div>
+                        <div>
+                            <h3 class="font-bold text-sm text-[#2D3236]">Chill</h3>
+                            <p class="text-sm text-gray-500 mt-1">Refrigerate promptly. Bacteria grows fast at room temp.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Alert/Tip -->
+                <div class="flex items-center gap-4 border-l-4 border-[#2D3236] pl-4 py-1">
+                    <div class="text-2xl text-[#2D3236]"><i class="fa-solid fa-circle-exclamation"></i></div>
+                    <p class="text-sm font-medium text-gray-700 italic">
+                        "When in doubt, throw it out." — Don't risk eating spoiled food.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Right Column: Visuals (5 Cols) -->
+            <div class="col-span-5 relative h-full flex items-center justify-center pl-6">
+                
+                <!-- Composition Container -->
+                <div class="relative w-full h-[90%]">
+                    
+                    <!-- Decorative Circle behind -->
+                    <div class="absolute top-10 right-10 w-40 h-40 bg-[#71B7C5] rounded-full opacity-20 blur-xl"></div>
+
+                    <!-- Main Image (Tall Pill Shape) -->
+                    <div class="absolute inset-0 rounded-[80px] rounded-br-none overflow-hidden shadow-2xl border-[6px] border-white z-10">
+                        <img src="https://images.unsplash.com/photo-1510627489930-0c1b0dc58e85?q=80&w=2070&auto=format&fit=crop" alt="Washing Vegetables" class="img-cover transform scale-110">
+                        <!-- Subtle Gradient Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    </div>
+
+                    <!-- Floating Card: Storage Tip -->
+                    <div class="absolute -bottom-6 -left-12 z-20 w-64 glass-panel p-5 rounded-2xl shadow-lg animate-bounce" style="animation-duration: 4s;">
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="text-xs font-bold text-[#71B7C5] uppercase">Storage Tip</span>
+                            <i class="fa-solid fa-box-open text-gray-400"></i>
+                        </div>
+                        <p class="text-sm font-bold text-[#2D3236] leading-snug">
+                            Store food properly to maintain freshness and prevent spoilage.
+                        </p>
+                    </div>
+
+                    <!-- Floating Badge: Temperature -->
+                    <div class="absolute top-12 -right-6 z-20 w-16 h-16 bg-[#2D3236] rounded-full flex flex-col items-center justify-center text-white shadow-lg border-2 border-white">
+                        <i class="fa-solid fa-temperature-full text-[#71B7C5] text-sm mb-1"></i>
+                        <span class="text-[10px] font-bold">Safe</span>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Logo Watermark -->
+        <div class="absolute top-8 right-8 text-[#2D3236] opacity-10 font-bold text-xl tracking-widest">
+            FAUGET.
+        </div>
+
+    </div>
+
+</body>
+</html>

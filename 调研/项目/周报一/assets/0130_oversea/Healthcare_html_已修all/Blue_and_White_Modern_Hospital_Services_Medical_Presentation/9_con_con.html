@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, initial-scale=1.0">
+    <title>Service Distribution - Borcelle Hospital</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FFFFFF;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        h1, h2, h3 { font-family: 'Noto Sans SC', sans-serif; }
+        .chart-container {
+            width: 100%;
+            height: 400px;
+        }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4361B8',
+                        secondary: '#2D4594',
+                        darkText: '#000000',
+                        bodyText: '#1A1A1A',
+                        containerBg: '#EFF6FC',
+                        accentRed: '#C83E48',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div id="page_container">
+        <header class="flex justify-between items-center px-16 pt-10 pb-6">
+            <div class="flex items-center gap-4">
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-primary/20 rounded-xl rotate-6 group-hover:rotate-12 transition-transform"></div>
+                    <div class="relative w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center text-white shadow-lg">
+                        <i class="fa-solid fa-house-medical text-2xl"></i>
+                        <div class="absolute -top-1 -right-1 w-5 h-5 bg-accentRed rounded-full border-2 border-white flex items-center justify-center">
+                            <i class="fa-solid fa-plus text-[10px]"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-black text-darkText tracking-tight uppercase leading-none">Borcelle</h2>
+                    <p class="text-[12px] text-primary font-bold tracking-[0.2em] uppercase mt-1">Medical Hospital</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-6">
+                <div class="flex flex-col items-center px-4 border-r border-gray-100">
+                    <i class="fa-solid fa-shield-halved text-primary text-xl mb-1"></i>
+                    <span class="text-[11px] font-bold text-gray-400 uppercase tracking-widest">Professional</span>
+                </div>
+                <div class="flex flex-col items-center px-4 border-r border-gray-100">
+                    <i class="fa-solid fa-microscope text-primary text-xl mb-1"></i>
+                    <span class="text-[11px] font-bold text-gray-400 uppercase tracking-widest">Advanced</span>
+                </div>
+                <div class="flex flex-col items-center px-4">
+                    <i class="fa-solid fa-hand-holding-heart text-primary text-xl mb-1"></i>
+                    <span class="text-[11px] font-bold text-gray-400 uppercase tracking-widest">Compassionate</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="px-16 mt-4 flex-1">
+            <div class="grid grid-cols-12 gap-12 mb-8 items-end">
+                <div class="col-span-5">
+                    <h1 class="text-6xl font-bold text-primary leading-tight">
+                        Medical <br>
+                        <span class="text-darkText">Services</span>
+                    </h1>
+                </div>
+                <div class="col-span-7 pb-2">
+                    <p class="text-bodyText text-gl leading-relaxed text-justify border-l-4 border-primary/20 pl-6">
+                        An overview of departmental resource allocation and patient distribution. This data reflects our commitment to balancing specialized care with general health maintenance.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-12 gap-8 items-center bg-containerBg/50 rounded-[40px] p-8 border border-white shadow-inner">
+                <div class="col-span-7">
+                    <div id="rose_chart" class="chart-container"></div>
+                </div>
+
+                <div class="col-span-5 space-y-6">
+                    <div class="bg-white p-6 rounded-3xl shadow-sm border border-primary/10">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-secondary italic">Key Insights</h3>
+                        </div>
+                        <p class="text-sm text-bodyText leading-relaxed">
+                            Our <span class="font-bold text-primary">Cardiology</span> and <span class="font-bold text-primary">Pediatrics</span> departments currently represent the highest patient volume, accounting for 45% of total hospital resources.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-primary text-white p-5 rounded-3xl">
+                            <span class="text-[10px] uppercase tracking-widest opacity-80">Peak Efficiency</span>
+                            <div class="text-2xl font-bold mt-1">94.2%</div>
+                        </div>
+                        <div class="bg-secondary text-white p-5 rounded-3xl">
+                            <span class="text-[10px] uppercase tracking-widest opacity-80">Patient Trust</span>
+                            <div class="text-2xl font-bold mt-1">4.9/5.0</div>
+                        </div>
+                    </div>
+
+                    <p class="text-xs text-gray-400 px-2 italic">
+                        * Statistical data based on Q4 2025 performance reports.
+                    </p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="h-12 bg-gradient-to-r from-primary via-secondary to-primary mt-auto"></footer>
+    </div>
+
+    <script>
+        // 初始化 ECharts
+        const chartDom = document.getElementById('rose_chart');
+        const myChart = echarts.init(chartDom);
+        const option = {
+            tooltip: {
+                trigger: 'item',
+                formatter: '{b} : {d}%'
+            },
+            legend: {
+                left: 'center',
+                top: 'bottom',
+                padding: [20, 0, 0, 0],
+                textStyle: { color: '#1A1A1A', fontWeight: 'bold' }
+            },
+            series: [
+                {
+                    name: 'Service Area',
+                    type: 'pie',
+                    radius: [30, 140],
+                    center: ['50%', '45%'],
+                    roseType: 'area', // 错落效果的核心
+                    itemStyle: {
+                        borderRadius: 12
+                    },
+                    data: [
+                        { value: 40, name: 'Cardiology', itemStyle: { color: '#4361B8' } },
+                        { value: 32, name: 'Pediatrics', itemStyle: { color: '#2D4594' } },
+                        { value: 28, name: 'Neurology', itemStyle: { color: '#5C7BD9' } },
+                        { value: 24, name: 'Surgery', itemStyle: { color: '#7B96E8' } },
+                        { value: 18, name: 'Radiology', itemStyle: { color: '#A5B9F2' } },
+                        { value: 15, name: 'Check-ups', itemStyle: { color: '#C83E48' } }
+                    ],
+                    label: {
+                        show: true,
+                        formatter: '{b}',
+                        fontSize: 12,
+                        fontWeight: 'bold'
+                    },
+                    emphasis: {
+                        label: {
+                            show: true,
+                            fontSize: 14,
+                            fontWeight: 'bold'
+                        }
+                    }
+                }
+            ]
+        };
+
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

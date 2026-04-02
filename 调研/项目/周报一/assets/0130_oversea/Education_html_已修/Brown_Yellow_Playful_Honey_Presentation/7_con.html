@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liceria & Co. - Our Portfolio</title>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', 'Noto Sans SC', sans-serif; }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #2E1A16;
+            overflow: hidden;
+        }
+
+        .font-serif-display { font-family: 'Playfair Display', serif; }
+
+        /* --- 统一导航设计 --- */
+        .single-nav-tag {
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #F8C854;
+            position: relative;
+            padding-bottom: 4px;
+        }
+        .single-nav-tag::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 1px;
+            background: rgba(248, 200, 84, 0.5);
+        }
+        .glass-action {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(248, 200, 84, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        /* --- 新的文本框设计 --- */
+        .info-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(248, 200, 84, 0.1);
+            border-radius: 24px;
+            padding: 2rem;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            height: 220px;
+        }
+        .info-card:hover {
+            background: rgba(248, 200, 84, 0.08);
+            border-color: rgba(248, 200, 84, 0.4);
+            transform: translateY(-10px);
+        }
+
+        /* 标题镂空 */
+        .text-outline {
+            color: transparent;
+            -webkit-text-stroke: 1.5px #F8C854;
+            letter-spacing: -2px;
+        }
+
+        /* 蜂蜜滴落装饰 */
+        .honey-drip-container {
+            position: absolute;
+            top: 0;
+            right: 80px;
+            display: flex;
+            gap: 15px;
+            z-index: 10;
+        }
+        .honey-drop {
+            background-color: #F8C854;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+            width: 50px;
+            box-shadow: inset -5px -5px 15px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <header class="absolute top-0 left-0 w-full px-16 py-10 flex justify-between items-center z-50">
+            <div class="flex items-center space-x-3 text-white">
+                <i class="fa-solid fa-crown text-[#F8C854] text-sm"></i>
+                <span class="font-serif-display text-lg tracking-[0.2em]">LICERIA</span>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <span class="single-nav-tag">Explore Collection</span>
+                <span class="text-[10px] opacity-40 mt-1 font-light tracking-[0.1em] text-white">EST. 1992</span>
+            </div>
+
+            <div class="glass-action px-5 py-2 rounded-lg flex items-center space-x-4 cursor-pointer text-white">
+                <span class="text-[0.65rem] font-bold tracking-widest opacity-80 uppercase">Member Access</span>
+                <div class="w-6 h-6 bg-[#F8C854] rounded flex items-center justify-center">
+                    <i class="fa-solid fa-arrow-right text-[#2E1A16] text-[10px]"></i>
+                </div>
+            </div>
+        </header>
+
+        <div class="honey-drip-container">
+            <div class="honey-drop h-40"></div>
+            <div class="honey-drop h-24"></div>
+        </div>
+
+        <div class="relative h-full flex flex-col justify-end px-16 pb-12">
+            
+            <div class="flex items-center gap-16 mb-12">
+                <div class="w-1/2 h-72 rounded-[40px] overflow-hidden shadow-2xl border border-white/10">
+                    <img src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=1000&q=80" 
+                         class="w-full h-full object-cover" alt="Honey Portfolio">
+                </div>
+                
+                <div class="w-1/2">
+                    <div class="w-12 h-1 bg-[#F8C854] mb-6"></div>
+                    <h1 class="font-serif-display text-8xl leading-none text-outline">
+                        Our <br> Portfolio
+                    </h1>
+                    <p class="text-white/60 text-sm mt-6 max-w-sm leading-relaxed">
+                        A curated selection of our finest seasonal harvests, reflecting the botanical diversity of our protected landscapes.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-3 gap-8">
+                <div class="info-card">
+                    <div class="text-[#F8C854] mb-4 text-xl">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-white text-xl font-bold mb-3">Premium Quality</h3>
+                    <p class="text-white/50 text-xs leading-relaxed">
+                        Every batch undergoes 15 stages of purity testing to ensure the retention of bioactive compounds and natural floral notes.
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <div class="text-[#F8C854] mb-4 text-xl">
+                        <i class="fa-solid fa-jar"></i>
+                    </div>
+                    <h3 class="text-white text-xl font-bold mb-3">Artisanal Harvest</h3>
+                    <p class="text-white/50 text-xs leading-relaxed">
+                        Collected using traditional cold-extraction methods that protect the honey's delicate enzymatic structure and texture.
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <div class="text-[#F8C854] mb-4 text-xl">
+                        <i class="fa-solid fa-earth-americas"></i>
+                    </div>
+                    <h3 class="text-white text-xl font-bold mb-3">Origin Traceability</h3>
+                    <p class="text-white/50 text-xs leading-relaxed">
+                        Full transparency from hive to home. Each jar includes a digital certificate of its geographic origin and floral profile.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-[#F8C854]/5 blur-[100px] rounded-full"></div>
+    </div>
+
+</body>
+</html>

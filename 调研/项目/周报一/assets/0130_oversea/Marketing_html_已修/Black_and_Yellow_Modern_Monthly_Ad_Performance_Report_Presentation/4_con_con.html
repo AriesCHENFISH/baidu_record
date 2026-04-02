@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Channel Performance Dashboard</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container - Fixed 1280x720 */
+        .page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #F2F2F2;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Custom Scrollbar hide */
+        .page_container::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Aesthetic Background Blob */
+        .bg-decoration {
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ffffff, #e6e6e6);
+            opacity: 0.6;
+            filter: blur(60px);
+            z-index: 0;
+        }
+
+        /* Utility for Text Colors based on Palette */
+        .text-primary { color: #000000; }
+        .text-secondary { color: #666666; }
+        .text-accent { color: #5D3B95; }
+        .text-icon { color: #444444; }
+        .border-divider { border-color: #E0E0E0; }
+
+        /* Card Shadow Lift */
+        .glass-card {
+            background-color: #FFFFFF;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page_container">
+        <div class="bg-decoration"></div>
+
+        <div class="relative z-10 w-full h-full flex flex-col px-14 py-10">
+
+            <div class="flex justify-between items-end mb-10 pt-4">
+                <h1 class="text-6xl font-bold tracking-tight text-primary w-2/3 leading-tight">
+                    Channel Performance
+                </h1>
+                <div class="w-1/3 text-right pb-2">
+                    <p class="text-secondary text-base leading-relaxed">
+                        Performance comparison across<br>social, search, and display channels.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-4 gap-6 h-full pb-4">
+
+                <div class="glass-card rounded-3xl p-6 flex flex-col justify-between h-full">
+                    <div class="mb-2 text-center">
+                        <p class="text-xs text-secondary uppercase tracking-widest mb-1">Channel 1</p>
+                        <h2 class="text-xl font-bold text-primary">Social Media Ads</h2>
+                    </div>
+
+                    <div class="flex flex-col gap-1 py-3 border-b border-divider border-solid border-0 border-b-[1px]">
+                        <div class="flex items-center gap-2 text-secondary text-sm mb-1">
+                            <i class="fa-solid fa-bullhorn text-icon"></i>
+                            <p>Impressions</p>
+                        </div>
+                        <p class="text-3xl font-bold text-accent tracking-tight">2,000,000</p>
+                    </div>
+
+                    <div class="flex flex-col gap-1 py-3 border-b border-divider border-solid border-0 border-b-[1px]">
+                        <div class="flex items-center gap-2 text-secondary text-sm mb-1">
+                            <i class="fa-regular fa-hand-pointer text-icon"></i>
+                            <p>Clicks</p>
+                        </div>
+                        <p class="text-3xl font-bold text-accent tracking-tight">120,000</p>
+                    </div>
+
+                    <div class="flex flex-col gap-1 pt-3">
+                        <div class="flex items-center gap-2 text-secondary text-sm mb-1">
+                            <i class="fa-solid fa-filter-circle-dollar text-icon"></i>
+                            <p>Conversions</p>
+                        </div>
+                        <p class="text-3xl font-bold text-accent tracking-tight">9,000</p>
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-3xl p-6 flex flex-col justify-between h-full">
+                    <div class="mb-2 text-center">
+                        <p class="text-xs text-secondary uppercase tracking-widest mb-1">Channel 2</p>
+                        <h2 class="text-xl font-bold text-primary">Search Engine Ads</h2>
+                    </div>
+
+                    <div class="flex flex-col gap-1 py-3 border-b border-divider border-solid border-0 border-b-[1px]">
+                        <div class="flex items-center gap-2 text-secondary text-sm mb-1">
+                            <i class="fa-solid fa-bullhorn text-icon"></i>
+                            <p>Impressions</p>
+                        </div>
+                        <p class="text-3xl font-bold text-accent tracking-tight">1,800,000</p>
+                    </div>
+
+                    <div class="flex flex-col gap-1 py-3 border-b border-divider border-solid border-0 border-b-[1px]">
+                        <div class="flex items-center gap-2 text-secondary text-sm mb-1">
+                            <i class="fa-regular fa-hand-pointer text-icon"></i>
+                            <p>Clicks</p>
+                        </div>
+                        <p class="text-3xl font-bold text-accent tracking-tight">130,000</p>
+                    </div>
+
+                    <div class="flex flex-col gap-1 pt-3">
+                        <div class="flex items-center gap-2 text-secondary text-sm mb-1">
+                            <i class="fa-solid fa-filter-circle-dollar text-icon"></i>
+                            <p>Conversions</p>
+                        </div>
+                        <p class="text-3xl font-bold text-accent tracking-tight">12,000</p>
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-3xl p-6 flex flex-col justify-between h-full">
+                    <div class="mb-2 text-center">
+                        <p class="text-xs text-secondary uppercase tracking-widest mb-1">Channel 3</p>
+                        <h2 class="text-xl font-bold text-primary">Display Ads</h2>
+                    </div>
+
+                    <div class="flex flex-col gap-1 py-3 border-b border-divider border-solid border-0 border-b-[1px]">
+                        <div class="flex items-center gap-2 text-secondary text-sm mb-1">
+                            <i class="fa-solid fa-bullhorn text-icon"></i>
+                            <p>Impressions</p>
+                        </div>
+                        <p class="text-3xl font-bold text-accent tracking-tight">1,200,000</p>
+                    </div>
+
+                    <div class="flex flex-col gap-1 py-3 border-b border-divider border-solid border-0 border-b-[1px]">
+                        <div class="flex items-center gap-2 text-secondary text-sm mb-1">
+                            <i class="fa-regular fa-hand-pointer text-icon"></i>
+                            <p>Clicks</p>
+                        </div>
+                        <p class="text-3xl font-bold text-accent tracking-tight">50,000</p>
+                    </div>
+
+                    <div class="flex flex-col gap-1 pt-3">
+                        <div class="flex items-center gap-2 text-secondary text-sm mb-1">
+                            <i class="fa-solid fa-filter-circle-dollar text-icon"></i>
+                            <p>Conversions</p>
+                        </div>
+                        <p class="text-3xl font-bold text-accent tracking-tight">4,000</p>
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-3xl p-6 flex flex-col justify-between h-full">
+                    <div class="mb-2 text-center">
+                        <p class="text-xs text-secondary uppercase tracking-widest mb-1">Channel 4</p>
+                        <h2 class="text-xl font-bold text-primary">Other Channels</h2>
+                    </div>
+
+                    <div class="flex flex-col gap-1 py-3 border-b border-divider border-solid border-0 border-b-[1px]">
+                        <div class="flex items-center gap-2 text-secondary text-sm mb-1">
+                            <i class="fa-solid fa-bullhorn text-icon"></i>
+                            <p>Impressions</p>
+                        </div>
+                        <p class="text-2xl font-bold text-accent tracking-tight opacity-70">Not Applicable</p>
+                    </div>
+
+                    <div class="flex flex-col gap-1 py-3 border-b border-divider border-solid border-0 border-b-[1px]">
+                        <div class="flex items-center gap-2 text-secondary text-sm mb-1">
+                            <i class="fa-regular fa-hand-pointer text-icon"></i>
+                            <p>Clicks</p>
+                        </div>
+                        <p class="text-2xl font-bold text-accent tracking-tight opacity-70">Not Applicable</p>
+                    </div>
+
+                    <div class="flex flex-col gap-1 pt-3">
+                        <div class="flex items-center gap-2 text-secondary text-sm mb-1">
+                            <i class="fa-solid fa-filter-circle-dollar text-icon"></i>
+                            <p>Conversions</p>
+                        </div>
+                        <p class="text-2xl font-bold text-accent tracking-tight opacity-70">Not Applicable</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

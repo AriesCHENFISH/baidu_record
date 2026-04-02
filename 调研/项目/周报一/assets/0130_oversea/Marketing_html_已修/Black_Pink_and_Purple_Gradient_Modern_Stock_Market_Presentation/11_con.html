@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Basics of Stock Markets - Keynote</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    
+    <style>
+        /* CSS Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container - Fixed Dimensions 1280x720 */
+        .page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto; /* Centered */
+            position: relative;
+            background-color: #0F1115; /* Main Background */
+            overflow: hidden;
+        }
+
+        /* Gradient Definitions */
+        .brand-gradient-bg {
+            background: linear-gradient(90deg, #E56B6F 0%, #9D4EDD 100%);
+        }
+        
+        .brand-gradient-text {
+            background: linear-gradient(90deg, #E56B6F 0%, #9D4EDD 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Custom Scrollbar hide */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* --- 顶部导航样式 (保持统一) --- */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            position: relative;
+            display: block;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: #FFFFFF;
+        }
+
+        /* 选中状态的小圆点 */
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 4px;
+            background-color: #E56B6F;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #E56B6F;
+        }
+
+        .icon-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.8);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .icon-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page_container">
+        
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.1; background-image: url('https://images.unsplash.com/photo-1611974765212-246f787480e8?q=80&w=1280&auto=format&fit=crop'); background-size: cover; pointer-events: none; z-index: 0;"></div>
+
+        <div style="position: absolute; bottom: -100px; left: -100px; width: 600px; height: 500px; background: linear-gradient(45deg, #E56B6F, #9D4EDD); filter: blur(120px); opacity: 0.25; z-index: 1; border-radius: 50%;"></div>
+
+        <header style="position: relative; z-index: 20; padding: 32px 60px; display: flex; justify-content: space-between; align-items: center;">
+            <div class="brand-gradient-bg" style="padding: 10px 30px; border-radius: 50px;">
+                <span style="color: #FFFFFF; font-weight: 500; font-size: 16px;">Thynk Unlimited</span>
+            </div>
+
+            <div style="display: flex; gap: 16px; align-items: center;">
+                <nav class="glass-panel" style="display: flex; gap: 32px; border-radius: 50px; padding: 10px 36px; align-items: center; height: 48px;">
+                    <a href="#" class="nav-link active">HOME</a>
+                    <a href="#" class="nav-link">SERVICE</a>
+                    <a href="#" class="nav-link">CONTACT</a>
+                </nav>
+                <div class="glass-panel" style="display: flex; gap: 8px; border-radius: 50px; padding: 6px; height: 48px; align-items: center;">
+                    <div class="icon-btn">
+                        <i class="fa-solid fa-magnifying-glass" style="font-size: 14px;"></i>
+                    </div>
+                    <div class="icon-btn" style="background: rgba(255,255,255,0.1);">
+                        <i class="fa-regular fa-user" style="font-size: 14px;"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="relative z-10 grid grid-cols-12 gap-12 px-16 mt-4 h-full">
+            
+            <div class="col-span-5 flex flex-col justify-start">
+                
+                <h1 class="text-white text-6xl font-bold leading-tight mb-6">
+                    The Basics of <br>
+                    <span class="brand-gradient-text">Stock Markets</span>
+                </h1>
+
+                <p class="text-[#A0A5B0] text-sm leading-relaxed mb-8 pr-4">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                </p>
+
+                <div style="background-color: #2A2E35; padding: 6px;" class="rounded-2xl shadow-2xl w-full">
+                    <div class="rounded-xl overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=800&auto=format&fit=crop" alt="Stock Trading Mobile" class="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity duration-300" style="height: 220px;">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-span-7 flex flex-col justify-start pl-8 pt-4">
+                
+                <div class="flex flex-col gap-10">
+                    
+                    <div class="flex items-start gap-6 group">
+                        <div class="brand-gradient-bg w-16 h-10 rounded-r-full rounded-tl-full flex items-center justify-center shrink-0 shadow-lg mt-1">
+                            <h5 class="text-white font-bold text-lg">01.</h5>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <h3 class="text-white text-2xl font-bold">Investors</h3>
+                            <p class="text-[#A0A5B0] text-sm leading-relaxed">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-6 group">
+                        <div class="brand-gradient-bg w-16 h-10 rounded-r-full rounded-tl-full flex items-center justify-center shrink-0 shadow-lg mt-1">
+                            <h5 class="text-white font-bold text-lg">02.</h5>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <h3 class="text-white text-2xl font-bold">Companies</h3>
+                            <p class="text-[#A0A5B0] text-sm leading-relaxed">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-6 group">
+                        <div class="brand-gradient-bg w-16 h-10 rounded-r-full rounded-tl-full flex items-center justify-center shrink-0 shadow-lg mt-1">
+                            <h5 class="text-white font-bold text-lg">03.</h5>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <h3 class="text-white text-2xl font-bold">Brokers</h3>
+                            <p class="text-[#A0A5B0] text-sm leading-relaxed">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-6 group">
+                        <div class="brand-gradient-bg w-16 h-10 rounded-r-full rounded-tl-full flex items-center justify-center shrink-0 shadow-lg mt-1">
+                            <h5 class="text-white font-bold text-lg">04.</h5>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <h3 class="text-white text-2xl font-bold">Brokers</h3>
+                            <p class="text-[#A0A5B0] text-sm leading-relaxed">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="absolute bottom-10 right-0 grid grid-cols-3 gap-2 opacity-60">
+                    <div class="w-1.5 h-1.5 rounded-full bg-[#D65A63]"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-[#A0A5B0]"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-[#A0A5B0]"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-[#A0A5B0]"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-[#D65A63]"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-[#A0A5B0]"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-[#A0A5B0]"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-[#A0A5B0]"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-[#D65A63]"></div>
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic Section - Presentation Slide</title>
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+
+    <!-- Google Fonts (Domestic Mirror as requested) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- ECharts Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+
+    <!-- Tailwind Configuration for Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryBg: '#151B22',      // Deep Card Background
+                        globalBackdrop: '#6E777D', // Outer Canvas Background
+                        textWhite: '#FFFFFF',      // Primary Text
+                        textGray: '#C9D1D9',       // Secondary Text
+                        tabInactive: '#4C555C',    // Inactive Tabs
+                        organicOverlay: '#0F151A', // Shadows
+                        accentGreen: '#4A6F52',    // Accent Color
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Basic Setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Enforce Grid/Flex Layouts */
+        .page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #6E777D; /* Global Backdrop */
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Custom Scrollbar hide */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Tab Shape Styling - Modern "Folder" metaphor */
+        .tab-shape {
+            border-radius: 12px 12px 0 0;
+            position: relative;
+            z-index: 5;
+            transition: all 0.3s ease;
+        }
+        
+        /* Specific Tab Overlap Hack */
+        .tab-connector {
+            position: absolute;
+            bottom: -1px; /* Cover the border/gap */
+            height: 2px;
+            width: 100%;
+            background-color: #151B22;
+            z-index: 20;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Page Container -->
+    <div class="page_container">
+
+        <!-- Top Navigation / Tab Area -->
+        <!-- Logic: Recreating the folder tabs from the original image but with modern aesthetics -->
+        <div class="w-[90%] flex justify-end items-end h-[50px] relative z-0 pr-8">
+            <!-- Tab 1: Brand Name -->
+            <div class="tab-shape bg-tabInactive h-[40px] px-8 flex items-center justify-center mr-[-10px] shadow-lg">
+                <p class="text-textGray text-sm font-medium tracking-wide">
+                    <i class="fa-solid fa-layer-group mr-2 text-xs"></i> Giggling Platypus Co.
+                </p>
+            </div>
+            
+            <!-- Tab 2: Section Name (Active) -->
+            <!-- Higher z-index to sit on top, matches card color -->
+            <div class="tab-shape bg-primaryBg h-[50px] px-10 flex items-center justify-center z-10 shadow-[0_-4px_10px_rgba(0,0,0,0.2)]">
+                <h2 class="text-textWhite text-base font-bold tracking-wider">
+                    Infographic
+                </h2>
+                <!-- Connector to blend tab into body -->
+                <div class="tab-connector"></div>
+            </div>
+        </div>
+
+        <!-- Main Content Card -->
+        <!-- Logic: The main dark area containing text and charts -->
+        <div class="bg-primaryBg w-[95%] h-[82%] rounded-3xl rounded-tr-none shadow-2xl relative z-10 flex flex-col p-12">
+            
+            <!-- Header Section -->
+            <div class="w-full mb-8">
+                <h1 class="text-textWhite text-6xl font-bold leading-tight tracking-tight">
+                    Infographic <br>
+                    <span class="text-accentGreen">Section</span>
+                </h1>
+            </div>
+
+            <!-- Content Grid: Text Left, Chart Right -->
+            <div class="grid grid-cols-12 gap-12 h-full">
+                
+                <!-- Left Column: Text Description -->
+                <div class="col-span-5 flex flex-col justify-start pt-4">
+                    <div class="flex flex-row h-full">
+                        <!-- Decorative Vertical Line -->
+                        <div class="w-[4px] bg-gradient-to-b from-accentGreen to-transparent rounded-full mr-6 h-[90%] opacity-80"></div>
+                        
+                        <!-- Text Content -->
+                        <!-- Logic: 100% logic reduction of the provided text -->
+                        <div class="flex-1">
+                            <p class="text-textGray text-sm leading-7 text-justify font-light opacity-90">
+                                A presentation typically refers to the act of demonstrating or explaining something to an audience. It can take various forms, including lectures, speeches, demonstrations, or discussions, and is commonly used in educational, professional, or business settings to convey information, persuade, or engage an audience. Presentations can cover a wide range of topics, from academic research to business proposals, product demonstrations, or motivational talks. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Data Visualization -->
+                <div class="col-span-7 relative flex flex-col">
+                    
+                    <!-- Chart Legend/Header Area -->
+                    <div class="absolute top-0 right-0 z-20 flex gap-4">
+                        <div class="flex items-center gap-2">
+                            <div class="w-3 h-3 rounded-full bg-[#8fb8d6]"></div>
+                            <span class="text-textGray text-xs">Series 1</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-3 h-3 rounded-full bg-accentGreen"></div>
+                            <span class="text-textGray text-xs">Series 2</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-3 h-3 rounded-full bg-[#1e252b] border border-gray-600"></div>
+                            <span class="text-textGray text-xs">Series 3</span>
+                        </div>
+                    </div>
+
+                    <!-- ECharts Container -->
+                    <!-- Logic: Replacing static image chart with interactive code-based chart -->
+                    <div id="mainChart" class="w-full h-full mt-2"></div>
+
+                </div>
+            </div>
+
+            <!-- Footer / Navigation -->
+            <div class="absolute bottom-8 right-12">
+                <div class="flex items-center gap-2 text-textWhite opacity-80 cursor-pointer">
+                    <span class="text-lg font-medium tracking-wide">Next</span>
+                    <i class="fa-solid fa-arrow-right-long text-accentGreen"></i>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ECharts Configuration Script -->
+    <script type="text/javascript">
+        // Initialize ECharts instance
+        var myChart = echarts.init(document.getElementById('mainChart'));
+
+        // Chart Configuration Object
+        var option = {
+            // No background color in chart to let parent div color show
+            backgroundColor: 'transparent',
+            
+            // Grid layout to match the visual spacing
+            grid: {
+                top: '15%',
+                left: '5%',
+                right: '5%',
+                bottom: '10%',
+                containLabel: true
+            },
+            
+            // Tooltip for detailed info
+            tooltip: {
+                trigger: 'axis',
+                backgroundColor: 'rgba(21, 27, 34, 0.9)',
+                borderColor: '#4A6F52',
+                textStyle: {
+                    color: '#fff'
+                }
+            },
+
+            // X-Axis Configuration (Items)
+            xAxis: {
+                type: 'category',
+                boundaryGap: false, // Line starts at edge
+                data: ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'],
+                axisLine: {
+                    lineStyle: {
+                        color: '#4C555C'
+                    }
+                },
+                axisLabel: {
+                    color: '#C9D1D9',
+                    fontSize: 14,
+                    margin: 20
+                },
+                axisTick: {
+                    show: false
+                }
+            },
+
+            // Y-Axis Configuration (0-50 Scale)
+            yAxis: {
+                type: 'value',
+                min: 0,
+                max: 50,
+                interval: 10,
+                splitLine: {
+                    lineStyle: {
+                        color: '#2d333b', // Subtle grid lines
+                        type: 'solid'
+                    }
+                },
+                axisLabel: {
+                    color: '#C9D1D9',
+                    fontSize: 14
+                }
+            },
+
+            // Data Series Configuration
+            series: [
+                {
+                    name: 'Series 1',
+                    type: 'line',
+                    smooth: false,
+                    symbol: 'circle',
+                    symbolSize: 8,
+                    // Light Blue/Grey tone from image
+                    itemStyle: {
+                        color: '#8fb8d6'
+                    },
+                    lineStyle: {
+                        width: 3
+                    },
+                    data: [0, 12, 38, 30, 32] // Approximated from image
+                },
+                {
+                    name: 'Series 2',
+                    type: 'line',
+                    smooth: false,
+                    symbol: 'circle',
+                    symbolSize: 8,
+                    // Using Accent Green as a modern touch for the middle series
+                    itemStyle: {
+                        color: '#4A6F52'
+                    },
+                    lineStyle: {
+                        width: 3
+                    },
+                    data: [12, 4, 20, 15, 50] // Approximated from image
+                },
+                {
+                    name: 'Series 3',
+                    type: 'line',
+                    smooth: false,
+                    symbol: 'circle',
+                    symbolSize: 8,
+                    // Darker line
+                    itemStyle: {
+                        color: '#1e252b',
+                        borderColor: '#6E777D',
+                        borderWidth: 2
+                    },
+                    lineStyle: {
+                        color: '#1e252b',
+                        width: 3
+                    },
+                    data: [18, 30, 25, 40, 42] // Approximated from image
+                }
+            ]
+        };
+
+        // Apply configuration
+        myChart.setOption(option);
+
+        // Ensure chart resizes if window changes (though fixed size page)
+        window.addEventListener('resize', function() {
+            myChart.resize();
+        });
+    </script>
+
+</body>
+</html>

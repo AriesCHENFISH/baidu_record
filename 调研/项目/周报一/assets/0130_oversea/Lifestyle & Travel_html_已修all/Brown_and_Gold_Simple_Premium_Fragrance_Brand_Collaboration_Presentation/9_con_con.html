@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanover and Tyke - Product Catalogue</title>
+    
+    <!-- Google Fonts (Strictly following the provided CDN link) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <!-- Tailwind Config to match Design System -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4A3520',    // Dark Brown
+                        bg: '#F3F3F3',         // Off-white/Light Gray
+                        card: '#FFFFFF',       // White
+                        accent: '#8B6D51',     // Bronze/Light Brown
+                        textBody: '#5C5248',   // Taupe/Dark Gray
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'soft': '0 20px 40px -10px rgba(74, 53, 32, 0.08)', // High-end diffused shadow
+                        'inner-light': 'inset 0 0 0 1px rgba(255, 255, 255, 0.5)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Basic Setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* Page Container - Fixed Size 1280x720 */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #F3F3F3;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+            /* No external box-shadow as per rules */
+        }
+
+        /* Decorative Background Beam (Light effect) */
+        .ambient-light {
+            position: absolute;
+            top: -100px;
+            left: -100px;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(243,243,243,0) 70%);
+            opacity: 0.6;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Scrollbar hide for cleaner look if content overflows slightly (though grid is fixed) */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Typography refinement */
+        h1, h2, h3 {
+            color: #4A3520;
+        }
+        
+        p {
+            color: #5C5248;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main PPT Slide Container -->
+    <div id="page_container">
+        
+        <!-- Ambient Background Effect -->
+        <div class="ambient-light"></div>
+
+        <!-- Layout Wrapper -->
+        <div class="relative z-10 flex flex-col h-full px-16 py-12">
+
+            <!-- Header Section -->
+            <div class="flex justify-between items-center mb-10">
+                <!-- Main Title -->
+                <h1 class="text-6xl font-bold tracking-tight text-primary">
+                    Product Catalogue
+                </h1>
+
+                <!-- Brand Tag (Top Right) -->
+                <div class="flex items-center gap-3 px-6 py-2 border border-primary rounded-full bg-transparent">
+                    <i class="fa-solid fa-clover text-primary text-lg"></i>
+                    <span class="text-primary font-medium tracking-wide text-sm uppercase">Hanover and Tyke</span>
+                </div>
+            </div>
+
+            <!-- Content Grid: 2 Columns, 2 Rows -->
+            <div class="grid grid-cols-2 gap-x-12 gap-y-8 flex-grow">
+
+                <!-- Card 1: Rose -->
+                <div class="bg-white rounded-[24px] p-4 flex items-center shadow-soft transform transition-transform">
+                    <!-- Image Container -->
+                    <div class="relative w-[180px] h-[180px] rounded-[16px] overflow-hidden flex-shrink-0 bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1595535373192-fc04375b9669?q=80&w=400&auto=format&fit=crop" 
+                             alt="Rose Perfume" 
+                             class="w-full h-full object-cover">
+                        <!-- 400*400 -->
+                    </div>
+                    <!-- Text Content -->
+                    <div class="ml-6 flex-1 pr-4">
+                        <h2 class="text-2xl font-bold mb-3 text-primary">Rose Eau de Perfume</h2>
+                        <p class="text-sm font-light text-textBody">
+                            This fragrance is an indulgence in romance, weaving a symphony of velvety rose petals that dances on the skin.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Daisy -->
+                <div class="bg-white rounded-[24px] p-4 flex items-center shadow-soft transform translate-y-8"> <!-- Slight offset for visual rhythm -->
+                    <!-- Image Container -->
+                    <div class="relative w-[180px] h-[180px] rounded-[16px] overflow-hidden flex-shrink-0 bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?q=80&w=400&auto=format&fit=crop" 
+                             alt="Daisy Perfume Mist" 
+                             class="w-full h-full object-cover">
+                        <!-- 400*400 -->
+                    </div>
+                    <!-- Text Content -->
+                    <div class="ml-6 flex-1 pr-4">
+                        <h2 class="text-2xl font-bold mb-3 text-primary">Daisy Perfume Mist</h2>
+                        <p class="text-sm font-light text-textBody">
+                            This light and refreshing fragrance captures the essence of blooming daisies, creating a sense of carefree bliss.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Lavender -->
+                <div class="bg-white rounded-[24px] p-4 flex items-center shadow-soft">
+                    <!-- Image Container -->
+                    <div class="relative w-[180px] h-[180px] rounded-[16px] overflow-hidden flex-shrink-0 bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1594035910387-fea477942698?q=80&w=400&auto=format&fit=crop" 
+                             alt="Lavender Eau de Toilette" 
+                             class="w-full h-full object-cover">
+                        <!-- 400*400 -->
+                    </div>
+                    <!-- Text Content -->
+                    <div class="ml-6 flex-1 pr-4">
+                        <h2 class="text-2xl font-bold mb-3 text-primary">Lavender Eau de Toilette</h2>
+                        <p class="text-sm font-light text-textBody">
+                            Infused with the calming notes of lavender, this fragrance evokes a sense of peace and relaxation.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 4: Jasmine -->
+                <div class="bg-white rounded-[24px] p-4 flex items-center shadow-soft transform translate-y-8"> <!-- Maintain the offset rhythm -->
+                    <!-- Image Container -->
+                    <div class="relative w-[180px] h-[180px] rounded-[16px] overflow-hidden flex-shrink-0 bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?q=80&w=400&auto=format&fit=crop" 
+                             alt="Jasmine Perfume Oil" 
+                             class="w-full h-full object-cover">
+                        <!-- 400*400 -->
+                    </div>
+                    <!-- Text Content -->
+                    <div class="ml-6 flex-1 pr-4">
+                        <h2 class="text-2xl font-bold mb-3 text-primary">Jasmine Perfume Oil</h2>
+                        <p class="text-sm font-light text-textBody">
+                            This rich and sensual fragrance is a captivating blend of jasmine blossoms, creating an opulent and mysterious allure.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borcelle Hospital - Cover</title>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primaryBg: '#151515', accent: '#DFFE38', textMain: '#FFFFFF' },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .page_container { width: 1280px; height: 720px; background-color: #151515; position: relative; margin: 0 auto; overflow: hidden; display: flex; flex-direction: column; }
+        .glass-header { background: rgba(21, 21, 21, 0.85); backdrop-filter: blur(12px); }
+        /* 核心视觉：空心描边文字 */
+        .title-stroke { -webkit-text-stroke: 2px rgba(223, 254, 56, 0.4); color: transparent; }
+        /* 背景装饰：CSS 绘制的医疗加号网格 */
+        .bg-pattern { background-image: radial-gradient(circle, #333 1px, transparent 1px); background-size: 40px 40px; }
+        .vertical-line { width: 1px; height: 100%; background: linear-gradient(to bottom, transparent, rgba(223, 254, 56, 0.3), transparent); }
+    </style>
+</head>
+<body>
+    <div class="page_container">
+        <!-- 装饰性背景网格 -->
+        <div class="absolute inset-0 bg-pattern opacity-20"></div>
+        <div class="absolute left-1/4 h-full vertical-line"></div>
+        
+        <!-- Unified Header -->
+        <header class="w-full h-24 px-12 flex items-center justify-between z-50 glass-header border-b border-white/10 shrink-0">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center">
+                    <i class="fa-solid fa-plus text-primaryBg text-xl"></i>
+                </div>
+                <h2 class="text-white text-xl font-black tracking-tighter uppercase">Borcelle<span class="text-accent">.</span></h2>
+            </div>
+            <div class="flex items-center gap-8">
+                <span class="text-[10px] text-gray-500 font-mono tracking-widest uppercase">Special Edition / 2024</span>
+                <div class="w-12 h-6 border border-accent/50 rounded-full relative p-1">
+                    <div class="w-4 h-4 bg-accent rounded-full animate-pulse"></div>
+                </div>
+            </div>
+        </header>
+
+        <main class="flex-1 flex flex-col justify-center px-24 relative z-10">
+            <!-- 顶部装饰标语 -->
+            <div class="flex items-center gap-4 mb-8">
+                <span class="text-accent text-xs font-bold uppercase tracking-[0.5em]">Future of Medical Systems</span>
+                <span class="flex-1 h-px bg-white/10"></span>
+            </div>
+
+            <!-- 主标题：极简排版布局 -->
+            <div class="space-y-0">
+                <h1 class="text-white text-[120px] font-black leading-[0.8] uppercase tracking-tighter italic">
+                    Medical<span class="text-accent">.</span>
+                </h1>
+                <h1 class="title-stroke text-[120px] font-black leading-[0.8] uppercase tracking-tighter italic">
+                    Healthcare
+                </h1>
+                <div class="flex items-baseline gap-10">
+                    <h1 class="text-white text-[120px] font-black leading-[0.8] uppercase tracking-tighter italic">
+                        Presentation
+                    </h1>
+                    <!-- 动态箭头装饰 -->
+                    <div class="w-32 h-32 border-4 border-accent rounded-full flex items-center justify-center text-accent text-6xl animate-bounce">
+                        <i class="fa-solid fa-arrow-down-long"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 底部作者/机构信息 -->
+            <div class="mt-20 grid grid-cols-12 gap-12 border-t border-white/10 pt-10">
+                <div class="col-span-4">
+                    <p class="text-accent font-mono text-xs mb-2">PRESENTED BY</p>
+                    <p class="text-white text-lg font-bold tracking-widest uppercase">Dr. Jonathan Borcelle</p>
+                </div>
+                <div class="col-span-4">
+                    <p class="text-accent font-mono text-xs mb-2">DEPARTMENT</p>
+                    <p class="text-gray-400 text-lg font-bold tracking-widest uppercase italic">Clinical Innovation</p>
+                </div>
+                <div class="col-span-4 flex justify-end items-end">
+                    <div class="text-right">
+                        <p class="text-white/20 text-xs font-mono">ESTABLISHED. 2024</p>
+                        <p class="text-white/20 text-xs font-mono">GLOBAL HEALTH SERIES</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- 装饰性角落元素 -->
+        <div class="absolute bottom-10 left-10 text-white/5 text-9xl font-black italic pointer-events-none select-none">
+            PLUS+
+        </div>
+    </div>
+</body>
+</html>

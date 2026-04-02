@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Strategy</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; background-color: #0F1115; position: relative; margin: 0 auto; overflow: hidden; }
+        .brand-gradient { background: linear-gradient(90deg, #E56B6F 0%, #9D4EDD 100%); }
+        .brand-gradient-text { background: linear-gradient(90deg, #E56B6F 0%, #9D4EDD 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .bg-texture { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('https://images.unsplash.com/photo-1611974765270-ca1258634369?q=80&w=1280&auto=format&fit=crop'); background-size: cover; background-position: center; opacity: 0.08; mix-blend-mode: overlay; z-index: 1; }
+        .content-layer { position: relative; z-index: 10; height: 100%; display: flex; flex-direction: column; padding: 40px 60px; }
+        
+        .decor-dots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; position: absolute; top: 200px; right: 40px; z-index: 5; }
+        .dot { width: 6px; height: 6px; border-radius: 50%; background-color: #E56B6F; opacity: 0.6; }
+        .brand-gradient-bg { background: linear-gradient(90deg, #E56B6F 0%, #9D4EDD 100%); }
+        .glass-panel { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); }
+        .nav-link { text-decoration: none; color: rgba(255, 255, 255, 0.7); font-size: 13px; font-weight: 500; letter-spacing: 0.5px; transition: all 0.3s ease; position: relative; display: block; }
+        .nav-link:hover, .nav-link.active { color: #FFFFFF; }
+        .nav-link.active::after { content: ''; position: absolute; bottom: -6px; left: 50%; transform: translateX(-50%); width: 4px; height: 4px; background-color: #E56B6F; border-radius: 50%; box-shadow: 0 0 8px #E56B6F; }
+        .icon-btn { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: rgba(255, 255, 255, 0.8); transition: all 0.3s ease; cursor: pointer; }
+        .icon-btn:hover { background: rgba(255, 255, 255, 0.1); color: #FFFFFF; }
+
+        /* Page Specific */
+        .map-container {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.05);
+            height: 100%;
+        }
+        .map-point {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background-color: #E56B6F;
+            border-radius: 50%;
+            border: 2px solid white;
+            box-shadow: 0 0 15px #E56B6F;
+            z-index: 10;
+        }
+        .region-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+        .region-card:hover {
+            background: rgba(255, 255, 255, 0.06);
+            transform: translateX(5px);
+            border-left: 3px solid #9D4EDD;
+        }
+        .region-icon {
+            min-width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #E56B6F;
+        }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <div class="bg-texture"></div>
+        <div class="decor-dots">
+            <div class="dot" style="opacity: 1;"></div><div class="dot"></div><div class="dot"></div>
+            <div class="dot"></div><div class="dot" style="opacity: 0.4;"></div><div class="dot"></div>
+            <div class="dot"></div><div class="dot"></div><div class="dot" style="opacity: 0.2;"></div>
+        </div>
+
+        <div class="content-layer">
+            <!-- Header -->
+            <header style="position: relative; z-index: 20; padding: 0px 0px 32px 0px; display: flex; justify-content: space-between; align-items: center;">
+                <div class="brand-gradient-bg" style="padding: 10px 30px; border-radius: 50px;">
+                    <span style="color: #FFFFFF; font-weight: 500; font-size: 16px;">Thynk Unlimited</span>
+                </div>
+                <div style="display: flex; gap: 16px; align-items: center;">
+                    <nav class="glass-panel" style="display: flex; gap: 32px; border-radius: 50px; padding: 10px 36px; align-items: center; height: 48px;">
+                        <a href="#" class="nav-link active">HOME</a>
+                        <a href="#" class="nav-link">SERVICE</a>
+                        <a href="#" class="nav-link">CONTACT</a>
+                    </nav>
+                    <div class="glass-panel" style="display: flex; gap: 8px; border-radius: 50px; padding: 6px; height: 48px; align-items: center;">
+                        <div class="icon-btn"><i class="fa-solid fa-magnifying-glass" style="font-size: 14px;"></i></div>
+                        <div class="icon-btn" style="background: rgba(255,255,255,0.1);"><i class="fa-regular fa-user" style="font-size: 14px;"></i></div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="text-center mb-8">
+                <h1 class="text-white text-6xl font-bold tracking-tight mb-2">
+                    Global <span class="brand-gradient-text">Market Strategy</span>
+                </h1>
+                <p class="text-[#A0A5B0] text-lg mt-2 font-light">Targeted approaches for key international regions</p>
+            </div>
+
+            <!-- Main Content Grid -->
+            <div class="flex gap-8 h-full px-8 pb-8">
+                
+                <!-- Left: Map Visual (60%) -->
+                <div class="w-3/5 h-full relative group">
+                    <div class="map-container relative">
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1280&auto=format&fit=crop" 
+                             alt="World Map Tech" 
+                             class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500 group-hover:scale-105 transform">
+                        <div class="absolute inset-0 bg-[#0F1115] opacity-20"></div>
+                        
+                        <!-- Pulse Points -->
+                        <div class="map-point" style="top: 30%; left: 25%;"></div> <!-- US -->
+                        <div class="map-point" style="top: 25%; left: 48%;"></div> <!-- EU -->
+                        <div class="map-point" style="top: 40%; left: 75%;"></div> <!-- Asia -->
+                        
+                        <!-- Overlay Text -->
+                        <div class="absolute bottom-6 left-6 bg-black/60 backdrop-blur-md px-6 py-4 rounded-xl border border-white/10">
+                            <p class="text-white font-bold">Active Markets</p>
+                            <p class="text-[#E56B6F] text-sm">Live Trading Session</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Strategy List (40%) -->
+                <div class="w-2/5 flex flex-col gap-4 justify-center">
+                    
+                    <!-- Card 1 -->
+                    <div class="region-card">
+                        <div class="region-icon"><i class="fa-solid fa-flag-usa"></i></div>
+                        <div>
+                            <h3 class="text-white font-bold text-lg">North America</h3>
+                            <p class="text-[#A0A5B0] text-xs mt-1 leading-relaxed">Focus on high-growth tech equities and sustainable energy sectors. projected yield: 8-12%.</p>
+                            <div class="mt-2 text-[#9D4EDD] text-xs font-semibold">Status: Aggressive Growth</div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="region-card">
+                        <div class="region-icon"><i class="fa-solid fa-euro-sign"></i></div>
+                        <div>
+                            <h3 class="text-white font-bold text-lg">European Union</h3>
+                            <p class="text-[#A0A5B0] text-xs mt-1 leading-relaxed">Stabilizing assets in established markets with a focus on luxury goods and industrials.</p>
+                            <div class="mt-2 text-[#E56B6F] text-xs font-semibold">Status: Defensive Hold</div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="region-card">
+                        <div class="region-icon"><i class="fa-solid fa-yen-sign"></i></div>
+                        <div>
+                            <h3 class="text-white font-bold text-lg">Asia Pacific</h3>
+                            <p class="text-[#A0A5B0] text-xs mt-1 leading-relaxed">Emerging market opportunities in fintech and manufacturing supply chains.</p>
+                            <div class="mt-2 text-[#9D4EDD] text-xs font-semibold">Status: High Volatility</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

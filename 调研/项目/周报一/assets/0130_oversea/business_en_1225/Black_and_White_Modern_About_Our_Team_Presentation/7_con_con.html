@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Achievements - Keynote Slide</title>
+    <!-- Google Fonts & Custom Font per requirements -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- ECharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#000000',
+                        bg: '#EBEFF2',
+                        accent: '#D8F550', // Lime
+                        txt: '#FFFFFF',
+                        secondaryTxt: '#7F8C8D',
+                        chartPink: '#FF69B4',
+                        chartBlue: '#2980B9'
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Structure */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container - Strict 1280x720 */
+        .page-container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #EBEFF2;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /* Padding for internal content */
+            padding: 60px; 
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Typography Utilities */
+        h1 {
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+        
+        p {
+            line-height: 1.6;
+        }
+
+        /* Custom Scrollbar hide */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Decorative Elements */
+        .decoration-corner {
+            position: absolute;
+            top: 60px;
+            right: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div class="page-container">
+
+        <!-- Header Section -->
+        <header class="w-full relative z-10 mb-6">
+            <div class="flex justify-between items-start">
+                <div class="w-2/3">
+                    <h1 class="text-6xl text-primary mb-6 uppercase tracking-tight">Team Achievements</h1>
+                    <p class="text-lg text-gray-600 font-medium max-w-3xl">
+                        Milestones that define us. From concept to completion, our journey is marked by innovation and impact.
+                    </p>
+                </div>
+                
+                <!-- Top Right Decorator (05 & Arrow) -->
+                <div class="flex flex-col items-end">
+                    <span class="text-xl font-bold text-gray-400 mb-2">05</span>
+                    <div class="w-12 h-12 bg-primary flex items-center justify-center text-accent">
+                        <i class="fa-solid fa-arrow-down-left text-xl transform rotate-180"></i> 
+                        <!-- rotated to mimic the arrow in source (pointing bottom right or top left logic) -->
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content: The Black Card -->
+        <div class="flex-grow w-full bg-primary rounded-[30px] p-10 flex items-center justify-between relative shadow-2xl">
+            <!-- Decorative Stripe on Left -->
+            <div class="absolute left-0 top-10 bottom-10 w-2 bg-accent rounded-r-full"></div>
+
+            <!-- Left Side: Chart Area -->
+            <div class="w-7/12 h-full relative" id="achievementChart">
+                <!-- ECharts instance will be rendered here -->
+            </div>
+
+            <!-- Right Side: Textual Data -->
+            <div class="w-5/12 h-full flex flex-col justify-center pl-8 space-y-10 border-l border-gray-800">
+                
+                <!-- 2023 Item (Blue) -->
+                <div class="group">
+                    <div class="flex items-center mb-2">
+                        <div class="w-3 h-3 rounded-full bg-chartBlue mr-3"></div>
+                        <h3 class="text-3xl font-bold text-white">2023</h3>
+                    </div>
+                    <p class="text-gray-400 text-gl group-hover:text-white transition-colors duration-300">
+                        Expanded to 3 new markets, doubling our reach across continents.
+                    </p>
+                </div>
+
+                <!-- 2022 Item (Lime) -->
+                <div class="group">
+                    <div class="flex items-center mb-2">
+                        <div class="w-3 h-3 rounded-full bg-accent mr-3"></div>
+                        <h3 class="text-3xl font-bold text-white">2022</h3>
+                    </div>
+                    <p class="text-gray-400 text-gl group-hover:text-white transition-colors duration-300">
+                        Named "Top Tech Innovator" by Borcelle for groundbreaking algorithms.
+                    </p>
+                </div>
+
+                <!-- 2021 Item (Pink) -->
+                <div class="group">
+                    <div class="flex items-center mb-2">
+                        <div class="w-3 h-3 rounded-full bg-chartPink mr-3"></div>
+                        <h3 class="text-3xl font-bold text-white">2021</h3>
+                    </div>
+                    <p class="text-gray-400 text-gl group-hover:text-white transition-colors duration-300">
+                        Launched Rimberio, now used by 10M+ users globally.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ECharts Logic -->
+    <script type="text/javascript">
+        // Initialize Chart
+        var chartDom = document.getElementById('achievementChart');
+        var myChart = echarts.init(chartDom);
+        var option;
+
+        option = {
+            backgroundColor: 'transparent',
+            grid: {
+                left: '5%',
+                right: '5%',
+                bottom: '10%',
+                top: '15%',
+                containLabel: true
+            },
+            xAxis: {
+                type: 'category',
+                data: ['2021', '2022', '2023'],
+                axisLine: { show: false },
+                axisTick: { show: false },
+                axisLabel: {
+                    color: '#7F8C8D',
+                    fontSize: 16,
+                    fontWeight: 'bold',
+                    margin: 20
+                }
+            },
+            yAxis: {
+                type: 'value',
+                splitLine: {
+                    show: true,
+                    lineStyle: {
+                        color: '#1a1a1a', // Subtle grid lines on black bg
+                        type: 'dashed'
+                    }
+                },
+                axisLabel: { show: false } // Hide Y values for cleaner look
+            },
+            series: [
+                {
+                    data: [
+                        {
+                            value: 45,
+                            itemStyle: {
+                                color: '#FF69B4', // Pink
+                                borderRadius: [8, 8, 0, 0]
+                            },
+                            label: { show: false }
+                        },
+                        {
+                            value: 75,
+                            itemStyle: {
+                                color: '#D8F550', // Lime Accent
+                                borderRadius: [8, 8, 0, 0]
+                            }
+                        },
+                        {
+                            value: 100,
+                            itemStyle: {
+                                color: '#2980B9', // Blue
+                                borderRadius: [8, 8, 0, 0]
+                            }
+                        }
+                    ],
+                    type: 'bar',
+                    barWidth: '40%', // Modern thick bars
+                    showBackground: true,
+                    backgroundStyle: {
+                        color: 'rgba(255, 255, 255, 0.05)', // Faint ghost bar
+                        borderRadius: [8, 8, 0, 0]
+                    },
+                    animationDelay: function (idx) {
+                        return idx * 10;
+                    }
+                }
+            ]
+        };
+
+        option && myChart.setOption(option);
+        
+        // Ensure chart resizes if container context changes slightly (though 1280x720 is fixed)
+        window.addEventListener('resize', myChart.resize);
+    </script>
+</body>
+</html>

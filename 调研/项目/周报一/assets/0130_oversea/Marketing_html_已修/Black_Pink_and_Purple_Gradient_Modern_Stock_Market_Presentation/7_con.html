@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Analysis</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; background-color: #0F1115; position: relative; margin: 0 auto; overflow: hidden; }
+        .brand-gradient { background: linear-gradient(90deg, #E56B6F 0%, #9D4EDD 100%); }
+        .brand-gradient-text { background: linear-gradient(90deg, #E56B6F 0%, #9D4EDD 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .bg-texture { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('https://images.unsplash.com/photo-1611974765270-ca1258634369?q=80&w=1280&auto=format&fit=crop'); background-size: cover; background-position: center; opacity: 0.08; mix-blend-mode: overlay; z-index: 1; }
+        .content-layer { position: relative; z-index: 10; height: 100%; display: flex; flex-direction: column; padding: 40px 60px; }
+        
+        /* Specific Page Elements */
+        .decor-dots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; position: absolute; top: 200px; right: 40px; z-index: 5; }
+        .dot { width: 6px; height: 6px; border-radius: 50%; background-color: #E56B6F; opacity: 0.6; }
+        .brand-gradient-bg { background: linear-gradient(90deg, #E56B6F 0%, #9D4EDD 100%); }
+        .glass-panel { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); }
+        .nav-link { text-decoration: none; color: rgba(255, 255, 255, 0.7); font-size: 13px; font-weight: 500; letter-spacing: 0.5px; transition: all 0.3s ease; position: relative; display: block; }
+        .nav-link:hover, .nav-link.active { color: #FFFFFF; }
+        .nav-link.active::after { content: ''; position: absolute; bottom: -6px; left: 50%; transform: translateX(-50%); width: 4px; height: 4px; background-color: #E56B6F; border-radius: 50%; box-shadow: 0 0 8px #E56B6F; }
+        .icon-btn { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: rgba(255, 255, 255, 0.8); transition: all 0.3s ease; cursor: pointer; }
+        .icon-btn:hover { background: rgba(255, 255, 255, 0.1); color: #FFFFFF; }
+
+        /* Page Specific */
+        .glass-card-large {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 24px;
+            overflow: hidden;
+        }
+        .list-item-icon {
+            min-width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #E56B6F;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <div class="bg-texture"></div>
+        <div class="decor-dots">
+            <div class="dot" style="opacity: 1;"></div><div class="dot"></div><div class="dot"></div>
+            <div class="dot"></div><div class="dot" style="opacity: 0.4;"></div><div class="dot"></div>
+            <div class="dot"></div><div class="dot"></div><div class="dot" style="opacity: 0.2;"></div>
+        </div>
+
+        <div class="content-layer">
+            <!-- Identical Header -->
+            <header style="position: relative; z-index: 20; padding: 0px 0px 32px 0px; display: flex; justify-content: space-between; align-items: center;">
+                <div class="brand-gradient-bg" style="padding: 10px 30px; border-radius: 50px;">
+                    <span style="color: #FFFFFF; font-weight: 500; font-size: 16px;">Thynk Unlimited</span>
+                </div>
+                <div style="display: flex; gap: 16px; align-items: center;">
+                    <nav class="glass-panel" style="display: flex; gap: 32px; border-radius: 50px; padding: 10px 36px; align-items: center; height: 48px;">
+                        <a href="#" class="nav-link active">HOME</a>
+                        <a href="#" class="nav-link">SERVICE</a>
+                        <a href="#" class="nav-link">CONTACT</a>
+                    </nav>
+                    <div class="glass-panel" style="display: flex; gap: 8px; border-radius: 50px; padding: 6px; height: 48px; align-items: center;">
+                        <div class="icon-btn"><i class="fa-solid fa-magnifying-glass" style="font-size: 14px;"></i></div>
+                        <div class="icon-btn" style="background: rgba(255,255,255,0.1);"><i class="fa-regular fa-user" style="font-size: 14px;"></i></div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- New Layout: Split Left/Right -->
+            <div class="flex h-full gap-16 items-center">
+                
+                <!-- Left Column: Text & Bullets -->
+                <div class="w-5/12 flex flex-col justify-center pl-4">
+                    <h1 class="text-white text-5xl font-bold tracking-tight mb-4 leading-tight">
+                        Deep Dive <br>
+                        <span class="brand-gradient-text">Market Insights</span>
+                    </h1>
+                    <p class="text-[#A0A5B0] text-base mb-8 font-light leading-relaxed">
+                        Access real-time data and predictive analytics to stay ahead of the curve. Our tools provide the clarity you need.
+                    </p>
+
+                    <div class="flex flex-col gap-5">
+                        <div class="flex items-center gap-4">
+                            <div class="list-item-icon"><i class="fa-solid fa-chart-line"></i></div>
+                            <div>
+                                <h4 class="text-white text-sm font-medium">Real-time Analytics</h4>
+                                <p class="text-sm text-[#6B7280]">Live updates on global indices</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="list-item-icon"><i class="fa-solid fa-bullseye"></i></div>
+                            <div>
+                                <h4 class="text-white text-sm font-medium">Risk Assessment</h4>
+                                <p class="text-sm text-[#6B7280]">AI-driven volatility predictions</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="list-item-icon"><i class="fa-solid fa-globe"></i></div>
+                            <div>
+                                <h4 class="text-white text-sm font-medium">Global Coverage</h4>
+                                <p class="text-sm text-[#6B7280]">Access to 50+ international markets</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-10">
+                        <button class="brand-gradient text-white px-8 py-3 rounded-full font-medium text-sm hover:shadow-[0_0_20px_rgba(229,107,111,0.4)] transition-shadow">
+                            View Full Report
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Column: Large Glass Visual -->
+                <div class="w-7/12 h-[80%] relative">
+                    <div class="glass-card-large w-full h-full relative p-2">
+                        <img src="https://images.unsplash.com/photo-1642543492481-44e81e3914a7?q=80&w=1000&auto=format&fit=crop" 
+                             alt="Analytics Dashboard" 
+                             class="w-full h-full object-cover rounded-[20px] opacity-80">
+                        
+                        <!-- Floating Data Points -->
+                        <div class="absolute bottom-8 left-8 bg-[#0F1115] p-4 rounded-xl border border-white/10 shadow-2xl flex gap-6">
+                            <div>
+                                <p class="text-[#A0A5B0] text-sm uppercase tracking-wider">Growth</p>
+                                <p class="text-[#E56B6F] font-bold text-xl">+24.5%</p>
+                            </div>
+                            <div class="w-[1px] bg-white/10"></div>
+                            <div>
+                                <p class="text-[#A0A5B0] text-sm uppercase tracking-wider">Volume</p>
+                                <p class="text-white font-bold text-xl">8.2M</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

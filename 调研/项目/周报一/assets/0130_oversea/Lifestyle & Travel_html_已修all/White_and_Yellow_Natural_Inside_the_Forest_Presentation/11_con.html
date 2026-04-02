@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is Forest? - Keynote Slide</title>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts (Strictly using the provided Baidu CDN link) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgPrimary: '#0D110C',
+                        textPrimary: '#F2F2F2',
+                        accent: '#EAD97D',
+                        overlay: '#1A2018',
+                        secondary: '#A6AFA3',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                        serif: ['"Times New Roman"', 'Times', 'serif'], // Fallback for the elegant title
+                    },
+                    boxShadow: {
+                        'glow': '0 0 20px rgba(234, 217, 125, 0.4)',
+                        'card': '0 10px 30px rgba(0, 0, 0, 0.5)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container - Strict 1280x720 */
+        .page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background-color: #0D110C;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Typography Styling for "What is Forest?" */
+        .title-serif {
+            font-family: 'Times New Roman', serif;
+            font-style: italic;
+            line-height: 0.9;
+        }
+        
+        .text-glow {
+            text-shadow: 0 0 25px rgba(234, 217, 125, 0.5);
+        }
+
+        /* Custom Scrollbar hide just in case */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page_container">
+        <!-- Background Layer: Dark Moss/Forest Floor Texture -->
+        <!-- Using a dark overlay div on top of a subtle image to create depth -->
+        <div class="absolute inset-0 z-0 opacity-40">
+            <img src="https://images.unsplash.com/photo-1448375240586-dfd8d395ea6c?q=80&w=1280&auto=format&fit=crop" class="w-full h-full object-cover" alt="Dark forest floor texture">
+            <!-- 1280*720 -->
+        </div>
+        <!-- Gradient Overlay to ensure text readability -->
+        <div class="absolute inset-0 z-0" style="background: linear-gradient(90deg, rgba(13,17,12,0.1), #0D110C 40%, #0D110C);"></div>
+
+        <!-- Main Grid Layout: 12 Columns -->
+        <div class="relative z-10 grid grid-cols-12 h-full w-full">
+
+            <!-- Left Column: Immersive Forest Image (Approx 33% width) -->
+            <div class="col-span-4 h-full relative overflow-hidden shadow-2xl">
+                <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?q=80&w=500&auto=format&fit=crop" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 ease-in-out" alt="Vertical forest sunlight">
+                <!-- 427*720 -->
+                
+                <!-- Inner Shadow Overlay for integration -->
+                <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to right, transparent, rgba(0,0,0,0.3));"></div>
+            </div>
+
+            <!-- Right Content Area (Approx 66% width) -->
+            <div class="col-span-8 flex flex-col justify-between p-12 pl-16">
+
+                <!-- Header: Logo -->
+                <div class="flex justify-end items-center mb-4">
+                    <i class="fa-solid fa-leaf text-accent text-xl mr-3"></i>
+                    <h6 class="text-textPrimary text-sm font-medium tracking-widest uppercase opacity-80">Giggling Platypus Co.</h6>
+                </div>
+
+                <!-- Middle Content: Image + Description -->
+                <div class="flex items-start gap-10 mt-4">
+                    
+                    <!-- Floating Square Image: Looking up at canopy -->
+                    <div class="relative w-64 h-64 flex-shrink-0 shadow-card rounded-sm overflow-hidden border border-[#2a3028]">
+                        <img src="https://images.unsplash.com/photo-1437603568260-1950d3ca6eab?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover opacity-90" alt="Looking up at trees">
+                        <!-- 256*256 -->
+                    </div>
+
+                    <!-- Text Block -->
+                    <div class="flex flex-col justify-center pt-4">
+                        <h2 class="text-textPrimary text-3xl font-light leading-tight mb-6 tracking-wide">
+                            Understanding the Living System <br>
+                            <span class="font-normal text-white">We Call Forest</span>
+                        </h2>
+
+                        <div class="space-y-4">
+                            <p class="text-secondary text-base leading-relaxed font-light">
+                                A forest is a large ecosystem where trees dominate the landscape, providing habitat, regulating climate, and cycling nutrients.
+                            </p>
+                            <p class="text-secondary text-base leading-relaxed font-light border-l-2 border-accent pl-4">
+                                Forests come in tropical, temperate, and boreal forms, each supporting unique wildlife, plants, and environmental roles essential to Earth.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer / Bottom Section: Huge Typography -->
+                <div class="flex items-end justify-between mt-auto mb-2 relative">
+                    
+                    <!-- Play Button Interaction -->
+                    <div class="flex items-center gap-4 group cursor-pointer mb-6">
+                        <div class="w-16 h-16 rounded-full bg-accent flex items-center justify-center shadow-glow transition-all duration-300">
+                            <i class="fa-solid fa-play text-bgPrimary text-2xl ml-1"></i>
+                        </div>
+                        <span class="text-secondary text-sm tracking-wider uppercase group-hover:text-accent transition-colors">Watch Film</span>
+                    </div>
+
+                    <!-- Giant Typography -->
+                    <div class="text-right z-20 absolute bottom-0 right-0 pointer-events-none">
+                        <h1 class="title-serif text-white text-6xl block mb-0 opacity-90 transform translate-y-2">What is</h1>
+                        <h1 class="title-serif text-accent text-[160px] leading-[0.85] text-glow italic pr-2 relative" style="font-weight: 400;">
+                            Forest?
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Decorative Elements -->
+        <!-- Subtle noise texture overlay for film grain effect -->
+        <div class="absolute inset-0 pointer-events-none opacity-5 z-50 mix-blend-overlay" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noise%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noise)%22 opacity=%221%22/%3E%3C/svg%3E');"></div>
+    </div>
+
+</body>
+</html>

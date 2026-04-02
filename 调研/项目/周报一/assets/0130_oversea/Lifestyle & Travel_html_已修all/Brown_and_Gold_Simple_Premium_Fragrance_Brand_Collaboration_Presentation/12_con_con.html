@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Growth of Our User - Hanover and Tyke</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #F3F3F3;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        .soft-shadow {
+            box-shadow: 0 20px 40px -10px rgba(74, 53, 32, 0.1), 
+                        0 10px 20px -5px rgba(74, 53, 32, 0.05);
+        }
+
+        .accent-gradient-bg {
+            background: linear-gradient(135deg, #4A3520, #8B6D51);
+        }
+        
+        ::-webkit-scrollbar { display: none; }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4A3520',
+                        secondary: '#5C5248',
+                        accent: '#8B6D51',
+                        cardBase: '#FFFFFF',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div id="page_container">
+        <div class="absolute top-[-100px] left-[-100px] w-[500px] h-[500px] rounded-full opacity-40 blur-3xl bg-white pointer-events-none"></div>
+        <div class="absolute bottom-[-100px] right-[-100px] w-[600px] h-[600px] rounded-full opacity-20 blur-3xl bg-[#B09276] pointer-events-none"></div>
+
+        <div class="grid grid-cols-12 gap-10 h-full p-16 relative z-10 items-center">
+            
+            <div class="col-span-3 flex flex-col justify-center h-full">
+                <div class="w-16 h-1.5 accent-gradient-bg mb-8 rounded-full"></div>
+                <h1 class="text-[84px] font-bold text-primary leading-[0.95] tracking-tight">
+                    The<br>Growth<br>of Our<br>User
+                </h1>
+                <div class="mt-8 flex items-center gap-3">
+                    <span class="px-3 py-1 bg-primary text-white text-xs font-bold rounded">2026</span>
+                    <p class="text-secondary text-sm font-medium opacity-80 uppercase tracking-widest">Annual Report</p>
+                </div>
+            </div>
+
+            <div class="col-span-5 h-full flex flex-col justify-center">
+                <div class="w-full h-[540px] bg-cardBase rounded-[32px] soft-shadow p-8 flex flex-col">
+                    <div id="growthChart" class="w-full h-full"></div>
+                </div>
+            </div>
+
+            <div class="col-span-4 h-full flex flex-col gap-8 py-4 justify-center pl-4">
+                
+                <div class="flex justify-end mb-2">
+                    <div class="flex items-center gap-3 px-5 py-2 border border-primary/20 rounded-full bg-white/50 backdrop-blur-sm">
+                        <i class="fa-solid fa-clover text-primary text-sm"></i>
+                        <span class="text-primary font-bold tracking-[0.2em] text-[10px] uppercase">Hanover and Tyke</span>
+                    </div>
+                </div>
+
+                <div class="bg-primary p-8 rounded-[24px] soft-shadow text-white relative overflow-hidden group">
+                    <i class="fa-solid fa-seedling absolute -right-4 -bottom-4 text-white/10 text-8xl transform -rotate-12 transition-transform group-hover:scale-110"></i>
+                    
+                    <h3 class="text-xs font-bold tracking-[0.3em] uppercase mb-4 opacity-70">Vision Statement</h3>
+                    <p class="text-[15px] leading-relaxed font-light text-justify relative z-10">
+                        Our perfume community is thriving, with a growing number of enthusiasts embracing our scents. It's heartening to see our fragrances becoming an integral part of daily rituals.
+                    </p>
+                </div>
+
+                <div class="bg-cardBase p-8 rounded-[24px] soft-shadow relative border-l-4 border-accent">
+                    <div class="absolute -top-4 -right-4 w-10 h-10 bg-accent rounded-full flex items-center justify-center text-white text-sm shadow-lg">
+                        <i class="fa-solid fa-quote-right"></i>
+                    </div>
+
+                    <h3 class="text-xs font-bold tracking-[0.3em] text-accent uppercase mb-4">User Experience</h3>
+                    <p class="text-secondary text-[15px] leading-relaxed text-justify italic">
+                        "The increasing love from our users fuels our passion to craft scents that truly resonate with every individual. We're excited to continue weaving aromatic memories together."
+                    </p>
+                    
+                    <div class="mt-4 flex items-center gap-2">
+                        <div class="h-[1px] flex-1 bg-secondary/10"></div>
+                        <span class="text-[10px] text-secondary/40 font-bold tracking-tighter">— GLOBAL COMMUNITY</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var chartDom = document.getElementById('growthChart');
+            var myChart = echarts.init(chartDom);
+            const colorPalette = {
+                series1: '#4A3520', 
+                series2: '#8B6D51', 
+                series3: '#E5D5C5', 
+                text: '#5C5248',
+                grid: '#F0F0F0'
+            };
+
+            var option = {
+                grid: { left: '5%', right: '5%', bottom: '5%', top: '15%', containLabel: true },
+                legend: {
+                    top: '0%',
+                    itemGap: 20,
+                    textStyle: { color: colorPalette.text, fontFamily: 'Noto Sans SC', fontSize: 12 },
+                    icon: 'rect'
+                },
+                xAxis: {
+                    type: 'category',
+                    data: ['Q1', 'Q2', 'Q3', 'Q4'],
+                    axisLine: { show: false },
+                    axisTick: { show: false },
+                    axisLabel: { color: colorPalette.text, margin: 20 }
+                },
+                yAxis: {
+                    type: 'value',
+                    splitLine: { lineStyle: { color: colorPalette.grid, type: 'solid' } },
+                    axisLabel: { color: colorPalette.text }
+                },
+                series: [
+                    {
+                        name: 'New Users',
+                        type: 'bar',
+                        stack: 'total',
+                        barWidth: '45%',
+                        itemStyle: { color: colorPalette.series1 },
+                        data: [120, 150, 180, 230]
+                    },
+                    {
+                        name: 'Loyal Users',
+                        type: 'bar',
+                        stack: 'total',
+                        itemStyle: { color: colorPalette.series2 },
+                        data: [80, 110, 140, 190]
+                    },
+                    {
+                        name: 'Referrals',
+                        type: 'bar',
+                        stack: 'total',
+                        itemStyle: { color: colorPalette.series3, borderRadius: [4, 4, 0, 0] },
+                        data: [40, 60, 80, 100]
+                    }
+                ]
+            };
+            myChart.setOption(option);
+        });
+    </script>
+</body>
+</html>

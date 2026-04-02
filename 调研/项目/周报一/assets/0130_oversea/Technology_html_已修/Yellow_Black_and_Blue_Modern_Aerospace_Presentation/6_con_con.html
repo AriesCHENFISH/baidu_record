@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aerospace Materials Keynote</title>
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#080808',
+                        accent: '#FCE67E',
+                        textMain: '#EDEDED',
+                        subtle: '#333333',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'Inter', 'sans-serif'],
+                        mono: ['Courier New', 'monospace'],
+                    },
+                    backgroundImage: {
+                        'metal-gradient': 'linear-gradient(135deg, #FCE67E 0%, #FFFBEB 50%, #D4AF37 100%)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px;
+            background-color: #080808;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            padding: 48px;
+            display: flex;
+            flex-direction: column;
+        }
+        .halftone-pattern {
+            background-image: radial-gradient(#222 1.5px, transparent 1.5px);
+            background-size: 8px 8px;
+        }
+        .halftone-accent {
+            background-image: radial-gradient(#FCE67E 1.5px, transparent 1.5px);
+            background-size: 6px 6px;
+        }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        
+        <!-- Decoration -->
+        <div class="absolute top-0 right-0 w-[400px] h-[300px] halftone-pattern pointer-events-none opacity-50"></div>
+        
+        <!-- HEADER -->
+        <header class="flex justify-between items-end mb-12 relative z-10">
+            <div>
+                <div class="flex items-center gap-2 mb-2">
+                    <i class="fa-solid fa-layer-group text-accent text-sm"></i>
+                    <span class="text-[#555] font-mono text-sm uppercase tracking-[0.3em]">Material Science</span>
+                </div>
+                <h1 class="text-6xl font-black uppercase text-white tracking-tight leading-none">
+                    Aerospace <br>
+                    <span class="text-transparent bg-clip-text bg-metal-gradient">Materials</span>
+                </h1>
+            </div>
+            
+            <!-- Intro Text -->
+            <div class="w-[400px] border-l border-[#333] pl-6">
+                <p class="text-textMain opacity-70 text-sm font-light leading-relaxed text-justify">
+                    Advanced materials are the backbone of aerospace innovation, requiring exceptional strength-to-weight ratios, heat resistance, and smart adaptability.
+                </p>
+            </div>
+        </header>
+
+        <!-- MAIN GRID -->
+        <div class="grid grid-cols-12 gap-8 h-full">
+            
+            <!-- Item 1: Aluminum (Left) -->
+            <div class="col-span-5 relative group h-full">
+                <div class="w-full h-full border border-[#222] rounded overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1540962351574-72997f92e698?auto=format&fit=crop&w=800&q=80" 
+                         class="w-full h-full object-cover filter grayscale-[50%] group-hover:grayscale-0 transition-all duration-700">
+                    
+                    <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black via-black/80 to-transparent">
+                        <div class="w-8 h-1 bg-accent mb-3"></div>
+                        <h3 class="text-2xl text-white font-bold mb-1">Aluminum Alloys</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed max-w-xs">
+                            Lightweight structure backbone. Used for fuselage skin and wing ribs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side -->
+            <div class="col-span-7 flex flex-col gap-8">
+                
+                <!-- Item 2: Titanium (Top) -->
+                <div class="flex-1 flex gap-6 bg-[#111] border border-[#222] rounded p-1 group hover:border-accent/30 transition-colors">
+                    <div class="w-1/2 h-full overflow-hidden rounded-sm relative">
+                        <img src="https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?auto=format&fit=crop&w=600&q=80" 
+                             class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="w-1/2 flex flex-col justify-center pr-6">
+                        <h3 class="text-xl text-white font-bold mb-2">Titanium</h3>
+                        <p class="text-gray-400 text-sm leading-5 mb-4">
+                            Exceptional heat resistance for jet engine turbines and high-stress structural components.
+                        </p>
+                        <div class="flex items-center gap-2">
+                            <span class="text-sm font-mono text-accent border border-accent px-2 py-1 rounded">Ti-6Al-4V</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3: Smart Materials (Bottom) -->
+                <!-- Layout Adjusted: Width restricted to 66% to leave space for Logo on the right -->
+                <div class="flex-1 flex gap-6 w-2/3 bg-[#111] border border-[#222] rounded p-1 group hover:border-accent/30 transition-colors">
+                    <div class="w-1/2 h-full overflow-hidden rounded-sm relative">
+                        <img src="https://images.unsplash.com/photo-1581093458891-9f302295b8cd?q=80&w=600&auto=format&fit=crop" 
+                             class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="w-1/2 flex flex-col justify-center pr-4">
+                        <h3 class="text-xl text-white font-bold mb-2">Smart Comp.</h3>
+                        <p class="text-gray-400 text-sm leading-tight mb-2">
+                            Self-healing polymers and shape-shifting morphing wings.
+                        </p>
+                        <div class="w-6 h-6 rounded-full bg-[#222] flex items-center justify-center border border-[#444]">
+                            <i class="fa-solid fa-dna text-accent text-sm"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 3. BRANDING / LOGO (Unified New Design) -->
+        <!-- Placed in absolute position, bottom right. The grid content above is adjusted to clear this area. -->
+        <div class="absolute bottom-12 right-12 z-20">
+             <!-- Decorative Halftone under logo -->
+             <div class="absolute -bottom-8 -right-8 w-40 h-24 halftone-accent opacity-10 pointer-events-none"></div>
+
+             <div class="flex items-center group">
+                <!-- Icon: Thruster/Target Style -->
+                <div class="relative w-10 h-10 mr-4 flex items-center justify-center">
+                    <div class="absolute inset-0 border border-gray-600 rounded-full"></div>
+                    <div class="absolute inset-0 border border-dashed border-accent rounded-full animate-[spin_12s_linear_infinite] opacity-60"></div>
+                    <div class="w-4 h-4 bg-accent transform rotate-45 shadow-[0_0_15px_rgba(252,230,126,0.6)]"></div>
+                </div>
+
+                <!-- Text Hierarchy -->
+                <div class="flex flex-col justify-center">
+                    <span class="text-2xl font-black text-white leading-none tracking-widest uppercase font-sans">
+                        Salford
+                    </span>
+                    <div class="flex items-center w-full mt-1">
+                        <span class="text-[9px] text-accent font-bold tracking-[0.2em] uppercase mr-2">& Company</span>
+                        <div class="h-[1px] flex-grow bg-[#444]"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

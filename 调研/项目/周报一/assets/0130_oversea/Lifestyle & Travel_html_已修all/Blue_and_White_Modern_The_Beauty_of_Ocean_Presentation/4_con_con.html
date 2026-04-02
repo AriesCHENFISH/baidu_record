@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diverse Marine Life - Research Archive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { oceanDeep: '#0F1C52', electricCyan: '#00E5FF' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Playfair Display', 'serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        #page_container { width: 1280px; height: 720px; position: relative; background: #081033; color: #FFFFFF; overflow: hidden; display: flex; flex-direction: column; margin: 0 auto; }
+        .ocean-glow { position: absolute; width: 800px; height: 800px; background: radial-gradient(circle, rgba(0, 229, 255, 0.07) 0%, rgba(15, 28, 82, 0) 70%); border-radius: 50%; z-index: 1; }
+        .img-mask { clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%); }
+        .text-outline { -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3); color: transparent; }
+        .vertical-text { writing-mode: vertical-rl; transform: rotate(180deg); }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <div class="ocean-glow" style="top: -200px; right: -200px;"></div>
+        
+        <!-- Header: Consistent Logo & Meta -->
+        <header class="relative z-20 px-20 pt-12 flex items-center justify-between">
+            <div class="flex items-center gap-5">
+                <div class="w-12 h-12 border-2 border-electricCyan flex flex-col items-center justify-center gap-1">
+                    <div class="w-6 h-0.5 bg-white"></div>
+                    <div class="w-4 h-0.5 bg-electricCyan"></div>
+                    <div class="w-6 h-0.5 bg-white"></div>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-black tracking-widest uppercase leading-none">Abyssal</h2>
+                    <span class="text-[9px] tracking-[0.5em] text-electricCyan uppercase font-bold">Research Archive</span>
+                </div>
+            </div>
+            <div class="flex items-center gap-10 text-[9px] tracking-[0.2em] text-white/40 uppercase">
+                <div class="flex flex-col items-end"><span>Collection</span><span class="text-white font-bold">BIO-DATA 99X</span></div>
+                <div class="w-px h-6 bg-white/20"></div>
+                <div class="flex flex-col items-end"><span>Status</span><span class="text-electricCyan font-bold">Classified</span></div>
+            </div>
+        </header>
+
+        <main class="flex-1 flex px-20 z-10 items-center">
+            <!-- Left: Sidebar Data -->
+            <div class="w-12 flex flex-col items-center gap-8 border-r border-white/10 h-2/3 mr-12">
+                <span class="vertical-text text-[9px] tracking-[0.5em] text-white/30 uppercase">Marine Biodiversity Index</span>
+                <div class="w-1 h-20 bg-gradient-to-b from-electricCyan to-transparent"></div>
+                <span class="text-electricCyan font-bold text-xs">01</span>
+            </div>
+
+            <!-- Middle: Main Content -->
+            <div class="flex-1">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-8 h-[1px] bg-electricCyan"></div>
+                    <span class="text-[10px] font-bold tracking-[0.4em] text-electricCyan uppercase">Taxonomy Study</span>
+                </div>
+                <h1 class="text-8xl font-serif italic leading-[0.8] mb-6">
+                    Diverse <span class="font-sans not-italic font-black block text-9xl text-outline mt-2 uppercase">Marine Life</span>
+                </h1>
+                <div class="max-w-md space-y-6">
+                    <p class="text-gray-400 text-sm leading-relaxed font-light">
+                        Exploring the intricate biological structures from microscopic plankton to apex predators. Our current database catalogs over 240,000 confirmed species within the hadal zone.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 pt-4">
+                        <div class="border-l border-white/20 pl-4">
+                            <span class="block text-[12px] text-white/40 uppercase tracking-widest">Growth Rate</span>
+                            <span class="text-white font-bold text-lg">+14.2%</span>
+                        </div>
+                        <div class="border-l border-white/20 pl-4">
+                            <span class="block text-[12px] text-white/40 uppercase tracking-widest">Species Density</span>
+                            <span class="text-white font-bold text-lg">1.2k / m³</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Image Composition -->
+            <div class="w-5/12 relative h-[480px]">
+                <!-- Large Background Text -->
+                <div class="absolute -right-10 top-0 text-[180px] font-black text-white/[0.03] leading-none pointer-events-none">LIFE</div>
+                
+                <div class="absolute right-0 top-1/2 -translate-y-1/2 w-80 h-[400px] z-10">
+                    <div class="absolute inset-0 border border-electricCyan/20 translate-x-4 translate-y-4 img-mask"></div>
+                    <div class="w-full h-full overflow-hidden img-mask border border-white/10">
+                        <img src="https://images.unsplash.com/photo-1524704654690-b56c05c78a00?q=80&w=1000" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000">
+                    </div>
+                </div>
+                <!-- Mini Data Box -->
+                <div class="absolute bottom-4 left-0 bg-electricCyan p-6 w-48 z-20 shadow-2xl">
+                    <i class="fa-solid fa-microscope text-oceanDeep mb-3 text-xl"></i>
+                    <p class="text-oceanDeep font-black text-[12px] leading-tight uppercase tracking-tighter">Micro-organism analysis complete.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

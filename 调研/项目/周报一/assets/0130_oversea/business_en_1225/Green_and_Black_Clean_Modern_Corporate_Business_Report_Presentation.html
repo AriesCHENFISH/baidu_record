@@ -1,0 +1,1904 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Responsive Merged HTML
+  </title>
+  <style>
+   body {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .page-wrapper {
+                width: 100%;
+                margin: 15px 0;
+                position: relative;
+            }
+            .page-title {
+                background: #f5f5f5;
+                padding: 5px 10px;
+                border-radius: 3px 3px 0 0;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+            }
+            .responsive-iframe {
+                border: none;
+                width: 100%;
+                display: block;
+            }
+  </style>
+ </head>
+ <body>
+  <!-- 内容将在这里插入 -->
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 1
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Business Report Presentation&lt;/title&gt;
+    
+    &lt;!-- Import FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;!-- Import Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+
+    &lt;!-- Import Noto Sans SC (Mandatory Source) --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;!-- Custom Tailwind Configuration to match specific colors --&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: '#111113',      // Background Color
+                            white: '#FFFFFF',   // Primary Text
+                            accent: '#8DAF53',  // Accent Green
+                            gray: '#E0E0E0',    // Secondary Text
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        /* CSS Reset &amp; Structure */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container Definition */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #111113;
+            overflow: hidden; /* Ensure decorative shapes don't spill out */
+            color: #FFFFFF;
+        }
+
+        /* Custom Utility for the Leaf/Curve Shapes */
+        /* Recreating the organic curves using pure CSS border-radius manipulation */
+        .leaf-shape {
+            position: absolute;
+            border-radius: 0% 100% 0% 100% / 0% 100% 0% 100%;
+            transform: rotate(45deg);
+        }
+        
+        .leaf-shape-secondary {
+            position: absolute;
+            border-radius: 0% 100% 0% 100% / 0% 100% 0% 100%;
+            transform: rotate(30deg);
+        }
+
+        /* Typography spacing adjustments */
+        h1 {
+            line-height: 0.9;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;!-- Main Slide Container --&gt;
+    &lt;div id=&quot;page_container&quot; class=&quot;flex flex-col justify-between&quot;&gt;
+        
+        &lt;!-- 
+            ========================================
+            DECORATIVE BACKGROUND LAYER (Abstract)
+            ========================================
+            Using CSS div shapes to recreate the green leafy curves from the reference.
+            No SVGs used, just clever border-radius and rotation.
+        --&gt;
+        &lt;div class=&quot;absolute top-0 left-0 w-full h-full pointer-events-none z-0&quot;&gt;
+            &lt;!-- Darker Shadow Curve --&gt;
+            &lt;div class=&quot;leaf-shape-secondary&quot; style=&quot;
+                width: 900px; 
+                height: 900px; 
+                top: -150px; 
+                left: -450px; 
+                background: linear-gradient(135deg, #0a0a0a, #1f2e10);
+                opacity: 0.6;
+            &quot;&gt;&lt;/div&gt;
+
+            &lt;!-- Primary Green Curve (The big leaf) --&gt;
+            &lt;div class=&quot;leaf-shape&quot; style=&quot;
+                width: 800px; 
+                height: 800px; 
+                top: -100px; 
+                left: -400px; 
+                background: linear-gradient(135deg, #3d551f, #8DAF53);
+                box-shadow: 20px 20px 60px rgba(0,0,0,0.5);
+            &quot;&gt;&lt;/div&gt;
+            
+            &lt;!-- Highlight/Accent Curve (Top left corner detail) --&gt;
+            &lt;div class=&quot;leaf-shape&quot; style=&quot;
+                width: 300px; 
+                height: 300px; 
+                top: -120px; 
+                left: -50px; 
+                background: linear-gradient(135deg, #8DAF53, #aed46f);
+                opacity: 0.8;
+            &quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 
+            ========================================
+            HEADER / NAVIGATION
+            ======================================== 
+        --&gt;
+        &lt;header class=&quot;relative z-10 w-full p-12 flex justify-between items-center&quot;&gt;
+            &lt;!-- Brand Logo --&gt;
+            &lt;div class=&quot;tracking-widest&quot;&gt;
+                &lt;h3 class=&quot;text-2xl font-bold text-white uppercase tracking-[0.2em]&quot;&gt;Borcelle&lt;/h3&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Navigation Links --&gt;
+            &lt;nav&gt;
+                &lt;ul class=&quot;flex items-center gap-10 list-none&quot;&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;text-brand-gray hover:text-brand-accent text-sm font-medium no-underline transition-colors&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;text-brand-gray hover:text-brand-accent text-sm font-medium no-underline transition-colors&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;text-brand-gray hover:text-brand-accent text-sm font-medium no-underline transition-colors&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+                    &lt;!-- Hamburger Menu Icon --&gt;
+                    &lt;li class=&quot;ml-4 cursor-pointer text-2xl&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-bars text-white&quot;&gt;&lt;/i&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/nav&gt;
+        &lt;/header&gt;
+
+        &lt;!-- 
+            ========================================
+            MAIN CONTENT AREA (Hero)
+            ======================================== 
+        --&gt;
+        &lt;main class=&quot;relative z-10 flex-1 flex flex-col justify-center items-end pr-32 pb-10&quot;&gt;
+            &lt;!-- Title Wrapper --&gt;
+            &lt;div class=&quot;text-right mb-8&quot;&gt;
+                &lt;h1 class=&quot;text-[110px] font-bold text-white tracking-tighter uppercase drop-shadow-2xl&quot;&gt;
+                    Business&lt;br&gt;
+                    Report
+                &lt;/h1&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Subtitle/Category Tag --&gt;
+            &lt;!-- Styled with the requested Accent Color border and rounded pill shape --&gt;
+            &lt;div class=&quot;border border-brand-accent rounded-full px-12 py-3 backdrop-blur-sm bg-opacity-10 bg-white inline-block&quot;&gt;
+                &lt;p class=&quot;text-xl text-white tracking-[0.15em] font-light uppercase&quot;&gt;
+                    Finance Division
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/main&gt;
+
+        &lt;!-- 
+            ========================================
+            FOOTER / BOTTOM BAR
+            ======================================== 
+        --&gt;
+        &lt;footer class=&quot;relative z-10 w-full h-20 flex justify-end items-end&quot;&gt;
+            &lt;!-- Website URL --&gt;
+            &lt;div class=&quot;mb-8 mr-8&quot;&gt;
+                &lt;p class=&quot;text-brand-gray text-sm tracking-wide opacity-80&quot;&gt;
+                    www.reallygreatsite.com
+                &lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Decorative Square (Bottom Right Corner Accent) --&gt;
+            &lt;div class=&quot;w-32 h-20&quot; style=&quot;background: linear-gradient(to top, #8DAF53, #7a9947);&quot;&gt;&lt;/div&gt;
+        &lt;/footer&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 2
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Borcelle - Table of Content&lt;/title&gt;
+    
+    &lt;!-- Tailwind CSS CDN --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;!-- FontAwesome CDN --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;!-- Google Fonts CDN (Required) --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;!-- Tailwind Config to match Design System --&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#111113',
+                        primaryWhite: '#FFFFFF',
+                        accentGreen: '#8DAF53',
+                        secondaryGray: '#E0E0E0',
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'Inter', 'sans-serif'],
+                    },
+                    spacing: {
+                        '1280': '1280px',
+                        '720': '720px',
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container Styles */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #111113;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Typography Utilities */
+        h1, h2, h3, h4, h5, h6, p, a, li, span {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Custom Scrollbar hide */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;!-- Main Slide Container --&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+
+        &lt;!-- Header / Navigation Area --&gt;
+        &lt;!-- Purpose: Branding and Navigation Links --&gt;
+        &lt;header class=&quot;absolute top-0 left-0 w-full flex justify-between items-center px-16 py-10 z-20&quot;&gt;
+            &lt;!-- Brand Logo --&gt;
+            &lt;div class=&quot;text-primaryWhite text-xl font-bold tracking-widest uppercase&quot;&gt;
+                BORCELLE
+            &lt;/div&gt;
+
+            &lt;!-- Navigation Links --&gt;
+            &lt;div class=&quot;flex items-center gap-10&quot;&gt;
+                &lt;nav&gt;
+                    &lt;ul class=&quot;flex gap-8 list-none&quot;&gt;
+                        &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;text-primaryWhite text-sm font-medium hover:text-accentGreen no-underline transition-colors&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;text-primaryWhite text-sm font-medium hover:text-accentGreen no-underline transition-colors&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;text-primaryWhite text-sm font-medium hover:text-accentGreen no-underline transition-colors&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/nav&gt;
+                &lt;!-- Hamburger Menu Icon --&gt;
+                &lt;div class=&quot;text-primaryWhite text-2xl cursor-pointer&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-bars&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;!-- Main Content Grid --&gt;
+        &lt;!-- Purpose: Split layout into left (Title/Image) and right (List Items) --&gt;
+        &lt;div class=&quot;grid grid-cols-12 h-full w-full pt-28 pb-10 px-16 gap-8&quot;&gt;
+            
+            &lt;!-- Left Column: Title and Imagery --&gt;
+            &lt;div class=&quot;col-span-5 flex flex-col justify-start relative&quot;&gt;
+                
+                &lt;!-- Main Headline --&gt;
+                &lt;div class=&quot;mb-8 z-10&quot;&gt;
+                    &lt;h1 class=&quot;text-primaryWhite text-7xl font-bold leading-[0.9] tracking-tighter uppercase&quot;&gt;
+                        Table of &lt;br&gt;
+                        &lt;span class=&quot;text-primaryWhite&quot;&gt;Content&lt;/span&gt;
+                    &lt;/h1&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Decorative Image Container --&gt;
+                &lt;!-- Purpose: Visual anchor using accent colors and natural imagery --&gt;
+                &lt;div class=&quot;relative w-full aspect-square rounded-3xl overflow-hidden border border-gray-800 shadow-2xl mt-4&quot;&gt;
+                    &lt;!-- Image Source: Dark green leaves to match the accent color #8DAF53 --&gt;
+                    &lt;img 
+                        src=&quot;https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&amp;w=1000&amp;auto=format&amp;fit=crop&quot; 
+                        alt=&quot;Dark green aesthetic leaves&quot; 
+                        class=&quot;w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-700&quot;
+                    &gt;
+                    &lt;!-- 460*460 --&gt;
+                    
+                    &lt;!-- Gradient Overlay for better text integration if needed later --&gt;
+                    &lt;div class=&quot;absolute inset-0 bg-gradient-to-t from-bgDark/40 to-transparent&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+
+            &lt;!-- Right Column: Interactive List --&gt;
+            &lt;!-- Purpose: The Table of Contents list items --&gt;
+            &lt;div class=&quot;col-span-7 flex flex-col justify-center pl-12 pr-12 relative z-10&quot;&gt;
+                
+                &lt;!-- List Container --&gt;
+                &lt;ul class=&quot;w-full flex flex-col gap-5 list-none&quot;&gt;
+                    
+                    &lt;!-- List Item 1 --&gt;
+                    &lt;li class=&quot;group&quot;&gt;
+                        &lt;div class=&quot;w-full border border-accentGreen rounded-full py-3 px-8 flex items-center justify-between bg-bgDark hover:bg-accentGreen/10 transition-colors duration-300&quot;&gt;
+                            &lt;span class=&quot;text-primaryWhite text-lg font-light tracking-wide group-hover:pl-2 transition-all duration-300&quot;&gt;Division Overview&lt;/span&gt;
+                            &lt;i class=&quot;fa-solid fa-arrow-right text-accentGreen opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/li&gt;
+
+                    &lt;!-- List Item 2 --&gt;
+                    &lt;li class=&quot;group&quot;&gt;
+                        &lt;div class=&quot;w-full border border-accentGreen rounded-full py-3 px-8 flex items-center justify-between bg-bgDark hover:bg-accentGreen/10 transition-colors duration-300&quot;&gt;
+                            &lt;span class=&quot;text-primaryWhite text-lg font-light tracking-wide group-hover:pl-2 transition-all duration-300&quot;&gt;Key Achievements&lt;/span&gt;
+                            &lt;i class=&quot;fa-solid fa-arrow-right text-accentGreen opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/li&gt;
+
+                    &lt;!-- List Item 3 --&gt;
+                    &lt;li class=&quot;group&quot;&gt;
+                        &lt;div class=&quot;w-full border border-accentGreen rounded-full py-3 px-8 flex items-center justify-between bg-bgDark hover:bg-accentGreen/10 transition-colors duration-300&quot;&gt;
+                            &lt;span class=&quot;text-primaryWhite text-lg font-light tracking-wide group-hover:pl-2 transition-all duration-300&quot;&gt;Current Initiatives&lt;/span&gt;
+                            &lt;i class=&quot;fa-solid fa-arrow-right text-accentGreen opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/li&gt;
+
+                    &lt;!-- List Item 4 --&gt;
+                    &lt;li class=&quot;group&quot;&gt;
+                        &lt;div class=&quot;w-full border border-accentGreen rounded-full py-3 px-8 flex items-center justify-between bg-bgDark hover:bg-accentGreen/10 transition-colors duration-300&quot;&gt;
+                            &lt;span class=&quot;text-primaryWhite text-lg font-light tracking-wide group-hover:pl-2 transition-all duration-300&quot;&gt;Challenges and Solutions&lt;/span&gt;
+                            &lt;i class=&quot;fa-solid fa-arrow-right text-accentGreen opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/li&gt;
+
+                    &lt;!-- List Item 5 --&gt;
+                    &lt;li class=&quot;group&quot;&gt;
+                        &lt;div class=&quot;w-full border border-accentGreen rounded-full py-3 px-8 flex items-center justify-between bg-bgDark hover:bg-accentGreen/10 transition-colors duration-300&quot;&gt;
+                            &lt;span class=&quot;text-primaryWhite text-lg font-light tracking-wide group-hover:pl-2 transition-all duration-300&quot;&gt;Future Plans&lt;/span&gt;
+                            &lt;i class=&quot;fa-solid fa-arrow-right text-accentGreen opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/li&gt;
+
+                    &lt;!-- List Item 6 --&gt;
+                    &lt;li class=&quot;group&quot;&gt;
+                        &lt;div class=&quot;w-full border border-accentGreen rounded-full py-3 px-8 flex items-center justify-between bg-bgDark hover:bg-accentGreen/10 transition-colors duration-300&quot;&gt;
+                            &lt;span class=&quot;text-primaryWhite text-lg font-light tracking-wide group-hover:pl-2 transition-all duration-300&quot;&gt;Metrics and Performance&lt;/span&gt;
+                            &lt;i class=&quot;fa-solid fa-arrow-right text-accentGreen opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/li&gt;
+
+                    &lt;!-- List Item 7 --&gt;
+                    &lt;li class=&quot;group&quot;&gt;
+                        &lt;div class=&quot;w-full border border-accentGreen rounded-full py-3 px-8 flex items-center justify-between bg-bgDark hover:bg-accentGreen/10 transition-colors duration-300&quot;&gt;
+                            &lt;span class=&quot;text-primaryWhite text-lg font-light tracking-wide group-hover:pl-2 transition-all duration-300&quot;&gt;Conclusion&lt;/span&gt;
+                            &lt;i class=&quot;fa-solid fa-arrow-right text-accentGreen opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/li&gt;
+
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Decorative Elements &amp; Footer Info --&gt;
+        
+        &lt;!-- Bottom Right Accent Block --&gt;
+        &lt;div class=&quot;absolute bottom-0 right-0 w-32 h-20 bg-accentGreen z-0&quot;&gt;&lt;/div&gt;
+        
+        &lt;!-- Rotated Website URL --&gt;
+        &lt;div class=&quot;absolute bottom-28 right-8 origin-bottom-right rotate-[270deg] translate-x-1/2&quot;&gt;
+            &lt;p class=&quot;text-secondaryGray text-xs tracking-widest font-light opacity-60&quot;&gt;
+                www.reallygreatsite.com
+            &lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Subtle Background Glow (Optional for depth) --&gt;
+        &lt;div class=&quot;absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-accentGreen/5 rounded-full blur-[100px] pointer-events-none z-0&quot;&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 3
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Our Services - Borcelle&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        /* CSS Reset &amp; Global Standards */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        /* Page Container */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #111113;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Border Utility */
+        .card-border { border: 1px solid #8DAF53; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;header class=&quot;flex justify-between items-center px-16 pt-10 w-full absolute top-0 left-0 z-20&quot;&gt;
+            &lt;div class=&quot;text-white font-bold text-xl tracking-widest uppercase&quot;&gt;Borcelle&lt;/div&gt;
+            &lt;nav&gt;
+                &lt;ul class=&quot;flex items-center gap-10 list-none&quot;&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;text-white text-sm no-underline opacity-90 hover:opacity-100&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;text-white text-sm no-underline opacity-90 hover:opacity-100&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;text-white text-sm no-underline opacity-90 hover:opacity-100&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;i class=&quot;fa-solid fa-bars text-white text-2xl cursor-pointer&quot;&gt;&lt;/i&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/nav&gt;
+        &lt;/header&gt;
+
+        &lt;main class=&quot;w-full h-full flex flex-col justify-center pt-16 px-24 pb-12&quot;&gt;
+            
+            &lt;div class=&quot;w-full mb-12 text-center&quot;&gt;
+                &lt;h1 class=&quot;text-white text-6xl font-bold uppercase tracking-wide&quot;&gt;
+                    Our Services
+                &lt;/h1&gt;
+                &lt;p class=&quot;text-[#8DAF53] mt-4 tracking-widest text-sm uppercase&quot;&gt;What we provide&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;grid grid-cols-3 gap-8 w-full h-[350px]&quot;&gt;
+                
+                &lt;div class=&quot;card-border rounded-2xl p-8 flex flex-col justify-center items-center text-center hover:bg-white/5 transition-colors duration-300&quot;&gt;
+                    &lt;div class=&quot;mb-6 text-[#8DAF53]&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-bullhorn text-5xl&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;h3 class=&quot;text-white text-xl font-bold uppercase mb-4 tracking-wide&quot;&gt;Digital Marketing&lt;/h3&gt;
+                    &lt;p class=&quot;text-[#E0E0E0] text-sm leading-6 font-light&quot;&gt;
+                        Developing strategic campaigns that drive engagement and maximize ROI through targeted channels.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;bg-[#8DAF53] rounded-2xl p-8 flex flex-col justify-center items-center text-center shadow-lg transform scale-105&quot;&gt;
+                    &lt;div class=&quot;mb-6 text-white&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-chess text-5xl&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;h3 class=&quot;text-white text-xl font-bold uppercase mb-4 tracking-wide&quot;&gt;Brand Strategy&lt;/h3&gt;
+                    &lt;p class=&quot;text-white text-sm leading-6 font-normal&quot;&gt;
+                        Crafting unique identities and long-term visions to position your brand at the top of the market hierarchy.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;card-border rounded-2xl p-8 flex flex-col justify-center items-center text-center hover:bg-white/5 transition-colors duration-300&quot;&gt;
+                    &lt;div class=&quot;mb-6 text-[#8DAF53]&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-chart-pie text-5xl&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;h3 class=&quot;text-white text-xl font-bold uppercase mb-4 tracking-wide&quot;&gt;Data Analytics&lt;/h3&gt;
+                    &lt;p class=&quot;text-[#E0E0E0] text-sm leading-6 font-light&quot;&gt;
+                        Turning complex data into actionable insights to optimize performance and predict future trends.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/main&gt;
+
+        &lt;div class=&quot;absolute bottom-0 right-0 z-10&quot;&gt;
+            &lt;div class=&quot;w-24 h-24 bg-[#8DAF53]&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 4
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Core Values - Borcelle&lt;/title&gt;
+    
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#111113',
+                        primary: '#FFFFFF',
+                        accent: '#8DAF53',
+                        secondary: '#E0E0E0',
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        /* CSS Reset &amp; Global Standards */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Container Configuration */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #111113;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Typography Utilities */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+        }
+
+        /* Custom Scrollbar hide */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;header class=&quot;flex justify-between items-center px-16 pt-10 w-full absolute top-0 left-0 z-20&quot;&gt;
+            &lt;div class=&quot;text-white font-bold text-xl tracking-widest uppercase&quot;&gt;
+                Borcelle
+            &lt;/div&gt;
+
+            &lt;nav&gt;
+                &lt;ul class=&quot;flex items-center gap-10 list-none&quot;&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;text-white text-sm no-underline opacity-90 hover:opacity-100&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;text-white text-sm no-underline opacity-90 hover:opacity-100&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;text-white text-sm no-underline opacity-90 hover:opacity-100&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;i class=&quot;fa-solid fa-bars text-white text-2xl cursor-pointer&quot;&gt;&lt;/i&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/nav&gt;
+        &lt;/header&gt;
+
+        &lt;div class=&quot;relative w-full h-[380px]&quot;&gt;
+            &lt;div class=&quot;absolute inset-0 w-full h-full&quot;&gt;
+                &lt;img src=&quot;https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&amp;w=1280&amp;auto=format&amp;fit=crop&quot; 
+                     alt=&quot;Dark leaf texture with water drops&quot; 
+                     class=&quot;w-full h-full object-cover opacity-80&quot;
+                     style=&quot;object-position: center 30%;&quot;&gt;
+            &lt;/div&gt;
+            
+            &lt;div class=&quot;absolute inset-0&quot; style=&quot;background: linear-gradient(180deg, rgba(17,17,19,0) 0%, rgba(17,17,19,0.8) 70%, #111113 100%);&quot;&gt;&lt;/div&gt;
+
+            &lt;div class=&quot;absolute bottom-4 right-12 text-right z-10&quot;&gt;
+                &lt;h1 class=&quot;text-primary text-6xl font-black uppercase tracking-tight leading-none drop-shadow-xl&quot;&gt;
+                    Our Core&lt;br&gt;
+                    &lt;span class=&quot;text-secondary font-light&quot;&gt;Values&lt;/span&gt;
+                &lt;/h1&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;grid grid-cols-3 gap-8 px-12 mt-6 h-[260px] items-start&quot;&gt;
+            
+            &lt;div class=&quot;flex flex-col h-full&quot;&gt;
+                &lt;div class=&quot;border border-accent rounded-full py-3 mb-6 flex justify-center items-center&quot;&gt;
+                    &lt;h2 class=&quot;text-primary text-lg font-bold uppercase tracking-widest&quot;&gt;Innovation&lt;/h2&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;px-2&quot;&gt;
+                    &lt;p class=&quot;text-secondary text-sm leading-6 text-justify font-light opacity-90&quot;&gt;
+                        We constantly push boundaries to discover new solutions. Innovation is not just about technology; it's about finding better ways to serve our community and solve complex problems with creativity.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;flex flex-col h-full&quot;&gt;
+                &lt;div class=&quot;bg-accent rounded-full py-3 mb-6 flex justify-center items-center shadow-lg shadow-accent/20&quot;&gt;
+                    &lt;h2 class=&quot;text-primary text-lg font-bold uppercase tracking-widest&quot;&gt;Integrity&lt;/h2&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;px-2&quot;&gt;
+                    &lt;p class=&quot;text-secondary text-sm leading-6 text-justify font-light opacity-90&quot;&gt;
+                        Honesty and transparency are the foundations of our business. We believe in building trust through consistent actions and adhering to the highest ethical standards in every interaction.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;flex flex-col h-full&quot;&gt;
+                &lt;div class=&quot;border border-accent rounded-full py-3 mb-6 flex justify-center items-center&quot;&gt;
+                    &lt;h2 class=&quot;text-primary text-lg font-bold uppercase tracking-widest&quot;&gt;Excellence&lt;/h2&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;px-2&quot;&gt;
+                    &lt;p class=&quot;text-secondary text-sm leading-6 text-justify font-light opacity-90&quot;&gt;
+                        We strive for perfection in every detail. From the quality of our products to the efficiency of our services, excellence is not a goal but a standard that we uphold every single day.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute bottom-0 w-full flex justify-end items-end&quot;&gt;
+            &lt;div class=&quot;w-24 h-24 bg-accent shadow-2xl z-10&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 5
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Key Achievements - Borcelle&lt;/title&gt;
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;!-- Custom Font (Baidu CDN as requested) --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        /* CSS Reset &amp; Global Standards */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container - The Canvas */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #111113; /* Global Background */
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden; /* Ensure content doesn't bleed */
+        }
+
+        /* Utility specific for the accent color border logic */
+        .card-border {
+            border: 1px solid #8DAF53;
+        }
+        
+        /* Specific text clamp for design consistency */
+        .line-clamp-4 {
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;!-- Main Presentation Container --&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;!-- Header / Navigation Area --&gt;
+        &lt;!-- Purpose: Top branding and navigation links --&gt;
+        &lt;header class=&quot;flex justify-between items-center px-16 pt-10 w-full absolute top-0 left-0 z-20&quot;&gt;
+            &lt;!-- Logo Area --&gt;
+            &lt;div class=&quot;text-white font-bold text-xl tracking-widest uppercase&quot;&gt;
+                Borcelle
+            &lt;/div&gt;
+
+            &lt;!-- Navigation Links --&gt;
+            &lt;nav&gt;
+                &lt;ul class=&quot;flex items-center gap-10 list-none&quot;&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;text-white text-sm no-underline opacity-90 hover:opacity-100&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;text-white text-sm no-underline opacity-90 hover:opacity-100&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;text-white text-sm no-underline opacity-90 hover:opacity-100&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+                    &lt;!-- Hamburger Icon --&gt;
+                    &lt;li&gt;&lt;i class=&quot;fa-solid fa-bars text-white text-2xl cursor-pointer&quot;&gt;&lt;/i&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/nav&gt;
+        &lt;/header&gt;
+
+        &lt;!-- Main Content Area --&gt;
+        &lt;main class=&quot;w-full h-full flex flex-col justify-center pt-16 px-24 pb-12&quot;&gt;
+            
+            &lt;!-- Main Title --&gt;
+            &lt;!-- Purpose: Clear subject declaration --&gt;
+            &lt;div class=&quot;w-full mb-10 text-center&quot;&gt;
+                &lt;h1 class=&quot;text-white text-6xl font-bold uppercase tracking-wide&quot;&gt;
+                    Key Achievements
+                &lt;/h1&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Grid Layout for Cards --&gt;
+            &lt;!-- Purpose: 2x2 Layout system for content distribution --&gt;
+            &lt;div class=&quot;grid grid-cols-2 gap-6 w-full h-[380px]&quot;&gt;
+                
+                &lt;!-- Card 1: Highest Standards (Solid Accent Color) --&gt;
+                &lt;!-- Purpose: Primary highlight with visual weight --&gt;
+                &lt;div class=&quot;bg-[#8DAF53] rounded-2xl p-8 relative overflow-hidden flex flex-col justify-center shadow-lg&quot;&gt;
+                    &lt;div class=&quot;relative z-10 w-2/3&quot;&gt;
+                        &lt;h2 class=&quot;text-white text-3xl font-bold leading-tight uppercase&quot;&gt;
+                            Highest &lt;br&gt;Standards of &lt;br&gt;Quality
+                        &lt;/h2&gt;
+                    &lt;/div&gt;
+                    &lt;!-- Icon graphic simulating the chart in the reference --&gt;
+                    &lt;div class=&quot;absolute bottom-4 right-6 text-white opacity-90&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-chart-line text-8xl&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Card 2: Text Block (Transparent with Border) --&gt;
+                &lt;!-- Purpose: Contextual information --&gt;
+                &lt;div class=&quot;card-border rounded-2xl p-8 flex flex-col justify-center bg-opacity-0&quot;&gt;
+                    &lt;p class=&quot;text-[#E0E0E0] text-sm leading-7 font-light&quot;&gt;
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Card 3: Vision (Transparent with Border) --&gt;
+                &lt;!-- Purpose: Vision Statement --&gt;
+                &lt;div class=&quot;card-border rounded-2xl p-8 flex flex-col justify-center bg-opacity-0&quot;&gt;
+                    &lt;h3 class=&quot;text-white text-2xl font-bold uppercase text-center mb-3 tracking-wide&quot;&gt;Vision&lt;/h3&gt;
+                    &lt;p class=&quot;text-[#E0E0E0] text-sm leading-6 font-light text-justify&quot;&gt;
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Card 4: Mission (Transparent with Border) --&gt;
+                &lt;!-- Purpose: Mission Statement --&gt;
+                &lt;div class=&quot;card-border rounded-2xl p-8 flex flex-col justify-center bg-opacity-0&quot;&gt;
+                    &lt;h3 class=&quot;text-white text-2xl font-bold uppercase text-center mb-3 tracking-wide&quot;&gt;Mission&lt;/h3&gt;
+                    &lt;p class=&quot;text-[#E0E0E0] text-sm leading-6 font-light text-justify&quot;&gt;
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/main&gt;
+
+        &lt;!-- Decorative Footer Element --&gt;
+        &lt;!-- Purpose: Aesthetic balance and footer link --&gt;
+        &lt;div class=&quot;absolute bottom-0 right-0 z-10&quot;&gt;
+            &lt;!-- Green Square Decor --&gt;
+            &lt;div class=&quot;w-24 h-24 bg-[#8DAF53]&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 6
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Current Initiatives - Borcelle&lt;/title&gt;
+    
+    &lt;!-- FontAwesome CDN --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;!-- Google Fonts (Domestic CDN as requested) --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;!-- Tailwind Config for Custom Colors and Fonts --&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#111113',
+                        primaryWhite: '#FFFFFF',
+                        accentGreen: '#8DAF53',
+                        textGray: '#E0E0E0',
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        /* CSS Reset &amp; Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 
+         * Page Container Strict Rules:
+         * Width: 1280px, Height: 720px
+         * No shadow on container
+         * Centered
+         */
+        .page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #111113;
+            overflow: hidden; /* Ensure content doesn't spill out */
+        }
+
+        /* Typography Utilities */
+        h1, h2, h3, h4, h5, h6, p, li, a {
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;!-- Main Slide Container --&gt;
+    &lt;div class=&quot;page_container&quot;&gt;
+        
+        &lt;!-- Header / Navigation Section --&gt;
+        &lt;!-- Flexbox for alignment: Logo left, Nav right --&gt;
+        &lt;div class=&quot;flex justify-between items-center px-16 py-10 w-full z-20 relative&quot;&gt;
+            &lt;!-- Logo Area --&gt;
+            &lt;div class=&quot;tracking-widest&quot;&gt;
+                &lt;h3 class=&quot;text-primaryWhite text-xl font-bold uppercase tracking-[0.2em]&quot;&gt;Borcelle&lt;/h3&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Navigation Links --&gt;
+            &lt;div class=&quot;flex items-center gap-12&quot;&gt;
+                &lt;ul class=&quot;flex gap-10 list-none&quot;&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;text-primaryWhite text-sm font-medium hover:text-accentGreen no-underline transition-colors&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;text-primaryWhite text-sm font-medium hover:text-accentGreen no-underline transition-colors&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;text-primaryWhite text-sm font-medium hover:text-accentGreen no-underline transition-colors&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;!-- Hamburger Menu Icon --&gt;
+                &lt;div class=&quot;text-primaryWhite text-2xl cursor-pointer&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-bars&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Main Content Grid --&gt;
+        &lt;!-- 12-column grid layout for precision placement --&gt;
+        &lt;div class=&quot;grid grid-cols-12 gap-8 h-full px-0 absolute top-0 left-0 w-full pt-28 pb-0&quot;&gt;
+            
+            &lt;!-- Left Column: Image Area (Spans 5 columns) --&gt;
+            &lt;!-- Adjusted padding to create the floating card effect shown in reference --&gt;
+            &lt;div class=&quot;col-span-5 pl-0 pb-0 h-full flex flex-col justify-end&quot;&gt;
+                &lt;!-- Image Container with top-right border radius --&gt;
+                &lt;div class=&quot;w-full h-[580px] bg-gray-800 rounded-tr-[60px] overflow-hidden relative mr-8&quot;&gt;
+                    &lt;img 
+                        src=&quot;https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&amp;w=1000&amp;auto=format&amp;fit=crop&quot; 
+                        alt=&quot;Dark green leaves texture&quot; 
+                        class=&quot;w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-700&quot;
+                    &gt;
+                    &lt;!-- 533*580 --&gt;
+                    
+                    &lt;!-- Optional overlay to ensure text contrast if needed, though mostly for mood here --&gt;
+                    &lt;div class=&quot;absolute inset-0 bg-gradient-to-t from-black/40 to-transparent&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Right Column: Text Content (Spans 7 columns) --&gt;
+            &lt;div class=&quot;col-span-7 flex flex-col justify-center pr-24 pl-8 pb-16&quot;&gt;
+                
+                &lt;!-- Main Heading --&gt;
+                &lt;div class=&quot;mb-10&quot;&gt;
+                    &lt;h1 class=&quot;text-primaryWhite text-[5.5rem] leading-[0.9] font-bold uppercase tracking-tighter&quot;&gt;
+                        Current&lt;br&gt;
+                        &lt;span class=&quot;font-light&quot;&gt;Initiatives&lt;/span&gt;
+                    &lt;/h1&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Body Text --&gt;
+                &lt;!-- Restricting width for better readability line-length --&gt;
+                &lt;div class=&quot;max-w-xl&quot;&gt;
+                    &lt;p class=&quot;text-textGray text-sm leading-7 font-light text-justify&quot;&gt;
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Footer Elements --&gt;
+
+        &lt;!-- Decorative Green Accent Block (Bottom Right) --&gt;
+        &lt;div class=&quot;absolute bottom-0 right-0 w-24 h-24 bg-accentGreen z-0&quot;&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 7
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Challenges and Solutions - Borcelle&lt;/title&gt;
+    
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#111113',
+                        primary: '#FFFFFF',
+                        accent: '#8DAF53',
+                        secondary: '#E0E0E0',
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        /* CSS Reset &amp; Global Standards */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Container Configuration */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #111113;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Typography Utilities */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+        }
+
+        /* Custom Scrollbar hide */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;header class=&quot;flex justify-between items-center px-16 pt-10 w-full absolute top-0 left-0 z-20&quot;&gt;
+            &lt;div class=&quot;text-white font-bold text-xl tracking-widest uppercase&quot;&gt;
+                Borcelle
+            &lt;/div&gt;
+
+            &lt;nav&gt;
+                &lt;ul class=&quot;flex items-center gap-10 list-none&quot;&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;text-white text-sm no-underline opacity-90 hover:opacity-100&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;text-white text-sm no-underline opacity-90 hover:opacity-100&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;text-white text-sm no-underline opacity-90 hover:opacity-100&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;i class=&quot;fa-solid fa-bars text-white text-2xl cursor-pointer&quot;&gt;&lt;/i&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/nav&gt;
+        &lt;/header&gt;
+
+        &lt;div class=&quot;relative w-full h-[380px]&quot;&gt;
+            &lt;div class=&quot;absolute inset-0 w-full h-full&quot;&gt;
+                &lt;img src=&quot;https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&amp;w=1280&amp;auto=format&amp;fit=crop&quot; 
+                     alt=&quot;Dark leaf texture with water drops&quot; 
+                     class=&quot;w-full h-full object-cover opacity-80&quot;
+                     style=&quot;object-position: center 30%;&quot;&gt;
+                &lt;/div&gt;
+            
+            &lt;div class=&quot;absolute inset-0&quot; style=&quot;background: linear-gradient(180deg, rgba(17,17,19,0) 0%, rgba(17,17,19,0.8) 70%, #111113 100%);&quot;&gt;&lt;/div&gt;
+
+            &lt;div class=&quot;absolute bottom-4 right-12 text-right z-10&quot;&gt;
+                &lt;h1 class=&quot;text-primary text-6xl font-black uppercase tracking-tight leading-none drop-shadow-xl&quot;&gt;
+                    Challenges&lt;br&gt;
+                    &lt;span class=&quot;text-secondary font-light&quot;&gt;and&lt;/span&gt; Solutions
+                &lt;/h1&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;grid grid-cols-2 gap-16 px-16 mt-6 h-[260px] items-start&quot;&gt;
+            
+            &lt;div class=&quot;flex flex-col h-full&quot;&gt;
+                &lt;div class=&quot;border border-accent rounded-full py-3 mb-6 flex justify-center items-center&quot;&gt;
+                    &lt;h2 class=&quot;text-primary text-lg font-bold uppercase tracking-widest&quot;&gt;Challenges&lt;/h2&gt;
+                &lt;/div&gt;
+                
+                &lt;div class=&quot;pr-4&quot;&gt;
+                    &lt;p class=&quot;text-secondary text-sm leading-7 text-justify font-light opacity-90&quot;&gt;
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;flex flex-col h-full&quot;&gt;
+                &lt;div class=&quot;bg-accent rounded-full py-3 mb-6 flex justify-center items-center shadow-lg shadow-accent/20&quot;&gt;
+                    &lt;h2 class=&quot;text-primary text-lg font-bold uppercase tracking-widest&quot;&gt;Solutions&lt;/h2&gt;
+                &lt;/div&gt;
+                
+                &lt;div class=&quot;pr-4&quot;&gt;
+                    &lt;p class=&quot;text-secondary text-sm leading-7 text-justify font-light opacity-90&quot;&gt;
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute bottom-0 w-full flex justify-end items-end&quot;&gt;
+            
+            &lt;div class=&quot;w-24 h-24 bg-accent shadow-2xl z-10&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 8
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Future Plans Presentation Slide&lt;/title&gt;
+
+    &lt;!-- FontAwesome CDN --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+
+    &lt;!-- Tailwind CSS CDN --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+
+    &lt;!-- Google Fonts (via Baidu Mirror as requested) --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;!-- Custom Font Configuration for Tailwind to use the imported font --&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#111113',
+                        primaryWhite: '#FFFFFF',
+                        accentGreen: '#8DAF53',
+                        secondaryGray: '#E0E0E0'
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container Styles */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #111113;
+            overflow: hidden; /* Prevent scrollbars */
+            font-family: 'Noto Sans SC', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Utility helper for text justification */
+        .text-justify-custom {
+            text-align: justify;
+            text-justify: inter-word;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;!-- Main Container --&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;!-- Header / Navigation Section --&gt;
+        &lt;!-- Flex container for top navigation bar with Logo and Menu links --&gt;
+        &lt;div class=&quot;absolute top-0 left-0 w-full flex justify-between items-center px-16 py-10 z-20&quot;&gt;
+            &lt;!-- Logo Area --&gt;
+            &lt;div class=&quot;text-primaryWhite font-bold text-xl tracking-widest uppercase&quot;&gt;
+                BORCELLE
+            &lt;/div&gt;
+
+            &lt;!-- Navigation Links --&gt;
+            &lt;div class=&quot;flex items-center gap-12&quot;&gt;
+                &lt;ul class=&quot;flex gap-10 list-none&quot;&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;text-gray-300 text-sm font-medium hover:text-white transition-colors no-underline&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;text-gray-300 text-sm font-medium hover:text-white transition-colors no-underline&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;text-gray-300 text-sm font-medium hover:text-white transition-colors no-underline&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;!-- Hamburger Menu Icon --&gt;
+                &lt;div class=&quot;text-white text-2xl cursor-pointer&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-bars&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Main Content Grid --&gt;
+        &lt;!-- Two-column grid layout: Left for typography, Right for imagery --&gt;
+        &lt;div class=&quot;grid grid-cols-12 h-full w-full pl-16 pr-0 pt-20 pb-0&quot;&gt;
+            
+            &lt;!-- Left Column: Typography &amp; Content (Span 5 columns) --&gt;
+            &lt;div class=&quot;col-span-5 flex flex-col justify-center pr-8 z-10&quot;&gt;
+                &lt;!-- Main Title --&gt;
+                &lt;h1 class=&quot;text-primaryWhite text-8xl font-bold leading-[0.9] tracking-tight mb-10 uppercase&quot;&gt;
+                    Future&lt;br&gt;Plans
+                &lt;/h1&gt;
+
+                &lt;!-- Body Text --&gt;
+                &lt;!-- Using semantic &lt;p&gt; with margin-bottom for spacing instead of &lt;br&gt; --&gt;
+                &lt;p class=&quot;text-gray-400 text-sm leading-7 text-justify-custom mb-4 font-light opacity-90&quot;&gt;
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                &lt;/p&gt;
+                &lt;p class=&quot;text-gray-400 text-sm leading-7 text-justify-custom font-light opacity-90&quot;&gt;
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.
+                &lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Right Column: Visual Imagery (Span 7 columns) --&gt;
+            &lt;div class=&quot;col-span-7 relative h-full flex items-center justify-end&quot;&gt;
+                &lt;!-- Image Container with Rounded Corners --&gt;
+                &lt;!-- Positioning matches the design: large rounded card on the right side --&gt;
+                &lt;div class=&quot;relative w-[95%] h-[75%] bg-gray-800 rounded-tl-[40px] rounded-bl-[40px] overflow-hidden shadow-2xl mr-0&quot;&gt;
+                    &lt;!-- Overlay gradient for subtle depth --&gt;
+                    &lt;div class=&quot;absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10 pointer-events-none&quot;&gt;&lt;/div&gt;
+                    
+                    &lt;!-- Main Feature Image: Green Leaf with Water Droplets --&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1518531933037-9a6470071591?q=80&amp;w=1280&amp;auto=format&amp;fit=crop&quot; 
+                         alt=&quot;Close up of green leaf texture with water droplets&quot; 
+                         class=&quot;w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-700 ease-out&quot;&gt;
+                    &lt;!-- 750*540 --&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Footer Section --&gt;
+        &lt;!-- Contains the website URL and the decorative accent block --&gt;
+        &lt;div class=&quot;absolute bottom-0 right-0 flex items-end&quot;&gt;
+
+            &lt;!-- Decorative Green Accent Block --&gt;
+            &lt;!-- A solid color block anchored to the bottom right corner --&gt;
+            &lt;div class=&quot;w-24 h-32 bg-[#8DAF53] shadow-lg relative z-10&quot;&gt;
+                &lt;!-- Optional: Subtle internal highlight for texture --&gt;
+                &lt;div class=&quot;absolute top-0 left-0 w-full h-1 bg-white/20&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Decorative Background Element (Subtle) --&gt;
+        &lt;!-- Adds very subtle depth to the dark background without being distracting --&gt;
+        &lt;div class=&quot;absolute top-[-10%] left-[-5%] w-[500px] h-[500px] rounded-full bg-white opacity-[0.02] blur-3xl pointer-events-none z-0&quot;&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 9
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Metrics and Performance - Creative Keynote&lt;/title&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#111113',
+                        primary: '#FFFFFF',
+                        accent: '#8DAF53',
+                        secondary: '#E0E0E0',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans SC', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        /* CSS Reset &amp; Global Standards */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container - Strict Requirements */
+        .page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #111113;
+            overflow: hidden;
+        }
+
+        /* Gradient Utility for Accent Blocks */
+        .accent-gradient {
+            background: linear-gradient(135deg, #8DAF53, #6B8C3E);
+        }
+        
+        /* Subtle glass effect for text areas inside cards */
+        .glass-panel {
+            background-color: rgba(255, 255, 255, 0.03);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot; class=&quot;page_container text-primary font-sans&quot;&gt;
+
+        &lt;header class=&quot;flex justify-between items-center px-16 pt-10 w-full absolute top-0 left-0 z-20&quot;&gt;
+            &lt;div class=&quot;text-white font-bold text-xl tracking-widest uppercase&quot;&gt;
+                Borcelle
+            &lt;/div&gt;
+
+            &lt;nav&gt;
+                &lt;ul class=&quot;flex items-center gap-10 list-none&quot;&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;text-white text-sm no-underline opacity-90 hover:opacity-100&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;text-white text-sm no-underline opacity-90 hover:opacity-100&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;text-white text-sm no-underline opacity-90 hover:opacity-100&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;i class=&quot;fa-solid fa-bars text-white text-2xl cursor-pointer&quot;&gt;&lt;/i&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/nav&gt;
+        &lt;/header&gt;
+
+        &lt;div class=&quot;grid grid-cols-12 h-full&quot;&gt;
+
+            &lt;div class=&quot;col-span-8 px-12 pb-12 pt-28 flex flex-col justify-between relative z-10&quot;&gt;
+                
+                &lt;div class=&quot;flex flex-col gap-2 mt-4&quot;&gt;
+                    &lt;h1 class=&quot;text-7xl font-bold uppercase leading-[0.9] tracking-tighter&quot;&gt;
+                        Metrics And&lt;br&gt;
+                        &lt;span class=&quot;text-transparent bg-clip-text accent-gradient&quot; style=&quot;-webkit-background-clip: text; color: transparent; background-image: linear-gradient(135deg, #ffffff, #E0E0E0);&quot;&gt;Performance&lt;/span&gt;
+                    &lt;/h1&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;grid grid-cols-3 gap-6 mt-auto mb-12&quot;&gt;
+                    
+                    &lt;div class=&quot;flex flex-col rounded-2xl overflow-hidden border border-[#8DAF53] border-opacity-30 h-64&quot;&gt;
+                        &lt;div class=&quot;h-[65%] accent-gradient flex items-center justify-center&quot;&gt;
+                            &lt;h2 class=&quot;text-6xl font-bold text-white drop-shadow-md&quot;&gt;20%&lt;/h2&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;h-[35%] glass-panel flex items-center justify-center p-4&quot;&gt;
+                            &lt;p class=&quot;text-center font-medium leading-tight text-secondary text-lg&quot;&gt;
+                                Increase in&lt;br&gt;Sales
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;flex flex-col rounded-2xl overflow-hidden border border-[#8DAF53] border-opacity-30 h-64&quot;&gt;
+                        &lt;div class=&quot;h-[65%] accent-gradient flex items-center justify-center&quot;&gt;
+                            &lt;h2 class=&quot;text-6xl font-bold text-white drop-shadow-md&quot;&gt;30%&lt;/h2&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;h-[35%] glass-panel flex items-center justify-center p-4&quot;&gt;
+                            &lt;p class=&quot;text-center font-medium leading-tight text-secondary text-lg&quot;&gt;
+                                Increase in&lt;br&gt;Website Traffic
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;flex flex-col rounded-2xl overflow-hidden border border-[#8DAF53] border-opacity-30 h-64&quot;&gt;
+                        &lt;div class=&quot;h-[65%] accent-gradient flex items-center justify-center&quot;&gt;
+                            &lt;h2 class=&quot;text-6xl font-bold text-white drop-shadow-md&quot;&gt;90%&lt;/h2&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;h-[35%] glass-panel flex items-center justify-center p-4&quot;&gt;
+                            &lt;p class=&quot;text-center font-medium leading-tight text-secondary text-lg&quot;&gt;
+                                Positive Community&lt;br&gt;Feedback
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+
+                &lt;div class=&quot;absolute bottom-12 right-12 opacity-0&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;col-span-4 h-full relative&quot;&gt;
+                &lt;div class=&quot;absolute top-24 right-0 w-full h-[550px] rounded-l-[40px] overflow-hidden&quot;&gt;
+                    &lt;img 
+                        src=&quot;https://images.unsplash.com/photo-1518531933037-9a60aa69d43d?q=80&amp;w=600&amp;auto=format&amp;fit=crop&quot; 
+                        alt=&quot;Macro Green Leaf Texture&quot; 
+                        class=&quot;w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-700&quot;
+                        style=&quot;display: block;&quot;
+                    &gt;
+                &lt;/div&gt;
+                
+                &lt;div class=&quot;absolute -bottom-10 -right-10 w-40 h-40 rounded-full border border-[#8DAF53] opacity-20&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;div class=&quot;absolute bottom-0 right-0 w-[100px] h-[60px] accent-gradient&quot;&gt;
+            &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 10
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Borcelle Conclusion Presentation&lt;/title&gt;
+    
+    &lt;!-- Import FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;!-- Import Google Fonts via Domestic CDN --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+
+    &lt;!-- Internal Styles for specific constraints and overrides --&gt;
+    &lt;style&gt;
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Font Family Setting */
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            /* Body must remain unstyled regarding layout per instructions, styles applied to container */
+        }
+
+        /* Main Container Styling */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #111113; /* Global Background */
+            color: #FFFFFF; /* Global Primary Text */
+            overflow: hidden; /* Ensure no scrollbars */
+        }
+
+        /* Typography Utilities */
+        .text-accent {
+            color: #8DAF53;
+        }
+        
+        .bg-accent {
+            background-color: #8DAF53;
+        }
+
+        /* Custom text tracking for elegance */
+        .tracking-widest-custom {
+            letter-spacing: 0.2em;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;!-- Main Page Container --&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;!-- Header / Navigation Area --&gt;
+        &lt;!-- Purpose: Top navigation bar with Logo and Links --&gt;
+        &lt;header class=&quot;flex justify-between items-center px-16 pt-10 pb-4 w-full absolute top-0 left-0 z-20&quot;&gt;
+            &lt;!-- Logo --&gt;
+            &lt;div class=&quot;logo&quot;&gt;
+                &lt;h2 class=&quot;text-xl font-bold tracking-widest uppercase text-white&quot;&gt;Borcelle&lt;/h2&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Navigation Links --&gt;
+            &lt;nav&gt;
+                &lt;ul class=&quot;flex items-center gap-12 text-sm font-light text-white&quot;&gt;
+                    &lt;li&gt;Home&lt;/li&gt;
+                    &lt;li&gt;About&lt;/li&gt;
+                    &lt;li&gt;Contact&lt;/li&gt;
+                    &lt;!-- Hamburger Menu Icon --&gt;
+                    &lt;li class=&quot;text-xl cursor-pointer&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-bars&quot;&gt;&lt;/i&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/nav&gt;
+        &lt;/header&gt;
+
+        &lt;!-- Main Content Grid --&gt;
+        &lt;!-- Purpose: Split the screen into Image focus (left) and Text content (right) --&gt;
+        &lt;div class=&quot;grid grid-cols-12 h-full w-full pl-16 pr-0 pb-12 pt-24 gap-8&quot;&gt;
+            
+            &lt;!-- Left Column: Visual Focus (Image + Big Title) --&gt;
+            &lt;!-- Purpose: High-impact visual container echoing the 'Conclusion' slide concept --&gt;
+            &lt;div class=&quot;col-span-8 relative h-[500px] mt-8&quot;&gt;
+                &lt;!-- Image Wrapper with Border Radius and Shadow --&gt;
+                &lt;div class=&quot;w-full h-full rounded-[40px] overflow-hidden relative shadow-2xl&quot;&gt;
+                    &lt;!-- Background Image --&gt;
+                    &lt;!-- Sourced a dark, moody leaf image similar to reference --&gt;
+                    &lt;img 
+                        src=&quot;https://images.unsplash.com/photo-1533038590840-1cde6e668a91?q=80&amp;w=1000&amp;auto=format&amp;fit=crop&quot; 
+                        alt=&quot;Dark leaf macro photography with water drops&quot; 
+                        class=&quot;w-full h-full object-cover opacity-80&quot;
+                        style=&quot;filter: brightness(0.8) contrast(1.1);&quot;
+                    &gt;
+                    &lt;!-- 850*500 --&gt;
+
+                    &lt;!-- Overlay Title --&gt;
+                    &lt;!-- Positioned absolute to sit on top of the image --&gt;
+                    &lt;div class=&quot;absolute bottom-10 left-0 w-full text-center&quot;&gt;
+                        &lt;h1 class=&quot;text-7xl font-bold text-white uppercase tracking-widest drop-shadow-lg&quot; style=&quot;letter-spacing: 0.15em;&quot;&gt;
+                            Conclusion
+                        &lt;/h1&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Right Column: Text Content --&gt;
+            &lt;!-- Purpose: Descriptive text providing context to the conclusion --&gt;
+            &lt;div class=&quot;col-span-4 flex flex-col justify-center pr-16 pl-4 h-[500px] mt-8&quot;&gt;
+                &lt;div class=&quot;text-content&quot;&gt;
+                    &lt;p class=&quot;text-[#E0E0E0] text-sm leading-relaxed font-light text-justify&quot;&gt;
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Footer Area --&gt;
+        &lt;!-- Purpose: Branding URL and decorative accent --&gt;
+        
+
+        &lt;!-- Decorative Accent Box --&gt;
+        &lt;!-- Purpose: The green rectangle in the bottom right corner specified in the design --&gt;
+        &lt;div class=&quot;absolute bottom-0 right-0 w-[100px] h-[100px] bg-[#8DAF53]&quot;&gt;&lt;/div&gt;
+        
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 11
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Project Roadmap - Borcelle&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        /* CSS Reset &amp; Global Standards */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        /* Page Container */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #111113;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Border Utility */
+        .card-border { border: 1px solid #8DAF53; }
+        
+        /* Dashed Line Utility */
+        .dashed-line {
+            border-top: 2px dashed #8DAF53;
+            opacity: 0.5;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;header class=&quot;flex justify-between items-center px-16 pt-10 w-full absolute top-0 left-0 z-20&quot;&gt;
+            &lt;div class=&quot;text-white font-bold text-xl tracking-widest uppercase&quot;&gt;Borcelle&lt;/div&gt;
+            &lt;nav&gt;
+                &lt;ul class=&quot;flex items-center gap-10 list-none&quot;&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;text-white text-sm no-underline opacity-90 hover:opacity-100&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;text-white text-sm no-underline opacity-90 hover:opacity-100&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;text-white text-sm no-underline opacity-90 hover:opacity-100&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;i class=&quot;fa-solid fa-bars text-white text-2xl cursor-pointer&quot;&gt;&lt;/i&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/nav&gt;
+        &lt;/header&gt;
+
+        &lt;main class=&quot;w-full h-full flex flex-col justify-center pt-20 px-20 pb-12&quot;&gt;
+            
+            &lt;div class=&quot;w-full mb-16 pl-4 border-l-4 border-[#8DAF53]&quot;&gt;
+                &lt;h1 class=&quot;text-white text-6xl font-bold uppercase tracking-wide leading-none&quot;&gt;
+                    Future &lt;br&gt;Roadmap
+                &lt;/h1&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;grid grid-cols-4 gap-6 w-full relative&quot;&gt;
+                
+                &lt;div class=&quot;absolute top-8 left-0 w-full dashed-line -z-0&quot;&gt;&lt;/div&gt;
+
+                &lt;div class=&quot;relative z-10&quot;&gt;
+                    &lt;div class=&quot;w-16 h-16 bg-[#111113] border-2 border-[#8DAF53] rounded-full flex items-center justify-center mb-6&quot;&gt;
+                        &lt;span class=&quot;text-white font-bold text-xl&quot;&gt;01&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;card-border rounded-xl p-6 bg-[#111113]&quot;&gt;
+                        &lt;h3 class=&quot;text-[#8DAF53] font-bold uppercase text-lg mb-2&quot;&gt;Q1: Research&lt;/h3&gt;
+                        &lt;p class=&quot;text-[#E0E0E0] text-sm font-light leading-6&quot;&gt;
+                            Conducting market analysis and gathering user requirements to set the foundation.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;relative z-10 mt-12&quot;&gt; &lt;div class=&quot;w-16 h-16 bg-[#8DAF53] rounded-full flex items-center justify-center mb-6 shadow-lg shadow-[#8DAF53]/20&quot;&gt;
+                        &lt;span class=&quot;text-white font-bold text-xl&quot;&gt;02&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;card-border rounded-xl p-6 bg-[#111113]&quot;&gt;
+                        &lt;h3 class=&quot;text-white font-bold uppercase text-lg mb-2&quot;&gt;Q2: Prototype&lt;/h3&gt;
+                        &lt;p class=&quot;text-[#E0E0E0] text-sm font-light leading-6&quot;&gt;
+                            Developing initial wireframes and interactive mockups for stakeholder review.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;relative z-10&quot;&gt;
+                    &lt;div class=&quot;w-16 h-16 bg-[#111113] border-2 border-[#8DAF53] rounded-full flex items-center justify-center mb-6&quot;&gt;
+                        &lt;span class=&quot;text-white font-bold text-xl&quot;&gt;03&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;card-border rounded-xl p-6 bg-[#111113]&quot;&gt;
+                        &lt;h3 class=&quot;text-[#8DAF53] font-bold uppercase text-lg mb-2&quot;&gt;Q3: Develop&lt;/h3&gt;
+                        &lt;p class=&quot;text-[#E0E0E0] text-sm font-light leading-6&quot;&gt;
+                            Full-stack implementation ensuring code quality, security, and performance.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;relative z-10 mt-12&quot;&gt; &lt;div class=&quot;w-16 h-16 bg-[#111113] border-2 border-[#8DAF53] rounded-full flex items-center justify-center mb-6&quot;&gt;
+                        &lt;span class=&quot;text-white font-bold text-xl&quot;&gt;04&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;card-border rounded-xl p-6 bg-[#111113]&quot;&gt;
+                        &lt;h3 class=&quot;text-[#8DAF53] font-bold uppercase text-lg mb-2&quot;&gt;Q4: Launch&lt;/h3&gt;
+                        &lt;p class=&quot;text-[#E0E0E0] text-sm font-light leading-6&quot;&gt;
+                            Final deployment, user training sessions, and transitioning to support phase.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/main&gt;
+
+        &lt;div class=&quot;absolute bottom-0 right-0 z-10&quot;&gt;
+            &lt;div class=&quot;w-24 h-24 bg-[#8DAF53]&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 12
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Thank You - Finance Division&lt;/title&gt;
+
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+
+    &lt;!-- Fonts (Using the provided Baidu CDN for domestic stability) --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+
+    &lt;!-- Custom Config for Specific Colors --&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#111113',
+                        accent: '#8DAF53',
+                        textMain: '#FFFFFF',
+                        textSec: '#E0E0E0',
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container Styles - Strict Compliance */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #111113;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Typography Utilities to avoid span wrapping text */
+        .tracking-wide-custom {
+            letter-spacing: 0.2em;
+        }
+        
+        /* Gradient Overlay for Text Readability */
+        .overlay-gradient {
+            background: linear-gradient(to bottom, rgba(17, 17, 19, 0.4), rgba(17, 17, 19, 0.8));
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;!-- Main Page Container --&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+
+        &lt;!-- 1. Header Section --&gt;
+        &lt;!-- Purpose: Branding and Navigation --&gt;
+        &lt;div class=&quot;flex-none h-20 w-full flex justify-between items-center px-12 bg-bgDark z-50&quot;&gt;
+            &lt;!-- Logo --&gt;
+            &lt;div class=&quot;flex items-center&quot;&gt;
+                &lt;h2 class=&quot;text-textMain text-xl font-bold tracking-wide-custom uppercase&quot;&gt;BORCELLE&lt;/h2&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Navigation --&gt;
+            &lt;ul class=&quot;flex items-center gap-10 list-none&quot;&gt;
+                &lt;li&gt;&lt;p class=&quot;text-textSec text-sm font-medium&quot;&gt;Home&lt;/p&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;p class=&quot;text-textSec text-sm font-medium&quot;&gt;About&lt;/p&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;p class=&quot;text-textSec text-sm font-medium&quot;&gt;Contact&lt;/p&gt;&lt;/li&gt;
+                &lt;!-- Hamburger Menu Icon --&gt;
+                &lt;li&gt;
+                    &lt;div class=&quot;text-textMain text-2xl&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-bars&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 2. Hero Section / Main Content --&gt;
+        &lt;!-- Purpose: Visual impact and core message --&gt;
+        &lt;div class=&quot;flex-1 relative w-full flex flex-col justify-center items-center&quot;&gt;
+            
+            &lt;!-- Background Image --&gt;
+            &lt;!-- Using a high-quality dark leaf texture to match the reference &quot;Monstera&quot; style --&gt;
+            &lt;div class=&quot;absolute inset-0 w-full h-full&quot;&gt;
+                &lt;img src=&quot;https://images.unsplash.com/photo-1533038590840-1cde6e668a91?q=80&amp;w=2574&amp;auto=format&amp;fit=crop&quot; 
+                     alt=&quot;Dark Tropical Leaves Background&quot; 
+                     class=&quot;w-full h-full object-cover opacity-60&quot;&gt;
+                &lt;!-- 1280*560 --&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Gradient Overlay for better contrast --&gt;
+            &lt;div class=&quot;absolute inset-0 overlay-gradient&quot;&gt;&lt;/div&gt;
+
+            &lt;!-- Central Content --&gt;
+            &lt;div class=&quot;relative z-10 max-w-3xl text-center flex flex-col items-center&quot;&gt;
+                
+                &lt;!-- Main Title --&gt;
+                &lt;h1 class=&quot;text-textMain text-8xl font-bold tracking-tighter mb-6 shadow-black drop-shadow-md&quot;&gt;
+                    THANK&lt;br&gt;YOU
+                &lt;/h1&gt;
+
+                &lt;!-- Body Text --&gt;
+                &lt;!-- Accurate lorem ipsum from reference --&gt;
+                &lt;p class=&quot;text-textSec text-base leading-relaxed mb-10 px-10 text-center font-light&quot;&gt;
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                &lt;/p&gt;
+
+                &lt;!-- Action Button / Label --&gt;
+                &lt;!-- Styling: Pill shape, transparent with accent border --&gt;
+                &lt;div class=&quot;border border-accent rounded-full px-10 py-3 backdrop-blur-sm bg-opacity-10 bg-black&quot;&gt;
+                    &lt;p class=&quot;text-textMain text-sm tracking-wide-custom uppercase font-medium&quot;&gt;
+                        FINANCE DIVISION
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 3. Footer Section --&gt;
+        &lt;!-- Purpose: Contact info and visual accent --&gt;
+        &lt;div class=&quot;flex-none h-14 w-full bg-bgDark flex justify-end items-center relative z-50&quot;&gt;
+        
+
+            &lt;!-- Accent Green Block (Decorative) --&gt;
+            &lt;div class=&quot;h-full w-24 bg-accent&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <script>
+   // 自动调整iframe高度
+    function resizeIframes() {
+        document.querySelectorAll('.responsive-iframe').forEach(iframe => {
+            try {
+                const doc = iframe.contentDocument || iframe.contentWindow.document;
+                const height = Math.max(
+                    doc.body.scrollHeight,
+                    doc.documentElement.scrollHeight,
+                    doc.body.offsetHeight,
+                    doc.documentElement.offsetHeight,
+                    doc.body.clientHeight,
+                    doc.documentElement.clientHeight
+                );
+                iframe.style.height = height + 'px';
+            } catch (e) {
+                console.log('无法调整iframe高度:', e);
+            }
+        });
+    }
+    
+    // 初始调整
+    window.addEventListener('load', resizeIframes);
+    
+    // 内容加载后调整
+    document.querySelectorAll('.responsive-iframe').forEach(iframe => {
+        iframe.addEventListener('load', function() {
+            resizeIframes();
+            // 对动态内容进行定期检查
+            setInterval(resizeIframes, 1000);
+        });
+    });
+  </script>
+ </body>
+</html>

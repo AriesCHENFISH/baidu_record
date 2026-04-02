@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Finance Division</title>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+
+    <!-- Fonts (Using the provided Baidu CDN for domestic stability) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <!-- Custom Config for Specific Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#111113',
+                        accent: '#8DAF53',
+                        textMain: '#FFFFFF',
+                        textSec: '#E0E0E0',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container Styles - Strict Compliance */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #111113;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Typography Utilities to avoid span wrapping text */
+        .tracking-wide-custom {
+            letter-spacing: 0.2em;
+        }
+        
+        /* Gradient Overlay for Text Readability */
+        .overlay-gradient {
+            background: linear-gradient(to bottom, rgba(17, 17, 19, 0.4), rgba(17, 17, 19, 0.8));
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Page Container -->
+    <div id="page_container">
+
+        <!-- 1. Header Section -->
+        <!-- Purpose: Branding and Navigation -->
+        <div class="flex-none h-20 w-full flex justify-between items-center px-12 bg-bgDark z-50">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <h2 class="text-textMain text-xl font-bold tracking-wide-custom uppercase">BORCELLE</h2>
+            </div>
+
+            <!-- Navigation -->
+            <ul class="flex items-center gap-10 list-none">
+                <li><p class="text-textSec text-sm font-medium">Home</p></li>
+                <li><p class="text-textSec text-sm font-medium">About</p></li>
+                <li><p class="text-textSec text-sm font-medium">Contact</p></li>
+                <!-- Hamburger Menu Icon -->
+                <li>
+                    <div class="text-textMain text-2xl">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 2. Hero Section / Main Content -->
+        <!-- Purpose: Visual impact and core message -->
+        <div class="flex-1 relative w-full flex flex-col justify-center items-center">
+            
+            <!-- Background Image -->
+            <!-- Using a high-quality dark leaf texture to match the reference "Monstera" style -->
+            <div class="absolute inset-0 w-full h-full">
+                <img src="https://images.unsplash.com/photo-1533038590840-1cde6e668a91?q=80&w=2574&auto=format&fit=crop" 
+                     alt="Dark Tropical Leaves Background" 
+                     class="w-full h-full object-cover opacity-60">
+                <!-- 1280*560 -->
+            </div>
+
+            <!-- Gradient Overlay for better contrast -->
+            <div class="absolute inset-0 overlay-gradient"></div>
+
+            <!-- Central Content -->
+            <div class="relative z-10 max-w-3xl text-center flex flex-col items-center">
+                
+                <!-- Main Title -->
+                <h1 class="text-textMain text-8xl font-bold tracking-tighter mb-6 shadow-black drop-shadow-md">
+                    THANK<br>YOU
+                </h1>
+
+                <!-- Body Text -->
+                <!-- Accurate lorem ipsum from reference -->
+                <p class="text-textSec text-base leading-relaxed mb-10 px-10 text-center font-light">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+
+                <!-- Action Button / Label -->
+                <!-- Styling: Pill shape, transparent with accent border -->
+                <div class="border border-accent rounded-full px-10 py-3 backdrop-blur-sm bg-opacity-10 bg-black">
+                    <p class="text-textMain text-sm tracking-wide-custom uppercase font-medium">
+                        FINANCE DIVISION
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 3. Footer Section -->
+        <!-- Purpose: Contact info and visual accent -->
+        <div class="flex-none h-14 w-full bg-bgDark flex justify-end items-center relative z-50">
+        
+
+            <!-- Accent Green Block (Decorative) -->
+            <div class="h-full w-24 bg-accent"></div>
+        </div>
+
+    </div>
+
+</body>
+</html>

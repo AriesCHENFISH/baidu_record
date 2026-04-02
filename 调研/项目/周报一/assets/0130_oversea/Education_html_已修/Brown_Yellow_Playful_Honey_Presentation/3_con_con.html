@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liceria & Co. - Honey Presentation</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', 'Noto Sans SC', sans-serif; }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            margin: 0 auto;
+            background-color: #2E1A16;
+            overflow: hidden;
+            color: #FFFFFF;
+        }
+
+        .font-serif-display { font-family: 'Playfair Display', serif; }
+
+        /* 单一标签动效 */
+        .single-nav-tag {
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #F8C854;
+            position: relative;
+            padding-bottom: 4px;
+        }
+        .single-nav-tag::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 1px;
+            background: rgba(248, 200, 84, 0.5);
+        }
+
+        /* 玻璃质感按钮 */
+        .glass-action {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(248, 200, 84, 0.2);
+            transition: all 0.3s ease;
+        }
+        .glass-action:hover {
+            border-color: #F8C854;
+            background: rgba(248, 200, 84, 0.1);
+        }
+
+        /* 蜂巢 */
+        .hexagon {
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            background-size: 700px auto;
+            background-repeat: no-repeat;
+        }
+        .hex-1 { background-position: -200px -30px; } 
+        .hex-2 { background-position: -100px -180px; }
+        .hex-3 { background-position: -300px -180px; }
+        .hex-4 { background-position: 0px -330px; }
+        .hex-5 { background-position: -200px -330px; }
+        .hex-6 { background-position: -400px -330px; }
+        .hex-7 { background-position: -100px -480px; }
+        .hex-8 { background-position: -300px -480px; }
+        
+        .title-glow { text-shadow: 2px 4px 12px rgba(0,0,0,0.4); }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <header class="absolute top-0 left-0 w-full px-16 py-10 flex justify-between items-center z-50">
+            <div class="flex items-center space-x-3">
+                <i class="fa-solid fa-crown text-[#F8C854] text-sm"></i>
+                <span class="font-serif-display text-lg tracking-[0.2em]">LICERIA</span>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <span class="single-nav-tag">Explore Collection</span>
+                <span class="text-[10px] opacity-40 mt-1 font-light tracking-[0.1em]">EST. 1992</span>
+            </div>
+
+            <div class="glass-action px-5 py-2 rounded-lg flex items-center space-x-4 cursor-pointer">
+                <span class="text-[0.65rem] font-bold tracking-widest opacity-80 uppercase">Member Access</span>
+                <div class="w-6 h-6 bg-[#F8C854] rounded flex items-center justify-center">
+                    <i class="fa-solid fa-arrow-right text-[#2E1A16] text-[10px]"></i>
+                </div>
+            </div>
+        </header>
+
+        <div class="absolute top-0 right-0 flex items-start gap-0 z-10 transform translate-x-10 -translate-y-2 opacity-90">
+            <div class="w-16 h-24 bg-[#F8C854] rounded-b-full shadow-md transform -translate-y-10"></div>
+            <div class="w-20 h-40 bg-[#F8C854] rounded-b-full shadow-lg mx-[-5px]">
+                <div class="absolute bottom-4 right-4 w-3 h-6 bg-white opacity-40 rounded-full transform rotate-12"></div>
+            </div>
+            <div class="w-14 h-20 bg-[#F8C854] rounded-b-full shadow-md transform -translate-y-6"></div>
+            <div class="absolute top-0 right-0 w-[300px] h-16 bg-[#F8C854] rounded-bl-full"></div>
+        </div>
+
+        <div class="grid grid-cols-12 h-full w-full pt-20">
+            <div class="col-span-5 pl-16 pr-8 flex flex-col justify-center relative z-10">
+                <h1 class="font-serif-display text-[#F8C854] text-[5.5rem] leading-none mb-12 title-glow">
+                    Our Honey
+                </h1>
+
+                <div class="mb-10">
+                    <h3 class="text-white text-xl font-bold mb-3 flex items-center gap-3">
+                        <span class="text-[#F8C854] font-serif-display italic">01.</span> Raw Wildflower
+                    </h3>
+                    <p class="text-[#D0C0B8] text-sm leading-relaxed font-light text-justify">
+                        Crafted by nature, our wildflower honey is never ultra-filtered or overheated, preserving the delicate pollen and enzymes that make it a true superfood.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-white text-xl font-bold mb-3 flex items-center gap-3">
+                        <span class="text-[#F8C854] font-serif-display italic">02.</span> Golden Nectar
+                    </h3>
+                    <p class="text-[#D0C0B8] text-sm leading-relaxed font-light text-justify">
+                        Experience the liquid gold of the sun. Each batch is sustainably sourced from local apiaries committed to bee health and floral diversity.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-span-7 relative h-full">
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[700px] h-[600px] mt-10 ml-10">
+                    <div class="absolute left-[200px] top-0 w-[190px] h-[210px] bg-[#F8C854] hexagon hex-1 shadow-2xl" style="background-image: url('https://images.unsplash.com/photo-1587049352846-4a222e784d38?q=80&w=1000&auto=format&fit=crop');"></div>
+                    <div class="absolute left-[100px] top-[160px] w-[190px] h-[210px] bg-[#F8C854] hexagon hex-2 shadow-2xl" style="background-image: url('https://images.unsplash.com/photo-1587049352846-4a222e784d38?q=80&w=1000&auto=format&fit=crop');"></div>
+                    <div class="absolute left-[300px] top-[160px] w-[190px] h-[210px] bg-[#F8C854] hexagon hex-3 shadow-2xl" style="background-image: url('https://images.unsplash.com/photo-1587049352846-4a222e784d38?q=80&w=1000&auto=format&fit=crop');"></div>
+                    <div class="absolute left-[0px] top-[320px] w-[190px] h-[210px] bg-[#F8C854] hexagon hex-4 shadow-2xl" style="background-image: url('https://images.unsplash.com/photo-1587049352846-4a222e784d38?q=80&w=1000&auto=format&fit=crop');"></div>
+                    <div class="absolute left-[200px] top-[320px] w-[190px] h-[210px] bg-[#F8C854] hexagon hex-5 shadow-2xl" style="background-image: url('https://images.unsplash.com/photo-1587049352846-4a222e784d38?q=80&w=1000&auto=format&fit=crop');"></div>
+                    <div class="absolute left-[400px] top-[320px] w-[190px] h-[210px] bg-[#F8C854] hexagon hex-6 shadow-2xl" style="background-image: url('https://images.unsplash.com/photo-1587049352846-4a222e784d38?q=80&w=1000&auto=format&fit=crop');"></div>
+                    <div class="absolute left-[100px] top-[480px] w-[190px] h-[210px] bg-[#F8C854] hexagon hex-7 shadow-2xl" style="background-image: url('https://images.unsplash.com/photo-1587049352846-4a222e784d38?q=80&w=1000&auto=format&fit=crop');"></div>
+                    <div class="absolute left-[300px] top-[480px] w-[190px] h-[210px] bg-[#F8C854] hexagon hex-8 shadow-2xl" style="background-image: url('https://images.unsplash.com/photo-1587049352846-4a222e784d38?q=80&w=1000&auto=format&fit=crop');"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Sports Unleashed - Cover</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #1A0B2E; overflow: hidden; }
+        
+        /* 背景增强 */
+        .bg-img { position: absolute; inset: 0; z-index: 0; transform: scale(1.1); filter: brightness(0.3) saturate(1.5) blur(2px); }
+        .bg-overlay { position: absolute; inset: 0; background: radial-gradient(circle at center, rgba(157, 0, 255, 0.15) 0%, rgba(26, 11, 46, 0.9) 80%); z-index: 1; }
+        
+        /* 标题特效 */
+        .title-gradient { 
+            background: linear-gradient(to bottom, #FFFFFF 20%, #E0D4F5 60%, #9D00FF 100%); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 20px rgba(157, 0, 255, 0.5));
+        }
+        
+        /* 玻璃拟态卡片 */
+        .glass-presenter { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); }
+        
+        /* 装饰线条 */
+        .glitch-line { height: 2px; background: linear-gradient(90deg, transparent, #00FFFF, #D65DB1, transparent); width: 60%; margin: 20px auto; opacity: 0.8; }
+        
+        /* 扫描线效果 */
+        .scanlines { position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.1) 51%); background-size: 100% 4px; pointer-events: none; z-index: 5; opacity: 0.3; }
+    </style>
+
+    <script>
+        tailwind.config = { theme: { extend: { colors: { accentA: '#9D00FF', accentB: '#D65DB1', accentUI: '#00FFFF', bgPrimary: '#1A0B2E' } } } }
+    </script>
+</head>
+<body>
+    <div id="page_container">
+        <!-- 背景层 -->
+        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2670" class="bg-img">
+        <div class="bg-overlay"></div>
+        <div class="scanlines"></div>
+
+        <!-- LOGO部分 (保持不变) -->
+        <header class="absolute top-0 left-0 z-50 px-16 py-12">
+            <div class="flex items-center gap-5">
+                <div class="w-14 h-14 flex items-center justify-center rounded-tr-xl rounded-bl-xl bg-bgPrimary/90 relative z-10" style="border: 2px solid; border-image: linear-gradient(135deg, #9D00FF, #00FFFF) 1;">
+                    <i class="fa-solid fa-bolt-lightning text-2xl text-accentUI"></i>
+                </div>
+                <div class="flex flex-col">
+                    <h2 class="text-white font-black text-2xl tracking-[0.2em] uppercase leading-none">Salford <span class="text-accentUI">&</span> Co.</h2>
+                    <div class="flex items-center gap-2 mt-2">
+                        <span class="h-[2px] w-8 bg-accentA"></span>
+                        <span class="text-[10px] text-white/60 uppercase tracking-[0.4em] font-bold">Keynote Presentation</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- 主内容区 (居中优化) -->
+        <main class="relative z-20 h-full flex flex-col items-center justify-center text-center px-4">
+            <div class="relative inline-block mb-6">
+                <p class="text-accentUI font-mono tracking-[0.8em] text-sm uppercase mb-4 animate-pulse">
+                    <i class="fa-solid fa-crosshairs mr-2"></i> Annual Esports Report 2026
+                </p>
+                <div class="flex justify-center items-center gap-4">
+                    <div class="w-12 h-[1px] bg-accentUI/30"></div>
+                    <div class="w-2 h-2 rotate-45 border border-accentUI"></div>
+                    <div class="w-12 h-[1px] bg-accentUI/30"></div>
+                </div>
+            </div>
+
+            <h1 class="text-[130px] font-black italic tracking-tighter leading-[0.8] title-gradient uppercase">
+                E-SPORTS <br> <span class="text-[140px]">UNLEASHED</span>
+            </h1>
+
+            <div class="glitch-line"></div>
+            
+            <p class="text-white/40 text-xs tracking-[1em] uppercase mt-2 font-light">
+                Redefining the digital competitive landscape
+            </p>
+        </main>
+
+        <!-- 展示卡片 (保持不变) -->
+        <div class="absolute bottom-16 right-16 z-30">
+            <div class="glass-presenter p-8 rounded-2xl flex items-center gap-8">
+                <div class="text-right">
+                    <p class="text-white/40 text-[10px] uppercase tracking-widest mb-1">Presented by</p>
+                    <h3 class="text-white text-2xl font-black uppercase tracking-tight">ALEX RIVERA</h3>
+                    <p class="text-accentUI text-xs font-bold uppercase tracking-widest mt-1 italic">Chief Production Officer</p>
+                </div>
+                <div class="w-[2px] h-12 bg-white/20"></div>
+                <div class="flex flex-col gap-2">
+                    <div class="flex items-center gap-2 text-white/60 text-xs hover:text-white transition-colors cursor-pointer">
+                        <i class="fa-solid fa-calendar-day text-accentB"></i> 20 JAN 2026
+                    </div>
+                    <div class="flex items-center gap-2 text-white/60 text-xs">
+                        <i class="fa-solid fa-location-dot text-accentB"></i> Global HQ
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 装饰性边框/角落 -->
+        <div class="absolute top-8 right-8 w-32 h-32 border-t-2 border-r-2 border-white/5 z-10"></div>
+        <div class="absolute bottom-8 left-8 w-32 h-32 border-b-2 border-l-2 border-white/5 z-10"></div>
+    </div>
+</body>
+</html>

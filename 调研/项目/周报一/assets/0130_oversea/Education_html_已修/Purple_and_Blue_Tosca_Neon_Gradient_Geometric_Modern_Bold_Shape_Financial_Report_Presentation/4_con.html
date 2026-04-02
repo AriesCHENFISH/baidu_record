@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Statement Analysis - Fradel Company</title>
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#050510',
+                        navBg: '#1F1D36',
+                        primary: '#D0F4DE',
+                        secondary: '#8DE4E6',
+                        accent1: '#5DAFCC',
+                        accent2: '#4E86B3',
+                        textGray: '#B0B0B8',
+                        glow: '#2D2B55',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #050510;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        .glow-effect {
+            position: absolute;
+            width: 800px;
+            height: 800px;
+            border-radius: 50%;
+            filter: blur(120px);
+            z-index: 0;
+            opacity: 0.4;
+        }
+        .text-glass {
+            background: rgba(31, 29, 54, 0.4);
+            border-left: 2px solid rgba(141, 228, 230, 0.2);
+            padding: 20px;
+            border-radius: 0 16px 16px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <div class="glow-effect" style="top: -300px; left: -200px; background: radial-gradient(circle, #2D2B55 0%, transparent 70%);"></div>
+        <div class="glow-effect" style="bottom: -300px; right: -100px; background: radial-gradient(circle, #4E86B3 0%, transparent 70%);"></div>
+
+        <div class="relative z-10 w-full h-full flex flex-col px-16 pt-12">
+            
+            <header class="flex justify-start items-center mb-8">
+                <div class="flex items-center">
+                    <div class="w-[4px] h-10 bg-gradient-to-b from-secondary to-accent2 rounded-full mr-6 shadow-[0_0_15px_rgba(141,228,230,0.4)]"></div>
+                    <div class="flex flex-col">
+                        <h2 class="text-4xl font-black tracking-[0.35em] text-white leading-none uppercase">ANALYSIS</h2>
+                        <p class="text-[10px] text-accent1 tracking-[0.4em] font-medium uppercase mt-2 opacity-70">Income Statement Report</p>
+                    </div>
+                </div>
+            </header>
+
+            <div class="flex-1 grid grid-cols-12 gap-4 items-center pb-10">
+                
+                <div class="col-span-4 flex flex-col justify-center pr-8 border-r border-white/5">
+                    <h1 class="text-primary text-6xl font-bold tracking-tight leading-[1.1]">
+                        Income <br>
+                        Statement <br>
+                        <span class="text-secondary">Analysis</span>
+                    </h1>
+                    <div class="w-16 h-1 bg-accent1 mt-6 rounded-full"></div>
+                </div>
+
+                <div class="col-span-5 h-full flex items-center justify-center relative">
+                    <div id="incomeChart" class="w-full h-[450px]"></div>
+                </div>
+
+                <div class="col-span-3 flex flex-col gap-6 justify-center pl-4">
+                    <div class="text-glass">
+                        <p class="text-textGray text-sm font-light leading-relaxed text-justify">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                        </p>
+                    </div>
+                    <div class="text-glass">
+                        <p class="text-textGray text-sm font-light leading-relaxed text-justify">
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var chartDom = document.getElementById('incomeChart');
+            var myChart = echarts.init(chartDom);
+            
+            const data = [
+                { value: 8, itemStyle: { color: '#D0F4DE' }, name: 'Q1 Data' },
+                { value: 12, itemStyle: { color: '#8DE4E6' }, name: 'Q2 Data' },
+                { value: 16, itemStyle: { color: '#5DAFCC' }, name: 'Q3 Data' },
+                { value: 20, itemStyle: { color: '#4E86B3' }, name: 'Q4 Data' }
+            ];
+
+            const option = {
+                backgroundColor: 'transparent',
+                // Adjusted grid to center the chart content within its container
+                grid: { 
+                    top: '10%', 
+                    left: '10%', 
+                    right: '10%', 
+                    bottom: '15%', 
+                    containLabel: true 
+                },
+                tooltip: { 
+                    trigger: 'axis', 
+                    axisPointer: { type: 'shadow' }, 
+                    backgroundColor: '#1F1D36', 
+                    borderColor: '#2D2B55',
+                    textStyle: { color: '#fff' } 
+                },
+                xAxis: {
+                    type: 'category',
+                    data: ['Item A', 'Item B', 'Item C', 'Item D'],
+                    axisLine: { lineStyle: { color: '#2D2B55' } },
+                    axisTick: { show: false },
+                    axisLabel: { color: '#B0B0B8', fontSize: 13, margin: 15 }
+                },
+                yAxis: {
+                    type: 'value',
+                    splitLine: { lineStyle: { color: '#2D2B55', type: 'dashed', opacity: 0.3 } },
+                    axisLabel: { color: '#B0B0B8', fontSize: 11 }
+                },
+                series: [{
+                    name: 'Revenue',
+                    type: 'bar',
+                    data: data,
+                    barWidth: '60%',
+                    itemStyle: { 
+                        borderRadius: [6, 6, 0, 0],
+                        // Added subtle shadow to bars for depth
+                        shadowColor: 'rgba(0,0,0,0.3)',
+                        shadowBlur: 10
+                    },
+                    animationDuration: 2000,
+                    animationEasing: 'elasticOut'
+                }]
+            };
+            myChart.setOption(option);
+            
+            window.addEventListener('resize', function() {
+                myChart.resize();
+            });
+        });
+    </script>
+</body>
+</html>

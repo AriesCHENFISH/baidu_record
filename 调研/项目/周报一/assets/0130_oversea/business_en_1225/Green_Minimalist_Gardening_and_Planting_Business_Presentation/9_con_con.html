@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Improved Plant Growth - Presentation Slide</title>
+    
+    <!-- 1. Font Import (Domestic Mirror as requested) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    
+    <!-- 2. Tailwind CSS (CDN) -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- 3. FontAwesome (CDN) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+
+    <!-- 4. ECharts (CDN) -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+
+    <!-- Tailwind Config for Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryBg: '#151B22',
+                        globalBackdrop: '#6E777D',
+                        primaryText: '#FFFFFF',
+                        secondaryText: '#C9D1D9',
+                        tabInactive: '#4C555C',
+                        organicOverlay: '#0F151A',
+                        accentGreen: '#4A6F52'
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- 5. CSS Reset & Global Styles -->
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Utility for strictly hiding scrollbars */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Custom Utilities */
+        .glass-panel {
+            background: linear-gradient(135deg, rgba(21, 27, 34, 0.95), rgba(21, 27, 34, 0.98));
+        }
+        
+        /* Gradient Mask for Image */
+        .image-gradient-mask {
+            background: linear-gradient(90deg, #151B22 30%, rgba(21, 27, 34, 0.4) 60%, rgba(21, 27, 34, 0) 100%);
+        }
+
+        /* Tab Shape Logic */
+        .tab-shape {
+            border-radius: 12px 12px 0 0;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 
+        PAGE CONTAINER 
+        Role: Main Canvas
+        Dimensions: 1280x720 Fixed
+        Background: #6E777D (Global Backdrop)
+    -->
+    <div id="page_container" class="relative w-[1280px] h-[720px] mx-auto bg-globalBackdrop overflow-hidden font-sans shadow-none">
+
+        <!-- 
+            TABS NAVIGATION LAYER
+            Role: Top navigation tabs (Visual decoration)
+            Positioning: Absolute, positioned to align with the main card
+        -->
+        <div class="absolute top-[60px] right-[80px] flex items-end z-10">
+            <!-- Inactive Tab -->
+            <div class="bg-tabInactive text-secondaryText px-8 py-3 text-sm font-medium tracking-wide tab-shape mr-1 cursor-default opacity-90">
+                Giggling Platypus Co.
+            </div>
+            <!-- Active Tab (Connects visually to the main card) -->
+            <div class="bg-primaryBg text-primaryText px-10 py-4 text-lg font-bold tracking-wide tab-shape shadow-lg relative -mb-1 z-20">
+                Growth
+            </div>
+        </div>
+
+        <!-- 
+            MAIN CONTENT CARD
+            Role: The "Browser Window" or "Slide" Content Area
+            Style: Rounded corners, Deep Dark Background (#151B22)
+            Z-Index: Higher than backdrop, connects with Active Tab
+        -->
+        <div class="absolute top-[108px] left-[80px] right-[80px] bottom-[80px] bg-primaryBg rounded-bl-[30px] rounded-br-[30px] rounded-tl-[30px] shadow-2xl overflow-hidden flex relative z-10">
+            
+            <!-- 
+                BACKGROUND IMAGE LAYER 
+                Role: Visual Context (Plants)
+                Position: Absolute, covering the right side/center
+            -->
+            <div class="absolute top-0 right-0 w-3/4 h-2/3 z-0">
+                <!-- Image Source: Unsplash (Dark green leaves/nature) -->
+                <!-- w*h annotation: 960*480 -->
+                <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" 
+                     alt="Close up of green plant leaves" 
+                     class="w-full h-full object-cover opacity-80 mix-blend-overlay"> <!-- 960*480 -->
+            </div>
+
+            <!-- 
+                GRADIENT OVERLAY
+                Role: Readability Mask
+                Logic: Solid dark color on left, fading to transparent on right
+            -->
+            <div class="absolute inset-0 z-10 pointer-events-none image-gradient-mask"></div>
+
+            <!-- 
+                CONTENT GRID
+                Role: Layout structure (2 Columns)
+            -->
+            <div class="relative z-20 w-full h-full grid grid-cols-12 gap-12 p-16">
+                
+                <!-- LEFT COLUMN: Typography / Title -->
+                <div class="col-span-5 flex flex-col justify-end pb-8">
+                    <h1 class="text-primaryText text-[80px] leading-[0.95] font-bold tracking-tight">
+                        Improved<br>
+                        <span class="text-secondaryText opacity-80">Plant</span><br>
+                        Growth
+                    </h1>
+                    <!-- Decorative line -->
+                    <div class="w-24 h-2 bg-accentGreen mt-8 rounded-full"></div>
+                </div>
+
+                <!-- RIGHT COLUMN: Charts & Text -->
+                <div class="col-span-7 flex flex-col justify-end pb-4 pl-8">
+                    
+                    <!-- ECharts Container for Progress Bars -->
+                    <!-- Replacing simple CSS bars with ECharts as per technical requirement -->
+                    <div id="growth_chart" class="w-full h-[160px] mb-8"></div>
+
+                    <!-- Text Content -->
+                    <div class="flex flex-col gap-6">
+                        <p class="text-secondaryText text-lg leading-relaxed text-justify font-light tracking-wide border-l-2 border-accentGreen pl-6 opacity-90">
+                            A presentation typically refers to the act of demonstrating or explaining something to an audience, often using visual aids such as slides, charts, graphs, or multimedia elements. It can take various forms, including lectures, speeches, demonstrations, or discussions, and is commonly used in educational, professional, or business settings to convey information, persuade, or engage an audience.
+                        </p>
+                    </div>
+
+                    <!-- Navigation Footer -->
+                    <div class="flex justify-end items-center mt-8 group cursor-pointer">
+                        <span class="text-primaryText text-xl font-medium mr-3 group-hover:mr-5 transition-all duration-300">Next</span>
+                        <i class="fa-solid fa-arrow-right text-accentGreen text-xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ECharts Initialization Script -->
+    <script type="text/javascript">
+        // Initialize the chart
+        var chartDom = document.getElementById('growth_chart');
+        var myChart = echarts.init(chartDom);
+        var option;
+
+        // Data Configuration
+        const data = [
+            { name: 'Target', value: 74 },
+            { name: 'Achieved', value: 90 }
+        ];
+
+        option = {
+            // Remove default padding to fit container
+            grid: {
+                top: '10%',
+                left: '0%',
+                right: '10%', // Space for labels
+                bottom: '0%',
+                containLabel: true
+            },
+            xAxis: {
+                type: 'value',
+                max: 100,
+                show: false, // Hide axis lines
+                splitLine: { show: false }
+            },
+            yAxis: {
+                type: 'category',
+                data: ['Prev. Year', 'Cur. Year'], // Implicit labels
+                show: false, // Hide axis labels to match clean design
+                inverse: true // Top to bottom
+            },
+            series: [
+                {
+                    name: 'Growth',
+                    type: 'bar',
+                    data: [74, 90],
+                    barWidth: 20, // Slim modern bars
+                    itemStyle: {
+                        borderRadius: [10, 10, 10, 10], // Rounded ends
+                        color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+                            { offset: 0, color: '#4A6F52' },  // Darker Green
+                            { offset: 1, color: '#A3C9AA' }   // Lighter Green/White tint
+                        ]),
+                        shadowBlur: 10,
+                        shadowColor: 'rgba(74, 111, 82, 0.5)'
+                    },
+                    // Background bar (The "track")
+                    showBackground: true,
+                    backgroundStyle: {
+                        color: 'rgba(255, 255, 255, 0.1)',
+                        borderRadius: [10, 10, 10, 10]
+                    },
+                    // Labels on the right (The 74% and 90%)
+                    label: {
+                        show: true,
+                        position: 'right',
+                        formatter: '{c}%',
+                        color: '#FFFFFF',
+                        fontSize: 24,
+                        fontWeight: 'bold',
+                        fontFamily: '"Noto Sans SC", sans-serif',
+                        offset: [10, 0]
+                    }
+                }
+            ],
+            // Disable animation for static PPT feel (optional, but requested no animation usually implies CSS animation, charts usually render once)
+            animationDuration: 1000, 
+            animationEasing: 'cubicOut'
+        };
+
+        option && myChart.setOption(option);
+
+        // Ensure chart resizes if container changes (though fixed size here)
+        window.addEventListener('resize', function() {
+            myChart.resize();
+        });
+    </script>
+</body>
+</html>

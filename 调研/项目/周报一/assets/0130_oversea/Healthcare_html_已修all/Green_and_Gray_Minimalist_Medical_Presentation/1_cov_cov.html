@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borcelle Hospital - Medical Presentation</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #3C3A32; /* Dark Background */
+            overflow: hidden;
+        }
+
+        /* 统一Logo文字样式 */
+        .logo-text {
+            letter-spacing: 0.15em;
+            display: flex;
+            align-items: center;
+        }
+        .logo-divider {
+            width: 1px;
+            height: 16px;
+            background-color: #CDEE9E;
+            margin: 0 12px;
+            opacity: 0.5;
+        }
+
+        /* 右侧图片斜切设计 */
+        .bg-image-container {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 45%;
+            height: 100%;
+            z-index: 1;
+            clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+        }
+
+        .text-brand-green { color: #CDEE9E; }
+        .bg-brand-green { background-color: #CDEE9E; }
+
+        /* 文本框设计 */
+        .intro-box {
+            box-shadow: 10px 10px 0px rgba(205, 238, 158, 0.1);
+            border-left: 4px solid #CDEE9E;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+
+        <!-- 右侧视觉区域 -->
+        <div class="bg-image-container">
+            <div class="relative w-full h-full">
+                <!-- 图片蒙层 -->
+                <div class="absolute inset-0 bg-gradient-to-r from-[#3C3A32] via-transparent to-transparent z-10 opacity-60"></div>
+                <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=1280&auto=format&fit=crop" 
+                     alt="Modern Medical Architecture" 
+                     class="w-full h-full object-cover">
+            </div>
+        </div>
+
+        <!-- 主内容区域 -->
+        <div class="relative z-20 flex flex-col justify-between h-full p-20">
+            
+            <!-- 统一 Logo 区域 (适配深色背景) -->
+            <div class="logo-text">
+                <span class="font-bold text-2xl text-white">BORCELLE</span>
+                <div class="logo-divider"></div>
+                <span class="font-light text-xl text-brand-green uppercase tracking-widest">Medical Group</span>
+            </div>
+
+            <!-- 主标题区域 -->
+            <div class="flex flex-col mb-10">
+                <!-- 副标题文本框设计 -->
+                <div class="bg-white/5 backdrop-blur-md p-5 rounded-r-lg intro-box mb-8 max-w-[420px]">
+                    <p class="text-white text-sm font-medium tracking-widest uppercase opacity-90">
+                        Strategic insights into modern healthcare <br>& preventive measures 2030
+                    </p>
+                </div>
+
+                <!-- 主标题 (延续加粗、斜体、点缀句号) -->
+                <h1 class="text-brand-green text-[100px] font-bold leading-[1] tracking-tighter italic">
+                    Medical<br>
+                    Presentation.
+                </h1>
+                
+                <!-- 底部修饰条 -->
+                <div class="w-24 h-2 bg-white mt-12 opacity-20 rounded-full"></div>
+            </div>
+
+            <!-- 底部作者/机构信息 -->
+            <div class="flex items-center gap-6">
+                <div class="flex flex-col">
+                    <span class="text-brand-green text-xs font-bold uppercase tracking-[0.3em]">Presented by</span>
+                    <p class="text-white text-lg font-light tracking-wide opacity-80 mt-1">Borcelle Hospital Clinical Board</p>
+                </div>
+                <div class="h-10 w-[1px] bg-white opacity-20"></div>
+                <div class="flex flex-col">
+                    <span class="text-brand-green text-xs font-bold uppercase tracking-[0.3em]">Issue Date</span>
+                    <p class="text-white text-lg font-light tracking-wide opacity-80 mt-1">October 2025</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 装饰背景圆环 (增加空间层次感) -->
+        <div class="absolute top-[10%] left-[35%] w-[400px] h-[400px] border border-white opacity-5 rounded-full pointer-events-none"></div>
+        <div class="absolute -bottom-20 -left-20 w-80 h-80 bg-brand-green opacity-5 rounded-full blur-3xl pointer-events-none"></div>
+
+    </div>
+
+</body>
+</html>

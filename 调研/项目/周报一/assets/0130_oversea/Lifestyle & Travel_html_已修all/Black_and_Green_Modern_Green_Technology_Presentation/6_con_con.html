@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Transportation Keynote</title>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #050807; overflow: hidden; font-family: 'Noto Sans SC', sans-serif; }
+        .neon-text { color: #d9f99d; text-shadow: 0 0 15px rgba(163, 230, 53, 0.4), 0 0 30px rgba(163, 230, 53, 0.2); }
+        .card-glass { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(190, 242, 100, 0.2); }
+        
+        /* 新顶部必要动画 */
+        .glass-nav { background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02)); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.08); }
+        @keyframes slow-rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        .logo-gear { animation: slow-rotate 12s linear infinite; }
+        .status-dot { box-shadow: 0 0 8px #d9f99d; animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(1.2); } 100% { opacity: 1; transform: scale(1); } }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <!-- 装饰背景保持 -->
+        <div style="position: absolute; top: -100px; left: -100px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(132, 204, 22, 0.15) 0%, rgba(0,0,0,0) 70%); border-radius: 50%; z-index: 0;"></div>
+        
+        <div class="relative z-10 flex flex-col h-full px-16 py-10">
+            <!-- 新 Header 替换（保留 Arowwai Industries 名称） -->
+            <header class="relative z-50 mb-8">
+                <nav class="flex justify-between items-center glass-nav rounded-2xl px-8 py-4">
+                    <div class="flex items-center gap-4 group cursor-pointer">
+                        <div class="relative w-9 h-9 flex items-center justify-center">
+                            <div class="absolute inset-0 border border-lime-400/40 rounded-full scale-110"></div>
+                            <div class="text-lime-400 text-lg relative z-10 logo-gear"><i class="fa-solid fa-leaf"></i></div>
+                        </div>
+                        <h4 class="text-white font-bold tracking-widest text-sm uppercase">Arowwai Industries</h4>
+                    </div>
+                    <div class="flex items-center gap-3 group cursor-pointer px-5 py-1.5 rounded-full hover:bg-white/5 transition-all">
+                        <div class="flex gap-1">
+                            <div class="w-1 h-1 bg-lime-400 rounded-full"></div>
+                            <div class="w-1 h-1 bg-lime-400/50 rounded-full"></div>
+                        </div>
+                        <span class="text-[11px] font-bold uppercase tracking-[0.3em] text-gray-200">Explore</span>
+                        <i class="fa-solid fa-plus text-[9px] text-lime-400 group-hover:rotate-90 transition-transform"></i>
+                    </div>
+                    <div class="flex items-center gap-8">
+                        <div class="flex items-center gap-2">
+                            <div class="status-dot w-1.5 h-1.5 bg-lime-400 rounded-full"></div>
+                            <span class="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Node: Active</span>
+                        </div>
+                        <button class="bg-lime-400 text-black px-6 py-2 rounded-full font-black text-[11px] uppercase tracking-widest hover:bg-white transition-all">Connect</button>
+                    </div>
+                </nav>
+            </header>
+
+            <!-- 主内容区：严格保留原始栅格与文字 -->
+            <div class="grid grid-cols-12 gap-12 h-full">
+                <div class="col-span-7 flex flex-col justify-between">
+                    <div>
+                        <h1 class="text-7xl font-bold uppercase leading-tight neon-text mb-6 tracking-tighter">Green<br>Transportation</h1>
+                        <h2 class="text-2xl text-white font-medium mb-3">What is Green Transportation?</h2>
+                        <p class="text-gray-400 leading-relaxed pr-10 text-sm">
+                            Green transportation includes modes of travel that have minimal environmental impact by reducing carbon emissions and energy consumption. It includes electric, hybrid, and fuel-efficient vehicles, as well as public transportation and non-motorized options like biking.
+                        </p>
+                    </div>
+                    <div class="mt-4 relative w-full h-48 rounded-2xl overflow-hidden border border-gray-800 group">
+                        <div class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute bottom-4 right-4 z-20 w-10 h-10 rounded-full border border-lime-400 flex items-center justify-center text-lime-400">
+                            <i class="fa-solid fa-arrow-right -rotate-45"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-span-5 flex flex-col justify-end pb-2">
+                    <div class="flex flex-col gap-5">
+                        <div class="card-glass rounded-2xl p-4 flex items-center gap-4 hover:bg-white/5 transition-colors">
+                            <div class="w-24 h-24 shrink-0 rounded-xl overflow-hidden relative"><img src="https://images.unsplash.com/photo-1593941707874-ef25b8b4a92b?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover"></div>
+                            <div class="flex flex-col">
+                                <h3 class="text-white text-lg font-semibold mb-1">Electric Vehicles (EVs)</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed">Cars powered by electricity instead of gasoline, reducing emissions and reliance on fossil fuels.</p>
+                            </div>
+                        </div>
+                        <div class="card-glass rounded-2xl p-4 flex items-center gap-4 hover:bg-white/5 transition-colors">
+                            <div class="w-24 h-24 shrink-0 rounded-xl overflow-hidden relative"><img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover"></div>
+                            <div class="flex flex-col">
+                                <h3 class="text-white text-lg font-semibold mb-1">Public Transportation</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed">Buses, trains, and subways that move large numbers of people efficiently, reducing individual footprints.</p>
+                            </div>
+                        </div>
+                        <div class="card-glass rounded-2xl p-4 flex items-center gap-4 hover:bg-white/5 transition-colors">
+                            <div class="w-24 h-24 shrink-0 rounded-xl overflow-hidden relative"><img src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover"></div>
+                            <div class="flex flex-col">
+                                <h3 class="text-white text-lg font-semibold mb-1">Bicycles and E-Scooters</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed">Eco-friendly alternatives that produce zero emissions and promote healthier lifestyles.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

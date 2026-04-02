@@ -1,0 +1,2257 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Responsive Merged HTML
+  </title>
+  <style>
+   body {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .page-wrapper {
+                width: 100%;
+                margin: 15px 0;
+                position: relative;
+            }
+            .page-title {
+                background: #f5f5f5;
+                padding: 5px 10px;
+                border-radius: 3px 3px 0 0;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+            }
+            .responsive-iframe {
+                border: none;
+                width: 100%;
+                display: block;
+            }
+  </style>
+ </head>
+ <body>
+  <!-- 内容将在这里插入 -->
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 1
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Football Keynote Cover - Liceria &amp; Co.&lt;/title&gt;
+    
+    &lt;!-- Tailwind CSS (CDN) --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;!-- Google Fonts --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #2A4029;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* 旋转动画 */
+        @keyframes rotate-text {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-rotate {
+            animation: rotate-text 20s linear infinite;
+        }
+
+        /* 标题呼吸发光 */
+        @keyframes title-glow {
+            0%, 100% { text-shadow: 0 0 20px rgba(255,255,255,0.2); }
+            50% { text-shadow: 0 0 50px rgba(217, 70, 62, 0.5); }
+        }
+        .glow-text {
+            animation: title-glow 4s ease-in-out infinite;
+        }
+
+        /* 进度条条纹 */
+        .striped-bar {
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 4px,
+                rgba(224, 230, 223, 0.4) 4px,
+                rgba(224, 230, 223, 0.4) 8px
+            );
+        }
+
+        .pitch-line {
+            border-color: rgba(140, 155, 138, 0.4);
+        }
+    &lt;/style&gt;
+    
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryBg: '#2A4029',
+                        contentBox: '#617360',
+                        textMain: '#FFFFFF',
+                        textBody: '#E0E6DF',
+                        lineColor: '#8C9B8A',
+                        accentRed: '#D9463E',
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;!-- 1. 背景层 --&gt;
+        &lt;div class=&quot;absolute inset-0 z-0&quot;&gt;
+            &lt;!-- 草地纹理 --&gt;
+            &lt;img src=&quot;https://images.unsplash.com/photo-1529900748604-07564a03e7a6?q=80&amp;w=2500&amp;auto=format&amp;fit=crop&quot; 
+                 class=&quot;w-full h-full object-cover opacity-30 mix-blend-overlay&quot;&gt;
+            &lt;!-- 叠加径向渐变，制造舞台中心感 --&gt;
+            &lt;div class=&quot;absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#1a2919_100%)] opacity-80&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 2. 球场几何装饰线条 (Pitch Structure) --&gt;
+        &lt;div class=&quot;absolute inset-0 z-10 pointer-events-none&quot;&gt;
+            &lt;div class=&quot;absolute left-1/2 top-0 bottom-0 w-[1px] bg-lineColor/20 transform -translate-x-1/2&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;absolute left-1/2 top-1/2 w-[600px] h-[600px] border border-lineColor/20 rounded-full transform -translate-x-1/2 -translate-y-1/2&quot;&gt;&lt;/div&gt;
+            &lt;!-- 角标装饰 --&gt;
+            &lt;div class=&quot;absolute top-10 left-10 w-20 h-20 border-t border-l border-lineColor/30&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;absolute top-10 right-10 w-20 h-20 border-t border-r border-lineColor/30&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 3. [统一品牌Logo] 顶部 Header --&gt;
+        &lt;div class=&quot;absolute top-12 left-16 z-30 flex items-start gap-5&quot;&gt;
+            &lt;div class=&quot;relative w-28 h-28 flex items-center justify-center&quot;&gt;
+                &lt;svg class=&quot;absolute w-full h-full animate-rotate&quot; viewBox=&quot;0 0 100 100&quot;&gt;
+                    &lt;defs&gt;
+                        &lt;path id=&quot;coverLogoPath&quot; d=&quot;M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0&quot; /&gt;
+                    &lt;/defs&gt;
+                    &lt;text fill=&quot;#FFFFFF&quot; font-size=&quot;7.5&quot; font-weight=&quot;600&quot; letter-spacing=&quot;2.5&quot; class=&quot;opacity-80 uppercase&quot;&gt;
+                        &lt;textPath xlink:href=&quot;#coverLogoPath&quot;&gt;• LICERIA SPORTS &amp; CO • PREMIUM KEYNOTE •&lt;/textPath&gt;
+                    &lt;/text&gt;
+                &lt;/svg&gt;
+                &lt;div class=&quot;w-14 h-14 bg-accentRed rounded-full border border-white/20 flex items-center justify-center shadow-[0_0_20px_rgba(217,70,62,0.4)]&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-futbol text-white text-2xl&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;mt-5&quot;&gt;
+                &lt;h6 class=&quot;text-textMain text-xl font-bold tracking-[0.3em] leading-none uppercase&quot;&gt;Liceria&lt;/h6&gt;
+                &lt;p class=&quot;text-lineColor text-[10px] tracking-[0.5em] font-light mt-2 uppercase&quot;&gt;Sports Presentation v2.0&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 4. 核心标题区 --&gt;
+        &lt;div class=&quot;relative z-20 w-full h-full flex flex-col justify-center items-center&quot;&gt;
+            
+            &lt;div class=&quot;text-center&quot;&gt;
+                &lt;!-- 顶部副标题装饰 --&gt;
+                &lt;div class=&quot;mb-6 flex items-center justify-center gap-4&quot;&gt;
+                    &lt;div class=&quot;h-[1px] w-12 bg-accentRed&quot;&gt;&lt;/div&gt;
+                    &lt;span class=&quot;text-textBody text-sm font-bold tracking-[0.5em] uppercase opacity-70&quot;&gt;The Strategy of Excellence&lt;/span&gt;
+                    &lt;div class=&quot;h-[1px] w-12 bg-accentRed&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 主标题：使用了更大的字号和呼吸发光效果 --&gt;
+                &lt;div class=&quot;relative&quot;&gt;
+                    &lt;h1 class=&quot;text-white text-[180px] leading-none font-black tracking-tighter uppercase glow-text italic&quot;&gt;
+                        Football
+                    &lt;/h1&gt;
+                    &lt;!-- 装饰性的半透明大数字 --&gt;
+                    &lt;div class=&quot;absolute -top-10 -right-10 text-white/5 text-[240px] font-black -z-10 select-none&quot;&gt;26&lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 底部口号 --&gt;
+                &lt;p class=&quot;mt-4 text-lineColor text-xl font-light tracking-[0.8em] uppercase ml-[0.8em]&quot;&gt;
+                    Mastering the Beautiful Game
+                &lt;/p&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+
+        &lt;!-- 5. 底部 HUD 数据面板 --&gt;
+        &lt;div class=&quot;absolute bottom-12 left-0 w-full z-20 px-20 flex justify-between items-end&quot;&gt;
+            
+            &lt;!-- 左侧 HUD --&gt;
+            &lt;div class=&quot;flex flex-col gap-3&quot;&gt;
+                &lt;div class=&quot;flex items-center gap-4&quot;&gt;
+                    &lt;div class=&quot;w-48 h-2 border border-lineColor/30 p-[1px]&quot;&gt;
+                        &lt;div class=&quot;w-full h-full striped-bar opacity-60&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;span class=&quot;text-textBody text-[10px] font-mono tracking-widest&quot;&gt;ANALYSIS_MODE: ACTIVE&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;flex items-center gap-2&quot;&gt;
+                    &lt;div class=&quot;w-2 h-2 bg-accentRed rounded-full animate-pulse&quot;&gt;&lt;/div&gt;
+                    &lt;p class=&quot;text-lineColor text-[10px] tracking-[0.3em] uppercase&quot;&gt;Tactical Research Division&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- 右侧 HUD --&gt;
+            &lt;div class=&quot;flex flex-col gap-3 items-end&quot;&gt;
+                &lt;div class=&quot;flex items-center gap-4 flex-row-reverse&quot;&gt;
+                    &lt;div class=&quot;w-48 h-2 border border-lineColor/30 p-[1px]&quot;&gt;
+                        &lt;div class=&quot;w-[75%] h-full bg-accentRed/60&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;span class=&quot;text-textBody text-[10px] font-mono tracking-widest&quot;&gt;SYSTEM_STABLE_98%&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;flex items-center gap-6&quot;&gt;
+                    &lt;div class=&quot;flex gap-1&quot;&gt;
+                        &lt;div class=&quot;w-1 h-4 bg-lineColor/40&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;w-1 h-4 bg-lineColor/40&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;w-1 h-4 bg-accentRed&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-lineColor text-[10px] tracking-[0.3em] uppercase italic&quot;&gt;Presentation Archive // 2026&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+
+        &lt;!-- 装饰线条：扫描光束 --&gt;
+        &lt;div class=&quot;absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-accentRed/30 to-transparent z-30 animate-[pulse_3s_infinite]&quot;&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 2
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Contents - Liceria &amp; Co.&lt;/title&gt;
+    
+    &lt;!-- Tailwind CSS (CDN) --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;!-- Google Fonts --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #2A4029;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* 旋转动画 */
+        @keyframes rotate-text {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-rotate {
+            animation: rotate-text 20s linear infinite;
+        }
+
+        /* 玻璃拟态卡片 */
+        .glass-card {
+            background-color: rgba(97, 115, 96, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            background-color: rgba(217, 70, 62, 0.15);
+            border-left: 4px solid #D9463E;
+            transform: translateX(10px);
+        }
+
+        /* 条纹装饰 */
+        .striped-bar {
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 4px,
+                rgba(140, 155, 138, 0.3) 4px,
+                rgba(140, 155, 138, 0.3) 8px
+            );
+        }
+    &lt;/style&gt;
+    
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryBg: '#2A4029',
+                        contentBox: '#617360',
+                        textMain: '#FFFFFF',
+                        textBody: '#E0E6DF',
+                        lineColor: '#8C9B8A',
+                        accentRed: '#D9463E',
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;!-- 1. 背景层 --&gt;
+        &lt;div class=&quot;absolute inset-0 z-0&quot;&gt;
+            &lt;img src=&quot;https://images.unsplash.com/photo-1529900748604-07564a03e7a6?q=80&amp;w=2500&amp;auto=format&amp;fit=crop&quot; 
+                 class=&quot;w-full h-full object-cover opacity-20 mix-blend-overlay&quot;&gt;
+            &lt;!-- 径向暗角 --&gt;
+            &lt;div class=&quot;absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#1a2919_100%)] opacity-60&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 2. 装饰几何线条 (Pitch HUD) --&gt;
+        &lt;div class=&quot;absolute inset-0 z-10 pointer-events-none&quot;&gt;
+            &lt;div class=&quot;absolute top-[50%] left-[-10%] w-[120%] h-[1px] bg-lineColor/20 rotate-[-5deg]&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;absolute top-[10%] right-[10%] w-[400px] h-[400px] border border-lineColor/10 rounded-full&quot;&gt;&lt;/div&gt;
+            &lt;!-- 十字准星 --&gt;
+            &lt;div class=&quot;absolute bottom-20 left-20 w-10 h-10 border-l border-b border-accentRed/50&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 3. [统一品牌Logo] Header Area --&gt;
+        &lt;div class=&quot;absolute top-10 left-12 z-30 flex items-start gap-4 transform scale-90&quot;&gt;
+            &lt;div class=&quot;relative w-24 h-24 flex items-center justify-center&quot;&gt;
+                &lt;svg class=&quot;absolute w-full h-full animate-rotate&quot; viewBox=&quot;0 0 100 100&quot;&gt;
+                    &lt;defs&gt;
+                        &lt;path id=&quot;indexCirclePath&quot; d=&quot;M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0&quot; /&gt;
+                    &lt;/defs&gt;
+                    &lt;text fill=&quot;#FFFFFF&quot; font-size=&quot;7.2&quot; font-weight=&quot;600&quot; letter-spacing=&quot;2.3&quot; class=&quot;opacity-70 uppercase&quot;&gt;
+                        &lt;textPath xlink:href=&quot;#indexCirclePath&quot;&gt;• LICERIA SPORTS &amp; CO • PRESENTATION INDEX •&lt;/textPath&gt;
+                    &lt;/text&gt;
+                &lt;/svg&gt;
+                &lt;div class=&quot;w-12 h-12 bg-accentRed rounded-full border border-white/20 flex items-center justify-center shadow-lg&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-list-ul text-white text-lg&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;mt-4&quot;&gt;
+                &lt;h6 class=&quot;text-textMain text-lg font-bold tracking-[0.25em] leading-none uppercase&quot;&gt;Liceria&lt;/h6&gt;
+                &lt;p class=&quot;text-lineColor text-[9px] tracking-[0.4em] font-light mt-1.5 uppercase&quot;&gt;Strategic Contents Table&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 4. 主标题区 --&gt;
+        &lt;div class=&quot;absolute top-12 right-16 z-20 text-right&quot;&gt;
+            &lt;h1 class=&quot;text-textMain text-7xl font-black uppercase tracking-tighter italic opacity-90&quot;&gt;
+                Contents
+            &lt;/h1&gt;
+            &lt;div class=&quot;flex items-center justify-end gap-3 mt-2&quot;&gt;
+                &lt;div class=&quot;h-[2px] w-12 bg-accentRed&quot;&gt;&lt;/div&gt;
+                &lt;span class=&quot;text-textBody text-xs tracking-[0.5em] uppercase opacity-60&quot;&gt;Agenda Roadmap&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 5. 目录列表 (8个标题) --&gt;
+        &lt;div class=&quot;relative z-20 w-full h-full flex items-center px-16 pt-24&quot;&gt;
+            
+            &lt;div class=&quot;grid grid-cols-2 gap-x-12 gap-y-4 w-full&quot;&gt;
+                
+                &lt;!-- 01 Introduction --&gt;
+                &lt;div class=&quot;glass-card flex items-center p-5 rounded-r-lg group cursor-pointer&quot;&gt;
+                    &lt;span class=&quot;text-accentRed font-black text-2xl w-12 tracking-tighter&quot;&gt;01&lt;/span&gt;
+                    &lt;div class=&quot;h-8 w-[1px] bg-white/10 mx-4&quot;&gt;&lt;/div&gt;
+                    &lt;h3 class=&quot;text-textMain text-xl font-bold tracking-wide uppercase group-hover:text-accentRed transition-colors&quot;&gt;Introduction&lt;/h3&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 05 Famous Players --&gt;
+                &lt;div class=&quot;glass-card flex items-center p-5 rounded-r-lg group cursor-pointer&quot;&gt;
+                    &lt;span class=&quot;text-accentRed font-black text-2xl w-12 tracking-tighter&quot;&gt;05&lt;/span&gt;
+                    &lt;div class=&quot;h-8 w-[1px] bg-white/10 mx-4&quot;&gt;&lt;/div&gt;
+                    &lt;h3 class=&quot;text-textMain text-xl font-bold tracking-wide uppercase group-hover:text-accentRed transition-colors&quot;&gt;Famous Players&lt;/h3&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 02 History --&gt;
+                &lt;div class=&quot;glass-card flex items-center p-5 rounded-r-lg group cursor-pointer&quot;&gt;
+                    &lt;span class=&quot;text-accentRed font-black text-2xl w-12 tracking-tighter&quot;&gt;02&lt;/span&gt;
+                    &lt;div class=&quot;h-8 w-[1px] bg-white/10 mx-4&quot;&gt;&lt;/div&gt;
+                    &lt;h3 class=&quot;text-textMain text-xl font-bold tracking-wide uppercase group-hover:text-accentRed transition-colors&quot;&gt;History of Football&lt;/h3&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 06 Popularity --&gt;
+                &lt;div class=&quot;glass-card flex items-center p-5 rounded-r-lg group cursor-pointer&quot;&gt;
+                    &lt;span class=&quot;text-accentRed font-black text-2xl w-12 tracking-tighter&quot;&gt;06&lt;/span&gt;
+                    &lt;div class=&quot;h-8 w-[1px] bg-white/10 mx-4&quot;&gt;&lt;/div&gt;
+                    &lt;h3 class=&quot;text-textMain text-xl font-bold tracking-wide uppercase group-hover:text-accentRed transition-colors&quot;&gt;Global Popularity&lt;/h3&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 03 Basic Rules --&gt;
+                &lt;div class=&quot;glass-card flex items-center p-5 rounded-r-lg group cursor-pointer&quot;&gt;
+                    &lt;span class=&quot;text-accentRed font-black text-2xl w-12 tracking-tighter&quot;&gt;03&lt;/span&gt;
+                    &lt;div class=&quot;h-8 w-[1px] bg-white/10 mx-4&quot;&gt;&lt;/div&gt;
+                    &lt;h3 class=&quot;text-textMain text-xl font-bold tracking-wide uppercase group-hover:text-accentRed transition-colors&quot;&gt;Basic Rules&lt;/h3&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 07 Women's Football --&gt;
+                &lt;div class=&quot;glass-card flex items-center p-5 rounded-r-lg group cursor-pointer&quot;&gt;
+                    &lt;span class=&quot;text-accentRed font-black text-2xl w-12 tracking-tighter&quot;&gt;07&lt;/span&gt;
+                    &lt;div class=&quot;h-8 w-[1px] bg-white/10 mx-4&quot;&gt;&lt;/div&gt;
+                    &lt;h3 class=&quot;text-textMain text-xl font-bold tracking-wide uppercase group-hover:text-accentRed transition-colors&quot;&gt;Women's Football&lt;/h3&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 04 Tactics --&gt;
+                &lt;div class=&quot;glass-card flex items-center p-5 rounded-r-lg group cursor-pointer&quot;&gt;
+                    &lt;span class=&quot;text-accentRed font-black text-2xl w-12 tracking-tighter&quot;&gt;04&lt;/span&gt;
+                    &lt;div class=&quot;h-8 w-[1px] bg-white/10 mx-4&quot;&gt;&lt;/div&gt;
+                    &lt;h3 class=&quot;text-textMain text-xl font-bold tracking-wide uppercase group-hover:text-accentRed transition-colors&quot;&gt;Tactics &amp; Formations&lt;/h3&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 08 The Future --&gt;
+                &lt;div class=&quot;glass-card flex items-center p-5 rounded-r-lg group cursor-pointer&quot;&gt;
+                    &lt;span class=&quot;text-accentRed font-black text-2xl w-12 tracking-tighter&quot;&gt;08&lt;/span&gt;
+                    &lt;div class=&quot;h-8 w-[1px] bg-white/10 mx-4&quot;&gt;&lt;/div&gt;
+                    &lt;h3 class=&quot;text-textMain text-xl font-bold tracking-wide uppercase group-hover:text-accentRed transition-colors&quot;&gt;The Future of Football&lt;/h3&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+
+        &lt;!-- 6. 底部 HUD 数据栏 --&gt;
+        &lt;div class=&quot;absolute bottom-10 left-0 w-full px-12 flex justify-between items-end z-30&quot;&gt;
+            
+            &lt;div class=&quot;flex flex-col gap-2&quot;&gt;
+                &lt;div class=&quot;flex items-center gap-3&quot;&gt;
+                    &lt;div class=&quot;w-32 h-1.5 bg-white/10 rounded-full overflow-hidden&quot;&gt;
+                        &lt;div class=&quot;w-1/4 h-full bg-accentRed&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;span class=&quot;text-lineColor text-[10px] tracking-[0.3em] uppercase&quot;&gt;System Indexing...&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;p class=&quot;text-textBody/40 text-[9px] font-mono&quot;&gt;DATA_STREAM_CONNECTED // SECTOR_8_TOTAL&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;flex items-center gap-8&quot;&gt;
+                &lt;!-- 装饰线条 --&gt;
+                &lt;div class=&quot;flex gap-1&quot;&gt;
+                    &lt;div class=&quot;w-1 h-3 bg-accentRed&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-1 h-3 bg-white/20&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-1 h-3 bg-white/20&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- 页码标记 --&gt;
+                &lt;div class=&quot;w-12 h-12 rounded-full border border-white/20 flex items-center justify-center cursor-pointer group hover:bg-white transition-all&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-chevron-right text-textMain group-hover:text-primaryBg text-sm&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+
+        &lt;!-- 装饰背景大字 --&gt;
+        &lt;div class=&quot;absolute -bottom-10 right-10 text-white/5 text-[260px] font-black pointer-events-none italic select-none&quot;&gt;
+            INDEX
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 3
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Introduction - Liceria &amp; Co.&lt;/title&gt;
+    
+    &lt;!-- Tailwind CSS (CDN) --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;!-- Google Fonts via Baidu CDN --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        /* CSS Reset &amp; Basics */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container - Strict 1280x720 Fixed Layout */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', 'Inter', sans-serif;
+            background-color: #2A4029;
+        }
+
+        /* 旋转动画 */
+        @keyframes rotate-text {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-rotate {
+            animation: rotate-text 20s linear infinite;
+        }
+
+        /* Progress bar stripes */
+        .striped-bar {
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 4px,
+                #E0E6DF 4px,
+                #E0E6DF 8px
+            );
+        }
+
+        .text-shadow-sm {
+            text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+    &lt;/style&gt;
+    
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryBg: '#2A4029',
+                        contentBox: '#617360',
+                        textMain: '#FFFFFF',
+                        textBody: '#E0E6DF',
+                        lineColor: '#8C9B8A',
+                        accentRed: '#D9463E',
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+
+        &lt;!-- 1. Background Layer --&gt;
+        &lt;div class=&quot;absolute inset-0 z-0&quot;&gt;
+            &lt;img src=&quot;https://images.unsplash.com/photo-1529900748604-07564a03e7a6?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&quot; 
+                 class=&quot;w-full h-full object-cover opacity-30 mix-blend-overlay&quot; 
+                 alt=&quot;Grass Texture&quot;&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 2. Decorative Graphics --&gt;
+        &lt;div class=&quot;absolute top-[180px] left-0 w-full h-[1px] bg-lineColor z-10 opacity-30&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute top-[-200px] right-[-100px] w-[800px] h-[800px] rounded-full border border-lineColor z-10 opacity-30 pointer-events-none&quot;&gt;&lt;/div&gt;
+
+        &lt;!-- 3. Top Right Hero Image --&gt;
+        &lt;div class=&quot;absolute top-[-80px] right-[-50px] z-20 w-[600px] h-[600px] rounded-full overflow-hidden border-[8px] border-primaryBg shadow-2xl&quot;&gt;
+            &lt;img src=&quot;https://images.unsplash.com/photo-1614632537190-23e4146777db?q=80&amp;w=1000&amp;auto=format&amp;fit=crop&quot; 
+                 class=&quot;w-full h-full object-cover object-center transform scale-110&quot; 
+                 alt=&quot;Soccer Ball&quot;&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 4. Content Wrapper --&gt;
+        &lt;div class=&quot;relative z-30 w-full h-full flex flex-col justify-between px-16 py-12&quot;&gt;
+
+            &lt;!-- [核心修改] 新版动态徽章 Logo 区域 --&gt;
+            &lt;div class=&quot;flex items-start gap-4&quot;&gt;
+                &lt;!-- 旋转徽章主体 --&gt;
+                &lt;div class=&quot;relative w-24 h-24 flex items-center justify-center&quot;&gt;
+                    &lt;!-- 旋转文字环 --&gt;
+                    &lt;svg class=&quot;absolute w-full h-full animate-rotate&quot; viewBox=&quot;0 0 100 100&quot;&gt;
+                        &lt;defs&gt;
+                            &lt;path id=&quot;logoCirclePath&quot; d=&quot;M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0&quot; /&gt;
+                        &lt;/defs&gt;
+                        &lt;text fill=&quot;#FFFFFF&quot; font-size=&quot;7.5&quot; font-weight=&quot;500&quot; letter-spacing=&quot;2.2&quot; class=&quot;opacity-80 uppercase&quot;&gt;
+                            &lt;textPath xlink:href=&quot;#logoCirclePath&quot;&gt;
+                                • LICERIA SPORTS &amp; CO • PREMIUM CLUB
+                            &lt;/textPath&gt;
+                        &lt;/text&gt;
+                    &lt;/svg&gt;
+                    &lt;!-- 中心图标 --&gt;
+                    &lt;div class=&quot;w-12 h-12 bg-accentRed rounded-full border border-white/20 flex items-center justify-center shadow-lg backdrop-blur-sm&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-leaf text-white text-lg&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 品牌文字详情 --&gt;
+                &lt;div class=&quot;mt-4&quot;&gt;
+                    &lt;h6 class=&quot;text-textMain text-lg font-bold tracking-[0.25em] leading-none uppercase&quot;&gt;Liceria&lt;/h6&gt;
+                    &lt;p class=&quot;text-lineColor text-[9px] tracking-[0.4em] font-light mt-1.5 uppercase pl-0.5&quot;&gt;Global Football Management&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Main Title Section --&gt;
+            &lt;div class=&quot;mt-16 mb-8&quot;&gt;
+                &lt;h1 class=&quot;text-textMain text-[96px] leading-none font-light tracking-tight uppercase text-shadow-sm&quot;&gt;
+                    Introduction
+                &lt;/h1&gt;
+                
+                &lt;div class=&quot;mt-6 flex items-center&quot;&gt;
+                    &lt;div class=&quot;h-[2px] w-12 bg-accentRed mr-4&quot;&gt;&lt;/div&gt;
+                    &lt;h2 class=&quot;text-textMain text-3xl font-regular tracking-wide&quot;&gt;
+                        A Global Phenomenon
+                    &lt;/h2&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Text Content Columns --&gt;
+            &lt;div class=&quot;grid grid-cols-2 gap-12 w-3/4 mb-auto&quot;&gt;
+                &lt;div class=&quot;bg-contentBox/10 backdrop-blur-sm p-6 rounded-lg border-l border-lineColor/30&quot;&gt;
+                    &lt;p class=&quot;text-textBody text-base leading-7 font-light text-justify italic&quot;&gt;
+                        Football is more than just a game; it's a global language spoken by billions. Our management approach focuses on bridging the gap between historical heritage and modern sporting excellence.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;bg-contentBox/10 backdrop-blur-sm p-6 rounded-lg border-l border-lineColor/30&quot;&gt;
+                    &lt;p class=&quot;text-textBody text-base leading-7 font-light text-justify&quot;&gt;
+                        Liceria &amp; Co. stands at the forefront of this evolution. We provide the strategic vision required to navigate the complex landscape of professional football, from grassroots programs to elite club operations.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Footer / Navigation --&gt;
+            &lt;div class=&quot;absolute bottom-12 right-12 flex items-center gap-6&quot;&gt;
+                &lt;!-- Progress Indicator --&gt;
+                &lt;div class=&quot;flex flex-col items-end gap-2&quot;&gt;
+                    &lt;span class=&quot;text-textBody text-[9px] tracking-widest uppercase opacity-50&quot;&gt;Slide 01&lt;/span&gt;
+                    &lt;div class=&quot;w-32 h-6 border border-textBody/30 p-1 flex items-center&quot;&gt;
+                        &lt;div class=&quot;w-1/4 h-full striped-bar opacity-80&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Next Slide Button --&gt;
+                &lt;div class=&quot;w-16 h-16 bg-textMain rounded-full flex items-center justify-center shadow-lg cursor-pointer group hover:bg-accentRed transition-all duration-300&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-arrow-right text-primaryBg group-hover:text-white text-2xl group-hover:translate-x-1 transition-transform&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 4
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Basic Rules of The Game - Liceria &amp; Co.&lt;/title&gt;
+    
+    &lt;!-- Tailwind CSS (CDN) --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;!-- Google Fonts via Baidu CDN --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', 'Inter', sans-serif;
+            background-color: #2A4029;
+        }
+
+        /* 旋转动画 */
+        @keyframes rotate-text {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-rotate {
+            animation: rotate-text 20s linear infinite;
+        }
+
+        .striped-bar {
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 4px,
+                #E0E6DF 4px,
+                #E0E6DF 8px
+            );
+        }
+
+        .hero-title {
+            font-size: 110px;
+            line-height: 0.85;
+            letter-spacing: -4px;
+        }
+
+        .glass-card {
+            background-color: rgba(97, 115, 96, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    &lt;/style&gt;
+    
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryBg: '#2A4029',
+                        contentBox: '#617360',
+                        textMain: '#FFFFFF',
+                        textBody: '#E0E6DF',
+                        lineColor: '#8C9B8A',
+                        accentRed: '#D9463E',
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+
+        &lt;!-- 1. Background Layer --&gt;
+        &lt;div class=&quot;absolute inset-0 z-0&quot;&gt;
+            &lt;img src=&quot;https://images.unsplash.com/photo-1529900748604-07564a03e7a6?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&quot; 
+                 class=&quot;w-full h-full object-cover opacity-20 mix-blend-overlay&quot; 
+                 alt=&quot;Grass Texture&quot;&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 2. Decorative Graphics --&gt;
+        &lt;div class=&quot;absolute top-[30%] -right-20 w-[600px] h-[600px] rounded-full border border-lineColor/20 z-10 pointer-events-none&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute bottom-[50px] left-0 w-full h-[1px] bg-lineColor opacity-20 z-10&quot;&gt;&lt;/div&gt;
+
+        &lt;!-- 3. Content Wrapper --&gt;
+        &lt;div class=&quot;relative z-20 w-full h-full flex flex-col px-16 py-12&quot;&gt;
+
+            &lt;!-- [统一Logo] Header Area --&gt;
+            &lt;div class=&quot;flex justify-between items-start w-full&quot;&gt;
+                &lt;div class=&quot;flex items-start gap-4&quot;&gt;
+                    &lt;!-- 旋转徽章 --&gt;
+                    &lt;div class=&quot;relative w-24 h-24 flex items-center justify-center&quot;&gt;
+                        &lt;svg class=&quot;absolute w-full h-full animate-rotate&quot; viewBox=&quot;0 0 100 100&quot;&gt;
+                            &lt;defs&gt;
+                                &lt;path id=&quot;ruleCirclePath&quot; d=&quot;M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0&quot; /&gt;
+                            &lt;/defs&gt;
+                            &lt;text fill=&quot;#FFFFFF&quot; font-size=&quot;7.5&quot; font-weight=&quot;500&quot; letter-spacing=&quot;2.2&quot; class=&quot;opacity-70 uppercase&quot;&gt;
+                                &lt;textPath xlink:href=&quot;#ruleCirclePath&quot;&gt;
+                                    • LICERIA SPORTS &amp; CO • BASIC RULES &amp; FAIR PLAY
+                                &lt;/textPath&gt;
+                            &lt;/text&gt;
+                        &lt;/svg&gt;
+                        &lt;div class=&quot;w-12 h-12 bg-accentRed rounded-full border border-white/20 flex items-center justify-center shadow-lg&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-scale-balanced text-white text-lg&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;mt-4&quot;&gt;
+                        &lt;h6 class=&quot;text-textMain text-lg font-bold tracking-[0.25em] leading-none uppercase&quot;&gt;Liceria&lt;/h6&gt;
+                        &lt;p class=&quot;text-lineColor text-[9px] tracking-[0.4em] font-light mt-1.5 uppercase pl-0.5&quot;&gt;Football Regulatory Unit&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Section Label --&gt;
+                &lt;div class=&quot;mt-4 flex flex-col items-end&quot;&gt;
+                    &lt;span class=&quot;text-accentRed font-bold text-sm tracking-[0.4em] uppercase&quot;&gt;Phase 02&lt;/span&gt;
+                    &lt;div class=&quot;w-32 h-6 border border-lineColor/30 p-1 mt-2&quot;&gt;
+                        &lt;div class=&quot;w-2/3 h-full striped-bar&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Main Layout Grid --&gt;
+            &lt;div class=&quot;grid grid-cols-12 gap-8 flex-1 items-center mt-4&quot;&gt;
+                
+                &lt;!-- Left: Hero Title --&gt;
+                &lt;div class=&quot;col-span-7 flex flex-col&quot;&gt;
+                    &lt;div class=&quot;mb-4&quot;&gt;
+                        &lt;span class=&quot;text-accentRed font-bold text-xl tracking-[0.3em] uppercase&quot;&gt;Understanding&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;h1 class=&quot;hero-title font-bold text-textMain uppercase&quot;&gt;
+                        Basic&lt;br&gt;
+                        &lt;span class=&quot;font-light text-textBody&quot;&gt;Rules of&lt;/span&gt;&lt;br&gt;
+                        The Game
+                    &lt;/h1&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Right: Content Cards &amp; Image --&gt;
+                &lt;div class=&quot;col-span-5 relative&quot;&gt;
+                    &lt;!-- Circular Masked Image (Referee) --&gt;
+                    &lt;div class=&quot;absolute -top-60 -left-24 w-64 h-64 rounded-full border-[6px] border-primaryBg shadow-2xl overflow-hidden z-30&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1560272564-c83b66b1ad12?q=80&amp;w=1000&amp;auto=format&amp;fit=crop&quot; 
+                             class=&quot;w-full h-full object-cover&quot; 
+                             alt=&quot;Referee&quot;&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Rules Content --&gt;
+                    &lt;div class=&quot;flex flex-col gap-6 relative z-20&quot;&gt;
+                        &lt;!-- Card 1 --&gt;
+                        &lt;div class=&quot;glass-card p-8 rounded-tr-[40px] border-l-4 border-accentRed transform transition-transform hover:-translate-y-1&quot;&gt;
+                            &lt;h2 class=&quot;text-2xl text-textMain font-bold mb-3 flex items-center gap-3&quot;&gt;
+                                &lt;span class=&quot;text-accentRed text-sm border border-accentRed px-2 py-0.5&quot;&gt;01&lt;/span&gt;
+                                How to win a match
+                            &lt;/h2&gt;
+                            &lt;p class=&quot;text-textBody text-sm leading-relaxed opacity-80&quot;&gt;
+                                To win, a team must score more goals than the opponent within the 90-minute regulation time. Strategic passing and possession control are crucial for victory.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+
+                        &lt;!-- Card 2 --&gt;
+                        &lt;div class=&quot;glass-card p-8 rounded-br-[40px] border-l-4 border-accentRed transform transition-transform hover:-translate-y-1&quot;&gt;
+                            &lt;h2 class=&quot;text-2xl text-textMain font-bold mb-3 flex items-center gap-3&quot;&gt;
+                                &lt;span class=&quot;text-accentRed text-sm border border-accentRed px-2 py-0.5&quot;&gt;02&lt;/span&gt;
+                                Playing Rules
+                            &lt;/h2&gt;
+                            &lt;p class=&quot;text-textBody text-sm leading-relaxed opacity-80&quot;&gt;
+                                Fouls result in free kicks or penalties. Severe infractions lead to yellow or red cards, which can significantly alter the game's momentum and team structure.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Footer Area --&gt;
+            &lt;div class=&quot;flex justify-between items-end mt-auto&quot;&gt;
+                &lt;div class=&quot;flex items-center gap-6&quot;&gt;
+                    &lt;span class=&quot;text-lineColor text-[60px] font-bold opacity-20&quot;&gt;02&lt;/span&gt;
+                    &lt;p class=&quot;text-lineColor text-xs tracking-widest uppercase mb-4&quot;&gt;
+                        Liceria &amp; Co. © 2024 — Official Football Training Manual
+                    &lt;/p&gt;
+                &lt;/div&gt;
+                
+                &lt;div class=&quot;flex items-center gap-8 mb-4&quot;&gt;
+                    &lt;div class=&quot;w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg cursor-pointer group hover:bg-accentRed transition-all duration-300&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-arrow-right text-primaryBg group-hover:text-white text-2xl group-hover:translate-x-1 transition-transform&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 5
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;The Popularity of Football - Liceria &amp; Co.&lt;/title&gt;
+    
+    &lt;!-- Google Fonts (Domestic CDN) --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryBg: '#2A4029',
+                        contentBox: '#617360',
+                        textMain: '#FFFFFF',
+                        textBody: '#E0E6DF',
+                        decoLine: '#8C9B8A',
+                        accentRed: '#D9463E',
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #2A4029;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* 旋转动画 */
+        @keyframes rotate-text {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-rotate {
+            animation: rotate-text 20s linear infinite;
+        }
+
+        /* 限制卡片文字行数 */
+        .line-clamp-4 {
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .glass-card {
+            background-color: rgba(97, 115, 96, 0.4);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+
+        &lt;!-- 1. 背景层 --&gt;
+        &lt;div class=&quot;absolute inset-0 z-0&quot;&gt;
+            &lt;img src=&quot;https://images.unsplash.com/photo-1529900748604-07564a03e7a6?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&quot; 
+                 class=&quot;w-full h-full object-cover opacity-20 mix-blend-overlay&quot; alt=&quot;Grass&quot;&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 装饰性几何图形 --&gt;
+        &lt;div class=&quot;absolute top-[200px] left-[-100px] w-[500px] h-[500px] border border-decoLine/10 rounded-full z-0&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute bottom-[-150px] right-[-100px] w-[600px] h-[600px] border border-decoLine/20 rounded-full z-0&quot;&gt;&lt;/div&gt;
+
+        &lt;!-- 2. 内容包装器 --&gt;
+        &lt;div class=&quot;relative z-10 w-full h-full flex flex-col p-14&quot;&gt;
+
+            &lt;!-- [统一 Logo] 顶部 Header 区域 --&gt;
+            &lt;div class=&quot;flex justify-between items-start mb-10&quot;&gt;
+                &lt;div class=&quot;flex items-start gap-4 transform scale-90 -translate-x-3&quot;&gt;
+                    &lt;!-- 旋转徽章 --&gt;
+                    &lt;div class=&quot;relative w-24 h-24 flex items-center justify-center&quot;&gt;
+                        &lt;svg class=&quot;absolute w-full h-full animate-rotate&quot; viewBox=&quot;0 0 100 100&quot;&gt;
+                            &lt;defs&gt;
+                                &lt;path id=&quot;popularCirclePath&quot; d=&quot;M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0&quot; /&gt;
+                            &lt;/defs&gt;
+                            &lt;text fill=&quot;#FFFFFF&quot; font-size=&quot;7&quot; font-weight=&quot;500&quot; letter-spacing=&quot;2.5&quot; class=&quot;opacity-70 uppercase&quot;&gt;
+                                &lt;textPath xlink:href=&quot;#popularCirclePath&quot;&gt;
+                                    • LICERIA SPORTS &amp; CO • GLOBAL POPULARITY •
+                                &lt;/textPath&gt;
+                            &lt;/text&gt;
+                        &lt;/svg&gt;
+                        &lt;div class=&quot;w-12 h-12 bg-accentRed rounded-full border border-white/20 flex items-center justify-center shadow-lg&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-earth-americas text-white text-lg&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;mt-4&quot;&gt;
+                        &lt;h6 class=&quot;text-textMain text-lg font-bold tracking-[0.25em] leading-none uppercase&quot;&gt;Liceria&lt;/h6&gt;
+                        &lt;p class=&quot;text-decoLine text-[9px] tracking-[0.4em] font-light mt-1.5 uppercase pl-0.5&quot;&gt;Football Global Insights&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 装饰性页码 --&gt;
+                &lt;div class=&quot;text-decoLine/20 font-bold text-6xl tracking-tighter&quot;&gt;04&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- 中间内容：三个信息卡片 --&gt;
+            &lt;div class=&quot;grid grid-cols-3 gap-6 mb-12&quot;&gt;
+                &lt;!-- Card 01 --&gt;
+                &lt;div class=&quot;glass-card p-7 border-l-4 border-accentRed rounded-r-xl&quot;&gt;
+                    &lt;div class=&quot;flex items-center gap-3 mb-4&quot;&gt;
+                        &lt;span class=&quot;text-accentRed font-bold text-xs border border-accentRed/30 px-2 py-0.5&quot;&gt;01&lt;/span&gt;
+                        &lt;h3 class=&quot;text-textMain text-lg font-bold uppercase tracking-wide&quot;&gt;Sports and Entertainment&lt;/h3&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-textBody text-sm leading-relaxed opacity-80 line-clamp-4&quot;&gt;
+                        Football is the ultimate form of modern entertainment. From grand stadiums to local screens, it captivates audiences with its unpredictable drama and world-class athletic displays.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Card 02 --&gt;
+                &lt;div class=&quot;glass-card p-7 border-l-4 border-decoLine rounded-r-xl&quot;&gt;
+                    &lt;div class=&quot;flex items-center gap-3 mb-4&quot;&gt;
+                        &lt;span class=&quot;text-decoLine font-bold text-xs border border-decoLine/30 px-2 py-0.5&quot;&gt;02&lt;/span&gt;
+                        &lt;h3 class=&quot;text-textMain text-lg font-bold uppercase tracking-wide&quot;&gt;Sports for All Ages&lt;/h3&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-textBody text-sm leading-relaxed opacity-80 line-clamp-4&quot;&gt;
+                        Whether it's children in local parks or veterans in amateur leagues, the game transcends age barriers, promoting health and community across every generation of society.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Card 03 --&gt;
+                &lt;div class=&quot;glass-card p-7 border-l-4 border-decoLine rounded-r-xl&quot;&gt;
+                    &lt;div class=&quot;flex items-center gap-3 mb-4&quot;&gt;
+                        &lt;span class=&quot;text-decoLine font-bold text-xs border border-decoLine/30 px-2 py-0.5&quot;&gt;03&lt;/span&gt;
+                        &lt;h3 class=&quot;text-textMain text-lg font-bold uppercase tracking-wide&quot;&gt;A Blessing for Mankind&lt;/h3&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-textBody text-sm leading-relaxed opacity-80 line-clamp-4&quot;&gt;
+                        Football acts as a universal bridge, uniting diverse cultures under a single passion. It provides hope, fosters friendship, and builds lasting international connections.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- 底部主要视觉区 --&gt;
+            &lt;div class=&quot;flex items-end justify-between mt-auto&quot;&gt;
+                
+                &lt;!-- 左侧：排版组合 --&gt;
+                &lt;div class=&quot;flex flex-col gap-6 pb-2&quot;&gt;
+                    &lt;h1 class=&quot;text-textMain text-[80px] font-bold leading-[0.85] tracking-tighter uppercase drop-shadow-2xl&quot;&gt;
+                        The &lt;br&gt; Popularity &lt;br&gt; of Football
+                    &lt;/h1&gt;
+                    
+                    &lt;div class=&quot;flex items-center gap-8 mt-4&quot;&gt;
+                        &lt;div class=&quot;flex flex-col border-l-4 border-accentRed pl-6 py-1&quot;&gt;
+                            &lt;h2 class=&quot;text-textBody text-2xl font-light tracking-widest uppercase&quot;&gt;
+                                The World's
+                            &lt;/h2&gt;
+                            &lt;h2 class=&quot;text-textMain text-2xl font-bold tracking-widest uppercase&quot;&gt;
+                                Favorite Sport
+                            &lt;/h2&gt;
+                        &lt;/div&gt;
+                        
+                        &lt;!-- 装饰箭头按钮 --&gt;
+                        &lt;div class=&quot;w-16 h-16 rounded-full border-2 border-white/20 hover:border-accentRed bg-white/5 flex items-center justify-center transition-all cursor-pointer group&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-arrow-right text-textMain text-2xl rotate-[-45deg] group-hover:text-accentRed transition-colors&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 右侧：圆形图片组合 (优化尺寸确保不溢出) --&gt;
+                &lt;div class=&quot;relative w-[350px] h-[350px] mb-[-20px]&quot;&gt;
+                    &lt;!-- 圆形图片 --&gt;
+                    &lt;div class=&quot;w-full h-full rounded-full border-[6px] border-primaryBg overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-20 relative&quot;&gt;
+                         &lt;img src=&quot;https://images.unsplash.com/photo-1517466787929-bc90951dbb?q=80&amp;w=800&amp;fit=crop&quot; 
+                              alt=&quot;Kids playing football&quot; 
+                              class=&quot;w-full h-full object-cover transform scale-105&quot;&gt;
+                    &lt;/div&gt;
+                    
+                    &lt;!-- 装饰红星 --&gt;
+                    &lt;div class=&quot;absolute top-4 right-4 w-10 h-10 bg-accentRed rounded-full z-30 flex items-center justify-center shadow-lg border-2 border-primaryBg&quot;&gt;
+                         &lt;i class=&quot;fa-solid fa-star text-white text-sm&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- 品牌版权文字 --&gt;
+                    &lt;div class=&quot;absolute -bottom-2 right-0 z-30&quot;&gt;
+                        &lt;p class=&quot;text-decoLine text-[10px] font-bold tracking-[0.3em] uppercase opacity-40&quot;&gt;
+                            Liceria &amp; Co. © 2026
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 6
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Famous Football Players - Keynote&lt;/title&gt;
+    
+    &lt;!-- FontAwesome CDN --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;!-- Custom Fonts --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2A4029',      
+                        content: '#617360',      
+                        textMain: '#FFFFFF',     
+                        textBody: '#E0E6DF',     
+                        decorative: '#8C9B8A',   
+                        accent: '#D9463E',       
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 旋转动画 */
+        @keyframes rotate-text {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-rotate {
+            animation: rotate-text 20s linear infinite;
+        }
+
+        /* 限制文字行数防止溢出 */
+        .line-clamp-custom {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background-color: #2A4029;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body class=&quot;bg-gray-100&quot;&gt;
+
+    &lt;div id=&quot;page_container&quot; class=&quot;shadow-2xl font-sans&quot;&gt;
+        
+        &lt;!-- 1. 背景层 --&gt;
+        &lt;div class=&quot;absolute inset-0 z-0&quot;&gt;
+            &lt;img src=&quot;https://images.unsplash.com/photo-1529900748604-07564a03e7a6?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&quot; 
+                 alt=&quot;Grass Texture&quot; 
+                 class=&quot;w-full h-full object-cover opacity-30 mix-blend-overlay&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;absolute inset-0 z-0 bg-gradient-to-b from-primary/95 via-primary/80 to-primary/95&quot;&gt;&lt;/div&gt;
+
+        &lt;!-- 2. 内容包装器 --&gt;
+        &lt;div class=&quot;relative z-10 flex flex-col h-full px-16 py-10&quot;&gt;
+
+            &lt;!-- 顶部 Header 区域 --&gt;
+            &lt;header class=&quot;flex justify-between items-start mb-6&quot;&gt;
+                &lt;!-- [左侧：新版动态 Logo] --&gt;
+                &lt;div class=&quot;flex items-start gap-4 transform scale-90 -translate-x-4 -translate-y-2&quot;&gt;
+                    &lt;div class=&quot;relative w-24 h-24 flex items-center justify-center&quot;&gt;
+                        &lt;svg class=&quot;absolute w-full h-full animate-rotate&quot; viewBox=&quot;0 0 100 100&quot;&gt;
+                            &lt;defs&gt;
+                                &lt;path id=&quot;logoCirclePath&quot; d=&quot;M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0&quot; /&gt;
+                            &lt;/defs&gt;
+                            &lt;text fill=&quot;#FFFFFF&quot; font-size=&quot;7.5&quot; font-weight=&quot;500&quot; letter-spacing=&quot;2.2&quot; class=&quot;opacity-70 uppercase&quot;&gt;
+                                &lt;textPath xlink:href=&quot;#logoCirclePath&quot;&gt;• LICERIA SPORTS &amp; CO • PREMIUM CLUB&lt;/textPath&gt;
+                            &lt;/text&gt;
+                        &lt;/svg&gt;
+                        &lt;div class=&quot;w-12 h-12 bg-accent rounded-full border border-white/20 flex items-center justify-center shadow-lg&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-users-viewfinder text-white text-lg&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;mt-4&quot;&gt;
+                        &lt;h6 class=&quot;text-textMain text-lg font-bold tracking-[0.25em] leading-none uppercase&quot;&gt;Liceria&lt;/h6&gt;
+                        &lt;p class=&quot;text-decorative text-[9px] tracking-[0.4em] font-light mt-1.5 uppercase&quot;&gt;Elite Scouting Division&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- [右侧：标题] --&gt;
+                &lt;div class=&quot;text-right&quot;&gt;
+                    &lt;h1 class=&quot;text-textMain text-6xl font-bold uppercase leading-tight tracking-tighter&quot;&gt;
+                        Famous Football&lt;br&gt;
+                        &lt;span class=&quot;text-transparent bg-clip-text bg-gradient-to-r from-white to-decorative&quot;&gt;Players&lt;/span&gt;
+                    &lt;/h1&gt;
+                    &lt;div class=&quot;flex items-center justify-end mt-2 gap-3&quot;&gt;
+                        &lt;div class=&quot;h-[2px] w-12 bg-accent&quot;&gt;&lt;/div&gt;
+                        &lt;h2 class=&quot;text-textBody text-xl font-light tracking-wide italic&quot;&gt;Legends of the Game&lt;/h2&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/header&gt;
+
+            &lt;!-- 装饰线 --&gt;
+            &lt;div class=&quot;w-full h-[1px] bg-gradient-to-r from-transparent via-decorative/40 to-transparent mb-8&quot;&gt;&lt;/div&gt;
+
+            &lt;!-- 3. 主体内容：球员展示区 --&gt;
+            &lt;!-- 优化了间距和高度，确保内容不溢出 --&gt;
+            &lt;div class=&quot;flex-1 flex items-stretch justify-between gap-10&quot;&gt;
+
+                &lt;!-- 球员卡片 1 --&gt;
+                &lt;div class=&quot;flex-1 flex flex-col items-center group&quot;&gt;
+                    &lt;div class=&quot;relative mb-4&quot;&gt;
+                        &lt;div class=&quot;w-40 h-40 rounded-full border-[3px] border-decorative/50 p-1 bg-content/20 overflow-hidden transition-all duration-500 group-hover:border-accent&quot;&gt;
+                            &lt;img src=&quot;https://images.unsplash.com/photo-1517466787929-bc90951d0974?q=80&amp;w=400&amp;fit=crop&quot; 
+                                 alt=&quot;Alfredo Torres&quot; 
+                                 class=&quot;w-full h-full rounded-full object-cover grayscale group-hover:grayscale-0 transition-all&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;absolute -bottom-1 -right-1 w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white font-bold text-xs shadow-lg&quot;&gt;10&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;bg-content/20 rounded-2xl p-5 border border-white/5 backdrop-blur-sm w-full text-center flex-1 flex flex-col justify-center&quot;&gt;
+                        &lt;h3 class=&quot;text-textMain text-xl font-bold mb-2 tracking-wide group-hover:text-accent transition-colors uppercase&quot;&gt;Alfredo Torres&lt;/h3&gt;
+                        &lt;p class=&quot;text-textBody text-xs leading-relaxed opacity-80 font-light line-clamp-custom&quot;&gt;
+                            Known for his exceptional dribbling and vision. A master of the midfield who defined a whole generation of strategic football play.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 球员卡片 2 (中心突出) --&gt;
+                &lt;div class=&quot;flex-1 flex flex-col items-center group&quot;&gt;
+                    &lt;div class=&quot;relative mb-4&quot;&gt;
+                        &lt;!-- 中心图片稍大，但严格控制在 180px 以免挤压下方文字 --&gt;
+                        &lt;div class=&quot;w-44 h-44 rounded-full border-[4px] border-decorative p-1 bg-content/30 shadow-2xl relative z-10 overflow-hidden transition-all duration-500 group-hover:border-accent&quot;&gt;
+                            &lt;img src=&quot;https://images.unsplash.com/photo-1511886929837-354d827aae26?q=80&amp;w=400&amp;fit=crop&quot; 
+                                 alt=&quot;Dani Martinez&quot; 
+                                 class=&quot;w-full h-full rounded-full object-cover grayscale group-hover:grayscale-0 transition-all&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;absolute inset-0 bg-white/5 rounded-full blur-2xl transform scale-110 -z-10&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;absolute -bottom-1 -right-1 w-9 h-9 bg-accent rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg z-20&quot;&gt;07&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;bg-content/40 rounded-2xl p-6 border border-decorative/30 backdrop-blur-md w-full text-center flex-1 flex flex-col justify-center shadow-xl&quot;&gt;
+                        &lt;h3 class=&quot;text-textMain text-2xl font-extrabold mb-2 tracking-wide group-hover:text-accent transition-colors uppercase&quot;&gt;Dani Martinez&lt;/h3&gt;
+                        &lt;p class=&quot;text-textBody text-sm leading-relaxed font-light line-clamp-custom&quot;&gt;
+                            The ultimate goal machine. Martinez combines raw power with pinpoint accuracy, holding the record for the most clinical finishes in club history.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 球员卡片 3 --&gt;
+                &lt;div class=&quot;flex-1 flex flex-col items-center group&quot;&gt;
+                    &lt;div class=&quot;relative mb-4&quot;&gt;
+                        &lt;div class=&quot;w-40 h-40 rounded-full border-[3px] border-decorative/50 p-1 bg-content/20 overflow-hidden transition-all duration-500 group-hover:border-accent&quot;&gt;
+                            &lt;img src=&quot;https://images.unsplash.com/photo-1520639891484-934372205566?q=80&amp;w=400&amp;fit=crop&quot; 
+                                 alt=&quot;Cia Rodriguez&quot; 
+                                 class=&quot;w-full h-full rounded-full object-cover grayscale group-hover:grayscale-0 transition-all&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;absolute -bottom-1 -right-1 w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white font-bold text-xs shadow-lg&quot;&gt;11&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;bg-content/20 rounded-2xl p-5 border border-white/5 backdrop-blur-sm w-full text-center flex-1 flex flex-col justify-center&quot;&gt;
+                        &lt;h3 class=&quot;text-textMain text-xl font-bold mb-2 tracking-wide group-hover:text-accent transition-colors uppercase&quot;&gt;Cia Rodriguez&lt;/h3&gt;
+                        &lt;p class=&quot;text-textBody text-xs leading-relaxed opacity-80 font-light line-clamp-custom&quot;&gt;
+                            A legendary defender whose reading of the game is second to none. Cia's leadership on the pitch has secured numerous clean sheets.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+
+            &lt;!-- 底部页脚细节 --&gt;
+            &lt;footer class=&quot;mt-8 flex justify-between items-center text-decorative/50&quot;&gt;
+                &lt;div class=&quot;text-[10px] tracking-[0.3em] uppercase font-bold italic&quot;&gt;Fig 02. Professional Athlete Profiles&lt;/div&gt;
+                &lt;div class=&quot;flex gap-3&quot;&gt;
+                    &lt;div class=&quot;w-1.5 h-1.5 rounded-full bg-accent&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-1.5 h-1.5 rounded-full bg-decorative&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-1.5 h-1.5 rounded-full bg-decorative/50&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/footer&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 7
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Football Tactics Keynote&lt;/title&gt;
+    
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;!-- Google Fonts --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+            background-color: #2A4029;
+        }
+        .text-primary { color: #FFFFFF; }
+        .text-secondary { color: #E0E6DF; }
+        .text-accent { color: #D9463E; }
+        .bg-card { background-color: rgba(97, 115, 96, 0.92); }
+
+        /* 新增：旋转动画 */
+        @keyframes rotate-text {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-rotate { animation: rotate-text 20s linear infinite; }
+    &lt;/style&gt;
+    
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { dark: '#2A4029', mid: '#617360', light: '#E0E6DF', line: '#8C9B8A', accent: '#D9463E' }
+                    },
+                    fontFamily: { sans: ['Inter', 'Noto Sans SC', 'sans-serif'] }
+                }
+            }
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;!-- 背景层 --&gt;
+        &lt;div class=&quot;absolute inset-0 z-0&quot;&gt;
+            &lt;img src=&quot;https://images.unsplash.com/photo-1529900748604-07564a03e7a6?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&quot; class=&quot;w-full h-full object-cover opacity-40 mix-blend-overlay grayscale-[30%]&quot;&gt;
+            &lt;div class=&quot;absolute inset-0&quot; style=&quot;background: linear-gradient(135deg, rgba(42,64,41,0.95), rgba(42,64,41,0.8));&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 装饰线条 --&gt;
+        &lt;div class=&quot;absolute inset-0 z-10 pointer-events-none&quot;&gt;
+            &lt;div class=&quot;absolute top-0 right-[200px] w-[1px] h-[300px] bg-brand-line origin-top -rotate-45 opacity-50&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;absolute bottom-[-100px] left-[-50px] w-[450px] h-[450px] rounded-full border border-brand-line opacity-40&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 顶部 Header (含新徽章 Logo) --&gt;
+        &lt;header class=&quot;absolute top-0 left-0 w-full z-20 px-16 pt-14 flex justify-between items-start&quot;&gt;
+            &lt;div class=&quot;w-3/5&quot;&gt;
+                &lt;h1 class=&quot;text-7xl font-bold text-primary leading-[0.9] tracking-tight uppercase mb-4&quot;&gt;
+                    Football Tactics &lt;br&gt;
+                    &lt;span class=&quot;font-light&quot;&gt;and Formations&lt;/span&gt;
+                &lt;/h1&gt;
+                &lt;p class=&quot;text-xl text-brand-light font-medium tracking-wide border-l-4 border-brand-accent pl-4 mt-6&quot;&gt;
+                    Strategy on the Pitch
+                &lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;!-- [替换部分] 右上角动态徽章 &amp; 进度条 --&gt;
+            &lt;div class=&quot;flex flex-col items-end gap-6&quot;&gt;
+                &lt;!-- 动态徽章 --&gt;
+                &lt;div class=&quot;relative w-32 h-32 flex items-center justify-center&quot;&gt;
+                    &lt;svg class=&quot;absolute w-full h-full animate-rotate&quot; viewBox=&quot;0 0 100 100&quot;&gt;
+                        &lt;defs&gt;&lt;path id=&quot;badgePath1&quot; d=&quot;M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0&quot; /&gt;&lt;/defs&gt;
+                        &lt;text fill=&quot;#FFFFFF&quot; font-size=&quot;7&quot; font-weight=&quot;500&quot; letter-spacing=&quot;2&quot; class=&quot;opacity-70 uppercase&quot;&gt;
+                            &lt;textPath xlink:href=&quot;#badgePath1&quot;&gt;• LICERIA SPORTS &amp; CO • PREMIUM CLUB&lt;/textPath&gt;
+                        &lt;/text&gt;
+                    &lt;/svg&gt;
+                    &lt;div class=&quot;w-16 h-16 bg-brand-accent shadow-xl rounded-full border border-white/20 flex flex-col items-center justify-center backdrop-blur-sm&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-trophy text-white text-lg&quot;&gt;&lt;/i&gt;
+                        &lt;span class=&quot;text-white font-bold text-[8px] mt-0.5&quot;&gt;EST. 1992&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- 进度条 --&gt;
+                &lt;div class=&quot;w-32 h-1.5 border border-brand-line/50 rounded-full p-[1px]&quot;&gt;
+                    &lt;div class=&quot;h-full w-2/3 bg-brand-accent rounded-full&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;!-- 主内容区 --&gt;
+        &lt;main class=&quot;absolute bottom-0 w-full h-[65%] z-20 px-16 pb-12 grid grid-cols-12 gap-8&quot;&gt;
+            &lt;div class=&quot;col-span-4 relative flex flex-col justify-end items-start pb-4&quot;&gt;
+                &lt;div class=&quot;relative w-full h-[400px] overflow-hidden&quot;&gt;
+                     &lt;div class=&quot;absolute bottom-0 left-[-20px] w-[320px] h-[320px] rounded-full overflow-hidden border-4 border-brand-light/20 shadow-2xl&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&amp;fit=crop&amp;q=80&quot; alt=&quot;Coach&quot; class=&quot;w-full h-full object-cover object-top&quot;&gt;
+                     &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;col-span-8 grid grid-cols-2 grid-rows-2 gap-5 h-full content-end&quot;&gt;
+                &lt;!-- 战术卡片保持原样 --&gt;
+                &lt;div class=&quot;bg-card backdrop-blur-md p-6 rounded border-l-2 border-brand-line flex flex-col justify-between group hover:bg-brand-mid transition-colors&quot;&gt;
+                    &lt;div class=&quot;flex justify-between items-start mb-2&quot;&gt;
+                        &lt;h3 class=&quot;text-xl font-bold text-white&quot;&gt;Cattenacio &lt;br&gt;&lt;span class=&quot;font-light&quot;&gt;Modern&lt;/span&gt;&lt;/h3&gt;
+                        &lt;span class=&quot;text-brand-light font-mono text-sm bg-black/20 px-2 py-1 rounded&quot;&gt;(5-3-2)&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-brand-light text-sm leading-relaxed opacity-90&quot;&gt;Prioritizes strong defense with a sweeper. Strategic formation for high-stakes matches.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;bg-card backdrop-blur-md p-6 rounded border-l-2 border-brand-line flex flex-col justify-between group hover:bg-brand-mid transition-colors&quot;&gt;
+                    &lt;div class=&quot;flex justify-between items-start mb-2&quot;&gt;
+                        &lt;h3 class=&quot;text-xl font-bold text-white&quot;&gt;Total &lt;br&gt;&lt;span class=&quot;font-light&quot;&gt;Football&lt;/span&gt;&lt;/h3&gt;
+                        &lt;span class=&quot;text-brand-light font-mono text-sm bg-black/20 px-2 py-1 rounded&quot;&gt;(3-4-3)&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-brand-light text-sm leading-relaxed opacity-90&quot;&gt;Fluid positioning where any player can take over another's role on the field.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;bg-card backdrop-blur-md p-6 rounded border-l-2 border-brand-line flex flex-col justify-between group hover:bg-brand-mid transition-colors&quot;&gt;
+                    &lt;div class=&quot;flex justify-between items-start mb-2&quot;&gt;
+                        &lt;h3 class=&quot;text-xl font-bold text-white&quot;&gt;Tiki-&lt;br&gt;&lt;span class=&quot;font-light&quot;&gt;Taka&lt;/span&gt;&lt;/h3&gt;
+                        &lt;span class=&quot;text-brand-light font-mono text-sm bg-black/20 px-2 py-1 rounded&quot;&gt;(4-3-3)&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-brand-light text-sm leading-relaxed opacity-90&quot;&gt;Focus on short passing and movement, maintaining possession at all times.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;bg-card backdrop-blur-md p-6 rounded border-l-2 border-brand-line flex flex-col justify-between group hover:bg-brand-mid transition-colors&quot;&gt;
+                    &lt;div class=&quot;flex justify-between items-start mb-2&quot;&gt;
+                        &lt;h3 class=&quot;text-xl font-bold text-white&quot;&gt;Gegen &lt;br&gt;&lt;span class=&quot;font-light&quot;&gt;Pressing&lt;/span&gt;&lt;/h3&gt;
+                        &lt;span class=&quot;text-brand-light font-mono text-sm bg-black/20 px-2 py-1 rounded&quot;&gt;(3-5-2)&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-brand-light text-sm leading-relaxed opacity-90&quot;&gt;Immediately attempting to regain possession after losing the ball to the opponent.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/main&gt;
+
+        &lt;div class=&quot;absolute bottom-6 left-16 text-[10px] text-brand-line tracking-widest uppercase z-20&quot;&gt;
+            &lt;span&gt;Fig. 01 — Tactics Board Analysis&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 8
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Football's Impact on Society - Liceria &amp; Co.&lt;/title&gt;
+    
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;!-- Google Fonts --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&amp;family=Roboto:wght@300;400&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+    
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryBg: '#2A4029', 
+                        contentBox: '#617360', 
+                        mainText: '#FFFFFF', 
+                        bodyText: '#E0E6DF', 
+                        decoLine: '#8C9B8A', 
+                        accentRed: '#D9463E',
+                    },
+                    fontFamily: { sans: ['Roboto', 'sans-serif'], display: ['Montserrat', 'sans-serif'] }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background-color: #2A4029;
+        }
+        .glass-card {
+            background-color: rgba(97, 115, 96, 0.6);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        /* 旋转动画 */
+        @keyframes rotate-text {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-rotate { animation: rotate-text 20s linear infinite; }
+        
+        .image-overlay {
+            background: linear-gradient(90deg, rgba(42,64,41,0.8) 0%, rgba(42,64,41,0.2) 50%, rgba(42,64,41,0.8) 100%);
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot; class=&quot;shadow-2xl&quot;&gt;
+        
+        &lt;!-- 1. 背景层 --&gt;
+        &lt;div class=&quot;absolute inset-0 z-0&quot;&gt;
+            &lt;img src=&quot;https://images.unsplash.com/photo-1529900748604-07564a03e7a6?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&quot; alt=&quot;Grass&quot; class=&quot;w-full h-full object-cover opacity-20 mix-blend-overlay&quot;&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 2. 内容主体 --&gt;
+        &lt;div class=&quot;relative z-20 w-full h-full flex flex-col justify-between py-10&quot;&gt;
+
+            &lt;!-- [Top Section] 顶部四卡片区域 (px-16) --&gt;
+            &lt;div class=&quot;flex justify-between items-start gap-6 px-16&quot;&gt;
+                &lt;div class=&quot;w-1/4 glass-card border-t-2 border-accentRed rounded-b-lg p-5 h-28 flex flex-col items-center justify-center text-center shadow-lg&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-hand-holding-heart text-accentRed text-lg mb-2&quot;&gt;&lt;/i&gt;
+                    &lt;h3 class=&quot;text-mainText font-display font-semibold text-base leading-tight&quot;&gt;Humanitarian&lt;br&gt;Mission&lt;/h3&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;w-1/4 glass-card border-t-2 border-decoLine rounded-b-lg p-5 h-28 flex flex-col items-center justify-center text-center shadow-lg&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-users text-decoLine text-lg mb-2&quot;&gt;&lt;/i&gt;
+                    &lt;h3 class=&quot;text-mainText font-display font-semibold text-base leading-tight&quot;&gt;Unifying&lt;br&gt;Tool&lt;/h3&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;w-1/4 glass-card border-t-2 border-decoLine rounded-b-lg p-5 h-28 flex flex-col items-center justify-center text-center shadow-lg&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-seedling text-decoLine text-lg mb-2&quot;&gt;&lt;/i&gt;
+                    &lt;h3 class=&quot;text-mainText font-display font-semibold text-base leading-tight&quot;&gt;Talent&lt;br&gt;Development&lt;/h3&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;w-1/4 glass-card border-t-2 border-decoLine rounded-b-lg p-5 h-28 flex flex-col items-center justify-center text-center shadow-lg&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-coins text-decoLine text-lg mb-2&quot;&gt;&lt;/i&gt;
+                    &lt;h3 class=&quot;text-mainText font-display font-semibold text-base leading-tight&quot;&gt;Economic&lt;br&gt;Driver&lt;/h3&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- [Middle Section] 全宽长配图 (1280x180) --&gt;
+            &lt;div class=&quot;relative w-full h-[180px] my-6 shadow-2xl overflow-hidden border-y border-white/10&quot;&gt;
+                &lt;img src=&quot;https://images.unsplash.com/photo-1510051646601-9d522a3e8431?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&quot; 
+                     alt=&quot;Football Stadium Crowd&quot; 
+                     class=&quot;w-full h-full object-cover grayscale-[20%]&quot;&gt;
+                &lt;!-- 图片上的渐变层，增强科技感并过渡背景 --&gt;
+                &lt;div class=&quot;absolute inset-0 image-overlay&quot;&gt;&lt;/div&gt;
+                &lt;!-- 装饰线条 --&gt;
+                &lt;div class=&quot;absolute top-0 left-0 w-full h-[1px] bg-white/20&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;absolute bottom-0 left-0 w-full h-[1px] bg-white/20&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- [Bottom Section] 底部主要内容区 (px-16) --&gt;
+            &lt;div class=&quot;grid grid-cols-12 gap-8 items-end px-16&quot;&gt;
+                
+                &lt;!-- 左侧：统一动态 Logo + 副标题 --&gt;
+                &lt;div class=&quot;col-span-3 flex flex-col justify-between h-full min-h-[200px]&quot;&gt;
+                    &lt;div class=&quot;mb-auto&quot;&gt;
+                        &lt;h2 class=&quot;text-decoLine font-display text-xl font-bold uppercase tracking-wider leading-tight&quot;&gt;
+                            More Than&lt;br&gt;&lt;span class=&quot;text-mainText text-2xl&quot;&gt;Just a Sport&lt;/span&gt;
+                        &lt;/h2&gt;
+                        &lt;div class=&quot;w-10 h-1 bg-accentRed mt-3&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                    
+                    &lt;!-- 统一化旋转徽章 Logo --&gt;
+                    &lt;div class=&quot;relative w-28 h-28 flex items-center justify-center -ml-2 mb-2&quot;&gt;
+                        &lt;svg class=&quot;absolute w-full h-full animate-rotate&quot; viewBox=&quot;0 0 100 100&quot;&gt;
+                            &lt;defs&gt;&lt;path id=&quot;socialPath&quot; d=&quot;M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0&quot; /&gt;&lt;/defs&gt;
+                            &lt;text fill=&quot;#E0E6DF&quot; font-size=&quot;7.5&quot; font-weight=&quot;500&quot; letter-spacing=&quot;2&quot; class=&quot;opacity-60 uppercase&quot;&gt;
+                                &lt;textPath xlink:href=&quot;#socialPath&quot;&gt;• LICERIA SPORTS &amp; CO • GLOBAL IMPACT •&lt;/textPath&gt;
+                            &lt;/text&gt;
+                        &lt;/svg&gt;
+                        &lt;div class=&quot;w-14 h-14 bg-accentRed shadow-xl rounded-full border border-white/20 flex flex-col items-center justify-center backdrop-blur-md&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-globe text-white text-base&quot;&gt;&lt;/i&gt;
+                            &lt;span class=&quot;text-white font-bold text-[7px] mt-0.5 tracking-tighter uppercase&quot;&gt;EST. 1992&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 中间正文说明 --&gt;
+                &lt;div class=&quot;col-span-5&quot;&gt;
+                    &lt;div class=&quot;bg-contentBox/40 p-7 rounded-lg border-l-4 border-accentRed backdrop-blur-sm shadow-xl&quot;&gt;
+                        &lt;p class=&quot;text-bodyText font-sans text-sm leading-6 mb-4 text-justify&quot;&gt;
+                            Football acts as a global catalyst for social change. It bridges cultures, inspires youth development, and provides economic opportunities in every corner of the planet.
+                        &lt;/p&gt;
+                        &lt;p class=&quot;text-white font-sans text-sm leading-6 text-justify italic font-medium&quot;&gt;
+                            &quot;The pitch is where the world speaks one language, breaking down barriers that politics cannot.&quot;
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 右侧主标题 --&gt;
+                &lt;div class=&quot;col-span-4 flex flex-col items-end text-right&quot;&gt;
+                    &lt;div class=&quot;mb-4&quot;&gt;
+                        &lt;div class=&quot;w-14 h-14 rounded-full border border-white/30 flex items-center justify-center bg-white/5 group cursor-pointer hover:border-accentRed transition-all&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-arrow-right text-mainText text-xl transform -rotate-45 group-hover:text-accentRed transition-colors&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;h1 class=&quot;text-mainText font-display font-extrabold text-5xl leading-[0.9] tracking-tighter uppercase&quot;&gt;
+                        Football’s&lt;br&gt;
+                        &lt;span class=&quot;text-transparent bg-clip-text bg-gradient-to-r from-white to-decoLine&quot;&gt;Impact&lt;/span&gt;&lt;br&gt;
+                        on Society
+                    &lt;/h1&gt;
+                    &lt;p class=&quot;text-decoLine text-[10px] tracking-[0.4em] uppercase mt-4 opacity-50 font-bold&quot;&gt;Presentation Page 05&lt;/p&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 9
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Women's Football Keynote - Liceria &amp; Co.&lt;/title&gt;
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;!-- Google Fonts --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #2A4029;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* 旋转动画 */
+        @keyframes rotate-text {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-rotate {
+            animation: rotate-text 20s linear infinite;
+        }
+
+        .bg-overlay { mix-blend-mode: overlay; }
+        ::-webkit-scrollbar { display: none; }
+    &lt;/style&gt;
+    
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryBg: '#2A4029',
+                        contentBox: '#617360',
+                        textMain: '#FFFFFF',
+                        textBody: '#E0E6DF',
+                        lineColor: '#8C9B8A',
+                        accentRed: '#D9463E',
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot; class=&quot;shadow-2xl&quot;&gt;
+        
+        &lt;!-- 1. 背景层 --&gt;
+        &lt;div class=&quot;absolute inset-0 z-0 opacity-30&quot;&gt;
+            &lt;img src=&quot;https://images.unsplash.com/photo-1589487391730-58f20eb2c308?q=80&amp;w=2074&amp;auto=format&amp;fit=crop&quot; class=&quot;w-full h-full object-cover grayscale mix-blend-multiply&quot;&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 2. 装饰动态线条 --&gt;
+        &lt;div class=&quot;absolute top-[-20%] left-[-10%] w-[150%] border-t border-lineColor transform rotate-[32deg] z-0 opacity-40&quot;&gt;&lt;/div&gt;
+
+        &lt;!-- 3. 内容包装器 (12列栅格布局) --&gt;
+        &lt;div class=&quot;relative z-10 grid grid-cols-12 h-full w-full p-16 gap-8&quot;&gt;
+
+            &lt;!-- [统一Logo] 顶部区域 (绝对定位以便不干扰栅格) --&gt;
+            &lt;div class=&quot;absolute top-12 left-16 z-30 flex items-start gap-4 transform scale-90 -translate-x-2&quot;&gt;
+                &lt;div class=&quot;relative w-24 h-24 flex items-center justify-center&quot;&gt;
+                    &lt;svg class=&quot;absolute w-full h-full animate-rotate&quot; viewBox=&quot;0 0 100 100&quot;&gt;
+                        &lt;defs&gt;
+                            &lt;path id=&quot;womenLogoPath&quot; d=&quot;M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0&quot; /&gt;
+                        &lt;/defs&gt;
+                        &lt;text fill=&quot;#FFFFFF&quot; font-size=&quot;7.2&quot; font-weight=&quot;500&quot; letter-spacing=&quot;2.3&quot; class=&quot;opacity-70 uppercase&quot;&gt;
+                            &lt;textPath xlink:href=&quot;#womenLogoPath&quot;&gt;• LICERIA SPORTS &amp; CO • WOMEN'S PRIDE •&lt;/textPath&gt;
+                        &lt;/text&gt;
+                    &lt;/svg&gt;
+                    &lt;div class=&quot;w-12 h-12 bg-accentRed rounded-full border border-white/20 flex items-center justify-center shadow-lg backdrop-blur-sm&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-shield-heart text-white text-lg&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;mt-4&quot;&gt;
+                    &lt;h6 class=&quot;text-textMain text-lg font-bold tracking-[0.25em] leading-none uppercase&quot;&gt;Liceria&lt;/h6&gt;
+                    &lt;p class=&quot;text-lineColor text-[9px] tracking-[0.4em] font-light mt-1.5 uppercase&quot;&gt;Inclusive Sports Management&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- 左列 (Cols 1-4): 历史发展 --&gt;
+            &lt;div class=&quot;col-span-4 flex flex-col justify-end pb-4&quot;&gt;
+                &lt;!-- 进度装饰条 --&gt;
+                &lt;div class=&quot;mb-12 w-36 h-2 bg-white/10 rounded-full overflow-hidden flex&quot;&gt;
+                    &lt;div class=&quot;h-full w-[80%] bg-lineColor opacity-50&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;h-full w-[20%] bg-accentRed&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;h3 class=&quot;text-textMain text-3xl font-bold leading-tight mb-6 tracking-wide&quot;&gt;
+                    A Brief History of&lt;br&gt;Women's Football
+                &lt;/h3&gt;
+
+                &lt;p class=&quot;text-textBody text-sm leading-relaxed opacity-80 text-justify border-l-2 border-lineColor/30 pl-4&quot;&gt;
+                    From the earliest recorded matches to the global phenomenon it is today, women's football has fought for every inch of the pitch. Despite historical bans, the spirit of the game persevered, leading to the professional leagues we celebrate today.
+                &lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;!-- 中列 (Cols 5-8): 中心视觉主体 --&gt;
+            &lt;div class=&quot;col-span-4 flex flex-col items-center relative&quot;&gt;
+                &lt;!-- 圆形主体图片 --&gt;
+                &lt;div class=&quot;absolute top-24 w-[400px] h-[400px] rounded-full border border-lineColor/40 p-2 flex items-center justify-center bg-primaryBg/50 backdrop-blur-sm shadow-2xl&quot;&gt;
+                    &lt;div class=&quot;w-full h-full rounded-full overflow-hidden border-4 border-contentBox&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1517466787929-bc90951d64b8?q=80&amp;w=1000&amp;auto=format&amp;fit=crop&quot; class=&quot;w-full h-full object-cover&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 底部辅助文字 --&gt;
+                &lt;div class=&quot;mt-auto pb-4 w-full&quot;&gt;
+                    &lt;p class=&quot;text-textBody text-sm leading-relaxed opacity-80 text-justify&quot;&gt;
+                        The modern era has seen an explosion in popularity, with record-breaking attendance at World Cups. Investment in grassroots programs ensures that the next generation will have unprecedented opportunities.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- 右列 (Cols 9-12): 主标题与介绍 --&gt;
+            &lt;div class=&quot;col-span-4 flex flex-col pt-4&quot;&gt;
+                &lt;div class=&quot;text-right&quot;&gt;
+                    &lt;h1 class=&quot;text-textMain text-[80px] font-bold leading-[0.85] tracking-tighter mb-4 uppercase&quot;&gt;
+                        WOMEN'S&lt;br&gt;FOOTBALL
+                    &lt;/h1&gt;
+                    &lt;h2 class=&quot;text-lineColor text-xl font-medium tracking-wide mb-10 italic uppercase&quot;&gt;
+                        Breaking Barriers &amp;&lt;br&gt;Gaining Recognition
+                    &lt;/h2&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 重点引言块 --&gt;
+                &lt;div class=&quot;bg-contentBox/30 p-8 rounded-tr-[40px] rounded-bl-[40px] backdrop-blur-sm mb-auto border-r-4 border-accentRed text-right shadow-xl&quot;&gt;
+                    &lt;p class=&quot;text-textMain text-sm leading-relaxed&quot;&gt;
+                        Football is more than just a game; it is a movement. We explore the tactical evolution and the cultural impact of women's football across the globe, highlighting key milestones.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 下一页导航按钮 --&gt;
+                &lt;div class=&quot;mt-auto flex justify-end items-center gap-6 pb-4&quot;&gt;
+                    &lt;div class=&quot;flex flex-col items-end&quot;&gt;
+                        &lt;span class=&quot;text-lineColor text-[10px] tracking-[0.3em] uppercase mb-1&quot;&gt;Explore More&lt;/span&gt;
+                        &lt;div class=&quot;w-16 h-1 bg-white/20&quot;&gt;&lt;div class=&quot;w-1/3 h-full bg-accentRed&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;w-16 h-16 rounded-full border-2 border-white hover:bg-accentRed hover:border-accentRed transition-all flex items-center justify-center cursor-pointer group shadow-lg&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-arrow-right text-2xl text-white group-hover:translate-x-1 transition-transform&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 底部装饰版权 --&gt;
+        &lt;div class=&quot;absolute bottom-6 left-16 z-20 flex items-center gap-3 opacity-40&quot;&gt;
+            &lt;span class=&quot;text-lineColor text-[10px] tracking-[0.5em] uppercase font-bold&quot;&gt;Liceria &amp; Co. © 2026 Archive&lt;/span&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 10
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;The Future of Football - Liceria &amp; Co.&lt;/title&gt;
+
+    &lt;!-- Tailwind CSS (CDN) --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+
+    &lt;!-- FontAwesome (CDN) --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+
+    &lt;!-- Google Fonts --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans SC', sans-serif; -webkit-font-smoothing: antialiased; }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background-color: #2A4029;
+        }
+
+        /* 旋转动画 */
+        @keyframes rotate-text {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-rotate {
+            animation: rotate-text 20s linear infinite;
+        }
+
+        /* 呼吸效果 */
+        @keyframes glow {
+            0%, 100% { border-color: rgba(140, 155, 138, 0.3); box-shadow: 0 0 20px rgba(255,255,255,0.05); }
+            50% { border-color: rgba(217, 70, 62, 0.4); box-shadow: 0 0 40px rgba(217, 70, 62, 0.1); }
+        }
+        .animate-glow { animation: glow 6s ease-in-out infinite; }
+
+        /* 文字截断防止溢出 */
+        .line-clamp-custom {
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .glass-card {
+            background-color: rgba(97, 115, 96, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    &lt;/style&gt;
+    
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryBg: '#2A4029',
+                        contentBg: '#617360',
+                        textHead: '#FFFFFF',
+                        textBody: '#E0E6DF',
+                        decorLine: '#8C9B8A',
+                        accentRed: '#D9463E',
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+
+        &lt;!-- 1. 背景层 --&gt;
+        &lt;div class=&quot;absolute inset-0 z-0&quot;&gt;
+            &lt;img src=&quot;https://images.unsplash.com/photo-1529900748604-07564a03e7a6?q=80&amp;w=1280&amp;auto=format&amp;fit=crop&quot; 
+                 class=&quot;w-full h-full object-cover opacity-20 mix-blend-overlay&quot; alt=&quot;Grass&quot;&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 2. 装饰线条 --&gt;
+        &lt;div class=&quot;absolute inset-0 z-10 pointer-events-none overflow-hidden opacity-30&quot;&gt;
+            &lt;div class=&quot;absolute w-[1000px] h-[1px] bg-decorLine left-[-150px] bottom-[150px] transform -rotate-[28deg]&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;absolute w-[1000px] h-[1px] bg-decorLine right-[-150px] top-[150px] transform -rotate-[28deg]&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 3. [统一Logo] Header Area --&gt;
+        &lt;div class=&quot;absolute top-10 left-12 z-30 flex items-start gap-4 transform scale-90&quot;&gt;
+            &lt;div class=&quot;relative w-24 h-24 flex items-center justify-center&quot;&gt;
+                &lt;svg class=&quot;absolute w-full h-full animate-rotate&quot; viewBox=&quot;0 0 100 100&quot;&gt;
+                    &lt;defs&gt;
+                        &lt;path id=&quot;futureCirclePath&quot; d=&quot;M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0&quot; /&gt;
+                    &lt;/defs&gt;
+                    &lt;text fill=&quot;#FFFFFF&quot; font-size=&quot;7.5&quot; font-weight=&quot;500&quot; letter-spacing=&quot;2.2&quot; class=&quot;opacity-70 uppercase&quot;&gt;
+                        &lt;textPath xlink:href=&quot;#futureCirclePath&quot;&gt;• LICERIA SPORTS &amp; CO • FUTURE VISION •&lt;/textPath&gt;
+                    &lt;/text&gt;
+                &lt;/svg&gt;
+                &lt;div class=&quot;w-12 h-12 bg-accentRed rounded-full border border-white/20 flex items-center justify-center shadow-lg&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-microchip text-white text-lg&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;mt-4&quot;&gt;
+                &lt;h6 class=&quot;text-textHead text-lg font-bold tracking-[0.25em] leading-none uppercase&quot;&gt;Liceria&lt;/h6&gt;
+                &lt;p class=&quot;text-decorLine text-[9px] tracking-[0.4em] font-light mt-1.5 uppercase&quot;&gt;Advanced Strategic Research&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 下一页图标 --&gt;
+        &lt;div class=&quot;absolute top-12 right-12 z-30&quot;&gt;
+            &lt;div class=&quot;w-14 h-14 rounded-full border border-white/20 flex items-center justify-center text-textHead hover:bg-accentRed hover:border-accentRed transition-all cursor-pointer group&quot;&gt;
+                &lt;i class=&quot;fa-solid fa-arrow-right text-xl group-hover:translate-x-1 transition-transform&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 4. 主布局结构 --&gt;
+        &lt;div class=&quot;relative z-20 grid grid-cols-12 gap-10 h-full px-16 items-center&quot;&gt;
+            
+            &lt;!-- 左侧美化文本卡片 --&gt;
+            &lt;div class=&quot;col-span-3 flex flex-col gap-6 pt-16&quot;&gt;
+                &lt;div class=&quot;glass-card p-6 rounded-tr-3xl rounded-bl-3xl border-l-4 border-accentRed shadow-xl&quot;&gt;
+                    &lt;div class=&quot;flex items-center gap-3 mb-4&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-bolt-lightning text-accentRed&quot;&gt;&lt;/i&gt;
+                        &lt;h2 class=&quot;text-xl font-bold text-textHead uppercase tracking-tight leading-none&quot;&gt;
+                            Innovations
+                        &lt;/h2&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-sm text-textBody leading-relaxed font-light text-justify line-clamp-custom&quot;&gt;
+                        The integration of Real-time AI analytics and player-tracking microchips is revolutionizing training and performance monitoring. Every movement on the pitch is now data-driven, providing unprecedented insights into player fatigue and tactical positioning.
+                    &lt;/p&gt;
+                    &lt;div class=&quot;mt-4 pt-4 border-t border-white/10&quot;&gt;
+                        &lt;p class=&quot;text-[11px] text-decorLine uppercase tracking-widest font-bold&quot;&gt;Tech Integration Phase 1.0&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- 中间核心焦点 (大圆环) --&gt;
+            &lt;div class=&quot;col-span-6 flex justify-center items-center h-full relative&quot;&gt;
+                &lt;!-- 圆环带呼吸效果 --&gt;
+                &lt;div class=&quot;w-[500px] h-[500px] rounded-full border animate-glow flex flex-col justify-center items-center text-center backdrop-blur-[4px] shadow-2xl relative&quot;&gt;
+                    &lt;!-- 背景装饰 --&gt;
+                    &lt;div class=&quot;absolute inset-0 rounded-full bg-gradient-to-br from-white/5 to-transparent pointer-events-none&quot;&gt;&lt;/div&gt;
+
+                    &lt;!-- 核心文案 --&gt;
+                    &lt;div class=&quot;flex flex-col items-center gap-2&quot;&gt;
+                        &lt;span class=&quot;text-accentRed font-bold text-sm tracking-[0.6em] uppercase&quot;&gt;The Vision&lt;/span&gt;
+                        &lt;h1 class=&quot;text-[84px] font-bold text-textHead leading-none tracking-tighter uppercase&quot;&gt;
+                            Future
+                        &lt;/h1&gt;
+                        &lt;div class=&quot;flex items-center gap-4 w-full justify-center&quot;&gt;
+                            &lt;div class=&quot;h-[1px] w-12 bg-decorLine opacity-50&quot;&gt;&lt;/div&gt;
+                            &lt;span class=&quot;text-3xl font-light text-textHead italic uppercase&quot;&gt;of&lt;/span&gt;
+                            &lt;div class=&quot;h-[1px] w-12 bg-decorLine opacity-50&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;h1 class=&quot;text-[84px] font-bold text-textHead leading-none tracking-tighter uppercase&quot;&gt;
+                            Football
+                        &lt;/h1&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- 底部装饰标语 --&gt;
+                    &lt;div class=&quot;absolute bottom-16&quot;&gt;
+                        &lt;p class=&quot;text-decorLine text-[10px] tracking-[0.4em] uppercase font-light&quot;&gt;Evolving the beautiful game&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- 右侧美化文本卡片 --&gt;
+            &lt;div class=&quot;col-span-3 flex flex-col gap-6 pt-16&quot;&gt;
+                &lt;div class=&quot;glass-card p-6 rounded-tl-3xl rounded-br-3xl border-r-4 border-white/40 shadow-xl text-right&quot;&gt;
+                    &lt;div class=&quot;flex items-center gap-3 mb-4 justify-end&quot;&gt;
+                        &lt;h2 class=&quot;text-xl font-bold text-textHead uppercase tracking-tight leading-none&quot;&gt;
+                            Global Rules
+                        &lt;/h2&gt;
+                        &lt;i class=&quot;fa-solid fa-gavel text-white/60&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-sm text-textBody leading-relaxed font-light text-justify line-clamp-custom&quot;&gt;
+                        The World Football Federation is exploring dynamic offside rules and semi-automated officiating to reduce game delays. New sustainability protocols for global stadiums ensure that the future of the game is as green as the pitch itself.
+                    &lt;/p&gt;
+                    &lt;div class=&quot;mt-4 pt-4 border-t border-white/10&quot;&gt;
+                        &lt;p class=&quot;text-[11px] text-decorLine uppercase tracking-widest font-bold&quot;&gt;Regulatory Reform 2026&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+
+        &lt;!-- 底部装饰条 --&gt;
+        &lt;div class=&quot;absolute bottom-10 left-0 w-full px-16 flex justify-between items-center opacity-30&quot;&gt;
+            &lt;div class=&quot;flex gap-4&quot;&gt;
+                &lt;div class=&quot;w-12 h-1 bg-accentRed&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;w-24 h-1 bg-white/20&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;p class=&quot;text-decorLine text-xs tracking-[0.3em] uppercase&quot;&gt;Liceria &amp; Co. © 2026 Strategic Roadmap&lt;/p&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 11
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;History of Football - Liceria &amp; Co.&lt;/title&gt;
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;!-- Google Fonts --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background-color: #2A4029;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* 旋转动画 */
+        @keyframes rotate-text {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-rotate {
+            animation: rotate-text 20s linear infinite;
+        }
+
+        .glass-overlay {
+            background-color: rgba(42, 64, 41, 0.9);
+            backdrop-filter: blur(1px);
+        }
+
+        /* 条纹装饰 */
+        .striped-bar {
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 4px,
+                #E0E6DF 4px,
+                #E0E6DF 8px
+            );
+        }
+
+        .text-shadow-premium {
+            text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+    &lt;/style&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryBg: '#2A4029',
+                        contentBox: '#617360',
+                        textMain: '#FFFFFF',
+                        textBody: '#E0E6DF',
+                        lineColor: '#8C9B8A',
+                        accentRed: '#D9463E',
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot; class=&quot;shadow-2xl&quot;&gt;
+
+        &lt;!-- 1. 背景层 --&gt;
+        &lt;div class=&quot;absolute inset-0 z-0&quot;&gt;
+            &lt;img src=&quot;https://images.unsplash.com/photo-1529900748604-07564a03e7a6?q=80&amp;w=1280&amp;auto=format&amp;fit=crop&quot; 
+                 alt=&quot;Grass Texture&quot; class=&quot;w-full h-full object-cover opacity-40&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;absolute inset-0 z-10 glass-overlay&quot;&gt;&lt;/div&gt;
+
+        &lt;!-- 2. 几何装饰线条 (十字准星) --&gt;
+        &lt;div class=&quot;absolute h-full w-[1px] bg-lineColor/20 left-[68%] z-20&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute w-full h-[1px] bg-lineColor/20 top-[48%] z-20&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute top-[48%] left-[68%] transform -translate-x-1/2 -translate-y-1/2 w-[520px] h-[520px] rounded-full border border-lineColor/30 z-20 pointer-events-none&quot;&gt;&lt;/div&gt;
+
+        &lt;!-- 3. 内容层 --&gt;
+        &lt;div class=&quot;relative z-30 w-full h-full p-16 flex flex-col justify-between&quot;&gt;
+            
+            &lt;!-- 顶部 Header: Logo &amp; 描述 --&gt;
+            &lt;div class=&quot;flex justify-between items-start w-full&quot;&gt;
+                &lt;!-- [左侧：旋转徽章 Logo] --&gt;
+                &lt;div class=&quot;flex items-start gap-4 transform scale-90 -translate-x-3 -translate-y-2&quot;&gt;
+                    &lt;div class=&quot;relative w-24 h-24 flex items-center justify-center&quot;&gt;
+                        &lt;svg class=&quot;absolute w-full h-full animate-rotate&quot; viewBox=&quot;0 0 100 100&quot;&gt;
+                            &lt;defs&gt;
+                                &lt;path id=&quot;historyCirclePath&quot; d=&quot;M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0&quot; /&gt;
+                            &lt;/defs&gt;
+                            &lt;text fill=&quot;#FFFFFF&quot; font-size=&quot;7.5&quot; font-weight=&quot;500&quot; letter-spacing=&quot;2.2&quot; class=&quot;opacity-70 uppercase&quot;&gt;
+                                &lt;textPath xlink:href=&quot;#historyCirclePath&quot;&gt;• LICERIA SPORTS &amp; CO • HISTORICAL ARCHIVE •&lt;/textPath&gt;
+                            &lt;/text&gt;
+                        &lt;/svg&gt;
+                        &lt;div class=&quot;w-12 h-12 bg-accentRed rounded-full border border-white/20 flex items-center justify-center shadow-lg&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-timeline text-white text-lg&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;mt-4&quot;&gt;
+                        &lt;h6 class=&quot;text-textMain text-lg font-bold tracking-[0.25em] leading-none uppercase&quot;&gt;Liceria&lt;/h6&gt;
+                        &lt;p class=&quot;text-lineColor text-[9px] tracking-[0.4em] font-light mt-1.5 uppercase pl-0.5&quot;&gt;Football Heritage &amp; Legacy&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 中间：引导文字 --&gt;
+                &lt;div class=&quot;w-1/3 px-8&quot;&gt;
+                    &lt;h2 class=&quot;text-textMain text-3xl font-light leading-tight tracking-wide border-l-2 border-accentRed pl-6&quot;&gt;
+                        From Ancient Games &lt;br&gt;&lt;span class=&quot;font-bold&quot;&gt;To Modern Sport&lt;/span&gt;
+                    &lt;/h2&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 右侧：页码/阶段装饰 --&gt;
+                &lt;div class=&quot;text-right&quot;&gt;
+                    &lt;span class=&quot;text-accentRed font-bold text-sm tracking-[0.4em] uppercase&quot;&gt;Archive 01&lt;/span&gt;
+                    &lt;div class=&quot;w-24 h-4 border border-lineColor/30 p-1 mt-2&quot;&gt;
+                        &lt;div class=&quot;w-1/2 h-full striped-bar opacity-60&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- 下部主要视觉区 --&gt;
+            &lt;div class=&quot;flex h-full mt-12&quot;&gt;
+                
+                &lt;!-- 左侧：标题与详情 --&gt;
+                &lt;div class=&quot;w-[45%] flex flex-col justify-end&quot;&gt;
+                    &lt;!-- 历史说明文本 --&gt;
+                    &lt;div class=&quot;mb-12 pr-12 relative&quot;&gt;
+                        &lt;div class=&quot;absolute -left-6 top-0 h-full w-[1px] bg-lineColor/30&quot;&gt;&lt;/div&gt;
+                        &lt;p class=&quot;text-textBody text-sm leading-relaxed text-justify opacity-80&quot;&gt;
+                            Football's journey is a testament to human passion. Originating from ancient ball games in China, Greece, and Rome, it evolved through the centuries into the codified sport we love today. This evolution reflects the shifting tides of culture and the enduring spirit of competition.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- 交互按钮 --&gt;
+                    &lt;div class=&quot;mb-10&quot;&gt;
+                        &lt;div class=&quot;w-16 h-16 bg-white hover:bg-accentRed transition-all duration-300 rounded-full flex items-center justify-center shadow-2xl group cursor-pointer&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-arrow-right text-primaryBg group-hover:text-white text-2xl group-hover:translate-x-1 transition-transform&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- 主标题 --&gt;
+                    &lt;div class=&quot;pb-4&quot;&gt;
+                        &lt;h1 class=&quot;text-textMain text-[90px] font-bold leading-[0.85] tracking-tighter uppercase text-shadow-premium&quot;&gt;
+                            History Of&lt;br&gt;
+                            &lt;span class=&quot;text-transparent bg-clip-text bg-gradient-to-r from-white to-lineColor&quot;&gt;Football&lt;/span&gt;
+                        &lt;/h1&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 右侧：视觉主体 --&gt;
+                &lt;div class=&quot;w-[55%] relative&quot;&gt;
+                    &lt;!-- 圆形图片主体 (置于十字准星交汇处) --&gt;
+                    &lt;div class=&quot;absolute top-[48%] left-[42%] transform -translate-x-1/2 -translate-y-1/2 w-[440px] h-[440px] bg-contentBox/30 rounded-full p-3 shadow-[0_0_60px_rgba(0,0,0,0.6)] backdrop-blur-sm border border-lineColor/30 overflow-hidden&quot;&gt;
+                        &lt;div class=&quot;w-full h-full rounded-full overflow-hidden border-2 border-white/20 relative&quot;&gt;
+                            &lt;img src=&quot;https://images.unsplash.com/photo-1551958219-acbc608c6377?q=80&amp;w=800&amp;auto=format&amp;fit=crop&quot; 
+                                 alt=&quot;Vintage Football&quot; 
+                                 class=&quot;w-full h-full object-cover hover:scale-110 transition-transform duration-[2000ms]&quot;&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- 底部装饰性版权 --&gt;
+                    &lt;div class=&quot;absolute bottom-4 right-0 flex items-center gap-4 text-lineColor/40&quot;&gt;
+                        &lt;p class=&quot;text-[10px] tracking-[0.4em] uppercase font-bold&quot;&gt;Liceria &amp; Co. © 2026&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <script>
+   // 自动调整iframe高度
+    function resizeIframes() {
+        document.querySelectorAll('.responsive-iframe').forEach(iframe => {
+            try {
+                const doc = iframe.contentDocument || iframe.contentWindow.document;
+                const height = Math.max(
+                    doc.body.scrollHeight,
+                    doc.documentElement.scrollHeight,
+                    doc.body.offsetHeight,
+                    doc.documentElement.offsetHeight,
+                    doc.body.clientHeight,
+                    doc.documentElement.clientHeight
+                );
+                iframe.style.height = height + 'px';
+            } catch (e) {
+                console.log('无法调整iframe高度:', e);
+            }
+        });
+    }
+    
+    // 初始调整
+    window.addEventListener('load', resizeIframes);
+    
+    // 内容加载后调整
+    document.querySelectorAll('.responsive-iframe').forEach(iframe => {
+        iframe.addEventListener('load', function() {
+            resizeIframes();
+            // 对动态内容进行定期检查
+            setInterval(resizeIframes, 1000);
+        });
+    });
+  </script>
+ </body>
+</html>

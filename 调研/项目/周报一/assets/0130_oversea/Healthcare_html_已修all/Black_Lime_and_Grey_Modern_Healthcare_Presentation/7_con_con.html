@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Education Keynote - Updated</title>
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- ECharts -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts (Domestic Mirror) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FFFFFF;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        .layout-grid {
+            display: grid;
+            grid-template-columns: 7fr 5fr;
+            height: 100%;
+        }
+        .bg-blob {
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(210, 240, 80, 0.2) 0%, rgba(255,255,255,0) 70%);
+            z-index: 0;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <div class="bg-blob"></div>
+
+        <div class="layout-grid">
+            
+            <!-- Left Column: Content & Two Images -->
+            <div class="relative z-10 flex flex-col justify-between p-16 pr-12">
+                
+                <div class="mb-6">
+                    <div class="w-16 h-2 bg-[#D2F050] mb-6"></div>
+                    <h1 class="text-7xl font-black tracking-tighter leading-[0.9] mb-8">
+                        HEALTH <br>
+                        EDUCATION <br>
+                        FOR ALL
+                    </h1>
+                    <p class="text-lg leading-relaxed text-gray-600 max-w-2xl font-light">
+                        We believe that informed patients are empowered patients. 
+                    </p>
+                </div>
+
+                <!-- Dual Hero Image Section -->
+                <div class="grid grid-cols-2 gap-4 h-[280px]">
+                    <!-- Image 1 -->
+                    <div class="relative rounded-2xl overflow-hidden shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                             alt="Doctor consulting" 
+                             class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 left-0 bg-[#D2F050] px-4 py-2 rounded-tr-xl">
+                            <span class="font-bold text-black text-xs uppercase tracking-wider">Expertise</span>
+                        </div>
+                    </div>
+                    <!-- Image 2 -->
+                    <div class="relative rounded-2xl overflow-hidden shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                             alt="Medical research" 
+                             class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 left-0 bg-[#D2F050] px-4 py-2 rounded-tr-xl">
+                            <span class="font-bold text-black text-xs uppercase tracking-wider">Analysis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Statistics / Extended Logic -->
+            <div class="relative z-10 bg-gray-50 h-full flex flex-col justify-center px-12 py-16 border-l border-gray-100">
+                
+                <ul class="flex flex-col gap-8">
+                    
+                    <!-- Item 1: Awareness -->
+                    <li class="flex items-center gap-6">
+                        <div id="chart_awareness" class="w-[150px] h-[150px] flex-shrink-0"></div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold mb-1">Awareness</h3>
+                            <p class="text-gl text-gray-500 leading-snug">
+                                By identifying early symptoms, individuals can proactively seek medical attention before conditions escalate.
+                            </p>
+                        </div>
+                    </li>
+
+                    <div class="w-full h-[1px] bg-gray-200"></div>
+
+                    <!-- Item 2: Trained -->
+                    <li class="flex items-center gap-6">
+                        <div id="chart_trained" class="w-[150px] h-[150px] flex-shrink-0"></div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold mb-1">Trained</h3>
+                            <p class="text-gl text-gray-500 leading-snug">
+                                Ongoing guidance ensures patients adhere to treatment plans with precision and greater confidence.
+                            </p>
+                        </div>
+                    </li>
+
+                    <div class="w-full h-[1px] bg-gray-200"></div>
+
+                    <!-- Item 3: Trusted -->
+                    <li class="flex items-center gap-6">
+                        <div id="chart_trusted" class="w-[150px] h-[150px] flex-shrink-0"></div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold mb-1">Trusted</h3>
+                            <p class="text-gl text-gray-500 leading-snug">
+                                Transparent communication fosters a stronger long-term relationship between medical providers and the community.
+                            </p>
+                        </div>
+                    </li>
+
+                </ul>
+
+                <div class="mt-auto pt-10">
+                    <div class="flex items-center gap-3 text-gray-400 text-xs uppercase tracking-widest">
+                        <i class="fa-solid fa-circle-check text-[#D2F050]"></i>
+                        <span>Verified Data 2024</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function createGaugeChart(domId, value) {
+            var chartDom = document.getElementById(domId);
+            var myChart = echarts.init(chartDom);
+            var option = {
+                series: [{
+                    type: 'gauge',
+                    startAngle: 90,
+                    endAngle: -270,
+                    pointer: { show: false },
+                    progress: {
+                        show: true,
+                        roundCap: true,
+                        itemStyle: { color: '#D2F050' }
+                    },
+                    axisLine: {
+                        lineStyle: { width: 8, color: [[1, '#E5E7EB']] }
+                    },
+                    splitLine: { show: false },
+                    axisTick: { show: false },
+                    axisLabel: { show: false },
+                    data: [{
+                        value: value,
+                        detail: { offsetCenter: ['0%', '0%'] }
+                    }],
+                    detail: {
+                        fontSize: 22,
+                        color: '#000000',
+                        fontWeight: 'bold',
+                        formatter: '{value}%',
+                        fontFamily: 'Noto Sans SC'
+                    }
+                }]
+            };
+            myChart.setOption(option);
+        }
+
+        createGaugeChart('chart_awareness', 85);
+        createGaugeChart('chart_trained', 72);
+        createGaugeChart('chart_trusted', 60);
+    </script>
+</body>
+</html>

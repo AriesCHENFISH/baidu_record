@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Monday Keynote Cover - Redesigned</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%3B900%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#050505',
+                        surface: '#121212',
+                        primary: '#FFFFFF',
+                        accent: '#FF2A2A', // Brighter Neon Red
+                        'accent-dark': '#8B0000',
+                        secondary: '#888888',
+                        muted: '#333333',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                        mono: ['Courier New', 'monospace'],
+                    },
+                    spacing: {
+                        '1280': '1280px',
+                        '720': '720px',
+                    },
+                    letterSpacing: {
+                        'tightest': '-0.08em',
+                        'widest-xl': '0.35em',
+                        'mega': '0.5em',
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    },
+                    dropShadow: {
+                        'neon': '0 0 10px rgba(255, 42, 42, 0.7)',
+                        'neon-strong': '0 0 20px rgba(255, 42, 42, 0.9)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #050505;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Scanline effect */
+        .scanlines {
+            background: linear-gradient(
+                to bottom,
+                rgba(255,255,255,0),
+                rgba(255,255,255,0) 50%,
+                rgba(0,0,0,0.2) 50%,
+                rgba(0,0,0,0.2)
+            );
+            background-size: 100% 4px;
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        /* Grid Background */
+        .bg-tech-grid {
+            background-size: 50px 50px;
+            background-image:
+                linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+            -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+        }
+
+        /* Hollow Text */
+        .text-stroke {
+            -webkit-text-stroke: 2px rgba(255, 255, 255, 0.8);
+            color: transparent;
+        }
+        
+        /* Diagonal Cut */
+        .clip-diagonal {
+            clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+        }
+        
+        .clip-diagonal-reverse {
+            clip-path: polygon(5% 0, 100% 0, 100% 100%, 0% 100%);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container" class="bg-background text-primary">
+        
+        <!-- Background Layers -->
+        <div class="absolute inset-0 bg-gradient-radial from-[#1a1a1a] via-[#050505] to-black z-0"></div>
+        <div class="absolute inset-0 bg-tech-grid z-0 opacity-60"></div>
+        <div class="absolute inset-0 scanlines z-10 opacity-30"></div>
+        
+        <!-- Decorative Noise -->
+        <div class="absolute inset-0 opacity-[0.05] pointer-events-none z-0 mix-blend-overlay" 
+             style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.8%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E');">
+        </div>
+
+        <!-- Decorative Large Circle -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-white/5 rounded-full z-0"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] border border-accent/10 rounded-full z-0 border-dashed"></div>
+
+        <!-- Corner Elements -->
+        <div class="absolute top-8 left-8 z-20">
+            <div class="w-2 h-2 bg-accent mb-2"></div>
+            <div class="h-16 w-[1px] bg-gradient-to-b from-accent to-transparent"></div>
+        </div>
+        <div class="absolute top-8 right-8 z-20 text-right">
+            <div class="flex items-center gap-2 justify-end mb-1">
+                <span class="text-[10px] text-secondary font-mono">REC</span>
+                <div class="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
+            </div>
+            <div class="h-16 w-[1px] bg-gradient-to-b from-secondary to-transparent ml-auto"></div>
+        </div>
+
+        <!-- Top Labels -->
+        <div class="absolute top-12 left-16 z-20 flex flex-col gap-1">
+            <div class="flex items-center gap-2">
+                <span class="bg-white/10 px-2 py-0.5 text-[10px] font-mono tracking-widest text-secondary border border-white/10">SYS.READY</span>
+            </div>
+            <h3 class="text-white text-sm tracking-widest font-bold opacity-80 mt-2">
+                KEYNOTE // PRESENTATION
+            </h3>
+        </div>
+
+        <div class="absolute top-12 right-16 z-20 text-right">
+            <h3 class="text-accent text-sm tracking-mega font-bold uppercase drop-shadow-neon">
+                STRATEGY_2026
+            </h3>
+            <p class="text-[10px] text-secondary mt-1 font-mono">CONFIDENTIAL DATA STREAM</p>
+        </div>
+
+        <!-- Main Content Center -->
+        <div class="flex-grow flex flex-col justify-center items-center z-20 relative mt-[-40px]">
+            
+            <!-- Decorative Crosshairs -->
+            <div class="absolute w-full h-[1px] bg-white/5 top-1/2 left-0"></div>
+            <div class="absolute h-full w-[1px] bg-white/5 left-1/2 top-0"></div>
+
+            <div class="relative text-center">
+                <!-- Back Text (Shadow/Depth) -->
+                <h1 class="absolute top-0 left-1 text-[180px] font-black text-white/5 select-none blur-sm transform translate-y-2">
+                    CYBER
+                </h1>
+
+                <!-- Main Title CYBER -->
+                <h1 class="text-[180px] leading-[0.8] font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white via-gray-200 to-gray-500 relative z-10 drop-shadow-2xl">
+                    CYBER
+                </h1>
+                
+                <!-- Secondary Title MONDAY with Barcode effect -->
+                <div class="relative mt-2">
+                    <!-- Background bar -->
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[1px] bg-accent/30"></div>
+                    
+                    <h1 class="text-[140px] leading-[0.8] font-black tracking-widest-xl text-accent drop-shadow-neon-strong relative z-10 mix-blend-screen">
+                        MONDAY
+                    </h1>
+                    
+                    <!-- Glitch/Tech bits under title -->
+                    <div class="flex justify-between items-center w-full px-4 mt-6">
+                        <div class="h-1 w-24 bg-secondary/30"></div>
+                        <div class="font-mono text-xs text-accent tracking-[1em] opacity-80">v.4.0.21_BETA</div>
+                        <div class="h-1 w-24 bg-secondary/30"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer / Speaker Section - Glassmorphism -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 w-[90%] h-[140px] z-30 flex items-end">
+            
+            <!-- Left Block -->
+            <div class="h-full w-1/3 bg-surface/80 backdrop-blur-md border border-white/10 p-8 flex flex-col justify-center clip-diagonal relative group">
+                <div class="absolute left-0 top-0 bottom-0 w-1 bg-accent group-hover:shadow-[0_0_15px_rgba(255,42,42,0.6)] transition-shadow"></div>
+                <h2 class="text-3xl font-bold uppercase text-white tracking-wide group-hover:text-accent transition-colors duration-300">
+                    Alex Chen
+                </h2>
+                <div class="flex items-center gap-2 mt-2">
+                    <span class="px-1.5 py-0.5 bg-accent/20 text-accent text-[10px] font-bold uppercase border border-accent/20">CMO</span>
+                    <p class="text-secondary text-sm font-medium uppercase tracking-wider">
+                        Chief Marketing Officer
+                    </p>
+                </div>
+            </div>
+
+            <!-- Middle Connector (Decoration) -->
+            <div class="h-[1px] flex-grow bg-white/10 mb-8 mx-4 flex items-center justify-center">
+                <div class="w-2 h-2 bg-secondary rotate-45"></div>
+            </div>
+
+            <!-- Right Block -->
+            <div class="h-full w-1/3 bg-surface/80 backdrop-blur-md border border-white/10 p-8 flex flex-col justify-center items-end clip-diagonal-reverse text-right relative">
+                <div class="absolute right-0 top-0 bottom-0 w-1 bg-secondary/50"></div>
+                
+                <div class="flex flex-col gap-3">
+                    <div class="flex items-center justify-end gap-3 text-white">
+                        <span class="text-sm font-light tracking-wider uppercase opacity-80">Global Retail Innovations</span>
+                        <div class="w-8 h-8 rounded bg-white/5 flex items-center justify-center border border-white/10 text-accent">
+                            <i class="fa-solid fa-building text-sm"></i>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-end gap-3 text-white">
+                        <span class="text-sm font-light tracking-wider uppercase opacity-80">Oct 26, 2025</span>
+                        <div class="w-8 h-8 rounded bg-white/5 flex items-center justify-center border border-white/10 text-accent">
+                            <i class="fa-solid fa-calendar-days text-sm"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+        <!-- Bottom tickers -->
+        <div class="absolute bottom-2 left-10 right-10 flex justify-between text-[9px] text-white/20 font-mono z-20">
+            <span>ID: 884-291-XA</span>
+            <span>SECURE CONNECTION ESTABLISHED</span>
+            <span>RUN_TIME: 00:01:42</span>
+        </div>
+
+    </div>
+
+</body>
+</html>

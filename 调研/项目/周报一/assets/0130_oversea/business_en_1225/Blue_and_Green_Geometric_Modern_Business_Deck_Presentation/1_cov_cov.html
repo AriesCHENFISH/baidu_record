@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cover Page - Studio Shodwe</title>
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryBg: '#051532',
+                        textMain: '#FFFFFF',
+                        textBody: '#E6E8EB',
+                        accent: '#F2F2F2',
+                        highlight: '#3B82F6', // Blue-500 from the directory page style
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container - Strict 1280x720 */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #051532; /* Primary Background */
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Utility helper for gradients (Glassmorphism consistent with Directory Page) */
+        .glass-panel {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        /* Text Stroke Effect for Title Style Matching */
+        .text-stroke {
+            -webkit-text-stroke: 2px #FFFFFF;
+            color: transparent;
+            opacity: 0.9;
+        }
+        
+        /* Subtle Grid Background for texture since no images */
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container" class="bg-grid">
+        
+        <div class="absolute top-[-150px] left-[-150px] w-[600px] h-[600px] rounded-full opacity-10 pointer-events-none" 
+             style="background: radial-gradient(circle, #2563EB, transparent);"></div>
+
+        <div class="absolute bottom-[-200px] right-[-100px] w-[700px] h-[700px] rounded-full opacity-5 pointer-events-none" 
+             style="background: radial-gradient(circle, #60A5FA, transparent);"></div>
+
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-blue-900/20 blur-[100px] rounded-full pointer-events-none"></div>
+
+        <div class="absolute top-12 w-full px-16 flex justify-between items-center opacity-60">
+            <span class="text-textBody text-xs tracking-widest uppercase">Keynote 2025</span>
+            <div class="flex items-center gap-2">
+                <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+                <span class="text-textMain text-xs font-bold uppercase tracking-wider">Studio Shodwe</span>
+            </div>
+        </div>
+
+        <div class="relative z-10 text-center flex flex-col items-center">
+            
+            <div class="mb-6 inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-white/10 bg-white/5">
+                <span class="text-blue-400 text-xs font-mono">00</span>
+                <span class="w-px h-3 bg-white/20"></span>
+                <span class="text-accent text-xs font-medium tracking-wide uppercase">Strategic Proposal</span>
+            </div>
+
+            <h1 class="text-[7rem] leading-[0.85] font-bold tracking-tighter mb-4">
+                <div class="text-textMain">Business</div>
+                <div class="text-stroke">Deck</div>
+            </h1>
+
+            <p class="text-blue-200/80 text-xl font-light tracking-wide mt-4 mb-16">
+                Growth Together & Future Vision
+            </p>
+
+            <div class="glass-panel rounded-2xl p-1 flex items-center gap-1">
+                <div class="bg-[#051532]/60 rounded-xl px-10 py-6 flex items-center gap-8 border border-white/5">
+                    
+                    <div class="w-14 h-14 rounded-full bg-gradient-to-br from-blue-600 to-blue-900 flex items-center justify-center shadow-lg shadow-blue-900/50">
+                        <i class="fa-solid fa-user-tie text-white text-xl"></i>
+                    </div>
+
+                    <div class="text-left">
+                        <p class="text-xs text-blue-400 font-mono mb-1 uppercase tracking-wider">Presented By</p>
+                        <h3 class="text-white text-lg font-bold">Alex Morgan</h3>
+                        <p class="text-white/50 text-xs">Senior Strategy Director</p>
+                    </div>
+
+                    <div class="w-px h-10 bg-gradient-to-b from-transparent via-white/20 to-transparent mx-2"></div>
+
+                    <div class="text-left">
+                        <p class="text-xs text-blue-400 font-mono mb-1 uppercase tracking-wider">Date</p>
+                        <h3 class="text-white text-lg font-medium">Dec 24, 2025</h3>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="absolute bottom-0 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-500/30 to-transparent"></div>
+        <div class="absolute bottom-0 w-[1280px] flex justify-center">
+             <div class="w-px h-8 bg-gradient-to-b from-blue-500/50 to-transparent"></div>
+        </div>
+
+    </div>
+</body>
+</html>

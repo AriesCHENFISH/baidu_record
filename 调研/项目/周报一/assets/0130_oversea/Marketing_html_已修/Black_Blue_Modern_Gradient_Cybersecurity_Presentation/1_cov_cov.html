@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Security Keynote</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts (Domestic CDN) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        /* CSS Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Main Page Container - 1280x720 Fixed */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background-color: #040710; /* Core Background Color */
+        }
+
+        /* Typography Utilities */
+        .font-primary {
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Custom Gradients based on design system */
+        .bg-gradient-accent {
+            background: linear-gradient(to right, #2C6FCA, #4FB0C0);
+        }
+        
+        .text-gradient-accent {
+            background: linear-gradient(to bottom, #2C6FCA, #4FB0C0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Decorative Grid Overlay */
+        .cyber-grid {
+            background-image: 
+                linear-gradient(rgba(79, 176, 192, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(79, 176, 192, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* Node Network Animation / Decoration (Top Left) */
+        .node-connection {
+            position: absolute;
+            background-color: #4FB0C0;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div id="page_container" class="font-primary">
+        
+        <!-- 1. Background Layer: Image + Overlay -->
+        <div class="absolute inset-0 z-0">
+            <!-- Background Image: Hacker/Cyber Theme -->
+            <!-- 1280*720 -->
+            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=2670&auto=format&fit=crop" 
+                 class="w-full h-full object-cover object-right opacity-60" 
+                 alt="Hacker Silhouette Background">
+            
+            <!-- Gradient Overlay to ensure text readability on the left -->
+            <div class="absolute inset-0" style="background: linear-gradient(90deg, #040710 40%, rgba(4, 7, 16, 0.6) 70%, rgba(4, 7, 16, 0.2) 100%);"></div>
+            
+            <!-- Subtle Cyber Grid Texture -->
+            <div class="absolute inset-0 cyber-grid z-0"></div>
+        </div>
+
+        <!-- 2. Decorative Elements (Top Left Network Nodes) -->
+        <div class="absolute top-0 left-0 w-64 h-64 z-10 pointer-events-none">
+            <!-- Node 1 -->
+            <div class="absolute top-12 left-12 text-[#4FB0C0] text-opacity-80">
+                <i class="fas fa-circle text-xs"></i>
+            </div>
+            <!-- Node 2 -->
+            <div class="absolute top-28 left-32 text-[#4FB0C0] text-opacity-60">
+                <i class="fas fa-circle text-[8px]"></i>
+            </div>
+            <!-- Node 3 -->
+            <div class="absolute top-8 left-48 text-[#4FB0C0] text-opacity-40">
+                <i class="fas fa-circle text-[6px]"></i>
+            </div>
+            <!-- Lines connecting nodes (CSS) -->
+            <div class="node-connection top-[52px] left-[52px] w-[80px] h-[1px] rotate-[25deg] origin-left"></div>
+            <div class="node-connection top-[36px] left-[52px] w-[140px] h-[1px] -rotate-[12deg] origin-left"></div>
+        </div>
+
+        <!-- 3. Main Content Layer -->
+        <div class="relative z-20 h-full flex flex-col justify-center px-16">
+            
+            <!-- Content Wrapper -->
+            <div class="w-full max-w-4xl">
+                
+                <!-- Decorative Top Label -->
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="h-[2px] w-12 bg-[#4FB0C0]"></div>
+                    <p class="text-[#4FB0C0] tracking-[0.2em] text-sm font-bold uppercase">
+                        System Protection Level: Maximum
+                    </p>
+                </div>
+
+                <!-- Main Title: CYBER SECURITY -->
+                <!-- Using heavy font weight and tight leading for impact -->
+                <div class="mb-8">
+                    <h1 class="text-white text-[110px] leading-[0.9] font-bold tracking-tighter uppercase drop-shadow-2xl">
+                        Cyber<br>
+                        <span class="text-transparent" style="-webkit-text-stroke: 2px white;">Security</span>
+                    </h1>
+                </div>
+
+                <!-- Gradient Bar / Subtitle Container -->
+                <!-- Replaces the blue bar in the original image with a modern gradient card -->
+                <div class="relative group">
+                    <!-- Gradient Background -->
+                    <div class="bg-gradient-accent rounded-r-full py-5 px-10 w-fit shadow-lg shadow-[#2C6FCA]/30 transform transition-transform">
+                        
+                        <div class="flex items-center gap-4">
+                            <!-- Icon -->
+                            <div class="bg-white/20 p-2 rounded-full backdrop-blur-sm">
+                                <i class="fas fa-shield-halved text-white text-xl"></i>
+                            </div>
+                            
+                            <!-- Subtitle Text -->
+                            <h2 class="text-white text-2xl font-semibold tracking-wide">
+                                Shielding Against Cyber Threats
+                            </h2>
+                        </div>
+                    </div>
+                    
+                    <!-- Decorative Line extending from bar -->
+                    <div class="absolute left-0 bottom-[-20px] w-[2px] h-[20px] bg-[#2C6FCA] opacity-50"></div>
+                </div>
+
+                <!-- Abstract Data Visualization (Decoration to balance negative space) -->
+                <div class="mt-16 flex gap-12 text-[#B0B3B8]">
+                    <!-- Stat 1 -->
+                    <div class="flex flex-col gap-1 border-l-2 border-[#1A1B1F] pl-4">
+                        <p class="text-xs uppercase tracking-widest text-[#4FB0C0]">Threats Blocked</p>
+                        <p class="text-3xl text-white font-bold">99.9%</p>
+                    </div>
+                    <!-- Stat 2 -->
+                    <div class="flex flex-col gap-1 border-l-2 border-[#1A1B1F] pl-4">
+                        <p class="text-xs uppercase tracking-widest text-[#4FB0C0]">Monitoring</p>
+                        <p class="text-3xl text-white font-bold">24/7</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 4. Right Side Decorative Elements (Holo-HUD style) -->
+        <!-- Placing subtle UI elements over the hacker image area to enhance the "Tech" feel -->
+        <div class="absolute right-12 top-12 bottom-12 w-64 flex flex-col justify-between items-end pointer-events-none z-10">
+            <!-- Top Right Corner decoration -->
+            <div class="flex flex-col items-end gap-2">
+                <i class="fas fa-wifi text-[#4FB0C0] text-2xl opacity-80"></i>
+                <div class="w-24 h-[1px] bg-gradient-to-l from-[#4FB0C0] to-transparent"></div>
+            </div>
+
+            <!-- Bottom Right Corner decoration -->
+            <div class="flex flex-col items-end gap-2">
+                <div class="flex gap-1">
+                    <div class="w-2 h-2 bg-[#4FB0C0] rounded-full animate-pulse"></div>
+                    <div class="w-2 h-2 bg-[#1A1B1F] border border-[#4FB0C0] rounded-full"></div>
+                    <div class="w-2 h-2 bg-[#1A1B1F] border border-[#4FB0C0] rounded-full"></div>
+                </div>
+                <p class="text-[#B0B3B8] text-[10px] tracking-widest uppercase text-right">
+                    Secure Connection<br>Established
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

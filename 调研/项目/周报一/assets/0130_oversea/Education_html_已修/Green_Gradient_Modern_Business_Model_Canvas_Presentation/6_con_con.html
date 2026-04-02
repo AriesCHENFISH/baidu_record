@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Relationships Strategy</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts CDN (Provided) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- Custom Config & Styles -->
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Utility specific for the prompt's gradient requirement */
+        .bg-gradient-accent {
+            background: linear-gradient(135deg, #6B8E85, #4A635D);
+        }
+        
+        /* Thin scrollbar if needed, though overflow is hidden per spec */
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+    </style>
+    
+    <!-- Tailwind Config to match the design system -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#1A1A1A',
+                        textPrimary: '#FFFFFF',
+                        textSecondary: '#E0E0E0',
+                        accent: '#6B8E85',
+                        borderWhite: 'rgba(255, 255, 255, 0.2)',
+                        iconGray: '#888888'
+                    },
+                    spacing: {
+                        '18': '4.5rem',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- 
+        Page Container 
+        Strict Dimensions: 1280x720
+        Layout: Relative positioning, Centered
+    -->
+    <div id="page_container" class="w-[1280px] h-[720px] bg-bgDark mx-auto relative overflow-hidden flex flex-col justify-between p-16 z-0">
+
+        <!-- Background Decor: Abstract Geometric Texture (Unsplash) -->
+        <!-- Adds depth to the dark theme without being intrusive -->
+        <div class="absolute top-0 left-0 w-full h-full z-[-1]">
+             <img src="https://images.unsplash.com/photo-1634152962476-4b8a00e1915c?q=80&w=2560&auto=format&fit=crop" 
+                  class="w-full h-full object-cover opacity-10 mix-blend-overlay" 
+                  alt="Abstract Dark Texture">
+             <!-- 1280*720 -->
+        </div>
+
+        <!-- Decorative Gradient Orb (CSS only) -->
+        <!-- Visual anchor for the top right corner -->
+        <div class="absolute -top-32 -right-32 w-96 h-96 bg-accent opacity-10 rounded-full blur-3xl z-[-1]"></div>
+
+        <!-- Section 1: Header -->
+        <header class="w-full flex flex-col gap-2 border-l-4 border-accent pl-6">
+            <h1 class="text-textPrimary text-5xl font-bold tracking-tight uppercase leading-none">
+                Customers<br>Relationships
+            </h1>
+        </header>
+
+        <!-- Section 2: Core Proposition (Middle Layer) -->
+        <div class="w-full max-w-4xl mt-8">
+            <!-- Pill Button / Badge Style for the Question -->
+            <div class="inline-block mb-6">
+                <div class="border border-borderWhite rounded-full px-6 py-2 bg-white/5 backdrop-blur-sm">
+                    <h2 class="text-textPrimary text-sm font-semibold tracking-widest uppercase">
+                        How do you acquire, keep, and grow your customers?
+                    </h2>
+                </div>
+            </div>
+
+            <!-- Main Insight Text -->
+            <!-- Using Accent Color for high impact -->
+            <div class="relative">
+                <p class="text-accent text-3xl font-light leading-snug">
+                    "Presentation are communication tools that can be used as demonstrations, lectures, reports, and more. It is mostly presented before an audience."
+                </p>
+                <!-- Decorative quote mark -->
+                <i class="fa-solid fa-quote-right absolute -top-4 -left-12 text-6xl text-white/5"></i>
+            </div>
+        </div>
+
+        <!-- Section 3: The Three Pillars (Grid Layout) -->
+        <!-- 3 Columns for Acquire, Keep, Grow -->
+        <div class="w-full grid grid-cols-3 gap-12 mt-auto border-t border-white/10 pt-10">
+            
+            <!-- Column 1: Acquire -->
+            <div class="flex flex-col gap-4 group">
+                <div class="flex items-center gap-4">
+                    <!-- Icon Container -->
+                    <div class="w-12 h-12 rounded-full border border-borderWhite flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-all duration-300">
+                        <i class="fa-solid fa-arrow-right-long text-lg transform group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                    <!-- Title with Numbering -->
+                    <h3 class="text-textPrimary text-xl font-bold uppercase tracking-wide">
+                        <span class="text-white/30 mr-2 font-light">01.</span> Acquire
+                    </h3>
+                </div>
+                <!-- Description -->
+                <p class="text-textSecondary text-sm leading-relaxed opacity-80">
+                    Presentation are communication tools that can be used as demonstrations, lectures, reports, and more. it is mostly presented before an audience.
+                </p>
+            </div>
+
+            <!-- Column 2: Keep -->
+            <div class="flex flex-col gap-4 group">
+                <div class="flex items-center gap-4">
+                    <!-- Icon Container -->
+                    <div class="w-12 h-12 rounded-full border border-borderWhite flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-all duration-300">
+                        <i class="fa-solid fa-rotate text-lg transform group-hover:rotate-180 transition-transform duration-500"></i>
+                    </div>
+                    <!-- Title with Numbering -->
+                    <h3 class="text-textPrimary text-xl font-bold uppercase tracking-wide">
+                        <span class="text-white/30 mr-2 font-light">02.</span> Keep
+                    </h3>
+                </div>
+                <!-- Description -->
+                <p class="text-textSecondary text-sm leading-relaxed opacity-80">
+                    Presentation are communication tools that can be used as demonstrations, lectures, reports, and more. it is mostly presented before an audience.
+                </p>
+            </div>
+
+            <!-- Column 3: Grow -->
+            <div class="flex flex-col gap-4 group">
+                <div class="flex items-center gap-4">
+                    <!-- Icon Container -->
+                    <div class="w-12 h-12 rounded-full border border-borderWhite flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-all duration-300">
+                        <i class="fa-solid fa-chart-line text-lg transform group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                    <!-- Title with Numbering -->
+                    <h3 class="text-textPrimary text-xl font-bold uppercase tracking-wide">
+                        <span class="text-white/30 mr-2 font-light">03.</span> Grow
+                    </h3>
+                </div>
+                <!-- Description -->
+                <p class="text-textSecondary text-sm leading-relaxed opacity-80">
+                    Presentation are communication tools that can be used as demonstrations, lectures, reports, and more. it is mostly presented before an audience.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

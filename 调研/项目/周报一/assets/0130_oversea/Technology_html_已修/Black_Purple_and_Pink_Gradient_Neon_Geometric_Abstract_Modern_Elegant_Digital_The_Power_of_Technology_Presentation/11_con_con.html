@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Trends - Badge Style</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative;
+            background-color: #050A14; font-family: 'Noto Sans SC', sans-serif; overflow: hidden; color: #E0E0E0;
+        }
+        .bg-grid {
+            position: absolute; inset: 0;
+            background-image: linear-gradient(rgba(19, 38, 57, 0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(19, 38, 57, 0.4) 1px, transparent 1px);
+            background-size: 50px 50px; z-index: 0; mask-image: radial-gradient(circle at 50% 50%, black, transparent 90%);
+        }
+        .timeline-header {
+            letter-spacing: 0.8em; text-indent: 0.8em;
+            background: linear-gradient(to bottom, #D4C9E8 0%, #8A7FB1 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800;
+        }
+
+        /* 统一斜切角标签 */
+        .badge-ict {
+            background: linear-gradient(90deg, #4A1E9E, #2D5BFF);
+            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+            display: inline-block;
+        }
+
+        /* 强化后的趋势面板底座 */
+        .trend-panel-base {
+            background: rgba(13, 25, 48, 0.6);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(159, 122, 234, 0.2);
+            position: relative;
+            transition: all 0.4s ease;
+        }
+        .trend-panel-base:hover {
+            border-color: #D4C9E8;
+            background: rgba(13, 25, 48, 0.8);
+            box-shadow: 0 0 50px rgba(74, 30, 158, 0.2);
+        }
+
+        .orbit-dashed {
+            position: absolute; border-radius: 50%; border: 1px dashed rgba(45, 91, 255, 0.3);
+            animation: spin 30s linear infinite;
+        }
+        @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <div class="bg-grid"></div>
+        <div class="absolute -top-20 -right-20 w-96 h-96 bg-blue-600/10 blur-[100px] rounded-full"></div>
+
+        <div class="relative z-10 w-full h-full px-16 py-12 flex flex-col">
+            
+            <div class="flex flex-col items-center mb-10">
+                <div class="flex items-center space-x-4 mb-2">
+                    <div class="w-8 h-[1px] bg-blue-500 opacity-50"></div>
+                    <span class="text-[10px] text-blue-400 tracking-[0.3em] uppercase opacity-70">Technological Evolution</span>
+                    <div class="w-8 h-[1px] bg-blue-500 opacity-50"></div>
+                </div>
+                <h2 class="timeline-header text-2xl">TIMELINE</h2>
+            </div>
+
+            <div class="grid grid-cols-12 flex-1 items-center gap-16">
+                <div class="col-span-5 relative flex justify-center items-center">
+                    <div class="orbit-dashed w-[480px] h-[480px]"></div>
+                    <div class="orbit-dashed w-[520px] h-[520px]" style="animation-direction: reverse; opacity: 0.5;"></div>
+                    <div class="w-[420px] h-[420px] rounded-full overflow-hidden border-4 border-white/5 relative z-10 shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1622979135228-56a9361f363b?q=80&w=1000" class="w-full h-full object-cover opacity-80 scale-110 group-hover:scale-100 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-purple-900/30 to-transparent"></div>
+                    </div>
+                    <div class="absolute top-10 right-10 w-4 h-4 bg-blue-500 rounded-full animate-pulse shadow-[0_0_15px_#2D5BFF]"></div>
+                </div>
+
+                <div class="col-span-7">
+                    <div class="mb-10 pl-2">
+                        <h1 class="text-7xl font-black text-white tracking-tighter uppercase leading-none mb-2">Next Gen<br><span class="text-blue-500">Horizons</span></h1>
+                        <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-transparent"></div>
+                    </div>
+
+                    <div class="trend-panel-base p-12 pt-14 rounded-2xl relative">
+                        <div class="badge-ict py-2.5 px-10 absolute -top-6 left-8">
+                            <span class="text-white font-bold text-xs tracking-[0.3em] uppercase">Future Trends</span>
+                        </div>
+
+                        <div class="space-y-12">
+                            <div class="flex items-start space-x-6">
+                                <div class="w-10 h-10 flex-shrink-0 bg-white/5 rounded-lg flex items-center justify-center border border-white/10">
+                                    <i class="fa-solid fa-vr-cardboard text-blue-400 text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-blue-400 text-[10px] font-bold tracking-[0.2em] uppercase mb-2">Integration Reality</h4>
+                                    <p class="text-gray-200 text-gl font-light leading-relaxed italic">
+                                        "The future of technology lies in the seamless integration of virtual and physical realities, powered by edge computing."
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-6">
+                                <div class="w-10 h-10 flex-shrink-0 bg-white/5 rounded-lg flex items-center justify-center border border-white/10">
+                                    <i class="fa-solid fa-brain text-purple-400 text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-purple-400 text-[10px] font-bold tracking-[0.2em] uppercase mb-2">Cognitive Frameworks</h4>
+                                    <p class="text-gray-200 text-gl font-light leading-relaxed italic">
+                                        "Emphasis shifts from raw power to intuitive interfaces and ethical AI frameworks that enhance human potential."
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="absolute bottom-6 right-10 flex items-center space-x-4 opacity-20">
+                            <span class="text-[8px] font-mono tracking-widest">SPATIAL_COMPUTING_PROTOCOL</span>
+                            <i class="fa-solid fa-arrow-right-long text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-auto flex justify-between items-center opacity-30 text-[9px] font-mono tracking-widest uppercase">
+                <div class="flex items-center space-x-4">
+                    <div class="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
+                    <span>Predictive Models: Synchronized</span>
+                </div>
+                <span>Future_Projection // End_of_Line</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

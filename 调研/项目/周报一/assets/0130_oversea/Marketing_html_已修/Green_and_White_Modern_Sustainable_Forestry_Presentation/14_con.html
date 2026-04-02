@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardians of the Green - High End Keynote</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+
+    <!-- Baidu Font CDN (Noto Sans SC) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- Tailwind Config for Custom Colors and Fonts -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepGreen: '#1A2818',
+                        mossGreen: '#5A6F41',
+                        accentWhite: '#FFFFFF',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'], // Fallback serif for the elegant title
+                    },
+                    spacing: {
+                        '128': '32rem',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Global CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container Specs */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #1A2818;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+
+        /* Gradient Overlay for Text Readability */
+        .gradient-overlay {
+            background: linear-gradient(90deg, #1A2818 45%, rgba(26, 40, 24, 0.8) 60%, rgba(26, 40, 24, 0) 100%);
+        }
+
+        /* Typography Tweaks */
+        h1 {
+            line-height: 0.95;
+            letter-spacing: -0.03em;
+        }
+        
+        p {
+            line-height: 1.6;
+            letter-spacing: 0.02em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div id="page_container">
+
+        <!-- Background Image Layer -->
+        <!-- Using a high-quality leopard/jaguar image to match the "Guardians" theme -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1575550959106-5a7defe28b56?q=80&w=1280&auto=format&fit=crop" 
+                 alt="Jaguar in the jungle" 
+                 class="w-full h-full object-cover object-center" 
+                 style="object-position: 70% 30%;">
+            <!-- 1280*720 -->
+        </div>
+
+        <!-- Dark Gradient Overlay (The "Forest Shadow" Effect) -->
+        <!-- This covers the left side to ensure text readability while revealing the image on the right -->
+        <div class="absolute inset-0 z-10 gradient-overlay"></div>
+
+        <!-- Decorative "Organic" Line (Optional subtle separator) -->
+        <div class="absolute top-0 bottom-0 left-[55%] w-[1px] bg-gradient-to-b from-transparent via-mossGreen/30 to-transparent z-10"></div>
+
+        <!-- Main Content Layer -->
+        <div class="relative z-20 w-full h-full flex flex-col justify-between p-16 pb-0">
+            
+            <!-- Top Section: Header & Title -->
+            <div class="flex flex-col items-start max-w-[600px] mt-8">
+                
+                <!-- Decorative Wave Icon (Left aligned as per original concept) -->
+                <div class="mb-6 text-mossGreen text-4xl opacity-80">
+                    <i class="fa-solid fa-water"></i>
+                </div>
+
+                <!-- Main Headline -->
+                <!-- Using Serif font to convey elegance and "Guardians" authority -->
+                <h1 class="font-serif text-[6rem] font-bold text-white mb-6 drop-shadow-lg">
+                    Guardians<br>
+                    <span class="italic font-light text-mossGreen">of the</span> Green
+                </h1>
+
+                <!-- Body Text -->
+                <div class="border-l-4 border-mossGreen pl-6 py-1">
+                    <p class="text-gray-200 text-lg font-light max-w-md">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Middle Right Decorative Element (Arrows) -->
+            <!-- Positioning this absolutely to mimic the original layout's floating arrows -->
+            <div class="absolute right-16 top-1/2 transform -translate-y-1/2 flex gap-2 text-white/40 text-2xl z-20">
+                <i class="fa-solid fa-play"></i>
+                <i class="fa-solid fa-play opacity-75"></i>
+                <i class="fa-solid fa-play opacity-50"></i>
+                <i class="fa-solid fa-play opacity-25"></i>
+            </div>
+
+            <!-- Footer Section -->
+            <!-- Solid bar at the bottom for contact info -->
+            <div class="w-[1280px] -ml-16 h-20 bg-deepGreen border-t border-mossGreen flex items-center justify-between px-16 mt-auto">
+                
+                <!-- Website URL -->
+                <div class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-full bg-mossGreen/20 flex items-center justify-center border border-mossGreen text-mossGreen group-hover:bg-mossGreen group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <span class="text-gray-300 text-sm font-medium tracking-wider uppercase">www.reallygreatsite.com</span>
+                </div>
+
+                <!-- Decorative Line in Footer -->
+                <div class="flex-1 mx-8 h-[1px] bg-mossGreen/30"></div>
+
+                <!-- Email Address -->
+                <div class="flex items-center gap-3 group">
+                    <span class="text-gray-300 text-sm font-medium tracking-wider uppercase">hello@reallygreatsite.com</span>
+                    <div class="w-10 h-10 rounded-full bg-mossGreen/20 flex items-center justify-center border border-mossGreen text-mossGreen group-hover:bg-mossGreen group-hover:text-white transition-colors duration-300">
+                        <i class="fa-regular fa-envelope"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Subtle Grain/Texture Overlay for "Eco/Paper" feel -->
+        <div class="absolute inset-0 pointer-events-none opacity-[0.03] z-30 mix-blend-overlay"
+             style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E');">
+        </div>
+
+    </div>
+
+</body>
+</html>

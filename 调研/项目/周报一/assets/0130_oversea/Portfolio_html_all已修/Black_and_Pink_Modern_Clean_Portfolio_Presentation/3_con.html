@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Philosophy - Keynote Slide</title>
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <style>
+        /* CSS Reset & Global Styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        /* Font Imports */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,500;1,700&family=Inter:wght@200;300;400;600;800&family=Bodoni+Moda:ital,opsz,wght@1,6..96,500&display=swap');
+
+        .font-serif-display { font-family: 'Playfair Display', serif; }
+        .font-serif-modern { font-family: 'Bodoni Moda', serif; }
+        .font-sans-clean { font-family: 'Inter', sans-serif; }
+
+        ::-webkit-scrollbar { display: none; }
+
+        /* Page Container Definition */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #050505; /* Deep Black */
+            overflow: hidden;
+            display: grid;
+            /* 核心修改：配图35% (448px) | 装饰带4% (52px) | 内容61% (780px) */
+            grid-template-columns: 35% 52px 1fr; 
+        }
+
+        /* Vertical Text Styling */
+        .vertical-marquee {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            transform: rotate(180deg);
+            white-space: nowrap;
+        }
+
+        /* Outline Text Effect */
+        .text-outline {
+            -webkit-text-stroke: 1px #FDB8D9;
+            color: transparent;
+        }
+        
+        /* Subtle Gradient Text */
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #A68B60 0%, #E3C89B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+
+        <!-- Column 1: Visual (35% Width) -->
+        <div class="relative h-full w-full overflow-hidden border-r border-[#1A1A1A]">
+            <!-- Gold Accent Line Top -->
+            <div class="absolute top-0 left-0 w-full h-1 bg-[#A68B60] z-20"></div>
+            
+            <!-- Image with Filter -->
+            <div class="w-full h-full relative group">
+                <img src="https://images.unsplash.com/photo-1493301883777-66a98f121175?q=80&w=1280&auto=format&fit=crop" 
+                     alt="Minimalist Design Detail" 
+                     class="w-full h-full object-cover grayscale opacity-90 transition-transform duration-700 group-hover:scale-105">
+                
+                <!-- Color Overlay on Hover (Interactive feel) -->
+                <div class="absolute inset-0 bg-[#FDB8D9] mix-blend-multiply opacity-0 group-hover:opacity-40 transition-opacity duration-500"></div>
+                
+                <!-- Bottom Caption -->
+                <div class="absolute bottom-8 left-8 z-30">
+                    <p class="font-sans-clean text-xs text-white tracking-[0.2em] uppercase opacity-70">Fig 1.1 — Structure</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Column 2: Branding Strip (Narrow Divider) -->
+        <div class="h-full bg-[#FDB8D9] flex flex-col items-center relative z-20 overflow-hidden">
+            <div class="h-full flex flex-col justify-center py-2 animate-pulse">
+                <h6 class="vertical-marquee text-[#000000] font-sans-clean font-black text-xs tracking-[0.3em]">
+                   EST. 2025 // CREATIVE DIRECTION // EST. 2025 // CREATIVE DIRECTION
+                </h6>
+            </div>
+        </div>
+
+        <!-- Column 3: Content (61% Width - Improved Layout) -->
+        <div class="h-full bg-[#050505] relative flex flex-col p-12 overflow-hidden">
+            
+            <!-- Background Watermark (Decoration) -->
+            <h1 class="absolute -bottom-16 -right-10 text-[200px] font-serif-modern italic text-[#111111] leading-none pointer-events-none select-none z-0">
+                Philosophy
+            </h1>
+
+            <!-- Header Section -->
+            <div class="relative z-10 w-full mb-10">
+                <div class="flex items-end justify-between border-b border-[#333] pb-6">
+                    <div>
+                        <h2 class="text-[#FDB8D9] font-sans-clean font-bold text-sm tracking-[0.4em] uppercase mb-2">
+                            Core Principles
+                        </h2>
+                        <h1 class="font-serif-display text-7xl text-white leading-[0.9]">
+                            Design <br> 
+                            <span class="italic text-[#A68B60] font-light">Thinking</span> 
+                            <span class="text-outline font-serif-modern ml-2">& Craft</span>
+                        </h1>
+                    </div>
+                    <!-- Decorative Icon -->
+                    <div class="text-[#A68B60] text-4xl opacity-80 mb-2">
+                        <i class="fa-solid fa-bezier-curve"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Grid: Split Text into 2 Columns for Magazine Look -->
+            <div class="relative z-10 grid grid-cols-2 gap-12 h-full">
+                
+                <!-- Block 01 -->
+                <div class="flex flex-col">
+                    <div class="flex items-baseline gap-3 mb-4">
+                        <span class="font-serif-modern italic text-4xl text-gradient-gold">01</span>
+                        <h3 class="text-white font-sans-clean font-bold text-lg uppercase tracking-wider">Narrative First</h3>
+                    </div>
+                    <p class="text-[#CCCCCC] font-sans-clean font-light text-[15px] leading-7 text-justify border-l-2 border-[#1A1A1A] pl-4">
+                        My creative philosophy is grounded in storytelling. I believe that impactful design stems from a strong narrative paired with visual clarity. I begin each project with in-depth research and empathy for the audience, ensuring the story drives the aesthetic, not the other way around.
+                    </p>
+                </div>
+
+                <!-- Block 02 -->
+                <div class="flex flex-col">
+                    <div class="flex items-baseline gap-3 mb-4">
+                        <span class="font-serif-modern italic text-4xl text-gradient-gold">02</span>
+                        <h3 class="text-white font-sans-clean font-bold text-lg uppercase tracking-wider">Functional Emotion</h3>
+                    </div>
+                    <p class="text-[#CCCCCC] font-sans-clean font-light text-[15px] leading-7 text-justify border-l-2 border-[#1A1A1A] pl-4">
+                        Whether designing for a brand or a user, I strive to make every decision intentional. The goal is to push beyond surface-level aesthetics to create functional systems that evoke emotion. Every visual element must speak with purpose and operate with precision.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Footer Details -->
+            <div class="absolute bottom-8 right-12 z-20 flex gap-6 items-center">
+                <div class="text-[#333333] font-sans-clean text-[10px] tracking-widest uppercase">
+                    Chidi Eze Portfolio
+                </div>
+                <div class="w-12 h-[1px] bg-[#333333]"></div>
+                <div class="text-[#FDB8D9] font-sans-clean font-bold text-sm">04</div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

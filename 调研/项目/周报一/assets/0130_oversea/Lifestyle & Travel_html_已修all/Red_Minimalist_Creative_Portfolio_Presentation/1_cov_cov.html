@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Portfolio - Typography Edition</title>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,900&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryBg: '#9E2A22',
+                        primaryText: '#FDF9E5',
+                        secondaryText: '#E0C0BB',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans SC', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background-color: #9E2A22;
+            overflow: hidden;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 装饰性背景大字 */
+        .bg-watermark {
+            position: absolute;
+            font-size: 600px;
+            font-weight: 900;
+            color: rgba(253, 249, 229, 0.03);
+            line-height: 0.8;
+            pointer-events: none;
+            z-index: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* 主标题错落动效 */
+        .staggered-title {
+            font-size: 180px;
+            line-height: 0.85;
+            letter-spacing: -0.05em;
+            z-index: 10;
+        }
+
+        /* 极细装饰线 */
+        .decorative-line {
+            position: absolute;
+            background-color: rgba(253, 249, 229, 0.2);
+            z-index: 5;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <div class="decorative-line w-full h-[1px] top-12 left-0"></div>
+        <div class="decorative-line w-full h-[1px] bottom-12 left-0"></div>
+        <div class="decorative-line h-full w-[1px] left-12 top-0"></div>
+        <div class="decorative-line h-full w-[1px] right-12 top-0"></div>
+        <div class="decorative-line w-24 h-[1px] top-1/2 left-0"></div>
+        <div class="decorative-line w-24 h-[1px] top-1/2 right-0"></div>
+
+        <div class="bg-watermark -left-20 -top-20">C</div>
+        <div class="bg-watermark -right-20 -bottom-20">P</div>
+
+        <nav class="absolute top-0 left-0 w-full px-20 py-16 flex justify-between items-center z-20">
+            <div class="flex items-center gap-10">
+                <span class="text-secondaryText text-xs font-bold tracking-[0.5em] uppercase">2028 Edition</span>
+                <div class="w-12 h-[1px] bg-secondaryText/30"></div>
+                <span class="text-primaryText text-xs font-medium tracking-[0.3em] uppercase">Visual Arts</span>
+            </div>
+            <div class="flex items-center gap-8">
+                <span class="text-primaryText text-xs tracking-widest uppercase">vol. 04</span>
+                <i class="fa-solid fa-asterisk text-primaryText/40 text-[10px] animate-spin-slow"></i>
+                <span class="text-primaryText text-xs tracking-widest uppercase italic font-serif">Aesthetics</span>
+            </div>
+        </nav>
+
+        <div class="flex flex-col items-center justify-center relative w-full">
+            <h1 class="staggered-title font-black text-primaryText uppercase -translate-x-24">
+                Creative
+            </h1>
+            
+            <div class="w-32 h-[2px] bg-primaryText my-6 opacity-80"></div>
+
+            <h1 class="staggered-title font-black text-primaryText uppercase translate-x-24 flex items-baseline">
+                Portf<span class="font-serif italic font-normal text-secondaryText/80">o</span>lio
+            </h1>
+        </div>
+
+        <div class="absolute bottom-16 w-full px-20 flex justify-between items-end z-20">
+            <div class="max-w-xs">
+                <p class="text-secondaryText text-[11px] leading-relaxed tracking-wider uppercase">
+                    Exploring the intersection of visual narrative <br> 
+                    and digital craftsmanship in the modern era.
+                </p>
+            </div>
+            
+            <div class="text-right flex flex-col items-end">
+                <div class="flex gap-4 mb-3">
+                    <div class="w-2 h-2 bg-primaryText"></div>
+                    <div class="w-2 h-2 bg-primaryText opacity-50"></div>
+                    <div class="w-2 h-2 bg-primaryText opacity-20"></div>
+                </div>
+                <p class="text-primaryText font-bold text-lg tracking-[0.2em] uppercase">
+                    Selected Works
+                </p>
+                <p class="text-secondaryText text-[9px] tracking-[0.4em] uppercase opacity-60">
+                    © All Rights Reserved 2028
+                </p>
+            </div>
+        </div>
+
+        <div class="absolute top-1/2 left-20 -translate-y-1/2 rotate-90 origin-left">
+            <span class="text-[9px] text-secondaryText opacity-30 tracking-[1em] uppercase">Structural Integrity</span>
+        </div>
+
+    </div>
+
+    <style>
+        @keyframes spin-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-spin-slow {
+            animation: spin-slow 12s linear infinite;
+        }
+    </style>
+</body>
+</html>

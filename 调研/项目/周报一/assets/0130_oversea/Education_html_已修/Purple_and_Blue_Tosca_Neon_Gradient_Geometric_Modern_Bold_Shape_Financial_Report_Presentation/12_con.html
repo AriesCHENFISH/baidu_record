@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash Flow Summary - Financial Keynote</title>
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBg: '#050510', mint: '#D0F4DE', cyan: '#8DE4E6', mutedBlue: '#5DAFCC', steelBlue: '#4E86B3', textGray: '#B0B0B8', glowPurple: '#2D2B55',
+                        dangerRed: '#FF6B6B', // 新增用于负向现金流的颜色
+                    },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px; background-color: #050510; position: relative; overflow: hidden; margin: 0 auto;
+        }
+        .glow-spot { position: absolute; border-radius: 50%; filter: blur(80px); z-index: 1; opacity: 0.6; }
+        .dot-pattern { position: absolute; width: 100px; height: 120px; background-image: radial-gradient(#4E86B3 1.5px, transparent 1.5px); background-size: 12px 12px; opacity: 0.3; z-index: 2; }
+        .card-gradient-border {
+            background: rgba(31, 29, 54, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(93, 175, 204, 0.2); box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <div class="glow-spot" style="width: 500px; height: 500px; top: -150px; left: -100px; background: #2D2B55;"></div>
+        <div class="glow-spot" style="width: 400px; height: 400px; top: 100px; right: -50px; background: #1F1D36;"></div>
+        <div class="dot-pattern" style="top: 140px; left: 40px;"></div>
+        <div class="dot-pattern" style="bottom: 40px; right: 40px;"></div>
+
+        <header class="relative z-20 w-full pt-16 px-16 flex justify-start items-center">
+            <div class="flex items-center">
+                <div class="w-[4px] h-12 bg-gradient-to-b from-cyan to-steelBlue rounded-full mr-8 shadow-[0_0_15px_rgba(141,228,230,0.4)]"></div>
+                <div class="flex flex-col">
+                    <h2 class="text-5xl font-black tracking-[0.35em] text-white leading-none uppercase">CASHFLOW</h2>
+                    <p class="text-[11px] text-mutedBlue tracking-[0.5em] font-medium uppercase mt-3 opacity-80">
+                        Statement of Cash Flows
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <div style="position: absolute; top: 150px; width: 100%; text-align: center; z-index: 40;">
+            <h1 style="font-size: 56px; font-weight: 700; color: #ffffff; letter-spacing: -1px; text-shadow: 0 4px 10px rgba(0,0,0,0.5);">
+                Cash Flow Summary
+            </h1>
+        </div>
+
+        <div style="position: absolute; top: 260px; left: 0; width: 100%; z-index: 30; display: flex; justify-content: center; gap: 48px; padding: 0 64px;">
+            
+            <div class="card-gradient-border" style="flex: 1; border-radius: 20px; height: 380px; padding: 40px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; position: relative; overflow: hidden;">
+                <i class="fa-solid fa-coins absolute -right-10 -bottom-10 text-[180px] text-white/5 z-0"></i>
+                
+                <h3 style="font-size: 20px; font-weight: 600; color: #ffffff; margin-bottom: 12px; position: relative; z-index: 10;">Ending Cash Balance</h3>
+                <h2 style="font-size: 64px; font-weight: 700; color: #8DE4E6; line-height: 1; margin-bottom: 20px; position: relative; z-index: 10;">$8.540M</h2>
+                <div style="width: 60px; height: 3px; background: #5DAFCC; margin-bottom: 24px; position: relative; z-index: 10;"></div>
+                <p class="text-textGray text-base leading-relaxed relative z-10">
+                    Strong liquidity position maintained through robust operating cash generation, providing a solid foundation for future investments.
+                </p>
+            </div>
+
+            <div style="flex: 1; display: flex; flex-direction: column; gap: 20px; height: 380px;">
+                
+                <div class="card-gradient-border flex-1 rounded-2xl p-6 flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-mint/10 flex items-center justify-center text-mint">
+                            <i class="fa-solid fa-briefcase text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-white text-lg font-bold">Operating Activities</h3>
+                            <p class="text-textGray text-sm">Net cash from operations</p>
+                        </div>
+                    </div>
+                    <div class="text-mint text-2xl font-bold">+$12.3M</div>
+                </div>
+
+                <div class="card-gradient-border flex-1 rounded-2xl p-6 flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-dangerRed/10 flex items-center justify-center text-dangerRed">
+                            <i class="fa-solid fa-building-columns text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-white text-lg font-bold">Investing Activities</h3>
+                            <p class="text-textGray text-sm">CapEx & acquisitions</p>
+                        </div>
+                    </div>
+                    <div class="text-dangerRed text-2xl font-bold">-$5.1M</div>
+                </div>
+
+                <div class="card-gradient-border flex-1 rounded-2xl p-6 flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-cyan/10 flex items-center justify-center text-cyan">
+                            <i class="fa-solid fa-hand-holding-dollar text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-white text-lg font-bold">Financing Activities</h3>
+                            <p class="text-textGray text-sm">Debt repayment & dividends</p>
+                        </div>
+                    </div>
+                    <div class="text-cyan text-2xl font-bold">-$2.8M</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

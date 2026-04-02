@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Amazing Service - Tech Keynote</title>
+    
+    <!-- Import FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Import Google Fonts via provided Mirror CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <!-- Tailwind Configuration for Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#040710',
+                        cardBg: '#1A1B1F',
+                        textPrimary: '#FFFFFF',
+                        textSecondary: '#B0B3B8',
+                        accent: '#4FB0C0',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- CSS Reset and Custom Styles -->
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Specific Page Container Styles */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #040710;
+            position: relative;
+            overflow: hidden;
+            box-shadow: none; /* Explicitly no shadow per requirements */
+            margin: 0 auto;
+        }
+
+        /* Utility for gradient text if needed */
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div id="page_container" class="font-sans text-textPrimary">
+
+        <!-- DECORATION: Top Circuit Lines -->
+        <!-- Simulating the tech lines at the top using divs to avoid SVG -->
+        <div class="absolute top-12 left-[300px] w-64 h-16 opacity-80 pointer-events-none">
+            <!-- Horizontal main line -->
+            <div class="absolute top-4 left-0 w-32 h-[1px] bg-accent"></div>
+            <!-- Diagonal connector -->
+            <div class="absolute top-4 left-32 w-8 h-[1px] bg-accent rotate-45 origin-left"></div>
+            <!-- Continue Horizontal -->
+            <div class="absolute top-[21px] left-[134px] w-24 h-[1px] bg-accent"></div>
+            <!-- Dots -->
+            <div class="absolute top-[13px] left-0 w-1.5 h-1.5 rounded-full bg-accent"></div>
+            <div class="absolute top-[18px] left-[158px] w-1.5 h-1.5 rounded-full bg-accent"></div>
+            <div class="absolute top-[5px] left-[100px] w-1.5 h-1.5 rounded-full bg-accent"></div>
+            <!-- Upper branch -->
+            <div class="absolute top-1 left-20 w-16 h-[1px] bg-accent"></div>
+        </div>
+
+        <!-- LAYOUT GRID: Main Content Area -->
+        <div class="flex flex-row justify-between items-center w-full h-full px-24 py-12">
+
+            <!-- LEFT COLUMN: Text Content -->
+            <div class="flex flex-col justify-center w-[55%] space-y-8 z-10">
+                
+                <!-- Main Header Group -->
+                <div class="mb-4">
+                    <h1 class="text-6xl font-bold tracking-tight text-white leading-tight">
+                        OUR AMAZING<br>
+                        <span class="text-accent">SERVICE</span>
+                    </h1>
+                </div>
+
+                <!-- First Paragraph -->
+                <div class="w-[90%]">
+                    <p class="text-textSecondary text-lg leading-relaxed font-light">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse molestie massa ac odio euismod, sit amet rutrum sapien dignissim Nulla in sollicitudin.
+                    </p>
+                </div>
+
+                <!-- Sub-section: Expert Consultation -->
+                <div class="mt-4">
+                    <h3 class="text-accent text-2xl font-bold mb-3 tracking-wide">
+                        Expert Consultation
+                    </h3>
+                    <div class="w-[90%]">
+                        <p class="text-textSecondary text-lg leading-relaxed font-light">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse molestie massa ac odio euismod, sit amet rutrum sapien dignissim Nulla in sollicitudin.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN: Service Cards -->
+            <div class="flex flex-col w-[40%] space-y-6 z-10">
+
+                <!-- CARD 1: 24/7 Support -->
+                <!-- Structure: Icon Box | Content -->
+                <div class="flex items-center bg-cardBg rounded-lg overflow-hidden h-32 hover:bg-[#25262b] transition-colors duration-300">
+                    <!-- Icon Area -->
+                    <div class="w-24 h-full flex items-center justify-center bg-transparent">
+                        <i class="fa-solid fa-folder-open text-3xl text-white"></i>
+                    </div>
+                    <!-- Text Area -->
+                    <div class="flex-1 pr-6 py-4">
+                        <h4 class="text-xl font-bold text-white mb-2">24/7 Support</h4>
+                        <p class="text-textSecondary text-sm leading-snug">
+                            Round-the-clock assistance to ensure your security.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CARD 2: Tailored Solutions (Highlighted) -->
+                <!-- Structure: Gradient Left Block | Content -->
+                <div class="flex items-center bg-cardBg rounded-lg overflow-hidden h-32 relative">
+                    <!-- Gradient Left Sidebar -->
+                    <div class="w-24 h-full flex items-center justify-center" style="background: linear-gradient(to bottom, #2C6FCA, #4FB0C0);">
+                        <i class="fa-solid fa-user-shield text-3xl text-white"></i>
+                    </div>
+                    <!-- Text Area -->
+                    <div class="flex-1 px-6 py-4">
+                        <h4 class="text-xl font-bold text-white mb-2">Tailored Solutions</h4>
+                        <p class="text-textSecondary text-sm leading-snug">
+                            Customized security strategies for your specific needs.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CARD 3: Proactive Monitoring -->
+                <div class="flex items-center bg-cardBg rounded-lg overflow-hidden h-32 hover:bg-[#25262b] transition-colors duration-300">
+                    <!-- Icon Area -->
+                    <div class="w-24 h-full flex items-center justify-center bg-transparent">
+                        <i class="fa-solid fa-fingerprint text-3xl text-white"></i>
+                    </div>
+                    <!-- Text Area -->
+                    <div class="flex-1 pr-6 py-4">
+                        <h4 class="text-xl font-bold text-white mb-2">Proactive Monitoring</h4>
+                        <p class="text-textSecondary text-sm leading-snug">
+                            Continuous threat detection and prevention.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- DECORATION: Bottom Circuit Lines -->
+        <div class="absolute bottom-12 left-12 w-64 h-16 opacity-80 pointer-events-none transform scale-x-[-1] scale-y-[-1]">
+             <!-- Reusing the top logic but flipped via transform for the bottom left tech accent -->
+             <div class="absolute top-4 left-0 w-32 h-[1px] bg-accent"></div>
+             <div class="absolute top-4 left-32 w-8 h-[1px] bg-accent rotate-45 origin-left"></div>
+             <div class="absolute top-[21px] left-[134px] w-24 h-[1px] bg-accent"></div>
+             <div class="absolute top-[13px] left-0 w-1.5 h-1.5 rounded-full bg-accent"></div>
+             <div class="absolute top-[18px] left-[158px] w-1.5 h-1.5 rounded-full bg-accent"></div>
+        </div>
+
+    </div>
+
+</body>
+</html>

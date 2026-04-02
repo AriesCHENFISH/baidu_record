@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Showcase - Portfolio Presentation</title>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            primary: '#BCE46C', 
+                            dark: '#0A0F00',
+                            secondary: '#1F1F1F'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px;
+            margin: 0 auto; position: relative;
+            background-color: #000000; overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        .ambient-glow {
+            position: absolute; top: -200px; right: -200px;
+            width: 800px; height: 800px;
+            background: radial-gradient(circle, rgba(188, 228, 108, 0.12) 0%, rgba(0, 0, 0, 0) 70%);
+            z-index: 1; pointer-events: none;
+        }
+
+        .title-underline {
+            height: 4px; width: 80px;
+            background: linear-gradient(90deg, #BCE46C, transparent);
+            border-radius: 2px; margin-top: 1rem;
+        }
+
+        .card-gradient {
+            background: linear-gradient(180deg, #BCE46C 0%, #3e521c 30%, #0A0F00 80%);
+        }
+
+        .img-wrapper {
+            width: 100%;
+            height: 220px; 
+            overflow: hidden;
+            border-radius: 16px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <div class="ambient-glow"></div>
+
+        <div class="relative z-10 px-20 pt-16 flex justify-between items-start">
+            <div class="w-1/4 flex flex-col items-start pt-2">
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-brand-primary/20 rounded-full blur opacity-25"></div>
+                    <div class="relative border border-brand-primary/50 bg-black rounded-full px-6 py-1.5 flex items-center shadow-lg">
+                        <span class="w-1.5 h-1.5 bg-brand-primary rounded-full mr-3 animate-pulse"></span>
+                        <span class="text-brand-primary text-xs font-bold tracking-[0.2em] uppercase">Visual Selection</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-3/4 pl-8">
+                <div class="relative">
+                    <h1 class="text-[72px] leading-[0.9] font-black text-white tracking-tighter uppercase mb-2">
+                        Project 
+                        <span class="text-brand-primary font-light italic">Showcase</span>
+                    </h1>
+                    <div class="title-underline"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative z-10 px-16 mt-12">
+            <div class="grid grid-cols-3 gap-10 w-full">
+
+                <div class="card-gradient rounded-[32px] p-1 flex flex-col h-[500px]">
+                    <div class="flex flex-col h-full w-full">
+                        <div class="flex justify-between items-center px-6 pt-6 pb-4">
+                            <h3 class="text-black font-bold text-xl tracking-tight">Graphic Design</h3>
+                            <i class="fa-solid fa-arrow-up-right text-black text-xl"></i>
+                        </div>
+                        <div class="px-4">
+                            <div class="img-wrapper shadow-lg">
+                                <img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="px-8 mt-8 text-center">
+                            <h4 class="text-brand-primary text-lg font-medium mb-3 uppercase tracking-widest">Project A</h4>
+                            <p class="text-sm font-light text-gray-400">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-gradient rounded-[32px] p-1 flex flex-col h-[500px]">
+                    <div class="flex flex-col h-full w-full">
+                        <div class="flex justify-between items-center px-6 pt-6 pb-4">
+                            <h3 class="text-black font-bold text-xl tracking-tight">Digital Imaging</h3>
+                            <i class="fa-solid fa-arrow-up-right text-black text-xl"></i>
+                        </div>
+                        <div class="px-4">
+                            <div class="img-wrapper shadow-lg">
+                                <img src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="px-8 mt-8 text-center">
+                            <h4 class="text-brand-primary text-lg font-medium mb-3 uppercase tracking-widest">Project B</h4>
+                            <p class="text-sm font-light text-gray-400">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-gradient rounded-[32px] p-1 flex flex-col h-[500px]">
+                    <div class="flex flex-col h-full w-full">
+                        <div class="flex justify-between items-center px-6 pt-6 pb-4">
+                            <h3 class="text-black font-bold text-xl tracking-tight">Branding</h3>
+                            <i class="fa-solid fa-arrow-up-right text-black text-xl"></i>
+                        </div>
+                        <div class="px-4">
+                            <div class="img-wrapper shadow-lg">
+                                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="px-8 mt-8 text-center">
+                            <h4 class="text-brand-primary text-lg font-medium mb-3 uppercase tracking-widest">Project C</h4>
+                            <p class="text-sm font-light text-gray-400">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="absolute bottom-6 right-10 opacity-5 pointer-events-none text-brand-primary text-[80px]">
+            <i class="fa-solid fa-chess-board"></i>
+        </div>
+    </div>
+
+</body>
+</html>

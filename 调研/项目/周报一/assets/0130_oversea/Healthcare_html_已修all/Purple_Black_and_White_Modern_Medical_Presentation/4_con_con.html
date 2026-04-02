@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Care Growth - Redesign</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Noto Sans SC', sans-serif; }
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; background: #F4F4F4; overflow: hidden; position: relative; }
+        .bg-dark { background-color: #1A1A1A; }
+        .text-accent { color: #6B46E6; }
+        .accent-line { width: 4px; background: #6B46E6; height: 60px; }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-white"></div>
+        
+        <div class="relative z-10 grid grid-cols-12 h-full p-16 gap-12">
+            <div class="col-span-7 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="accent-line"></div>
+                        <h1 class="text-8xl font-black tracking-tighter text-black leading-none uppercase">VIRTUAL<br><span class="text-accent">GROWTH</span></h1>
+                    </div>
+                    <p class="text-lg text-gray-700 max-w-lg leading-relaxed mt-10">
+                        Telehealth has become a key part of modern care delivery. Patients can now consult from home, improving access beyond urgent visits to chronic disease management.
+                    </p>
+                </div>
+
+                <div class="bg-dark rounded-tr-[80px] p-10 flex gap-8 items-center">
+                    <div id="main-chart" style="width: 300px; height: 180px;"></div>
+                    <div class="flex-1">
+                        <span class="text-6xl font-bold text-white leading-none">67%</span>
+                        <p class="text-purple-400 text-sm font-bold mt-2 uppercase tracking-widest">Growth Rate 2026</p>
+                        <div class="w-full bg-gray-700 h-1 mt-4">
+                            <div class="bg-accent h-1 w-[67%]"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-span-5 flex flex-col gap-6">
+                <div class="flex-1 rounded-2xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover">
+                </div>
+                <div class="h-1/3 bg-gray-100 p-8 flex flex-col justify-end border-b-8 border-black">
+                    <p class="text-sm font-bold text-black mb-2">INFRASTRUCTURE</p>
+                    <p class="text-sm text-gray-500">Connecting remote areas with top-tier medical experts through high-fidelity digital platforms.</p>
+                </div>
+                <div class="text-right">
+                    <p class="text-xs font-black tracking-widest text-gray-400">WWW.REALLYGREATSITE.COM</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var chartDom = document.getElementById('main-chart');
+        var myChart = echarts.init(chartDom);
+        myChart.setOption({
+            xAxis: { type: 'category', data: ['Q1', 'Q2', 'Q3', 'Q4'], axisLine: {show: false}, axisLabel: {color: '#666'} },
+            yAxis: { show: false },
+            series: [{ data: [40, 60, 55, 85], type: 'line', smooth: true, lineStyle: {color: '#6B46E6', width: 4}, symbol: 'none', areaStyle: {color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{offset: 0, color: '#6B46E666'}, {offset: 1, color: '#6B46E600'}])} }]
+        });
+    </script>
+</body>
+</html>

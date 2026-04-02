@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scoring System - Tennis Presentation</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <script>
+        tailwind.config = { theme: { extend: { colors: { t_primary: '#3F6283', t_container: '#6292C2', t_accent: '#DDEE56', t_highlight: '#F0F4C3', t_shadow: '#324E68' }, fontFamily: { sans: ['"Noto Sans SC"', 'sans-serif'] } } } }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; background-color: #3F6283; position: relative; margin: 0 auto; overflow: hidden; }
+        .text-shadow-hard { text-shadow: 4px 4px 0px #324E68; }
+        .title-italic { font-style: italic; font-weight: 900; }
+        
+        /* Custom Scoreboard Font style */
+        .digital-font { font-family: monospace; letter-spacing: 0.1em; }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <header class="relative z-20 w-full h-[100px] bg-t_accent p-3">
+            <div class="w-full h-full border-2 border-dashed border-white rounded-lg flex items-center justify-center gap-16">
+                <nav class="flex gap-12">
+                    <div class="bg-t_highlight px-10 py-2 rounded-full shadow-sm text-t_primary font-bold uppercase tracking-wide text-sm cursor-default">home</div>
+                    <div class="bg-t_highlight px-10 py-2 rounded-full shadow-sm text-t_primary font-bold uppercase tracking-wide text-sm opacity-80 cursor-default">content</div>
+                    <div class="bg-t_highlight px-10 py-2 rounded-full shadow-sm text-t_primary font-bold uppercase tracking-wide text-sm opacity-80 cursor-default">contact</div>
+                </nav>
+            </div>
+        </header>
+
+        <main class="h-[620px] px-16 pt-12 flex gap-10">
+            
+            <div class="w-5/12 flex flex-col justify-center">
+                <h1 class="text-8xl text-white title-italic uppercase text-shadow-hard mb-8 leading-[0.9]">
+                    Scoring <br><span class="text-t_accent">System</span>
+                </h1>
+                
+                <div class="bg-black/40 p-6 rounded-3xl border-4 border-t_container relative shadow-2xl">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-t_accent text-t_primary font-bold px-6 py-1 rounded-full uppercase text-xs tracking-widest border-2 border-white">Live Match</div>
+                    
+                    <div class="flex justify-between items-center mb-4 border-b border-white/10 pb-4">
+                        <span class="text-white/60 font-bold uppercase text-sm">Player</span>
+                        <div class="flex gap-6">
+                            <span class="text-white/60 font-bold uppercase text-sm w-8 text-center">Set</span>
+                            <span class="text-white/60 font-bold uppercase text-sm w-8 text-center">Game</span>
+                            <span class="text-t_accent font-bold uppercase text-sm w-12 text-center">Point</span>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-white font-bold uppercase text-xl tracking-wider">Federer</span>
+                        <div class="flex gap-6 digital-font">
+                            <span class="text-white font-bold text-2xl w-8 text-center">1</span>
+                            <span class="text-white font-bold text-2xl w-8 text-center">5</span>
+                            <span class="text-t_accent font-bold text-2xl w-12 text-center">40</span>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between items-center">
+                        <span class="text-white/60 font-bold uppercase text-xl tracking-wider">Nadal</span>
+                        <div class="flex gap-6 digital-font">
+                            <span class="text-white/60 font-bold text-2xl w-8 text-center">1</span>
+                            <span class="text-white/60 font-bold text-2xl w-8 text-center">5</span>
+                            <span class="text-white/60 font-bold text-2xl w-12 text-center">30</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-7/12 flex flex-col gap-4 justify-center">
+                
+                <div class="bg-t_container/20 border-2 border-white/20 rounded-3xl p-6 flex items-center gap-6 group hover:bg-t_container/30 transition-colors">
+                    <div class="w-16 h-16 bg-t_highlight rounded-2xl flex-shrink-0 flex items-center justify-center text-t_primary text-3xl font-black italic shadow-md">
+                        15
+                    </div>
+                    <div>
+                        <h3 class="text-t_accent text-xl font-black italic uppercase mb-1">The Unique Scale</h3>
+                        <p class="text-white/90 text-sm font-light">
+                            0 (Love) &rarr; 15 &rarr; 30 &rarr; 40 &rarr; Game. <br>
+                            If tied at 40-40, it's called <b>"Deuce"</b>.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-t_container/20 border-2 border-white/20 rounded-3xl p-6 flex items-center gap-6 group hover:bg-t_container/30 transition-colors">
+                    <div class="w-16 h-16 bg-t_container rounded-2xl flex-shrink-0 flex items-center justify-center text-white text-3xl font-black italic shadow-md border border-white/20">
+                        06
+                    </div>
+                    <div>
+                        <h3 class="text-white text-xl font-black italic uppercase mb-1">Winning a Game</h3>
+                        <p class="text-white/90 text-sm font-light">
+                            First to win 4 points (leading by 2) wins the game.
+                            Winning 6 games wins a <b>Set</b>.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-t_container/20 border-2 border-white/20 rounded-3xl p-6 flex items-center gap-6 group hover:bg-t_container/30 transition-colors">
+                    <div class="w-16 h-16 bg-t_primary rounded-2xl flex-shrink-0 flex items-center justify-center text-t_accent text-3xl font-black italic shadow-md border border-white/20">
+                        03
+                    </div>
+                    <div>
+                        <h3 class="text-white text-xl font-black italic uppercase mb-1">The Match</h3>
+                        <p class="text-white/90 text-sm font-light">
+                            Matches are usually "Best of 3" or "Best of 5" sets.
+                            <br><span class="opacity-60 text-xs">Men's Grand Slams are always Best of 5.</span>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+</body>
+</html>

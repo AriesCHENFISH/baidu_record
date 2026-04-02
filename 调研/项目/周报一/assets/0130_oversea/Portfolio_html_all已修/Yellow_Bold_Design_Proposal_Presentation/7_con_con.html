@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Concepts - Vintage Editorial</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { paper: '#F3E59D', ink: '#1A1A1A' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Playfair Display', 'serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; background-color: #F3E59D; position: relative; margin: 0 auto; overflow: hidden; color: #1A1A1A; }
+        .paper-texture { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.4; pointer-events: none; z-index: 50; mix-blend-mode: multiply; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.15'/%3E%3C/svg%3E"); }
+        img { mix-blend-mode: multiply; filter: grayscale(0.3); transition: all 0.5s; }
+        img:hover { filter: grayscale(0); }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <div class="paper-texture"></div>
+        
+        <div class="relative z-10 h-full flex flex-col items-center justify-center px-24">
+            <div class="absolute top-12 left-12 right-12 flex justify-between">
+                <h6 class="text-xs font-bold uppercase tracking-widest opacity-70">Concept Definition</h6>
+                <h6 class="text-xs font-bold uppercase tracking-widest opacity-70">January 2030</h6>
+            </div>
+
+            <div class="text-center mb-16">
+                <h1 class="text-7xl font-black uppercase tracking-tighter leading-[0.85]">
+                    DESIGN CONCEPTS
+                </h1>
+            </div>
+
+            <div class="grid grid-cols-3 gap-16 w-full">
+                <div class="flex flex-col items-center text-center">
+                    <div class="mb-6 flex items-center gap-3">
+                        <span class="text-2xl font-serif italic opacity-30">[</span>
+                        <h3 class="text-lg font-bold uppercase tracking-widest">Concept 01</h3>
+                        <span class="text-2xl font-serif italic opacity-30">]</span>
+                    </div>
+                    <div class="w-full aspect-square border border-ink bg-white/10 overflow-hidden mb-6">
+                        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=400" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-sm leading-relaxed opacity-90">
+                        Nunc sit amet mollis orci, a pharetra enim. Sed gravida ante et placerat sodales. Suspendisse efficitur cursus enim.
+                    </p>
+                </div>
+
+                <div class="flex flex-col items-center text-center">
+                    <div class="mb-6 flex items-center gap-3">
+                        <span class="text-2xl font-serif italic opacity-30">[</span>
+                        <h3 class="text-lg font-bold uppercase tracking-widest">Concept 02</h3>
+                        <span class="text-2xl font-serif italic opacity-30">]</span>
+                    </div>
+                    <div class="w-full aspect-square border border-ink bg-white/10 overflow-hidden mb-6">
+                        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=400" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-sm leading-relaxed opacity-90">
+                        Integer viverra dictum est, sed egestas eros luctus non. Curabitur aliquet tristique erat, nec mattis velit laoreet.
+                    </p>
+                </div>
+
+                <div class="flex flex-col items-center text-center">
+                    <div class="mb-6 flex items-center gap-3">
+                        <span class="text-2xl font-serif italic opacity-30">[</span>
+                        <h3 class="text-lg font-bold uppercase tracking-widest">Concept 03</h3>
+                        <span class="text-2xl font-serif italic opacity-30">]</span>
+                    </div>
+                    <div class="w-full aspect-square border border-ink bg-white/10 overflow-hidden mb-6">
+                        <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=400" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-sm leading-relaxed opacity-90">
+                        Praesent venenatis nisi fringilla augue rutrum ornare. Donec posuere faucibus risus ac iaculis. Nam sit amet.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

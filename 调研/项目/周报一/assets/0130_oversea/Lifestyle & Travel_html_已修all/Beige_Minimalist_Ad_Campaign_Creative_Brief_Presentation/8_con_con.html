@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campaign Timeline</title>
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts (Domestic CDN as requested) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        /* CSS Reset & Global Resets */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* Main Container Constraints */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #F9F9F5; /* Global Background Color */
+            overflow: hidden;
+        }
+
+        /* Utility classes for specific requirements */
+        .timeline-capsule {
+            border: 1px solid #A0A0A0;
+            background-color: #FFFFFF; /* Clean background for readability */
+        }
+        
+        .connector-line {
+            height: 1px;
+            background-color: #A0A0A0;
+        }
+
+        .dot-end {
+            width: 5px;
+            height: 5px;
+            background-color: #A0A0A0;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <!-- Decorative Header Line -->
+        <div class="absolute top-[80px] left-0 w-full h-[1px] bg-[#A0A0A0]"></div>
+
+        <!-- Header Label -->
+        <div class="absolute top-[30px] right-[60px]">
+            <p class="text-[#555555] text-sm tracking-[0.2em] font-medium uppercase">Creative Brief</p>
+        </div>
+
+        <!-- Main Title -->
+        <div class="w-full text-center mt-[24px] mb-[40px] z-10 relative bg-[#F9F9F5] inline-block mx-auto w-auto px-10">
+            <h1 class="text-[#333333] text-[52px] font-light tracking-wide leading-tight uppercase">Campaign Timeline</h1>
+        </div>
+
+        <!-- Main Content Area: Grid Layout -->
+        <div class="w-full h-[500px] px-[60px] grid grid-cols-12 gap-10">
+            
+            <!-- Left Column: Image (Visual Anchor) -->
+            <div class="col-span-4 h-full relative">
+                <!-- Image Container with stylistic border/shadow if needed, kept clean here -->
+                <div class="w-full h-full relative overflow-hidden">
+                    <!-- High quality aesthetic image matching #B0A898 mood -->
+                    <img src="https://images.unsplash.com/photo-1595429035839-c99c298ffdde?q=80&w=800&auto=format&fit=crop" 
+                         alt="Perfume Bottle Aesthetic" 
+                         class="w-full h-full object-cover grayscale-[20%] sepia-[10%] opacity-90">
+                    
+                    <!-- Subtle Overlay to harmonize color -->
+                    <div class="absolute inset-0 bg-[#B0A898] opacity-10 mix-blend-multiply"></div>
+                </div>
+            </div>
+
+            <!-- Right Column: Timeline Data -->
+            <div class="col-span-8 h-full flex flex-col justify-center py-4 pl-4">
+                
+                <ul class="flex flex-col justify-between h-full">
+                    <!-- Item 1 -->
+                    <li class="flex items-center w-full">
+                        <!-- Date Capsule -->
+                        <div class="timeline-capsule w-[260px] h-[40px] rounded-full flex items-center justify-center shrink-0 shadow-sm">
+                            <span class="text-[#555555] text-sm font-medium tracking-wider uppercase">January 2030</span>
+                        </div>
+                        <!-- Connector -->
+                        <div class="connector-line w-[60px]"></div>
+                        <div class="dot-end"></div>
+                        <!-- Description -->
+                        <div class="ml-6">
+                            <p class="text-[#333333] text-lg font-light tracking-wide">Campaign Planning</p>
+                        </div>
+                    </li>
+
+                    <!-- Item 2 -->
+                    <li class="flex items-center w-full">
+                        <div class="timeline-capsule w-[260px] h-[40px] rounded-full flex items-center justify-center shrink-0 shadow-sm">
+                            <span class="text-[#555555] text-sm font-medium tracking-wider uppercase">January - March 2030</span>
+                        </div>
+                        <div class="connector-line w-[60px]"></div>
+                        <div class="dot-end"></div>
+                        <div class="ml-6">
+                            <p class="text-[#333333] text-lg font-light tracking-wide">Creative Development</p>
+                        </div>
+                    </li>
+
+                    <!-- Item 3 -->
+                    <li class="flex items-center w-full">
+                        <div class="timeline-capsule w-[260px] h-[40px] rounded-full flex items-center justify-center shrink-0 shadow-sm">
+                            <span class="text-[#555555] text-sm font-medium tracking-wider uppercase">February 2030</span>
+                        </div>
+                        <div class="connector-line w-[60px]"></div>
+                        <div class="dot-end"></div>
+                        <div class="ml-6">
+                            <p class="text-[#333333] text-lg font-light tracking-wide">Influencer Outreach</p>
+                        </div>
+                    </li>
+
+                    <!-- Item 4 -->
+                    <li class="flex items-center w-full">
+                        <div class="timeline-capsule w-[260px] h-[40px] rounded-full flex items-center justify-center shrink-0 shadow-sm">
+                            <span class="text-[#555555] text-sm font-medium tracking-wider uppercase">April 2030</span>
+                        </div>
+                        <div class="connector-line w-[60px]"></div>
+                        <div class="dot-end"></div>
+                        <div class="ml-6">
+                            <p class="text-[#333333] text-lg font-light tracking-wide">Campaign Launch</p>
+                        </div>
+                    </li>
+
+                    <!-- Item 5 -->
+                    <li class="flex items-center w-full">
+                        <div class="timeline-capsule w-[260px] h-[40px] rounded-full flex items-center justify-center shrink-0 shadow-sm">
+                            <span class="text-[#555555] text-sm font-medium tracking-wider uppercase">May - July 2030</span>
+                        </div>
+                        <div class="connector-line w-[60px]"></div>
+                        <div class="dot-end"></div>
+                        <div class="ml-6">
+                            <p class="text-[#333333] text-lg font-light tracking-wide">Execution and Optimization</p>
+                        </div>
+                    </li>
+
+                    <!-- Item 6 -->
+                    <li class="flex items-center w-full">
+                        <div class="timeline-capsule w-[260px] h-[40px] rounded-full flex items-center justify-center shrink-0 shadow-sm">
+                            <span class="text-[#555555] text-sm font-medium tracking-wider uppercase">September 2030</span>
+                        </div>
+                        <div class="connector-line w-[60px]"></div>
+                        <div class="dot-end"></div>
+                        <div class="ml-6">
+                            <p class="text-[#333333] text-lg font-light tracking-wide">Final Analysis and Reporting</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+        <div class="absolute bottom-0 left-0 w-full h-[70px] border-t border-[#A0A0A0] flex items-center justify-between px-[60px]">
+            
+            <!-- Left Footer: Page Num & Date -->
+            <div class="flex items-center gap-6">
+                <!-- Page Number Circle -->
+                <div class="w-8 h-8 rounded-full border border-[#A0A0A0] flex items-center justify-center">
+                    <span class="text-[#555555] text-xs font-bold">8</span>
+                </div>
+                <span class="text-[#555555] text-sm uppercase tracking-wide">January 2030</span>
+            </div>
+
+            <!-- Right Footer: Presenter -->
+            <div>
+                <span class="text-[#555555] text-sm uppercase tracking-wide">Presented By: Harper Russo</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

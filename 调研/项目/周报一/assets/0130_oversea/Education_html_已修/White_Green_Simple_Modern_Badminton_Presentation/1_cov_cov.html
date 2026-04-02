@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Badminton Presentation</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        /* 1280x720 容器 */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #2B522C;
+            overflow: hidden;
+        }
+
+        /* 球场地面质感模拟 */
+        .court-texture {
+            background-image: 
+                radial-gradient(circle at 50% 50%, rgba(78, 133, 82, 0.4) 0%, transparent 70%),
+                repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(255,255,255,0.02) 41px),
+                repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(255,255,255,0.02) 41px);
+        }
+
+        /* 球场线 - 增加微弱发光效果 */
+        .court-line {
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.75);
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+            z-index: 5;
+        }
+
+        /* 标题边框设计 */
+        .title-frame {
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            padding: 10px;
+            position: relative;
+        }
+        .title-frame::before {
+            content: '';
+            position: absolute;
+            top: -10px; left: -10px;
+            width: 30px; height: 30px;
+            border-top: 4px solid #fff; border-left: 4px solid #fff;
+        }
+        .title-frame::after {
+            content: '';
+            position: absolute;
+            bottom: -10px; right: -10px;
+            width: 30px; height: 30px;
+            border-bottom: 4px solid #fff; border-right: 4px solid #fff;
+        }
+
+        /* 漂浮动画 */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float { animation: float 4s ease-in-out infinite; }
+
+        /* 胶囊按钮微妙光泽 */
+        .glossy-capsule {
+            background: linear-gradient(to bottom, #F0F4EF 0%, #D8DFD7 100%);
+            border: 1px solid rgba(255,255,255,0.8);
+        }
+    </style>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#336534',
+                        darkBg: '#1E3B1F',
+                        accent: '#B9E6B5', // 亮绿色点缀
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div id="page_container" class="court-texture">
+        
+        <div class="absolute inset-0 z-0" style="background: radial-gradient(circle at 50% 40%, rgba(78, 133, 82, 0.8) 0%, rgba(30, 59, 31, 1) 100%);"></div>
+
+        <div class="absolute inset-[50px] border-[3px] border-white/60 z-10">
+            <div class="court-line h-[2px] w-full top-[10%] opacity-40"></div>
+            <div class="court-line h-[2px] w-full bottom-[10%] opacity-40"></div>
+            <div class="court-line h-[2px] w-full top-[32%]"></div>
+            <div class="court-line h-[2px] w-full bottom-[32%]"></div>
+            
+            <div class="absolute top-1/2 left-0 right-0 h-[6px] bg-white/20 -translate-y-1/2 blur-[1px]"></div>
+            <div class="absolute top-1/2 left-[-30px] right-[-30px] h-[2px] bg-white/90 -translate-y-1/2 shadow-[0_0_15px_rgba(255,255,255,0.5)]"></div>
+
+            <div class="court-line w-[2px] h-full left-[6%]"></div>
+            <div class="court-line w-[2px] h-full right-[6%]"></div>
+            <div class="court-line w-[2px] h-[32%] top-0 left-1/2 -translate-x-1/2"></div>
+            <div class="court-line w-[2px] h-[32%] bottom-0 left-1/2 -translate-x-1/2"></div>
+        </div>
+
+        <div class="absolute top-8 left-12 z-20 opacity-40 font-mono text-xs tracking-tighter text-accent uppercase">
+            Facility No: CRT-01 // Tournament Standard<br>Dimension: 13.4m x 6.1m
+        </div>
+
+        <div class="relative z-30 h-full flex flex-col justify-center items-center">
+            
+            <div class="animate-float mb-12">
+                <div class="glossy-capsule text-darkBg px-10 py-3 rounded-full flex items-center gap-4 shadow-[0_15px_30px_rgba(0,0,0,0.3)] border-b-4 border-black/10">
+                    <div class="flex -space-x-1">
+                        <i class="fa-solid fa-shuttlecock text-primary text-xl"></i>
+                    </div>
+                    <span class="font-black tracking-[0.3em] text-sm uppercase">Rimberio Sport</span>
+                    <div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+                </div>
+            </div>
+
+            <div class="relative mb-16 transform transition-all duration-500 hover:scale-105">
+                <div class="title-frame">
+                    <div class="bg-primary/40 backdrop-blur-md px-24 py-10 border border-white/20">
+                        <h1 class="text-8xl font-black tracking-[0.25em] text-white text-center uppercase" 
+                            style="text-shadow: 0 10px 20px rgba(0,0,0,0.4); font-family: 'Arial Black', sans-serif;">
+                            Badminton
+                        </h1>
+                        <div class="mt-4 flex items-center justify-center gap-4">
+                            <div class="h-[1px] w-12 bg-accent/50"></div>
+                            <span class="text-accent tracking-[0.8em] font-light text-sm uppercase">Championship 2026</span>
+                            <div class="h-[1px] w-12 bg-accent/50"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-6">
+                <div class="glossy-capsule text-darkBg px-6 py-2 rounded-full flex items-center gap-3 shadow-lg transform transition-transform hover:-translate-y-1">
+                    <i class="fa-solid fa-globe text-primary"></i>
+                    <p class="font-bold tracking-wider text-xs uppercase">reallygreatsite.com</p>
+                </div>
+                <div class="glossy-capsule text-darkBg px-4 py-2 rounded-full flex items-center shadow-lg">
+                    <i class="fa-brands fa-instagram text-primary"></i>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="absolute -bottom-10 -left-10 text-white/[0.03] text-[20rem] font-black pointer-events-none rotate-12">
+            <i class="fa-solid fa-shuttlecock"></i>
+        </div>
+        <div class="absolute -top-10 -right-10 text-white/[0.03] text-[15rem] font-black pointer-events-none -rotate-12">
+            <i class="fa-solid fa-trophy"></i>
+        </div>
+
+        <div class="absolute inset-0 pointer-events-none shadow-[inset_0_0_150px_rgba(0,0,0,0.6)]"></div>
+
+    </div>
+
+</body>
+</html>

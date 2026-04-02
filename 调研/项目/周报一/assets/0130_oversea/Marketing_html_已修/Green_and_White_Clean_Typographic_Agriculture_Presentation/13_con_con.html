@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borcelle Farm - Monitoring and Evaluation</title>
+
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B4D21',      // Deep Green - Titles, Logo
+                        secondary: '#666666',    // Grey - Body Text
+                        accent: '#8B9A45',       // Light Green - Highlights, Icons
+                        dark: '#1A1A1A',         // Almost Black - Fine details
+                        paper: '#FFFFFF',        // Background
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'Inter', 'sans-serif'],
+                    },
+                    spacing: {
+                        '1280': '1280px',
+                        '720': '720px',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Global Settings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Slide Container - Fixed 1280x720 */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #FFFFFF;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Utility for background shapes */
+        .decoration-blob {
+            position: absolute;
+            filter: blur(80px);
+            z-index: 0;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+
+        <div class="decoration-blob bg-accent/10 w-96 h-96 -top-20 -right-20"></div>
+
+        <div class="absolute top-0 left-0 w-full px-16 pt-12 flex justify-between items-center z-50">
+            <div class="flex items-center gap-3">
+                <div class="text-[#8B9A45] text-2xl">
+                    <i class="fa-solid fa-leaf"></i>
+                </div>
+                <h2 class="text-[#3B4D21] text-xl font-bold tracking-wide">Borcelle Farm</h2>
+            </div>
+
+            <div class="border border-[#8B9A45] rounded-full px-6 py-2">
+                <span class="text-[#3B4D21] text-sm font-medium tracking-wide uppercase">Presentation</span>
+            </div>
+        </div>
+
+        <div class="flex flex-col px-16 pt-32 pb-10 h-full w-full relative z-10">
+
+            <div class="w-full h-[300px] relative mb-10 group flex-shrink-0">
+                <div class="w-full h-full rounded-[40px] overflow-hidden relative shadow-sm">
+                    <div class="absolute inset-0 bg-primary/5 z-10"></div>
+                    
+                    <img src="https://images.unsplash.com/photo-1570042225831-d98fa7577f1e?q=80&w=2400&auto=format&fit=crop" 
+                         alt="Cows grazing in a green pasture at Borcelle Farm" 
+                         class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105">
+                    </div>
+            </div>
+
+            <div class="flex-1 grid grid-cols-12 gap-12 items-start">
+                
+                <div class="col-span-5 flex flex-col justify-between h-full pt-2">
+                    <p class="text-secondary text-base text-justify pr-8">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    </p>
+
+                    <div class="mt-auto mb-2">
+                        <div class="text-dark text-4xl transition-transform transform hover:translate-x-2 w-max cursor-pointer">
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-span-7 flex flex-col items-end text-right">
+                    <h1 class="text-primary text-[84px] leading-[0.9] font-bold tracking-tight">
+                        Monitoring and <br>
+                        <span class="text-primary">Evaluation</span>
+                    </h1>
+                    
+                    <div class="w-32 h-2 bg-accent mt-6 rounded-full opacity-80"></div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

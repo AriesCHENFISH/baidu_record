@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, initial-scale=1.0">
+    <title>02 - Index Static</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; overflow: hidden; font-family: 'Noto Sans SC', sans-serif; background-color: #f0f4f8; }
+        
+        .glass-panel { 
+            background: rgba(255, 255, 255, 0.65); 
+            backdrop-filter: blur(24px); 
+            border: 1px solid rgba(255, 255, 255, 0.6); 
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.08); 
+        }
+
+        .mesh-bg { position: absolute; inset: 0; z-index: 0; background: linear-gradient(135deg, #FFD6D6 0%, #D6EBFF 50%, #E0D6FF 100%); }
+        .blob { position: absolute; border-radius: 50%; filter: blur(80px); z-index: 0; opacity: 0.8; }
+        .text-gradient { background: linear-gradient(to right, #4A3AFF, #9333ea); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+        /* Index Item Styling - STATIC (No Hover transitions needed) */
+        .index-item {
+            background: white; /* 直接白色背景 */
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 15px rgba(74, 58, 255, 0.05); /* 固定阴影 */
+        }
+        
+        /* 强制显色 */
+        .item-num {
+            background: rgba(74, 58, 255, 0.1);
+            color: #4A3AFF;
+        }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <div class="mesh-bg"></div>
+        <div class="blob w-[600px] h-[600px] bg-[#D6EBFF] top-[-200px] left-[-100px] opacity-60"></div>
+        <div class="blob w-[500px] h-[500px] bg-[#FFD6D6] bottom-[-100px] right-[-100px] opacity-50"></div>
+
+        <div class="absolute top-0 left-0 w-full px-12 py-10 flex items-center justify-between z-50">
+            <div class="glass-panel rounded-full px-8 py-4 flex items-center gap-6">
+                <div class="flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-full bg-[#4A3AFF]"></span> <span class="text-sm font-bold tracking-widest text-[#0F172A] uppercase">Index</span>
+                </div>
+                <span class="text-gray-400">|</span>
+                <span class="text-sm font-bold tracking-widest text-[#475569] uppercase">Overview</span>
+            </div>
+            <div class="glass-panel w-14 h-14 rounded-full flex items-center justify-center text-[#2E2E99] bg-white/50">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </div>
+        </div>
+
+        <div class="relative z-10 w-full h-full flex pt-32 px-12 pb-12 gap-12">
+            
+            <div class="w-[30%] flex flex-col justify-center relative">
+                <div class="absolute -left-6 top-20 text-[200px] font-black text-[#4A3AFF] opacity-[0.05] leading-none select-none pointer-events-none">02</div>
+                
+                <div class="relative z-10 pl-2">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="h-[3px] w-12 bg-[#4A3AFF]"></span>
+                        <span class="text-sm font-bold tracking-[0.25em] text-[#4A3AFF] uppercase">Table of Contents</span>
+                    </div>
+
+                    <h1 class="text-5xl font-black text-[#0F172A] mb-8 leading-[1.1]">
+                        TODAY'S <br> <span class="text-gradient">AGENDA</span>
+                    </h1>
+
+                    <p class="text-sm text-gray-600 leading-relaxed mb-8 pr-6">
+                        A comprehensive roadmap of our strategic vision, covering market analysis, technological infrastructure, and future growth projections.
+                    </p>
+                </div>
+            </div>
+
+            <div class="w-[70%] glass-panel rounded-[32px] p-8 grid grid-cols-2 gap-4 h-full overflow-hidden">
+                
+                <div class="index-item rounded-xl p-4 flex items-center gap-4">
+                    <div class="item-num w-12 h-12 rounded-xl flex items-center justify-center text-lg font-black font-mono">01</div>
+                    <div class="flex-grow">
+                        <h4 class="text-base font-bold text-[#1A1A1A]">Executive Summary</h4>
+                        <p class="text-xs text-gray-500 mt-1">Key takeaways & strategic vision</p>
+                    </div>
+                    <i class="fa-solid fa-arrow-right text-[#4A3AFF] text-lg"></i>
+                </div>
+
+                <div class="index-item rounded-xl p-4 flex items-center gap-4">
+                    <div class="item-num w-12 h-12 rounded-xl flex items-center justify-center text-lg font-black font-mono">02</div>
+                    <div class="flex-grow">
+                        <h4 class="text-base font-bold text-[#1A1A1A]">Market Analysis</h4>
+                        <p class="text-xs text-gray-500 mt-1">Global trends & opportunities</p>
+                    </div>
+                    <i class="fa-solid fa-arrow-right text-[#4A3AFF] text-lg"></i>
+                </div>
+
+                <div class="index-item rounded-xl p-4 flex items-center gap-4">
+                    <div class="item-num w-12 h-12 rounded-xl flex items-center justify-center text-lg font-black font-mono">03</div>
+                    <div class="flex-grow">
+                        <h4 class="text-base font-bold text-[#1A1A1A]">Problem Statement</h4>
+                        <p class="text-xs text-gray-500 mt-1">Core challenges identified</p>
+                    </div>
+                    <i class="fa-solid fa-arrow-right text-[#4A3AFF] text-lg"></i>
+                </div>
+
+                <div class="index-item rounded-xl p-4 flex items-center gap-4">
+                    <div class="item-num w-12 h-12 rounded-xl flex items-center justify-center text-lg font-black font-mono">04</div>
+                    <div class="flex-grow">
+                        <h4 class="text-base font-bold text-[#1A1A1A]">Strategic Solutions</h4>
+                        <p class="text-xs text-gray-500 mt-1">Our proprietary methodology</p>
+                    </div>
+                    <i class="fa-solid fa-arrow-right text-[#4A3AFF] text-lg"></i>
+                </div>
+
+                <div class="index-item rounded-xl p-4 flex items-center gap-4">
+                    <div class="item-num w-12 h-12 rounded-xl flex items-center justify-center text-lg font-black font-mono">05</div>
+                    <div class="flex-grow">
+                        <h4 class="text-base font-bold text-[#1A1A1A]">Technology Stack</h4>
+                        <p class="text-xs text-gray-500 mt-1">Infrastructure & AI tools</p>
+                    </div>
+                    <i class="fa-solid fa-arrow-right text-[#4A3AFF] text-lg"></i>
+                </div>
+
+                <div class="index-item rounded-xl p-4 flex items-center gap-4">
+                    <div class="item-num w-12 h-12 rounded-xl flex items-center justify-center text-lg font-black font-mono">06</div>
+                    <div class="flex-grow">
+                        <h4 class="text-base font-bold text-[#1A1A1A]">Financial Projections</h4>
+                        <p class="text-xs text-gray-500 mt-1">ROI & Revenue Models</p>
+                    </div>
+                    <i class="fa-solid fa-arrow-right text-[#4A3AFF] text-lg"></i>
+                </div>
+
+                <div class="index-item rounded-xl p-4 flex items-center gap-4">
+                    <div class="item-num w-12 h-12 rounded-xl flex items-center justify-center text-lg font-black font-mono">07</div>
+                    <div class="flex-grow">
+                        <h4 class="text-base font-bold text-[#1A1A1A]">Implementation</h4>
+                        <p class="text-xs text-gray-500 mt-1">Timeline & Milestones</p>
+                    </div>
+                    <i class="fa-solid fa-arrow-right text-[#4A3AFF] text-lg"></i>
+                </div>
+
+                <div class="index-item rounded-xl p-4 flex items-center gap-4">
+                    <div class="item-num w-12 h-12 rounded-xl flex items-center justify-center text-lg font-black font-mono">08</div>
+                    <div class="flex-grow">
+                        <h4 class="text-base font-bold text-[#1A1A1A]">Q&A Session</h4>
+                        <p class="text-xs text-gray-500 mt-1">Discussion & Feedback</p>
+                    </div>
+                    <i class="fa-solid fa-arrow-right text-[#4A3AFF] text-lg"></i>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 right-12 z-50">
+            <div class="w-14 h-14 rounded-full border-2 border-[#2E2E99] flex items-center justify-center text-[#2E2E99]">
+                <i class="fa-solid fa-arrow-right text-xl"></i>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

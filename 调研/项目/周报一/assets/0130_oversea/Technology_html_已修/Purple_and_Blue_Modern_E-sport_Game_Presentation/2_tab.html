@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Sports Presentation - Table of Contents</title>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative;
+            background: linear-gradient(135deg, #050214 0%, #0A0A25 100%);
+            overflow: hidden; font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* 统一 Logo 扫描光效 */
+        @keyframes scanline { 0% { transform: translateY(-100%); } 100% { transform: translateY(100%); } }
+        .logo-scan::after {
+            content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 2px;
+            background: rgba(0, 229, 255, 0.8); animation: scanline 2s linear infinite;
+        }
+        
+        @keyframes spin-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        .animate-spin-slow { animation: spin-slow 25s linear infinite; }
+
+        /* 目录卡片：直接显示边框与切角 */
+        .toc-card {
+            background: rgba(255, 255, 255, 0.03);
+            /* 直接显示的边框样式 */
+            border: 1px solid rgba(176, 38, 255, 0.4); 
+            clip-path: polygon(0 0, 96% 0, 100% 30%, 100% 100%, 4% 100%, 0 70%);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        /* 青色卡片变体边框 */
+        .toc-card-cyan {
+            border-color: rgba(0, 229, 255, 0.4);
+        }
+
+        .toc-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-3px) scale(1.01);
+            box-shadow: 0 0 20px rgba(176, 38, 255, 0.3);
+        }
+        .toc-card-cyan:hover {
+            box-shadow: 0 0 20px rgba(0, 229, 255, 0.3);
+        }
+
+        /* 文字效果 */
+        .text-neon-cyan { color: #00E5FF; text-shadow: 0 0 10px rgba(0, 229, 255, 0.8); }
+        .text-neon-purple { color: #B026FF; text-shadow: 0 0 10px rgba(176, 38, 255, 0.8); }
+        .title-glow { text-shadow: 0 0 15px rgba(255, 255, 255, 0.4); }
+    </style>
+</head>
+<body>
+
+    <div id="page_container" class="flex flex-col px-16">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#B026FF]/5 to-transparent z-0"></div>
+        <div class="absolute left-12 top-0 bottom-0 w-[1px] bg-white/5 z-0"></div>
+
+        <div class="relative z-50 w-full py-10 flex justify-between items-center">
+            <div class="group flex items-center gap-5 cursor-pointer">
+                <div class="relative w-14 h-14">
+                    <div class="absolute inset-0 border-2 border-dashed border-[#00E5FF] rounded-lg opacity-40 animate-spin-slow"></div>
+                    <div class="logo-scan absolute inset-1 bg-gradient-to-br from-[#1A1A3D] to-[#050214] border border-[#B026FF] rounded-md flex items-center justify-center overflow-hidden">
+                        <i class="fa-solid fa-microchip text-[#00E5FF] text-2xl"></i>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <h2 class="text-2xl font-black italic tracking-tighter text-white leading-none">RIMBERIO<span class="text-[#B026FF]">.</span>X</h2>
+                    <p class="text-[#00E5FF] font-bold text-[10px] tracking-[0.3em] uppercase mt-1">Navigation System</p>
+                </div>
+            </div>
+            <div class="text-right">
+                <p class="text-white/30 text-[10px] font-black tracking-widest uppercase italic">Operational Status</p>
+                <p class="text-neon-cyan text-xs font-bold uppercase tracking-widest flex items-center justify-end gap-2">
+                    <span class="w-1.5 h-1.5 bg-[#00E5FF] rounded-full animate-pulse"></span> System Ready
+                </p>
+            </div>
+        </div>
+
+        <div class="relative z-10 flex flex-col flex-1 pb-10">
+            <div class="mb-10 flex items-end justify-between border-b border-white/10 pb-4">
+                <div>
+                    <h1 class="text-5xl font-black italic text-white tracking-tighter uppercase leading-none title-glow">
+                        INDEX <span class="text-neon-purple">CONTENT</span>
+                    </h1>
+                    <p class="text-white/40 text-xs font-bold tracking-[0.6em] mt-3 uppercase">08 Strategic Presentation Modules</p>
+                </div>
+                <div class="text-right">
+                    <span class="text-4xl font-black italic text-white/5 tracking-widest">DIRECTORY</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-x-12 gap-y-6">
+                <div class="toc-card flex items-center p-5 group cursor-pointer shadow-lg">
+                    <div class="w-12 text-3xl font-black italic text-neon-purple">01</div>
+                    <div class="h-8 w-[2px] bg-[#B026FF]/30 mx-6"></div>
+                    <h3 class="text-white font-bold text-xl tracking-widest uppercase group-hover:text-neon-cyan transition-colors">The Genesis of Gaming</h3>
+                </div>
+
+                <div class="toc-card toc-card-cyan flex items-center p-5 group cursor-pointer shadow-lg">
+                    <div class="w-12 text-3xl font-black italic text-neon-cyan">05</div>
+                    <div class="h-8 w-[2px] bg-[#00E5FF]/30 mx-6"></div>
+                    <h3 class="text-white font-bold text-xl tracking-widest uppercase group-hover:text-neon-purple transition-colors">Academic Integration</h3>
+                </div>
+
+                <div class="toc-card flex items-center p-5 group cursor-pointer shadow-lg">
+                    <div class="w-12 text-3xl font-black italic text-neon-purple">02</div>
+                    <div class="h-8 w-[2px] bg-[#B026FF]/30 mx-6"></div>
+                    <h3 class="text-white font-bold text-xl tracking-widest uppercase group-hover:text-neon-cyan transition-colors">Popular Competitive Titles</h3>
+                </div>
+
+                <div class="toc-card toc-card-cyan flex items-center p-5 group cursor-pointer shadow-lg">
+                    <div class="w-12 text-3xl font-black italic text-neon-cyan">06</div>
+                    <div class="h-8 w-[2px] bg-[#00E5FF]/30 mx-6"></div>
+                    <h3 class="text-white font-bold text-xl tracking-widest uppercase group-hover:text-neon-purple transition-colors">Industry Challenges</h3>
+                </div>
+
+                <div class="toc-card flex items-center p-5 group cursor-pointer shadow-lg">
+                    <div class="w-12 text-3xl font-black italic text-neon-purple">03</div>
+                    <div class="h-8 w-[2px] bg-[#B026FF]/30 mx-6"></div>
+                    <h3 class="text-white font-bold text-xl tracking-widest uppercase group-hover:text-neon-cyan transition-colors">Tournament Ecosystems</h3>
+                </div>
+
+                <div class="toc-card toc-card-cyan flex items-center p-5 group cursor-pointer shadow-lg">
+                    <div class="w-12 text-3xl font-black italic text-neon-cyan">07</div>
+                    <div class="h-8 w-[2px] bg-[#00E5FF]/30 mx-6"></div>
+                    <h3 class="text-white font-bold text-xl tracking-widest uppercase group-hover:text-neon-purple transition-colors">The Economy of E-Sports</h3>
+                </div>
+
+                <div class="toc-card flex items-center p-5 group cursor-pointer shadow-lg">
+                    <div class="w-12 text-3xl font-black italic text-neon-purple">04</div>
+                    <div class="h-8 w-[2px] bg-[#B026FF]/30 mx-6"></div>
+                    <h3 class="text-white font-bold text-xl tracking-widest uppercase group-hover:text-neon-cyan transition-colors">Professional Career Paths</h3>
+                </div>
+
+                <div class="toc-card toc-card-cyan flex items-center p-5 group cursor-pointer shadow-lg">
+                    <div class="w-12 text-3xl font-black italic text-neon-cyan">08</div>
+                    <div class="h-8 w-[2px] bg-[#00E5FF]/30 mx-6"></div>
+                    <h3 class="text-white font-bold text-xl tracking-widest uppercase group-hover:text-neon-purple transition-colors">Future Strategy Projection</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-6 left-16 right-16 flex justify-between items-center opacity-30">
+            <div class="flex gap-2">
+                <div class="w-2 h-2 bg-white rounded-full"></div>
+                <div class="w-12 h-2 bg-white rounded-full"></div>
+            </div>
+            <p class="text-[10px] text-white tracking-[1em] font-light uppercase italic">End of Directory Protocol</p>
+        </div>
+    </div>
+
+</body>
+</html>

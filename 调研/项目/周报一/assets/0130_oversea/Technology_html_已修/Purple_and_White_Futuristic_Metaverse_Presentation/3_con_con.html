@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History and Evolution - Tech Presentation</title>
+    
+    <!-- Import FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Import Google Fonts (Domestic CDN as requested) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- Import Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgPrimary: '#211545',
+                        accent: '#6D3BFE',
+                        cardFill: '#3C2C7A',
+                        neonCyan: '#84D9FF',
+                        gradientBlue: '#4D6AFF',
+                        borderDeco: '#A5A6C4',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Global Corrections */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container Styles */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #211545;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Custom Scrollbar hide */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Glassmorphism Utilities */
+        .glass-panel {
+            background: rgba(60, 44, 122, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(165, 166, 196, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        /* Neon Text Glow */
+        .neon-text-glow {
+            text-shadow: 0 0 10px rgba(132, 217, 255, 0.6), 0 0 20px rgba(109, 59, 254, 0.4);
+        }
+
+        /* Sci-fi Clip Path for Cards */
+        .tech-card-shape {
+            /* Hexagonal cut corners */
+            clip-path: polygon(
+                20px 0, 100% 0, 
+                100% calc(100% - 20px), calc(100% - 20px) 100%, 
+                0 100%, 0 20px
+            );
+        }
+        
+        /* Decorative Planet Glow */
+        .planet-glow {
+            background: radial-gradient(circle at 30% 30%, rgba(132, 217, 255, 0.2), rgba(109, 59, 254, 0.1) 60%, transparent 80%);
+        }
+
+        /* Gradient Text */
+        .gradient-text {
+            background: linear-gradient(90deg, #FFFFFF, #84D9FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <!-- Decorative Background Elements -->
+        <!-- Top Right Planet/Orb Simulation -->
+        <div class="planet-glow" style="position: absolute; top: -100px; right: -100px; width: 500px; height: 500px; border-radius: 50%; z-index: 1;"></div>
+        
+        <!-- Grid Texture Overlay -->
+        <div style="position: absolute; inset: 0; background-image: radial-gradient(#6D3BFE 1px, transparent 1px); background-size: 40px 40px; opacity: 0.1; z-index: 0;"></div>
+
+        <!-- Main Content Wrapper -->
+        <div style="position: relative; z-index: 10; padding: 60px 80px; height: 100%; display: flex; flex-direction: column;">
+
+            <!-- Header Section -->
+            <header style="margin-bottom: 50px;">
+                <!-- Brand / Subtitle -->
+                <p style="color: #A5A6C4; letter-spacing: 4px; font-size: 14px; font-weight: 500; text-transform: uppercase; margin-bottom: 16px;">
+                    Studio Shodwe
+                </p>
+                
+                <!-- Main Title -->
+                <h1 class="neon-text-glow" style="font-size: 56px; font-weight: 700; line-height: 1.1; color: white; text-transform: uppercase; letter-spacing: 2px;">
+                    <span class="gradient-text">History And</span> <span style="color: #6D3BFE;">Evolution</span>
+                </h1>
+                
+                <!-- Decorative Underline -->
+                <div style="width: 100px; height: 4px; background: linear-gradient(90deg, #6D3BFE, #84D9FF); margin-top: 20px; border-radius: 2px;"></div>
+            </header>
+
+            <!-- Cards Container -->
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; flex-grow: 1;">
+
+                <!-- Card 1: Early Concept -->
+                <div class="glass-panel tech-card-shape" style="position: relative; display: flex; flex-direction: column; transition: transform 0.3s ease;">
+                    
+                    <!-- Card Header / Ribbon -->
+                    <div style="background: linear-gradient(90deg, #6D3BFE, #3C2C7A); padding: 20px 24px; display: flex; align-items: center; border-bottom: 1px solid rgba(132, 217, 255, 0.2);">
+                        <!-- Icon Box -->
+                        <div style="width: 40px; height: 40px; background: rgba(33, 21, 69, 0.6); display: flex; align-items: center; justify-content: center; border-radius: 8px; margin-right: 16px; border: 1px solid #84D9FF;">
+                            <i class="fa-solid fa-lightbulb" style="color: #84D9FF; font-size: 18px;"></i>
+                        </div>
+                        <!-- Title -->
+                        <h2 style="color: white; font-size: 18px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;">
+                            Early Concept
+                        </h2>
+                    </div>
+
+                    <!-- Card Body -->
+                    <div style="padding: 30px 24px; flex-grow: 1;">
+                        <div style="margin-bottom: 20px; opacity: 0.8;">
+                             <!-- Decorative chevron -->
+                             <i class="fa-solid fa-angles-right" style="color: #6D3BFE; font-size: 24px;"></i>
+                        </div>
+                        <p style="color: #E0E0E0; font-size: 16px; line-height: 1.7; font-weight: 300; text-align: left;">
+                            The idea of a virtual world where people can interact digitally was first imagined in science fiction during the early 1990s. It introduced the concept of avatars and shared digital spaces.
+                        </p>
+                    </div>
+
+                    <!-- Decorative Corner Highlight -->
+                    <div style="position: absolute; bottom: 0; left: 0; width: 0; height: 0; border-bottom: 20px solid #84D9FF; border-right: 20px solid transparent; opacity: 0.5;"></div>
+                </div>
+
+                <!-- Card 2: Virtual Worlds -->
+                <div class="glass-panel tech-card-shape" style="position: relative; display: flex; flex-direction: column;">
+                    
+                    <!-- Card Header -->
+                    <div style="background: linear-gradient(90deg, #4D6AFF, #3C2C7A); padding: 20px 24px; display: flex; align-items: center; border-bottom: 1px solid rgba(132, 217, 255, 0.2);">
+                        <div style="width: 40px; height: 40px; background: rgba(33, 21, 69, 0.6); display: flex; align-items: center; justify-content: center; border-radius: 8px; margin-right: 16px; border: 1px solid #84D9FF;">
+                            <i class="fa-solid fa-gamepad" style="color: #84D9FF; font-size: 18px;"></i>
+                        </div>
+                        <h2 style="color: white; font-size: 18px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;">
+                            Virtual Worlds
+                        </h2>
+                    </div>
+
+                    <!-- Card Body -->
+                    <div style="padding: 30px 24px; flex-grow: 1;">
+                        <div style="margin-bottom: 20px; opacity: 0.8;">
+                             <i class="fa-solid fa-angles-right" style="color: #4D6AFF; font-size: 24px;"></i>
+                        </div>
+                        <p style="color: #E0E0E0; font-size: 16px; line-height: 1.7; font-weight: 300; text-align: left;">
+                            In the 2000s, virtual platforms and multiplayer online games began offering immersive environments, allowing users to explore, build, and socialize in digital spaces.
+                        </p>
+                    </div>
+
+                     <!-- Decorative Corner Highlight -->
+                     <div style="position: absolute; bottom: 0; left: 0; width: 0; height: 0; border-bottom: 20px solid #4D6AFF; border-right: 20px solid transparent; opacity: 0.5;"></div>
+                </div>
+
+                <!-- Card 3: Into Reality -->
+                <div class="glass-panel tech-card-shape" style="position: relative; display: flex; flex-direction: column;">
+                    
+                    <!-- Card Header -->
+                    <div style="background: linear-gradient(90deg, #84D9FF, #4D6AFF); padding: 20px 24px; display: flex; align-items: center; border-bottom: 1px solid rgba(132, 217, 255, 0.2);">
+                        <div style="width: 40px; height: 40px; background: rgba(33, 21, 69, 0.6); display: flex; align-items: center; justify-content: center; border-radius: 8px; margin-right: 16px; border: 1px solid #FFFFFF;">
+                            <i class="fa-solid fa-vr-cardboard" style="color: #FFFFFF; font-size: 18px;"></i>
+                        </div>
+                        <h2 style="color: #211545; font-size: 18px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;">
+                            Into Reality
+                        </h2>
+                    </div>
+
+                    <!-- Card Body -->
+                    <div style="padding: 30px 24px; flex-grow: 1;">
+                        <div style="margin-bottom: 20px; opacity: 0.8;">
+                             <i class="fa-solid fa-angles-right" style="color: #84D9FF; font-size: 24px;"></i>
+                        </div>
+                        <p style="color: #E0E0E0; font-size: 16px; line-height: 1.7; font-weight: 300; text-align: left;">
+                            Over time, advances in internet speed, 3D technology, and immersive tools like VR/AR transformed the metaverse from fiction to a developing digital frontier used for work, entertainment, and education.
+                        </p>
+                    </div>
+
+                     <!-- Decorative Corner Highlight -->
+                     <div style="position: absolute; bottom: 0; left: 0; width: 0; height: 0; border-bottom: 20px solid #84D9FF; border-right: 20px solid transparent; opacity: 0.8;"></div>
+                </div>
+
+            </div>
+
+            <!-- Footer / Progress Bar Decoration -->
+            <div style="margin-top: 40px; display: flex; align-items: center; opacity: 0.5;">
+                <div style="height: 1px; flex-grow: 1; background: linear-gradient(90deg, #6D3BFE, transparent);"></div>
+                <div style="font-size: 12px; color: #84D9FF; margin: 0 15px; letter-spacing: 2px;">TIMELINE SEQUENCE</div>
+                <div style="height: 1px; flex-grow: 1; background: linear-gradient(-90deg, #6D3BFE, transparent);"></div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Regulators Presentation</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans SC', sans-serif; }
+        
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FFFFFF;
+            overflow: hidden;
+            display: flex;
+        }
+
+        /* Custom Colors */
+        .text-primary { color: #7695CE; }
+        .bg-primary { background-color: #7695CE; }
+        .border-primary { border-color: #7695CE; }
+        
+        /* Left Column Background - Clean, no dots */
+        .bg-clean-soft {
+            background-color: #F8FAFC; /* Very light slate gray */
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+
+        <div class="w-[40%] h-full flex flex-col justify-center items-center p-12 bg-clean-soft relative border-r border-slate-100">
+            
+            <div class="absolute top-12 left-12">
+                <div class="flex items-center gap-2">
+                    <div class="w-2 h-2 rounded-full bg-primary"></div>
+                    <h4 class="text-xs font-bold text-[#95ADD8] uppercase tracking-[0.2em]">Data Visualization</h4>
+                </div>
+            </div>
+
+            <div class="relative w-full h-[380px] mb-8">
+                <div id="mountainChart" class="w-full h-full"></div>
+                
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-primary bg-white w-24 h-24 rounded-full flex items-center justify-center shadow-xl shadow-slate-200">
+                    <i class="fa-solid fa-cloud-sun-rain text-4xl opacity-90"></i>
+                </div>
+            </div>
+
+            <div class="w-full bg-white rounded-xl p-6 shadow-sm border border-slate-100 relative z-10">
+                <ul class="space-y-4 text-sm text-[#555]">
+                    <li class="flex items-center justify-between border-b border-slate-50 pb-2">
+                        <span class="font-medium text-slate-400">Rainfall Impact</span>
+                        <span class="font-bold text-primary">High</span>
+                    </li>
+                    <li class="flex items-center justify-between border-b border-slate-50 pb-2">
+                        <span class="font-medium text-slate-400">Circulation</span>
+                        <span class="font-bold text-primary">Global Scale</span>
+                    </li>
+                    <li class="flex items-center justify-between">
+                        <span class="font-medium text-slate-400">Temp Variance</span>
+                        <span class="font-bold text-primary">Significant</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="absolute bottom-0 left-0 w-32 h-32 bg-primary opacity-[0.03] rounded-tr-full"></div>
+        </div>
+
+        <div class="w-[60%] h-full flex flex-col relative p-16 justify-center bg-white">
+            
+            <div class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-slate-50 to-transparent -z-10 rounded-bl-full opacity-50"></div>
+
+            <div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="p-2 bg-blue-50 rounded-lg text-primary">
+                        <i class="fa-solid fa-earth-americas text-lg"></i>
+                    </span>
+                    <h3 class="text-[#95ADD8] text-sm font-bold uppercase tracking-wider">Ecological Importance</h3>
+                </div>
+
+                <h1 class="text-6xl font-bold text-black mb-8 leading-tight">
+                    Climate <br> <span class="text-primary relative inline-block">
+                        Regulators
+                        <svg class="absolute w-full h-3 -bottom-1 left-0 text-blue-200" viewBox="0 0 100 10" preserveAspectRatio="none">
+                            <path d="M0 5 Q 50 10 100 5" stroke="currentColor" stroke-width="3" fill="none" />
+                        </svg>
+                    </span>
+                </h1>
+                
+                <p class="text-[#555] text-lg leading-relaxed text-justify mb-10 pl-6 border-l-4 border-primary/30">
+                    Mountains significantly influence regional and global climate patterns. They create orographic precipitation, where moist air is forced to rise and cool, resulting in rainfall on the windward side and a rain shadow on the leeward side.
+                </p>
+
+                <div class="w-full h-[260px] rounded-2xl overflow-hidden shadow-2xl relative group">
+                     <img 
+                        src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop" 
+                        alt="Snowy mountains" 
+                        class="w-full h-full object-cover transform group-hover:scale-105 transition duration-1000"
+                    >
+                    <div class="absolute top-4 left-4 bg-black/30 backdrop-blur-md border border-white/20 px-4 py-1.5 rounded-full text-xs font-bold text-white tracking-wide">
+                        OROGRAPHIC EFFECT
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var chartDom = document.getElementById('mountainChart');
+            var myChart = echarts.init(chartDom);
+            var option;
+
+            const colorPrimary = '#7695CE';
+            const colorSecondary = '#95ADD8';
+            const colorLight = '#D1DDF2';
+            const colorDark = '#5C7AB5';
+
+            option = {
+                animation: false,
+                tooltip: { trigger: 'item' },
+                series: [
+                    {
+                        name: 'Climate Factors',
+                        type: 'pie',
+                        radius: ['58%', '85%'], // Slightly thicker ring for visual weight
+                        avoidLabelOverlap: false,
+                        itemStyle: {
+                            borderRadius: 6,
+                            borderColor: '#F8FAFC', // Match the left column background color
+                            borderWidth: 5
+                        },
+                        label: { show: false },
+                        emphasis: {
+                            label: { show: false }
+                        },
+                        data: [
+                            { value: 35, name: 'Precipitation', itemStyle: { color: colorPrimary } },
+                            { value: 25, name: 'Air Circulation', itemStyle: { color: colorSecondary } },
+                            { value: 20, name: 'Temperature', itemStyle: { color: colorLight } },
+                            { value: 20, name: 'Humidity', itemStyle: { color: colorDark } }
+                        ]
+                    }
+                ]
+            };
+
+            option && myChart.setOption(option);
+        });
+    </script>
+</body>
+</html>

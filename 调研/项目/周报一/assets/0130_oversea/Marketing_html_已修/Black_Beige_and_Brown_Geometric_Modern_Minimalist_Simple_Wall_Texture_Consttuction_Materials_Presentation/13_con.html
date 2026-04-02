@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingoude Data Analysis</title>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <script src="https://cdn.staticfile.org/echarts/5.4.3/echarts.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryBg: '#0A0A0A',
+                        primaryText: '#FFFFFF',
+                        secondaryText: '#8C8C8C',
+                        accent: '#F2F2F2',
+                        brandAux: '#6E6C66'
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'Inter', 'sans-serif'],
+                        serif: ['Times New Roman', 'serif']
+                    },
+                    boxShadow: {
+                        'glow': '0 0 20px rgba(255, 255, 255, 0.05)',
+                        'card': '0 4px 20px rgba(0, 0, 0, 0.4)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        /* Page Container */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #0A0A0A;
+            overflow: hidden;
+            /* Subtle Texture */
+            background-image: 
+                linear-gradient(rgba(10, 10, 10, 0.95), rgba(10, 10, 10, 0.98)),
+                url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz4KPC9zdmc+');
+        }
+
+        /* Decorative Lines */
+        .hairline {
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.08);
+            z-index: 0;
+        }
+
+        /* Chart Container Explicit Size */
+        #main_chart {
+            width: 100%;
+            height: 100%;
+            min-height: 400px; /* Fallback height */
+        }
+
+        ::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body>
+
+    <div id="page_container" class="font-sans text-primaryText selection:bg-gray-700">
+
+        <div class="hairline w-px h-full left-12 top-0"></div>
+        <div class="hairline w-px h-full right-12 top-0"></div>
+        <div class="hairline w-full h-px left-0 top-24"></div>
+        <div class="hairline w-full h-px left-0 bottom-16"></div>
+        <div class="hairline w-px h-full left-[35%] top-0 border-r border-dashed border-white/5 bg-transparent"></div>
+
+        <header class="absolute top-0 left-0 w-full h-24 flex justify-between items-center px-12 z-50">
+            <div class="flex items-center gap-3">
+                <div class="bg-[#F2F2F2] rounded-full px-6 py-2 flex items-center gap-3 shadow-lg">
+                    <div class="w-3 h-3 rounded-full bg-[#6E6C66]"></div> 
+                    <h6 class="text-black font-bold text-sm tracking-wide uppercase">Ingoude Company</h6>
+                </div>
+            </div>
+
+            <nav class="flex items-center gap-4">
+                <div class="bg-[#333333] border border-[#444444] rounded-full px-6 py-2">
+                    <h6 class="text-white text-xs font-bold tracking-wider">HOME</h6>
+                </div>
+                <div class="border border-white/30 rounded-full px-6 py-2">
+                    <h6 class="text-white/70 text-xs font-medium tracking-wider">MATERIALS</h6>
+                </div>
+                <div class="border border-white/30 rounded-full px-6 py-2">
+                    <h6 class="text-white/70 text-xs font-medium tracking-wider">MORE</h6>
+                </div>
+                <div class="ml-2 text-white text-lg">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="absolute top-24 bottom-16 w-full flex overflow-hidden">
+            
+            <div class="w-[35%] h-full p-12 flex flex-col justify-center relative z-10">
+                
+                <div class="mb-8 border-l-4 border-accent pl-6">
+                    <h5 class="text-brandAux text-sm font-bold tracking-[0.2em] mb-2">QUARTERLY REPORT</h5>
+                    <h1 class="text-5xl font-light text-primaryText leading-tight">
+                        Material <br>
+                        <span class="font-serif italic text-[#F2F2F2]">Analysis</span>
+                    </h1>
+                </div>
+
+                <p class="text-secondaryText text-sm leading-6 mb-10 text-justify pr-4">
+                    Visualizing the comparative durability and cost-efficiency of composite materials over the fiscal year. Our architectural frameworks show a steady increase in resilience.
+                </p>
+
+                <div class="flex flex-col gap-4">
+                    <div class="bg-white/5 border border-white/10 p-4 rounded-lg flex items-center justify-between backdrop-blur-sm shadow-card">
+                        <div>
+                            <p class="text-xs text-secondaryText uppercase tracking-wider mb-1">Total Output</p>
+                            <h3 class="text-2xl font-bold text-accent">8,450 <span class="text-xs font-normal text-brandAux">TN</span></h3>
+                        </div>
+                        <div class="w-10 h-10 rounded-full bg-brandAux/20 flex items-center justify-center text-accent">
+                            <i class="fa-solid fa-cube"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white/5 border border-white/10 p-4 rounded-lg flex items-center justify-between backdrop-blur-sm shadow-card">
+                        <div>
+                            <p class="text-xs text-secondaryText uppercase tracking-wider mb-1">Growth Rate</p>
+                            <h3 class="text-2xl font-bold text-accent">+24.5 <span class="text-xs font-normal text-brandAux">%</span></h3>
+                        </div>
+                        <div class="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center text-accent">
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="w-[65%] h-full p-8 pt-12 pr-12 relative z-10">
+                <div class="w-full h-full border border-white/5 bg-white/[0.02] rounded-xl p-4 relative">
+                    <div class="absolute top-0 left-0 w-2 h-2 border-t border-l border-white/30 rounded-tl-lg"></div>
+                    <div class="absolute top-0 right-0 w-2 h-2 border-t border-r border-white/30 rounded-tr-lg"></div>
+                    <div class="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-white/30 rounded-bl-lg"></div>
+                    <div class="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-white/30 rounded-br-lg"></div>
+                    
+                    <div id="main_chart"></div>
+                </div>
+            </div>
+
+        </main>
+
+        <footer class="absolute bottom-0 left-0 w-full h-16 px-12 flex justify-between items-center z-20 bg-[#0A0A0A]">
+            <div class="flex items-center gap-4">
+                <p class="text-secondaryText text-xs tracking-widest uppercase">
+                    <i class="fa-regular fa-copyright mr-1"></i> 2023 Structure Report
+                </p>
+            </div>
+            <div class="border border-white/30 rounded-full px-8 py-2 bg-[#0A0A0A] hover:bg-white/5 transition-colors">
+                <p class="text-primaryText font-bold text-sm tracking-widest">PAGE 13</p>
+            </div>
+        </footer>
+
+        <div class="absolute right-0 bottom-32 w-48 h-48 bg-brandAux blur-[100px] opacity-10 pointer-events-none"></div>
+
+    </div>
+
+    <script type="text/javascript">
+        // Ensure DOM is fully loaded before initializing
+        document.addEventListener('DOMContentLoaded', function() {
+            var chartDom = document.getElementById('main_chart');
+            if (!chartDom) return;
+            
+            var myChart = echarts.init(chartDom);
+            var option;
+
+            option = {
+                // Ensure text is readable on dark background
+                backgroundColor: 'transparent',
+                tooltip: {
+                    trigger: 'axis',
+                    backgroundColor: 'rgba(20, 20, 20, 0.9)',
+                    borderColor: '#444',
+                    textStyle: {
+                        color: '#fff'
+                    }
+                },
+                legend: {
+                    top: '5%',
+                    right: '5%',
+                    icon: 'roundRect',
+                    itemWidth: 12,
+                    itemHeight: 12,
+                    textStyle: {
+                        color: '#8C8C8C',
+                        fontSize: 12
+                    },
+                    data: ['Efficiency', 'Durability', 'Cost Index']
+                },
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    top: '15%',
+                    containLabel: true
+                },
+                xAxis: {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG'],
+                    axisLine: {
+                        lineStyle: {
+                            color: 'rgba(255, 255, 255, 0.2)'
+                        }
+                    },
+                    axisLabel: {
+                        color: '#8C8C8C',
+                        fontFamily: 'Noto Sans SC'
+                    }
+                },
+                yAxis: {
+                    type: 'value',
+                    splitLine: {
+                        lineStyle: {
+                            color: 'rgba(255, 255, 255, 0.05)',
+                            type: 'dashed'
+                        }
+                    },
+                    axisLabel: {
+                        color: '#8C8C8C'
+                    }
+                },
+                series: [
+                    {
+                        name: 'Efficiency',
+                        type: 'line',
+                        smooth: true,
+                        symbol: 'none',
+                        lineStyle: {
+                            width: 3,
+                            color: '#F2F2F2' // Accent Color
+                        },
+                        areaStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                                { offset: 0, color: 'rgba(242, 242, 242, 0.3)' },
+                                { offset: 1, color: 'rgba(242, 242, 242, 0)' }
+                            ])
+                        },
+                        data: [120, 132, 101, 134, 90, 230, 210, 250]
+                    },
+                    {
+                        name: 'Durability',
+                        type: 'line',
+                        smooth: true,
+                        symbol: 'none',
+                        lineStyle: {
+                            width: 2,
+                            color: '#6E6C66' // Brand Aux Color
+                        },
+                        data: [220, 182, 191, 234, 290, 330, 310, 340]
+                    },
+                     {
+                        name: 'Cost Index',
+                        type: 'bar',
+                        barWidth: '15%',
+                        itemStyle: {
+                            color: 'rgba(255, 255, 255, 0.1)',
+                            borderRadius: [4, 4, 0, 0]
+                        },
+                        data: [60, 70, 80, 90, 75, 85, 95, 100]
+                    }
+                ]
+            };
+
+            option && myChart.setOption(option);
+
+            // Resize chart when window resizes
+            window.addEventListener('resize', function() {
+                myChart.resize();
+            });
+        });
+    </script>
+</body>
+</html>

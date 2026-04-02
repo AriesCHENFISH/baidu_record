@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Experience Journey - White Edition</title>
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', 'Noto Sans SC', sans-serif; }
+        
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #F8F9FB; /* 统一白色背景 */
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+            padding: 80px 100px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 渐变标题样式 */
+        .text-gradient {
+            background: linear-gradient(135deg, #6236FF 0%, #B621FE 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* 背景修饰球 */
+        .blob {
+            position: absolute;
+            filter: blur(100px);
+            z-index: 0;
+            border-radius: 50%;
+        }
+
+        /* 步骤数字的艺术化处理 */
+        .hero-number {
+            font-size: 160px;
+            font-weight: 900;
+            line-height: 1;
+            color: #EBEBFF; /* 极淡的紫色 */
+            position: absolute;
+            top: -60px;
+            left: -20px;
+            z-index: 0;
+            user-select: none;
+        }
+
+        /* 连接导轨 */
+        .journey-path {
+            position: absolute;
+            top: 50%;
+            left: 100px;
+            right: 100px;
+            height: 2px;
+            background: linear-gradient(90deg, #6236FF 0%, #E5E7EB 100%);
+            z-index: 0;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <!-- 背景装饰 -->
+        <div class="blob bg-purple-100 w-[500px] h-[500px] -top-20 -left-20 opacity-50"></div>
+        <div class="blob bg-blue-50 w-[400px] h-[400px] bottom-0 right-0 opacity-40"></div>
+
+        <!-- 顶部标题 -->
+        <header class="relative z-10 mb-24">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="h-[3px] w-12 bg-purple-600"></div>
+                <span class="text-purple-600 font-bold uppercase tracking-[0.3em] text-xs">Patient Journey</span>
+            </div>
+            <h1 class="text-[72px] font-black text-gray-900 leading-tight">
+                The Path to <span class="text-gradient">Recovery</span>
+            </h1>
+        </header>
+
+        <!-- 水平导轨装饰 -->
+        <div class="journey-path"></div>
+
+        <!-- 纯文字步骤矩阵 -->
+        <main class="grid grid-cols-3 gap-16 relative z-10 flex-grow">
+            
+            <!-- Step 01 -->
+            <div class="relative group">
+                <div class="hero-number">01</div>
+                <div class="relative pt-12">
+                    <div class="w-12 h-1 bg-purple-600 mb-8 transition-all group-hover:w-24"></div>
+                    <h3 class="text-3xl font-black text-gray-900 mb-6">Discovery</h3>
+                    <p class="text-gray-500 text-lg leading-relaxed mb-8">
+                        The journey begins with intelligent triage and deep-dive consultations to map out your health baseline.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3 text-sm font-bold text-gray-400 uppercase tracking-widest">
+                            <i class="fa-solid fa-chevron-right text-purple-600 text-[10px]"></i>
+                            Digital Triage
+                        </div>
+                        <div class="flex items-center gap-3 text-sm font-bold text-gray-400 uppercase tracking-widest">
+                            <i class="fa-solid fa-chevron-right text-purple-600 text-[10px]"></i>
+                            Specialist Matching
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 02 -->
+            <div class="relative group">
+                <div class="hero-number">02</div>
+                <div class="relative pt-12">
+                    <div class="w-12 h-1 bg-gray-900 mb-8 transition-all group-hover:w-24"></div>
+                    <h3 class="text-3xl font-black text-gray-900 mb-6">Innovation</h3>
+                    <p class="text-gray-500 text-lg leading-relaxed mb-8">
+                        Implementing personalized care through advanced robotic interventions and specialized medical boards.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3 text-sm font-bold text-gray-400 uppercase tracking-widest">
+                            <i class="fa-solid fa-chevron-right text-purple-600 text-[10px]"></i>
+                            Targeted Therapy
+                        </div>
+                        <div class="flex items-center gap-3 text-sm font-bold text-gray-400 uppercase tracking-widest">
+                            <i class="fa-solid fa-chevron-right text-purple-600 text-[10px]"></i>
+                            Robotic Precision
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 03 -->
+            <div class="relative group">
+                <div class="hero-number">03</div>
+                <div class="relative pt-12">
+                    <div class="w-12 h-1 bg-purple-600 mb-8 transition-all group-hover:w-24"></div>
+                    <h3 class="text-3xl font-black text-gray-900 mb-6">Longevity</h3>
+                    <p class="text-gray-500 text-lg leading-relaxed mb-8">
+                        Beyond recovery, we ensure long-term health through remote monitoring and lifestyle integration.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3 text-sm font-bold text-gray-400 uppercase tracking-widest">
+                            <i class="fa-solid fa-chevron-right text-purple-600 text-[10px]"></i>
+                            Remote Vital Tracking
+                        </div>
+                        <div class="flex items-center gap-3 text-sm font-bold text-gray-400 uppercase tracking-widest">
+                            <i class="fa-solid fa-chevron-right text-purple-600 text-[10px]"></i>
+                            Wellness Concierge
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>

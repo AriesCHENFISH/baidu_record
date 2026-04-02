@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directory - Aldenaire Aerospace</title>
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative;
+            background-color: #060B1A; color: #FFFFFF; overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* 装饰性背景 */
+        .tech-grid {
+            position: absolute; inset: 0;
+            background-image: 
+                linear-gradient(rgba(76, 201, 240, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(76, 201, 240, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px; z-index: 1;
+            mask-image: radial-gradient(circle at center, black 20%, transparent 100%);
+        }
+
+        /* 中央中轴发光线 */
+        .central-axis {
+            position: absolute; left: 50%; top: 15%; bottom: 10%;
+            width: 2px; transform: translateX(-50%);
+            background: linear-gradient(to bottom, transparent, #4CC9F0, #4361EE, transparent);
+            z-index: 2;
+        }
+
+        /* 目录卡片：科技感视窗 */
+        .nav-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(76, 201, 240, 0.1);
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            width: 320px;
+        }
+        .nav-card::before {
+            content: ''; position: absolute; top: 0; bottom: 0; width: 4px;
+            background: #4CC9F0; opacity: 0; transition: opacity 0.3s;
+        }
+        .nav-card:hover {
+            background: rgba(76, 201, 240, 0.08);
+            border-color: #4CC9F0;
+            transform: scale(1.05);
+            z-index: 20;
+        }
+        .nav-card:hover::before { opacity: 1; }
+
+        /* 左侧对齐卡片额外修饰 */
+        .card-left { text-align: right; padding-right: 24px; border-right: 2px solid rgba(76, 201, 240, 0.2); border-left: 0; }
+        .card-left::before { right: -3px; }
+
+        /* 右侧对齐卡片额外修饰 */
+        .card-right { text-align: left; padding-left: 24px; border-left: 2px solid rgba(76, 201, 240, 0.2); border-right: 0; }
+        .card-right::before { left: -3px; }
+
+        .force-cyan { color: #4CC9F0 !important; }
+        .orbital-ring {
+            position: absolute; top: 50%; left: 50%;
+            border-radius: 50%; border: 1px solid rgba(76, 201, 240, 0.05);
+            transform: translate(-50%, -50%);
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <div class="tech-grid"></div>
+        <div class="central-axis"></div>
+        <div class="orbital-ring w-[600px] h-[600px]"></div>
+        <div class="orbital-ring w-[800px] h-[800px]"></div>
+
+        <div class="absolute top-10 left-16 right-16 z-30 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 flex items-center justify-center rounded-lg border" 
+                     style="background: rgba(76, 201, 240, 0.1); border-color: rgba(76, 201, 240, 0.3);">
+                    <i class="fa-solid fa-paper-plane force-cyan" style="font-size: 18px;"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-xl tracking-tighter uppercase italic leading-none">ALDENAIRE</h3>
+                    <p class="text-[9px] tracking-[0.4em] force-cyan leading-none mt-1 uppercase">Mission Control Center</p>
+                </div>
+            </div>
+            <div class="text-right">
+                <div class="text-[10px] font-mono text-silver/60 tracking-widest uppercase">System_Index // Nav_Active</div>
+            </div>
+        </div>
+
+        <div class="absolute top-16 left-0 right-0 text-center z-20">
+            <h1 class="text-5xl font-black uppercase tracking-[0.3em] opacity-20">Flight Map</h1>
+        </div>
+
+        <div class="relative z-10 w-full h-full flex items-center justify-center pt-20">
+            
+            <div class="flex flex-col gap-4">
+                <div class="flex items-center gap-20">
+                    <div class="nav-card card-left p-4 rounded-l-lg">
+                        <div class="text-sm font-mono text-cyan mb-1">01 / SECTION</div>
+                        <div class="text-lg font-bold uppercase tracking-widest">Executive Summary</div>
+                    </div>
+                    <div class="w-12 h-12 rounded-full border border-cyan/30 flex items-center justify-center bg-navy z-10">
+                        <i class="fa-solid fa-circle-dot text-cyan text-[8px] animate-pulse"></i>
+                    </div>
+                    <div class="nav-card card-right p-4 rounded-r-lg">
+                        <div class="text-sm font-mono text-cyan mb-1">06 / SECTION</div>
+                        <div class="text-lg font-bold uppercase tracking-widest">Market Key Figures</div>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-20 -translate-x-4">
+                    <div class="nav-card card-left p-4 rounded-l-lg">
+                        <div class="text-sm font-mono text-cyan mb-1">02 / SECTION</div>
+                        <div class="text-lg font-bold uppercase tracking-widest">Industry Analysis</div>
+                    </div>
+                    <div class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center bg-navy z-10">
+                        <div class="w-2 h-2 bg-white/20 rounded-full"></div>
+                    </div>
+                    <div class="nav-card card-right p-4 rounded-r-lg">
+                        <div class="text-sm font-mono text-cyan mb-1">07 / SECTION</div>
+                        <div class="text-lg font-bold uppercase tracking-widest">Growth Drivers</div>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-20 translate-x-4">
+                    <div class="nav-card card-left p-4 rounded-l-lg">
+                        <div class="text-sm font-mono text-cyan mb-1">03 / SECTION</div>
+                        <div class="text-lg font-bold uppercase tracking-widest">Next-Gen Aircraft</div>
+                    </div>
+                    <div class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center bg-navy z-10">
+                        <div class="w-2 h-2 bg-white/20 rounded-full"></div>
+                    </div>
+                    <div class="nav-card card-right p-4 rounded-r-lg">
+                        <div class="text-sm font-mono text-cyan mb-1">08 / SECTION</div>
+                        <div class="text-lg font-bold uppercase tracking-widest">Technical Challenges</div>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-20">
+                    <div class="nav-card card-left p-4 rounded-l-lg">
+                        <div class="text-sm font-mono text-cyan mb-1">04 / SECTION</div>
+                        <div class="text-lg font-bold uppercase tracking-widest">Global Connectivity</div>
+                    </div>
+                    <div class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center bg-navy z-10">
+                        <div class="w-2 h-2 bg-white/20 rounded-full"></div>
+                    </div>
+                    <div class="nav-card card-right p-4 rounded-r-lg">
+                        <div class="text-sm font-mono text-cyan mb-1">09 / SECTION</div>
+                        <div class="text-lg font-bold uppercase tracking-widest">Implementation</div>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-20 -translate-x-2">
+                    <div class="nav-card card-left p-4 rounded-l-lg">
+                        <div class="text-sm font-mono text-cyan mb-1">05 / SECTION</div>
+                        <div class="text-lg font-bold uppercase tracking-widest">Green Aviation</div>
+                    </div>
+                    <div class="w-12 h-12 rounded-full border border-cyan/30 flex items-center justify-center bg-navy z-10 shadow-[0_0_15px_rgba(76,201,240,0.2)]">
+                        <i class="fa-solid fa-chevron-down text-cyan text-xs"></i>
+                    </div>
+                    <div class="nav-card card-right p-4 rounded-r-lg">
+                        <div class="text-sm font-mono text-cyan mb-1">10 / SECTION</div>
+                        <div class="text-lg font-bold uppercase tracking-widest">Vision 2050 Summary</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="absolute bottom-10 left-16 right-16 flex justify-between items-center opacity-40">
+            <div class="text-[9px] font-mono tracking-[0.5em] uppercase text-silver">Data Synchronized // Hub_A1</div>
+            <div class="flex gap-1">
+                <div class="w-4 h-1 bg-cyan"></div>
+                <div class="w-1 h-1 bg-silver"></div>
+                <div class="w-1 h-1 bg-silver"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

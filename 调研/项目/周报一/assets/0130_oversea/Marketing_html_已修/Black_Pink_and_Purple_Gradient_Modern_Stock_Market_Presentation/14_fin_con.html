@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thynk Unlimited - Investment Strategy</title>
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: '#0F1115',
+                            text: '#A0A5B0',
+                            start: '#E56B6F',
+                            end: '#9D4EDD',
+                            accent: '#D65A63',
+                            border: '#2A2E35'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container - Fixed 1280x720 */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #0F1115;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+            display: flex; /* Changed to flex column for layout stability */
+            flex-direction: column;
+            /* Subtle background pattern */
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* Gradient Utilities */
+        .bg-brand-gradient {
+            background: linear-gradient(90deg, #E56B6F 0%, #9D4EDD 100%);
+        }
+        
+        .text-gradient {
+            background: linear-gradient(90deg, #E56B6F, #9D4EDD);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Geometric Dots Decoration */
+        .dots-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 6px;
+        }
+        .dot {
+            width: 6px;
+            height: 6px;
+            background-color: #E56B6F;
+            border-radius: 50%;
+            opacity: 0.6;
+        }
+
+        /* --- 顶部导航样式 (统一风格) --- */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            position: relative;
+            display: block;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: #FFFFFF;
+        }
+
+        /* 选中状态的小圆点 */
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 4px;
+            background-color: #E56B6F;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #E56B6F;
+        }
+
+        .icon-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.8);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .icon-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <header style="position: relative; z-index: 20; padding: 32px 60px; display: flex; justify-content: space-between; align-items: center;">
+            <div class="bg-brand-gradient" style="padding: 10px 30px; border-radius: 50px;">
+                <span style="color: #FFFFFF; font-weight: 500; font-size: 16px;">Thynk Unlimited</span>
+            </div>
+
+            <div style="display: flex; gap: 16px; align-items: center;">
+                <nav class="glass-panel" style="display: flex; gap: 32px; border-radius: 50px; padding: 10px 36px; align-items: center; height: 48px;">
+                    <a href="#" class="nav-link active">HOME</a>
+                    <a href="#" class="nav-link">SERVICE</a>
+                    <a href="#" class="nav-link">CONTACT</a>
+                </nav>
+                <div class="glass-panel" style="display: flex; gap: 8px; border-radius: 50px; padding: 6px; height: 48px; align-items: center;">
+                    <div class="icon-btn">
+                        <i class="fa-solid fa-magnifying-glass" style="font-size: 14px;"></i>
+                    </div>
+                    <div class="icon-btn" style="background: rgba(255,255,255,0.1);">
+                        <i class="fa-regular fa-user" style="font-size: 14px;"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="grid grid-cols-12 flex-grow w-full h-full relative z-10">
+            
+            <div class="col-span-5 h-full relative flex items-center justify-center pl-12">
+                
+                <div class="absolute bottom-0 left-0 w-[80%] h-[60%] bg-gradient-to-tr from-[#E56B6F] to-[#9D4EDD] opacity-20 blur-3xl rounded-full z-0"></div>
+                
+                <div class="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-t from-[#E56B6F] to-transparent opacity-30 z-0"></div>
+
+                <div class="relative z-10 w-[460px] h-[460px] rounded-[40px] overflow-hidden border-4 border-[#2A2E35] shadow-2xl shadow-black">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop" 
+                         alt="Financial Analysis Strategy" 
+                         class="w-full h-full object-cover">
+                    </div>
+            </div>
+
+            <div class="col-span-7 h-full flex flex-col justify-center pr-16 pl-8 relative z-10">
+                
+                <div class="absolute top-1/2 right-0 w-[400px] h-[400px] bg-purple-900/20 blur-[100px] rounded-full pointer-events-none"></div>
+
+                <div class="mb-8">
+                    <h1 class="text-white text-[52px] font-bold leading-[1.1] mb-6 drop-shadow-lg">
+                        The best time to <br>
+                        invest was yesterday.<br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#E56B6F] to-[#9D4EDD]">The next best is now!</span>
+                    </h1>
+                    
+                    <p class="text-[#A0A5B0] text-lg leading-relaxed max-w-2xl">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                    </p>
+                </div>
+
+                <div class="flex flex-col space-y-5 w-full max-w-md">
+                    
+                    <div class="group flex items-center bg-brand-gradient p-[2px] rounded-full shadow-lg shadow-purple-900/30 transform transition-transform hover:scale-105 cursor-pointer">
+                        <div class="bg-brand-gradient w-full rounded-full flex items-center px-1 py-1">
+                            <div class="bg-white/20 w-10 h-10 rounded-full flex items-center justify-center mr-4 shrink-0">
+                                <i class="fa-solid fa-envelope text-white text-sm"></i>
+                            </div>
+                            <span class="text-white font-medium tracking-wide text-lg">hello@reallygreatsite.com</span>
+                        </div>
+                    </div>
+
+                    <div class="group flex items-center bg-brand-gradient p-[2px] rounded-full shadow-lg shadow-purple-900/30 transform transition-transform hover:scale-105 cursor-pointer">
+                        <div class="bg-brand-gradient w-full rounded-full flex items-center px-1 py-1">
+                            <div class="bg-white/20 w-10 h-10 rounded-full flex items-center justify-center mr-4 shrink-0">
+                                <i class="fa-solid fa-globe text-white text-sm"></i>
+                            </div>
+                            <span class="text-white font-medium tracking-wide text-lg">www.reallygreatsite.com</span>
+                        </div>
+                    </div>
+
+                    <div class="group flex items-center bg-brand-gradient p-[2px] rounded-full shadow-lg shadow-purple-900/30 w-3/4 transform transition-transform hover:scale-105 cursor-pointer">
+                        <div class="bg-brand-gradient w-full rounded-full flex items-center px-1 py-1">
+                            <div class="bg-white/20 w-10 h-10 rounded-full flex items-center justify-center mr-4 shrink-0">
+                                <i class="fa-solid fa-phone text-white text-sm"></i>
+                            </div>
+                            <span class="text-white font-medium tracking-wide text-lg">+123-456-7890</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="absolute bottom-10 right-10">
+                    <div class="dots-grid">
+                        <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                        <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                        <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

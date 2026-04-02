@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenges in E-Sports</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        /* CSS Reset & Global Styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans SC', sans-serif; }
+
+        /* Page Container */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #1A0B2E;
+            overflow: hidden;
+        }
+
+        /* Utility: Text Aesthetics */
+        .text-outline {
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+            color: transparent;
+        }
+        .text-highlight-purple { color: #D65DB1; font-weight: 700; }
+        .text-highlight-cyan { color: #00FFFF; font-weight: 700; }
+
+        /* Utility: Clip Paths */
+        .clip-slant-top { clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%); }
+        .clip-slant-bottom { clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%); }
+
+        /* Soft Glow Background Elements */
+        .glow-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: 0;
+        }
+
+        /* Tech Card Style */
+        .tech-card {
+            background: linear-gradient(145deg, rgba(45, 27, 78, 0.6), rgba(26, 11, 46, 0.8));
+            backdrop-filter: blur(10px);
+            border-left: 3px solid rgba(157, 0, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+        .tech-card:hover {
+            border-left-color: #00FFFF;
+            background: linear-gradient(145deg, rgba(45, 27, 78, 0.8), rgba(26, 11, 46, 0.9));
+            transform: translateX(5px);
+        }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgPrimary: '#1A0B2E',
+                        bgContainer: '#2D1B4E',
+                        textPrimary: '#FFFFFF',
+                        textSecondary: '#E0D4F5',
+                        accentA: '#9D00FF', // Vivid Purple
+                        accentB: '#D65DB1', // Magenta Pink
+                        accentUI: '#00FFFF', // Cyan Blue
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <div class="glow-orb" style="width: 500px; height: 500px; top: -150px; right: -100px; background: rgba(157, 0, 255, 0.15);"></div>
+        <div class="glow-orb" style="width: 600px; height: 400px; bottom: -100px; left: -100px; background: rgba(214, 93, 177, 0.1);"></div>
+
+        <div class="relative z-10 flex items-center justify-between px-16 py-10 w-full">
+            <div class="flex items-center gap-5">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-accentUI blur-lg opacity-30 animate-pulse"></div>
+                    <div class="w-14 h-14 flex items-center justify-center rounded-tr-xl rounded-bl-xl bg-bgPrimary/90 relative z-10" style="border: 2px solid; border-image: linear-gradient(135deg, #9D00FF, #00FFFF) 1;">
+                        <i class="fa-solid fa-bolt-lightning text-2xl text-accentUI"></i>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <h2 class="text-white font-black text-2xl tracking-[0.2em] uppercase leading-none">
+                        Salford <span class="text-accentUI">&</span> Co.
+                    </h2>
+                    <div class="flex items-center gap-2 mt-2">
+                        <span class="h-[2px] w-6 bg-accentA"></span>
+                        <span class="text-[10px] text-textSecondary uppercase tracking-[0.3em] font-bold">Esports Production</span>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+
+        <div class="relative z-10 grid grid-cols-12 gap-12 px-16 h-[580px] content-center pb-8">
+            
+            <div class="col-span-7 flex flex-col justify-center pr-4">
+                
+                <h1 class="font-black leading-[0.85] tracking-tighter mb-10 uppercase drop-shadow-2xl relative">
+                    <span class="text-6xl text-outline block mb-1 opacity-60">Critical</span>
+                    <span class="text-8xl text-white block">Challenges</span>
+                    <span class="text-7xl text-transparent bg-clip-text bg-gradient-to-r from-accentUI via-white to-accentB block">In E-Sports</span>
+                    <div class="absolute top-1/2 -left-20 w-[120%] h-[1px] bg-gradient-to-r from-transparent via-accentA/50 to-transparent -z-10"></div>
+                </h1>
+
+                <div class="flex flex-col gap-5">
+                    
+                    <div class="tech-card p-5 rounded-xl flex items-start gap-5">
+                        <div class="w-12 h-12 rounded-full bg-accentA/10 flex items-center justify-center text-accentA shrink-0 border border-accentA/30">
+                            <i class="fa-solid fa-network-wired text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-bold text-lg mb-2 uppercase tracking-wider flex items-center gap-2">
+                                Infrastructure Stability
+                                <i class="fa-solid fa-triangle-exclamation text-accentUI text-xs animate-pulse"></i>
+                            </h3>
+                            <p class="text-textSecondary text-sm leading-relaxed font-light">
+                                Maintaining <span class="text-highlight-cyan">zero-latency</span> environments and preventing DDoS attacks during high-stakes global tournaments remains a primary technical hurdle.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="tech-card p-5 rounded-xl flex items-start gap-5">
+                        <div class="w-12 h-12 rounded-full bg-accentB/10 flex items-center justify-center text-accentB shrink-0 border border-accentB/30">
+                            <i class="fa-solid fa-heart-pulse text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-bold text-lg mb-2 uppercase tracking-wider">Player Wellness & Burnout</h3>
+                            <p class="text-textSecondary text-sm leading-relaxed font-light">
+                                Addressing the intense physical and mental strain, including <span class="text-highlight-purple">repetitive strain injuries (RSI)</span> and psychological fatigue from 16-hour training days.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="mt-10 flex items-center gap-4 animate-bounce-slow">
+                    <div class="px-8 py-3 bg-gradient-to-r from-accentA to-accentB rounded-full text-white font-bold text-sm shadow-lg shadow-accentA/40 flex items-center gap-3 hover:brightness-110 transition-all cursor-pointer group">
+                        VIEW FULL REPORT 
+                        <i class="fa-solid fa-chevron-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-span-5 flex flex-col justify-center gap-6 h-full pb-4 pt-8">
+                <div class="relative w-full h-[230px] p-[2px] bg-gradient-to-r from-accentA via-accentUI to-transparent clip-slant-top group hover:p-[3px] transition-all">
+                    <div class="w-full h-full bg-bgContainer overflow-hidden clip-slant-top relative">
+                        <div class="absolute inset-0 bg-gradient-to-t from-bgPrimary/80 via-bgPrimary/20 to-transparent z-10"></div>
+                        <div class="absolute top-4 right-6 z-20 text-right">
+                             <div class="text-accentUI font-mono font-black text-3xl shadow-black drop-shadow-md flex items-center gap-2 justify-end">
+                                <i class="fa-solid fa-server text-sm opacity-70"></i> 99.99%
+                             </div>
+                             <div class="text-white text-xs uppercase tracking-widest opacity-80">Uptime Target</div>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1000&auto=format&fit=crop" alt="Professional E-sports Setup" class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700 ease-in-out filter saturate-150">
+                    </div>
+                </div>
+
+                <div class="relative w-full h-[230px] p-[2px] bg-gradient-to-l from-accentB via-accentA to-transparent clip-slant-bottom group hover:p-[3px] transition-all">
+                    <div class="w-full h-full bg-bgContainer overflow-hidden clip-slant-bottom relative">
+                         <div class="absolute inset-0 bg-gradient-to-t from-bgPrimary/80 via-bgPrimary/20 to-transparent z-10"></div>
+                         <div class="absolute bottom-6 left-8 z-20 flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-accentB/20 flex items-center justify-center backdrop-blur-md border border-accentB/50">
+                                <i class="fa-solid fa-mobile-screen-button text-accentB text-xl"></i>
+                            </div>
+                            <div>
+                                <div class="text-white font-bold uppercase tracking-wider">Mobile Growth</div>
+                                <div class="text-accentB text-xs">Next Gen Platform</div>
+                            </div>
+                         </div>
+                        <img src="https://images.unsplash.com/photo-1592840496694-26d035b52b48?q=80&w=1000&auto=format&fit=crop" alt="Mobile Gaming Competition" class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700 ease-in-out filter hue-rotate-15">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-6 right-16 flex items-center gap-4">
+            <div class="h-[2px] w-12 bg-white/20"></div>
+            <div class="text-textSecondary text-sm tracking-widest opacity-60 font-mono font-bold">PAGE 03 / 10</div>
+        </div>
+    </div>
+
+</body>
+</html>

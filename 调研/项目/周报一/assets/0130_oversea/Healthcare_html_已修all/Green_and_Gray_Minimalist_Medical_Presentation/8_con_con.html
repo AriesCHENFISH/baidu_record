@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Technology - Borcelle Hospital</title>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background-color: #3C3A32;
+            display: flex;
+        }
+
+        /* 统一Logo文字样式 */
+        .logo-text {
+            letter-spacing: 0.15em;
+            display: flex;
+            align-items: center;
+        }
+        .logo-divider {
+            width: 1px;
+            height: 16px;
+            background-color: #3C3A32;
+            margin: 0 12px;
+            opacity: 0.3;
+        }
+
+        .bg-brand-green { background-color: #CDEE9E; }
+        .text-brand-green { color: #CDEE9E; }
+        .text-primary-dark { color: #3C3A32; }
+        .bg-primary-dark { background-color: #3C3A32; }
+
+        /* 内容卡片样式 */
+        .tech-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 4px solid #CDEE9E;
+            backdrop-filter: blur(8px);
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 10;
+        }
+        .tech-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateX(10px);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+
+        <!-- 左侧: 品牌与标题区 (42%) -->
+        <div class="w-[42%] h-full bg-brand-green flex flex-col justify-between p-16 z-10">
+            
+            <!-- 统一 Logo -->
+            <div class="logo-text">
+                <span class="font-bold text-xl text-primary-dark">BORCELLE</span>
+                <div class="logo-divider"></div>
+                <span class="font-light text-lg text-primary-dark opacity-80 uppercase tracking-widest">Medical Group</span>
+            </div>
+
+            <!-- 主标题 -->
+            <div class="mb-12">
+                <div class="w-16 h-1.5 bg-primary-dark mb-8"></div>
+                <h1 class="text-primary-dark text-[84px] font-bold leading-[1.05] tracking-tighter italic">
+                    Medical<br>
+                    Technology.
+                </h1>
+                <p class="text-primary-dark text-xl font-medium mt-6 opacity-60 tracking-widest uppercase">Innovation Hub</p>
+            </div>
+
+            <!-- 装饰圆环 -->
+            <div class="absolute -bottom-20 -left-20 w-80 h-80 border border-primary-dark rounded-full opacity-10 pointer-events-none"></div>
+        </div>
+
+        <!-- 右侧: 内容详情区 (58%) -->
+        <div class="w-[58%] h-full bg-primary-dark relative p-20 flex flex-col justify-center">
+            
+            <!-- 统一页码 -->
+            <div class="absolute top-12 right-12 z-20">
+                <span class="text-5xl font-bold text-white opacity-10">07</span>
+            </div>
+
+            <!-- 背景装饰图标 (已优化为绿色并增加可见度) -->
+            <div class="absolute top-10 right-10 opacity-10 pointer-events-none">
+                <i class="fa-solid fa-microscope text-[240px] text-brand-green"></i>
+            </div>
+            <div class="absolute bottom-[-50px] left-10 opacity-10 pointer-events-none">
+                <i class="fa-solid fa-dna text-[350px] text-brand-green rotate-45"></i>
+            </div>
+
+            <!-- 副标题 -->
+            <div class="flex items-center gap-4 mb-12 relative z-10">
+                <div class="w-2 h-2 rounded-full bg-brand-green"></div>
+                <h3 class="text-brand-green text-sm font-bold tracking-[0.3em] uppercase">
+                    Transforming Modern Healthcare
+                </h3>
+            </div>
+
+            <!-- 结构化内容块 -->
+            <div class="space-y-6 relative z-10">
+                
+                <!-- 模块 1 -->
+                <div class="tech-card p-6 rounded-r-xl">
+                    <div class="flex items-center gap-5 mb-2">
+                        <i class="fa-solid fa-laptop-medical text-brand-green text-2xl"></i>
+                        <h4 class="text-white text-xl font-bold italic">Precision Diagnosis</h4>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed ml-11 opacity-80">
+                        Advanced imaging and digital health records allow for faster, more accurate diagnoses and personalized patient data tracking.
+                    </p>
+                </div>
+
+                <!-- 模块 2 -->
+                <div class="tech-card p-6 rounded-r-xl">
+                    <div class="flex items-center gap-5 mb-2">
+                        <i class="fa-solid fa-robot text-brand-green text-2xl"></i>
+                        <h4 class="text-white text-xl font-bold italic">Robotic Innovation</h4>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed ml-11 opacity-80">
+                        State-of-the-art robotic systems enable surgeons to perform complex procedures with unprecedented safety and precision.
+                    </p>
+                </div>
+
+                <!-- 模块 3 -->
+                <div class="tech-card p-6 rounded-r-xl">
+                    <div class="flex items-center gap-5 mb-2">
+                        <i class="fa-solid fa-shield-heart text-brand-green text-2xl"></i>
+                        <h4 class="text-white text-xl font-bold italic">Enhanced Recovery</h4>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed ml-11 opacity-80">
+                        Smart monitoring and minimally invasive tools significantly reduce patient complications and overall hospital recovery time.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

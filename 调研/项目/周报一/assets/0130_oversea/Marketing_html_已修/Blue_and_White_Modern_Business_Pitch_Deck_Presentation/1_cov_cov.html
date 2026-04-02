@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitch Deck - Modern Keynote Slide</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        /* CSS Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Noto Sans SC', sans-serif; }
+
+        /* Page Container */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #0F1115; /* Slightly darker/richer black */
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* 1. Background Grid Pattern (New) */
+        .bg-grid {
+            position: absolute;
+            inset: 0;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+            -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* 2. Enhanced Ambient Glows */
+        .ambient-glow {
+            position: absolute;
+            width: 900px;
+            height: 900px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(59, 113, 243, 0.15) 0%, rgba(59, 113, 243, 0) 70%);
+            top: -400px;
+            right: -200px;
+            z-index: 0;
+            filter: blur(80px);
+        }
+
+        .ambient-glow-secondary {
+            position: absolute;
+            width: 700px;
+            height: 700px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(120, 59, 243, 0.08) 0%, rgba(24, 24, 24, 0) 70%);
+            bottom: -300px;
+            left: -200px;
+            z-index: 0;
+            filter: blur(80px);
+        }
+
+        /* 3. Text Stroke Effect for "DECK" */
+        .text-stroke {
+            -webkit-text-stroke: 2px rgba(255, 255, 255, 0.3);
+            color: transparent;
+            transition: all 0.3s ease;
+        }
+        
+        /* 4. Glassmorphism Card (New Visual Element) */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Abstract Abstract Chart Bars */
+        .chart-bar {
+            background: linear-gradient(180deg, #3B71F3 0%, rgba(59, 113, 243, 0.2) 100%);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <!-- Background Layer -->
+        <div class="bg-grid"></div>
+        <div class="ambient-glow"></div>
+        <div class="ambient-glow-secondary"></div>
+
+        <!-- Header Section (Kept Original) -->
+        <header class="relative z-20 w-full px-16 pt-12 flex justify-between items-center">
+            <!-- Left: Company Branding -->
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 flex items-center justify-center rounded-full" style="background-color: rgba(59, 113, 243, 0.2);">
+                    <i class="fa-solid fa-sun text-[#3B71F3] text-sm"></i>
+                </div>
+                <h3 class="text-[#FFFFFF] text-lg font-bold tracking-wide">Salford & Co.</h3>
+            </div>
+
+            <!-- Right: Year and Action -->
+            <div class="flex items-center gap-4">
+                <div class="px-5 py-1.5 rounded-full border border-[#2D2D2D] bg-[#2D2D2D]/50 backdrop-blur-sm">
+                    <span class="text-[#FFFFFF] text-sm font-semibold">2030</span>
+                </div>
+                <div class="w-10 h-10 rounded-full bg-[#3B71F3] flex items-center justify-center shadow-[0_0_15px_rgba(59,113,243,0.5)]">
+                    <i class="fa-solid fa-arrow-right text-white"></i>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content Section: Split Layout -->
+        <main class="relative z-10 w-full px-16 flex-1 flex items-center justify-between">
+            
+            <!-- Left: Typography -->
+            <div class="flex flex-col justify-center max-w-[60%]">
+                <!-- Tagline -->
+                <div class="mb-6 flex items-center gap-3">
+                    <div class="h-[1px] w-12 bg-[#3B71F3]"></div>
+                    <h5 class="text-[#3B71F3] text-sm font-bold uppercase tracking-[0.2em]">Strategy & Growth</h5>
+                </div>
+
+                <!-- Giant Title with Mixed Styles -->
+                <div class="mb-10 relative">
+                    <h1 class="text-white text-[120px] leading-[0.9] font-bold tracking-tight">
+                        <span class="block text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-gray-400">PITCH</span>
+                        <span class="block text-stroke opacity-80">DECK</span>
+                    </h1>
+                    <!-- Decorative blurred circle behind text -->
+                    <div class="absolute -top-10 -left-20 w-64 h-64 bg-blue-500/10 rounded-full blur-[60px] pointer-events-none"></div>
+                </div>
+
+                <!-- Presenter Info -->
+                <div class="flex items-center gap-4 border-l-2 border-[#2D2D2D] pl-6">
+                    <div class="flex flex-col">
+                        <p class="text-[#888] text-xs uppercase tracking-wider mb-1">Prepared By</p>
+                        <h4 class="text-white text-lg font-medium">Adeline Palmerston</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Abstract Visual (Glass Card) -->
+            <div class="relative w-[380px] h-[400px]">
+                <!-- Floating Decorative Elements -->
+                <div class="absolute top-0 right-10 w-24 h-24 bg-[#3B71F3] rounded-full blur-[40px] opacity-40 animate-pulse"></div>
+                
+                <!-- Main Glass Card -->
+                <div class="glass-card w-full h-full rounded-3xl p-8 flex flex-col justify-between relative overflow-hidden transform rotate-[-3deg] hover:rotate-0 transition-transform duration-500">
+                    
+                    <!-- Card Header -->
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
+                            <i class="fa-solid fa-chart-pie text-white/80"></i>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-white/40 text-xs font-mono">Q4 PROJECTION</p>
+                            <p class="text-[#3B71F3] text-xl font-bold">+128%</p>
+                        </div>
+                    </div>
+
+                    <!-- Abstract Chart Visual -->
+                    <div class="flex items-end justify-between h-40 gap-2 px-2">
+                        <div class="chart-bar w-full rounded-t-md h-[30%] opacity-30"></div>
+                        <div class="chart-bar w-full rounded-t-md h-[50%] opacity-50"></div>
+                        <div class="chart-bar w-full rounded-t-md h-[40%] opacity-40"></div>
+                        <div class="chart-bar w-full rounded-t-md h-[75%] opacity-80"></div>
+                        <div class="chart-bar w-full rounded-t-md h-[100%] shadow-[0_0_15px_rgba(59,113,243,0.5)]"></div>
+                    </div>
+
+                    <!-- Card Footer -->
+                    <div class="mt-6 pt-6 border-t border-white/10 flex justify-between items-center">
+                        <span class="text-white/60 text-sm">Wardiere Inc.</span>
+                        <div class="flex -space-x-2">
+                            <div class="w-6 h-6 rounded-full bg-gray-600 border border-black"></div>
+                            <div class="w-6 h-6 rounded-full bg-gray-400 border border-black"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Small Floating Card Behind -->
+                <div class="absolute -bottom-6 -right-6 w-48 h-24 glass-card rounded-xl z-[-1] flex items-center justify-center">
+                    <span class="text-white/20 text-4xl font-bold tracking-tighter">2030</span>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Footer Section: Refined -->
+        <footer class="relative z-10 w-full px-16 pb-10">
+            <!-- Subtle Separator -->
+            <div class="w-full h-px bg-gradient-to-r from-transparent via-[#2D2D2D] to-transparent mb-6"></div>
+
+            <div class="grid grid-cols-3 gap-8 text-[#888]">
+                <div class="flex items-center gap-3 group cursor-pointer">
+                    <div class="w-8 h-8 rounded-full bg-[#1F1F1F] flex items-center justify-center group-hover:bg-[#3B71F3] transition-colors">
+                        <i class="fa-regular fa-calendar text-xs text-white"></i>
+                    </div>
+                    <div>
+                        <p class="text-[10px] uppercase tracking-wider opacity-60">Date</p>
+                        <p class="text-gray-200 text-sm">Dec 22, 2030</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-3 group cursor-pointer">
+                    <div class="w-8 h-8 rounded-full bg-[#1F1F1F] flex items-center justify-center group-hover:bg-[#3B71F3] transition-colors">
+                        <i class="fa-solid fa-globe text-xs text-white"></i>
+                    </div>
+                    <div>
+                        <p class="text-[10px] uppercase tracking-wider opacity-60">Visit</p>
+                        <p class="text-gray-200 text-sm">www.reallygreatsite.com</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-3 group cursor-pointer">
+                    <div class="w-8 h-8 rounded-full bg-[#1F1F1F] flex items-center justify-center group-hover:bg-[#3B71F3] transition-colors">
+                        <i class="fa-regular fa-envelope text-xs text-white"></i>
+                    </div>
+                    <div>
+                        <p class="text-[10px] uppercase tracking-wider opacity-60">Contact</p>
+                        <p class="text-gray-200 text-sm">hello@reallygreatsite.com</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>

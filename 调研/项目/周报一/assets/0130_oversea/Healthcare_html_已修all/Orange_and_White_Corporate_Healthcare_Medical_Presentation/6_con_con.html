@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maternal Health - Editorial Style</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #121212; overflow: hidden; color: #F5F5F5; }
+        .font-serif-italic { font-family: 'Georgia', serif; font-style: italic; }
+        .bg-primary-gradient { background: linear-gradient(135deg, #B63914 0%, #D65A2C 100%); }
+        .hospital-logo-box { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+        
+        /* 补充背景设计：垂直水印 */
+        .bg-text-vertical { position: absolute; font-size: 180px; font-weight: 900; color: rgba(214, 90, 44, 0.04); line-height: 0.8; z-index: 0; writing-mode: vertical-rl; right: 20px; top: 0; pointer-events: none; }
+        
+        .glass-bar { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border-left: 3px solid #B63914; }
+        .image-pillar { clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%); }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <!-- 背景设计补全 -->
+        <div class="bg-text-vertical uppercase">Mother</div>
+        <div class="absolute top-[10%] left-[20%] w-[400px] h-[400px] bg-[#B63914] opacity-10 blur-[120px] rounded-full"></div>
+
+        <!-- 统一Logo区 -->
+        <div class="absolute top-12 left-16 z-50">
+            <div class="flex items-center gap-4">
+                <div class="hospital-logo-box bg-primary-gradient"><i class="fa-solid fa-plus text-white text-lg"></i></div>
+                <span class="text-xl font-bold tracking-widest uppercase">Borcelle Hospital</span>
+            </div>
+        </div>
+
+        <div class="flex h-full w-full">
+            <!-- 左侧：功能与详情 -->
+            <div class="w-3/12 h-full flex flex-col justify-center pl-16 gap-12 z-10">
+                <div class="relative">
+                    <span class="text-4xl font-serif-italic text-white opacity-10 absolute -top-8 -left-4">01</span>
+                    <h4 class="text-[#D65A2C] font-bold tracking-widest text-sm uppercase mb-2">Prenatal</h4>
+                    <p class="text-sm opacity-50">Advanced diagnostic tracking for a safe pregnancy journey.</p>
+                </div>
+                <div class="relative">
+                    <span class="text-4xl font-serif-italic text-white opacity-10 absolute -top-8 -left-4">02</span>
+                    <h4 class="text-[#D65A2C] font-bold tracking-widest text-sm uppercase mb-2">Nutrition</h4>
+                    <p class="text-sm opacity-50">Specialized dietary plans for both mother and child development.</p>
+                </div>
+                <div class="relative">
+                    <span class="text-4xl font-serif-italic text-white opacity-10 absolute -top-8 -left-4">03</span>
+                    <h4 class="text-[#D65A2C] font-bold tracking-widest text-sm uppercase mb-2">Pediatrics</h4>
+                    <p class="text-sm opacity-50">Full-spectrum neonatal care and early-age milestones.</p>
+                </div>
+            </div>
+
+            <!-- 中间：标题与引导 -->
+            <div class="w-6/12 h-full flex flex-col justify-center px-12 z-10">
+                <div class="mb-10">
+                    <h1 class="text-[110px] leading-[0.8] tracking-tighter flex flex-col">
+                        <span class="font-serif-italic text-[#D65A2C]">Maternal</span>
+                        <span class="font-bold">& CHILD</span>
+                    </h1>
+                    <div class="flex items-center gap-6 mt-8">
+                        <div class="h-[2px] w-24 bg-primary-gradient"></div>
+                        <p class="text-lg font-light tracking-[0.2em] opacity-60 uppercase">Healthcare Foundation</p>
+                    </div>
+                </div>
+                <div class="glass-bar p-8 -translate-x-12">
+                    <p class="text-xl leading-relaxed font-light opacity-90 italic">
+                        "The health of a mother is the pulse of a family, ensuring a vibrant beginning for the next generation."
+                    </p>
+                </div>
+            </div>
+
+            <!-- 右侧：图片视觉柱 -->
+            <div class="w-3/12 h-full flex items-center justify-center pr-16">
+                <div class="image-pillar w-full h-[75%] bg-zinc-900 overflow-hidden relative shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?q=80&w=1000" class="w-full h-full object-cover grayscale brightness-90">
+                    <div class="absolute inset-0 bg-gradient-to-b from-[#B63914]/30 to-transparent"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部信息补全 -->
+        <div class="absolute bottom-12 left-16 flex items-center gap-8 opacity-30 text-[10px] font-bold tracking-[0.5em] uppercase">
+            <span>Protocol v3.5</span>
+            <div class="w-8 h-[1px] bg-white"></div>
+            <span>Generational Wellness</span>
+        </div>
+    </div>
+</body>
+</html>

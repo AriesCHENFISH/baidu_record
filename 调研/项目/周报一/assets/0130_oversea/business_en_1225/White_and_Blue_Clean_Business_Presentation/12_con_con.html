@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Portfolio Presentation</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts CDN (Specific Request) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- Tailwind Config for Specific Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2D3A7C',
+                        accent: '#F5AD41',
+                        bgWhite: '#FFFFFF',
+                        textSec: '#F0F0F0',
+                        deco: '#E8E8E8'
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Global Standards */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* The Main Slide Container */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FFFFFF;
+            overflow: hidden; /* Ensure no overflow outside the slide */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Specific Gradient Syntax Requirement Check */
+        .card-gradient {
+            /* Adding a very subtle gradient to the blue blocks for depth, adhering to syntax */
+            background: linear-gradient(180deg, #2D3A7C, #242e63);
+        }
+        
+        .btn-gradient {
+            background: linear-gradient(90deg, #2D3A7C, #354491);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div id="page_container">
+
+        <!-- 1. Background Decoration (Subtle Circles) -->
+        <!-- Large outer circle -->
+        <div class="absolute -top-40 -right-40 w-[800px] h-[800px] border border-deco rounded-full opacity-60 pointer-events-none"></div>
+        <!-- Medium inner circle -->
+        <div class="absolute -top-10 -right-10 w-[600px] h-[600px] border border-deco rounded-full opacity-60 pointer-events-none"></div>
+        
+        <!-- 2. Header Section -->
+        <div class="absolute top-12 left-16 z-10">
+            <!-- Decorative Orange Pill -->
+            <div class="w-32 h-4 bg-accent rounded-full mb-6 shadow-sm"></div>
+            <!-- Main Title -->
+            <h1 class="text-7xl font-bold text-primary tracking-tight">Company Portfolio</h1>
+        </div>
+
+
+        <!-- 3. Main Content Grid (Three Cards) -->
+        <div class="absolute top-48 left-0 w-full px-16 z-10">
+            <div class="grid grid-cols-3 gap-10">
+                
+                <!-- Card 1 -->
+                <div class="flex flex-col h-[420px] rounded-[30px] overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 bg-white">
+                    <!-- Image Container -->
+                    <div class="h-[220px] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Team Meeting" class="w-full h-full object-cover">
+                        <!-- 373*220 -->
+                    </div>
+                    <!-- Text Content -->
+                    <div class="flex-1 p-8 card-gradient flex items-center">
+                        <p class="text-textSec text-sm leading-relaxed font-light">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper orci sapien, vel volutpat diam euismod lobortis.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="flex flex-col h-[420px] rounded-[30px] overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 bg-white">
+                    <!-- Image Container -->
+                    <div class="h-[220px] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Business Strategy" class="w-full h-full object-cover">
+                        <!-- 373*220 -->
+                    </div>
+                    <!-- Text Content -->
+                    <div class="flex-1 p-8 card-gradient flex items-center">
+                        <p class="text-textSec text-sm leading-relaxed font-light">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper orci sapien, vel volutpat diam euismod lobortis.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="flex flex-col h-[420px] rounded-[30px] overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 bg-white">
+                    <!-- Image Container -->
+                    <div class="h-[220px] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Presentation" class="w-full h-full object-cover">
+                        <!-- 373*220 -->
+                    </div>
+                    <!-- Text Content -->
+                    <div class="flex-1 p-8 card-gradient flex items-center">
+                        <p class="text-textSec text-sm leading-relaxed font-light">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper orci sapien, vel volutpat diam euismod lobortis.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 4. Footer Action Button -->
+        <div class="absolute bottom-12 right-16">
+            <div class="btn-gradient px-2 py-2 pl-8 rounded-full flex items-center gap-4 shadow-lg cursor-pointer">
+                <span class="text-white text-2xl font-medium tracking-wide">Business</span>
+                <!-- Circle Icon Container -->
+                <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center text-white">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

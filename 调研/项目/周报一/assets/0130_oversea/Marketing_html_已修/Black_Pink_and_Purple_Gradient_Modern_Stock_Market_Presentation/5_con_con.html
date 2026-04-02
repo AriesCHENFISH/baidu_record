@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, height=720, initial-scale=1.0">
+    <title>Market Trends & Sentiments</title>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.2/echarts.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#0F1115',
+                        primaryText: '#FFFFFF',
+                        secondaryText: '#A0A5B0',
+                        accentLine: '#D65A63',
+                        borderCard: '#2A2E35',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'brand-gradient': 'linear-gradient(90deg, #E56B6F 0%, #9D4EDD 100%)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Basic Setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container Specs */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #0F1115;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Custom scrollbar hide just in case */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* --- 新增：顶部导航样式 (统一风格) --- */
+        .brand-gradient-bg {
+            background: linear-gradient(90deg, #E56B6F 0%, #9D4EDD 100%);
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            position: relative;
+            display: block;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: #FFFFFF;
+        }
+
+        /* 选中状态的小圆点 */
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 4px;
+            background-color: #E56B6F;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #E56B6F;
+        }
+
+        .icon-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.8);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .icon-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-[#9D4EDD] opacity-10 blur-[120px] rounded-full pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#E56B6F] opacity-5 blur-[100px] rounded-full pointer-events-none"></div>
+
+        <header style="position: relative; z-index: 20; padding: 32px 60px; display: flex; justify-content: space-between; align-items: center;">
+            <div class="brand-gradient-bg" style="padding: 10px 30px; border-radius: 50px;">
+                <span style="color: #FFFFFF; font-weight: 500; font-size: 16px;">Thynk Unlimited</span>
+            </div>
+
+            <div style="display: flex; gap: 16px; align-items: center;">
+                <nav class="glass-panel" style="display: flex; gap: 32px; border-radius: 50px; padding: 10px 36px; align-items: center; height: 48px;">
+                    <a href="#" class="nav-link active">HOME</a>
+                    <a href="#" class="nav-link">SERVICE</a>
+                    <a href="#" class="nav-link">CONTACT</a>
+                </nav>
+                <div class="glass-panel" style="display: flex; gap: 8px; border-radius: 50px; padding: 6px; height: 48px; align-items: center;">
+                    <div class="icon-btn">
+                        <i class="fa-solid fa-magnifying-glass" style="font-size: 14px;"></i>
+                    </div>
+                    <div class="icon-btn" style="background: rgba(255,255,255,0.1);">
+                        <i class="fa-regular fa-user" style="font-size: 14px;"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="absolute top-40 right-10 grid grid-cols-2 gap-2 opacity-80">
+            <div class="w-2 h-2 rounded-full bg-[#E56B6F]"></div>
+            <div class="w-2 h-2 rounded-full bg-[#E56B6F]/50"></div>
+            <div class="w-2 h-2 rounded-full bg-[#E56B6F]"></div>
+            <div class="w-2 h-2 rounded-full bg-[#E56B6F]/50"></div>
+            <div class="w-2 h-2 rounded-full bg-[#E56B6F]"></div>
+            <div class="w-2 h-2 rounded-full bg-[#E56B6F]/50"></div>
+        </div>
+
+        <div class="text-center mb-8 relative z-10 mt-4">
+            <h1 class="text-5xl font-bold text-white tracking-tight drop-shadow-md">
+                Market Trends & Sentiments
+            </h1>
+        </div>
+
+        <div class="grid grid-cols-2 gap-12 px-20 h-[500px] w-full items-center">
+            
+            <div class="relative w-full h-[400px]">
+                <div class="absolute inset-0 border border-white/20 rounded-[36px] bg-[#0F1115]/80 backdrop-blur-sm z-0"></div>
+                
+                <div id="chart-bull" class="w-full h-full p-4 z-10 relative"></div>
+
+                <div class="absolute -bottom-6 left-1/2 transform -translate-x-1/2 z-20">
+                    <div class="bg-brand-gradient px-12 py-3 rounded-full shadow-lg shadow-purple-900/40">
+                        <h3 class="text-white font-bold text-xl tracking-wide">Bull Market</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative w-full h-[400px]">
+                <div class="absolute inset-0 border border-white/20 rounded-[36px] bg-[#0F1115]/80 backdrop-blur-sm z-0"></div>
+                
+                <div id="chart-bear" class="w-full h-full p-4 z-10 relative"></div>
+
+                <div class="absolute -bottom-6 left-1/2 transform -translate-x-1/2 z-20">
+                    <div class="bg-brand-gradient px-12 py-3 rounded-full shadow-lg shadow-purple-900/40">
+                        <h3 class="text-white font-bold text-xl tracking-wide">Bear Market</h3>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="absolute bottom-4 right-8 text-[#2A2E35] font-bold text-9xl opacity-20 pointer-events-none select-none">
+            2025
+        </div>
+
+    </div>
+
+    <script>
+        // Common Chart Options
+        const commonOptions = {
+            backgroundColor: 'transparent',
+            animation: false, // Strict no animation requirement
+            grid: {
+                top: '15%',
+                left: '10%',
+                right: '10%',
+                bottom: '15%',
+                containLabel: false
+            },
+            xAxis: {
+                type: 'category',
+                data: ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'],
+                axisLine: { show: false },
+                axisTick: { show: false },
+                axisLabel: {
+                    color: '#A0A5B0',
+                    fontSize: 14,
+                    margin: 15
+                }
+            },
+            yAxis: {
+                type: 'value',
+                min: 0,
+                max: 50,
+                interval: 10,
+                splitLine: {
+                    show: true,
+                    lineStyle: {
+                        color: 'rgba(160, 165, 176, 0.1)',
+                        width: 1
+                    }
+                },
+                axisLabel: {
+                    color: '#A0A5B0',
+                    fontSize: 14
+                }
+            }
+        };
+
+        // --- Bull Market Chart ---
+        const chartBull = echarts.init(document.getElementById('chart-bull'));
+        const bullOption = {
+            ...commonOptions,
+            series: [
+                {
+                    // Red Line (Mid Rise)
+                    name: 'Series A',
+                    type: 'line',
+                    smooth: true,
+                    showSymbol: true,
+                    symbolSize: 10,
+                    data: [18, 30, 25, 40, 42],
+                    lineStyle: { color: '#E56B6F', width: 3 },
+                    itemStyle: { color: '#E56B6F', borderColor: '#0F1115', borderWidth: 2 }
+                },
+                {
+                    // White Line (Sharp Rise)
+                    name: 'Series B',
+                    type: 'line',
+                    smooth: true,
+                    showSymbol: true,
+                    symbolSize: 10,
+                    data: [0, 12, 38, 30, 32],
+                    lineStyle: { color: '#FFFFFF', width: 3 },
+                    itemStyle: { color: '#FFFFFF', borderColor: '#0F1115', borderWidth: 2 }
+                },
+                {
+                    // Purple Line (Dip then Rise)
+                    name: 'Series C',
+                    type: 'line',
+                    smooth: true,
+                    showSymbol: true,
+                    symbolSize: 10,
+                    data: [12, 4, 20, 15, 50],
+                    lineStyle: { color: '#9D4EDD', width: 3 },
+                    itemStyle: { color: '#9D4EDD', borderColor: '#0F1115', borderWidth: 2 }
+                }
+            ]
+        };
+        chartBull.setOption(bullOption);
+
+        // --- Bear Market Chart ---
+        const chartBear = echarts.init(document.getElementById('chart-bear'));
+        const bearOption = {
+            ...commonOptions,
+            series: [
+                {
+                    // Red Line (Decline)
+                    name: 'Series A',
+                    type: 'line',
+                    smooth: true,
+                    showSymbol: true,
+                    symbolSize: 10,
+                    data: [42, 40, 25, 38, 30],
+                    lineStyle: { color: '#E56B6F', width: 3 },
+                    itemStyle: { color: '#E56B6F', borderColor: '#0F1115', borderWidth: 2 }
+                },
+                {
+                    // White Line (Volatility then Drop)
+                    name: 'Series B',
+                    type: 'line',
+                    smooth: true,
+                    showSymbol: true,
+                    symbolSize: 10,
+                    data: [32, 30, 38, 12, 0],
+                    lineStyle: { color: '#FFFFFF', width: 3 },
+                    itemStyle: { color: '#FFFFFF', borderColor: '#0F1115', borderWidth: 2 }
+                },
+                {
+                    // Purple Line (Sharp Drop)
+                    name: 'Series C',
+                    type: 'line',
+                    smooth: true,
+                    showSymbol: true,
+                    symbolSize: 10,
+                    data: [50, 15, 20, 4, 12],
+                    lineStyle: { color: '#9D4EDD', width: 3 },
+                    itemStyle: { color: '#9D4EDD', borderColor: '#0F1115', borderWidth: 2 }
+                }
+            ]
+        };
+        chartBear.setOption(bearOption);
+
+        // Resize handler
+        window.addEventListener('resize', () => {
+            chartBull.resize();
+            chartBear.resize();
+        });
+    </script>
+</body>
+</html>

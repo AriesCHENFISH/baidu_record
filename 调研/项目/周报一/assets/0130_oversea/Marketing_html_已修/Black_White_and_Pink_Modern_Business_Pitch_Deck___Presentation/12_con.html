@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Larana Company - Revenue Analytics</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- ECharts -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #050505;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Ambient Glow */
+        .ambient-glow {
+            position: absolute;
+            bottom: -200px;
+            right: -100px;
+            width: 900px;
+            height: 600px;
+            background: radial-gradient(circle, #1A1520 0%, transparent 70%);
+            z-index: 0;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <!-- Ambient BG -->
+        <div class="ambient-glow"></div>
+
+        <!-- 1. Unified Header -->
+        <div class="relative z-20 flex justify-between items-center px-12 pt-8">
+            <!-- Logo -->
+            <div class="flex items-center gap-3">
+                <div class="text-[#F5C2D4] text-xl">
+                    <i class="fa-solid fa-shapes"></i>
+                </div>
+                <h2 class="text-white text-lg font-medium tracking-wide">Larana Company</h2>
+            </div>
+            <!-- Navigation -->
+            <div class="glass-panel rounded-full p-1 pl-1 pr-6 flex items-center gap-6">
+                <div class="bg-[#F5C2D4] text-[#050505] px-6 py-2 rounded-full">
+                    <span class="text-sm font-bold tracking-tight">Pitch Deck Business Presentation</span>
+                </div>
+                <span class="text-[#D1D1D1] text-sm font-light tracking-widest">August 2025</span>
+            </div>
+        </div>
+
+        <!-- 2. Main Content -->
+        <div class="relative z-10 grid grid-cols-12 gap-12 px-12 mt-10 h-[580px] items-center">
+            
+            <!-- Left Column: Text & Stats (Span 4) -->
+            <div class="col-span-4 flex flex-col justify-center h-full pb-8">
+                
+                <h1 class="text-white text-6xl font-light leading-tight mb-6">
+                    Revenue <br>
+                    <span class="font-bold text-[#F5C2D4]">Analytics</span>
+                </h1>
+
+                <p class="text-[#D1D1D1] text-sm leading-relaxed font-light mb-10 border-l border-white/20 pl-4">
+                    Tracking our financial trajectory through Q3 2025. Our data indicates a strong upward trend in core revenue streams, driven by new market acquisition.
+                </p>
+
+                <!-- KPI Cards -->
+                <div class="grid grid-cols-1 gap-4">
+                    <!-- KPI 1 -->
+                    <div class="glass-panel p-5 rounded-xl flex justify-between items-center">
+                        <div>
+                            <p class="text-[#D1D1D1] text-xs uppercase tracking-wider">Total Revenue</p>
+                            <p class="text-white text-2xl font-bold mt-1">$4.2M</p>
+                        </div>
+                        <div class="text-[#F5C2D4] text-sm font-bold bg-[#F5C2D4]/10 px-2 py-1 rounded">
+                            +12.5%
+                        </div>
+                    </div>
+                    
+                    <!-- KPI 2 -->
+                    <div class="glass-panel p-5 rounded-xl flex justify-between items-center">
+                        <div>
+                            <p class="text-[#D1D1D1] text-xs uppercase tracking-wider">Active Users</p>
+                            <p class="text-white text-2xl font-bold mt-1">85.4k</p>
+                        </div>
+                        <div class="text-white text-sm font-bold bg-white/10 px-2 py-1 rounded">
+                            +5.2%
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Column: ECharts Area Chart (Span 8) -->
+            <div class="col-span-8 h-full pb-8 flex flex-col">
+                <div class="glass-panel w-full h-full rounded-[32px] p-2 relative">
+                    <!-- Chart Container -->
+                    <div id="revenueChart" class="w-full h-full"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ECharts Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var chartDom = document.getElementById('revenueChart');
+            var myChart = echarts.init(chartDom);
+            var option;
+
+            option = {
+                backgroundColor: 'transparent',
+                grid: {
+                    top: '15%',
+                    left: '3%',
+                    right: '4%',
+                    bottom: '5%',
+                    containLabel: true
+                },
+                tooltip: {
+                    trigger: 'axis',
+                    backgroundColor: 'rgba(0,0,0,0.7)',
+                    borderColor: '#333',
+                    textStyle: { color: '#fff' }
+                },
+                xAxis: {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+                    axisLine: { show: true, lineStyle: { color: 'rgba(255,255,255,0.1)' } },
+                    axisLabel: { color: '#D1D1D1', margin: 15 }
+                },
+                yAxis: {
+                    type: 'value',
+                    splitLine: { 
+                        show: true, 
+                        lineStyle: { type: 'dashed', color: 'rgba(255,255,255,0.05)' } 
+                    },
+                    axisLabel: { color: '#D1D1D1' }
+                },
+                series: [
+                    {
+                        name: 'Revenue',
+                        type: 'line',
+                        smooth: true,
+                        symbol: 'none',
+                        lineStyle: {
+                            width: 4,
+                            color: '#F5C2D4' // Pink Line
+                        },
+                        areaStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                                { offset: 0, color: 'rgba(245, 194, 212, 0.4)' }, // Soft Pink top
+                                { offset: 1, color: 'rgba(245, 194, 212, 0)' }   // Transparent bottom
+                            ])
+                        },
+                        data: [820, 932, 901, 934, 1290, 1330, 1320, 1450, 1600]
+                    },
+                    {
+                        name: 'Projection',
+                        type: 'line',
+                        smooth: true,
+                        symbol: 'none',
+                        lineStyle: {
+                            width: 2,
+                            type: 'dashed',
+                            color: 'rgba(255,255,255,0.5)' // White dashed line
+                        },
+                        data: [600, 700, 750, 800, 850, 950, 1100, 1200, 1300]
+                    }
+                ]
+            };
+
+            myChart.setOption(option);
+            window.addEventListener('resize', function() {
+                myChart.resize();
+            });
+        });
+    </script>
+</body>
+</html>

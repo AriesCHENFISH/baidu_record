@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Solution - Salford & Co.</title>
+
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+
+    <!-- Google Fonts (Domestic Mirror) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <!-- Tailwind Config for Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgBase: '#F4F8F9',
+                        bgAccent: '#E0EFF3',
+                        textPrimary: '#333333',
+                        textSecondary: '#555555',
+                        textMuted: '#777777',
+                        divider: '#2F2F2F',
+                        graphicDark: '#707070',
+                        accentTeal: '#BDE0E2',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    },
+                    spacing: {
+                        '1280': '1280px',
+                        '720': '720px',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* Page Container */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #F4F8F9;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+            box-shadow: none; /* No outer shadow as per request */
+        }
+
+        /* Gradient Background Accents using requested syntax */
+        .bg-gradient-spot-1 {
+            position: absolute;
+            top: -100px;
+            left: -100px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, #E0EFF3 0%, rgba(244, 248, 249, 0) 70%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .bg-gradient-spot-2 {
+            position: absolute;
+            bottom: -150px;
+            right: -150px;
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, #E0EFF3 0%, rgba(244, 248, 249, 0) 70%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Typography & Layout Utils */
+        h1, h2, h3, h4, h5, h6 {
+            color: #333333;
+            line-height: 1.2;
+        }
+
+        p {
+            color: #777777;
+            line-height: 1.6;
+        }
+
+        /* Specific Component Styles */
+        .brand-logo {
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: #555555;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .divider-line {
+            width: 60px;
+            height: 2px;
+            background-color: #2F2F2F;
+            margin-top: 24px;
+            margin-bottom: 32px;
+        }
+
+        .glass-image {
+            mix-blend-mode: multiply; /* Helps integrate white background images */
+            filter: contrast(1.05);
+        }
+        
+        /* Grid System Utility */
+        .main-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 40px;
+            height: 100%;
+            padding: 60px 80px;
+            position: relative;
+            z-index: 10;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div id="page_container">
+        
+        <!-- Background Decor -->
+        <div class="bg-gradient-spot-1"></div>
+        <div class="bg-gradient-spot-2"></div>
+
+        <!-- Main Content Grid -->
+        <div class="main-grid">
+            
+            <!-- Left Column: Intro -->
+            <div class="col-span-4 flex flex-col justify-center pr-4">
+                <!-- Brand Header -->
+                <div class="mb-10">
+                    <h6 class="brand-logo text-lg">
+                        <i class="fa-solid fa-shapes text-gray-600"></i>
+                        <span>Salford & Co.</span>
+                    </h6>
+                </div>
+
+                <!-- Main Title -->
+                <h1 class="text-6xl font-bold tracking-tight mb-2 text-textPrimary">
+                    The Solution
+                </h1>
+
+                <!-- Divider -->
+                <div class="divider-line"></div>
+
+                <!-- Intro Paragraph -->
+                <p class="text-base text-textMuted font-light text-justify">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae elit sed est dapibus mattis est nisi arcu mauris diam. Vel luctus tristique, massa ligula pulvinar sapien, vitae imperdiet nibh risus sit.
+                </p>
+            </div>
+
+            <!-- Center Column: Abstract Visual -->
+            <div class="col-span-4 flex items-center justify-center relative">
+                <!-- Abstract 3D Glassy Shape -->
+                <!-- Using a high-quality Unsplash placeholder that resembles a clean, abstract 3D form -->
+                <div class="w-full h-full flex items-center justify-center scale-125">
+                     <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop" 
+                          alt="Abstract 3D Glass Shape" 
+                          class="glass-image object-contain max-h-[600px] opacity-90 drop-shadow-2xl"
+                          style="mask-image: linear-gradient(to bottom, black 80%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);">
+                     <!-- 500*600 -->
+                </div>
+            </div>
+
+            <!-- Right Column: Features List -->
+            <div class="col-span-4 flex flex-col justify-center pl-4 gap-12">
+                
+                <!-- Feature 1 -->
+                <div class="feature-block group">
+                    <div class="mb-5 flex items-center">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-white shadow-md text-textPrimary text-2xl border border-gray-100">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3 text-textPrimary">
+                        AI-based credit scoring
+                    </h3>
+                    <p class="text-sm text-textMuted leading-relaxed">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae elit sed est dapibus mattis est nisi arcu mauris diam. Vel luctus tristique, massa ligula pulvinar.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-block group">
+                    <div class="mb-5 flex items-center">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-white shadow-md text-textPrimary text-2xl border border-gray-100">
+                            <i class="fa-solid fa-stopwatch"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3 text-textPrimary">
+                        One-day quick approval process
+                    </h3>
+                    <p class="text-sm text-textMuted leading-relaxed">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae elit sed est dapibus mattis est nisi arcu mauris diam. Vel luctus tristique, massa ligula pulvinar.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Column Chart Analysis Slide</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts (Domestic CDN) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- ECharts -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+
+    <style>
+        /* CSS Reset & Global Settings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* Specific Gradient Text Utility */
+        .text-gradient {
+            background: linear-gradient(to right, #4FB0C0, #2C6FCA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Custom Scrollbar hide */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#040710',
+                        cardBg: '#1A1B1F',
+                        primary: '#FFFFFF',
+                        secondary: '#B0B3B8',
+                        accent: '#4FB0C0',
+                        accentDark: '#2C6FCA'
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans SC', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Main Container -->
+    <div id="page_container" class="relative w-[1280px] h-[720px] bg-bgDark overflow-hidden flex flex-row items-center p-16 gap-12 mx-auto shadow-none">
+        
+        <!-- Ambient Background Decoration (Glow effects) -->
+        <div class="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-accent/10 rounded-full blur-[120px] z-0"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-accentDark/10 rounded-full blur-[120px] z-0"></div>
+
+        <!-- Left Column: Chart Area (60%) -->
+        <div class="relative w-7/12 h-full z-10 flex flex-col justify-center">
+            <!-- Chart Container -->
+            <div id="mainChart" class="w-full h-[550px]"></div>
+        </div>
+
+        <!-- Right Column: Text Content (40%) -->
+        <div class="relative w-5/12 h-full z-10 flex flex-col justify-center pl-4">
+            
+            <!-- Header Section -->
+            <div class="mb-12">
+                <h1 class="text-primary text-5xl font-bold uppercase tracking-wider mb-2 leading-tight">
+                    Column Chart
+                </h1>
+                <h2 class="text-accent text-5xl font-bold uppercase tracking-wider leading-tight">
+                    Analysis Slide
+                </h2>
+                <!-- Decorative Line -->
+                <div class="w-24 h-1.5 bg-gradient-to-r from-accentDark to-accent mt-6 rounded-full"></div>
+            </div>
+
+            <!-- List Content -->
+            <ul class="flex flex-col gap-10">
+                
+                <!-- Item 1: Compliance Metrics -->
+                <li class="flex flex-row items-start gap-6 group">
+                    <!-- Icon Container -->
+                    <div class="w-16 h-16 rounded-full bg-cardBg flex items-center justify-center shrink-0 border border-gray-800 shadow-[0_0_15px_rgba(79,176,192,0.15)] group-hover:border-accent transition-colors duration-300">
+                        <i class="fa-solid fa-user-shield text-2xl text-white"></i>
+                    </div>
+                    <!-- Text Content -->
+                    <div class="flex flex-col">
+                        <h3 class="text-primary text-2xl font-bold mb-2">Compliance Metrics</h3>
+                        <p class="text-secondary text-sm leading-relaxed font-light">
+                            Track and analyze adherence to industry security standards and regulations to ensure compliance.
+                        </p>
+                    </div>
+                </li>
+
+                <!-- Item 2: User Awareness -->
+                <li class="flex flex-row items-start gap-6 group">
+                    <!-- Icon Container -->
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-accentDark to-accent flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(44,111,202,0.4)]">
+                        <i class="fa-solid fa-brain text-2xl text-white"></i>
+                    </div>
+                    <!-- Text Content -->
+                    <div class="flex flex-col">
+                        <h3 class="text-primary text-2xl font-bold mb-2">User Awareness</h3>
+                        <p class="text-secondary text-sm leading-relaxed font-light">
+                            Assess the effectiveness of security training programs by measuring reductions in user-related incidents.
+                        </p>
+                    </div>
+                </li>
+
+                <!-- Item 3: Threat Sources -->
+                <li class="flex flex-row items-start gap-6 group">
+                    <!-- Icon Container -->
+                    <div class="w-16 h-16 rounded-full bg-cardBg flex items-center justify-center shrink-0 border border-gray-800 shadow-[0_0_15px_rgba(79,176,192,0.15)] group-hover:border-accent transition-colors duration-300">
+                        <i class="fa-solid fa-file-contract text-2xl text-white"></i>
+                    </div>
+                    <!-- Text Content -->
+                    <div class="flex flex-col">
+                        <h3 class="text-primary text-2xl font-bold mb-2">Threat Sources</h3>
+                        <p class="text-secondary text-sm leading-relaxed font-light">
+                            Identify and analyze the origins of security threats to improve defenses and prevention strategies.
+                        </p>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <!-- ECharts Initialization -->
+    <script type="text/javascript">
+        var chartDom = document.getElementById('mainChart');
+        var myChart = echarts.init(chartDom);
+        var option;
+
+        option = {
+            // Remove default background to let CSS background show
+            backgroundColor: 'transparent',
+            
+            // Grid configuration for spacing
+            grid: {
+                left: '0%',
+                right: '4%',
+                bottom: '10%',
+                top: '10%',
+                containLabel: true
+            },
+            
+            // Tooltip for interaction
+            tooltip: {
+                trigger: 'axis',
+                backgroundColor: '#1A1B1F',
+                borderColor: '#4FB0C0',
+                textStyle: {
+                    color: '#fff'
+                }
+            },
+
+            // X-Axis Configuration
+            xAxis: {
+                type: 'category',
+                data: ['Diagram 01', 'Diagram 02', 'Diagram 03'],
+                axisLine: {
+                    show: true,
+                    lineStyle: {
+                        color: '#333'
+                    }
+                },
+                axisTick: {
+                    show: false
+                },
+                axisLabel: {
+                    color: '#B0B3B8',
+                    fontSize: 16,
+                    margin: 20,
+                    fontFamily: 'Noto Sans SC'
+                }
+            },
+
+            // Y-Axis Configuration (Minimalist)
+            yAxis: {
+                type: 'value',
+                splitLine: {
+                    show: true,
+                    lineStyle: {
+                        color: '#333',
+                        width: 1,
+                        type: 'solid'
+                    }
+                },
+                axisLabel: {
+                    show: false 
+                }
+            },
+
+            // Data Series
+            series: [
+                // Series 1: White Bars
+                {
+                    name: 'Metric A',
+                    type: 'bar',
+                    data: [80, 75, 90],
+                    barWidth: 25,
+                    barGap: '30%', 
+                    itemStyle: {
+                        color: '#FFFFFF',
+                        borderRadius: [4, 4, 0, 0] // Top rounded corners
+                    }
+                },
+                // Series 2: Gradient Blue Bars
+                {
+                    name: 'Metric B',
+                    type: 'bar',
+                    data: [65, 95, 55],
+                    barWidth: 25,
+                    itemStyle: {
+                        // Linear Gradient: Blue to Cyan
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                            { offset: 0, color: '#2C6FCA' },
+                            { offset: 1, color: '#4FB0C0' }
+                        ]),
+                        borderRadius: [4, 4, 0, 0]
+                    }
+                },
+                // Series 3: Solid Cyan/Teal Bars
+                {
+                    name: 'Metric C',
+                    type: 'bar',
+                    data: [50, 60, 70],
+                    barWidth: 25,
+                    itemStyle: {
+                        color: '#5FB8C8', // Slightly lighter Cyan for contrast
+                        opacity: 0.8,
+                        borderRadius: [4, 4, 0, 0]
+                    }
+                }
+            ],
+            // Animation settings for smoother load
+            animationDuration: 1500,
+            animationEasing: 'cubicOut'
+        };
+
+        option && myChart.setOption(option);
+    </script>
+</body>
+</html>

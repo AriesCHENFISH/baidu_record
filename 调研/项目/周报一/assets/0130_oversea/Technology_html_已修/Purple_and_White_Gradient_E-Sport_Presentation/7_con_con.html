@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economic Impact - Salford & Co.</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px;
+            margin: 0 auto; position: relative;
+            background-color: #1A0B2E; overflow: hidden;
+        }
+        .tech-card {
+            background: rgba(45, 27, 78, 0.4);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid rgba(0, 255, 255, 0.2);
+        }
+        .chart-container {
+            background: radial-gradient(circle at center, rgba(157, 0, 255, 0.1) 0%, transparent 70%);
+        }
+    </style>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgPrimary: '#1A0B2E',
+                        accentA: '#9D00FF',
+                        accentB: '#D65DB1',
+                        accentUI: '#00FFFF',
+                        textSecondary: '#E0D4F5',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="page_container">
+        <div class="absolute -top-20 -left-20 w-[600px] h-[600px] rounded-full opacity-20 blur-[100px]" style="background: #9D00FF;"></div>
+
+        <header class="relative z-20 px-16 py-10">
+            <div class="flex items-center gap-5">
+                <div class="w-14 h-14 flex items-center justify-center rounded-tr-xl rounded-bl-xl bg-bgPrimary/90 relative z-10" style="border: 2px solid; border-image: linear-gradient(135deg, #9D00FF, #00FFFF) 1;">
+                    <i class="fa-solid fa-bolt-lightning text-2xl text-accentUI"></i>
+                </div>
+                <div class="flex flex-col">
+                    <h2 class="text-white font-black text-2xl tracking-[0.2em] uppercase leading-none">Salford <span class="text-accentUI">&</span> Co.</h2>
+                    <div class="flex items-center gap-2 mt-2">
+                        <span class="h-[2px] w-6 bg-accentA"></span>
+                        <span class="text-[10px] text-textSecondary uppercase tracking-[0.3em] font-bold">Market Analysis Unit</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="relative z-10 grid grid-cols-12 gap-12 px-16 h-[500px]">
+            <div class="col-span-7 flex flex-col justify-center chart-container relative">
+                <div id="mainChart" class="w-full h-full"></div>
+                <div class="absolute top-0 left-0 bg-accentUI/10 border-l-2 border-accentUI px-4 py-2">
+                    <span class="text-white text-[10px] tracking-widest uppercase font-bold">Real-time Revenue Projections</span>
+                </div>
+            </div>
+
+            <div class="col-span-5 flex flex-col justify-center space-y-8">
+                <div>
+                    <h1 class="text-6xl font-black text-white uppercase leading-tight mb-4">
+                        Economic <span class="text-accentB">Impact</span>
+                    </h1>
+                    <p class="text-textSecondary font-light leading-relaxed">
+                        The esports ecosystem has evolved into a billion-dollar industry. Major revenue streams include media rights, sponsorships, and digital merchandise.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 gap-4">
+                    <div class="tech-card p-4 flex items-center justify-between">
+                        <div class="flex items-center gap-4">
+                            <i class="fa-solid fa-chart-line text-accentUI"></i>
+                            <span class="text-white text-sm font-bold uppercase tracking-wider">Sponsorships</span>
+                        </div>
+                        <span class="text-accentUI font-mono font-bold">$641.0M</span>
+                    </div>
+                    <div class="tech-card p-4 flex items-center justify-between">
+                        <div class="flex items-center gap-4">
+                            <i class="fa-solid fa-broadcast-tower text-accentB"></i>
+                            <span class="text-white text-sm font-bold uppercase tracking-wider">Media Rights</span>
+                        </div>
+                        <span class="text-accentB font-mono font-bold">$192.6M</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-6 right-16 flex items-center gap-4">
+            <div class="h-[2px] w-12 bg-white/20"></div>
+            <div class="text-textSecondary text-sm tracking-widest opacity-60 font-mono font-bold">PAGE 05 / 10</div>
+        </div>
+    </div>
+
+    <script>
+        const chartDom = document.getElementById('mainChart');
+        const myChart = echarts.init(chartDom);
+        const option = {
+            backgroundColor: 'transparent',
+            tooltip: { trigger: 'axis' },
+            grid: { top: '15%', left: '5%', right: '5%', bottom: '10%', containLabel: true },
+            xAxis: {
+                type: 'category',
+                data: ['2021', '2022', '2023', '2024', '2025'],
+                axisLine: { lineStyle: { color: 'rgba(255,255,255,0.1)' } },
+                axisLabel: { color: '#E0D4F5' }
+            },
+            yAxis: {
+                type: 'value',
+                splitLine: { lineStyle: { color: 'rgba(255,255,255,0.05)' } },
+                axisLabel: { color: '#E0D4F5' }
+            },
+            series: [
+                {
+                    name: 'Revenue',
+                    type: 'line',
+                    smooth: true,
+                    symbol: 'circle',
+                    symbolSize: 10,
+                    itemStyle: { color: '#00FFFF' },
+                    lineStyle: { width: 4, shadowBlur: 10, shadowColor: '#00FFFF' },
+                    areaStyle: {
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                            { offset: 0, color: 'rgba(0, 255, 255, 0.3)' },
+                            { offset: 1, color: 'transparent' }
+                        ])
+                    },
+                    data: [1.08, 1.38, 1.72, 2.15, 2.85]
+                },
+                {
+                    name: 'Investment',
+                    type: 'bar',
+                    barWidth: 15,
+                    itemStyle: { 
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                            { offset: 0, color: '#9D00FF' },
+                            { offset: 1, color: '#D65DB1' }
+                        ]),
+                        borderRadius: [5, 5, 0, 0]
+                    },
+                    data: [0.8, 1.1, 1.4, 1.8, 2.3]
+                }
+            ]
+        };
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

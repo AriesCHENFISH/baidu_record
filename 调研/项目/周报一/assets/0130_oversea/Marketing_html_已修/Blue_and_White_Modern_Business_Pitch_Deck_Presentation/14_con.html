@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revenue Growth Trend - Salford & Co.</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative;
+            background-color: #181818; overflow: hidden; display: flex; flex-direction: column;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        /* ECharts Container Size */
+        #revenue-chart { width: 100%; height: 100%; }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <div class="absolute bottom-[-200px] right-[-200px] w-[600px] h-[600px] bg-[#3B71F3] opacity-[0.05] blur-[150px] rounded-full pointer-events-none"></div>
+
+        <header class="relative z-10 w-full px-12 pt-10 flex justify-between items-center shrink-0 mb-8">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 flex items-center justify-center rounded-full" style="background-color: rgba(59, 113, 243, 0.2);">
+                    <i class="fa-solid fa-sun text-[#3B71F3] text-sm"></i>
+                </div>
+                <h3 class="text-[#FFFFFF] text-lg font-bold tracking-wide">Salford & Co.</h3>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="px-5 py-1.5 rounded-full border border-[#2D2D2D] bg-[#2D2D2D]">
+                    <span class="text-[#FFFFFF] text-sm font-semibold">2030</span>
+                </div>
+                <div class="w-10 h-10 rounded-full bg-[#3B71F3] flex items-center justify-center shadow-lg">
+                    <i class="fa-solid fa-arrow-right text-white"></i>
+                </div>
+            </div>
+        </header>
+
+        <main class="px-12 w-full flex-1 z-10 grid grid-cols-12 gap-8 items-center">
+            
+            <div class="col-span-4 flex flex-col justify-center h-full pr-4">
+                <div class="mb-6">
+                    <h1 class="text-5xl font-bold text-white tracking-tight mb-4">Revenue <br>Growth <span class="text-[#3B71F3]">Trend</span></h1>
+                    <p class="text-[#B3B3B3] text-lg leading-relaxed">
+                        A comparative view of actual revenue versus projected growth trajectory leading up to 2030. The acceleration in the latter half reflects our strategic expansion phases.
+                    </p>
+                </div>
+                <div class="flex gap-8 mt-8">
+                    <div>
+                        <p class="text-[#B3B3B3] text-sm uppercase tracking-wider mb-1">2030 Target</p>
+                        <p class="text-white font-bold text-3xl">$1.2 Billion</p>
+                    </div>
+                    <div>
+                         <p class="text-[#B3B3B3] text-sm uppercase tracking-wider mb-1">CAGR (Proj.)</p>
+                        <p class="text-[#3B71F3] font-bold text-3xl">32.5%</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-span-8 h-[480px] relative p-4 bg-[#2D2D2D]/30 rounded-3xl border border-white/5 backdrop-blur-sm">
+                <div id="revenue-chart"></div>
+            </div>
+
+        </main>
+
+        <footer class="w-full h-16 px-12 flex items-center justify-end text-[#B3B3B3] text-sm font-medium opacity-60 shrink-0">
+            <p>Page 14</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var chartDom = document.getElementById('revenue-chart');
+            var myChart = echarts.init(chartDom, 'dark'); // Set theme to dark explicitly first
+            var option;
+
+            // Data
+            const years = ['2025', '2026', '2027', '2028 (P)', '2029 (P)', '2030 (P)'];
+            const actualData = [150, 220, 310, '-', '-', '-']; // Actual Revenue ($M)
+            const projectedData = ['-', '-', 310, 480, 750, 1200]; // Projected Revenue ($M), overlapping at 2027
+
+            option = {
+                backgroundColor: 'transparent', // Ensure transparent background
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: { type: 'shadow' },
+                    backgroundColor: 'rgba(45, 45, 45, 0.9)',
+                    borderColor: '#3B71F3',
+                    textStyle: { color: '#fff' }
+                },
+                legend: {
+                    data: ['Actual Revenue', 'Projected Revenue'],
+                    bottom: '0%',
+                    textStyle: { color: '#B3B3B3' },
+                    itemGap: 30
+                },
+                grid: {
+                    left: '3%', right: '4%', bottom: '10%', top: '15%', containLabel: true,
+                    borderColor: 'transparent' // Hide grid border
+                },
+                xAxis: {
+                    type: 'category',
+                    data: years,
+                    axisLine: { lineStyle: { color: 'rgba(255,255,255,0.1)' } },
+                    axisLabel: { color: '#B3B3B3', fontSize: 14, margin: 15 },
+                    axisTick: { show: false }
+                },
+                yAxis: {
+                    type: 'value',
+                    name: 'Revenue ($ Millions)',
+                    nameTextStyle: { color: '#B3B3B3', padding: [0, 0, 10, 0] },
+                    axisLine: { show: false },
+                    axisLabel: { color: '#B3B3B3', fontSize: 12 },
+                    splitLine: { lineStyle: { color: 'rgba(255,255,255,0.05)', type: 'dashed' } }
+                },
+                series: [
+                    {
+                        name: 'Actual Revenue',
+                        type: 'bar',
+                        data: actualData,
+                        barWidth: '35%',
+                        itemStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                                { offset: 0, color: '#3B71F3' },
+                                { offset: 1, color: 'rgba(59, 113, 243, 0.3)' }
+                            ]),
+                            borderRadius: [6, 6, 0, 0]
+                        },
+                        label: {
+                            show: true, position: 'top', color: '#fff', formatter: '${c}M'
+                        }
+                    },
+                    {
+                        name: 'Projected Revenue',
+                        type: 'line',
+                        data: projectedData,
+                        smooth: true,
+                        symbol: 'circle',
+                        symbolSize: 10,
+                        lineStyle: { width: 4, color: '#5A8AF5', type: 'dashed' },
+                        itemStyle: { color: '#5A8AF5', borderWidth: 2, borderColor: '#fff' },
+                         areaStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                                { offset: 0, color: 'rgba(90, 138, 245, 0.4)' },
+                                { offset: 1, color: 'rgba(90, 138, 245, 0.05)' }
+                            ])
+                        },
+                         label: {
+                            show: true, position: 'top', color: '#5A8AF5', formatter: '${c}M', fontWeight: 'bold',
+                            padding: [5, 5, 5, 5],
+                        },
+                        connectNulls: true // Connect the line across null data points
+                    }
+                ]
+            };
+
+            myChart.setOption(option);
+        });
+    </script>
+</body>
+</html>

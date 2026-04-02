@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Famous Investors & Strategies</title>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        /* CSS Reset & Reconstruction */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Page Container - Strict 1280x720 */
+        .page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #0F1115;
+            overflow: hidden;
+            /* No shadow allowed per instructions */
+        }
+
+        /* Gradient Definitions */
+        .bg-brand-gradient {
+            background: linear-gradient(90deg, #E56B6F 0%, #9D4EDD 100%);
+        }
+        
+        .text-brand-gradient {
+            background: linear-gradient(90deg, #E56B6F 0%, #9D4EDD 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* --- 新增：顶部导航样式 (统一风格) --- */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            position: relative;
+            display: block;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: #FFFFFF;
+        }
+
+        /* 选中状态的小圆点 */
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 4px;
+            background-color: #E56B6F;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #E56B6F;
+        }
+
+        .icon-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.8);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .icon-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page_container">
+        
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; opacity: 0.15;">
+            <img src="https://images.unsplash.com/photo-1611974765270-ca125863436d?q=80&w=1280&auto=format&fit=crop" alt="Financial Background" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+
+        <div style="position: relative; z-index: 10; height: 100%; display: flex; flex-direction: column; padding: 40px 60px;">
+
+            <header style="position: relative; z-index: 20; padding: 0px 0px 40px 0px; display: flex; justify-content: space-between; align-items: center;">
+                <div class="bg-brand-gradient" style="padding: 10px 30px; border-radius: 50px;">
+                    <span style="color: #FFFFFF; font-weight: 500; font-size: 16px;">Thynk Unlimited</span>
+                </div>
+
+                <div style="display: flex; gap: 16px; align-items: center;">
+                    <nav class="glass-panel" style="display: flex; gap: 32px; border-radius: 50px; padding: 10px 36px; align-items: center; height: 48px;">
+                        <a href="#" class="nav-link active">HOME</a>
+                        <a href="#" class="nav-link">SERVICE</a>
+                        <a href="#" class="nav-link">CONTACT</a>
+                    </nav>
+                    <div class="glass-panel" style="display: flex; gap: 8px; border-radius: 50px; padding: 6px; height: 48px; align-items: center;">
+                        <div class="icon-btn">
+                            <i class="fa-solid fa-magnifying-glass" style="font-size: 14px;"></i>
+                        </div>
+                        <div class="icon-btn" style="background: rgba(255,255,255,0.1);">
+                            <i class="fa-regular fa-user" style="font-size: 14px;"></i>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div style="display: grid; grid-template-columns: 35% 65%; gap: 40px; margin-bottom: 20px;">
+                
+                <div style="display: flex; align-items: flex-start; gap: 20px;">
+                    <div>
+                        <h1 style="color: #FFFFFF; font-size: 56px; line-height: 1.1; font-weight: 700;">
+                            Famous <br>
+                            Investors & <br>
+                            <span class="text-brand-gradient">Strategies</span>
+                        </h1>
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+                    
+                    <div>
+                        <div class="bg-brand-gradient" style="border-radius: 99px; padding: 12px 24px; display: inline-flex; align-items: center; gap: 10px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(229, 107, 111, 0.3);">
+                            <i class="fa-solid fa-arrow-trend-up" style="color: white; font-size: 14px;"></i>
+                            <h3 style="color: white; font-weight: 700; font-size: 18px;">Growth Investing</h3>
+                        </div>
+                        <p style="color: #A0A5B0; font-size: 16px; line-height: 1.6;">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                        </p>
+                    </div>
+
+                    <div>
+                        <div class="bg-brand-gradient" style="border-radius: 99px; padding: 12px 24px; display: inline-flex; align-items: center; gap: 10px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(157, 78, 221, 0.3);">
+                            <i class="fa-solid fa-gem" style="color: white; font-size: 14px;"></i>
+                            <h3 style="color: white; font-weight: 700; font-size: 18px;">Value Investing</h3>
+                        </div>
+                        <p style="color: #A0A5B0; font-size: 16px; line-height: 1.6;">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div style="flex-grow: 1; position: relative; margin-top: 10px;">
+                <div style="position: absolute; right: 0; top: -50px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px;">
+                    <div style="width: 6px; height: 6px; background: #D65A63; border-radius: 50%;"></div>
+                    <div style="width: 6px; height: 6px; background: #D65A63; border-radius: 50%; opacity: 0.5;"></div>
+                    <div style="width: 6px; height: 6px; background: #D65A63; border-radius: 50%; opacity: 0.2;"></div>
+                    <div style="width: 6px; height: 6px; background: #D65A63; border-radius: 50%;"></div>
+                    <div style="width: 6px; height: 6px; background: #D65A63; border-radius: 50%; opacity: 0.5;"></div>
+                    <div style="width: 6px; height: 6px; background: #D65A63; border-radius: 50%; opacity: 0.2;"></div>
+                </div>
+
+                <div id="mainChart" style="width: 100%; height: 350px;"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var chartDom = document.getElementById('mainChart');
+            var myChart = echarts.init(chartDom);
+            var option;
+
+            option = {
+                // Remove default background to let CSS handle it
+                backgroundColor: 'transparent',
+                grid: {
+                    left: '10%',
+                    right: '4%',
+                    bottom: '10%',
+                    top: '5%',
+                    containLabel: true
+                },
+                xAxis: {
+                    type: 'value',
+                    splitLine: {
+                        show: true,
+                        lineStyle: {
+                            color: '#2A2E35', // Subtle grid line
+                            type: 'dashed'
+                        }
+                    },
+                    axisLabel: {
+                        color: '#A0A5B0',
+                        fontSize: 14,
+                        fontFamily: 'Noto Sans SC'
+                    }
+                },
+                yAxis: {
+                    type: 'category',
+                    data: ['Item 4', 'Item 3', 'Item 2', 'Item 1'], // Reversed for horizontal bar display order
+                    axisLine: { show: false },
+                    axisTick: { show: false },
+                    axisLabel: {
+                        color: '#FFFFFF',
+                        fontSize: 16,
+                        fontWeight: 500,
+                        fontFamily: 'Noto Sans SC',
+                        margin: 20
+                    }
+                },
+                series: [
+                    {
+                        name: 'Value',
+                        type: 'bar',
+                        barWidth: '25px',
+                        data: [
+                            // Item 4 - Red/Pink (Matching Theme)
+                            {
+                                value: 20,
+                                itemStyle: {
+                                    color: {
+                                        type: 'linear',
+                                        x: 0, y: 0, x2: 1, y2: 0,
+                                        colorStops: [{ offset: 0, color: '#E56B6F' }, { offset: 1, color: '#D65A63' }]
+                                    },
+                                    borderRadius: [0, 4, 4, 0]
+                                }
+                            },
+                            // Item 3 - Purple (Matching Theme)
+                            {
+                                value: 16,
+                                itemStyle: {
+                                    color: {
+                                        type: 'linear',
+                                        x: 0, y: 0, x2: 1, y2: 0,
+                                        colorStops: [{ offset: 0, color: '#9D4EDD' }, { offset: 1, color: '#7B2CBF' }]
+                                    },
+                                    borderRadius: [0, 4, 4, 0]
+                                }
+                            },
+                            // Item 2 - Cyan/Blue (Complimentary)
+                            {
+                                value: 12,
+                                itemStyle: {
+                                    color: {
+                                        type: 'linear',
+                                        x: 0, y: 0, x2: 1, y2: 0,
+                                        colorStops: [{ offset: 0, color: '#48CAE4' }, { offset: 1, color: '#0096C7' }]
+                                    },
+                                    borderRadius: [0, 4, 4, 0]
+                                }
+                            },
+                            // Item 1 - White (High Contrast)
+                            {
+                                value: 8,
+                                itemStyle: {
+                                    color: '#FFFFFF',
+                                    borderRadius: [0, 4, 4, 0]
+                                }
+                            }
+                        ],
+                        showBackground: true,
+                        backgroundStyle: {
+                            color: 'rgba(255, 255, 255, 0.05)',
+                            borderRadius: [0, 4, 4, 0]
+                        }
+                    }
+                ],
+                // Disable animation for strict PPT feel if needed, but smooth load looks better
+                animationDuration: 1000,
+                animationEasing: 'cubicOut'
+            };
+
+            myChart.setOption(option);
+        });
+    </script>
+</body>
+</html>

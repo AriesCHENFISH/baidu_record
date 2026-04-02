@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, height=720, initial-scale=1.0">
+    <title>Core Frontiers - 1x2 Layout</title>
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBlack: '#050813',
+                        cyberBlue: '#73C5FF',
+                        holoCyan: '#00F0FF',
+                        quantumWhite: '#F0F4F8',
+                    },
+                    fontFamily: {
+                        tech: ['Rajdhani', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .page_container {
+            width: 1280px; height: 720px;
+            margin: 0 auto; position: relative;
+            background-color: #050813; overflow: hidden;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .cyber-grid {
+            position: absolute; width: 200%; height: 100%; top: 0; left: -50%;
+            background-image: 
+                linear-gradient(rgba(0, 240, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 240, 255, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+            transform: perspective(500px) rotateX(60deg) translateY(100px) translateZ(-100px);
+            opacity: 0.2; z-index: 1;
+        }
+
+        .img-circle-mask {
+            mask-image: radial-gradient(circle, white 100%, black 100%);
+            -webkit-mask-image: radial-gradient(circle, white 100%, black 100%);
+        }
+
+        .label-box {
+            clip-path: polygon(15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0 15px);
+        }
+
+        @keyframes spin-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-spin-slow { animation: spin-slow 20s linear infinite; }
+    </style>
+</head>
+<body>
+
+    <div class="page_container">
+        <div class="cyber-grid"></div>
+        
+        <div style="position: relative; z-index: 10; height: 100%; display: flex; flex-direction: column; padding: 60px 100px;">
+            
+            <div style="width: 100%; display: flex; justify-content: center; margin-bottom: 60px; position: relative;">
+                <div style="position: absolute; left: 150px; top: 50%; transform: translateY(-50%); width: 40px; height: 60px; border-left: 4px solid #73C5FF; border-top: 2px solid #73C5FF; border-bottom: 2px solid #73C5FF;"></div>
+                <div style="position: absolute; right: 150px; top: 50%; transform: translateY(-50%); width: 40px; height: 60px; border-right: 4px solid #73C5FF; border-top: 2px solid #73C5FF; border-bottom: 2px solid #73C5FF;"></div>
+                
+                <div style="text-align: center; border-top: 1px solid rgba(115, 197, 255, 0.3); border-bottom: 1px solid rgba(115, 197, 255, 0.3); padding: 10px 80px; background: linear-gradient(90deg, transparent, rgba(5, 8, 19, 0.8), transparent);">
+                    <h1 class="text-6xl font-tech font-bold text-quantumWhite tracking-widest uppercase" style="text-shadow: 0 0 20px rgba(115, 197, 255, 0.5);">
+                        Core <span class="text-cyberBlue">Frontiers</span>
+                    </h1>
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-around; align-items: flex-start; flex-grow: 1;">
+
+                <div style="display: flex; flex-direction: column; align-items: center; width: 40%;">
+                    <div style="position: relative; width: 250px; height: 250px; margin-bottom: 35px; display: flex; justify-content: center; align-items: center;">
+                        <div class="animate-spin-slow" style="position: absolute; width: 100%; height: 100%; border-radius: 50%; border: 3px dashed rgba(115, 197, 255, 0.3);"></div>
+                        <div style="position: absolute; width: 92%; height: 92%; border-radius: 50%; border: 3px solid #73C5FF; box-shadow: 0 0 25px rgba(115, 197, 255, 0.4);"></div>
+                        <div class="img-circle-mask" style="width: 88%; height: 88%; overflow: hidden; border-radius: 50%;">
+                            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=600&auto=format&fit=crop" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                    <div class="label-box" style="background: rgba(44, 62, 80, 0.6); border: 1px solid #73C5FF; padding: 25px; width: 100%; text-align: center;">
+                        <p class="text-quantumWhite font-tech font-bold text-3xl tracking-widest uppercase mb-3">Generative Intelligence</p>
+                        <p class="text-cyberBlue font-tech text-base tracking-[0.15em] opacity-90 uppercase leading-relaxed">
+                            Pioneering the synthesis of creative reasoning and neural scalability for future ecosystems.
+                        </p>
+                    </div>
+                </div>
+
+                <div style="display: flex; flex-direction: column; align-items: center; width: 40%;">
+                    <div style="position: relative; width: 250px; height: 250px; margin-bottom: 35px; display: flex; justify-content: center; align-items: center;">
+                        <div class="animate-spin-slow" style="position: absolute; width: 100%; height: 100%; border-radius: 50%; border: 3px dashed rgba(0, 240, 255, 0.3);"></div>
+                        <div style="position: absolute; width: 92%; height: 92%; border-radius: 50%; border: 3px solid #00F0FF; box-shadow: 0 0 25px rgba(0, 240, 255, 0.4);"></div>
+                        <div class="img-circle-mask" style="width: 88%; height: 88%; overflow: hidden; border-radius: 50%;">
+                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=600&auto=format&fit=crop" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                    <div class="label-box" style="background: rgba(44, 62, 80, 0.6); border: 1px solid #00F0FF; padding: 25px; width: 100%; text-align: center;">
+                        <p class="text-quantumWhite font-tech font-bold text-3xl tracking-widest uppercase mb-3">Neural Architecture</p>
+                        <p class="text-holoCyan font-tech text-base tracking-[0.15em] opacity-90 uppercase leading-relaxed">
+                            Building hyper-resilient frameworks for cross-platform data synchronization and security.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div style="width: 100%; height: 1px; background: linear-gradient(90deg, transparent, #2C3E50, transparent); margin-top: 40px; position: relative;">
+                <div style="position: absolute; left: 50%; top: -5px; width: 150px; height: 10px; background: #050813; transform: translateX(-50%); display: flex; justify-content: center; align-items: center;">
+                     <div style="width: 100px; height: 2px; background: #73C5FF; box-shadow: 0 0 15px #73C5FF;"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

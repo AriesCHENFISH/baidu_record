@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Overview Dashboard</title>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+
+    <style>
+        /* CSS Reset & Global Settings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container - Strict 1280x720 */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #000000;
+            color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        /* Utility Helpers */
+        .text-accent {
+            color: #C3E86C;
+        }
+        
+        /* Serif font for the artistic title */
+        .font-display {
+            font-family: 'Times New Roman', serif;
+            font-style: italic;
+        }
+
+        /* Custom Scrollbar hide */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <div class="absolute top-0 left-0 w-full px-16 pt-12 pb-6 z-10">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-8 h-8 rounded bg-[#C3E86C] flex items-center justify-center text-black font-bold text-lg">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+                <h4 class="text-sm tracking-widest font-medium uppercase text-white">Rimberio Marketing</h4>
+            </div>
+
+            <h1 class="text-7xl font-light tracking-tight text-white leading-tight">
+                <span class="font-display pr-4">Performance</span>
+                <span class="font-display font-light text-[#C3E86C]">Overview</span>
+            </h1>
+        </div>
+        
+        <div class="absolute top-[28%] left-0 w-full h-[62%] px-16 flex">
+            
+            <div class="w-[45%] h-full flex flex-col pr-12 border-t border-[#333333] pt-6">
+                <div class="mb-4">
+                    <p class="text-[#808080] text-lg mb-1">Total Reach</p>
+                    <h2 class="text-7xl font-medium tracking-tighter text-white mb-2">138,000</h2>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-arrow-trend-up text-[#C3E86C] text-sm"></i>
+                        <p class="text-[#C3E86C] font-bold text-lg">(+15% MoM)</p>
+                    </div>
+                </div>
+                
+                <div id="chart-reach" class="w-full flex-1"></div>
+            </div>
+
+            <div class="w-[1px] h-full bg-[#333333] mx-4"></div>
+
+            <div class="w-[55%] h-full flex flex-col border-t border-[#333333]">
+                
+                <div class="flex-1 border-b border-[#333333] grid grid-cols-2 pl-12 items-center">
+                    <div>
+                        <p class="text-[#808080] text-lg mb-2">Engagement</p>
+                        <h3 class="text-5xl font-light text-white mb-2">5,776</h3>
+                        <p class="text-[#C3E86C] font-medium">(+15% MoM)</p>
+                    </div>
+                    <div id="chart-engagement" class="w-full h-full"></div>
+                </div>
+
+                <div class="flex-1 border-b border-[#333333] grid grid-cols-2 pl-12 items-center">
+                    <div>
+                        <p class="text-[#808080] text-lg mb-2">Impressions</p>
+                        <h3 class="text-5xl font-light text-white mb-2">1.2M</h3>
+                        <p class="text-[#C3E86C] font-medium">(+10% MoM)</p>
+                    </div>
+                    <div id="chart-impressions" class="w-full h-full"></div>
+                </div>
+
+                <div class="flex-1 grid grid-cols-2 pl-12 items-center">
+                    <div>
+                        <p class="text-[#808080] text-lg mb-2">Conversions</p>
+                        <h3 class="text-5xl font-light text-white mb-2">480</h3>
+                        <p class="text-[#C3E86C] font-medium">(+20% MoM)</p>
+                    </div>
+                    <div id="chart-conversions" class="w-full h-full"></div>
+                </div>
+
+            </div>
+        </div>
+
+        </div>
+
+    <script>
+        // Common Color Palette
+        const accentColor = '#C3E86C';
+        const gridColor = '#333333';
+
+        // ECharts Defaults
+        const commonOptions = {
+            backgroundColor: 'transparent',
+            grid: {
+                top: '15%',
+                bottom: '15%',
+                left: '0%',
+                right: '5%',
+                containLabel: false
+            },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: ['May', 'June', 'July', 'August'],
+                axisLine: { show: true, lineStyle: { color: gridColor } },
+                axisTick: { show: false },
+                axisLabel: { show: false }
+            },
+            yAxis: {
+                type: 'value',
+                splitLine: { show: false }, 
+                axisLabel: { show: false }
+            },
+            tooltip: {
+                trigger: 'axis',
+                backgroundColor: 'rgba(0,0,0,0.8)',
+                textStyle: { color: '#fff' },
+                borderColor: '#333'
+            }
+        };
+
+        // 1. Reach Chart (Big)
+        const reachChart = echarts.init(document.getElementById('chart-reach'));
+        const reachOption = {
+            ...commonOptions,
+            grid: { top: '10%', bottom: '10%', left: '0%', right: '0%', containLabel: false },
+            xAxis: {
+                ...commonOptions.xAxis,
+                axisLabel: { show: true, color: '#666', fontSize: 10, margin: 10 }
+            },
+            yAxis: { 
+                type: 'value', 
+                splitLine: { show: true, lineStyle: { color: '#1a1a1a', type: 'dashed' } }, 
+                axisLabel: { show: false } 
+            },
+            series: [{
+                data: [100000, 120000, 90000, 138000],
+                type: 'line',
+                smooth: false,
+                symbol: 'circle',
+                symbolSize: 8,
+                itemStyle: { color: accentColor, borderColor: '#000', borderWidth: 2 },
+                lineStyle: { width: 3, color: accentColor },
+                areaStyle: {
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                        { offset: 0, color: 'rgba(195, 232, 108, 0.2)' },
+                        { offset: 1, color: 'rgba(195, 232, 108, 0)' }
+                    ])
+                }
+            }]
+        };
+        reachChart.setOption(reachOption);
+
+        // Sub-charts Options
+        const subChartOption = {
+            ...commonOptions,
+            series: [{
+                type: 'line',
+                smooth: true,
+                symbol: 'none', // Cleaner look for small charts
+                itemStyle: { color: accentColor },
+                lineStyle: { width: 2, color: accentColor }
+            }]
+        };
+
+        // 2. Engagement Chart
+        const engageChart = echarts.init(document.getElementById('chart-engagement'));
+        engageChart.setOption({
+            ...subChartOption,
+            series: [{ ...subChartOption.series[0], data: [4000, 8000, 7900, 5776] }]
+        });
+
+        // 3. Impressions Chart
+        const impressChart = echarts.init(document.getElementById('chart-impressions'));
+        impressChart.setOption({
+            ...subChartOption,
+            series: [{ ...subChartOption.series[0], data: [400000, 800000, 780000, 590000] }]
+        });
+
+        // 4. Conversions Chart
+        const convertChart = echarts.init(document.getElementById('chart-conversions'));
+        convertChart.setOption({
+            ...subChartOption,
+            series: [{ ...subChartOption.series[0], data: [400, 800, 780, 580] }]
+        });
+
+        // Handle Resize
+        window.addEventListener('resize', () => {
+            reachChart.resize();
+            engageChart.resize();
+            impressChart.resize();
+            convertChart.resize();
+        });
+    </script>
+</body>
+</html>

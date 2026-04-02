@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule & Deadlines - High End Keynote</title>
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome (CDN) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts (Specified CDN) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- Custom Config & Reset -->
+    <style>
+        /* CSS Reset & Global Standards */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Page Container - Strict Dimensions */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #F0F0F0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Typography Utilities not fully covered by Tailwind utilities */
+        h1 { font-weight: 700; letter-spacing: -0.04em; line-height: 0.9; }
+        h3 { font-weight: 700; letter-spacing: -0.02em; }
+        p { font-weight: 400; line-height: 1.6; }
+        
+        /* Utility for Grayscale Images */
+        .img-grayscale {
+            filter: grayscale(100%) contrast(110%);
+        }
+
+        /* Custom Scrollbar hide */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+
+    <!-- Tailwind Config for Specific Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            black: '#000000',
+                            dark: '#111111',
+                            gray: '#333333',
+                            light: '#F0F0F0',
+                            white: '#FFFFFF'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans SC', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div id="page_container">
+
+        <!-- Top Section: Hero Image & Main Title (Approx 60% Height) -->
+        <!-- Using relative positioning to stack text over image -->
+        <div class="relative w-full h-[440px] bg-brand-black overflow-hidden group">
+            
+            <!-- Background Image -->
+            <!-- Using object-cover to ensure no whitespace, grayscale for theme -->
+            <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?q=80&w=2070&auto=format&fit=crop" 
+                 alt="Streetwear fashion aesthetic" 
+                 class="absolute inset-0 w-full h-full object-cover img-grayscale opacity-80" />
+            <!-- 1280*440 -->
+
+            <!-- Geometric Decoration: Star Icon (Top Left) -->
+            <div class="absolute top-10 left-12 z-20 text-white text-4xl">
+                <i class="fa-solid fa-star-of-life"></i>
+            </div>
+
+            <!-- Main Title: Centered and Huge -->
+            <div class="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+                <h1 class="text-brand-white text-[140px] uppercase text-center drop-shadow-lg mix-blend-overlay opacity-90">
+                    Schedule &<br>Deadlines
+                </h1>
+            </div>
+        </div>
+
+        <!-- Bottom Section: Timeline Grid (Remaining Height) -->
+        <!-- White container with rounded corners to create a "Card" effect -->
+        <div class="flex-1 bg-brand-white w-full relative z-10 px-12 pt-10 pb-8 rounded-t-[40px] -mt-6 shadow-[0_-10px_40px_rgba(0,0,0,0.1)]">
+            
+            <!-- Grid Container for 4 Columns -->
+            <div class="grid grid-cols-4 gap-12 h-full items-start">
+                
+                <!-- Column 01 -->
+                <div class="flex flex-col gap-3 border-t-2 border-brand-black pt-4">
+                    <h3 class="text-brand-black text-3xl">01</h3>
+                    <p class="text-brand-gray text-sm">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod id sem quis accumsan.
+                    </p>
+                </div>
+
+                <!-- Column 02 -->
+                <div class="flex flex-col gap-3 border-t-2 border-brand-light pt-4 hover:border-brand-black transition-colors duration-300">
+                    <h3 class="text-brand-black text-3xl">02</h3>
+                    <p class="text-brand-gray text-sm">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod id sem quis accumsan.
+                    </p>
+                </div>
+
+                <!-- Column 03 -->
+                <div class="flex flex-col gap-3 border-t-2 border-brand-light pt-4 hover:border-brand-black transition-colors duration-300">
+                    <h3 class="text-brand-black text-3xl">03</h3>
+                    <p class="text-brand-gray text-sm">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod id sem quis accumsan.
+                    </p>
+                </div>
+
+                <!-- Column 04 -->
+                <div class="flex flex-col gap-3 border-t-2 border-brand-light pt-4 hover:border-brand-black transition-colors duration-300 relative">
+                    <h3 class="text-brand-black text-3xl">04</h3>
+                    <p class="text-brand-gray text-sm pr-12">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod id sem quis accumsan.
+                    </p>
+                    
+                    <!-- Arrow Action Button (Bottom Right of Column 4) -->
+                    <div class="absolute bottom-0 right-0 w-12 h-12 bg-brand-black rounded-full flex items-center justify-center text-brand-white shadow-lg transform translate-y-2">
+                        <i class="fa-solid fa-arrow-right -rotate-45"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

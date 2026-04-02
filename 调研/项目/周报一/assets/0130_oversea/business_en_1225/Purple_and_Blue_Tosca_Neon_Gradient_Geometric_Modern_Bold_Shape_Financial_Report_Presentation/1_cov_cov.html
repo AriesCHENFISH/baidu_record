@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Report - Fradel Company</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #05050F;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* 1. Diagonal Image Clip Path */
+        .image-diagonal-mask {
+            clip-path: polygon(18% 0, 100% 0, 100% 100%, 0% 100%);
+        }
+
+        /* 2. Glassmorphism & Branding Glows */
+        .ambient-purple-glow {
+            background: radial-gradient(circle, rgba(106, 68, 240, 0.15) 0%, rgba(5, 5, 15, 0) 70%);
+        }
+
+        /* 3. Navigation Clean-up */
+        .nav-list { list-style: none !important; }
+        .nav-list li::before { content: none !important; display: none !important; }
+
+        /* 4. Text Spacing & Leading */
+        .hero-title {
+            letter-spacing: -0.04em;
+            line-height: 0.85;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <div class="absolute -top-20 -left-20 w-[600px] h-[600px] ambient-purple-glow blur-[100px] pointer-events-none"></div>
+        <div class="absolute bottom-[-100px] right-[20%] w-[500px] h-[500px] bg-[#18123A] rounded-full blur-[120px] opacity-40 pointer-events-none"></div>
+
+        <div class="absolute top-8 left-1/2 transform -translate-x-1/2 w-[95%] z-50">
+            <nav class="flex items-center justify-between w-full h-20 px-10 rounded-full" 
+                 style="background: linear-gradient(90deg, #6a44f0 0%, #1E1B33 40%, #1E1B33 100%); box-shadow: 0 10px 40px -10px rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.05);">
+                
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 flex items-center justify-center rounded-full bg-[#DDFCF2] text-[#05050F]">
+                        <i class="fa-solid fa-layer-group text-xl"></i>
+                    </div>
+                    <h2 class="text-[#DDFCF2] text-xl font-bold tracking-wide uppercase">Fradel Company</h2>
+                </div>
+
+                <ul class="nav-list flex items-center gap-12 m-0 p-0">
+                    <li class="cursor-pointer">
+                        <b class="text-[#DDFCF2] text-sm tracking-widest hover:text-white transition-all">HOME</b>
+                    </li>
+                    <li class="cursor-pointer">
+                        <b class="text-[#B0B0B0] text-sm tracking-widest hover:text-[#DDFCF2] transition-all">ABOUT</b>
+                    </li>
+                    <li class="cursor-pointer">
+                        <b class="text-[#B0B0B0] text-sm tracking-widest hover:text-[#DDFCF2] transition-all">MORE</b>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="w-full h-full grid grid-cols-12 relative z-10">
+            
+            <div class="col-span-7 flex flex-col justify-center pl-20 pr-10">
+                <div class="w-20 h-1.5 bg-gradient-to-r from-[#6a44f0] to-[#88DEE3] rounded-full mb-10"></div>
+                
+                <div class="hero-title mb-12">
+                    <h1 class="text-[110px] font-bold text-[#DDFCF2] uppercase">
+                        Financial
+                    </h1>
+                    <h1 class="text-[110px] font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#88DEE3] to-[#538AB8] uppercase">
+                        Report
+                    </h1>
+                </div>
+
+                <div class="flex items-center gap-8 border-t border-white/10 pt-10 mt-4">
+                    <div class="flex flex-col">
+                        <span class="text-[#538AB8] text-xs font-bold tracking-[0.3em] uppercase mb-2">Fiscal Period</span>
+                        <span class="text-white text-xl font-medium">December 1, 2025</span>
+                    </div>
+                    <div class="w-px h-10 bg-white/10"></div>
+                    <div class="flex flex-col">
+                        <span class="text-[#538AB8] text-xs font-bold tracking-[0.3em] uppercase mb-2">Authored By</span>
+                        <span class="text-white text-xl font-medium">Executive Board</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-span-5 relative h-full">
+                <div class="absolute top-0 right-0 w-[125%] h-full image-diagonal-mask overflow-hidden shadow-[-20px_0_50px_rgba(0,0,0,0.5)]">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-[#05050F]/80 via-transparent to-transparent z-10"></div>
+                    
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" 
+                         alt="Architecture" 
+                         class="w-full h-full object-cover">
+                </div>
+
+                <div class="absolute top-48 right-12 z-20 flex gap-2">
+                    <div class="w-3 h-3 rounded-full bg-[#88DEE3]"></div>
+                    <div class="w-3 h-3 rounded-full bg-[#88DEE3]/40"></div>
+                    <div class="w-3 h-3 rounded-full bg-[#88DEE3]/10"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 w-full h-1.5 bg-gradient-to-r from-transparent via-[#6a44f0]/30 to-transparent"></div>
+    </div>
+
+</body>
+</html>

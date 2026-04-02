@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bioluminescence - Research Archive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { oceanDeep: '#081033', electricCyan: '#00E5FF' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Playfair Display', 'serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        #page_container { width: 1280px; height: 720px; position: relative; background: #081033; color: #FFFFFF; overflow: hidden; display: flex; flex-direction: column; margin: 0 auto; }
+        .text-outline { -webkit-text-stroke: 1px rgba(0, 229, 255, 0.4); color: transparent; }
+        .img-mask-center { clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%); }
+        .vertical-text { writing-mode: vertical-rl; transform: rotate(180deg); }
+        .scan-line { width: 100%; height: 1px; background: rgba(0, 229, 255, 0.3); position: absolute; top: 0; animation: scan 4s linear infinite; }
+        @keyframes scan { from { top: 0; } to { top: 100%; } }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <!-- Header -->
+        <header class="relative z-20 px-20 pt-12 flex items-center justify-between">
+            <div class="flex items-center gap-5">
+                <div class="w-12 h-12 border-2 border-electricCyan flex flex-col items-center justify-center gap-1">
+                    <div class="w-6 h-0.5 bg-white"></div>
+                    <div class="w-4 h-0.5 bg-electricCyan"></div>
+                    <div class="w-6 h-0.5 bg-white"></div>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-black tracking-widest uppercase leading-none">Abyssal</h2>
+                    <span class="text-[9px] tracking-[0.5em] text-electricCyan uppercase font-bold">Research Archive</span>
+                </div>
+            </div>
+            <div class="flex items-center gap-8">
+                <span class="text-[10px] font-mono text-electricCyan">DATA_STREAM: ACTIVE</span>
+                <div class="text-3xl font-black italic">07</div>
+            </div>
+        </header>
+
+        <main class="flex-1 flex px-20 pt-4 z-10 items-center">
+            <!-- Left Data -->
+            <div class="w-1/4 flex flex-col gap-12 border-r border-white/10 pr-10">
+                <div>
+                    <span class="text-[8px] text-electricCyan font-bold uppercase tracking-[0.4em] mb-4 block">Signal Analysis</span>
+                    <div class="space-y-4">
+                        <div class="h-1 bg-white/5 w-full rounded-full overflow-hidden">
+                            <div class="h-full bg-electricCyan w-[75%]"></div>
+                        </div>
+                        <div class="h-1 bg-white/5 w-full rounded-full overflow-hidden">
+                            <div class="h-full bg-electricCyan w-[42%]"></div>
+                        </div>
+                        <div class="h-1 bg-white/5 w-full rounded-full overflow-hidden">
+                            <div class="h-full bg-electricCyan w-[91%]"></div>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-500 italic leading-relaxed">
+                    "Bioluminescence is the language of the dark. Each flash is a coded byte of survival data."
+                </p>
+            </div>
+
+            <!-- Center Image -->
+            <div class="w-2/4 px-10 relative">
+                <div class="absolute -top-16 left-1/2 -translate-x-1/2 text-[150px] font-black text-white/[0.02] pointer-events-none uppercase">Glow</div>
+                <div class="w-full h-[480px] relative overflow-hidden img-mask-center border border-white/20">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80" class="w-full h-full object-cover">
+                    <div class="scan-line"></div>
+                </div>
+                <!-- Coords Label -->
+                <div class="absolute bottom-10 left-0 bg-electricCyan text-oceanDeep px-4 py-2 font-mono text-[10px] font-bold">
+                    LAT: 4.8812 / LON: 132.0041
+                </div>
+            </div>
+
+            <!-- Right Title -->
+            <div class="w-1/4 flex flex-col items-end text-right">
+                <h1 class="text-6xl font-serif italic mb-4">Luminous<br><span class="font-sans not-italic font-black text-electricCyan text-7xl uppercase">Signals</span></h1>
+                <p class="text-gray-400 text-sm font-light leading-relaxed mb-8">
+                    Deep sea bio-rhythms detected at 3,000m depth. Pattern suggests intra-species communication.
+                </p>
+                <div class="flex items-center gap-4 text-white/40">
+                    <span class="text-[9px] uppercase tracking-widest">Archive Record 007-X</span>
+                    <div class="w-12 h-[1px] bg-white/20"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

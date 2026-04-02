@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-World Impact - Cyber Security</title>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepVoid: '#0A111F',
+                        neonBlue: '#4FD1FF',
+                        techPale: '#A8C5E6',
+                        midnightNavy: '#142238',
+                        strokeBlue: '#2B4F81',
+                        terminalGreen: '#4CAF50',
+                        alertOrange: '#E65100',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 还原最初的背景设计 */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #0A111F;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+            background-image: 
+                linear-gradient(rgba(10, 17, 31, 0.95), rgba(10, 17, 31, 0.95)),
+                repeating-linear-gradient(0deg, transparent, transparent 19px, rgba(79, 209, 255, 0.03) 20px),
+                repeating-linear-gradient(90deg, transparent, transparent 19px, rgba(79, 209, 255, 0.03) 20px);
+        }
+
+        /* 蓝色故障风标题投影 */
+        .text-glow-blue {
+            text-shadow: 2px 2px 0px rgba(79, 209, 255, 0.5);
+        }
+
+        .clip-angled {
+            clip-path: polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%);
+        }
+
+        /* 还原右上角装饰线框 */
+        .top-right-decor {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 33.333%;
+            height: 256px;
+            opacity: 0.2;
+            pointer-events: none;
+        }
+        .top-right-decor-inner {
+            width: 100%;
+            height: 100%;
+            border-left: 1px solid #2B4F81;
+            border-bottom: 1px solid #2B4F81;
+            border-bottom-left-radius: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <div class="top-right-decor">
+            <div class="top-right-decor-inner"></div>
+        </div>
+
+        <div class="absolute top-12 left-16 z-10">
+            <div class="flex items-center gap-4 mb-2">
+                <i class="fa-solid fa-shield-halved text-neonBlue text-xl animate-pulse"></i>
+                <h2 class="text-white text-2xl font-bold uppercase tracking-widest">
+                    When Attacks Turn Into Crises
+                </h2>
+            </div>
+            <div class="w-16 h-1 bg-neonBlue shadow-[0_0_8px_#4CAF50] rounded-full"></div>
+        </div>
+
+        <div class="absolute top-40 left-16 right-16 bottom-32 flex gap-12 items-center">
+            
+            <div class="flex-1 relative p-10 border border-strokeBlue bg-midnightNavy/30 backdrop-blur-sm rounded-lg">
+                <div class="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-neonBlue"></div>
+                <div class="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-neonBlue"></div>
+                <div class="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-neonBlue"></div>
+                <div class="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-neonBlue"></div>
+
+                <div class="grid grid-cols-2 gap-10">
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3 text-terminalGreen mb-2">
+                            <i class="fa-solid fa-money-bill-transfer"></i>
+                            <h3 class="font-bold text-lg tracking-wider uppercase text-white">Costly Consequences</h3>
+                        </div>
+                        <p class="text-techPale text-sm leading-relaxed font-light">
+                            Cyberattacks can lead to massive financial loss, operational downtime, and loss of trust. The impact transcends mere data loss, affecting the bottom line directly.
+                        </p>
+                    </div>
+
+                    <div class="space-y-4 border-l border-strokeBlue/50 pl-10">
+                        <div class="flex items-center gap-3 text-alertOrange mb-2">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                            <h3 class="font-bold text-lg tracking-wider text-white uppercase">Service Interruptions</h3>
+                        </div>
+                        <p class="text-techPale text-sm leading-relaxed font-light">
+                            Targeted attacks on vital services can paralyze operations, affecting communities and communication systems. The ripple effect disrupts the entire ecosystem.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-[450px] relative">
+                <div class="relative w-full h-[320px] clip-angled border-2 border-strokeBlue bg-midnightNavy group overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1000&auto=format&fit=crop" 
+                         alt="Cyber specialist" 
+                         class="w-full h-full object-cover opacity-60 mix-blend-luminosity grayscale group-hover:grayscale-0 transition-all duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-deepVoid/80 to-transparent"></div>
+                    
+                    <div class="absolute top-4 right-4 flex gap-1">
+                        <div class="w-1.5 h-1.5 bg-terminalGreen rounded-full animate-pulse"></div>
+                        <div class="w-1.5 h-1.5 bg-terminalGreen/30 rounded-full"></div>
+                    </div>
+                </div>
+                <div class="absolute -bottom-4 -left-4 w-24 h-1 bg-terminalGreen shadow-[0_0_10px_#4CAF50]"></div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-12 left-16 right-16 flex justify-between items-end">
+            <div class="relative w-48 h-24 overflow-hidden rounded-tr-3xl border-t border-r border-strokeBlue bg-deepVoid">
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover opacity-30 grayscale">
+                <div class="absolute inset-0 bg-terminalGreen/5"></div>
+            </div>
+
+            <div class="text-right">
+                <div class="mb-2 text-neonBlue text-2xl animate-bounce">
+                    <i class="fa-solid fa-arrow-turn-down transform rotate-90"></i>
+                </div>
+                <h1 class="text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-neonBlue to-white uppercase tracking-tighter leading-none text-glow-blue" style="font-family: 'Noto Sans SC', sans-serif;">
+                    Real-World<br>Impact
+                </h1>
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-strokeBlue to-transparent opacity-50"></div>
+        <div class="absolute bottom-0 right-16 w-64 h-1 bg-neonBlue shadow-[0_0_10px_#4FD1FF]"></div>
+
+    </div>
+
+</body>
+</html>

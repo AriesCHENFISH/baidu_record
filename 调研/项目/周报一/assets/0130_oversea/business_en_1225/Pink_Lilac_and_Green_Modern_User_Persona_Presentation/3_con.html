@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hannah Morales - Profile Keynote</title>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- Google Fonts (Domestic Mirror) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    
+    <!-- Custom Style Configuration -->
+    <style>
+        /* CSS Reset & Basic Setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Font Family Configuration */
+        body {
+            font-family: 'Noto Sans SC', 'Inter', sans-serif;
+            /* No styles allowed on body tag as per instruction, strictly minimal */
+        }
+
+        /* Utility Helpers for Gradient Text (Optional, reserved for future use) */
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+
+    <!-- Tailwind Config for Project Specific Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#000000',
+                        secondary: '#666666',
+                        'card-green': '#326B54',
+                        'card-bg': '#F2F2F2',
+                    },
+                    spacing: {
+                        '1280': '1280px',
+                        '720': '720px',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Main Page Container (1280x720 Fixed) -->
+    <div id="page_container" class="relative w-[1280px] h-[720px] bg-white mx-auto overflow-hidden">
+        
+        <!-- Grid Layout System: 12 Columns -->
+        <div class="grid grid-cols-12 h-full w-full">
+            
+            <!-- Left Column: Typography & Info (Span 5) -->
+            <div class="col-span-5 flex flex-col justify-between pl-16 py-16 pr-4 z-10">
+                
+                <!-- Header Section -->
+                <div class="mt-8">
+                    <h1 class="text-[100px] font-bold leading-[0.85] tracking-tighter text-primary">
+                        Hannah
+                    </h1>
+                    <h1 class="text-[100px] font-bold leading-[0.85] tracking-tighter text-primary">
+                        Morales
+                    </h1>
+                </div>
+
+                <!-- Info Grid Section -->
+                <div class="w-full mb-8">
+                    <!-- Data List using Grid for Alignment -->
+                    <div class="grid grid-cols-[140px_1fr] gap-y-7 text-[18px]">
+                        
+                        <!-- Row 1: Age -->
+                        <div class="flex items-center">
+                            <span class="text-secondary font-medium">Age</span>
+                        </div>
+                        <div class="flex items-center">
+                            <b class="text-primary font-semibold">34</b>
+                        </div>
+
+                        <!-- Row 2: Location -->
+                        <div class="flex items-center">
+                            <span class="text-secondary font-medium">Location</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-primary font-medium">123 Anywhere St., Any City</span>
+                        </div>
+
+                        <!-- Row 3: Occupation -->
+                        <div class="flex items-center">
+                            <span class="text-secondary font-medium">Occupation</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-primary font-medium">Freelance Curriculum Developer</span>
+                        </div>
+
+                        <!-- Row 4: Education -->
+                        <div class="flex items-center">
+                            <span class="text-secondary font-medium">Education</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-primary font-medium">Master’s in Instructional Design, Borcelle</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Visual Composition (Span 7) -->
+            <div class="col-span-7 relative h-full flex items-center justify-center p-8 pl-0">
+                
+                <!-- Main Gray Card Background -->
+                <div class="relative w-full h-full bg-card-bg rounded-[48px] overflow-hidden">
+                    
+                    <!-- Decorative: Top Image (Z-Index 10) -->
+                    <div class="absolute top-12 left-12 w-[340px] h-[340px] rounded-[32px] overflow-hidden shadow-sm z-10">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop" 
+                             alt="Fashion Portrait Top" 
+                             class="w-full h-full object-cover">
+                        <!-- 340*340 -->
+                    </div>
+
+                    <!-- Decorative: Bottom Image (Z-Index 0) -->
+                    <!-- Offset slightly to create the layered collage effect -->
+                    <div class="absolute bottom-12 right-12 w-[320px] h-[380px] rounded-[32px] overflow-hidden shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=1000&auto=format&fit=crop" 
+                             alt="Fashion Portrait Bottom" 
+                             class="w-full h-full object-cover">
+                        <!-- 320*380 -->
+                    </div>
+
+                    <!-- Interaction Element: Website Pill (Floating) -->
+                    <!-- Positioned to overlap/bridge the space -->
+                    <div class="absolute top-[320px] right-8 z-20 bg-card-green text-white py-3 px-6 rounded-full shadow-xl flex items-center gap-3 w-auto max-w-[320px]">
+                        <span class="text-sm font-medium tracking-wide">www.reallygreatsite.com</span>
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </div>
+
+                    <!-- Interaction Element: Email Pill (Floating) -->
+                    <div class="absolute bottom-[280px] left-8 z-20 bg-card-green text-white py-3 px-6 rounded-full shadow-xl flex items-center gap-3 w-auto">
+                        <span class="text-sm font-medium tracking-wide">hello@reallygreatsite.com</span>
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </div>
+
+                    <!-- Arrow Action Button (Bottom Left) -->
+                    <div class="absolute bottom-10 left-10 w-14 h-14 rounded-full border border-black flex items-center justify-center">
+                        <i class="fa-solid fa-arrow-right text-xl text-black transform -rotate-0"></i>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

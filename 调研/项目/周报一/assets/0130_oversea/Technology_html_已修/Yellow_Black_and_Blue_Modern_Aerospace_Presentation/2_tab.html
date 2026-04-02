@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission Manifest - Index</title>
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#080808',
+                        accent: '#FCE67E',
+                        textMain: '#EDEDED',
+                        subtle: '#333333',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'Inter', 'sans-serif'],
+                        mono: ['Courier New', 'monospace'],
+                    },
+                    backgroundImage: {
+                        'metal-gradient': 'linear-gradient(135deg, #FCE67E 0%, #FFFBEB 50%, #D4AF37 100%)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px;
+            background-color: #080808;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            padding: 48px 64px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* Background Tech Mesh */
+        .tech-bg {
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .text-glow { text-shadow: 0 0 30px rgba(252, 230, 126, 0.2); }
+        
+        /* Huge Watermark Numbers */
+        .watermark-num {
+            font-family: 'Inter', sans-serif;
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.03);
+            position: absolute;
+            right: 0;
+            top: -20px;
+            font-size: 80px;
+            line-height: 1;
+            z-index: 0;
+            transition: color 0.3s ease;
+        }
+        
+        .group:hover .watermark-num {
+            color: rgba(252, 230, 126, 0.1);
+        }
+
+        /* Hover Line Animation */
+        .hover-line {
+            width: 0;
+            height: 1px;
+            background-color: #FCE67E;
+            transition: width 0.4s ease;
+        }
+        .group:hover .hover-line { width: 100%; }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        
+        <!-- Ambient Background Image (Hangar/Tech) -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1517976487492-5750f3195933?q=80&w=1280&auto=format&fit=crop" 
+                 class="w-full h-full object-cover opacity-20 grayscale mix-blend-overlay">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#080808] via-[#080808]/90 to-[#080808]/80"></div>
+            <div class="absolute inset-0 tech-bg pointer-events-none"></div>
+        </div>
+
+        <!-- HEADER -->
+        <header class="flex justify-between items-end mb-16 relative z-10">
+            <div>
+                <div class="flex items-center gap-2 mb-2">
+                    <div class="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
+                    <span class="text-[#666] font-mono text-xs uppercase tracking-[0.4em]">Confidential // Level 4</span>
+                </div>
+                <h1 class="text-7xl font-black uppercase tracking-tight leading-none text-transparent bg-clip-text bg-metal-gradient text-glow">
+                    Mission <br> Manifest
+                </h1>
+            </div>
+            <!-- Decorative Right Header -->
+            <div class="flex flex-col items-end opacity-60">
+                <div class="flex gap-1 mb-1">
+                    <div class="w-16 h-1 bg-[#333]"></div>
+                    <div class="w-4 h-1 bg-accent"></div>
+                </div>
+                <span class="text-xs font-mono text-gray-400 uppercase tracking-widest">Total Modules: 09</span>
+            </div>
+        </header>
+
+        <!-- MAIN CONTENT: 3 Columns Layout -->
+        <div class="grid grid-cols-3 gap-12 relative z-10 flex-grow">
+            
+            <!-- COLUMN 1: Fundamentals -->
+            <div class="flex flex-col gap-6">
+                <div class="flex items-center gap-2 border-b border-[#333] pb-2 mb-2">
+                    <i class="fa-solid fa-plane-up text-accent text-xs"></i>
+                    <span class="text-gray-500 font-bold text-xs uppercase tracking-widest">Phase I: Aeronautics</span>
+                </div>
+
+                <!-- 01 -->
+                <div class="relative group cursor-pointer border-l-2 border-transparent hover:border-accent pl-4 transition-all duration-300">
+                    <span class="watermark-num">01</span>
+                    <div class="relative z-10">
+                        <h3 class="text-xl font-bold text-white group-hover:text-accent transition-colors">Flight Dynamics</h3>
+                        <p class="text-[10px] text-gray-500 mt-1 uppercase tracking-wide">Stability & Control Analysis</p>
+                    </div>
+                </div>
+
+                <!-- 02 -->
+                <div class="relative group cursor-pointer border-l-2 border-transparent hover:border-accent pl-4 transition-all duration-300">
+                    <span class="watermark-num">02</span>
+                    <div class="relative z-10">
+                        <h3 class="text-xl font-bold text-white group-hover:text-accent transition-colors">Avionics</h3>
+                        <p class="text-[10px] text-gray-500 mt-1 uppercase tracking-wide">Guidance & Navigation</p>
+                    </div>
+                </div>
+
+                <!-- 03 -->
+                <div class="relative group cursor-pointer border-l-2 border-transparent hover:border-accent pl-4 transition-all duration-300">
+                    <span class="watermark-num">03</span>
+                    <div class="relative z-10">
+                        <h3 class="text-xl font-bold text-white group-hover:text-accent transition-colors">Aerospace Mfg.</h3>
+                        <p class="text-[10px] text-gray-500 mt-1 uppercase tracking-wide">Materials & Assembly</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COLUMN 2: Operations -->
+            <div class="flex flex-col gap-6">
+                <div class="flex items-center gap-2 border-b border-[#333] pb-2 mb-2">
+                    <i class="fa-solid fa-satellite text-accent text-xs"></i>
+                    <span class="text-gray-500 font-bold text-xs uppercase tracking-widest">Phase II: Operations</span>
+                </div>
+
+                <!-- 04 -->
+                <div class="relative group cursor-pointer border-l-2 border-transparent hover:border-accent pl-4 transition-all duration-300">
+                    <span class="watermark-num">04</span>
+                    <div class="relative z-10">
+                        <h3 class="text-xl font-bold text-white group-hover:text-accent transition-colors">Space Systems</h3>
+                        <p class="text-[10px] text-gray-500 mt-1 uppercase tracking-wide">Orbital Infrastructure</p>
+                    </div>
+                </div>
+
+                <!-- 05 -->
+                <div class="relative group cursor-pointer border-l-2 border-transparent hover:border-accent pl-4 transition-all duration-300">
+                    <span class="watermark-num">05</span>
+                    <div class="relative z-10">
+                        <h3 class="text-xl font-bold text-white group-hover:text-accent transition-colors">Mission Ops</h3>
+                        <p class="text-[10px] text-gray-500 mt-1 uppercase tracking-wide">Command & Control</p>
+                    </div>
+                </div>
+
+                <!-- 06 -->
+                <div class="relative group cursor-pointer border-l-2 border-transparent hover:border-accent pl-4 transition-all duration-300">
+                    <span class="watermark-num">06</span>
+                    <div class="relative z-10">
+                        <h3 class="text-xl font-bold text-white group-hover:text-accent transition-colors">Adv. Materials</h3>
+                        <p class="text-[10px] text-gray-500 mt-1 uppercase tracking-wide">Composites & Alloys</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COLUMN 3: Frontiers -->
+            <div class="flex flex-col gap-6">
+                <div class="flex items-center gap-2 border-b border-[#333] pb-2 mb-2">
+                    <i class="fa-solid fa-rocket text-accent text-xs"></i>
+                    <span class="text-gray-500 font-bold text-xs uppercase tracking-widest">Phase III: Frontiers</span>
+                </div>
+
+                <!-- 07 -->
+                <div class="relative group cursor-pointer border-l-2 border-transparent hover:border-accent pl-4 transition-all duration-300">
+                    <span class="watermark-num">07</span>
+                    <div class="relative z-10">
+                        <h3 class="text-xl font-bold text-white group-hover:text-accent transition-colors">Propulsion</h3>
+                        <p class="text-[10px] text-gray-500 mt-1 uppercase tracking-wide">Chemical & Ion Drives</p>
+                    </div>
+                </div>
+
+                <!-- 08 -->
+                <div class="relative group cursor-pointer border-l-2 border-transparent hover:border-accent pl-4 transition-all duration-300">
+                    <span class="watermark-num">08</span>
+                    <div class="relative z-10">
+                        <h3 class="text-xl font-bold text-white group-hover:text-accent transition-colors">Orbital Habitats</h3>
+                        <p class="text-[10px] text-gray-500 mt-1 uppercase tracking-wide">Life Support Systems</p>
+                    </div>
+                </div>
+
+                <!-- 09 (Special Highlight) -->
+                <div class="relative group cursor-pointer border-l-2 border-transparent hover:border-accent pl-4 transition-all duration-300">
+                    <span class="watermark-num text-accent opacity-20">09</span>
+                    <div class="relative z-10">
+                        <h3 class="text-xl font-bold text-accent">Future Outlook</h3>
+                        <p class="text-[10px] text-gray-500 mt-1 uppercase tracking-wide">Strategic Vision 2050</p>
+                        <div class="hover-line mt-2"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 3. BRANDING / LOGO (Unified New Design) -->
+        <div class="absolute bottom-12 right-12 z-20">
+             <div class="absolute -bottom-8 -right-8 w-40 h-24 bg-accent opacity-5 rounded-full blur-2xl pointer-events-none"></div>
+
+             <div class="flex items-center group">
+                <!-- Icon -->
+                <div class="relative w-10 h-10 mr-4 flex items-center justify-center">
+                    <div class="absolute inset-0 border border-gray-600 rounded-full"></div>
+                    <div class="absolute inset-0 border border-dashed border-accent rounded-full animate-[spin_12s_linear_infinite] opacity-60"></div>
+                    <div class="w-4 h-4 bg-accent transform rotate-45 shadow-[0_0_15px_rgba(252,230,126,0.6)]"></div>
+                </div>
+
+                <!-- Text -->
+                <div class="flex flex-col justify-center">
+                    <span class="text-2xl font-black text-white leading-none tracking-widest uppercase font-sans">
+                        Salford
+                    </span>
+                    <div class="flex items-center w-full mt-1">
+                        <span class="text-[9px] text-accent font-bold tracking-[0.2em] uppercase mr-2">& Company</span>
+                        <div class="h-[1px] flex-grow bg-[#444]"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom Deco Line -->
+        <div class="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#333] to-transparent"></div>
+
+    </div>
+</body>
+</html>

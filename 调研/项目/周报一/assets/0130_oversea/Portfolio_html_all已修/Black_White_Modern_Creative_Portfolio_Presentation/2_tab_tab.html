@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, height=720, initial-scale=1.0">
+    <title>Table of Content - Unified & Clearer</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { 
+            width: 1280px; height: 720px; margin: 0 auto; position: relative; overflow: hidden; 
+            background-color: #0F1113; font-family: 'Inter', sans-serif;
+        }
+        /* 背景纹理叠加 */
+        .bg-texture {
+            position: absolute; inset: 0; z-index: 0;
+            background-image: url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop');
+            background-size: cover; opacity: 0.4; mix-blend-mode: luminosity;
+        }
+        .bg-gradient-overlay {
+            position: absolute; inset: 0; z-index: 1;
+            background: radial-gradient(circle at 50% 30%, rgba(42, 26, 46, 0.4) 0%, #0F1113 80%);
+        }
+        .font-retro { font-family: 'Shrikhand', cursive; }
+        
+        /* 玻璃卡片样式 */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+        }
+        /* 列表项hover效果 */
+        .toc-item:hover h3 { color: #60A5FA; transition: color 0.3s ease; }
+        .toc-item:hover span { color: rgba(255,255,255,0.8); transition: color 0.3s ease; }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <div class="bg-texture"></div>
+        <div class="bg-gradient-overlay"></div>
+
+        <div class="relative z-20 w-full h-full flex flex-col p-12 justify-between">
+
+            <nav class="w-full mb-4">
+                <div class="flex items-center justify-between px-8 py-5 border border-white/20 rounded-full bg-[#0F1113]/60 backdrop-blur-md shadow-2xl">
+                    <div class="flex items-center gap-3">
+                        <div class="w-2.5 h-2.5 rounded-full bg-white animate-pulse"></div>
+                        <h2 class="text-white text-xl font-bold tracking-widest uppercase">Creative Portfolio</h2>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/20 bg-white/5">
+                            <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
+                            <span class="text-white/80 text-xs font-bold uppercase tracking-tighter">Innovation</span>
+                        </div>
+                        <div class="flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/20 bg-white/5">
+                            <span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>
+                            <span class="text-white/80 text-xs font-bold uppercase tracking-tighter">Excellence</span>
+                        </div>
+                        <div class="flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/20 bg-white/5">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                            <span class="text-white/80 text-xs font-bold uppercase tracking-tighter">Future</span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="flex-1 glass-panel rounded-[48px] p-16 flex flex-col justify-center items-center relative shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+                
+                <div class="absolute top-16 w-20 h-1.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
+
+                <div class="mb-20 text-center relative z-10">
+                    <h1 class="text-white text-7xl font-black italic tracking-tight font-display drop-shadow-2xl">
+                        Table of Contents
+                    </h1>
+                </div>
+
+                <div class="w-full grid grid-cols-3 gap-16 px-8 relative z-10">
+                    
+                    <div class="flex flex-col gap-10 border-r border-white/10 pr-4">
+                        <ul class="flex flex-col gap-10">
+                            <li class="flex items-baseline gap-6 group toc-item cursor-pointer">
+                                <span class="text-white/30 text-xl font-retro italic">01</span>
+                                <h3 class="text-white text-2xl font-bold tracking-wide">Introduction</h3>
+                            </li>
+                            <li class="flex items-baseline gap-6 group toc-item cursor-pointer">
+                                <span class="text-white/30 text-xl font-retro italic">02</span>
+                                <h3 class="text-white text-2xl font-bold tracking-wide">About Me</h3>
+                            </li>
+                            <li class="flex items-baseline gap-6 group toc-item cursor-pointer">
+                                <span class="text-white/30 text-xl font-retro italic">03</span>
+                                <h3 class="text-white text-2xl font-bold tracking-wide">Education</h3>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="flex flex-col gap-10 border-r border-white/10 pr-4 pl-4">
+                        <ul class="flex flex-col gap-10">
+                            <li class="flex items-baseline gap-6 group toc-item cursor-pointer">
+                                <span class="text-white/30 text-xl font-retro italic">04</span>
+                                <h3 class="text-white text-2xl font-bold tracking-wide">Personal Skill</h3>
+                            </li>
+                            <li class="flex items-baseline gap-6 group toc-item cursor-pointer">
+                                <span class="text-white/30 text-xl font-retro italic">05</span>
+                                <h3 class="text-white text-2xl font-bold tracking-wide">Experience</h3>
+                            </li>
+                            <li class="flex items-baseline gap-6 group toc-item cursor-pointer">
+                                <span class="text-white/30 text-xl font-retro italic">06</span>
+                                <h3 class="text-white text-2xl font-bold tracking-wide">Project Portfolio</h3>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="flex flex-col gap-10 pl-4">
+                        <ul class="flex flex-col gap-10">
+                            <li class="flex items-baseline gap-6 group toc-item cursor-pointer">
+                                <span class="text-white/30 text-xl font-retro italic">07</span>
+                                <h3 class="text-white text-2xl font-bold tracking-wide">Best Project</h3>
+                            </li>
+                            <li class="flex items-baseline gap-6 group toc-item cursor-pointer">
+                                <span class="text-white/30 text-xl font-retro italic">08</span>
+                                <h3 class="text-white text-2xl font-bold tracking-wide">Contact</h3>
+                            </li>
+                            <li class="flex items-baseline gap-6 group toc-item cursor-pointer">
+                                <span class="text-white/30 text-xl font-retro italic">09</span>
+                                <h3 class="text-white text-2xl font-bold tracking-wide">Thank You</h3>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                
+                <div class="absolute bottom-10 flex gap-3 opacity-30">
+                    <div class="w-2 h-2 bg-white rounded-full"></div>
+                    <div class="w-2 h-2 bg-white rounded-full"></div>
+                    <div class="w-2 h-2 bg-white rounded-full"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

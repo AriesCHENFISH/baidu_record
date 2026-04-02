@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Popularity of Football - Liceria & Co.</title>
+    
+    <!-- Google Fonts (Domestic CDN) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryBg: '#2A4029',
+                        contentBox: '#617360',
+                        textMain: '#FFFFFF',
+                        textBody: '#E0E6DF',
+                        decoLine: '#8C9B8A',
+                        accentRed: '#D9463E',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #2A4029;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* 旋转动画 */
+        @keyframes rotate-text {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-rotate {
+            animation: rotate-text 20s linear infinite;
+        }
+
+        /* 限制卡片文字行数 */
+        .line-clamp-4 {
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .glass-card {
+            background-color: rgba(97, 115, 96, 0.4);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+
+        <!-- 1. 背景层 -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1529900748604-07564a03e7a6?q=80&w=2070&auto=format&fit=crop" 
+                 class="w-full h-full object-cover opacity-20 mix-blend-overlay" alt="Grass">
+        </div>
+
+        <!-- 装饰性几何图形 -->
+        <div class="absolute top-[200px] left-[-100px] w-[500px] h-[500px] border border-decoLine/10 rounded-full z-0"></div>
+        <div class="absolute bottom-[-150px] right-[-100px] w-[600px] h-[600px] border border-decoLine/20 rounded-full z-0"></div>
+
+        <!-- 2. 内容包装器 -->
+        <div class="relative z-10 w-full h-full flex flex-col p-14">
+
+            <!-- [统一 Logo] 顶部 Header 区域 -->
+            <div class="flex justify-between items-start mb-10">
+                <div class="flex items-start gap-4 transform scale-90 -translate-x-3">
+                    <!-- 旋转徽章 -->
+                    <div class="relative w-24 h-24 flex items-center justify-center">
+                        <svg class="absolute w-full h-full animate-rotate" viewBox="0 0 100 100">
+                            <defs>
+                                <path id="popularCirclePath" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" />
+                            </defs>
+                            <text fill="#FFFFFF" font-size="7" font-weight="500" letter-spacing="2.5" class="opacity-70 uppercase">
+                                <textPath xlink:href="#popularCirclePath">
+                                    • LICERIA SPORTS & CO • GLOBAL POPULARITY •
+                                </textPath>
+                            </text>
+                        </svg>
+                        <div class="w-12 h-12 bg-accentRed rounded-full border border-white/20 flex items-center justify-center shadow-lg">
+                            <i class="fa-solid fa-earth-americas text-white text-lg"></i>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h6 class="text-textMain text-lg font-bold tracking-[0.25em] leading-none uppercase">Liceria</h6>
+                        <p class="text-decoLine text-[9px] tracking-[0.4em] font-light mt-1.5 uppercase pl-0.5">Football Global Insights</p>
+                    </div>
+                </div>
+
+                <!-- 装饰性页码 -->
+                <div class="text-decoLine/20 font-bold text-6xl tracking-tighter">04</div>
+            </div>
+
+            <!-- 中间内容：三个信息卡片 -->
+            <div class="grid grid-cols-3 gap-6 mb-12">
+                <!-- Card 01 -->
+                <div class="glass-card p-7 border-l-4 border-accentRed rounded-r-xl">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="text-accentRed font-bold text-xs border border-accentRed/30 px-2 py-0.5">01</span>
+                        <h3 class="text-textMain text-lg font-bold uppercase tracking-wide">Sports and Entertainment</h3>
+                    </div>
+                    <p class="text-textBody text-sm leading-relaxed opacity-80 line-clamp-4">
+                        Football is the ultimate form of modern entertainment. From grand stadiums to local screens, it captivates audiences with its unpredictable drama and world-class athletic displays.
+                    </p>
+                </div>
+
+                <!-- Card 02 -->
+                <div class="glass-card p-7 border-l-4 border-decoLine rounded-r-xl">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="text-decoLine font-bold text-xs border border-decoLine/30 px-2 py-0.5">02</span>
+                        <h3 class="text-textMain text-lg font-bold uppercase tracking-wide">Sports for All Ages</h3>
+                    </div>
+                    <p class="text-textBody text-sm leading-relaxed opacity-80 line-clamp-4">
+                        Whether it's children in local parks or veterans in amateur leagues, the game transcends age barriers, promoting health and community across every generation of society.
+                    </p>
+                </div>
+
+                <!-- Card 03 -->
+                <div class="glass-card p-7 border-l-4 border-decoLine rounded-r-xl">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="text-decoLine font-bold text-xs border border-decoLine/30 px-2 py-0.5">03</span>
+                        <h3 class="text-textMain text-lg font-bold uppercase tracking-wide">A Blessing for Mankind</h3>
+                    </div>
+                    <p class="text-textBody text-sm leading-relaxed opacity-80 line-clamp-4">
+                        Football acts as a universal bridge, uniting diverse cultures under a single passion. It provides hope, fosters friendship, and builds lasting international connections.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 底部主要视觉区 -->
+            <div class="flex items-end justify-between mt-auto">
+                
+                <!-- 左侧：排版组合 -->
+                <div class="flex flex-col gap-6 pb-2">
+                    <h1 class="text-textMain text-[80px] font-bold leading-[0.85] tracking-tighter uppercase drop-shadow-2xl">
+                        The <br> Popularity <br> of Football
+                    </h1>
+                    
+                    <div class="flex items-center gap-8 mt-4">
+                        <div class="flex flex-col border-l-4 border-accentRed pl-6 py-1">
+                            <h2 class="text-textBody text-2xl font-light tracking-widest uppercase">
+                                The World's
+                            </h2>
+                            <h2 class="text-textMain text-2xl font-bold tracking-widest uppercase">
+                                Favorite Sport
+                            </h2>
+                        </div>
+                        
+                        <!-- 装饰箭头按钮 -->
+                        <div class="w-16 h-16 rounded-full border-2 border-white/20 hover:border-accentRed bg-white/5 flex items-center justify-center transition-all cursor-pointer group">
+                            <i class="fa-solid fa-arrow-right text-textMain text-2xl rotate-[-45deg] group-hover:text-accentRed transition-colors"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右侧：圆形图片组合 (优化尺寸确保不溢出) -->
+                <div class="relative w-[350px] h-[350px] mb-[-20px]">
+                    <!-- 圆形图片 -->
+                    <div class="w-full h-full rounded-full border-[6px] border-primaryBg overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-20 relative">
+                         <img src="https://images.unsplash.com/photo-1517466787929-bc90951dbb?q=80&w=800&fit=crop" 
+                              alt="Kids playing football" 
+                              class="w-full h-full object-cover transform scale-105">
+                    </div>
+                    
+                    <!-- 装饰红星 -->
+                    <div class="absolute top-4 right-4 w-10 h-10 bg-accentRed rounded-full z-30 flex items-center justify-center shadow-lg border-2 border-primaryBg">
+                         <i class="fa-solid fa-star text-white text-sm"></i>
+                    </div>
+
+                    <!-- 品牌版权文字 -->
+                    <div class="absolute -bottom-2 right-0 z-30">
+                        <p class="text-decoLine text-[10px] font-bold tracking-[0.3em] uppercase opacity-40">
+                            Liceria & Co. © 2026
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

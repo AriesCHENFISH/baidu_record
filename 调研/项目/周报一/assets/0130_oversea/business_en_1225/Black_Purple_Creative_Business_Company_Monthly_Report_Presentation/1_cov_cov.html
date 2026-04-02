@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High-End Business Report</title>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    
+    <style>
+        /* Global Standards */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* * Page Container Logic 
+         * Fixed 1280x720
+         */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background: #050505; /* Fallback */
+            background: radial-gradient(circle at 80% 20%, #2a1b4e 0%, #050505 60%);
+            overflow: hidden;
+            font-family: 'Liberation Sans', 'Noto Sans SC', sans-serif;
+            color: white;
+        }
+
+        /* Ambient Light Glows - 营造“大气”氛围的关键 */
+        .ambient-glow {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.6;
+            z-index: 0;
+        }
+        
+        .glow-purple {
+            background: #7c3aed;
+            width: 500px;
+            height: 500px;
+            top: -150px;
+            right: -100px;
+        }
+
+        .glow-blue {
+            background: #2563eb;
+            width: 400px;
+            height: 400px;
+            bottom: -100px;
+            left: -100px;
+            opacity: 0.4;
+        }
+
+        /* Typography Styles */
+        .title-outline {
+            color: transparent;
+            -webkit-text-stroke: 2px rgba(255, 255, 255, 0.3);
+            font-weight: 900;
+        }
+        
+        .title-solid {
+            background: linear-gradient(135deg, #ffffff 0%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900;
+        }
+
+        /* Glassmorphism Element */
+        .glass-tag {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Grid Pattern Overlay for texture */
+        .grid-pattern {
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+            pointer-events: none;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <div class="grid-pattern"></div>
+        <div class="ambient-glow glow-purple"></div>
+        <div class="ambient-glow glow-blue"></div>
+
+        <div class="relative z-10 w-full h-full flex flex-col justify-center pl-24 pr-12">
+            
+            <div class="mb-6 flex items-center">
+                <div class="glass-tag px-6 py-2 rounded-full flex items-center gap-3">
+                    <div class="w-2 h-2 rounded-full bg-[#a78bfa] animate-pulse"></div>
+                    <span class="text-sm tracking-[0.2em] font-medium text-gray-300 uppercase">Monthly Strategy Report</span>
+                </div>
+            </div>
+
+            <div class="flex flex-col leading-none">
+                <h1 class="text-[130px] title-outline tracking-tight select-none">
+                    BUSINESS
+                </h1>
+                <h1 class="text-[130px] title-solid tracking-tight -mt-4 pl-2 select-none">
+                    COMPANY
+                </h1>
+            </div>
+
+            <div class="mt-12 flex items-start gap-8">
+                <div class="w-24 h-[2px] bg-gradient-to-r from-[#a78bfa] to-transparent mt-3"></div>
+                <div class="max-w-md">
+                    <p class="text-lg text-gray-400 font-light leading-relaxed">
+                        Comprehensive analysis of market trends, financial performance, and strategic outlook for the upcoming fiscal quarter.
+                    </p>
+                    
+                    <div class="mt-8 flex gap-12">
+                        <div>
+                            <span class="block text-3xl font-bold text-white">2025</span>
+                            <span class="text-xs text-gray-500 uppercase tracking-widest">Year</span>
+                        </div>
+                        <div>
+                            <span class="block text-3xl font-bold text-white">12</span>
+                            <span class="text-xs text-gray-500 uppercase tracking-widest">Month</span>
+                        </div>
+                        <div>
+                            <span class="block text-3xl font-bold text-[#a78bfa]">+24%</span>
+                            <span class="text-xs text-gray-500 uppercase tracking-widest">Growth</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="absolute bottom-12 right-12 z-20 text-right">
+            <div class="flex flex-col gap-1 items-end">
+                <div class="text-white text-lg font-bold tracking-wide">www.reallygreatsite.com</div>
+                <div class="text-gray-500 text-sm font-light">Internal Use Only</div>
+            </div>
+        </div>
+
+        <div class="absolute top-0 right-32 h-full w-[1px] bg-gradient-to-b from-transparent via-[#ffffff20] to-transparent z-10"></div>
+        <div class="absolute top-[20%] right-[125px] w-2 h-2 bg-[#a78bfa] rounded-full z-20"></div>
+
+    </div>
+
+</body>
+</html>

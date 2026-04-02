@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Projection - Salford & Co.</title>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgBase: '#F4F8F9',
+                        bgAccent: '#E0EFF3',
+                        textPrimary: '#333333',
+                        textSecondary: '#555555',
+                        textMuted: '#777777',
+                        graphicDark: '#707070',
+                        graphicMedium: '#8E8E8E',
+                        accentTeal: '#BDE0E2',
+                        divider: '#2F2F2F',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', '"Noto Sans SC"', 'sans-serif'],
+                        display: ['Inter', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'soft': '0 20px 40px -10px rgba(0, 0, 0, 0.08)',
+                        'inner-light': 'inset 0 2px 4px 0 rgba(255, 255, 255, 0.5)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Structure */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container - Fixed 1280x720 */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background-color: #F4F8F9;
+            font-family: 'Inter', 'Noto Sans SC', sans-serif;
+        }
+
+        /* Decorative Background Gradient */
+        .bg-gradient-blob {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, #E0EFF3 0%, rgba(244, 248, 249, 0) 70%);
+            z-index: 0;
+            top: -200px;
+            left: -100px;
+            opacity: 0.8;
+        }
+
+        .bg-gradient-blob-2 {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, #E0EFF3 0%, rgba(244, 248, 249, 0) 70%);
+            z-index: 0;
+            bottom: -150px;
+            right: -100px;
+            opacity: 0.6;
+        }
+
+        /* Typography Utilities */
+        h1 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 800; /* ExtraBold */
+            letter-spacing: -0.04em;
+            line-height: 1.1;
+            color: #333333;
+        }
+
+        h2, h3, h4, h5, h6 {
+            color: #333333;
+        }
+
+        p {
+            color: #555555;
+            line-height: 1.6;
+        }
+
+        /* Image Shape - Squircle-ish modern card */
+        .image-card {
+            border-radius: 40px 40px 80px 40px; /* Asymmetric rounding for modern look */
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+            transform: translateZ(0); /* Hardware accel */
+        }
+        
+        .image-card img {
+            transition: transform 0.5s ease;
+        }
+
+        /* Layout Grid Helper */
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 40px;
+            padding: 60px 80px; /* Safe area padding */
+            height: 100%;
+            position: relative;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <div class="bg-gradient-blob"></div>
+        <div class="bg-gradient-blob-2"></div>
+
+        <div class="grid-layout">
+            <div class="col-span-7 flex flex-col justify-between h-full pr-8">
+                
+                <div>
+                    <h1 class="text-6xl mb-6">
+                        Financial Projection
+                    </h1>
+                    <div class="w-24 h-1 bg-divider mb-8"></div> <p class="text-textSecondary text-lg font-light max-w-2xl mb-10">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae elit sed est dapibus mattis est nisi arcu mauris diam. Vel luctus tristique, massa ligula pulvinar sapien, vitae imperdiet nibh risus sit amet erat. Donec rutrum faucibus venenatis.
+                    </p>
+                </div>
+
+                <div id="chart-container" class="w-full h-[320px] rounded-2xl bg-white/40 border border-white backdrop-blur-sm shadow-sm p-4"></div>
+            </div>
+
+            <div class="col-span-5 flex flex-col h-full pt-20">
+                
+                <div class="image-card w-full h-[300px] mb-12 relative bg-gray-200">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop" 
+                         alt="Modern Architecture Skyscraper" 
+                         class="w-full h-full object-cover opacity-90 grayscale-[20%] hover:scale-105 duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent mix-blend-multiply"></div>
+                </div>
+
+                <div class="flex flex-col justify-end mt-auto mb-10 pl-4 border-l-4 border-accentTeal">
+                    <div class="flex items-baseline gap-4 mb-2">
+                        <h2 class="text-7xl font-bold text-textPrimary tracking-tighter">50%</h2>
+                        <h3 class="text-xl font-semibold text-textPrimary leading-tight">
+                            Recorded <br>
+                            Exceeding Expectations
+                        </h3>
+                    </div>
+                    <p class="text-textMuted text-sm leading-relaxed max-w-md mt-4">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae elit sed est dapibus mattis est nisi arcu mauris diam. Vel luctus tristique, massa ligula pulvinar sapien.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var chartDom = document.getElementById('chart-container');
+        var myChart = echarts.init(chartDom);
+        var option;
+
+        option = {
+            backgroundColor: 'transparent',
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: { type: 'shadow' }
+            },
+            grid: {
+                top: '5%',
+                left: '2%',
+                right: '10%',
+                bottom: '5%',
+                containLabel: true
+            },
+            xAxis: {
+                type: 'value',
+                show: false, // Hide X axis for cleaner look
+                splitLine: { show: false }
+            },
+            yAxis: {
+                type: 'category',
+                data: ['2026', '2027', '2028', '2029'],
+                axisLine: { show: false },
+                axisTick: { show: false },
+                axisLabel: {
+                    fontSize: 18,
+                    fontWeight: 'bold',
+                    fontFamily: 'Inter',
+                    color: '#333333',
+                    margin: 20
+                },
+                inverse: true // Put 2026 at top to match original image flow
+            },
+            series: [
+                {
+                    name: 'Projection',
+                    type: 'bar',
+                    barWidth: 32, // Thick modern bars
+                    data: [15, 12, 16, 20],
+                    itemStyle: {
+                        borderRadius: [0, 6, 6, 0], // Rounded ends
+                        color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+                            { offset: 0, color: '#8E8E8E' }, // Medium Grey
+                            { offset: 1, color: '#333333' }  // Dark Grey
+                        ])
+                    },
+                    label: {
+                        show: true,
+                        position: 'right',
+                        fontFamily: 'Inter',
+                        fontSize: 16,
+                        fontWeight: 600,
+                        color: '#333333',
+                        formatter: '{c}'
+                    },
+                    showBackground: true,
+                    backgroundStyle: {
+                        color: 'rgba(0,0,0,0.03)', // Very subtle bar track
+                        borderRadius: [0, 6, 6, 0]
+                    }
+                }
+            ]
+        };
+
+        // Highlight the highest value with the Teal Accent color for "Smart" design
+        // 2029 is index 3, value 20
+        option.series[0].data[3] = {
+            value: 20,
+            itemStyle: {
+                borderRadius: [0, 6, 6, 0],
+                color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+                    { offset: 0, color: '#707070' }, 
+                    { offset: 1, color: '#BDE0E2' } // Teal Accent at the tip
+                ]),
+                shadowBlur: 10,
+                shadowColor: 'rgba(189, 224, 226, 0.5)'
+            },
+            label: {
+                color: '#333333',
+                show: true,
+                position: 'right',
+                formatter: '{c}'
+            }
+        };
+
+        option && myChart.setOption(option);
+    </script>
+</body>
+</html>

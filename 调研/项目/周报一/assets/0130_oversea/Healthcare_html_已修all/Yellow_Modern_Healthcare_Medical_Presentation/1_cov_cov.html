@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cover - Medical Healthcare Presentation</title>
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts via Baidu CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px;
+            margin: 0 auto; position: relative;
+            background-color: #F2F3EE;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+            color: #1A1A1A;
+        }
+
+        /* 标题空心效果 */
+        .text-outline {
+            -webkit-text-stroke: 2px #1A1A1A;
+            color: transparent;
+        }
+
+        /* 原有右侧轨道装饰 CSS 保持并优化 */
+        .orbit-container {
+            position: relative;
+            width: 500px; height: 500px;
+            display: flex; justify-content: center; align-items: center;
+        }
+        .orbit-ring {
+            position: absolute; top: 50%; left: 50%;
+            width: 220px; height: 500px;
+            border: 1.5px solid #1A1A1A;
+            border-radius: 50%;
+            transform-origin: center center;
+        }
+        .orbit-1 { transform: translate(-50%, -50%) rotate(45deg); }
+        .orbit-2 { transform: translate(-50%, -50%) rotate(-45deg); }
+        .electron {
+            position: absolute; width: 20px; height: 20px;
+            background-color: #F2F3EE;
+            border: 2px solid #1A1A1A;
+            border-radius: 50%;
+            z-index: 10;
+        }
+        .e-1 { top: 40px; left: 50%; transform: translateX(-50%); }
+        .e-2 { bottom: 40px; left: 50%; transform: translateX(-50%); }
+        
+        .highlight-circle {
+            position: absolute; width: 350px; height: 350px;
+            background-color: #F5FA80; border-radius: 50%;
+            top: 50%; left: 50%; transform: translate(-50%, -50%);
+            z-index: 0; filter: blur(60px); opacity: 0.4;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <!-- 背景水印装饰 -->
+        <div class="absolute -top-10 left-10 text-[240px] font-black text-black/[0.02] select-none tracking-tighter">2025</div>
+        <div class="absolute left-12 top-1/2 -translate-y-1/2 w-[1px] h-40 bg-gray-300"></div>
+
+        <!-- 主内容网格 -->
+        <div class="w-full h-full grid grid-cols-12 relative z-10 px-24">
+            
+            <!-- 左侧内容列：巨型标题 -->
+            <div class="col-span-8 flex flex-col justify-center">
+                <!-- 顶部小标 -->
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="w-12 h-[2px] bg-[#F5FA80]"></div>
+                    <span class="text-xs font-black tracking-[0.4em] text-gray-500 uppercase">Annual Medical Keynote</span>
+                </div>
+
+                <!-- 主标题设计 -->
+                <div class="flex flex-col">
+                    <h1 class="text-[100px] font-bold leading-[0.85] tracking-tighter uppercase">Medical</h1>
+                    <h1 class="text-[100px] font-bold leading-[0.85] tracking-tighter uppercase text-outline py-2">Healthcare</h1>
+                    <h1 class="text-[100px] font-bold leading-[0.85] tracking-tighter uppercase">Presentation</h1>
+                </div>
+
+                <!-- 底部辅助文字 -->
+                <div class="mt-12 flex gap-12 border-t border-gray-200 pt-8 max-w-2xl">
+                    <div class="flex flex-col">
+                        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Institution</span>
+                        <span class="text-lg font-bold">Borcelle Hospital Center</span>
+                    </div>
+                    <div class="flex flex-col ml-8">
+                        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Issue Year</span>
+                        <span class="text-lg font-bold italic font-serif">MMXXV Edition</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右侧视觉列：保留轨道装饰 -->
+            <div class="col-span-4 flex items-center justify-center relative">
+                <!-- 原有轨道视觉组件 -->
+                <div class="orbit-container">
+                    <!-- 背景黄色柔光 -->
+                    <div class="highlight-circle"></div>
+
+                    <!-- 轨道环 1 -->
+                    <div class="orbit-ring orbit-1">
+                        <div class="electron e-1"></div>
+                    </div>
+                    
+                    <!-- 轨道环 2 -->
+                    <div class="orbit-ring orbit-2">
+                        <div class="electron e-2"></div>
+                    </div>
+                    
+                    <!-- 中心点 -->
+                    <div class="absolute w-4 h-4 bg-[#1A1A1A] rounded-full z-20"></div>
+                </div>
+                
+                <!-- 垂直文字装饰 -->
+                <div class="absolute right-0 top-1/2 -translate-y-1/2 rotate-90 origin-right">
+                    <span class="text-[10px] font-bold tracking-[0.5em] text-gray-300 uppercase whitespace-nowrap">Innovation · Care · Excellence</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 统一右下角设计 -->
+        <div class="absolute bottom-10 right-20 z-20 flex items-center">
+            <!-- 封面标志为 Vol. 01 -->
+            <div class="flex flex-col items-end mr-6">
+                <span class="text-[10px] font-bold text-gray-400 tracking-widest uppercase mb-1">Vol.</span>
+                <span class="text-2xl font-light font-serif">01</span>
+            </div>
+            <!-- 分割线 -->
+            <div class="w-[1px] h-12 bg-gray-300 mx-4"></div>
+            <!-- 报告信息 -->
+            <div class="flex flex-col">
+                <span class="text-[#1A1A1A] text-xs font-bold tracking-widest uppercase">Health Report</span>
+                <div class="flex items-center gap-2 mt-1">
+                    <div class="w-2 h-2 bg-[#F5FA80] rounded-full"></div>
+                    <span class="text-[10px] text-gray-500 font-medium uppercase tracking-tighter">Issue 2025 / Q1 Edition</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

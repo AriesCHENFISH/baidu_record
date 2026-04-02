@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Dependence - Forest Theme</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- ECharts -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+
+    <!-- Google Fonts (Domestic Mirror) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        /* CSS Reset & Basics */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Main Container */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background-color: #1A2818; /* Deep Forest Green Base */
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        /* Typography Override for Serif Title */
+        .font-serif-display {
+            font-family: 'Times New Roman', Times, serif; /* Fallback to standard serif for elegance */
+        }
+
+        /* Custom Scrollbar hide */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Utilities */
+        .glass-panel {
+            background: rgba(26, 40, 24, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .organic-curve {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 55%;
+            background: url('https://images.unsplash.com/photo-1448375240586-dfd8d395ea6c?q=80&w=2070&auto=format&fit=crop') no-repeat center center;
+            background-size: cover;
+            /* Create an organic torn edge effect using clip-path */
+            clip-path: polygon(15% 0, 100% 0, 100% 100%, 10% 100%, 12% 90%, 8% 80%, 14% 70%, 10% 60%, 16% 50%, 12% 40%, 8% 30%, 14% 20%, 10% 10%);
+            z-index: 1;
+        }
+
+        .content-layer {
+            position: relative;
+            z-index: 10;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 55% 45%; /* Left Content | Right Chart */
+        }
+
+        /* List Item Styling */
+        .list-card {
+            background: #5A6F41; /* Accent Color */
+            border: 2px solid #FFFFFF; /* Highlight Border */
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <!-- Background Layer: Right side Organic Image -->
+        <div class="organic-curve">
+            <!-- Overlay to blend image slightly with the dark theme -->
+            <div style="width: 100%; height: 100%; background: linear-gradient(90deg, rgba(26,40,24,0.7) 0%, rgba(26,40,24,0.2) 100%);"></div>
+        </div>
+
+        <!-- Main Content Grid -->
+        <div class="content-layer">
+            
+            <!-- Left Column: Text & List -->
+            <div style="padding: 100px 60px 60px 60px; display: flex; flex-direction: column; justify-content: center;">
+                
+                <!-- Title -->
+                <h1 class="font-serif-display" style="color: #FFFFFF; font-size: 64px; line-height: 1.1; margin-bottom: 24px; font-weight: 400;">
+                    Human <br>
+                    <span style="font-style: italic; color: #7FA948;">Dependence</span>
+                </h1>
+
+                <!-- Intro Paragraph -->
+                <p style="color: rgba(255,255,255,0.8); font-size: 16px; line-height: 1.6; margin-bottom: 40px; max-width: 550px;">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+
+                <!-- List Items -->
+                <div style="display: flex; flex-direction: column; gap: 16px;">
+                    <!-- Item 1 -->
+                    <div class="list-card" style="display: flex; align-items: center; padding: 14px 24px; border-radius: 8px;">
+                        <div style="margin-right: 16px; color: #FFFFFF;">
+                            <i class="fa-solid fa-circle-arrow-right fa-lg"></i>
+                        </div>
+                        <h3 style="color: #FFFFFF; font-size: 16px; font-weight: 600;">Oxygen Production and Climate Regulation</h3>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="list-card" style="display: flex; align-items: center; padding: 14px 24px; border-radius: 8px;">
+                        <div style="margin-right: 16px; color: #FFFFFF;">
+                            <i class="fa-solid fa-circle-arrow-right fa-lg"></i>
+                        </div>
+                        <h3 style="color: #FFFFFF; font-size: 16px; font-weight: 600;">Biodiversity Hotspots</h3>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="list-card" style="display: flex; align-items: center; padding: 14px 24px; border-radius: 8px;">
+                        <div style="margin-right: 16px; color: #FFFFFF;">
+                            <i class="fa-solid fa-circle-arrow-right fa-lg"></i>
+                        </div>
+                        <h3 style="color: #FFFFFF; font-size: 16px; font-weight: 600;">Water Cycle and Soil Protection</h3>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="list-card" style="display: flex; align-items: center; padding: 14px 24px; border-radius: 8px;">
+                        <div style="margin-right: 16px; color: #FFFFFF;">
+                            <i class="fa-solid fa-circle-arrow-right fa-lg"></i>
+                        </div>
+                        <h3 style="color: #FFFFFF; font-size: 16px; font-weight: 600;">Resources and Livelihoods</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Chart Visualization -->
+            <div style="position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center; padding-right: 40px;">
+                
+                <!-- Chart Card Container (Floating Glass Effect) -->
+                <div class="glass-panel" style="width: 480px; height: 500px; border-radius: 24px; padding: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
+                    
+                    <!-- Chart Title inside card -->
+                    <div style="margin-bottom: 10px; text-align: center;">
+                        <h4 style="color: #FFFFFF; font-size: 18px; font-weight: 500; letter-spacing: 1px;">DISTRIBUTION ANALYSIS</h4>
+                        <div style="width: 40px; height: 3px; background-color: #7FA948; margin: 8px auto 0;"></div>
+                    </div>
+
+                    <!-- ECharts Container -->
+                    <div id="pie-chart" style="width: 100%; height: 400px;"></div>
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // Initialize ECharts
+        var chartDom = document.getElementById('pie-chart');
+        var myChart = echarts.init(chartDom);
+        var option;
+
+        option = {
+            color: ['#1A2818', '#7FA948', '#C4D6B0'], // Dark Jungle, Fresh Green, Pale Leaf
+            tooltip: {
+                trigger: 'item',
+                backgroundColor: 'rgba(26, 40, 24, 0.9)',
+                borderColor: '#7FA948',
+                textStyle: {
+                    color: '#fff'
+                }
+            },
+            legend: {
+                bottom: '0%',
+                left: 'center',
+                textStyle: {
+                    color: '#fff',
+                    fontSize: 12
+                },
+                itemGap: 20
+            },
+            series: [
+                {
+                    name: 'Dependence Scale',
+                    type: 'pie',
+                    radius: ['45%', '70%'], // Donut chart for modern look
+                    avoidLabelOverlap: false,
+                    itemStyle: {
+                        borderRadius: 5,
+                        borderColor: '#5A6F41',
+                        borderWidth: 1
+                    },
+                    label: {
+                        show: true,
+                        position: 'outside',
+                        formatter: '{b}\n{d}%',
+                        color: '#fff',
+                        fontSize: 14,
+                        fontWeight: 'bold'
+                    },
+                    labelLine: {
+                        show: true,
+                        length: 15,
+                        length2: 10,
+                        lineStyle: {
+                            color: '#fff'
+                        }
+                    },
+                    data: [
+                        { value: 62.5, name: 'Item 1' },
+                        { value: 25.0, name: 'Item 2' },
+                        { value: 12.5, name: 'Item 3' }
+                    ]
+                }
+            ]
+        };
+
+        option && myChart.setOption(option);
+    </script>
+</body>
+</html>

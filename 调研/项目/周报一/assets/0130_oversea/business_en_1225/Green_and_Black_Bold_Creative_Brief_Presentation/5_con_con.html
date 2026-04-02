@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About The Brand - Creative Keynote</title>
+    
+    <!-- 1. FontAwesome CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- 2. Domestic Font CDN (As requested) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- 3. Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <!-- 4. Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandDark: '#111111',
+                        brandLime: '#DFFF5E',
+                        brandGray: '#E0E0E0',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'Inter', 'sans-serif'],
+                    },
+                    spacing: {
+                        '128': '32rem',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- 5. Custom CSS Reset & Layout Styles -->
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* Page Container Configuration */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #111111;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+            /* No external shadows allowed per request */
+        }
+
+        /* Utility helper for image containers */
+        .img-wrapper {
+            position: relative;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Presentation Container -->
+    <div id="page_container" class="flex flex-col p-12 text-white">
+
+        <!-- HEADER SECTION: Navigation Pills & Date -->
+        <header class="flex justify-between items-center w-full h-16 mb-8 z-20">
+            <!-- Left: Navigation Pills -->
+            <nav>
+                <ul class="flex gap-6 list-none">
+                    <!-- Pill 1: The Brand -->
+                    <li class="group">
+                        <div class="border border-brandLime rounded-full px-6 py-2 flex items-center gap-3 transition-colors">
+                            <i class="fa-solid fa-arrow-up-right-from-square text-brandLime text-sm"></i>
+                            <span class="text-brandGray text-sm font-medium tracking-wide">The Brand</span>
+                        </div>
+                    </li>
+                    <!-- Pill 2: Paucek and Lage -->
+                    <li>
+                        <div class="border border-brandLime rounded-full px-6 py-2 flex items-center">
+                            <span class="text-brandGray text-sm font-medium tracking-wide">Paucek and Lage</span>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Right: Year Indicator -->
+            <div class="text-right">
+                <span class="text-brandLime text-3xl font-bold tracking-tighter">2024</span>
+            </div>
+        </header>
+
+        <!-- MAIN CONTENT GRID: 2 Columns -->
+        <div class="grid grid-cols-12 gap-12 h-full pb-8">
+            
+            <!-- LEFT COLUMN: Image Composition (Collage Style) -->
+            <div class="col-span-6 relative h-full">
+                <!-- Decorative background shape for depth -->
+                <div class="absolute top-10 left-10 right-10 bottom-0 bg-[#1a1a1a] rounded-lg"></div>
+
+                <!-- Main Image: Woman working at desk -->
+                <!-- Using a container for semantic correctness regarding image placement -->
+                <div class="absolute top-4 right-0 w-[90%] h-[85%] overflow-hidden rounded-sm z-10">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop" 
+                         alt="Creative professional working at a minimal desk" 
+                         class="w-full h-full object-cover opacity-90 grayscale-[20%] contrast-110">
+                    <!-- 500*550 -->
+                </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN: Typography & Content -->
+            <div class="col-span-6 flex flex-col justify-center pr-8 z-10">
+                
+                <!-- Headline Section -->
+                <div class="mb-10">
+                    <h1 class="text-7xl font-bold uppercase leading-[0.9] tracking-tighter text-white">
+                        About The <br>
+                        Brand<span class="text-brandLime">.</span>
+                    </h1>
+                </div>
+
+                <!-- Body Text Section -->
+                <div class="max-w-md">
+                    <p class="text-brandGray text-lg leading-relaxed font-light mb-6">
+                        Presentations are communication tools that can be used as demonstrations, lectures, speeches, reports, and more. It is mostly presented before an audience.
+                    </p>
+                    <p class="text-brandGray text-lg leading-relaxed font-light border-l-2 border-brandLime pl-4">
+                        It serves a variety of purposes, making presentations powerful tools for convincing and teaching.
+                    </p>
+                </div>
+
+                <!-- Decorative Element / Footer for this column -->
+                <div class="mt-12 flex items-center gap-3">
+                     <!-- Simple graphic indicator -->
+                     <div class="w-2 h-2 rounded-full bg-brandLime"></div>
+                     <div class="w-16 h-[1px] bg-brandGray opacity-50"></div>
+                     <span class="text-xs text-brandGray tracking-widest uppercase">Keynote Strategy</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Background Decorative Grain (Optional for aesthetics, kept subtle) -->
+        <div class="absolute inset-0 pointer-events-none opacity-[0.03] z-0" 
+             style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E');">
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grow Consistently - Keynote Slide</title>
+
+    <!-- Google Fonts (Domestic Mirror) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- ECharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.2/echarts.min.js"></script>
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgMain: '#FAFAFA',
+                        textPrimary: '#1A1A1A',
+                        textSecondary: '#555555',
+                        accentOrange: '#E57D48',
+                        accentBlue: '#4D9EF4',
+                        gridLine: '#E0E0E0',
+                        pureWhite: '#FFFFFF',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'Inter', 'sans-serif'],
+                    },
+                    spacing: {
+                        '1280': '1280px',
+                        '720': '720px',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* Slide Container */
+        .page-container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FAFAFA;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+            /* Flex layout for the 2-column structure */
+            display: flex;
+            padding: 60px 80px; /* Generous whitespace */
+        }
+
+        /* Typography & Utility Tweaks */
+        h1 {
+            font-weight: 800;
+            letter-spacing: -0.025em;
+        }
+        
+        p {
+            margin-bottom: 0.75rem;
+        }
+
+        /* Custom Scrollbar hide */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div class="page-container">
+        
+        <!-- Left Column: Content (50%) -->
+        <div class="w-1/2 flex flex-col justify-between pr-12 z-10">
+            
+            <!-- Header Section -->
+            <div>
+                <h1 class="text-5xl text-textPrimary mb-8 leading-tight">
+                    Grow Consistently
+                </h1>
+
+                <!-- Body Text -->
+                <div class="text-textSecondary text-sm leading-relaxed space-y-4 text-justify">
+                    <p>
+                        Leaders who last are always growing. They learn from every success and setback, and they remain open to feedback. Growth keeps leadership fresh, relevant, and resilient. It shows humility and a desire to improve. Leaders who stop growing eventually lose their ability to lead effectively.
+                    </p>
+                    <p>
+                        By embracing a mindset of perpetual growth, leaders not only enhance their capabilities but also inspire those around them. They cultivate a culture of learning within their teams, encouraging curiosity and innovation.
+                    </p>
+                    <!-- Bold conclusion paragraph -->
+                    <p class="font-bold text-textPrimary">
+                        As a result, these leaders create a dynamic and forward-thinking organization capable of navigating challenges with agility and foresight.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-4">
+                <!-- UI Widget Component -->
+                <div class="relative w-full max-w-md">
+                    <!-- Blue Tab (Absolute positioned behind/top) -->
+                    <div class="absolute -top-8 left-0 bg-accentBlue text-pureWhite px-6 py-2 rounded-t-xl text-sm font-medium shadow-sm">
+                        Learn from feedback
+                    </div>
+
+                    <!-- Orange Container -->
+                    <div class="relative bg-accentOrange p-3 rounded-2xl rounded-tl-none shadow-lg flex items-center gap-4">
+                        <!-- Image Container -->
+                        <div class="bg-gray-200 rounded-xl overflow-hidden w-full h-24 relative shadow-inner">
+                             <!-- Using a business/writing related image -->
+                            <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop" 
+                                 alt="Person writing notes" 
+                                 class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-300">
+                            <!-- 400*150 -->
+                        </div>
+                        
+                        <!-- Hamburger Menu Icon -->
+                        <div class="pr-3 pl-1">
+                            <i class="fa-solid fa-bars text-pureWhite text-2xl cursor-pointer"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column: Chart (50%) -->
+        <div class="w-1/2 flex flex-col justify-center pl-4 relative">
+            <!-- Decorative Background Circle (Subtle) -->
+            <div class="absolute top-10 right-10 w-64 h-64 bg-accentBlue opacity-5 rounded-full blur-3xl -z-1"></div>
+
+            <!-- Chart Container -->
+            <div id="growthChart" class="w-full h-[550px]"></div>
+        </div>
+
+    </div>
+
+    <!-- ECharts Initialization -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var chartDom = document.getElementById('growthChart');
+            var myChart = echarts.init(chartDom);
+            var option;
+
+            // Define colors
+            const colorOrange = '#E57D48';
+            const colorBlue = '#4D9EF4';
+            const colorTextMain = '#1A1A1A';
+            const colorTextSub = '#555555';
+            const colorGrid = '#E0E0E0';
+
+            option = {
+                // Animation settings
+                animation: false, // Requirement: No animation
+                
+                // Legend
+                legend: {
+                    top: '0%',
+                    right: '0%',
+                    icon: 'circle',
+                    itemGap: 25,
+                    textStyle: {
+                        color: colorTextMain,
+                        fontSize: 14,
+                        fontFamily: 'Inter'
+                    },
+                    data: ['Item 1', 'Item 2', 'Item 3', 'Item 4']
+                },
+
+                // Grid layout
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    containLabel: true,
+                    show: false // Hide outer border
+                },
+
+                // X Axis
+                xAxis: [
+                    {
+                        type: 'category',
+                        data: ['Item 1', 'Item 2', 'Item 3', 'Item 4'],
+                        axisTick: { show: false },
+                        axisLine: { 
+                            show: true,
+                            lineStyle: { color: colorGrid } 
+                        },
+                        axisLabel: {
+                            color: colorTextSub,
+                            fontSize: 14,
+                            margin: 15,
+                            fontFamily: 'Inter'
+                        }
+                    }
+                ],
+
+                // Y Axis
+                yAxis: [
+                    {
+                        type: 'value',
+                        min: 0,
+                        max: 20,
+                        interval: 5,
+                        axisLabel: {
+                            color: colorTextSub,
+                            fontSize: 14,
+                            fontFamily: 'Inter'
+                        },
+                        splitLine: {
+                            show: true,
+                            lineStyle: {
+                                color: colorGrid,
+                                type: 'solid'
+                            }
+                        }
+                    }
+                ],
+
+                // Data Series
+                series: [
+                    {
+                        name: 'Growth Data',
+                        type: 'bar',
+                        barWidth: '75%', // Fat bars like original
+                        data: [
+                            { 
+                                value: 8, 
+                                name: 'Item 1',
+                                itemStyle: { 
+                                    color: colorOrange,
+                                    borderRadius: [6, 6, 0, 0] // Rounded top
+                                } 
+                            },
+                            { 
+                                value: 12, 
+                                name: 'Item 2',
+                                itemStyle: { 
+                                    color: colorBlue,
+                                    borderRadius: [6, 6, 0, 0]
+                                } 
+                            },
+                            { 
+                                value: 16, 
+                                name: 'Item 3',
+                                itemStyle: { 
+                                    color: colorOrange,
+                                    borderRadius: [6, 6, 0, 0]
+                                } 
+                            },
+                            { 
+                                value: 20, 
+                                name: 'Item 4',
+                                itemStyle: { 
+                                    color: colorBlue,
+                                    borderRadius: [6, 6, 0, 0]
+                                } 
+                            }
+                        ],
+                        // Label specific to show legend logic manually since it's a single series with mixed colors
+                        // We trick the legend by adding dummy series if we wanted interactive legend, 
+                        // but for static visual matching, we just color the bars directly.
+                    },
+                    // Dummy series for Legend generation to match the specific color mapping in the header
+                    { name: 'Item 1', type: 'bar', color: colorOrange, data: [] },
+                    { name: 'Item 2', type: 'bar', color: colorBlue, data: [] },
+                    { name: 'Item 3', type: 'bar', color: colorOrange, data: [] },
+                    { name: 'Item 4', type: 'bar', color: colorBlue, data: [] }
+                ]
+            };
+
+            option && myChart.setOption(option);
+            
+            // Handle Resize
+            window.addEventListener('resize', function() {
+                myChart.resize();
+            });
+        });
+    </script>
+</body>
+</html>

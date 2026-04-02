@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audience Insights - Premium Keynote</title>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+
+    <style>
+        /* CSS Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #000000;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+            color: #FFFFFF;
+        }
+
+        /* Typography & Utilities */
+        .text-accent { color: #C3E86C; }
+        .text-secondary { color: #808080; }
+        .text-sub { color: #CCCCCC; }
+
+        /* Grid Layout Specifics */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 380px 1fr;
+            grid-template-rows: 1fr 140px; /* Adjusted row height */
+            height: 100%;
+        }
+
+        .section-border-right { border-right: 1px solid #333333; }
+        .section-border-bottom { border-bottom: 1px solid #333333; }
+
+        /* Custom Scrollbar hide */
+        ::-webkit-scrollbar { display: none; }
+
+        /* Font Styling Override for Title */
+        .font-display {
+            font-family: 'Times New Roman', serif;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <div class="absolute top-0 left-0 w-full px-16 pt-12 pb-6 z-10">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-8 h-8 rounded bg-[#C3E86C] flex items-center justify-center text-black font-bold text-lg">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+                <h4 class="text-sm tracking-widest font-medium uppercase text-white">Rimberio Marketing</h4>
+            </div>
+
+            <h1 class="text-7xl font-light tracking-tight text-white leading-tight">
+                <span class="font-display pr-4">Audience</span>
+                <span class="font-display font-light text-[#C3E86C]">Insights</span>
+            </h1>
+        </div>
+
+        <div class="absolute top-[28%] left-0 w-full h-[72%] border-t border-[#333333]">
+            <div class="dashboard-grid">
+                
+                <div class="section-border-right p-8 relative flex flex-col justify-between" style="grid-row: span 2;">
+                    <div>
+                        <h3 class="text-sub text-lg font-medium mb-4">Age Group</h3>
+                        <div id="chart-age" style="width: 100%; height: 260px;"></div>
+                    </div>
+
+                    <ul class="space-y-3 mt-2">
+                        <li class="flex items-center justify-between group">
+                            <div class="flex items-center gap-3">
+                                <div class="w-3 h-3 rounded-full bg-[#C3E86C]"></div>
+                                <span class="text-white text-base">Age 18-25</span>
+                            </div>
+                            <span class="text-white font-bold">30%</span>
+                        </li>
+                        <li class="flex items-center justify-between group">
+                            <div class="flex items-center gap-3">
+                                <div class="w-3 h-3 rounded-full bg-[#9AC148]"></div>
+                                <span class="text-white text-base">Age 26-35</span>
+                            </div>
+                            <span class="text-white font-bold">40%</span>
+                        </li>
+                        <li class="flex items-center justify-between group">
+                            <div class="flex items-center gap-3">
+                                <div class="w-3 h-3 rounded-full bg-[#729130]"></div>
+                                <span class="text-white text-base">Age 36-45</span>
+                            </div>
+                            <span class="text-white font-bold">15%</span>
+                        </li>
+                        <li class="flex items-center justify-between group">
+                            <div class="flex items-center gap-3">
+                                <div class="w-3 h-3 rounded-full bg-[#4D6320]"></div>
+                                <span class="text-white text-base">Age 46+</span>
+                            </div>
+                            <span class="text-white font-bold">10%</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="flex section-border-bottom">
+                    
+                    <div class="flex-1 section-border-right p-8 flex flex-col">
+                        <h3 class="text-sub text-lg font-medium mb-6">Gender</h3>
+                        
+                        <div class="flex flex-col justify-center h-full gap-8">
+                            <div class="flex flex-col gap-2">
+                                <div class="flex justify-between items-end mb-2">
+                                    <span class="text-secondary text-sm uppercase tracking-widest">Male</span>
+                                    <span class="text-white text-4xl font-light">40%</span>
+                                </div>
+                                <div class="flex justify-between text-2xl">
+                                    <i class="fa-solid fa-person text-accent"></i>
+                                    <i class="fa-solid fa-person text-accent"></i>
+                                    <i class="fa-solid fa-person text-accent"></i>
+                                    <i class="fa-solid fa-person text-accent"></i>
+                                    <i class="fa-solid fa-person text-[#333333]"></i>
+                                    <i class="fa-solid fa-person text-[#333333]"></i>
+                                    <i class="fa-solid fa-person text-[#333333]"></i>
+                                    <i class="fa-solid fa-person text-[#333333]"></i>
+                                    <i class="fa-solid fa-person text-[#333333]"></i>
+                                    <i class="fa-solid fa-person text-[#333333]"></i>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col gap-2">
+                                <div class="flex justify-between items-end mb-2">
+                                    <span class="text-secondary text-sm uppercase tracking-widest">Female</span>
+                                    <span class="text-white text-4xl font-light">60%</span>
+                                </div>
+                                <div class="flex justify-between text-2xl">
+                                    <i class="fa-solid fa-person-dress text-accent"></i>
+                                    <i class="fa-solid fa-person-dress text-accent"></i>
+                                    <i class="fa-solid fa-person-dress text-accent"></i>
+                                    <i class="fa-solid fa-person-dress text-accent"></i>
+                                    <i class="fa-solid fa-person-dress text-accent"></i>
+                                    <i class="fa-solid fa-person-dress text-accent"></i>
+                                    <i class="fa-solid fa-person-dress text-[#333333]"></i>
+                                    <i class="fa-solid fa-person-dress text-[#333333]"></i>
+                                    <i class="fa-solid fa-person-dress text-[#333333]"></i>
+                                    <i class="fa-solid fa-person-dress text-[#333333]"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex-1 p-8 flex flex-col">
+                        <h3 class="text-sub text-lg font-medium mb-6">Location</h3>
+                        
+                        <ul class="flex flex-col justify-center h-full gap-6">
+                            <li class="w-full">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-white font-light">Location 1</span>
+                                    <span class="text-accent font-bold">25%</span>
+                                </div>
+                                <div class="w-full bg-[#1a1a1a] h-1 rounded-full overflow-hidden">
+                                    <div class="bg-[#C3E86C] h-full w-[25%]"></div>
+                                </div>
+                            </li>
+                            <li class="w-full">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-white font-light">Location 2</span>
+                                    <span class="text-white font-bold">20%</span>
+                                </div>
+                                <div class="w-full bg-[#1a1a1a] h-1 rounded-full overflow-hidden">
+                                    <div class="bg-[#9AC148] h-full w-[20%]"></div>
+                                </div>
+                            </li>
+                            <li class="w-full">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-white font-light">Location 3</span>
+                                    <span class="text-white font-bold">15%</span>
+                                </div>
+                                <div class="w-full bg-[#1a1a1a] h-1 rounded-full overflow-hidden">
+                                    <div class="bg-[#729130] h-full w-[15%]"></div>
+                                </div>
+                            </li>
+                             <li class="w-full">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-white font-light">Other</span>
+                                    <span class="text-secondary font-bold">40%</span>
+                                </div>
+                                <div class="w-full bg-[#1a1a1a] h-1 rounded-full overflow-hidden">
+                                    <div class="bg-[#333333] h-full w-[40%]"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="p-8 flex items-center">
+                    <div class="grid grid-cols-3 w-full gap-8">
+                        <div class="col-span-1 border-l-2 border-[#C3E86C] pl-6 flex flex-col justify-center">
+                            <h3 class="text-accent text-xl font-bold uppercase tracking-widest mb-1">Behavior</h3>
+                            <p class="text-white text-2xl font-light">Insights</p>
+                        </div>
+
+                        <div class="col-span-1 bg-[#111111] p-5 rounded border border-[#222] flex flex-col justify-center">
+                            <p class="text-secondary text-xs uppercase tracking-wider mb-2">Peak Engagement</p>
+                            <div class="flex items-baseline gap-2">
+                                <i class="fa-regular fa-clock text-accent"></i>
+                                <h4 class="text-white text-2xl font-bold">6PM - 8PM</h4>
+                            </div>
+                        </div>
+
+                        <div class="col-span-1 bg-[#111111] p-5 rounded border border-[#222] flex flex-col justify-center">
+                            <p class="text-secondary text-xs uppercase tracking-wider mb-2">Preferred Content</p>
+                            <div class="flex items-baseline gap-2">
+                                <i class="fa-regular fa-heart text-accent"></i>
+                                <h4 class="text-white text-2xl font-bold leading-tight">Lifestyle</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+
+    <script type="text/javascript">
+        var dom = document.getElementById('chart-age');
+        var myChart = echarts.init(dom, null, { renderer: 's', useDirtyRect: false });
+
+        var option = {
+            backgroundColor: 'transparent',
+            color: ['#C3E86C', '#9AC148', '#729130', '#4D6320'],
+            tooltip: { trigger: 'item', formatter: '{b}: {d}%', backgroundColor: 'rgba(0,0,0,0.8)' },
+            legend: { show: false },
+            series: [
+                {
+                    name: 'Age Group',
+                    type: 'pie',
+                    radius: ['55%', '75%'],
+                    center: ['50%', '50%'],
+                    avoidLabelOverlap: false,
+                    itemStyle: { borderRadius: 0, borderColor: '#000', borderWidth: 2 },
+                    label: { show: false, position: 'center' },
+                    emphasis: {
+                        label: { show: true, fontSize: 24, fontWeight: 'bold', color: '#fff', formatter: '{d}%' }
+                    },
+                    data: [
+                        { value: 30, name: '18-25' },
+                        { value: 40, name: '26-35' },
+                        { value: 15, name: '36-45' },
+                        { value: 10, name: '46+' }
+                    ]
+                }
+            ]
+        };
+
+        if (option && typeof option === 'object') { myChart.setOption(option); }
+    </script>
+</body>
+</html>

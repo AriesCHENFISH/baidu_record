@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Sports Presentation</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts (Mandatory Source) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <!-- Additional Google Font for Retro Impact (Inter/Roboto as fallback/support) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        lemon: '#F9FA5D',
+                        vibrantOrange: '#E05320',
+                        sportyBlue: '#3131C6',
+                        warmBrown: '#996633',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans SC', 'Roboto', 'sans-serif'],
+                        serif: ['Georgia', 'serif'], // Used for the "Importance" title style match
+                    },
+                    letterSpacing: {
+                        'ultra-wide': '0.25em',
+                        'tightest': '-0.05em',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Global Settings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container Definition */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #F9FA5D; /* lemon */
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+            display: grid;
+            grid-template-rows: auto 1fr auto; /* Header, Main Content, Footer */
+            /* No external box-shadow as per requirements */
+        }
+
+        /* Utility for the outline text effect on the top title */
+        .text-outline {
+             -webkit-text-stroke: 2px #E05320;
+             color: transparent;
+        }
+        
+        /* Custom clipping for the tape effect */
+        .tape-edge {
+            clip-path: polygon(2% 0, 100% 0, 98% 100%, 0% 100%);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div id="page_container">
+
+        <!-- HEADER SECTION -->
+        <header class="w-full pt-10 px-12 flex flex-col items-center justify-center z-20">
+            <!-- Subtitle: THE IMPORTANCE OF YOUTH -->
+            <h2 class="text-vibrantOrange font-serif font-bold text-2xl tracking-[0.3em] uppercase mb-[-10px]">
+                The Importance of Youth
+            </h2>
+            
+            <!-- Main Title: SPORTS -->
+            <!-- Using ultra-heavy font weight and tight spacing to replicate the retro poster look -->
+            <h1 class="text-vibrantOrange font-black text-[180px] leading-none tracking-tightest uppercase transform scale-y-90 select-none">
+                SPORTS
+            </h1>
+        </header>
+
+        <!-- MAIN CONTENT SECTION (Image & Tape) -->
+        <main class="relative w-full flex justify-center items-center -mt-6">
+            
+            <!-- Decorative Element: Blue Tape (Background Layer) -->
+            <!-- Rotated, behind image, infinite text strip look -->
+            <div class="absolute left-0 w-[110%] h-16 bg-sportyBlue transform -rotate-2 top-16 -ml-4 z-0 flex items-center overflow-hidden border-y-2 border-white">
+                <div class="flex whitespace-nowrap animate-marquee">
+                    <p class="text-white font-bold text-xl uppercase tracking-widest px-4">Sport Presentation</p>
+                    <p class="text-white font-bold text-xl uppercase tracking-widest px-4">Sport Presentation</p>
+                    <p class="text-white font-bold text-xl uppercase tracking-widest px-4">Sport Presentation</p>
+                    <p class="text-white font-bold text-xl uppercase tracking-widest px-4">Sport Presentation</p>
+                    <p class="text-white font-bold text-xl uppercase tracking-widest px-4">Sport Presentation</p>
+                    <p class="text-white font-bold text-xl uppercase tracking-widest px-4">Sport Presentation</p>
+                    <p class="text-white font-bold text-xl uppercase tracking-widest px-4">Sport Presentation</p>
+                    <p class="text-white font-bold text-xl uppercase tracking-widest px-4">Sport Presentation</p>
+                </div>
+            </div>
+
+             <!-- Decorative Element: White Tape (Background Layer) -->
+             <div class="absolute right-0 w-[110%] h-14 bg-white transform rotate-3 top-24 -mr-4 z-0 flex items-center overflow-hidden border-y-2 border-sportyBlue opacity-90">
+                <div class="flex whitespace-nowrap">
+                    <p class="text-sportyBlue font-bold text-lg uppercase tracking-widest px-4">Sport Presentation</p>
+                    <p class="text-sportyBlue font-bold text-lg uppercase tracking-widest px-4">Sport Presentation</p>
+                    <p class="text-sportyBlue font-bold text-lg uppercase tracking-widest px-4">Sport Presentation</p>
+                    <p class="text-sportyBlue font-bold text-lg uppercase tracking-widest px-4">Sport Presentation</p>
+                    <p class="text-sportyBlue font-bold text-lg uppercase tracking-widest px-4">Sport Presentation</p>
+                    <p class="text-sportyBlue font-bold text-lg uppercase tracking-widest px-4">Sport Presentation</p>
+                    <p class="text-sportyBlue font-bold text-lg uppercase tracking-widest px-4">Sport Presentation</p>
+                </div>
+            </div>
+
+            <!-- Central Image Container -->
+            <!-- Dimensions roughly 65% width to match reference -->
+            <div class="relative z-10 w-[700px] h-[300px] border-4 border-black bg-gray-200 overflow-hidden shadow-[10px_10px_0px_0px_rgba(0,0,0,1)]">
+                <!-- Using Unsplash image for Basketball/Sky theme -->
+                <img src="https://images.unsplash.com/photo-1519861531473-9200262188bf?q=80&w=1000&auto=format&fit=crop" 
+                     alt="Basketball hoop against a blue sky" 
+                     class="w-full h-full object-cover">
+                <!-- 700*300 -->
+            </div>
+        </main>
+
+        <!-- FOOTER SECTION -->
+        <footer class="w-full px-16 pb-12 flex justify-between items-center z-20">
+            
+            <!-- Left Icon: Retro Starburst -->
+            <div class="text-vibrantOrange transform hover:rotate-12 transition-transform duration-300">
+                <i class="fa-solid fa-certificate text-7xl"></i>
+            </div>
+
+            <!-- Text Content -->
+            <!-- Warm brown text for readability on yellow -->
+            <div class="max-w-4xl px-8 text-center">
+                <p class="text-warmBrown text-[17px] font-medium leading-relaxed">
+                    Sports play an important role in youth development, teaching valuable life lessons such as teamwork, discipline, and perseverance. It helps young individuals stay active, build confidence, and improve social skills. Encouraging participation in sports from an early age promotes a healthy lifestyle and prepares future generations for success in any field.
+                </p>
+            </div>
+
+            <!-- Right Icon: Retro Starburst -->
+            <div class="text-vibrantOrange transform hover:-rotate-12 transition-transform duration-300">
+                <i class="fa-solid fa-certificate text-7xl"></i>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>

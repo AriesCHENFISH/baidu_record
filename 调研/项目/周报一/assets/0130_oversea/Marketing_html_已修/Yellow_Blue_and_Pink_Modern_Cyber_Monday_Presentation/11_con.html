@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversion Funnel Analysis</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgBlack: '#000000',
+                        textWhite: '#FFFFFF',
+                        accentRed: '#D94545',
+                        textGrey: '#B0B0B0',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Basics */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .page-container {
+            width: 1280px;
+            margin: 0 auto;
+            height: 720px;
+            background-color: #000000;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .decoration-line {
+            height: 1px;
+            background: linear-gradient(90deg, #D94545, #333333);
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Tech Corner Styling */
+        .tech-corner-t-l { position: absolute; top: 0; left: 0; width: 1.5rem; height: 1.5rem; border-top: 2px solid #D94545; border-left: 2px solid #D94545; z-index: 10; }
+        .tech-corner-t-r { position: absolute; top: 0; right: 0; width: 1.5rem; height: 1.5rem; border-top: 2px solid #D94545; border-right: 2px solid #D94545; z-index: 10; }
+        .tech-corner-b-l { position: absolute; bottom: 0; left: 0; width: 1.5rem; height: 1.5rem; border-bottom: 2px solid #D94545; border-left: 2px solid #D94545; z-index: 10; }
+        .tech-corner-b-r { position: absolute; bottom: 0; right: 0; width: 1.5rem; height: 1.5rem; border-bottom: 2px solid #D94545; border-right: 2px solid #D94545; z-index: 10; }
+    </style>
+</head>
+<body>
+
+    <div class="page-container">
+        <div class="grid grid-cols-12 h-full p-12 gap-8">
+
+            <div class="col-span-12 flex justify-between items-start mb-4">
+                <h1 class="text-white text-7xl font-black tracking-tighter uppercase leading-none">
+                    CONVERSION<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-gray-500">FUNNEL ANALYSIS</span>
+                </h1>
+                <div class="text-textGrey text-4xl pt-2 opacity-50">
+                    <i class="fa-solid fa-filter"></i>
+                </div>
+            </div>
+
+            <div class="col-span-4 flex flex-col pt-4 pr-6 relative">
+                <h2 class="text-white text-lg font-bold tracking-widest uppercase mb-2">
+                    FROM IMPRESSION TO PURCHASE
+                </h2>
+                <div class="decoration-line"></div>
+                <div class="mb-6">
+                    <p class="text-textGrey text-sm font-light leading-relaxed text-justify">
+                        TRACKING THE CUSTOMER JOURNEY IS CRITICAL FOR IDENTIFYING BOTTLENECKS. THIS FUNNEL VISUALIZES THE DROP-OFF RATE AT EACH STAGE, HIGHLIGHTING WHERE POTENTIAL BUYERS ARE LOST.
+                    </p>
+                </div>
+                <div>
+                    <p class="text-textGrey text-sm font-light leading-relaxed text-justify">
+                        OPTIMIZING THE 'ADD TO CART' TO 'PURCHASE' TRANSITION OFTEN YIELDS THE HIGHEST ROI. FOCUS ON REDUCING FRICTION AT THE PAYMENT GATEWAY TO MAXIMIZE FINAL CONVERSIONS.
+                    </p>
+                </div>
+                
+                <div class="mt-auto flex items-center space-x-2">
+                    <div class="w-2 h-2 rounded-full bg-accentRed"></div>
+                    <p class="text-textGrey text-xs tracking-wider uppercase">
+                        CRITICAL PATH OPTIMIZATION
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-span-8 relative h-full">
+                <div class="w-full h-full bg-gray-900/30 relative p-4 border border-gray-800">
+                    <div class="tech-corner-t-l"></div>
+                    <div class="tech-corner-t-r"></div>
+                    <div class="tech-corner-b-l"></div>
+                    <div class="tech-corner-b-r"></div>
+                    
+                    <div id="funnelChart" class="w-full h-full"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const funnelChartDom = document.getElementById('funnelChart');
+        const funnelChart = echarts.init(funnelChartDom);
+        const funnelOption = {
+            backgroundColor: 'transparent',
+            // Colors: Grayscale transitioning to the Accent Red for the final step
+            color: ['#4a4a4a', '#666666', '#888888', '#D94545'], 
+            tooltip: {
+                trigger: 'item',
+                formatter: '{b} : {c}%'
+            },
+            series: [
+                {
+                    name: 'Conversion Funnel',
+                    type: 'funnel',
+                    left: '10%',
+                    top: '5%',
+                    bottom: '5%',
+                    width: '80%',
+                    min: 0,
+                    max: 100,
+                    minSize: '0%',
+                    maxSize: '100%',
+                    sort: 'descending',
+                    gap: 2,
+                    label: {
+                        show: true,
+                        position: 'inside',
+                        color: '#fff',
+                        fontSize: 12,
+                        formatter: '{b}\n{c}%'
+                    },
+                    labelLine: {
+                        length: 10,
+                        lineStyle: {
+                            width: 1,
+                            type: 'solid'
+                        }
+                    },
+                    itemStyle: {
+                        borderColor: '#000',
+                        borderWidth: 2
+                    },
+                    emphasis: {
+                        label: {
+                            fontSize: 16,
+                            fontWeight: 'bold'
+                        }
+                    },
+                    data: [
+                        { value: 100, name: 'IMPRESSIONS' },
+                        { value: 65, name: 'SITE VISITS' },
+                        { value: 30, name: 'ADD TO CART' },
+                        { value: 12, name: 'PURCHASE' }
+                    ]
+                }
+            ]
+        };
+        funnelChart.setOption(funnelOption);
+
+        window.addEventListener('resize', function() {
+            funnelChart.resize();
+        });
+    </script>
+</body>
+</html>

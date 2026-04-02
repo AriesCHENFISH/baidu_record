@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear Energy - Eco Impact</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { brand: { yellow: '#FFEA4A', black: '#0A0A0A', accent: '#FF3D00' } },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'sans-serif'], mono: ['Courier New', 'monospace'] }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        #page_container { width: 1280px; height: 720px; position: relative; background-color: #FFEA4A; overflow: hidden; margin: 0 auto; font-family: "Noto Sans SC", sans-serif; }
+        .grid-bg { background-image: radial-gradient(rgba(0,0,0,0.2) 1px, transparent 0); background-size: 30px 30px; opacity: 0.3; }
+        .vertical-huge { writing-mode: vertical-rl; transform: rotate(180deg); }
+        .outline-text { -webkit-text-stroke: 2px #0A0A0A; color: transparent; text-transform: uppercase; }
+        .clip-path-box { clip-path: polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%); }
+        .img-scan::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: rgba(255, 61, 0, 0.5); box-shadow: 0 0 15px #FF3D00; animation: scan 4s linear infinite; }
+        @keyframes scan { 0% { top: 0; } 100% { top: 100%; } }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <div class="absolute inset-0 grid-bg"></div>
+        
+        <!-- 背景巨型纵向文字 -->
+        <div class="absolute -left-10 top-0 h-full flex items-center">
+            <h2 class="vertical-huge text-[240px] font-[950] opacity-[0.05] leading-none tracking-tighter">EMISSION_ZERO</h2>
+        </div>
+
+        <div class="relative z-10 w-full h-full p-16 flex flex-col">
+            <!-- Header -->
+            <div class="flex justify-between items-center mb-12">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-black flex items-center justify-center">
+                        <i class="fa-solid fa-earth-americas text-brand-yellow text-2xl"></i>
+                    </div>
+                    <div>
+                        <h6 class="text-xs font-black uppercase tracking-widest">Giggling Platypus Co.</h6>
+                        <p class="text-[9px] font-bold opacity-50 uppercase tracking-tighter">Eco-Metrics / Archive 2026</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 主内容：错落阶梯式布局 -->
+            <div class="flex-1 grid grid-cols-12 gap-8 items-center">
+                
+                <!-- 左侧图片：带切角的重工业边框 -->
+                <div class="col-span-5 relative h-[500px]">
+                    <div class="absolute inset-0 border-[3px] border-black translate-x-4 translate-y-4"></div>
+                    <div class="img-scan relative h-full w-full border-[3px] border-black overflow-hidden bg-black">
+                        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=1200&auto=format&fit=crop" class="w-full h-full object-cover grayscale brightness-75 hover:grayscale-0 transition-all duration-700">
+                    </div>
+                </div>
+
+                <!-- 右侧文字：悬浮块 -->
+                <div class="col-span-7 pl-12">
+                    <h1 class="text-[90px] font-black leading-none uppercase mb-8">
+                        The <span class="outline-text">Green</span><br>Transition
+                    </h1>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-black text-brand-yellow p-6 clip-path-box shadow-[10px_10px_0px_0px_rgba(255,61,0,1)]">
+                            <h4 class="text-xs font-mono font-bold mb-2 text-brand-accent tracking-[0.2em]">// CARBON_REPORT</h4>
+                            <p class="text-xl font-bold leading-tight uppercase">Nuclear energy avoids 470 million metric tons of carbon emissions annually.</p>
+                        </div>
+
+                        <div class="border-l-8 border-black pl-6 py-2">
+                            <h3 class="text-2xl font-black uppercase mb-1">Low Footprint</h3>
+                            <p class="text-sm font-bold opacity-70 max-w-md">The entire lifecycle of a nuclear plant generates similar emissions to wind power, requiring 360 times less land than solar farms.</p>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <div class="flex-1 border-t-2 border-black pt-4">
+                                <span class="block text-4xl font-black italic">12g</span>
+                                <span class="text-[10px] font-bold opacity-50 uppercase">CO2 per kWh</span>
+                            </div>
+                            <div class="flex-1 border-t-2 border-black pt-4">
+                                <span class="block text-4xl font-black italic">92%</span>
+                                <span class="text-[10px] font-bold opacity-50 uppercase">Efficiency Rate</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

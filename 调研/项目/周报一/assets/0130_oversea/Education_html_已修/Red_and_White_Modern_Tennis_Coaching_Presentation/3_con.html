@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tennis Academy Introduction</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#C9302C',
+                            darkRed: '#A02622',
+                            bg: '#FFFFFF',
+                            lightGray: '#F5F5F5',
+                            textDark: '#1A1A1A',
+                            textGray: '#888888',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        ::-webkit-scrollbar { width: 0px; }
+        
+        /* 徽章旋转装饰 */
+        .logo-ring {
+            animation: rotate 10s linear infinite;
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container" class="relative w-[1280px] h-[720px] bg-brand-bg mx-auto overflow-hidden font-sans">
+        
+        <!-- HEADER SECTION (Clean & Redesigned Logo) -->
+        <header class="w-full h-32 px-12 flex items-center justify-between">
+            
+            <!-- Optimized Logo Design -->
+            <div class="flex items-center gap-4 group cursor-pointer">
+                <!-- Logo Icon Area -->
+                <div class="relative w-14 h-14 flex items-center justify-center">
+                    <!-- Outer Decorative Ring -->
+                    <div class="absolute inset-0 border-2 border-dashed border-brand-red/30 rounded-full logo-ring"></div>
+                    <!-- Solid Circle -->
+                    <div class="w-11 h-11 bg-brand-red rounded-full flex items-center justify-center text-white relative z-10 transition-transform group-hover:scale-110 duration-300 shadow-lg shadow-red-200">
+                        <i class="fa-solid fa-table-tennis-paddle-ball text-xl"></i>
+                    </div>
+                </div>
+                
+                <!-- Logo Text Area -->
+                <div class="flex flex-col">
+                    <span class="text-2xl font-bold tracking-tighter text-brand-textDark leading-none">
+                        ACE<span class="text-brand-red">ELITE</span>
+                    </span>
+                    <span class="text-[10px] uppercase tracking-[0.3em] text-brand-textGray font-bold">
+                        Tennis Academy
+                    </span>
+                </div>
+            </div>
+
+            <!-- Right Side Decor (Replacement for Nav) -->
+            <!-- 保持右侧简洁，仅用一个优雅的装饰线条或日期平衡视觉 -->
+            <div class="flex items-center gap-6">
+                <div class="h-[1px] w-24 bg-brand-lightGray"></div>
+                <div class="text-[11px] font-bold text-brand-textDark uppercase tracking-widest opacity-40">
+                    Est. 2024
+                </div>
+            </div>
+        </header>
+
+        <!-- MAIN CONTENT AREA -->
+        <main class="w-full px-12 mt-2 flex flex-col h-[calc(100%-8rem)]">
+            
+            <!-- Section Title -->
+            <div class="mb-8">
+                <h1 class="text-[100px] font-bold text-brand-textDark tracking-tighter leading-none">
+                    Introduction<span class="text-brand-red">.</span>
+                </h1>
+            </div>
+
+            <!-- Content Grid -->
+            <div class="flex gap-8 h-[400px]">
+                
+                <!-- Left Column: Information Card -->
+                <div class="w-7/12 bg-brand-lightGray rounded-[40px] p-10 flex flex-col justify-between relative overflow-hidden">
+                    <!-- Subtle Background Pattern -->
+                    <div class="absolute -right-10 -bottom-10 opacity-5">
+                        <i class="fa-solid fa-baseball-ball text-[200px] rotate-12"></i>
+                    </div>
+
+                    <!-- Card Top Content -->
+                    <div class="flex gap-10 relative z-10">
+                        <!-- Subtitle Column -->
+                        <div class="w-5/12">
+                            <h2 class="text-3xl font-bold text-brand-textDark leading-tight italic">
+                                The Role <br> of a Coach <br> 
+                                <span class="text-brand-red font-normal not-italic">—</span>
+                            </h2>
+                        </div>
+                        
+                        <!-- Description Column -->
+                        <div class="w-7/12">
+                            <p class="text-brand-textDark text-sm leading-relaxed opacity-70 text-justify">
+                                Our elite coaching philosophy transcends basic technique. We focus on the psychological fortitude and strategic depth required for modern competitive play. Every athlete's journey is unique, and our mentors are dedicated to unlocking individual potential through data-driven training and personalized mentorship.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card Bottom Action -->
+                    <div class="mt-auto relative z-10 flex items-center gap-4 group cursor-pointer">
+                        <div class="w-12 h-12 bg-brand-textDark rounded-full flex items-center justify-center text-white transition-all group-hover:bg-brand-red group-hover:translate-x-2">
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-brand-textDark">Explore Program</span>
+                    </div>
+                </div>
+
+                <!-- Right Column: Visual Imagery -->
+                <div class="w-5/12 h-full relative group overflow-hidden rounded-[40px] shadow-2xl">
+                    <img 
+                        src="https://images.unsplash.com/photo-1530915534664-4ac6423816b7?q=80&w=2070&auto=format&fit=crop" 
+                        alt="Tennis player" 
+                        class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                    >
+                    <!-- Overlay Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-red/20 to-transparent mix-blend-multiply"></div>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Decorative Background Element -->
+        <div class="absolute top-[-5%] right-[-5%] w-[500px] h-[500px] bg-brand-lightGray rounded-full blur-[100px] opacity-50 -z-10"></div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Skills - Premium Static Edition</title>
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgBlack: '#050505',
+                        brandBlue: '#3B82F6',
+                        brandPink: '#EC4899',
+                        brandPurple: '#A855F7',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #050505;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            background-image: 
+                linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .glow-sphere {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
+            top: -200px;
+            left: -100px;
+            pointer-events: none;
+        }
+
+        .text-outline {
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+            color: transparent;
+        }
+
+        .glass-footer {
+            background: rgba(15, 15, 15, 0.9);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <!-- 装饰背景 -->
+        <div class="glow-sphere"></div>
+        
+        <div class="flex-grow flex flex-col px-24 pt-20 relative z-10">
+            
+            <!-- Header Section -->
+            <div class="grid grid-cols-12 gap-8 items-end mb-20">
+                <div class="col-span-7">
+                    <div class="flex items-center space-x-4 mb-8">
+                        <div class="w-16 h-[2px] bg-brandBlue"></div>
+                        <span class="text-brandBlue text-sm font-bold tracking-[0.4em] uppercase">Core Competencies</span>
+                    </div>
+                    
+                    <h1 class="text-8xl font-black text-white leading-none tracking-tighter uppercase italic">
+                        <span class="text-outline block mb-2">Creative</span>
+                        <span class="relative">
+                            Talents
+                            <!-- 移除 animate-pulse，改为静态点 -->
+                            <span class="absolute -right-8 bottom-4 w-4 h-4 bg-brandPink rounded-full"></span>
+                        </span>
+                    </h1>
+                </div>
+
+                <div class="col-span-5 pb-2">
+                    <div class="relative pl-10">
+                        <div class="absolute left-0 top-0 w-[2px] h-full bg-gradient-to-b from-brandBlue via-brandPink to-brandPurple"></div>
+                        <p class="text-zinc-400 text-xl leading-relaxed font-light uppercase tracking-widest">
+                            Strategic Design<br/>
+                            <span class="text-white font-medium">Visual Storytelling</span><br/>
+                            Technical Execution
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Section (静态显示，移除 Hover 状态) -->
+            <div class="grid grid-cols-3 gap-16">
+                
+                <!-- Skill 1 -->
+                <div>
+                    <div class="flex items-baseline justify-between mb-4">
+                        <span class="text-brandBlue font-black text-4xl opacity-100 transition-none">01</span>
+                        <div class="h-[1px] flex-grow mx-4 bg-zinc-800"></div>
+                        <span class="text-brandBlue font-bold tracking-widest text-sm uppercase">Photography</span>
+                    </div>
+                    <p class="text-zinc-300 text-sm leading-relaxed text-justify italic font-light">
+                        Expertise in commercial and editorial imaging. Mastering light and shadow to create striking compositions that define professional brand narratives.
+                    </p>
+                </div>
+
+                <!-- Skill 2 -->
+                <div>
+                    <div class="flex items-baseline justify-between mb-4">
+                        <span class="text-brandPink font-black text-4xl opacity-100 transition-none">02</span>
+                        <div class="h-[1px] flex-grow mx-4 bg-zinc-800"></div>
+                        <span class="text-brandPink font-bold tracking-widest text-sm uppercase">Videography</span>
+                    </div>
+                    <p class="text-zinc-300 text-sm leading-relaxed text-justify italic font-light">
+                        Cinematic motion capture and high-end post-production. Delivering high-impact video content tailored for modern digital ecosystems.
+                    </p>
+                </div>
+
+                <!-- Skill 3 -->
+                <div>
+                    <div class="flex items-baseline justify-between mb-4">
+                        <span class="text-brandPurple font-black text-4xl opacity-100 transition-none">03</span>
+                        <div class="h-[1px] flex-grow mx-4 bg-zinc-800"></div>
+                        <span class="text-brandPurple font-bold tracking-widest text-sm uppercase">Typography</span>
+                    </div>
+                    <p class="text-zinc-300 text-sm leading-relaxed text-justify italic font-light">
+                        Precision-driven editorial design. Utilizing font architectures to enhance legibility and aesthetic balance across print and digital media.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- RE-DESIGNED NAVIGATION FOOTER (Height Reduced to h-20) -->
+        <div class="h-20 glass-footer px-20 flex items-center mt-auto relative overflow-hidden">
+            <!-- 底部装饰线 -->
+            <div class="absolute bottom-0 left-0 w-full h-[3px] flex">
+                <div class="flex-grow bg-brandBlue"></div>
+                <div class="flex-grow bg-brandPink"></div>
+                <div class="flex-grow bg-brandPurple"></div>
+            </div>
+
+            <div class="flex justify-between items-center w-full">
+                
+                <!-- Identity (文字排版) -->
+                <div class="flex flex-col">
+                    <span class="text-[9px] text-brandBlue font-bold uppercase tracking-[0.3em]">Creative Director</span>
+                    <span class="text-white text-xl font-black uppercase tracking-tight">Olivia Wilson</span>
+                </div>
+
+                <!-- Contact Info Group (更紧凑的水平排列) -->
+                <div class="flex items-center space-x-10">
+                    <div class="flex items-center">
+                        <div class="w-7 h-7 rounded-full border border-zinc-800 flex items-center justify-center mr-3">
+                            <i class="fa-solid fa-phone text-[9px] text-brandBlue"></i>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-[8px] text-zinc-500 font-bold uppercase tracking-widest">Inquiries</span>
+                            <span class="text-zinc-200 text-xs font-medium">+123 4567 8900</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center">
+                        <div class="w-7 h-7 rounded-full border border-zinc-800 flex items-center justify-center mr-3">
+                            <i class="fa-solid fa-location-dot text-[9px] text-brandPink"></i>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-[8px] text-zinc-500 font-bold uppercase tracking-widest">Base</span>
+                            <span class="text-zinc-200 text-xs font-medium italic">Any City, Any St.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Date Badge (紧凑型) -->
+                <div class="flex items-center">
+                    <div class="flex flex-col items-end mr-4">
+                        <span class="text-[8px] text-zinc-500 font-bold uppercase tracking-widest leading-none mb-1">Released</span>
+                        <span class="text-white text-sm font-black italic tracking-widest leading-none">MAY 2026</span>
+                    </div>
+                    <div class="px-2 py-1 bg-brandBlue/10 border border-brandBlue/20 rounded text-brandBlue font-bold text-[9px]">
+                        ED 03
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

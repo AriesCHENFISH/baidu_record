@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High-End Matrix Index V2</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    
+    <style>
+        /* CSS Reset & Global Restructure */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #page_container {
+            width: 1280px; height: 720px;
+            background-color: #050505;
+            position: relative; overflow: hidden;
+            margin: 0 auto;
+            display: flex; justify-content: center; align-items: center; height: 100vh; font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* The Grid System */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 2 Columns */
+            grid-template-rows: repeat(4, 1fr); /* 4 Rows */
+            height: 100%;
+            border-top: 1px solid #222;
+        }
+
+        .grid-item {
+            border-bottom: 1px solid #222;
+            border-right: 1px solid #222; 
+            padding: 0 50px; /* Increased padding slightly */
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: rgba(255, 255, 255, 0.01); /* Subtle static background */
+        }
+        
+        /* Remove right border for the 2nd column */
+        .grid-item:nth-child(even) { border-right: none; }
+
+        /* Number Styling */
+        .item-num {
+            font-family: 'Courier New', monospace;
+            color: #FBD57D;
+            font-size: 18px; /* Increased size */
+            font-weight: 700;
+            margin-right: 30px;
+            opacity: 1; /* Fully visible */
+            border: 1px solid #333;
+            padding: 6px 10px;
+            border-radius: 4px;
+            background: #000;
+        }
+
+        /* Title Styling */
+        .item-title {
+            color: #fff;
+            font-size: 22px; /* Increased from 18px to 26px */
+            font-weight: 700; /* Bolder */
+            letter-spacing: 0.02em;
+        }
+        
+        /* Icon Styling - Static Display */
+        .arrow-icon {
+            position: absolute; right: 40px;
+            color: #FBD57D; 
+            opacity: 1; /* Always visible */
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="page_container" class="flex flex-col">
+        
+        <div class="h-[180px] px-12 flex items-end pb-8 justify-between relative z-10">
+            <div>
+                <h1 class="text-white text-5xl font-bold tracking-tight mb-2">Table of Contents</h1>
+                <p class="text-gray-500 text-base">Comprehensive breakdown of all 8 persona categories.</p>
+            </div>
+            <div class="flex gap-1 h-8 items-end">
+                <div class="w-1 h-4 bg-[#333]"></div>
+                <div class="w-1 h-6 bg-[#333]"></div>
+                <div class="w-1 h-8 bg-[#FBD57D]"></div>
+            </div>
+        </div>
+
+        <div class="flex-grow content-grid mx-12 mb-12 border-l border-r border-[#222]">
+            
+            <div class="grid-item">
+                <div class="item-num">01</div>
+                <div class="item-title">The Trendsetter</div>
+                <i class="fa-solid fa-bolt arrow-icon"></i>
+            </div>
+
+            <div class="grid-item">
+                <div class="item-num">02</div>
+                <div class="item-title">The Conscious Consumer</div>
+                <i class="fa-solid fa-leaf arrow-icon"></i>
+            </div>
+
+            <div class="grid-item">
+                <div class="item-num">03</div>
+                <div class="item-title">The Tech Loyalist</div>
+                <i class="fa-solid fa-microchip arrow-icon"></i>
+            </div>
+
+            <div class="grid-item">
+                <div class="item-num">04</div>
+                <div class="item-title">The Budget Maximizer</div>
+                <i class="fa-solid fa-coins arrow-icon"></i>
+            </div>
+
+            <div class="grid-item">
+                <div class="item-num">05</div>
+                <div class="item-title">The Experience Seeker</div>
+                <i class="fa-solid fa-plane arrow-icon"></i>
+            </div>
+
+            <div class="grid-item">
+                <div class="item-num">06</div>
+                <div class="item-title">The Brand Skeptic</div>
+                <i class="fa-solid fa-shield-halved arrow-icon"></i>
+            </div>
+
+            <div class="grid-item">
+                <div class="item-num">07</div>
+                <div class="item-title">The Social Influencer</div>
+                <i class="fa-solid fa-camera arrow-icon"></i>
+            </div>
+
+            <div class="grid-item">
+                <div class="item-num">08</div>
+                <div class="item-title">The Traditionalist</div>
+                <i class="fa-solid fa-landmark arrow-icon"></i>
+            </div>
+
+        </div>
+
+        <div class="absolute bottom-6 right-12 text-[#444] text-[10px] tracking-[0.3em] uppercase">
+            Navigation System // Index
+        </div>
+
+    </div>
+</body>
+</html>

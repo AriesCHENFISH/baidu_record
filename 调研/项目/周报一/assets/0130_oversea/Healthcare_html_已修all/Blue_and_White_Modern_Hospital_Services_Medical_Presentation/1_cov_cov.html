@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, initial-scale=1.0">
+    <title>Borcelle Hospital - Cover Page</title>
+
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FFFFFF;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+        /* 背景底纹优化：更精细的点阵 */
+        .medical-pattern {
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(#4361B8 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.05;
+            z-index: 1;
+        }
+        /* 装饰线条：模拟医疗心电图感 */
+        .decoration-line {
+            position: absolute;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #4361B8, transparent);
+            opacity: 0.2;
+            width: 100%;
+        }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4361B8',
+                        secondary: '#2D4594',
+                        darkText: '#000000',
+                        bodyText: '#1A1A1A',
+                        containerBg: '#EFF6FC',
+                        accentRed: '#C83E48',
+                    },
+                    letterSpacing: {
+                        'ultra-wide': '0.5em',
+                        'tightest': '-0.04em'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div id="page_container">
+        <!-- 背景层 -->
+        <div class="medical-pattern"></div>
+        <div class="decoration-line" style="top: 200px;"></div>
+        <div class="decoration-line" style="bottom: 180px;"></div>
+        
+        <!-- 装饰性几何体 (左侧装饰) -->
+        <div class="absolute left-0 top-1/2 -translate-y-1/2 w-2 h-48 bg-primary/20 rounded-r-full"></div>
+
+        <!-- 顶部设计 (保持不变) -->
+        <header class="absolute top-0 left-0 w-full px-16 pt-12 pb-6 flex justify-between items-center z-50">
+            <div class="flex items-center gap-4">
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-primary/20 rounded-xl rotate-6"></div>
+                    <div class="relative w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center text-white shadow-lg">
+                        <i class="fa-solid fa-house-medical text-2xl"></i>
+                        <div class="absolute -top-1 -right-1 w-5 h-5 bg-accentRed rounded-full border-2 border-white flex items-center justify-center">
+                            <i class="fa-solid fa-plus text-[10px]"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-black text-darkText tracking-tight uppercase leading-none">Borcelle</h2>
+                    <p class="text-[12px] text-primary font-bold tracking-[0.2em] uppercase mt-1">Medical Hospital</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-6">
+                <div class="flex flex-col items-center px-4 border-r border-gray-100">
+                    <i class="fa-solid fa-shield-halved text-primary text-xl mb-1"></i>
+                    <span class="text-[11px] font-bold text-gray-400 uppercase tracking-widest">Professional</span>
+                </div>
+                <div class="flex flex-col items-center px-4 border-r border-gray-100">
+                    <i class="fa-solid fa-microscope text-primary text-xl mb-1"></i>
+                    <span class="text-[11px] font-bold text-gray-400 uppercase tracking-widest">Advanced</span>
+                </div>
+                <div class="flex flex-col items-center px-4">
+                    <i class="fa-solid fa-hand-holding-heart text-primary text-xl mb-1"></i>
+                    <span class="text-[11px] font-bold text-gray-400 uppercase tracking-widest">Compassionate</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- 主体内容美化 -->
+        <main class="relative z-20 flex-grow flex flex-col items-center justify-center pt-16">
+            
+            <!-- 顶部装饰元素 -->
+            <div class="flex items-center gap-3 mb-8">
+                <div class="w-12 h-[2px] bg-primary/30"></div>
+                <div class="w-2 h-2 rounded-full bg-primary"></div>
+                <div class="w-12 h-[2px] bg-primary/30"></div>
+            </div>
+
+            <!-- 主标题：增强排版对比 -->
+            <div class="text-center">
+                <h1 class="flex flex-col items-center">
+                    <span class="text-[100px] font-black text-darkText leading-[0.85] tracking-tightest uppercase">
+                        Building Trust
+                    </span>
+                    <span class="relative mt-2">
+                        <span class="text-[110px] font-black text-primary leading-none tracking-tightest uppercase italic">
+                            Awareness
+                        </span>
+                        <!-- 装饰：文字后的科技感线条 -->
+                        <div class="absolute -right-12 top-1/2 w-8 h-[2px] bg-accentRed"></div>
+                    </span>
+                    <span class="flex items-center gap-4 mt-6">
+                        <span class="h-[1px] w-8 bg-gray-300"></span>
+                        <span class="text-xl font-medium text-gray-500 tracking-ultra-wide uppercase">
+                            In the Medical Community
+                        </span>
+                        <span class="h-[1px] w-8 bg-gray-300"></span>
+                    </span>
+                </h1>
+            </div>
+
+            <!-- 副标题：优化为更具结构感的标签状 -->
+            <div class="mt-16 relative">
+                <div class="absolute -inset-2 bg-primary/5 blur-lg rounded-full"></div>
+                <div class="relative px-12 py-5 border-y-2 border-primary/20 flex flex-col items-center">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 px-4 bg-white text-primary text-xs font-bold tracking-widest uppercase">
+                        Strategic Mission
+                    </div>
+                    <h3 class="text-4xl font-black text-secondary tracking-[0.2em] uppercase">
+                        Promoting Hospital Services
+                    </h3>
+                </div>
+            </div>
+        </main>
+
+        <!-- 底部设计美化 -->
+        <footer class="relative z-20 w-full px-16 pb-12 flex justify-between items-end">
+            <!-- 左侧：Trust水印背景化与联系方式 -->
+            <div class="flex flex-col relative">
+                <span class="absolute -top-16 -left-4 text-[140px] font-black text-primary/[0.03] leading-none select-none tracking-tighter">
+                    TRUST
+                </span>
+                <div class="relative z-10 flex items-center gap-4 px-6 py-3 bg-primary text-white rounded-full shadow-xl shadow-primary/20">
+                    <i class="fa-solid fa-globe text-sm"></i>
+                    <span class="text-sm font-bold tracking-widest">WWW.BORCELLEHOSPITAL.COM</span>
+                </div>
+            </div>
+
+            <!-- 右侧：年度标志美化 -->
+            <div class="flex flex-col items-end">
+                <div class="flex items-center gap-2 mb-1">
+                    <div class="w-2 h-2 bg-accentRed rounded-full animate-pulse"></div>
+                    <p class="text-gray-400 text-[10px] font-bold tracking-ultra-wide uppercase">Report Edition</p>
+                </div>
+                <div class="flex items-baseline gap-1">
+                    <span class="text-6xl font-black text-primary">20</span>
+                    <span class="text-6xl font-black text-secondary">26</span>
+                </div>
+                <div class="w-full h-1 bg-primary mt-2"></div>
+            </div>
+        </footer>
+
+        <!-- 背景装饰：大型半透明圆环 (位置调整以平衡视觉) -->
+        <div class="absolute -bottom-20 -right-20 w-[600px] h-[600px] border-[1px] border-primary/10 rounded-full -z-10"></div>
+        <div class="absolute -bottom-10 -right-10 w-[400px] h-[400px] border-[40px] border-primary/5 rounded-full -z-10"></div>
+        
+        <!-- 左上角微小装饰 -->
+        <div class="absolute top-40 left-20 flex flex-col gap-2 opacity-20">
+            <div class="w-1 h-1 bg-primary"></div>
+            <div class="w-1 h-1 bg-primary"></div>
+            <div class="w-1 h-1 bg-primary"></div>
+        </div>
+    </div>
+
+</body>
+</html>

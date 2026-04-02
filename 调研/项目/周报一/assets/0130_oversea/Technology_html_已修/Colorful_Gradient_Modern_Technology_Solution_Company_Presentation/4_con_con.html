@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, initial-scale=1.0">
+    <title>09 - Future Outlook (Bar Chart)</title>
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; overflow: hidden; font-family: 'Noto Sans SC', sans-serif; background-color: #f0f4f8; }
+        
+        .glass-panel { 
+            background: rgba(255, 255, 255, 0.65); 
+            backdrop-filter: blur(24px); 
+            border: 1px solid rgba(255, 255, 255, 0.6); 
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.08); 
+        }
+
+        .mesh-bg { position: absolute; inset: 0; z-index: 0; background: linear-gradient(135deg, #FFD6D6 0%, #D6EBFF 50%, #E0D6FF 100%); }
+        .blob { position: absolute; border-radius: 50%; filter: blur(80px); z-index: 0; opacity: 0.8; }
+        .text-gradient { background: linear-gradient(to right, #4A3AFF, #9333ea); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+        /* Data Item Styling */
+        .data-item {
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+        .data-item:hover {
+            background: white;
+            border-color: rgba(74, 58, 255, 0.1);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(74, 58, 255, 0.05);
+        }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <div class="mesh-bg"></div>
+        <div class="blob w-[600px] h-[600px] bg-[#E0D6FF] top-[-200px] left-[-100px] opacity-60"></div>
+        <div class="blob w-[500px] h-[500px] bg-[#C4F5E6] bottom-[-100px] right-[-100px] opacity-50"></div>
+
+        <div class="absolute top-0 left-0 w-full px-12 py-10 flex items-center justify-between z-50">
+            <div class="glass-panel rounded-full px-8 py-4 flex items-center gap-6">
+                <div class="flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-full bg-[#4A3AFF] animate-pulse"></span>
+                    <span class="text-sm font-bold tracking-widest text-[#0F172A] uppercase">Future</span>
+                </div>
+                <span class="text-gray-400">|</span>
+                <span class="text-sm font-bold tracking-widest text-[#475569] uppercase">Data</span>
+                <span class="text-gray-400">|</span>
+                <span class="text-sm font-bold tracking-widest text-[#475569] uppercase">Growth</span>
+            </div>
+            <div class="glass-panel w-14 h-14 rounded-full flex items-center justify-center cursor-pointer text-[#2E2E99] hover:bg-white transition-colors">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </div>
+        </div>
+
+        <div class="relative z-10 w-full h-full flex pt-32 px-12 pb-12 gap-10">
+            
+            <div class="w-[35%] flex flex-col h-full relative justify-center">
+                <div class="absolute -left-6 top-0 text-[200px] font-black text-[#4A3AFF] opacity-[0.05] leading-none select-none pointer-events-none">09</div>
+                
+                <div class="relative z-10">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="h-[3px] w-12 bg-[#4A3AFF]"></span>
+                        <span class="text-sm font-bold tracking-[0.25em] text-[#4A3AFF] uppercase">Strategic Forecast</span>
+                    </div>
+
+                    <h1 class="text-5xl font-black text-[#0F172A] mb-8 leading-[1.1]">
+                        MARKET <br> <span class="text-gradient">COMPOSITION</span>
+                    </h1>
+
+                    <p class="text-base text-gray-700 leading-relaxed text-justify mb-8 pr-6 font-medium">
+                        By 2030, our portfolio will shift heavily towards autonomous systems and green computing. This chart illustrates our target revenue distribution across key emerging sectors.
+                    </p>
+
+                    <div class="glass-panel rounded-2xl p-6 border-l-4 border-[#4A3AFF] flex flex-col gap-2">
+                        <div class="flex justify-between items-center">
+                            <p class="text-xs font-bold text-gray-500 uppercase tracking-wider">Primary Driver</p>
+                            <i class="fa-solid fa-arrow-trend-up text-[#4A3AFF]"></i>
+                        </div>
+                        <p class="text-xl font-bold text-[#1A1A1A]">AI & Automation</p>
+                        <p class="text-xs text-gray-600">Expected to account for nearly half of total ecosystem value.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-[65%] glass-panel rounded-[32px] p-8 flex flex-col h-full relative overflow-hidden">
+                
+                <div class="flex justify-between items-center mb-2">
+                    <div>
+                        <h3 class="text-xl font-bold text-[#1A1A1A]">2030 Revenue Mix</h3>
+                        <p class="text-xs text-gray-500 uppercase tracking-wider">Projected Distribution</p>
+                    </div>
+                    </div>
+
+                <div class="flex-grow w-full h-[55%] relative">
+                    <div id="chart-container" class="w-full h-full"></div>
+                </div>
+
+                <div class="w-full h-[1px] bg-gray-200 my-4"></div>
+
+                <div class="h-[40%] grid grid-cols-2 gap-4">
+                    
+                    <div class="data-item rounded-xl p-3 bg-white/40 flex flex-col justify-between">
+                        <div class="flex items-center gap-2">
+                            <div class="w-2 h-2 rounded-full bg-[#4A3AFF]"></div> <span class="text-xs font-bold text-gray-500 uppercase">AI & Automation</span>
+                        </div>
+                        <div>
+                            <div class="flex items-end gap-2">
+                                <span class="text-2xl font-bold text-[#1A1A1A]">45%</span>
+                                <span class="text-[10px] text-green-600 mb-1"><i class="fa-solid fa-caret-up"></i> 12%</span>
+                            </div>
+                            <p class="text-[10px] text-gray-500 leading-tight mt-1">Core growth engine driving efficiency.</p>
+                        </div>
+                    </div>
+
+                    <div class="data-item rounded-xl p-3 bg-white/40 flex flex-col justify-between">
+                        <div class="flex items-center gap-2">
+                            <div class="w-2 h-2 rounded-full bg-[#60A5FA]"></div>
+                            <span class="text-xs font-bold text-gray-500 uppercase">Cloud Infra</span>
+                        </div>
+                        <div>
+                            <div class="flex items-end gap-2">
+                                <span class="text-2xl font-bold text-[#1A1A1A]">30%</span>
+                                <span class="text-[10px] text-green-600 mb-1"><i class="fa-solid fa-caret-up"></i> 8%</span>
+                            </div>
+                            <p class="text-[10px] text-gray-500 leading-tight mt-1">Scalable backend for global ops.</p>
+                        </div>
+                    </div>
+
+                    <div class="data-item rounded-xl p-3 bg-white/40 flex flex-col justify-between">
+                        <div class="flex items-center gap-2">
+                            <div class="w-2 h-2 rounded-full bg-[#34D399]"></div>
+                            <span class="text-xs font-bold text-gray-500 uppercase">Green Tech</span>
+                        </div>
+                        <div>
+                            <div class="flex items-end gap-2">
+                                <span class="text-2xl font-bold text-[#1A1A1A]">15%</span>
+                                <span class="text-[10px] text-green-600 mb-1"><i class="fa-solid fa-caret-up"></i> 25%</span>
+                            </div>
+                            <p class="text-[10px] text-gray-500 leading-tight mt-1">Fastest growing emerging sector.</p>
+                        </div>
+                    </div>
+
+                    <div class="data-item rounded-xl p-3 bg-white/40 flex flex-col justify-between">
+                        <div class="flex items-center gap-2">
+                            <div class="w-2 h-2 rounded-full bg-[#9CA3AF]"></div>
+                            <span class="text-xs font-bold text-gray-500 uppercase">Legacy Systems</span>
+                        </div>
+                        <div>
+                            <div class="flex items-end gap-2">
+                                <span class="text-2xl font-bold text-[#1A1A1A]">10%</span>
+                                <span class="text-[10px] text-red-500 mb-1"><i class="fa-solid fa-caret-down"></i> 5%</span>
+                            </div>
+                            <p class="text-[10px] text-gray-500 leading-tight mt-1">Maintenance mode and phase out.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 right-12 z-50">
+            <div class="w-14 h-14 rounded-full border-2 border-[#2E2E99] flex items-center justify-center text-[#2E2E99] hover:bg-[#2E2E99] hover:text-white transition-all duration-300 cursor-pointer">
+                <i class="fa-solid fa-arrow-right text-xl"></i>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var dom = document.getElementById('chart-container');
+        var myChart = echarts.init(dom, null, {
+            renderer: 'canvas',
+            useDirtyRect: false
+        });
+        
+        var option;
+
+        option = {
+            backgroundColor: 'rgba(0,0,0,0)',
+            grid: {
+                top: '10%',
+                left: '0%',
+                right: '0%',
+                bottom: '5%',
+                containLabel: true
+            },
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: { type: 'shadow' },
+                backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                textStyle: { fontFamily: 'Noto Sans SC' }
+            },
+            xAxis: {
+                type: 'category',
+                data: ['AI & Auto', 'Cloud', 'Green Tech', 'Legacy'],
+                axisLabel: {
+                    fontFamily: 'Noto Sans SC',
+                    fontWeight: 500,
+                    color: '#6B7280', // gray-500
+                    interval: 0
+                },
+                axisLine: { show: false },
+                axisTick: { show: false }
+            },
+            yAxis: {
+                type: 'value',
+                splitLine: {
+                    lineStyle: {
+                        type: 'dashed',
+                        color: 'rgba(0,0,0,0.05)'
+                    }
+                },
+                axisLabel: {
+                    formatter: '{value}%',
+                    fontFamily: 'Noto Sans SC',
+                    color: '#9CA3AF' // gray-400
+                }
+            },
+            series: [
+                {
+                    data: [
+                        {
+                            value: 45,
+                            itemStyle: { 
+                                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                                    { offset: 0, color: '#4A3AFF' },
+                                    { offset: 1, color: '#818cf8' }
+                                ]),
+                                borderRadius: [6, 6, 0, 0]
+                            }
+                        },
+                        {
+                            value: 30,
+                            itemStyle: { 
+                                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                                    { offset: 0, color: '#60A5FA' },
+                                    { offset: 1, color: '#93C5FD' }
+                                ]),
+                                borderRadius: [6, 6, 0, 0]
+                            }
+                        },
+                        {
+                            value: 15,
+                            itemStyle: { 
+                                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                                    { offset: 0, color: '#34D399' },
+                                    { offset: 1, color: '#6EE7B7' }
+                                ]),
+                                borderRadius: [6, 6, 0, 0]
+                            }
+                        },
+                        {
+                            value: 10,
+                            itemStyle: { 
+                                color: '#9CA3AF',
+                                borderRadius: [6, 6, 0, 0]
+                            }
+                        }
+                    ],
+                    type: 'bar',
+                    barWidth: '40%',
+                    label: {
+                        show: true,
+                        position: 'top',
+                        formatter: '{c}%',
+                        fontFamily: 'Noto Sans SC',
+                        fontWeight: 'bold',
+                        color: '#4B5563'
+                    },
+                    showBackground: true,
+                    backgroundStyle: {
+                        color: 'rgba(255, 255, 255, 0.5)',
+                        borderRadius: [6, 6, 0, 0]
+                    }
+                }
+            ]
+        };
+
+        if (option && typeof option === 'object') {
+            myChart.setOption(option);
+        }
+
+        window.addEventListener('resize', myChart.resize);
+    </script>
+</body>
+</html>

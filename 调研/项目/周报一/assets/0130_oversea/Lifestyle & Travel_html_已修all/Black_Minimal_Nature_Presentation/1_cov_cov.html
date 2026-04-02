@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature - Thynk Unlimited</title>
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        #page_container {
+            width: 1280px; height: 720px;
+            position: relative; margin: 0 auto;
+            background-color: #000;
+            font-family: 'Noto Sans SC', sans-serif;
+            overflow: hidden;
+        }
+
+        .font-serif-display { font-family: 'Times New Roman', serif; }
+
+        /* 顶部导航标签统一样式 */
+        .travel-tag {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        /* 重点：深蓝色多层字体阴影设计 */
+        .blue-shadow-text {
+            color: #FFFFFF;
+            /* 通过多层阴影叠加实现柔和的蓝色辉光感 */
+            text-shadow: 
+                0 0 20px rgba(107, 142, 173, 0.4),
+                0 10px 40px rgba(107, 142, 173, 0.6),
+                0 20px 80px rgba(107, 142, 173, 0.3);
+            letter-spacing: -0.05em;
+        }
+
+        /* 蓝色强调色点 */
+        .blue-dot {
+            color: #6B8EAD;
+            text-shadow: 0 0 20px rgba(107, 142, 173, 0.8);
+        }
+
+        /* 环境光效果 */
+        .ambient-glow {
+            position: absolute;
+            width: 800px; height: 800px;
+            background: radial-gradient(circle, rgba(107, 142, 173, 0.1) 0%, rgba(0,0,0,0) 70%);
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1280&auto=format&fit=crop" 
+                 class="w-full h-full object-cover brightness-75">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60"></div>
+        </div>
+
+        <div class="ambient-glow"></div>
+
+        <header class="absolute top-0 left-0 w-full z-20 px-16 py-10 flex justify-between items-start">
+            <div class="flex flex-col">
+                <div class="flex items-center gap-3 mb-1">
+                    <div class="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center bg-white/5 backdrop-blur-md">
+                        <i class="fa-solid fa-mountain-sun text-[#6B8EAD] text-lg"></i>
+                    </div>
+                    <h1 class="font-serif-display text-3xl text-white tracking-widest uppercase font-bold">
+                        Thynk<span class="text-[#6B8EAD]">.</span>
+                    </h1>
+                </div>
+                <span class="text-white/40 text-[10px] tracking-[0.3em] uppercase pl-14">Unlimited Travel</span>
+            </div>
+
+            <div class="flex gap-3">
+                <div class="travel-tag flex items-center gap-2 px-4 py-2 rounded-full">
+                    <i class="fa-solid fa-compass text-[#6B8EAD] text-xs"></i>
+                    <span class="text-white text-xs tracking-wide font-medium uppercase">Explore</span>
+                </div>
+                <div class="travel-tag flex items-center gap-2 px-4 py-2 rounded-full">
+                    <i class="fa-solid fa-location-dot text-[#6B8EAD] text-xs"></i>
+                    <span class="text-white text-xs tracking-wide font-medium uppercase">Destinations</span>
+                </div>
+                <div class="travel-tag flex items-center gap-2 px-4 py-2 rounded-full">
+                    <i class="fa-solid fa-camera text-[#6B8EAD] text-xs"></i>
+                    <span class="text-white text-xs tracking-wide font-medium uppercase">Gallery</span>
+                </div>
+                <div class="w-9 h-9 flex items-center justify-center rounded-full bg-[#6B8EAD] text-white ml-2 cursor-pointer shadow-lg">
+                    <i class="fa-solid fa-bars text-sm"></i>
+                </div>
+            </div>
+        </header>
+
+        <div class="absolute inset-0 z-10 flex flex-col justify-center items-center pointer-events-none">
+            <div class="mb-4 flex items-center gap-4 opacity-50">
+                <div class="h-[1px] w-12 bg-white"></div>
+                <span class="text-white text-sm tracking-[0.6em] uppercase font-light">Ecology Series</span>
+                <div class="h-[1px] w-12 bg-white"></div>
+            </div>
+
+            <h1 class="font-black text-[220px] leading-none blue-shadow-text">
+                Nature<span class="blue-dot">.</span>
+            </h1>
+
+            <p class="text-white/40 text-xl tracking-[0.4em] font-light mt-2 uppercase">
+                Exploring the soul of the wild
+            </p>
+        </div>
+
+        <footer class="absolute bottom-0 left-0 w-full z-20 px-16 py-12 flex justify-between items-end">
+            <div class="flex items-center gap-6">
+                <div class="w-1 h-14 bg-[#6B8EAD] rounded-full"></div>
+                <div class="flex flex-col">
+                    <p class="text-white/30 text-[10px] tracking-[0.3em] uppercase font-bold mb-1">Presenter</p>
+                    <p class="text-white text-3xl font-light tracking-wider">Jacqueline Thompson</p>
+                    <p class="text-white/50 text-xs tracking-widest uppercase">Lead Environmental Curator</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-end opacity-40">
+                <p class="text-white text-xs tracking-widest uppercase mb-1 font-bold">Thynk Unlimited</p>
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-[1px] bg-white"></div>
+                    <p class="text-[10px] tracking-[0.4em] uppercase">Est. 2026 Collection</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>

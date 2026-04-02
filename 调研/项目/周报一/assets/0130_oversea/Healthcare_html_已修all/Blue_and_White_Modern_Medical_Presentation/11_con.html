@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resource Allocation - Pie Chart</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Noto Sans SC', sans-serif; }
+        #page_container { width: 1280px; height: 720px; background-color: #FFFFFF; position: relative; overflow: hidden; margin: 0 auto; }
+        .logo-text { color: #1E2B9D; }
+        .sub-logo-text { color: #64748B; }
+        .title-gradient { background: linear-gradient(to right, #1E2B9D, #3B82F6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .data-label { border-left: 3px solid #1E2B9D; padding-left: 15px; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <!-- Logo -->
+        <div class="absolute top-12 right-16 z-20 flex items-center gap-4">
+            <div class="text-4xl logo-text"><i class="fa-solid fa-staff-snake"></i></div>
+            <div class="flex flex-col items-start">
+                <h6 class="text-base font-bold tracking-widest uppercase logo-text">Borcelle Hospital</h6>
+                <p class="text-[10px] sub-logo-text tracking-widest uppercase font-medium">Care at Every Step</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-12 h-full items-center px-24 gap-12">
+            <!-- Left: Text Heavy Content -->
+            <div class="col-span-6">
+                <div class="space-y-8">
+                    <div class="space-y-2">
+                        <span class="text-xs font-black tracking-[0.4em] text-blue-400 uppercase">Financial Insights</span>
+                        <h1 class="text-6xl font-extrabold text-slate-900 leading-tight">Resource <br><span class="title-gradient">Allocation 2025</span></h1>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="data-label">
+                            <h4 class="font-bold text-slate-800 text-lg">Clinical Operations</h4>
+                            <p class="text-sm text-slate-500 leading-relaxed">Prioritizing frontline staff training and surgical facility upgrades to meet increasing inpatient demands.</p>
+                        </div>
+                        <div class="data-label" style="border-color: #3B82F6;">
+                            <h4 class="font-bold text-slate-800 text-lg">Digital Infrastructure</h4>
+                            <p class="text-sm text-slate-500 leading-relaxed">Heavy investment in cloud-native health records and AI-assisted diagnostic tools for precision medicine.</p>
+                        </div>
+                        <div class="data-label" style="border-color: #94A3B8;">
+                            <h4 class="font-bold text-slate-800 text-lg">Preventive Research</h4>
+                            <p class="text-sm text-slate-500 leading-relaxed">Allocating specialized funds for community health screening programs and immunization campaigns.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Pie Chart -->
+            <div class="col-span-6 flex flex-col items-center">
+                <div id="pie_chart" style="width: 500px; height: 500px;"></div>
+                <p class="text-xs text-slate-400 font-medium tracking-widest uppercase mt-[-40px]">Annual Budget Distribution</p>
+            </div>
+        </div>
+
+        <div class="absolute bottom-12 left-24 opacity-20">
+            <p class="text-sm font-bold tracking-[0.2em] text-slate-400 uppercase">Medical Education Series 2025</p>
+        </div>
+    </div>
+
+    <script>
+        const chartDom = document.getElementById('pie_chart');
+        const myChart = echarts.init(chartDom);
+        const option = {
+            tooltip: { trigger: 'item' },
+            legend: { top: '5%', left: 'center', textStyle: { color: '#64748B', fontSize: 12 } },
+            series: [
+                {
+                    name: 'Budget Allocation',
+                    type: 'pie',
+                    radius: ['40%', '70%'],
+                    avoidLabelOverlap: false,
+                    itemStyle: { borderRadius: 10, borderColor: '#fff', borderWidth: 2 },
+                    label: { show: false, position: 'center' },
+                    emphasis: { label: { show: true, fontSize: 20, fontWeight: 'bold' } },
+                    labelLine: { show: false },
+                    data: [
+                        { value: 45, name: 'Clinical Care', itemStyle: { color: '#1E2B9D' } },
+                        { value: 25, name: 'Technology', itemStyle: { color: '#3B82F6' } },
+                        { value: 20, name: 'R&D', itemStyle: { color: '#60A5FA' } },
+                        { value: 10, name: 'Administration', itemStyle: { color: '#CBD5E1' } }
+                    ]
+                }
+            ]
+        };
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

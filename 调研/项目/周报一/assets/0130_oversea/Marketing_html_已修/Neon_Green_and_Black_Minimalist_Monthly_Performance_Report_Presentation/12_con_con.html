@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis - Rimberio Marketing</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        /* CSS Reset & Global Settings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container - Strict 1280x720 */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #000000;
+            color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        /* Serif font for the artistic title */
+        .font-display {
+            font-family: 'Times New Roman', serif;
+            font-style: italic;
+        }
+
+        /* Custom Scrollbar hide */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <div class="absolute top-0 left-0 w-full px-16 pt-12 pb-6 z-10">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-8 h-8 rounded bg-[#C3E86C] flex items-center justify-center text-black font-bold text-lg">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+                <h4 class="text-sm tracking-widest font-medium uppercase text-white">Rimberio Marketing</h4>
+            </div>
+
+            <h1 class="text-7xl font-light tracking-tight text-white leading-tight">
+                <span class="font-display pr-4">Sentiment</span>
+                <span class="font-display font-light text-[#C3E86C]">Analysis</span>
+            </h1>
+        </div>
+
+        <div class="absolute top-[28%] left-0 w-full h-[72%] px-16 grid grid-cols-2 gap-16 pt-10 border-t border-[#333333]">
+            
+            <div class="flex flex-col justify-start gap-10">
+                <h3 class="text-[#CCCCCC] text-xl uppercase tracking-widest font-normal mb-2 border-l-4 border-[#C3E86C] pl-4">
+                    Sentiment Overview
+                </h3>
+
+                <div class="group">
+                    <div class="flex justify-between items-end mb-2">
+                        <span class="text-white text-2xl font-light">Positive Sentiment</span>
+                        <span class="text-[#C3E86C] text-5xl font-bold">70%</span>
+                    </div>
+                    <div class="w-full h-1 bg-[#666666] rounded-full overflow-hidden relative">
+                        <div class="absolute top-0 left-0 h-full bg-[#C3E86C] w-[70%] shadow-[0_0_10px_#C3E86C]"></div>
+                    </div>
+                </div>
+
+                <div class="group">
+                    <div class="flex justify-between items-end mb-2">
+                        <span class="text-white text-2xl font-light">Neutral Sentiment</span>
+                        <span class="text-white text-5xl font-bold opacity-60">20%</span>
+                    </div>
+                    <div class="w-full h-1 bg-[#666666] rounded-full overflow-hidden relative">
+                        <div class="absolute top-0 left-0 h-full bg-white opacity-40 w-[20%]"></div>
+                    </div>
+                </div>
+
+                <div class="group">
+                    <div class="flex justify-between items-end mb-2">
+                        <span class="text-white text-2xl font-light">Negative Sentiment</span>
+                        <span class="text-white text-5xl font-bold opacity-40">10%</span>
+                    </div>
+                    <div class="w-full h-1 bg-[#666666] rounded-full overflow-hidden relative">
+                        <div class="absolute top-0 left-0 h-full bg-[#666666] w-[10%]"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="absolute left-1/2 top-[10%] bottom-[10%] w-[1px] bg-[#333333]"></div>
+
+            <div class="flex flex-col justify-start pl-8">
+                <h3 class="text-[#CCCCCC] text-xl uppercase tracking-widest font-normal mb-8 border-l-4 border-[#C3E86C] pl-4">
+                    Key Sentiments
+                </h3>
+
+                <ul class="flex flex-col gap-8">
+                    <li class="flex items-start gap-6 relative">
+                        <i class="fa-solid fa-quote-left absolute -left-4 -top-2 text-[#C3E86C] opacity-20 text-4xl"></i>
+                        
+                        <div class="relative shrink-0">
+                            <div class="w-16 h-16 rounded-full p-1 border border-[#666666]">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                                     alt="User Avatar" 
+                                     class="w-full h-full rounded-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                            </div>
+                            <div class="absolute bottom-0 right-0 w-4 h-4 bg-[#C3E86C] rounded-full border-2 border-black"></div>
+                        </div>
+                        
+                        <div class="flex flex-col gap-1">
+                            <span class="text-xs text-[#C3E86C] uppercase font-bold tracking-wider mb-1">Positive Comment</span>
+                            <p class="text-white text-2xl font-medium leading-tight">"Great content! Really insightful."</p>
+                        </div>
+                    </li>
+
+                    <li class="flex items-start gap-6">
+                        <div class="relative shrink-0">
+                            <div class="w-16 h-16 rounded-full p-1 border border-[#666666]">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                                     alt="User Avatar" 
+                                     class="w-full h-full rounded-full object-cover grayscale opacity-80">
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-col gap-1">
+                            <span class="text-xs text-[#666666] uppercase font-bold tracking-wider mb-1">Neutral Comment</span>
+                            <p class="text-[#CCCCCC] text-2xl font-light leading-tight">"Interesting Post, but needs more data."</p>
+                        </div>
+                    </li>
+
+                    <li class="flex items-start gap-6">
+                        <div class="relative shrink-0">
+                            <div class="w-16 h-16 rounded-full p-1 border border-[#666666]">
+                                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                                     alt="User Avatar" 
+                                     class="w-full h-full rounded-full object-cover grayscale opacity-60">
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-col gap-1">
+                            <span class="text-xs text-[#666666] uppercase font-bold tracking-wider mb-1">Negative Sentiment</span>
+                            <p class="text-[#666666] text-2xl font-light leading-tight">"Could be better formatted."</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        </div>
+
+</body>
+</html>

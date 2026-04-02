@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Computing Keynote</title>
+    
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts CDN (Specific Source Required) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <!-- Tailwind Config for Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#0A0A0E',
+                        surfaceDark: '#121216',
+                        primaryBlue: '#1D4ED8',
+                        electricBlue: '#2563EB',
+                        textMain: '#FFFFFF',
+                        textSub: '#B0B0B5',
+                        borderDark: '#2E2E33',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Gradient Syntax Compliance */
+        .bg-gradient-glow {
+            background: linear-gradient(135deg, #1D4ED8, #0A0A0E);
+        }
+        
+        /* Utility for grid layout of text */
+        .text-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        /* Page Container */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #0A0A0E;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+            color: #FFFFFF;
+        }
+
+        /* Decorative Background Blur */
+        .blur-orb {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background-color: #1D4ED8;
+            filter: blur(150px);
+            opacity: 0.15;
+            border-radius: 50%;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div id="page_container">
+        
+        <!-- Background Ambient Light (Top Left) -->
+        <div class="blur-orb" style="top: -200px; left: -200px;"></div>
+        <!-- Background Ambient Light (Bottom Right) -->
+        <div class="blur-orb" style="bottom: -300px; right: -100px; background-color: #2563EB;"></div>
+
+        <!-- Navbar Section -->
+        <!-- z-index 10 to ensure it sits above background blur -->
+        <div class="relative z-10 flex items-center justify-between px-16 py-8 border-b border-[#2E2E33]">
+            <!-- Brand / Logo Area -->
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 flex items-center justify-center border border-[#1D4ED8] rounded text-[#1D4ED8]">
+                    <i class="fa-solid fa-cube text-sm"></i>
+                </div>
+                <h6 class="text-[#FFFFFF] text-sm font-bold tracking-wide">Salford & Co.</h6>
+            </div>
+
+            <!-- Navigation Actions -->
+            <div class="flex items-center gap-4">
+                <!-- Help Button: Primary Style -->
+                <div class="bg-[#1D4ED8] rounded-full px-6 py-2">
+                    <h6 class="text-sm font-semibold text-white">Help</h6>
+                </div>
+                <!-- Contact Button: Outline Style -->
+                <div class="border border-[#2E2E33] rounded-full px-6 py-2">
+                    <h6 class="text-sm font-semibold text-[#B0B0B5]">Contact Us</h6>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Grid -->
+        <div class="relative z-10 flex w-full h-full px-16 pt-10">
+            
+            <!-- Left Column: Visual Focus (35% Width) -->
+            <div class="w-[38%] pr-8 relative">
+                <!-- Image Container with Modern Masking -->
+                <div class="relative w-full h-[500px] rounded-[32px] overflow-hidden border border-[#2E2E33] bg-[#121216]">
+                    <!-- Main Hero Image -->
+                    <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=1000&auto=format&fit=crop" 
+                         alt="Quantum Computer Processor" 
+                         class="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-700 ease-out"
+                         style="display: block;">
+                    <!-- 420*500 -->
+                    
+                    <!-- Gradient Overlay for Text Readability/Atmosphere -->
+                    <div class="absolute inset-0" style="background: linear-gradient(180deg, transparent, rgba(10, 10, 14, 0.6));"></div>
+                </div>
+
+                <!-- Decorative Floating Elements (The Blue Circles from reference) -->
+                <!-- Large Circle -->
+                <div class="absolute top-[20%] -right-6 w-20 h-20 bg-[#1D4ED8] rounded-full shadow-lg flex items-center justify-center border-4 border-[#0A0A0E]">
+                    <i class="fa-solid fa-atom text-white text-xl animate-pulse"></i>
+                </div>
+                <!-- Small Dot -->
+                <div class="absolute bottom-[20%] right-10 w-4 h-4 bg-[#2563EB] rounded-full shadow-md"></div>
+            </div>
+
+            <!-- Right Column: Content & Information (65% Width) -->
+            <div class="w-[62%] flex flex-col justify-between h-[500px]">
+                
+                <!-- Header Section -->
+                <div>
+                    <!-- Main Title: High contrast, large scale -->
+                    <h1 class="text-6xl font-bold text-[#FFFFFF] leading-[1.1] tracking-tight mb-8">
+                        Key Features of Fictional<br>
+                        Quantum Computing
+                    </h1>
+
+                    <!-- Subhead -->
+                    <h3 class="text-xl text-[#FFFFFF] font-medium mb-6 flex items-center gap-3">
+                        <i class="fa-solid fa-microchip text-[#1D4ED8]"></i>
+                        Unraveling the Mysteries of Quantum Reality
+                    </h3>
+
+                    <!-- Text Columns (Grid Layout) -->
+                    <div class="text-grid">
+                        <!-- Column 1 -->
+                        <div>
+                            <p class="text-[#B0B0B5] text-sm leading-relaxed text-justify">
+                                Lorem ipsum odor amet, consectetuer adipiscing elit. Varius netus felis dapibus augue eu vivamus. Varius viverra duis lacus pellentesque in. Arhoncus semper curabitur tortor lacinia magnis convallis lacinia. 
+                            </p>
+                        </div>
+                        <!-- Column 2 -->
+                        <div>
+                            <p class="text-[#B0B0B5] text-sm leading-relaxed text-justify">
+                                Lorem ipsum odor amet, consectetuer adipiscing elit. Varius netus felis dapibus augue eu vivamus. Varius viverra duis lacus pellentesque in. Arhoncus semper curabitur tortor lacinia magnis convallis lacinia. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Cards Section: Feature Highlights -->
+                <div class="flex gap-5 mt-auto">
+                    
+                    <!-- Card 1: Default State -->
+                    <div class="flex-1 bg-[#121216] border border-[#2E2E33] rounded-2xl p-6 flex flex-col justify-center h-32">
+                        <div class="mb-2 text-[#2563EB]">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <h4 class="text-[#FFFFFF] text-lg font-medium leading-tight">
+                            Superposition<br>Dynamics
+                        </h4>
+                    </div>
+
+                    <!-- Card 2: Active State (Primary Blue) -->
+                    <!-- This represents the highlighted card in the design -->
+                    <div class="flex-1 bg-[#1D4ED8] rounded-2xl p-6 flex flex-col justify-center h-32 shadow-lg shadow-blue-900/20 relative overflow-hidden">
+                        <!-- Subtle decorative circle inside active card -->
+                        <div class="absolute -right-4 -top-4 w-16 h-16 bg-[#2563EB] rounded-full opacity-50 blur-xl"></div>
+                        
+                        <div class="mb-2 text-white relative z-10">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                        <h4 class="text-white text-lg font-medium leading-tight relative z-10">
+                            Quantum Link<br>Technology
+                        </h4>
+                    </div>
+
+                    <!-- Card 3: Default State -->
+                    <div class="flex-1 bg-[#121216] border border-[#2E2E33] rounded-2xl p-6 flex flex-col justify-center h-32">
+                        <div class="mb-2 text-[#2563EB]">
+                            <i class="fa-solid fa-wave-square"></i>
+                        </div>
+                        <h4 class="text-[#FFFFFF] text-lg font-medium leading-tight">
+                            Timewave<br>Simulations
+                        </h4>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

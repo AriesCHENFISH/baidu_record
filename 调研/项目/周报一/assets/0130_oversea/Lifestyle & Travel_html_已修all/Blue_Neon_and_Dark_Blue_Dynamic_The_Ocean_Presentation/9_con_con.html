@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Ocean Inspiring Facts - Unique Layout</title>
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&family=Libre+Baskerville:ital@1&display=swap">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepOcean: '#020B26',
+                        accentBlue: '#4FBDF2',
+                        softGray: '#A0AEC0',
+                        coral: '#FF7F50'
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Libre Baskerville', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background: #020B26;
+            background: radial-gradient(circle at 70% 50%, #0A245A 0%, #020B26 100%);
+            overflow: hidden;
+            color: #FFFFFF;
+        }
+
+        /* 标题样式：通过垂直排列和缩进区别于第一页 */
+        .vertical-title {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 72px;
+            line-height: 1;
+            background: linear-gradient(to bottom, #fff 30%, rgba(255,255,255,0.1) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* 气泡卡片：采用不同的圆角逻辑，模拟不规则液体感 */
+        .bubble-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-left: 1px solid rgba(79, 189, 242, 0.4);
+            border-top: 1px solid rgba(79, 189, 242, 0.4);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .bubble-card:hover {
+            background: rgba(255, 255, 255, 0.06);
+            transform: scale(1.02) translateX(5px);
+        }
+
+        /* 异形图片框：采用右侧大面积裁切 */
+        .organic-frame {
+            border-radius: 65% 35% 42% 58% / 51% 57% 43% 49%;
+            box-shadow: 0 0 100px rgba(10, 36, 90, 0.8);
+        }
+
+        .scroll-text {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container" class="flex items-center">
+        <div class="absolute left-10 h-3/4 flex flex-col justify-between items-center py-10 border-l border-white/5">
+            <span class="scroll-text text-[10px] tracking-[0.5em] text-softGray font-light">EST. 2026</span>
+            <div class="w-1 h-1 bg-accentBlue rounded-full"></div>
+            <span class="scroll-text text-[10px] tracking-[0.5em] text-softGray font-light uppercase">Oceanic Data</span>
+        </div>
+
+        <div class="grid grid-cols-12 w-full h-full px-24 items-center">
+            
+            <div class="col-span-4 space-y-8 z-20">
+                <div class="space-y-2">
+                    <p class="text-accentBlue text-xs font-bold tracking-[0.4em] uppercase">Insight Focus</p>
+                    <h1 class="vertical-title italic">Inspiring<br><span class="pl-12">Facts.</span></h1>
+                </div>
+                
+                <p class="text-softGray text-gl leading-relaxed font-light max-w-xs">
+                    Beyond the reach of sunlight lies a world that challenges our understanding of life, physics, and the very origins of our planet.
+                </p>
+
+                <div class="pt-4 flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-xs font-serif italic text-accentBlue">02</div>
+                    <span class="text-[10px] tracking-widest text-softGray uppercase">Deep Sea<br>Exploration</span>
+                </div>
+            </div>
+
+            <div class="col-span-4 flex flex-col gap-6 -ml-10 z-30">
+                <div class="bubble-card p-6 rounded-tr-[50px] rounded-bl-[50px]">
+                    <div class="flex items-center gap-3 mb-2">
+                        <i class="fa-solid fa-water text-accentBlue text-xs"></i>
+                        <span class="text-sm font-bold tracking-widest text-white/40 uppercase">Depth Range</span>
+                    </div>
+                    <p class="text-gl font-light leading-snug">
+                        The <span class="text-white font-semibold">Mariana Trench</span> descends <b class="text-lg text-accentBlue">11,034m</b>. If Everest was placed inside, its peak would still be 2km underwater.
+                    </p>
+                </div>
+
+                <div class="bubble-card p-6 rounded-tl-[50px] rounded-br-[50px] transform translate-x-8">
+                    <div class="flex items-center gap-3 mb-2">
+                        <i class="fa-solid fa-wind text-coral text-xs"></i>
+                        <span class="text-sm font-bold tracking-widest text-white/40 uppercase">Oxygen Supply</span>
+                    </div>
+                    <p class="text-gl font-light leading-snug">
+                        Marine organisms, primarily <span class="text-coral font-medium">Prochlorococcus</span>, generate 1 in every 5 breaths you take.
+                    </p>
+                </div>
+
+                <div class="bubble-card p-6 rounded-[30px]">
+                    <div class="flex items-center gap-3 mb-2">
+                        <i class="fa-solid fa-rocket text-white/60 text-xs"></i>
+                        <span class="text-sm font-bold tracking-widest text-white/40 uppercase">Discovery Gap</span>
+                    </div>
+                    <p class="text-gl font-light leading-snug italic">
+                        "We have better maps of the surface of <span class="text-white font-medium">Mars</span> than we do of our own ocean floor."
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-span-4 relative h-full flex items-center">
+                <div class="organic-frame w-[450px] h-[550px] overflow-hidden rotate-3 transform translate-x-10">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=1200&auto=format&fit=crop" 
+                         class="w-full h-full object-cover scale-110 grayscale-[0.2] hover:grayscale-0 transition-all duration-700">
+                </div>
+                <div class="absolute top-20 right-0 w-24 h-24 border border-white/5 rounded-full animate-pulse"></div>
+                <div class="absolute bottom-40 -left-10 w-12 h-12 bg-accentBlue/20 blur-xl rounded-full"></div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 right-24 flex items-end gap-4">
+            <span class="text-4xl font-serif italic text-white/10">02</span>
+            <div class="mb-2 w-20 h-[1px] bg-white/10"></div>
+        </div>
+    </div>
+
+</body>
+</html>

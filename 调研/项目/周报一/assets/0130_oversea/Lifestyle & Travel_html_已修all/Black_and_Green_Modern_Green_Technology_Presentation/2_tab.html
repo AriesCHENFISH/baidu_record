@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Directory | Arowwai Industries</title>
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .font-sans { font-family: 'Noto Sans SC', sans-serif; }
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #050505; color: #FFFFFF; overflow: hidden; }
+        ::-webkit-scrollbar { display: none; }
+
+        /* 顶部导航玻璃拟态 */
+        .glass-nav { background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02)); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.08); }
+        
+        /* 动画效果 */
+        @keyframes slow-rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        .logo-gear { animation: slow-rotate 12s linear infinite; }
+        
+        .status-dot { box-shadow: 0 0 8px #CFFF5E; animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(1.2); } 100% { opacity: 1; transform: scale(1); } }
+
+        /* 背景大字装饰 */
+        .bg-text { position: absolute; font-size: 300px; font-weight: 900; color: rgba(207, 255, 94, 0.03); line-height: 1; z-index: 0; pointer-events: none; }
+        
+        /* 目录项 Hover 效果 */
+        .toc-item { transition: all 0.3s ease; border-left: 2px solid transparent; }
+        .toc-item:hover { border-left: 2px solid #CFFF5E; background: linear-gradient(to right, rgba(207, 255, 94, 0.05), transparent); padding-left: 1rem; }
+    </style>
+</head>
+<body class="font-sans">
+
+    <div id="page_container">
+        <!-- 背景装饰 -->
+        <div class="bg-text top-[-20px] left-[-30px]">INDEX</div>
+        <div class="absolute top-[-100px] right-[-100px] w-[600px] h-[600px] bg-[#CFFF5E] opacity-[0.03] rounded-full blur-[120px] pointer-events-none"></div>
+
+        <!-- 1. Header Section -->
+        <header class="relative z-50 px-16 pt-10 pb-6">
+            <nav class="flex justify-between items-center glass-nav rounded-2xl px-10 py-5">
+                <div class="flex items-center gap-4 group cursor-pointer">
+                    <div class="relative w-10 h-10 flex items-center justify-center">
+                        <div class="absolute inset-0 border border-[#CFFF5E]/40 rounded-full scale-110"></div>
+                        <div class="text-[#CFFF5E] text-xl relative z-10 logo-gear"><i class="fa-solid fa-compass-drafting"></i></div>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-white text-xl font-black tracking-tighter leading-none italic uppercase">Arowwai<span class="text-[#CFFF5E]">.</span></span>
+                        <span class="text-white text-[9px] tracking-[0.4em] uppercase opacity-40 font-bold">Project Scope</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 group cursor-pointer px-6 py-2 rounded-full hover:bg-white/5 transition-all">
+                    <div class="flex gap-1">
+                        <div class="w-1.5 h-1.5 bg-[#CFFF5E] rounded-full group-hover:scale-125 transition-transform"></div>
+                        <div class="w-1.5 h-1.5 bg-[#CFFF5E]/40 rounded-full group-hover:scale-110 transition-transform"></div>
+                    </div>
+                    <span class="text-xs font-bold uppercase tracking-[0.4em] text-gray-200">Catalog</span>
+                    <i class="fa-solid fa-plus text-[9px] text-[#CFFF5E] group-hover:rotate-90 transition-transform"></i>
+                </div>
+                <div class="flex items-center gap-10">
+                    <div class="flex items-center gap-3">
+                        <div class="status-dot w-1.5 h-1.5 bg-[#CFFF5E] rounded-full"></div>
+                        <span class="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Node: Active</span>
+                    </div>
+                    <button class="bg-[#CFFF5E] text-black px-8 py-2.5 rounded-full font-black text-[11px] uppercase tracking-widest hover:bg-white transition-all">Connect</button>
+                </div>
+            </nav>
+        </header>
+
+        <!-- 2. Main Title Section -->
+        <div class="relative z-10 px-16 mb-8">
+            <div class="flex items-center gap-4 mb-2">
+                <div class="h-[1px] w-12 bg-[#CFFF5E]"></div>
+                <span class="text-[10px] uppercase tracking-[0.5em] text-[#CFFF5E] font-bold">Master Directory</span>
+            </div>
+            <h1 class="text-6xl font-black uppercase tracking-tighter leading-none">PROJECT <span class="text-[#CFFF5E]">MODULES</span></h1>
+        </div>
+
+        <!-- 3. Table of Contents Grid -->
+        <main class="relative z-10 grid grid-cols-2 gap-x-20 gap-y-2 px-16 h-[380px]">
+            
+            <!-- Column Left (01-05) -->
+            <div class="flex flex-col justify-between">
+                <!-- Item 1 -->
+                <div class="toc-item py-2 group cursor-pointer">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-xs font-black text-[#CFFF5E]">01.</span>
+                        <h3 class="text-xl font-bold uppercase tracking-wide group-hover:text-[#CFFF5E]">Introduction</h3>
+                        <div class="flex-grow border-b border-white/5 mx-2 mb-1.5"></div>
+                    </div>
+                    <p class="text-[10px] text-gray-500 ml-10 tracking-widest uppercase">The Genesis of Green Tech</p>
+                </div>
+                <!-- Item 2 -->
+                <div class="toc-item py-2 group cursor-pointer">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-xs font-black text-[#CFFF5E]">02.</span>
+                        <h3 class="text-xl font-bold uppercase tracking-wide group-hover:text-[#CFFF5E]">Global Challenges</h3>
+                        <div class="flex-grow border-b border-white/5 mx-2 mb-1.5"></div>
+                    </div>
+                    <p class="text-[10px] text-gray-500 ml-10 tracking-widest uppercase">Environmental Impact Analysis</p>
+                </div>
+                <!-- Item 3 -->
+                <div class="toc-item py-2 group cursor-pointer">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-xs font-black text-[#CFFF5E]">03.</span>
+                        <h3 class="text-xl font-bold uppercase tracking-wide group-hover:text-[#CFFF5E]">Core Principles</h3>
+                        <div class="flex-grow border-b border-white/5 mx-2 mb-1.5"></div>
+                    </div>
+                    <p class="text-[10px] text-gray-500 ml-10 tracking-widest uppercase">Sustainability & Efficiency</p>
+                </div>
+                <!-- Item 4 -->
+                <div class="toc-item py-2 group cursor-pointer">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-xs font-black text-[#CFFF5E]">04.</span>
+                        <h3 class="text-xl font-bold uppercase tracking-wide group-hover:text-[#CFFF5E]">Renewable Energy</h3>
+                        <div class="flex-grow border-b border-white/5 mx-2 mb-1.5"></div>
+                    </div>
+                    <p class="text-[10px] text-gray-500 ml-10 tracking-widest uppercase">Solar, Wind & Hydro Systems</p>
+                </div>
+                <!-- Item 5 -->
+                <div class="toc-item py-2 group cursor-pointer">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-xs font-black text-[#CFFF5E]">05.</span>
+                        <h3 class="text-xl font-bold uppercase tracking-wide group-hover:text-[#CFFF5E]">Transportation</h3>
+                        <div class="flex-grow border-b border-white/5 mx-2 mb-1.5"></div>
+                    </div>
+                    <p class="text-[10px] text-gray-500 ml-10 tracking-widest uppercase">Electric & Hybrid Mobility</p>
+                </div>
+            </div>
+
+            <!-- Column Right (06-10) -->
+            <div class="flex flex-col justify-between">
+                <!-- Item 6 -->
+                <div class="toc-item py-2 group cursor-pointer">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-xs font-black text-[#CFFF5E]">06.</span>
+                        <h3 class="text-xl font-bold uppercase tracking-wide group-hover:text-[#CFFF5E]">Green Building</h3>
+                        <div class="flex-grow border-b border-white/5 mx-2 mb-1.5"></div>
+                    </div>
+                    <p class="text-[10px] text-gray-500 ml-10 tracking-widest uppercase">Sustainable Infrastructure</p>
+                </div>
+                <!-- Item 7 -->
+                <div class="toc-item py-2 group cursor-pointer">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-xs font-black text-[#CFFF5E]">07.</span>
+                        <h3 class="text-xl font-bold uppercase tracking-wide group-hover:text-[#CFFF5E]">Industrial Tech</h3>
+                        <div class="flex-grow border-b border-white/5 mx-2 mb-1.5"></div>
+                    </div>
+                    <p class="text-[10px] text-gray-500 ml-10 tracking-widest uppercase">Manufacturing Revolution</p>
+                </div>
+                <!-- Item 8 -->
+                <div class="toc-item py-2 group cursor-pointer">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-xs font-black text-[#CFFF5E]">08.</span>
+                        <h3 class="text-xl font-bold uppercase tracking-wide group-hover:text-[#CFFF5E]">Digital Logic</h3>
+                        <div class="flex-grow border-b border-white/5 mx-2 mb-1.5"></div>
+                    </div>
+                    <p class="text-[10px] text-gray-500 ml-10 tracking-widest uppercase">IoT & AI for Sustainability</p>
+                </div>
+                <!-- Item 9 -->
+                <div class="toc-item py-2 group cursor-pointer">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-xs font-black text-[#CFFF5E]">09.</span>
+                        <h3 class="text-xl font-bold uppercase tracking-wide group-hover:text-[#CFFF5E]">Global Future</h3>
+                        <div class="flex-grow border-b border-white/5 mx-2 mb-1.5"></div>
+                    </div>
+                    <p class="text-[10px] text-gray-500 ml-10 tracking-widest uppercase">Strategic Outlook 2030</p>
+                </div>
+                <!-- Item 10 -->
+                <div class="toc-item py-2 group cursor-pointer">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-xs font-black text-[#CFFF5E]">10.</span>
+                        <h3 class="text-xl font-bold uppercase tracking-wide group-hover:text-[#CFFF5E]">Conclusion</h3>
+                        <div class="flex-grow border-b border-white/5 mx-2 mb-1.5"></div>
+                    </div>
+                    <p class="text-[10px] text-gray-500 ml-10 tracking-widest uppercase">Final Summary & Vision</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer Decor -->
+        <footer class="absolute bottom-10 left-16 right-16 flex justify-between items-center z-10">
+            <div class="text-[9px] text-gray-600 uppercase tracking-[0.5em]">Project Ref: GREEN-TECH-2025</div>
+            <div class="flex gap-4">
+                <div class="w-2 h-2 rounded-full bg-white/10"></div>
+                <div class="w-2 h-2 rounded-full bg-[#CFFF5E]"></div>
+                <div class="w-2 h-2 rounded-full bg-white/10"></div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>

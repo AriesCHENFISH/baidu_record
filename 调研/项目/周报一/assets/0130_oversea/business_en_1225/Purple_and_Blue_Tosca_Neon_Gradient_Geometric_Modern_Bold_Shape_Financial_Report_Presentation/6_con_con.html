@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash Flow Statement Analysis</title>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBg: '#05050F',
+                        navBg: '#1E1B33',
+                        primaryText: '#DDFCF2',
+                        secondaryText: '#B0B0B0',
+                        chart1: '#C8F9E6',
+                        chart2: '#88DEE3',
+                        chart3: '#64B0CF',
+                    },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; background-color: #05050F; position: relative; margin: 0 auto; overflow: hidden; }
+        .glow-sphere { position: absolute; border-radius: 50%; filter: blur(80px); z-index: 0; }
+        .glow-top-left { width: 500px; height: 500px; background: radial-gradient(circle, #18123A 0%, transparent 70%); top: -200px; left: -150px; }
+        .glow-bottom-right { width: 600px; height: 600px; background: radial-gradient(circle, #1E1B33 0%, transparent 70%); bottom: -200px; right: -100px; }
+        .dot-pattern { position: absolute; width: 200px; height: 200px; background-image: radial-gradient(#64B0CF 1px, transparent 1px); background-size: 20px 20px; opacity: 0.15; z-index: 0; }
+        .icon-gradient-1 { background: linear-gradient(135deg, #C8F9E6, #64B0CF); }
+        .icon-gradient-2 { background: linear-gradient(135deg, #88DEE3, #538AB8); }
+        .icon-gradient-3 { background: linear-gradient(135deg, #64B0CF, #18123A); }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <div class="glow-sphere glow-top-left"></div>
+        <div class="glow-sphere glow-bottom-right"></div>
+        <div class="dot-pattern" style="top: 150px; right: 20px;"></div>
+        <div class="dot-pattern" style="bottom: 50px; left: 50px;"></div>
+
+        <div class="relative z-20 px-12 pt-8 w-full">
+            <nav class="flex items-center justify-between w-full h-20 px-10 rounded-full" style="background: linear-gradient(90deg, #6a44f0 0%, #1E1B33 40%, #1E1B33 100%); box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);">
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 flex items-center justify-center rounded-full bg-[#DDFCF2] text-[#05050F]">
+                        <i class="fa-solid fa-layer-group text-xl"></i>
+                    </div>
+                    <h2 class="text-[#DDFCF2] text-xl font-bold tracking-wide">Fradel Company</h2>
+                </div>
+                <ul class="flex items-center gap-12 list-none m-0 p-0">
+                    <li class="cursor-pointer"><b class="text-[#DDFCF2] text-sm tracking-widest hover:text-white transition-colors">HOME</b></li>
+                    <li class="cursor-pointer"><b class="text-[#B0B0B0] text-sm tracking-widest hover:text-[#DDFCF2] transition-colors">ABOUT</b></li>
+                    <li class="cursor-pointer"><b class="text-[#B0B0B0] text-sm tracking-widest hover:text-[#DDFCF2] transition-colors">MORE</b></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="relative z-10 grid grid-cols-12 gap-8 px-12 mt-8 h-[560px]">
+            <div class="col-span-4 flex flex-col justify-center gap-10 pl-4">
+                <div class="flex items-center gap-6 group">
+                    <div class="w-20 h-20 rounded-full icon-gradient-1 flex items-center justify-center shadow-lg transform transition-transform group-hover:scale-105">
+                        <i class="fa-solid fa-gears text-deepBg text-3xl"></i>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <h3 class="text-primaryText text-2xl font-bold leading-tight">Operating<br>Activities</h3>
+                        <p class="text-secondaryText text-sm font-light">Core business revenue</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-6 group">
+                    <div class="w-20 h-20 rounded-full icon-gradient-2 flex items-center justify-center shadow-lg transform transition-transform group-hover:scale-105">
+                        <i class="fa-solid fa-chart-pie text-deepBg text-3xl"></i>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <h3 class="text-primaryText text-2xl font-bold leading-tight">Investing<br>Activities</h3>
+                        <p class="text-secondaryText text-sm font-light">Asset acquisition info</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-6 group">
+                    <div class="w-20 h-20 rounded-full icon-gradient-3 flex items-center justify-center shadow-lg transform transition-transform group-hover:scale-105 border border-white/10">
+                        <i class="fa-solid fa-file-invoice-dollar text-primaryText text-3xl"></i>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <h3 class="text-primaryText text-2xl font-bold leading-tight">Financing<br>Activities</h3>
+                        <p class="text-secondaryText text-sm font-light">Funding & dividends</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-span-8 flex flex-col pt-4 pr-4">
+                <h1 class="text-6xl font-bold text-primaryText tracking-tight drop-shadow-lg mb-2">Cash Flow Statement</h1>
+                <div class="w-full h-[320px] relative mt-4">
+                    <div id="mainChart" style="width: 100%; height: 100%;"></div>
+                </div>
+                <div class="mt-6 pr-8">
+                    <p class="text-secondaryText text-sm leading-relaxed text-justify opacity-80 font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var chartDom = document.getElementById('mainChart');
+            var myChart = echarts.init(chartDom);
+            var option = {
+                backgroundColor: 'transparent',
+                tooltip: { trigger: 'axis', backgroundColor: 'rgba(5, 5, 15, 0.9)', textStyle: { color: '#DDFCF2' } },
+                legend: { data: ['Series 1', 'Series 2'], right: '5%', top: '0%', textStyle: { color: '#DDFCF2' } },
+                grid: { left: '0%', right: '2%', bottom: '5%', top: '12%', containLabel: true },
+                xAxis: { type: 'category', boundaryGap: false, data: ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5', 'Item 6', 'Item 7', 'Item 8', 'Item 9'], axisLine: { lineStyle: { color: '#1E1B33' } }, axisLabel: { color: '#B0B0B0' } },
+                yAxis: { type: 'value', splitLine: { lineStyle: { color: 'rgba(255, 255, 255, 0.05)' } }, axisLabel: { color: '#B0B0B0' } },
+                series: [
+                    { name: 'Series 1', type: 'line', smooth: true, lineStyle: { width: 3, color: '#88DEE3' }, areaStyle: { color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{ offset: 0, color: 'rgba(136, 222, 227, 0.4)' }, { offset: 1, color: 'rgba(136, 222, 227, 0)' }]) }, data: [0, 12, 20, 30, 32, 29, 25, 20, 12] },
+                    { name: 'Series 2', type: 'line', smooth: true, lineStyle: { width: 3, color: '#538AB8' }, areaStyle: { color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{ offset: 0, color: 'rgba(83, 138, 184, 0.5)' }, { offset: 1, color: 'rgba(83, 138, 184, 0)' }]) }, data: [0, 5, 10, 15, 25, 30, 40, 42, 48] }
+                ]
+            };
+            myChart.setOption(option);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preservation - Research Archive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { oceanDeep: '#081033', electricCyan: '#00E5FF' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Playfair Display', 'serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        #page_container { width: 1280px; height: 720px; position: relative; background: #081033; color: #FFFFFF; overflow: hidden; display: flex; flex-direction: column; margin: 0 auto; }
+        .text-outline { -webkit-text-stroke: 1px rgba(0, 229, 255, 0.4); color: transparent; }
+        .img-mask-main { clip-path: polygon(12% 0, 100% 0, 100% 100%, 0% 100%); }
+        .vertical-text { writing-mode: vertical-rl; transform: rotate(180deg); }
+        .data-box { background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 100%); }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <!-- Header -->
+        <header class="relative z-20 px-20 pt-12 flex items-center justify-between">
+            <div class="flex items-center gap-5">
+                <div class="w-12 h-12 border-2 border-electricCyan flex flex-col items-center justify-center gap-1">
+                    <div class="w-6 h-0.5 bg-white"></div>
+                    <div class="w-4 h-0.5 bg-electricCyan"></div>
+                    <div class="w-6 h-0.5 bg-white"></div>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-black tracking-widest uppercase leading-none">Abyssal</h2>
+                    <span class="text-[9px] tracking-[0.5em] text-electricCyan uppercase font-bold">Research Archive</span>
+                </div>
+            </div>
+            <div class="flex gap-10 items-center">
+                <div class="text-[9px] tracking-[0.2em] text-white/40 uppercase text-right">
+                    <span class="block text-white font-bold">STATUS: CRITICAL</span>
+                    <span>Ecological Shield Active</span>
+                </div>
+                <div class="text-electricCyan font-black text-3xl">06</div>
+            </div>
+        </header>
+
+        <main class="flex-1 flex px-20 pt-8 relative">
+            <!-- Background Text -->
+            <div class="absolute top-24 left-10 text-[200px] font-black text-outline opacity-10 pointer-events-none uppercase">Shield</div>
+
+            <!-- Left: Content & Data Matrix -->
+            <div class="w-5/12 flex flex-col justify-between pb-20 relative z-10">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-8 h-[1px] bg-electricCyan"></div>
+                        <span class="text-[10px] tracking-[0.4em] text-electricCyan font-bold uppercase">Sustainability Protocol</span>
+                    </div>
+                    <h1 class="text-7xl font-serif italic mb-6 leading-[0.9]">Preservation <br><span class="font-sans not-italic font-black text-electricCyan uppercase">Essentials</span></h1>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed max-w-sm mb-10">
+                        Preserving the ocean is not an option; it is a necessity for planetary survival. Every species lost in the hadal zone destabilizes the global carbon cycle.
+                    </p>
+                </div>
+
+                <!-- Technical Matrix Box -->
+                <div class="data-box border border-white/10 p-6 relative overflow-hidden">
+                    <div class="flex justify-between items-start mb-6">
+                        <span class="text-[16px] text-electricCyan font-bold tracking-[0.3em] uppercase">Metrics Data</span>
+                        <div class="w-2 h-2 bg-electricCyan animate-pulse"></div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="border-l border-white/20 pl-4">
+                            <span class="text-[14px] text-white/40 block">Oxygen Output</span>
+                            <span class="text-2xl font-light tracking-tighter">50.2%</span>
+                        </div>
+                        <div class="border-l border-white/20 pl-4">
+                            <span class="text-[14px] text-white/40 block">Carbon Sequest</span>
+                            <span class="text-2xl font-light tracking-tighter">12.4Gt</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Slanted Single Image -->
+            <div class="w-7/12 flex items-center justify-end">
+                <div class="w-11/12 h-[480px] relative">
+                    <!-- Frame Decor -->
+                    <div class="absolute -inset-4 border border-white/5 pointer-events-none"></div>
+                    <div class="absolute top-0 right-0 w-full h-full overflow-hidden img-mask-main shadow-2xl border border-white/10">
+                        <img src="https://images.unsplash.com/photo-1570535260309-873917822d51?q=80&w=1200" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000">
+                    </div>
+                    
+                    <!-- Vertical Quote on Image -->
+                    <div class="absolute -left-12 top-1/2 vertical-text">
+                        <p class="text-[11px] tracking-[0.4em] font-serif italic text-white/60">
+                            "The water is the blood of the world."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

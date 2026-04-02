@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Shodwe - Chocolate Portfolio</title>
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <link href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Allura&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        chocolate: {
+                            900: '#412A25', 
+                            800: '#5D4037',
+                            700: '#6D4C41', 
+                            100: '#F5F0EB', 
+                        },
+                        text: {
+                            primary: '#222222',
+                            secondary: '#666666'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans SC', 'sans-serif'],
+                        script: ['Allura', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FFFFFF;
+            overflow: hidden;
+            /* 新增：使内部内容垂直居中 */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            transform: rotate(180deg);
+        }
+        ::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body>
+
+    <div class="page_container">
+        
+        <div class="absolute top-0 left-0 w-[400px] h-[400px] rounded-full bg-orange-50 blur-[100px] opacity-50 -z-10"></div>
+
+        <main class="w-full h-[580px] flex px-16 pt-0 pb-0">
+            
+            <div class="w-[200px] h-full flex flex-col justify-center items-center relative">
+                <div class="h-full flex items-center justify-center">
+                    <h2 class="vertical-text font-script text-[140px] leading-none text-chocolate-900 opacity-90" style="margin-left: -40px;">
+                        Our Portfolio
+                    </h2>
+                </div>
+                <div class="absolute bottom-4 left-10 w-px h-20 bg-chocolate-900/20"></div>
+            </div>
+
+            <div class="flex-1 h-full pl-8">
+                <div class="grid grid-cols-2 grid-rows-2 gap-8 h-full w-full">
+                    
+                    <div class="rounded-2xl overflow-hidden shadow-lg relative bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1549007994-cb92caebd54b?q=80&w=1000&auto=format&fit=crop" 
+                             alt="Artisanal Chocolates" 
+                             class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-chocolate-900/30 to-transparent"></div>
+                    </div>
+
+                    <div class="flex flex-col justify-center p-8 bg-chocolate-100 rounded-2xl">
+                        <h3 class="text-chocolate-900 font-bold text-xl mb-4">Project Excellence</h3>
+                        <p class="text-text-secondary text-sm leading-relaxed">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col justify-center p-8 border border-chocolate-100 rounded-2xl">
+                        <h3 class="text-chocolate-900 font-bold text-xl mb-4">Artisan Craft</h3>
+                        <p class="text-text-secondary text-sm leading-relaxed">
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                    </div>
+
+                    <div class="rounded-2xl overflow-hidden shadow-lg relative bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=1089&auto=format&fit=crop" 
+                             alt="Chocolate Cake" 
+                             class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-chocolate-900/10 mix-blend-multiply"></div>
+                    </div>
+                    
+                </div>
+            </div>
+        </main>
+
+        <div class="absolute bottom-8 right-8 flex gap-2">
+            <div class="w-1.5 h-1.5 rounded-full bg-chocolate-700"></div>
+            <div class="w-1.5 h-1.5 rounded-full bg-chocolate-700 opacity-60"></div>
+            <div class="w-1.5 h-1.5 rounded-full bg-chocolate-700 opacity-30"></div>
+        </div>
+
+    </div>
+
+</body>
+</html>

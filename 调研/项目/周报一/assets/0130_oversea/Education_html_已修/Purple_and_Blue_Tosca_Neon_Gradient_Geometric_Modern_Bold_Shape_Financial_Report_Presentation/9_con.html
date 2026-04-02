@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, height=720, initial-scale=1.0">
+    <title>Year-over-Year Comparison - Strategic View</title>
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBg: '#050510',
+                        navBg: '#111022',
+                        accentCyan: '#8DE4E6',
+                        steelBlue: '#4E86B3',
+                        textGray: '#B0B0B8',
+                        glowPurple: '#2D2B55',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #050510;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .grid-pattern {
+            position: absolute; inset: 0;
+            background-image: radial-gradient(rgba(78, 134, 179, 0.1) 1px, transparent 1px);
+            background-size: 30px 30px; z-index: 0;
+        }
+        .logo-tracking { letter-spacing: 0.35em; }
+        .subtitle-tracking { letter-spacing: 0.5em; margin-right: -0.5em; }
+        
+        /* 玻璃拟态与阴影 */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        /* 图片遮罩渐变 */
+        .img-overlay {
+            background: linear-gradient(to top, rgba(5, 5, 16, 0.9) 0%, rgba(5, 5, 16, 0) 50%);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <div class="grid-pattern"></div>
+        <div class="absolute top-[-200px] left-[-100px] w-[600px] h-[600px] bg-glowPurple blur-[120px] opacity-40"></div>
+
+        <header class="relative z-50 w-full pt-12 px-16 flex items-center shrink-0">
+            <div class="flex items-center">
+                <div class="w-[4px] h-10 bg-gradient-to-b from-accentCyan to-steelBlue rounded-full mr-8 shadow-[0_0_15px_rgba(141,228,230,0.4)]"></div>
+                
+                <div class="flex flex-col">
+                    <h2 class="text-6xl font-black text-white leading-none uppercase logo-tracking">ANNUAL</h2>
+                    <p class="text-[11px] text-accentCyan/70 font-bold uppercase mt-3 subtitle-tracking">
+                        Growth Comparison Analysis
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <main class="relative z-10 w-full flex-1 px-16 flex flex-col justify-center">
+            
+            <div class="mb-10 text-center">
+                <h1 class="text-5xl font-bold text-white tracking-tight">Year-over-Year Comparison</h1>
+            </div>
+
+            <div class="grid grid-cols-2 gap-10">
+                
+                <div class="group relative glass-card rounded-3xl overflow-hidden transition-all duration-500 hover:border-white/20">
+                    <div class="h-[280px] w-full relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1280&auto=format&fit=crop" 
+                             alt="2024 Foundation" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute inset-0 img-overlay"></div>
+                        <div class="absolute bottom-6 left-8">
+                            <span class="text-accentCyan text-xs font-black uppercase tracking-[0.3em]">Fiscal Year</span>
+                            <h2 class="text-5xl font-black text-white mt-1">2024</h2>
+                        </div>
+                    </div>
+                    <div class="p-8 pt-4">
+                        <h3 class="text-white text-xl font-bold mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-anchor text-accentCyan text-sm"></i>
+                            Operational Foundation
+                        </h3>
+                        <p class="text-textGray text-sm leading-relaxed text-justify opacity-80">
+                            The year of 2024 focused on establishing a robust structural foundation. We prioritized core asset optimization and team scaling, resulting in a 15% increase in operational efficiency across primary sectors.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="group relative glass-card rounded-3xl overflow-hidden transition-all duration-500 border-accentCyan/20">
+                    <div class="h-[280px] w-full relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1280&auto=format&fit=crop" 
+                             alt="2025 Innovation" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute inset-0 img-overlay"></div>
+                        <div class="absolute bottom-6 left-8">
+                            <span class="text-accentCyan text-xs font-black uppercase tracking-[0.3em]">Fiscal Year</span>
+                            <h2 class="text-5xl font-black text-white mt-1">2025</h2>
+                        </div>
+                        <div class="absolute top-6 right-8 px-3 py-1 bg-accentCyan/20 border border-accentCyan/30 rounded-full">
+                            <span class="text-[10px] text-accentCyan font-bold uppercase tracking-widest animate-pulse">Expanding</span>
+                        </div>
+                    </div>
+                    <div class="p-8 pt-4">
+                        <h3 class="text-white text-xl font-bold mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-rocket text-accentCyan text-sm"></i>
+                            Strategic Expansion
+                        </h3>
+                        <p class="text-textGray text-sm leading-relaxed text-justify opacity-80">
+                            Moving into 2025, the focus shifted to aggressive market expansion and digital integration. Leveraging new AI technologies and global partnerships, we've achieved a significant breakthrough in scalability.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

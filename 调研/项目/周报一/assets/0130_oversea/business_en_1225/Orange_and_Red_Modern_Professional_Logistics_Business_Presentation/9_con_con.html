@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overcoming Challenges and Managing Risk - Salford & Co</title>
+    
+    <!-- Import Google Fonts (Domestic Mirror) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    
+    <!-- Import Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- Import FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+
+    <!-- Configuration for Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            primary: '#D97036',   // Main Orange
+                            bg: '#F9F9FB',        // Page Background
+                            card: '#EBEBEB',      // Neutral Card
+                            text: '#000000',      // Primary Text
+                            body: '#333333',      // Body Text
+                            line: '#E8C9BC'       // Decorative Line
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'Inter', 'Roboto', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'soft': '0 20px 40px -10px rgba(0, 0, 0, 0.05)',
+                        'card': '0 10px 30px -5px rgba(0, 0, 0, 0.08)',
+                        'highlight': '0 20px 40px -5px rgba(217, 112, 54, 0.3)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Basic Setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Page Container - Fixed Dimensions */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #F9F9FB;
+            overflow: hidden;
+        }
+
+        /* Custom Utilities */
+        .glass-icon {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        
+        /* Decorative Background Pattern */
+        .bg-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+        
+        .circle-decor {
+            position: absolute;
+            border-radius: 50%;
+            border: 1px solid #E8C9BC;
+            opacity: 0.4;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div id="page_container">
+
+        <!-- 0. Background Decoration (Abstract Geometry) -->
+        <div class="bg-pattern">
+            <!-- Top Left Decorative Waves -->
+            <div class="circle-decor" style="width: 400px; height: 400px; top: -100px; left: -100px; border-width: 2px;"></div>
+            <div class="circle-decor" style="width: 500px; height: 500px; top: -150px; left: -150px; border-width: 1px;"></div>
+            <!-- Bottom Right Decorative Waves -->
+            <div class="circle-decor" style="width: 300px; height: 300px; bottom: -50px; right: -50px; border-color: #D97036; opacity: 0.1;"></div>
+        </div>
+
+        <!-- 1. Header Section -->
+        <header class="relative z-10 flex justify-between items-center px-12 py-8">
+            <!-- Brand Logo Area -->
+            <div class="flex items-center gap-4">
+                <!-- Logo Icon -->
+                <div class="w-10 h-10 bg-brand-primary rounded-lg flex items-center justify-center shadow-md">
+                    <i class="fa-regular fa-lightbulb text-white text-xl"></i>
+                </div>
+                <!-- Company Name -->
+                <h2 class="text-xl font-bold text-brand-text tracking-wide">Salford & Co</h2>
+            </div>
+            <!-- Pagination -->
+            <div class="text-brand-body font-medium opacity-60">
+                10/12
+            </div>
+        </header>
+
+        <!-- 2. Main Title Section -->
+        <section class="relative z-10 text-center mb-16 mt-2">
+            <h1 class="text-5xl font-extrabold leading-tight tracking-tight text-brand-text">
+                Overcoming Challenges <br>
+                <span class="text-brand-primary">and Managing Risk</span>
+            </h1>
+        </section>
+
+        <!-- 3. Content Cards Section (Grid Layout) -->
+        <main class="relative z-10 grid grid-cols-3 gap-10 px-24 h-[400px]">
+            
+            <!-- Card 1: Supply Chain Resilience -->
+            <div class="relative group">
+                <!-- Floating Icon -->
+                <div class="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-card z-20 border-4 border-[#F9F9FB]">
+                    <i class="fa-solid fa-globe text-3xl text-brand-text opacity-80"></i>
+                </div>
+                
+                <!-- Card Content -->
+                <div class="bg-brand-card rounded-3xl p-8 pt-16 h-full flex flex-col items-center text-center shadow-soft transition-transform duration-300">
+                    <h3 class="text-xl font-bold text-brand-text mb-6 mt-2">Supply Chain Resilience</h3>
+                    <p class="text-brand-body text-base leading-relaxed px-2">
+                        Integrated blockchain technology to provide clients with secure, transparent shipment records.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 2: Fuel Price Volatility (Highlighted) -->
+            <div class="relative group transform scale-105 origin-center z-20">
+                <!-- Floating Icon -->
+                <div class="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-highlight z-20 border-4 border-[#F9F9FB]">
+                    <i class="fa-solid fa-chart-line text-3xl text-brand-primary"></i>
+                </div>
+
+                <!-- Card Content (Orange Background) -->
+                <div class="bg-brand-primary rounded-3xl p-8 pt-16 h-full flex flex-col items-center text-center shadow-highlight">
+                    <h3 class="text-xl font-bold text-white mb-6 mt-2">Fuel Price Volatility</h3>
+                    <p class="text-white text-base leading-relaxed px-2 opacity-95">
+                        Optimizing routes and securing long-term contracts can reduce the impact of rising fuel costs.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 3: Cybersecurity -->
+            <div class="relative group">
+                <!-- Floating Icon -->
+                <div class="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-card z-20 border-4 border-[#F9F9FB]">
+                    <i class="fa-solid fa-shield-halved text-3xl text-brand-text opacity-80"></i>
+                </div>
+
+                <!-- Card Content -->
+                <div class="bg-brand-card rounded-3xl p-8 pt-16 h-full flex flex-col items-center text-center shadow-soft transition-transform duration-300">
+                    <h3 class="text-xl font-bold text-brand-text mb-6 mt-2">Cybersecurity</h3>
+                    <p class="text-brand-body text-base leading-relaxed px-2">
+                        Enhanced cybersecurity protocols to protect digital assets and client data, reducing the risk of cyber attacks.
+                    </p>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Decorative Bottom Element (Optional Balance) -->
+        <div class="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-transparent via-brand-line to-transparent opacity-20"></div>
+
+    </div>
+
+</body>
+</html>

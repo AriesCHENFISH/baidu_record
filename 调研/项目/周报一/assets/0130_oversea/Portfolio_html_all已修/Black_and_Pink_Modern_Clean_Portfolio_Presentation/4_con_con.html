@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills & Tools - Horizontal Layout</title>
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <style>
+        /* Global Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        /* Typography */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,600&family=Inter:wght@200;300;400;500;700&family=Bodoni+Moda:ital,wght@0,400;0,600;1,400&display=swap');
+
+        .font-serif-display { font-family: 'Playfair Display', serif; }
+        .font-serif-modern { font-family: 'Bodoni Moda', serif; }
+        .font-sans-clean { font-family: 'Inter', sans-serif; }
+
+        /* Layout Container */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #050505;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Text Styles */
+        .text-stroke-pink {
+            -webkit-text-stroke: 1px #FDB8D9;
+            color: transparent;
+        }
+
+        /* Skill Tag Style */
+        .skill-tag {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 4px 10px;
+            font-size: 10px;
+            letter-spacing: 0.05em;
+            color: #ccc;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        .skill-tag:hover {
+            border-color: #A68B60;
+            color: #A68B60;
+            background: rgba(166, 139, 96, 0.1);
+        }
+
+        /* Custom Scrollbar hide */
+        ::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+
+        <!-- Section 1: Top Image Area (42% Height) -->
+        <div class="h-[300px] w-full relative overflow-hidden group">
+            <!-- Image with Grayscale & Hover Effect -->
+            <img src="https://images.unsplash.com/photo-1545989253-02cc26577f88?q=80&w=2000&auto=format&fit=crop" 
+                 alt="Art Gallery Exhibit" 
+                 class="w-full h-full object-cover object-center grayscale brightness-90 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000 ease-in-out">
+            
+            <!-- Gold Accent Line Top -->
+            <div class="absolute top-0 left-0 w-full h-1 bg-[#A68B60] z-20"></div>
+            
+            <!-- Bottom Fade -->
+            <div class="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-[#050505] to-transparent opacity-60"></div>
+        </div>
+
+        <!-- Section 2: Branding Strip (Static Version) -->
+        <!-- 移除了 animate-marquee 类，改为静态居中展示 -->
+        <div class="h-[48px] bg-[#FDB8D9] border-y border-[#A68B60]/30 overflow-hidden relative z-20 flex items-center justify-center">
+            <div class="px-4">
+                <span class="text-[#1A1A1A] font-sans-clean font-bold text-sm tracking-[0.3em] uppercase">
+                    Portfolio 2025  —  Chidi Eze  —  Design & Tech  —  Strategic Visuals
+                </span>
+            </div>
+        </div>
+
+        <!-- Section 3: Bottom Content (Beautified Text Design) -->
+        <div class="flex-1 bg-[#050505] relative px-16 py-10">
+            
+            <!-- Background Watermark -->
+            <div class="absolute top-10 right-10 text-[10rem] text-[#FFFFFF] opacity-[0.02] font-serif-modern italic leading-none pointer-events-none select-none">
+                Tools
+            </div>
+
+            <div class="grid grid-cols-12 gap-12 h-full">
+                
+                <!-- Left Column: Big Title Typography (Col 4) -->
+                <div class="col-span-4 flex flex-col justify-center border-r border-[#222]">
+                    <h2 class="text-[#A68B60] font-sans-clean text-xs tracking-[0.4em] uppercase mb-4">
+                        Capabilities
+                    </h2>
+                    <h1 class="font-serif-display text-white text-6xl leading-[0.9] mb-4">
+                        Skills <br>
+                        <span class="font-serif-modern italic text-[#FDB8D9]">&</span> <br>
+                        <span class="text-stroke-pink text-5xl tracking-wide uppercase font-bold">Toolkit</span>
+                    </h1>
+                    <!-- Decorative Element -->
+                    <div class="w-12 h-1 bg-[#A68B60] mt-2"></div>
+                </div>
+
+                <!-- Right Column: Modular Content (Col 8) -->
+                <div class="col-span-8 flex flex-col justify-center gap-8 pl-4">
+                    
+                    <!-- Module 1: Skills (Tags) -->
+                    <div class="flex gap-5 group">
+                        <div class="mt-1 w-8 h-8 rounded-full border border-[#333] flex items-center justify-center text-[#FDB8D9] bg-[#111]">
+                            <i class="fa-solid fa-layer-group text-xs"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-sans-clean font-bold text-base mb-2">Design & Strategy</h3>
+                            <p class="text-[#999] text-sm font-light leading-relaxed mb-3 pr-10">
+                                My approach balances aesthetic precision with strategic storytelling. I transform complex ideas into clear, emotional visuals.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="skill-tag">UI/UX Design</span>
+                                <span class="skill-tag">Identity Systems</span>
+                                <span class="skill-tag">Motion Graphics</span>
+                                <span class="skill-tag">Art Direction</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Module 2: Tools (Icons) -->
+                    <div class="flex gap-5 group">
+                        <div class="mt-1 w-8 h-8 rounded-full border border-[#333] flex items-center justify-center text-[#A68B60] bg-[#111]">
+                            <i class="fa-solid fa-terminal text-xs"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-sans-clean font-bold text-base mb-2">Technical Execution</h3>
+                            <p class="text-[#999] text-sm font-light leading-relaxed mb-3 pr-10">
+                                Leveraging a modern stack to ensure precision and scalability. From rapid prototyping to production-ready assets.
+                            </p>
+                            <div class="flex items-center gap-6 text-[#666] text-xl">
+                                <!-- Interactive Tool Icons -->
+                                <i class="fa-brands fa-figma hover:text-white transition-colors cursor-pointer" title="Figma"></i>
+                                <div class="w-[1px] h-3 bg-[#333]"></div>
+                                <i class="fa-brands fa-adobe hover:text-[#FF0000] transition-colors cursor-pointer" title="Adobe Suite"></i>
+                                <div class="w-[1px] h-3 bg-[#333]"></div>
+                                <i class="fa-brands fa-html5 hover:text-[#E34F26] transition-colors cursor-pointer" title="HTML5"></i>
+                                <i class="fa-brands fa-css3-alt hover:text-[#1572B6] transition-colors cursor-pointer" title="CSS3"></i>
+                                <i class="fa-brands fa-js hover:text-[#F7DF1E] transition-colors cursor-pointer" title="JavaScript"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

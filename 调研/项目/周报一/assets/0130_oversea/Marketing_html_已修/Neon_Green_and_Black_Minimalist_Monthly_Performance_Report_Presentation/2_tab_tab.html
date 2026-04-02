@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table of Contents - Keynote Slide</title>
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome (CDN) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts (Domestic CDN as requested) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- Tailwind Config for Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBlack: '#000000',
+                        accentGreen: '#C3E86C',
+                        darkGray: '#333333',
+                        midGray: '#666666',
+                        lightGray: '#CCCCCC',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Basic Setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container Definition */
+        .page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #000000;
+            overflow: hidden;
+            /* No external box-shadow as requested */
+        }
+
+        /* Decorative Background Elements (Geometric Shapes) */
+        .decor-circle {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(195, 232, 108, 0.08) 0%, rgba(0, 0, 0, 0) 70%);
+            border-radius: 50%;
+            top: -200px;
+            right: -100px;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .decor-line {
+            position: absolute;
+            width: 1px;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent, #333, transparent);
+            left: 50%;
+            top: 0;
+            z-index: 0;
+        }
+
+        /* Typography Utilities */
+        h1 {
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        /* List Styling */
+        .content-list {
+            list-style: none;
+        }
+
+        .list-item-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            /* Using padding for internal spacing, but margins for layout */
+            padding-bottom: 24px; 
+            margin-bottom: 24px;
+            border-bottom: 1px solid #1a1a1a;
+            transition: all 0.3s ease;
+        }
+        
+        /* Simulating hover effect for visual hierarchy without interaction */
+        .list-item-container:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .item-number {
+            font-family: 'Courier New', monospace; /* Monospace for numbers looks techy */
+        }
+
+        /* Icon styling wrapper */
+        .icon-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.05);
+            margin-right: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page_container">
+        <!-- Z-Index 0: Background Decorations -->
+        <div class="decor-circle"></div>
+        <div class="decor-line"></div>
+
+        <!-- Z-Index 10: Main Content -->
+        <div class="relative z-10 w-full h-full p-16 flex flex-col">
+            
+            <!-- Header Section -->
+            <header class="mb-12">
+                <!-- Decorative small tag -->
+                <div class="flex items-center mb-4">
+                    <div class="w-2 h-2 bg-accentGreen rounded-full mr-2"></div>
+                    <span class="text-accentGreen text-xs font-bold tracking-[0.2em] uppercase">Navigation</span>
+                </div>
+                
+                <!-- Main Title -->
+                <h1 class="text-white text-7xl leading-tight">
+                    Table of <span class="text-accentGreen italic font-light">Contents</span>
+                </h1>
+            </header>
+
+            <!-- Content Grid Section -->
+            <div class="flex-1 w-full flex">
+                
+                <!-- Left Column -->
+                <div class="w-1/2 pr-16">
+                    <ul class="content-list">
+                        <!-- Item 03 -->
+                        <li>
+                            <div class="list-item-container">
+                                <span class="item-number text-accentGreen text-sm font-bold mr-6">03</span>
+                                <div class="icon-box">
+                                    <i class="fa-regular fa-file-lines text-lightGray text-xs"></i>
+                                </div>
+                                <div>
+                                    <h2 class="text-white text-2xl font-normal tracking-wide">Executive Summary</h2>
+                                    <p class="text-midGray text-xs mt-1 font-light">Key takeaways and strategic overview</p>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <!-- Item 04 -->
+                        <li>
+                            <div class="list-item-container">
+                                <span class="item-number text-accentGreen text-sm font-bold mr-6">04</span>
+                                <div class="icon-box">
+                                    <i class="fa-solid fa-chart-line text-lightGray text-xs"></i>
+                                </div>
+                                <div>
+                                    <h2 class="text-white text-2xl font-normal tracking-wide">Performance Overview</h2>
+                                    <p class="text-midGray text-xs mt-1 font-light">Metrics, KPIs, and growth analysis</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Item 05 -->
+                        <li>
+                            <div class="list-item-container">
+                                <span class="item-number text-accentGreen text-sm font-bold mr-6">05</span>
+                                <div class="icon-box">
+                                    <i class="fa-solid fa-layer-group text-lightGray text-xs"></i>
+                                </div>
+                                <div>
+                                    <h2 class="text-white text-2xl font-normal tracking-wide">Content Performance</h2>
+                                    <p class="text-midGray text-xs mt-1 font-light">Engagement per content category</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Item 06 -->
+                        <li>
+                            <div class="list-item-container">
+                                <span class="item-number text-accentGreen text-sm font-bold mr-6">06</span>
+                                <div class="icon-box">
+                                    <i class="fa-solid fa-users-viewfinder text-lightGray text-xs"></i>
+                                </div>
+                                <div>
+                                    <h2 class="text-white text-2xl font-normal tracking-wide">Audience Insights</h2>
+                                    <p class="text-midGray text-xs mt-1 font-light">Demographics and behavior patterns</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Item 07 -->
+                        <li>
+                            <div class="list-item-container border-b-0">
+                                <span class="item-number text-accentGreen text-sm font-bold mr-6">07</span>
+                                <div class="icon-box">
+                                    <i class="fa-solid fa-bullhorn text-lightGray text-xs"></i>
+                                </div>
+                                <div>
+                                    <h2 class="text-white text-2xl font-normal tracking-wide">Campaign Analysis</h2>
+                                    <p class="text-midGray text-xs mt-1 font-light">Deep dive into recent activations</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Right Column -->
+                <div class="w-1/2 pl-16">
+                    <ul class="content-list">
+                        <!-- Item 08 -->
+                        <li>
+                            <div class="list-item-container">
+                                <span class="item-number text-accentGreen text-sm font-bold mr-6">08</span>
+                                <div class="icon-box">
+                                    <i class="fa-solid fa-chess text-lightGray text-xs"></i>
+                                </div>
+                                <div>
+                                    <h2 class="text-white text-2xl font-normal tracking-wide">Competitor Analysis</h2>
+                                    <p class="text-midGray text-xs mt-1 font-light">Market positioning comparison</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Item 09 -->
+                        <li>
+                            <div class="list-item-container">
+                                <span class="item-number text-accentGreen text-sm font-bold mr-6">09</span>
+                                <div class="icon-box">
+                                    <i class="fa-regular fa-face-smile text-lightGray text-xs"></i>
+                                </div>
+                                <div>
+                                    <h2 class="text-white text-2xl font-normal tracking-wide">Sentiment Analysis</h2>
+                                    <p class="text-midGray text-xs mt-1 font-light">Brand perception and feedback</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Item 10 -->
+                        <li>
+                            <div class="list-item-container">
+                                <span class="item-number text-accentGreen text-sm font-bold mr-6">10</span>
+                                <div class="icon-box">
+                                    <i class="fa-regular fa-lightbulb text-lightGray text-xs"></i>
+                                </div>
+                                <div>
+                                    <h2 class="text-white text-2xl font-normal tracking-wide">Recommendations</h2>
+                                    <p class="text-midGray text-xs mt-1 font-light">Strategic next steps and action plan</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Item 11 -->
+                        <li>
+                            <div class="list-item-container border-b-0">
+                                <span class="item-number text-accentGreen text-sm font-bold mr-6">11</span>
+                                <div class="icon-box">
+                                    <i class="fa-regular fa-address-card text-lightGray text-xs"></i>
+                                </div>
+                                <div>
+                                    <h2 class="text-white text-2xl font-normal tracking-wide">Contact Information</h2>
+                                    <p class="text-midGray text-xs mt-1 font-light">Reach out to our team</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Footer / Copyright -->
+            <footer class="mt-auto flex justify-between items-end">
+                <div class="text-midGray text-xs tracking-wider">
+                    CONFIDENTIAL &copy; 2024
+                </div>
+                <!-- Simple Geometric decorative footer element -->
+                <div class="flex space-x-2">
+                    <div class="w-8 h-1 bg-darkGray"></div>
+                    <div class="w-4 h-1 bg-accentGreen"></div>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+</body>
+</html>

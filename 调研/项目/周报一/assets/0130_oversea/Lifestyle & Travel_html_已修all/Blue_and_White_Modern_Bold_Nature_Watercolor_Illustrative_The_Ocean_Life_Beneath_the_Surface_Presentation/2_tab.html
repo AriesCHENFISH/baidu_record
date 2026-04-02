@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table of Contents - Ocean Theme</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative; overflow: hidden;
+            /* Deep Ocean Gradient */
+            background: radial-gradient(circle at 50% 0%, #2D6496 0%, #1F4E79 60%, #0f2638 100%);
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Light Rays */
+        .light-shaft {
+            position: absolute; top: -20%; left: 50%;
+            width: 150px; height: 100%;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 100%);
+            filter: blur(30px); pointer-events: none; z-index: 0;
+        }
+
+        /* Glass Item Card */
+        .toc-card {
+            background: rgba(26, 59, 92, 0.4);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .toc-card:hover {
+            background: rgba(26, 59, 92, 0.7);
+            border-color: rgba(141, 228, 224, 0.4);
+            transform: translateX(5px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Number Gradient */
+        .num-gradient {
+            background: linear-gradient(135deg, #FFFFFF 0%, #8DE4E0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Decor Shapes */
+        .blob {
+            position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.15; z-index: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <div class="light-shaft -translate-x-[300px] rotate-[20deg]"></div>
+        <div class="light-shaft translate-x-[300px] -rotate-[20deg]"></div>
+        
+        <div class="blob w-[600px] h-[600px] bg-[#8DE4E0] bottom-[-200px] left-[-200px]"></div>
+        <div class="blob w-[500px] h-[500px] bg-[#5E7C98] top-[-100px] right-[-100px]"></div>
+
+        <header class="relative z-50 flex items-center px-16 pt-12">
+            <div class="flex items-center gap-5 group cursor-default">
+                <div class="relative w-12 h-12 flex items-center justify-center rounded-xl bg-gradient-to-br from-[#8DE4E0] to-[#4FB3AF] text-[#1F4E79] shadow-[0_0_25px_rgba(141,228,224,0.4)] border border-white/20 transition-transform duration-500 group-hover:scale-105">
+                    <i class="fa-solid fa-water text-2xl drop-shadow-sm"></i>
+                </div>
+                <div class="flex flex-col justify-center">
+                    <h6 class="text-2xl font-bold tracking-wide text-white leading-none">
+                        Hanover <span class="font-light text-[#8DE4E0] opacity-80">&</span> Tyke
+                    </h6>
+                    <div class="w-8 h-[3px] bg-[#8DE4E0] mt-2 rounded-full opacity-60 group-hover:w-full transition-all duration-500 ease-out"></div>
+                </div>
+            </div>
+        </header>
+
+        <main class="relative z-10 px-16 mt-6 flex flex-col h-full">
+            
+            <div class="mb-8 flex items-end gap-4 border-b border-white/10 pb-4">
+                <h1 class="text-5xl font-bold text-white tracking-tight drop-shadow-lg">
+                    Table of <span class="text-[#8DE4E0]">Contents</span>
+                </h1>
+                <span class="text-[#D0E1F0] text-lg font-light mb-2 opacity-70">/ Agenda</span>
+            </div>
+
+            <div class="grid grid-cols-2 gap-x-12 gap-y-5">
+                
+                <div class="toc-card rounded-xl p-4 flex items-center gap-5 group cursor-pointer">
+                    <div class="w-14 h-14 flex items-center justify-center bg-white/5 rounded-lg border border-white/10 group-hover:border-[#8DE4E0]/50 transition-colors">
+                        <span class="text-2xl font-bold num-gradient">01</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <h3 class="text-xl font-bold text-white group-hover:text-[#8DE4E0] transition-colors">Introduction</h3>
+                        <p class="text-xs text-[#D0E1F0] opacity-60">Overview of marine ecosystems</p>
+                    </div>
+                </div>
+
+                <div class="toc-card rounded-xl p-4 flex items-center gap-5 group cursor-pointer">
+                    <div class="w-14 h-14 flex items-center justify-center bg-white/5 rounded-lg border border-white/10 group-hover:border-[#8DE4E0]/50 transition-colors">
+                        <span class="text-2xl font-bold num-gradient">02</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <h3 class="text-xl font-bold text-white group-hover:text-[#8DE4E0] transition-colors">Ocean Geography</h3>
+                        <p class="text-xs text-[#D0E1F0] opacity-60">Mapping the blue planet</p>
+                    </div>
+                </div>
+
+                <div class="toc-card rounded-xl p-4 flex items-center gap-5 group cursor-pointer">
+                    <div class="w-14 h-14 flex items-center justify-center bg-white/5 rounded-lg border border-white/10 group-hover:border-[#8DE4E0]/50 transition-colors">
+                        <span class="text-2xl font-bold num-gradient">03</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <h3 class="text-xl font-bold text-white group-hover:text-[#8DE4E0] transition-colors">Marine Biodiversity</h3>
+                        <p class="text-xs text-[#D0E1F0] opacity-60">Species and classifications</p>
+                    </div>
+                </div>
+
+                <div class="toc-card rounded-xl p-4 flex items-center gap-5 group cursor-pointer">
+                    <div class="w-14 h-14 flex items-center justify-center bg-white/5 rounded-lg border border-white/10 group-hover:border-[#8DE4E0]/50 transition-colors">
+                        <span class="text-2xl font-bold num-gradient">04</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <h3 class="text-xl font-bold text-white group-hover:text-[#8DE4E0] transition-colors">Ocean Zones</h3>
+                        <p class="text-xs text-[#D0E1F0] opacity-60">Depth layers and life</p>
+                    </div>
+                </div>
+
+                <div class="toc-card rounded-xl p-4 flex items-center gap-5 group cursor-pointer">
+                    <div class="w-14 h-14 flex items-center justify-center bg-white/5 rounded-lg border border-white/10 group-hover:border-[#8DE4E0]/50 transition-colors">
+                        <span class="text-2xl font-bold num-gradient">05</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <h3 class="text-xl font-bold text-white group-hover:text-[#8DE4E0] transition-colors">Food Web Dynamics</h3>
+                        <p class="text-xs text-[#D0E1F0] opacity-60">Energy flow in the ocean</p>
+                    </div>
+                </div>
+
+                <div class="toc-card rounded-xl p-4 flex items-center gap-5 group cursor-pointer">
+                    <div class="w-14 h-14 flex items-center justify-center bg-white/5 rounded-lg border border-white/10 group-hover:border-[#8DE4E0]/50 transition-colors">
+                        <span class="text-2xl font-bold num-gradient">06</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <h3 class="text-xl font-bold text-white group-hover:text-[#8DE4E0] transition-colors">Climate Impact</h3>
+                        <p class="text-xs text-[#D0E1F0] opacity-60">Global warming effects</p>
+                    </div>
+                </div>
+
+                <div class="toc-card rounded-xl p-4 flex items-center gap-5 group cursor-pointer">
+                    <div class="w-14 h-14 flex items-center justify-center bg-white/5 rounded-lg border border-white/10 group-hover:border-[#8DE4E0]/50 transition-colors">
+                        <span class="text-2xl font-bold num-gradient">07</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <h3 class="text-xl font-bold text-white group-hover:text-[#8DE4E0] transition-colors">Ocean Resources</h3>
+                        <p class="text-xs text-[#D0E1F0] opacity-60">Economic value and usage</p>
+                    </div>
+                </div>
+
+                <div class="toc-card rounded-xl p-4 flex items-center gap-5 group cursor-pointer">
+                    <div class="w-14 h-14 flex items-center justify-center bg-white/5 rounded-lg border border-white/10 group-hover:border-[#8DE4E0]/50 transition-colors">
+                        <span class="text-2xl font-bold num-gradient">08</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <h3 class="text-xl font-bold text-white group-hover:text-[#8DE4E0] transition-colors">Conservation</h3>
+                        <p class="text-xs text-[#D0E1F0] opacity-60">Future protection strategies</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+
+        <div class="absolute bottom-0 w-full h-[50px] bg-gradient-to-t from-[#0f2638] to-transparent z-0"></div>
+
+    </div>
+
+</body>
+</html>

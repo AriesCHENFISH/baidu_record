@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goals & Motivations - Design System</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+
+    <!-- Google Fonts (Mandated Source) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- Tailwind Config to match Design System -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#000000', // Deep Black
+                        secondary: '#666666', // Secondary Text
+                        bgWhite: '#FFFFFF', // Canvas Background
+                        cardGreen: '#326B54', // Deep Green
+                        cardGray: '#F2F2F2', // Neutral Gray
+                        cardLavender: '#E8D5EB', // Accent Lavender
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'Inter', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        'xl': '1rem',
+                        '2xl': '1.5rem',
+                        '3xl': '2rem',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container - Strict Dimensions */
+        .page-container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FFFFFF;
+            overflow: hidden;
+            /* No outer shadow as per request */
+        }
+
+        /* Utility for circle icons */
+        .icon-circle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 1px solid currentColor;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div class="page-container flex p-16 font-sans">
+        
+        <!-- Left Column: Context & Persona (40%) -->
+        <div class="w-5/12 flex flex-col justify-between pr-12 z-10">
+            
+            <!-- Header Section -->
+            <header>
+                <h1 class="text-6xl font-bold text-primary leading-tight tracking-tight">
+                    Goals &<br>Motivations
+                </h1>
+            </header>
+
+            <!-- Middle: Persona Profile -->
+            <div class="flex items-center gap-5 mt-12 mb-8">
+                <!-- Avatar Image -->
+                <div class="relative w-20 h-20 rounded-full overflow-hidden shrink-0 border-2 border-gray-100">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop" 
+                         alt="Hannah Morales" 
+                         class="w-full h-full object-cover">
+                    <!-- 80*80 -->
+                </div>
+                
+                <!-- Profile Text -->
+                <div class="flex flex-col">
+                    <h3 class="text-xl font-bold text-primary">Hannah Morales</h3>
+                    <p class="text-secondary text-base italic mt-1">Freelance Curriculum Developer</p>
+                </div>
+            </div>
+
+            <!-- Bottom: Quote -->
+            <div class="mt-auto">
+                <div class="relative">
+                    <!-- Decorative decorative quote mark -->
+                    <div class="absolute -top-6 -left-4 text-6xl text-gray-200 opacity-50 font-serif">“</div>
+                    <h2 class="text-4xl text-primary font-medium leading-snug relative z-10">
+                        I want to focus on teaching, not fighting with a clunky interface.
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column: Goals Grid (60%) -->
+        <div class="w-7/12 grid grid-cols-2 grid-rows-2 gap-6 h-full">
+            
+            <!-- Card 1: Primary Goal (Deep Green) -->
+            <div class="bg-cardGreen rounded-3xl p-10 flex flex-col justify-between text-white transition-transform">
+                <!-- Icon Top Left -->
+                <div class="icon-circle mb-6">
+                    <i class="fa-solid fa-arrow-right text-xl"></i>
+                </div>
+                <!-- Content -->
+                <div>
+                    <p class="text-2xl font-medium leading-normal">
+                        Create high-impact, learner-centered content.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 2: Platform Goal (Light Gray) -->
+            <div class="bg-cardGray rounded-3xl p-10 flex flex-col justify-between text-primary">
+                <!-- Icon Top Left -->
+                <div class="icon-circle border-gray-400 mb-6 text-gray-700">
+                    <i class="fa-solid fa-arrow-down text-xl"></i>
+                </div>
+                <!-- Content -->
+                <div>
+                    <p class="text-xl font-normal leading-relaxed text-secondary">
+                        Use platforms that are easy to customize and adapt.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 3: Admin Goal (Light Gray) -->
+            <div class="bg-cardGray rounded-3xl p-10 flex flex-col justify-between text-primary">
+                <!-- Icon Top Left -->
+                <div class="icon-circle border-gray-400 mb-6 text-gray-700">
+                    <i class="fa-solid fa-arrow-up text-xl"></i>
+                </div>
+                <!-- Content -->
+                <div>
+                    <p class="text-xl font-normal leading-relaxed text-secondary">
+                        Minimize admin overhead when managing course materials.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 4: Collaboration Goal (Lavender) -->
+            <div class="bg-cardLavender rounded-3xl p-10 flex flex-col justify-between text-primary">
+                <!-- Icon Top Left -->
+                <div class="icon-circle border-gray-600 mb-6 text-gray-800">
+                    <i class="fa-solid fa-arrow-left text-xl"></i>
+                </div>
+                <!-- Content -->
+                <div>
+                    <p class="text-xl font-medium leading-relaxed text-primary">
+                        Collaborate easily with reviewers or subject experts.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

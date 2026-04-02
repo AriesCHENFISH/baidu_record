@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Analysis Dashboard</title>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBg: '#05050F',
+                        primaryText: '#DDFCF2',
+                        bodyText: '#B0B0B0',
+                        chart1: '#C8F9E6',
+                        chart2: '#88DEE3',
+                    },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #05050F; overflow: hidden; }
+        .glass-card { background: rgba(30, 27, 51, 0.4); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.1); }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <div class="absolute top-[-100px] left-[-100px] w-[600px] h-[600px] bg-[#18123A] rounded-full blur-[120px] opacity-60 z-0"></div>
+        <div class="absolute bottom-[-150px] right-[-150px] w-[700px] h-[700px] bg-[#18123A] rounded-full blur-[100px] opacity-50 z-0"></div>
+
+        <div class="relative z-20 px-12 pt-8 w-full">
+            <nav class="flex items-center justify-between w-full h-20 px-10 rounded-full" style="background: linear-gradient(90deg, #6a44f0 0%, #1E1B33 40%, #1E1B33 100%); box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);">
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 flex items-center justify-center rounded-full bg-[#DDFCF2] text-[#05050F]">
+                        <i class="fa-solid fa-layer-group text-xl"></i>
+                    </div>
+                    <h2 class="text-[#DDFCF2] text-xl font-bold tracking-wide">Fradel Company</h2>
+                </div>
+                <ul class="flex items-center gap-12 list-none m-0 p-0">
+                    <li class="cursor-pointer"><b class="text-[#DDFCF2] text-sm tracking-widest hover:text-white transition-colors">HOME</b></li>
+                    <li class="cursor-pointer"><b class="text-[#B0B0B0] text-sm tracking-widest hover:text-[#DDFCF2] transition-colors">ABOUT</b></li>
+                    <li class="cursor-pointer"><b class="text-[#B0B0B0] text-sm tracking-widest hover:text-[#DDFCF2] transition-colors">MORE</b></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="relative z-10 w-full px-16 mt-6 flex flex-col h-[calc(720px-140px)]">
+            <div class="text-center mb-6">
+                <h1 class="text-5xl font-bold text-[#DDFCF2] tracking-tight drop-shadow-lg">Expense Analysis</h1>
+                <div class="w-24 h-1 bg-gradient-to-r from-[#C8F9E6] to-[#538AB8] mx-auto mt-4 rounded-full opacity-70"></div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-10 h-full pb-8">
+                <article class="glass-card rounded-3xl p-8 flex flex-col justify-between relative shadow-2xl">
+                    <div class="w-full h-[220px] rounded-xl overflow-hidden mb-4">
+                        <div id="chart_salaries" class="w-full h-full"></div>
+                    </div>
+                    <div class="mt-2">
+                        <h3 class="text-3xl font-bold text-[#DDFCF2] mb-3 border-l-4 border-[#C8F9E6] pl-4">Salaries & Wages</h3>
+                        <p class="text-[#B0B0B0] text-sm leading-relaxed font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </article>
+
+                <article class="glass-card rounded-3xl p-8 flex flex-col justify-between relative shadow-2xl">
+                    <div class="w-full h-[220px] rounded-xl overflow-hidden mb-4">
+                        <div id="chart_marketing" class="w-full h-full"></div>
+                    </div>
+                    <div class="mt-2">
+                        <h3 class="text-3xl font-bold text-[#DDFCF2] mb-3 border-l-4 border-[#88DEE3] pl-4">Marketing</h3>
+                        <p class="text-[#B0B0B0] text-sm leading-relaxed font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <div class="absolute left-6 top-1/2 -translate-y-1/2 grid grid-cols-3 gap-2 opacity-30 z-0">
+            <div class="w-1.5 h-1.5 bg-[#538AB8] rounded-full"></div><div class="w-1.5 h-1.5 bg-[#538AB8] rounded-full"></div><div class="w-1.5 h-1.5 bg-[#538AB8] rounded-full"></div>
+            <div class="w-1.5 h-1.5 bg-[#538AB8] rounded-full"></div><div class="w-1.5 h-1.5 bg-[#538AB8] rounded-full"></div><div class="w-1.5 h-1.5 bg-[#538AB8] rounded-full"></div>
+        </div>
+    </div>
+
+    <script>
+        const colors = { item1: '#C8F9E6', item2: '#88DEE3', item3: '#64B0CF', item4: '#538AB8', text: '#B0B0B0' };
+        const getOption = () => ({
+            backgroundColor: 'transparent',
+            grid: { top: '15%', left: '3%', right: '4%', bottom: '3%', containLabel: true },
+            xAxis: { type: 'category', data: ['Item 1', 'Item 2', 'Item 3', 'Item 4'], axisLine: { show: false }, axisTick: { show: false }, axisLabel: { color: colors.text } },
+            yAxis: { type: 'value', splitLine: { lineStyle: { color: 'rgba(255,255,255,0.1)', type: 'dashed' } }, axisLabel: { color: colors.text } },
+            series: [{ type: 'bar', barWidth: '75%', data: [
+                { value: 8, itemStyle: { color: colors.item1, borderRadius: [4, 4, 0, 0] } },
+                { value: 12, itemStyle: { color: colors.item2, borderRadius: [4, 4, 0, 0] } },
+                { value: 16, itemStyle: { color: colors.item3, borderRadius: [4, 4, 0, 0] } },
+                { value: 20, itemStyle: { color: colors.item4, borderRadius: [4, 4, 0, 0] } }
+            ]}]
+        });
+        echarts.init(document.getElementById('chart_salaries')).setOption(getOption());
+        echarts.init(document.getElementById('chart_marketing')).setOption(getOption());
+    </script>
+</body>
+</html>

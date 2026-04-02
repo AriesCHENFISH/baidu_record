@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanover and Tyke - Introduction</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #F8F7F5;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+            display: flex;
+        }
+
+        /* 修复后的光影图层 */
+        .ambient-shadow {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            background: linear-gradient(135deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 50%);
+            z-index: 0;
+        }
+
+        .visual-area {
+            width: 45%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px;
+            z-index: 1;
+        }
+
+        .content-area {
+            width: 55%;
+            padding-right: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            z-index: 2;
+        }
+
+        /* 标题美化修复 */
+        .main-title {
+            font-size: 96px;
+            line-height: 0.9;
+            font-weight: 700;
+            color: #4A3520;
+            margin-bottom: 48px;
+            letter-spacing: -0.04em;
+        }
+
+        .main-title .light-text {
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        /* 文本框美化修复 */
+        .text-card {
+            position: relative;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 4px 24px 24px 4px;
+            padding: 35px 40px;
+            margin-bottom: 28px;
+            width: 100%;
+            box-shadow: 20px 20px 60px rgba(74, 53, 32, 0.05);
+            border-left: 4px solid #8B6D51;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .text-card:hover {
+            transform: translateX(8px);
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        /* 首字下沉修复 */
+        .drop-cap::first-letter {
+            font-size: 48px;
+            float: left;
+            margin-right: 12px;
+            color: #8B6D51;
+            font-weight: 700;
+            line-height: 0.8;
+            margin-top: 8px;
+        }
+
+        .text-content {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #5C5248;
+            text-align: justify;
+        }
+
+        .card-label {
+            display: block;
+            font-size: 11px;
+            font-weight: 700;
+            color: #8B6D51;
+            letter-spacing: 0.15em;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 90%;
+            object-fit: cover;
+            border-radius: 40px;
+            box-shadow: 0 40px 80px rgba(74, 53, 32, 0.15);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <div class="ambient-shadow"></div>
+
+        <div class="visual-area">
+            <img 
+                src="https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=1000&auto=format&fit=crop" 
+                alt="Luxury Perfume" 
+                class="product-image"
+            >
+        </div>
+
+        <div class="content-area">
+            
+            <div class="mb-6">
+                <div class="inline-flex items-center px-4 py-1.5 bg-primary/5 rounded border border-primary/10 text-primary text-[10px] font-bold tracking-[0.2em] uppercase">
+                    <i class="fa-solid fa-clover mr-2"></i>
+                    Hanover and Tyke
+                </div>
+            </div>
+
+            <h1 class="main-title">
+                Hello<br><span class="light-text">friends!</span>
+            </h1>
+
+            <div class="text-card">
+                <span class="card-label">The Partnership</span>
+                <p class="text-content drop-cap">
+                    I hope this message finds you well! We are reaching out with a burst of excitement as we have been inventing something awesome: a collaborative adventure that connects the strengths of Hanover and Tyke with your incredible brand.
+                </p>
+            </div>
+
+            <div class="text-card">
+                <span class="card-label">The Invitation</span>
+                <p class="text-content">
+                    We have attached a <span class="font-bold text-primary">sneak peek</span> at our pitch deck. Let's touch base soon to explore how this partnership can uplift both our brands and create some unforgettable experiences for our audience.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

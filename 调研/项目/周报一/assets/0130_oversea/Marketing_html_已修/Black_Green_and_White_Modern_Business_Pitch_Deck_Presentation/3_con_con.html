@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who We Are - Corporate Presentation</title>
+    
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts via Baidu Mirror -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <!-- Tailwind Configuration for Custom Palette -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgMain: '#E5E5E5',
+                        textPrimary: '#000000',
+                        textSecondary: '#333333',
+                        accent: '#6FE6AA',
+                        stroke: '#666666',
+                        glow: '#D6E8C7',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    },
+                    spacing: {
+                        '1280': '1280px',
+                        '720': '720px',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Structure */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* The Main Page Container */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #E5E5E5;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+            /* Background Atmosphere - Radial Gradients */
+            background: 
+                radial-gradient(circle at 0% 0%, #D6E8C7 0%, transparent 40%),
+                radial-gradient(circle at 100% 100%, #D6E8C7 0%, transparent 30%),
+                #E5E5E5; 
+        }
+
+        /* Custom Utility for Image Masking (Circle) */
+        .circle-mask {
+            border-radius: 50%;
+            overflow: hidden;
+            border: 1px solid #666666;
+            background-color: #fff;
+        }
+
+        /* Typography Refinement */
+        h1 {
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+        }
+        
+        p, li {
+            letter-spacing: -0.01em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div id="page_container">
+
+        <!-- Decorative Elements (Top Right) -->
+        <!-- Logic: Recreating the bubbles in top right: Dark, Outline, Accent -->
+        <div class="absolute top-[-40px] right-[100px] w-32 h-32 bg-[#333333] rounded-full z-10"></div>
+        <div class="absolute top-[-30px] right-[20px] w-32 h-32 border border-[#666666] rounded-full z-0"></div>
+        <div class="absolute top-[-10px] right-[-40px] w-24 h-24 bg-accent rounded-full z-20"></div>
+
+        <!-- Main Content Grid -->
+        <div class="w-full h-full grid grid-cols-12 gap-8 px-16 py-12">
+            
+            <!-- Left Column: Visuals (4 Columns) -->
+            <div class="col-span-4 flex flex-col justify-center items-center gap-6 relative">
+                <!-- Top Image: Architecture -->
+                <div class="circle-mask w-64 h-64 shadow-lg relative z-10 translate-x-4">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                         alt="Modern architecture representing corporate strength" 
+                         class="w-full h-full object-cover">
+                    <!-- 256*256 -->
+                </div>
+
+                <!-- Bottom Image: Team -->
+                <div class="circle-mask w-64 h-64 shadow-lg relative z-20 -mt-12 -translate-x-4 border-4 border-bgMain">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                         alt="Team collaborating around a table" 
+                         class="w-full h-full object-cover">
+                    <!-- 256*256 -->
+                </div>
+            </div>
+
+            <!-- Right Column: Content (8 Columns) -->
+            <div class="col-span-8 flex flex-col justify-center pl-8 pr-4">
+                
+                <!-- Header Section -->
+                <div class="mb-10">
+                    <h1 class="text-8xl font-bold text-textPrimary mb-2">Who</h1>
+                    <h1 class="text-8xl font-bold text-textPrimary">We Are?</h1>
+                </div>
+
+                <!-- Introduction Paragraph -->
+                <div class="mb-12 max-w-3xl">
+                    <p class="text-textSecondary text-lg leading-relaxed">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl eu sem tristique, sit amet convallis ex aliquam. Maecenas varius lectus hendrerit augue blandit, ut posuere erat aliquam. Praesent auctor tellus eget nisl blandit, at varius purus elementum.
+                    </p>
+                </div>
+
+                <!-- Bottom Grid: Vision & Mission -->
+                <!-- Container with borders based on "Stroke Color" -->
+                <div class="grid grid-cols-2 border-t border-b border-stroke">
+                    
+                    <!-- Col 1: Our Vision -->
+                    <div class="py-8 pr-8 border-r border-stroke">
+                        <div class="flex items-center gap-3 mb-4">
+                            <!-- Green Dot Indicator -->
+                            <div class="w-5 h-5 rounded-full bg-accent border border-stroke"></div>
+                            <h3 class="text-3xl font-medium text-textPrimary">Our Vision</h3>
+                        </div>
+                        <p class="text-textSecondary text-sm leading-relaxed">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl eu sem tristique, sit amet convallis ex aliquam. Maecenas varius lectus hendrerit augue blandit, ut posuere erat aliquam. Praesent auctor tellus eget nisl blandit, at varius purus elementum.
+                        </p>
+                    </div>
+
+                    <!-- Col 2: Our Mission -->
+                    <div class="py-8 pl-8">
+                        <div class="flex items-center gap-3 mb-4">
+                            <!-- Yellow/Glow Dot Indicator (Variation) -->
+                            <div class="w-5 h-5 rounded-full bg-[#E8F08C] border border-stroke"></div>
+                            <h3 class="text-3xl font-medium text-textPrimary">Our Mission</h3>
+                        </div>
+                        <ul class="text-textSecondary text-sm leading-relaxed list-none space-y-2">
+                            <li class="relative pl-4">
+                                <span class="absolute left-0 top-2 w-1.5 h-1.5 bg-textSecondary rounded-full"></span>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl eu sem tristique, sit amet convallis ex aliquam.
+                            </li>
+                            <li class="relative pl-4">
+                                <span class="absolute left-0 top-2 w-1.5 h-1.5 bg-textSecondary rounded-full"></span>
+                                Maecenas varius lectus hendrerit augue blandit, ut posuere erat aliquam. Praesent auctor tellus eget nisl blandit, at varius purus elementum.
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Decoration / Page Number Placeholder (Optional based on design) -->
+        <!-- Kept clean as per strict no-logo instructions, but added subtle stroke line at bottom for framing -->
+        <div class="absolute bottom-0 left-0 w-full h-2 bg-accent opacity-20"></div>
+
+    </div>
+
+</body>
+</html>

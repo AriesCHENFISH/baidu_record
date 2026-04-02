@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thynk Unlimited - Clean Header</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap">
+
+    <style>
+        /* 全局重置 */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+
+        .font-serif { font-family: 'Playfair Display', serif; }
+
+        /* 容器定义 - 1280x720 */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+            background-color: #1e293b;
+        }
+
+        /* 静态背景光斑 */
+        .static-glow {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(90px);
+            z-index: 10;
+        }
+
+        /* 品牌色定义 */
+        .text-brand-orange { color: #FF8C42; }
+        .bg-brand-orange { background-color: #FF8C42; }
+        .border-brand-orange { border-color: #FF8C42; }
+
+        /* 图片卡片样式 (无加载动画，仅保留悬停微交互) */
+        .travel-card {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease; 
+        }
+        .travel-card:hover {
+            transform: scale(1.02);
+            z-index: 50;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Container -->
+    <div id="page_container">
+
+        <!-- 1. 背景层 -->
+        <div class="absolute inset-0 z-0">
+            <!-- 背景图 -->
+            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1280&auto=format&fit=crop" 
+                 alt="Background Mountains" 
+                 class="w-full h-full object-cover opacity-60 grayscale-[20%]">
+            <!-- 渐变遮罩 -->
+            <div class="absolute inset-0 bg-gradient-to-r from-[#0f172a] via-[#0f172a]/90 to-transparent"></div>
+        </div>
+
+        <!-- 2. 静态装饰光斑 -->
+        <div class="static-glow bg-orange-600 w-[400px] h-[400px] -top-32 -left-32 opacity-20"></div>
+        <!-- 移除了右上角原本可能有的干扰元素，保持干净 -->
+        <div class="static-glow bg-blue-900 w-[500px] h-[500px] bottom-0 right-0 opacity-30"></div>
+
+        <!-- 3. Header 顶部区域 (仅保留左侧 Logo) -->
+        <div class="absolute top-10 left-16 z-50">
+            <!-- Logo (SVG 橙色设计) -->
+            <div class="flex items-center gap-4">
+                <div class="w-14 h-14 relative flex items-center justify-center bg-white/5 rounded-full border border-white/10 backdrop-blur-sm">
+                    <svg viewBox="0 0 100 100" class="w-10 h-10">
+                        <defs>
+                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#FFB75E;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#FF8C42;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="50" cy="50" r="45" fill="none" stroke="url(#logoGradient)" stroke-width="5" stroke-opacity="0.4"/>
+                        <circle cx="50" cy="50" r="22" fill="url(#logoGradient)" />
+                        <!-- 飞鸟形状 -->
+                        <path d="M25 58 Q 50 30 75 58" fill="none" stroke="white" stroke-width="3.5" stroke-linecap="round" />
+                    </svg>
+                </div>
+                <div>
+                    <h4 class="text-2xl font-bold tracking-tight text-white font-serif">Thynk <span class="text-brand-orange">Unlimited</span></h4>
+                    <p class="text-xs text-gray-400 tracking-wider uppercase">Global Travel Agency</p>
+                </div>
+            </div>
+            <!-- 右上角原本的导航菜单已移除 -->
+        </div>
+
+        <!-- 4. 主内容网格 (左6 右6，内容丰富) -->
+        <div class="absolute top-36 left-16 right-12 bottom-20 grid grid-cols-12 gap-12 z-40">
+            
+            <!-- 左侧：文字内容 (占比 50%) -->
+            <div class="col-span-6 flex flex-col justify-start pt-2">
+                
+                <!-- 序号与标签 -->
+                <div class="mb-5 flex items-center gap-3">
+                    <div class="bg-brand-orange/20 text-brand-orange px-3 py-1 rounded text-xs font-bold border border-brand-orange/30">
+                        01 — INTRODUCTION
+                    </div>
+                </div>
+
+                <!-- 大标题 -->
+                <h1 class="font-serif text-[4rem] text-white leading-[1.05] mb-6">
+                    Redefining <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-300 to-orange-500">Your Journey</span>
+                </h1>
+
+                <!-- 主要描述 -->
+                <p class="text-gray-300 text-lg leading-relaxed mb-8 font-light pr-8 border-l-4 border-brand-orange pl-6">
+                    Thynk Unlimited connects you to the world's most breathtaking destinations. Our static-free, AI-powered platform ensures your itinerary is as seamless as it is memorable. Experience travel without boundaries.
+                </p>
+
+                <!-- 特性列表 Grid (增加内容密度) -->
+                <div class="grid grid-cols-2 gap-4 mb-8">
+                    <div class="flex items-center gap-3 text-gray-200">
+                        <div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-brand-orange">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                        <span class="text-sm font-medium">Instant Booking</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-gray-200">
+                        <div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-brand-orange">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <span class="text-sm font-medium">Secure Payments</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-gray-200">
+                        <div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-brand-orange">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+                        <span class="text-sm font-medium">24/7 Support</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-gray-200">
+                        <div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-brand-orange">
+                            <i class="fa-solid fa-leaf"></i>
+                        </div>
+                        <span class="text-sm font-medium">Eco-Friendly</span>
+                    </div>
+                </div>
+
+                <!-- 按钮与数据区域 -->
+                <div class="flex items-center gap-6 mt-auto">
+                    <button class="bg-brand-orange text-white px-8 py-4 rounded-lg font-bold text-base shadow-xl shadow-orange-500/20 hover:bg-orange-600 transition-colors">
+                        Start Planning
+                    </button>
+                    <div class="flex flex-col">
+                        <span class="text-2xl font-bold text-white font-serif">12k+</span>
+                        <span class="text-xs text-gray-400 uppercase tracking-wide">Happy Travelers</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右侧：视觉展示 (占比 50%) -->
+            <div class="col-span-6 relative h-full">
+                
+                <!-- 主图 (背景大图) -->
+                <div class="absolute right-0 top-0 w-[340px] h-[500px] rounded-2xl overflow-hidden travel-card border border-white/10 rotate-3 z-10 bg-gray-800">
+                    <img src="https://images.unsplash.com/photo-1504609773096-104ff100aaa4?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 inset-x-0 p-5 bg-gradient-to-t from-black/90 to-transparent">
+                        <h5 class="text-white font-serif text-xl">Kyoto, Japan</h5>
+                        <p class="text-gray-300 text-xs mt-1">Cultural Heritage Sites</p>
+                    </div>
+                </div>
+
+                <!-- 副图 (左侧叠加) -->
+                <div class="absolute left-10 bottom-12 w-[260px] h-[320px] rounded-2xl overflow-hidden travel-card border-4 border-[#1e293b] -rotate-6 z-20 shadow-2xl bg-gray-800">
+                    <img src="https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover">
+                    <!-- 橙色角标 -->
+                    <div class="absolute top-0 right-0 bg-brand-orange text-white px-3 py-1 rounded-bl-lg font-bold text-sm">
+                        $450
+                    </div>
+                </div>
+
+                <!-- 小图 (浮动装饰) -->
+                <div class="absolute left-0 top-16 w-[160px] h-[160px] rounded-2xl overflow-hidden travel-card border-2 border-white/20 z-0 opacity-80 rotate-12 bg-gray-800">
+                    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=300&auto=format&fit=crop" class="w-full h-full object-cover">
+                </div>
+
+                <!-- 装饰性圆形徽章 -->
+                <div class="absolute right-10 bottom-32 w-24 h-24 bg-white/10 backdrop-blur-md rounded-full border border-white/20 flex flex-col items-center justify-center text-center z-30 shadow-lg">
+                    <span class="text-brand-orange font-bold text-xl">Top</span>
+                    <span class="text-white text-xs uppercase">Rated</span>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Audit & Gap Analysis</title>
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts: Inter & Noto Sans SC (as per requirement) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS Reset & Basic Setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* Page Container - Strict Dimensions */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FFFFFF;
+            overflow: hidden;
+            /* No external box-shadow as per strict rules */
+        }
+
+        /* Typography & Utility Overrides */
+        h1, h2, h3, h4, h5, h6 {
+            line-height: 1.2;
+        }
+        
+        p {
+            line-height: 1.6;
+        }
+
+        /* Custom Shapes */
+        .blue-panel-shape {
+            border-top-right-radius: 80px;
+            border-bottom-right-radius: 80px;
+        }
+
+        .image-card {
+            border-radius: 40px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(10, 51, 179, 0.15);
+        }
+
+        /* Custom Scrollbar hide */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0A33B3',    // Deep Blue
+                        accent: '#FCEE7D',     // Yellow
+                        secondary: '#2248C3',  // Lighter Blue
+                        neutral: '#FFFFFF',    // White
+                        decorative: '#F0F4FF', // Pale Blue
+                        darkText: '#1a1a1a',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans SC', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div id="page_container">
+        
+        <!-- Grid Layout: 2 Columns (40% Left, 60% Right) -->
+        <div class="grid grid-cols-12 h-full w-full">
+
+            <!-- LEFT COLUMN: Blue Information Panel -->
+            <!-- Using col-span-5 for approx 42% width -->
+            <div class="col-span-5 bg-primary blue-panel-shape relative flex flex-col justify-between p-12 z-10">
+                
+                <!-- Decorative Star Top Right of Blue Panel -->
+                <div class="absolute top-8 right-8 text-accent opacity-80 text-2xl">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                
+                <!-- Decorative Star Bottom Left -->
+                <div class="absolute bottom-8 left-8 text-accent opacity-80 text-3xl">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+
+                <!-- Header / Logo Area -->
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="text-accent text-2xl">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <h2 class="text-white text-xl font-semibold tracking-wide">Borcelle</h2>
+                </div>
+
+                <!-- Main Content Wrapper -->
+                <div class="flex-1 flex flex-col justify-center">
+                    
+                    <!-- Title -->
+                    <h1 class="text-5xl font-extrabold text-white mb-10 leading-tight">
+                        Content Audit <br>
+                        & Gap Analysis
+                    </h1>
+
+                    <!-- Section 1 -->
+                    <div class="mb-8">
+                        <!-- Yellow Pill Label -->
+                        <div class="inline-block bg-accent rounded-full px-5 py-2 mb-4 shadow-lg">
+                            <h3 class="text-primary font-bold text-sm uppercase tracking-wider">
+                                Current Content Analysis:
+                            </h3>
+                        </div>
+                        <!-- Content Text -->
+                        <p class="text-white text-lg font-light opacity-90 pl-2 border-l-2 border-accent/30">
+                            Blog posts, social media, videos, and email campaigns.
+                        </p>
+                    </div>
+
+                    <!-- Section 2 -->
+                    <div>
+                        <!-- Yellow Pill Label -->
+                        <div class="inline-block bg-accent rounded-full px-5 py-2 mb-4 shadow-lg">
+                            <h3 class="text-primary font-bold text-sm uppercase tracking-wider">
+                                Findings:
+                            </h3>
+                        </div>
+                        <!-- List -->
+                        <ul class="text-white text-lg font-light space-y-2 pl-2">
+                            <li class="flex items-center gap-3">
+                                <span class="text-accent text-xs"><i class="fa-solid fa-circle"></i></span>
+                                <span>High-performing content.</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="text-accent text-xs"><i class="fa-solid fa-circle"></i></span>
+                                <span>Underperforming content.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN: Visuals & Intro -->
+            <div class="col-span-7 bg-white h-full relative p-12 flex flex-col">
+                
+                <!-- Decorative Element -->
+                <div class="absolute top-10 right-10 text-primary text-xl opacity-20">
+                    <i class="fa-solid fa-star-of-life"></i>
+                </div>
+
+                <!-- Intro Text Section -->
+                <div class="w-full max-w-2xl mb-10 mt-4">
+                    <p class="text-primary text-lg font-normal leading-relaxed">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar sit amet urna eget pulvinar. Donec faucibus diam non sem lacinia vulputate eu et enim.
+                    </p>
+                </div>
+
+                <!-- Image Grid -->
+                <!-- Creating a masonry-like feel with Flexbox -->
+                <div class="flex-1 flex gap-6 items-end pb-4">
+                    
+                    <!-- Image 1: Team/Brainstorming -->
+                    <div class="w-1/2 h-full flex flex-col justify-end">
+                        <div class="image-card h-[320px] w-full relative group">
+                            <!-- Overlay gradient for depth -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent z-10"></div>
+                            <img src="https://images.unsplash.com/photo-1531498860503-618db96d2cbc?q=80&w=600&auto=format&fit=crop" 
+                                 alt="Team Strategy Meeting" 
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                            <!-- 350*320 -->
+                        </div>
+                    </div>
+
+                    <!-- Image 2: Creator/Content -->
+                    <div class="w-1/2 h-full flex flex-col justify-start pt-8">
+                        <div class="image-card h-[320px] w-full relative group">
+                             <!-- Overlay gradient for depth -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent z-10"></div>
+                            <img src="https://images.unsplash.com/photo-1598550874175-4d7112ee7f43?q=80&w=600&auto=format&fit=crop" 
+                                 alt="Content Creator Recording" 
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                            <!-- 350*320 -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Geometric Decoration floating behind the split (simulated via absolute div) -->
+        <!-- This adds the 'gap' or overlap effect without breaking layout -->
+        <div class="absolute top-0 left-[41.666%] h-full w-12 bg-white z-0" style="border-top-left-radius: 80px; border-bottom-left-radius: 80px;"></div>
+        <!-- Re-applying the blue background to the left column visually to cover the gap trick -->
+        <div class="absolute top-0 left-0 w-[41.666%] h-full bg-primary -z-10 blue-panel-shape"></div>
+
+    </div>
+</body>
+</html>

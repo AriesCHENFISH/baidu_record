@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Education - Typography Style</title>
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #121212;
+            overflow: hidden;
+            color: #F5F5F5;
+        }
+
+        .font-serif-italic {
+            font-family: 'Georgia', serif;
+            font-style: italic;
+        }
+
+        .bg-primary-gradient {
+            background: linear-gradient(135deg, #B63914 0%, #D65A2C 100%);
+        }
+
+        /* 统一 Logo 设计 */
+        .hospital-logo-box {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #B63914 0%, #D65A2C 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* 背景装饰：垂直巨型水印 */
+        .bg-text-vertical {
+            position: absolute;
+            font-size: 180px;
+            font-weight: 900;
+            color: rgba(214, 90, 44, 0.04);
+            line-height: 0.8;
+            z-index: 0;
+            writing-mode: vertical-rl;
+            right: 20px;
+            top: 0;
+            pointer-events: none;
+        }
+
+        /* 玻璃感卡片 */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border-top: 2px solid #B63914;
+        }
+
+        .decoration-line {
+            height: 1px;
+            background: linear-gradient(90deg, #B63914, transparent);
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container" class="relative">
+        
+        <!-- 背景设计补全：垂直水印与氛围光晕 -->
+        <div class="bg-text-vertical uppercase">Aware</div>
+        <div class="absolute top-[30%] left-[10%] w-[500px] h-[500px] bg-[#B63914] opacity-[0.06] blur-[150px] rounded-full"></div>
+
+        <!-- 顶部：标准Logo区 (统一左上角布局) -->
+        <div class="absolute top-12 left-16 z-50">
+            <div class="flex items-center gap-4">
+                <div class="hospital-logo-box">
+                    <i class="fa-solid fa-plus text-white text-lg"></i>
+                </div>
+                <span class="text-xl font-bold tracking-widest uppercase">Borcelle Hospital</span>
+            </div>
+        </div>
+
+        <!-- 内容布局：全文字排版构图 -->
+        <div class="flex h-full w-full px-16 relative z-10">
+            
+            <!-- 左侧：巨型核心标题 (7/12) -->
+            <div class="w-7/12 h-full flex flex-col justify-center pr-20">
+                <div class="mb-4">
+                    <h2 class="text-xs font-bold tracking-[0.5em] text-[#D65A2C] uppercase mb-6">Empowerment Through Knowledge</h2>
+                    <h1 class="text-[80px] leading-[0.85] tracking-tighter flex flex-col">
+                        <span class="font-serif-italic text-[#D65A2C]">Health</span>
+                        <span class="font-bold">EDUCATION</span>
+                        <span class="font-serif-italic text-[#D65A2C] text-8xl mt-2">& Awareness.</span>
+                    </h1>
+                </div>
+
+                <div class="mt-12 max-w-lg">
+                    <div class="flex gap-6">
+                        <div class="w-1 h-24 bg-[#B63914]"></div>
+                        <p class="text-xl leading-relaxed font-light opacity-80 italic">
+                            "Knowledge is the most effective medicine. Awareness transforms a community from passive recipients of care into active guardians of their own well-being."
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右侧：结构化信息板块 (5/12) -->
+            <div class="w-5/12 h-full flex flex-col justify-center gap-8 pt-20">
+                
+                <!-- 模块 01 -->
+                <div class="glass-panel p-8 rounded-br-3xl transition-transform hover:-translate-y-2 duration-300">
+                    <div class="flex items-center gap-4 mb-3">
+                        <span class="text-2xl font-serif-italic text-[#B63914]">01.</span>
+                        <h3 class="font-bold tracking-widest uppercase text-sm">Information Access</h3>
+                    </div>
+                    <p class="text-sm opacity-50 leading-relaxed">Providing high-quality, evidence-based health resources accessible to all demographics through digital and physical channels.</p>
+                </div>
+
+                <!-- 模块 02 -->
+                <div class="glass-panel p-8 rounded-br-3xl transition-transform hover:-translate-y-2 duration-300">
+                    <div class="flex items-center gap-4 mb-3">
+                        <span class="text-2xl font-serif-italic text-[#B63914]">02.</span>
+                        <h3 class="font-bold tracking-widest uppercase text-sm">Community Engagement</h3>
+                    </div>
+                    <p class="text-sm opacity-50 leading-relaxed">Interactive workshops and outreach programs designed to bridge the gap between medical expertise and public understanding.</p>
+                </div>
+
+                <!-- 模块 03 -->
+                <div class="glass-panel p-8 rounded-br-3xl transition-transform hover:-translate-y-2 duration-300">
+                    <div class="flex items-center gap-4 mb-3">
+                        <span class="text-2xl font-serif-italic text-[#B63914]">03.</span>
+                        <h3 class="font-bold tracking-widest uppercase text-sm">Early Detection</h3>
+                    </div>
+                    <p class="text-sm opacity-50 leading-relaxed">Promoting proactive screening and symptom recognition to significantly improve long-term clinical outcomes.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 底部信息补全：状态线与版本号 -->
+        <div class="absolute bottom-12 left-16 right-16 z-20">
+            <div class="decoration-line opacity-20 mb-6"></div>
+            <div class="flex justify-between items-center opacity-40 text-[10px] font-bold tracking-[0.5em] uppercase">
+                <div class="flex items-center gap-6">
+                    <span>Protocol v5.0</span>
+                    <div class="w-8 h-[1px] bg-white"></div>
+                    <span>Global Awareness Initiative</span>
+                </div>
+                <span>Strategic Roadmap 2024-2025</span>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

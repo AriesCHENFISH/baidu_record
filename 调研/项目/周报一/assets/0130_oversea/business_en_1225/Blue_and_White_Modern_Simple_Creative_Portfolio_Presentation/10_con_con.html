@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Break Slide - Portfolio Re-design</title>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- Custom Font (Mandated Source) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        /* CSS Reset & Global Settings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Font Family Setting */
+        body {
+            font-family: 'Noto Sans SC', 'Inter', 'Roboto', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Page Container - Strict 1280x720 */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FFFFFF;
+            overflow: hidden;
+        }
+
+        /* Custom Utility for Line Clamp if needed */
+        .line-clamp-4 {
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#20457C',    /* Deep Ocean Blue */
+                        secondary: '#3A5A6D',  /* Dark Slate */
+                        accent: '#5A7A90',     /* Line Color */
+                        surface: '#FFFFFF',    /* Background */
+                        imgTone: '#3B6B9B'     /* Image Tone Reference */
+                    },
+                    spacing: {
+                        '18': '4.5rem',
+                        '22': '5.5rem',
+                    },
+                    fontSize: {
+                        '8xl': '6rem',
+                        '9xl': '8rem',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div id="page_container">
+        <!-- Main Layout: Grid 12 Columns -->
+        <div class="grid grid-cols-12 h-full w-full">
+            
+            <!-- Left Column: Visual Area (4/12) -->
+            <div class="col-span-4 h-full relative bg-gray-100">
+                <!-- Abstract Ocean Texture Image -->
+                <!-- Using an image that reflects the 'Image Tone #3B6B9B' and ocean theme -->
+                <div class="absolute inset-0 w-full h-full overflow-hidden">
+                     <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=1280&auto=format&fit=crop" 
+                          alt="Abstract Deep Blue Ocean Texture" 
+                          class="w-full h-full object-cover opacity-90 brightness-90">
+                     <!-- 427*720 -->
+                </div>
+                
+                <!-- Overlay Gradient for Depth -->
+                <div class="absolute inset-0 bg-gradient-to-b from-primary/20 to-primary/40 mix-blend-multiply"></div>
+
+                <!-- Decoration: Subtle geometrical shape -->
+                <div class="absolute bottom-10 left-10 w-24 h-1 bg-white/30"></div>
+            </div>
+
+            <!-- Right Column: Content Area (8/12) -->
+            <div class="col-span-8 h-full relative flex flex-col justify-between p-16 pl-20">
+                
+                <!-- Top Section: Header -->
+                <header class="flex flex-col items-start space-y-2 mt-4">
+                    <!-- Giant Typography Title -->
+                    <h1 class="text-8xl font-bold text-primary leading-[0.9] tracking-tight">
+                        <span class="block">Break</span>
+                        <span class="block">Slide</span>
+                    </h1>
+                    
+                    <!-- Decorative subtle element under title -->
+                    <div class="w-20 h-2 bg-accent mt-6 rounded-full opacity-60"></div>
+                </header>
+
+                <!-- Middle Section: Context & Description -->
+                <!-- Layout: Flex Row with Vertical Line Separator as per Design System -->
+                <div class="flex flex-row items-start space-x-8 mb-auto mt-20">
+                    <!-- The Vertical Line -->
+                    <div class="w-[3px] h-32 bg-accent rounded-full opacity-70"></div>
+                    
+                    <!-- Text Content -->
+                    <div class="flex flex-col space-y-4 max-w-2xl">
+                        <!-- Role / Subtitle -->
+                        <h2 class="text-3xl font-medium text-secondary tracking-wide">
+                            Graphic Designer
+                        </h2>
+                        
+                        <!-- Body Paragraph -->
+                        <p class="text-sm text-secondary leading-relaxed font-light opacity-90 text-justify">
+                            Presentations are communication tools that can be used as demonstration lectures, speeches, reports, and more. It is mostly presented before an audience. It serves a variety of purposes, making presentations powerful tools for convincing and teaching.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Bottom Section: Footer Info -->
+                <footer class="flex items-end justify-between w-full border-t border-gray-100 pt-8">
+                    <!-- Author Name -->
+                    <div class="flex flex-col">
+                        <span class="text-xs text-accent uppercase tracking-widest font-semibold mb-1">Presented by</span>
+                        <p class="text-2xl font-bold text-primary tracking-tight">
+                            Olivia Wilson
+                        </p>
+                    </div>
+
+                    <!-- Page Number Block -->
+                    <!-- Positioned absolutely to hug the corner or layout grid -->
+                    <div class="absolute bottom-0 right-0 w-24 h-24 bg-primary flex items-center justify-center">
+                        <span class="text-4xl font-bold text-white">04</span>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

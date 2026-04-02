@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Projects - New Layout</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <style>
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #FFF5F5; overflow: hidden; font-family: 'Noto Sans SC', sans-serif; }
+        .text-primary { color: #1A235F; }
+        .text-accent { color: #B04E78; }
+        .font-script { font-family: 'Brush Script MT', 'cursive', serif; }
+        
+        /* 卡片悬停微动效 */
+        .project-card { transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .project-card:hover { transform: translateY(-8px); }
+    </style>
+</head>
+<body>
+    <div id="page_container" class="p-16 flex items-center">
+        <div class="grid grid-cols-12 gap-10 w-full h-full">
+            
+            <div class="col-span-5 flex flex-col justify-between py-4">
+                
+                <div class="relative z-10">
+                    <p class="text-primary font-bold tracking-widest uppercase mb-2 text-sm border-b-2 border-accent/20 w-16 pb-2">Portfolio</p>
+                    <h1 class="font-script text-accent text-[9rem] leading-[0.8] -ml-4 whitespace-nowrap">Digital<br>Works</h1>
+                </div>
+
+                <div class="space-y-6">
+                    <h3 class="text-primary font-bold text-xl uppercase tracking-wide">UI/UX Solutions</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed text-justify pr-8">
+                        Our design process is iterative and user-centered. We focus on creating cohesive digital ecosystems that adapt to user needs. From wireframing to high-fidelity prototyping, every pixel serves a strategic purpose.
+                    </p>
+                </div>
+
+                <div class="bg-white/60 rounded-2xl p-5 border border-white shadow-sm flex items-center gap-4 w-full">
+                    <div id="projectChart" style="width: 100px; height: 100px;"></div>
+                    <div class="flex-1">
+                        <div class="flex justify-between items-end mb-1">
+                            <span class="text-primary font-bold text-lg">92%</span>
+                            <span class="text-xs text-gray-500 uppercase">Satisfaction</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-1.5">
+                            <div class="bg-accent h-1.5 rounded-full" style="width: 92%"></div>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-2">Based on client feedback from 2024-2025 projects.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-span-7 grid grid-cols-2 gap-6 h-full">
+                
+                <div class="project-card relative h-full rounded-3xl overflow-hidden shadow-lg group cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                    
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <div class="bg-accent/20 backdrop-blur-md w-10 h-10 rounded-full flex items-center justify-center text-white mb-4">
+                            <i class="fa-solid fa-mobile-screen"></i>
+                        </div>
+                        <h4 class="text-white font-bold text-2xl mb-1">FinTech App</h4>
+                        <p class="text-white/70 text-sm">Mobile Experience</p>
+                    </div>
+                </div>
+
+                <div class="project-card relative h-full rounded-3xl overflow-hidden shadow-lg group cursor-pointer mt-12 mb-[-48px]"> <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-accent/90 via-accent/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                    
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <div class="bg-white/20 backdrop-blur-md w-10 h-10 rounded-full flex items-center justify-center text-white mb-4">
+                            <i class="fa-solid fa-laptop"></i>
+                        </div>
+                        <h4 class="text-white font-bold text-2xl mb-1">Analytics</h4>
+                        <p class="text-white/70 text-sm">Web Dashboard</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var chartDom = document.getElementById('projectChart');
+        var myChart = echarts.init(chartDom);
+        var option = {
+            animation: false,
+            color: ['#B04E78', '#E5E7EB'],
+            series: [
+                {
+                    name: 'Access From',
+                    type: 'pie',
+                    radius: ['70%', '90%'],
+                    avoidLabelOverlap: false,
+                    label: { show: false, position: 'center' },
+                    emphasis: { label: { show: false } },
+                    labelLine: { show: false },
+                    data: [
+                        { value: 92, name: 'Completed' },
+                        { value: 8, name: 'Ongoing' }
+                    ]
+                }
+            ]
+        };
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

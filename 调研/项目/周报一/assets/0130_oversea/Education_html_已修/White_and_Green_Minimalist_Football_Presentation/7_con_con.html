@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Tactics Keynote</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+            background-color: #2A4029;
+        }
+        .text-primary { color: #FFFFFF; }
+        .text-secondary { color: #E0E6DF; }
+        .text-accent { color: #D9463E; }
+        .bg-card { background-color: rgba(97, 115, 96, 0.92); }
+
+        /* 新增：旋转动画 */
+        @keyframes rotate-text {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-rotate { animation: rotate-text 20s linear infinite; }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { dark: '#2A4029', mid: '#617360', light: '#E0E6DF', line: '#8C9B8A', accent: '#D9463E' }
+                    },
+                    fontFamily: { sans: ['Inter', 'Noto Sans SC', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <!-- 背景层 -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1529900748604-07564a03e7a6?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover opacity-40 mix-blend-overlay grayscale-[30%]">
+            <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(42,64,41,0.95), rgba(42,64,41,0.8));"></div>
+        </div>
+
+        <!-- 装饰线条 -->
+        <div class="absolute inset-0 z-10 pointer-events-none">
+            <div class="absolute top-0 right-[200px] w-[1px] h-[300px] bg-brand-line origin-top -rotate-45 opacity-50"></div>
+            <div class="absolute bottom-[-100px] left-[-50px] w-[450px] h-[450px] rounded-full border border-brand-line opacity-40"></div>
+        </div>
+
+        <!-- 顶部 Header (含新徽章 Logo) -->
+        <header class="absolute top-0 left-0 w-full z-20 px-16 pt-14 flex justify-between items-start">
+            <div class="w-3/5">
+                <h1 class="text-7xl font-bold text-primary leading-[0.9] tracking-tight uppercase mb-4">
+                    Football Tactics <br>
+                    <span class="font-light">and Formations</span>
+                </h1>
+                <p class="text-xl text-brand-light font-medium tracking-wide border-l-4 border-brand-accent pl-4 mt-6">
+                    Strategy on the Pitch
+                </p>
+            </div>
+
+            <!-- [替换部分] 右上角动态徽章 & 进度条 -->
+            <div class="flex flex-col items-end gap-6">
+                <!-- 动态徽章 -->
+                <div class="relative w-32 h-32 flex items-center justify-center">
+                    <svg class="absolute w-full h-full animate-rotate" viewBox="0 0 100 100">
+                        <defs><path id="badgePath1" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" /></defs>
+                        <text fill="#FFFFFF" font-size="7" font-weight="500" letter-spacing="2" class="opacity-70 uppercase">
+                            <textPath xlink:href="#badgePath1">• LICERIA SPORTS & CO • PREMIUM CLUB</textPath>
+                        </text>
+                    </svg>
+                    <div class="w-16 h-16 bg-brand-accent shadow-xl rounded-full border border-white/20 flex flex-col items-center justify-center backdrop-blur-sm">
+                        <i class="fa-solid fa-trophy text-white text-lg"></i>
+                        <span class="text-white font-bold text-[8px] mt-0.5">EST. 1992</span>
+                    </div>
+                </div>
+                <!-- 进度条 -->
+                <div class="w-32 h-1.5 border border-brand-line/50 rounded-full p-[1px]">
+                    <div class="h-full w-2/3 bg-brand-accent rounded-full"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- 主内容区 -->
+        <main class="absolute bottom-0 w-full h-[65%] z-20 px-16 pb-12 grid grid-cols-12 gap-8">
+            <div class="col-span-4 relative flex flex-col justify-end items-start pb-4">
+                <div class="relative w-full h-[400px] overflow-hidden">
+                     <div class="absolute bottom-0 left-[-20px] w-[320px] h-[320px] rounded-full overflow-hidden border-4 border-brand-light/20 shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&q=80" alt="Coach" class="w-full h-full object-cover object-top">
+                     </div>
+                </div>
+            </div>
+
+            <div class="col-span-8 grid grid-cols-2 grid-rows-2 gap-5 h-full content-end">
+                <!-- 战术卡片保持原样 -->
+                <div class="bg-card backdrop-blur-md p-6 rounded border-l-2 border-brand-line flex flex-col justify-between group hover:bg-brand-mid transition-colors">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold text-white">Cattenacio <br><span class="font-light">Modern</span></h3>
+                        <span class="text-brand-light font-mono text-sm bg-black/20 px-2 py-1 rounded">(5-3-2)</span>
+                    </div>
+                    <p class="text-brand-light text-sm leading-relaxed opacity-90">Prioritizes strong defense with a sweeper. Strategic formation for high-stakes matches.</p>
+                </div>
+                <div class="bg-card backdrop-blur-md p-6 rounded border-l-2 border-brand-line flex flex-col justify-between group hover:bg-brand-mid transition-colors">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold text-white">Total <br><span class="font-light">Football</span></h3>
+                        <span class="text-brand-light font-mono text-sm bg-black/20 px-2 py-1 rounded">(3-4-3)</span>
+                    </div>
+                    <p class="text-brand-light text-sm leading-relaxed opacity-90">Fluid positioning where any player can take over another's role on the field.</p>
+                </div>
+                <div class="bg-card backdrop-blur-md p-6 rounded border-l-2 border-brand-line flex flex-col justify-between group hover:bg-brand-mid transition-colors">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold text-white">Tiki-<br><span class="font-light">Taka</span></h3>
+                        <span class="text-brand-light font-mono text-sm bg-black/20 px-2 py-1 rounded">(4-3-3)</span>
+                    </div>
+                    <p class="text-brand-light text-sm leading-relaxed opacity-90">Focus on short passing and movement, maintaining possession at all times.</p>
+                </div>
+                <div class="bg-card backdrop-blur-md p-6 rounded border-l-2 border-brand-line flex flex-col justify-between group hover:bg-brand-mid transition-colors">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold text-white">Gegen <br><span class="font-light">Pressing</span></h3>
+                        <span class="text-brand-light font-mono text-sm bg-black/20 px-2 py-1 rounded">(3-5-2)</span>
+                    </div>
+                    <p class="text-brand-light text-sm leading-relaxed opacity-90">Immediately attempting to regain possession after losing the ball to the opponent.</p>
+                </div>
+            </div>
+        </main>
+
+        <div class="absolute bottom-6 left-16 text-[10px] text-brand-line tracking-widest uppercase z-20">
+            <span>Fig. 01 — Tactics Board Analysis</span>
+        </div>
+    </div>
+
+</body>
+</html>

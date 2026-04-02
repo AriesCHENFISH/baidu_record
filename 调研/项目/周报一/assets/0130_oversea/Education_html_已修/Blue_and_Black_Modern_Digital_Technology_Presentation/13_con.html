@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Analytics Dashboard</title>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #050505; color: #FFFFFF; font-family: 'Noto Sans SC', sans-serif; overflow: hidden; }
+        .ambient-glow { position: absolute; width: 600px; height: 600px; background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%); filter: blur(80px); }
+        
+        /* 表格/日志行样式 (从原模板继承) */
+        .log-row { 
+            background: linear-gradient(90deg, rgba(255,255,255,0.01) 0%, rgba(255,255,255,0.03) 50%, rgba(255,255,255,0.01) 100%); 
+            border-bottom: 1px solid rgba(255,255,255,0.05); 
+            position: relative; 
+            overflow: hidden;
+            transition: background-color 0.3s ease;
+        }
+        .log-row:hover { background: rgba(255,255,255,0.04); }
+
+        /* 科技感网格背景 (从原模板继承) */
+        .grid-bg {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            position: absolute; inset: 0; pointer-events: none; opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+    <div id="page_container" class="flex flex-col px-16 py-12">
+        <!-- 背景装饰 -->
+        <div class="grid-bg"></div>
+        <div class="ambient-glow" style="top: -200px; left: -100px;"></div>
+        <div class="ambient-glow" style="bottom: -300px; right: -100px; background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);"></div>
+
+        <!-- 顶部 Header -->
+        <header class="relative z-10 flex justify-between items-start mb-10">
+            <div class="flex flex-col">
+                <h6 class="text-blue-500 text-xs tracking-[0.3em] font-bold uppercase pl-4 border-l-2 border-blue-500 mb-2">Network Monitoring</h6>
+                <div class="flex items-center space-x-2 pl-4 opacity-50">
+                    <i class="fa-solid fa-satellite-dish text-[10px]"></i>
+                    <span class="text-[10px] tracking-widest uppercase">Live Telemetry Feed</span>
+                </div>
+            </div>
+            <div class="text-right">
+                <p class="text-white/60 text-xs tracking-[0.2em] font-medium uppercase">Data Stream</p>
+                <div class="flex items-center justify-end gap-2 mt-1">
+                    <span class="h-1 w-1 bg-green-500 rounded-full animate-pulse"></span>
+                    <p class="text-white text-sm font-bold tracking-widest">REAL-TIME</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- 主标题区域 -->
+        <div class="relative z-10 flex justify-between items-end mb-8 shrink-0">
+            <div>
+                <h1 class="text-white text-6xl font-bold uppercase leading-[0.9] tracking-tighter">
+                    System Analytics<br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white">Dashboard</span>
+                </h1>
+            </div>
+            <div class="text-right w-64">
+                <p class="text-white/40 text-xs leading-relaxed">
+                    Aggregated metrics providing a comprehensive overview of network performance and health.
+                </p>
+            </div>
+        </div>
+
+        <!-- 数据卡片区域 -->
+        <div class="relative z-10 grid grid-cols-4 gap-6 mb-8">
+            <!-- Card 1: Transaction Volume -->
+            <div class="bg-white/5 border border-white/10 rounded-lg p-5 flex flex-col justify-between h-40">
+                <div>
+                    <div class="flex justify-between items-center text-white/40">
+                        <span class="text-xs uppercase tracking-widest">TXN Volume (24h)</span>
+                        <i class="fa-solid fa-exchange-alt"></i>
+                    </div>
+                    <p class="text-4xl font-mono font-bold text-blue-400 mt-2">1.2M</p>
+                </div>
+                <div class="text-green-400 text-xs flex items-center gap-1">
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+                    <span>+5.8%</span>
+                </div>
+            </div>
+            <!-- Card 2: Active Nodes -->
+            <div class="bg-white/5 border border-white/10 rounded-lg p-5 flex flex-col justify-between h-40">
+                <div>
+                    <div class="flex justify-between items-center text-white/40">
+                        <span class="text-xs uppercase tracking-widest">Active Nodes</span>
+                        <i class="fa-solid fa-server"></i>
+                    </div>
+                    <p class="text-4xl font-mono font-bold text-blue-400 mt-2">8,421</p>
+                </div>
+                <div class="text-white/50 text-xs">
+                    <span>Global Distribution</span>
+                </div>
+            </div>
+            <!-- Card 3: Gas Price -->
+            <div class="bg-white/5 border border-white/10 rounded-lg p-5 flex flex-col justify-between h-40">
+                <div>
+                    <div class="flex justify-between items-center text-white/40">
+                        <span class="text-xs uppercase tracking-widest">AVG Gas Price</span>
+                        <i class="fa-solid fa-fire"></i>
+                    </div>
+                    <p class="text-4xl font-mono font-bold text-blue-400 mt-2">19.7</p>
+                </div>
+                <div class="text-white/50 text-xs">
+                    <span>GWEI (Standard)</span>
+                </div>
+            </div>
+            <!-- Card 4: Block Latency -->
+            <div class="bg-white/5 border border-white/10 rounded-lg p-5 flex flex-col justify-between h-40">
+                <div>
+                    <div class="flex justify-between items-center text-white/40">
+                        <span class="text-xs uppercase tracking-widest">Block Latency</span>
+                        <i class="fa-solid fa-stopwatch"></i>
+                    </div>
+                    <p class="text-4xl font-mono font-bold text-blue-400 mt-2">214</p>
+                </div>
+                <div class="text-white/50 text-xs">
+                    <span>Milliseconds (ms)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 实时日志区域 -->
+        <div class="relative z-10 flex flex-col items-center w-full">
+            <!-- Header Row -->
+            <div class="w-full flex justify-between px-6 pb-2 text-[10px] text-white/30 uppercase tracking-widest border-b border-white/5 mb-2">
+                <span class="w-[15%]">Block #</span>
+                <span class="w-[45%]">Validator Hash</span>
+                <span class="w-[20%] text-center">Transactions</span>
+                <span class="w-[20%] text-right">Timestamp</span>
+            </div>
+            <!-- Log Item 1 -->
+            <div class="log-row w-full flex items-center justify-between px-6 py-4 cursor-default">
+                <div class="w-[15%] font-mono text-blue-400">8,331,092</div>
+                <div class="w-[45%] font-mono text-white/50 truncate">0x5aE...4f3B</div>
+                <div class="w-[20%] text-center font-mono text-white/70">152</div>
+                <div class="w-[20%] text-right font-mono text-white/40">3 secs ago</div>
+            </div>
+            <!-- Log Item 2 -->
+            <div class="log-row w-full flex items-center justify-between px-6 py-4 cursor-default">
+                <div class="w-[15%] font-mono text-blue-400">8,331,091</div>
+                <div class="w-[45%] font-mono text-white/50 truncate">0x2cD...9a8C</div>
+                <div class="w-[20%] text-center font-mono text-white/70">210</div>
+                <div class="w-[20%] text-right font-mono text-white/40">15 secs ago</div>
+            </div>
+            <!-- Log Item 3 -->
+            <div class="log-row w-full flex items-center justify-between px-6 py-4 cursor-default">
+                <div class="w-[15%] font-mono text-blue-400">8,331,090</div>
+                <div class="w-[45%] font-mono text-white/50 truncate">0xF4b...1e7D</div>
+                <div class="w-[20%] text-center font-mono text-white/70">98</div>
+                <div class="w-[20%] text-right font-mono text-white/40">29 secs ago</div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

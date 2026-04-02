@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cover - Professional Adventure</title>
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#BCE46C',
+                        darkGreen: '#1A2E05',
+                        pageBlack: '#000000',
+                        textGray: '#E0E0E0'
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #000000;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* 装饰背景：极简网格 */
+        .grid-overlay {
+            position: absolute;
+            inset: 0;
+            background-image: 
+                linear-gradient(to right, rgba(188, 228, 108, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(188, 228, 108, 0.05) 1px, transparent 1px);
+            background-size: 60px 60px;
+            mask-image: radial-gradient(circle at center, black, transparent 80%);
+        }
+
+        /* 标题辉光效果 */
+        .glow-text {
+            text-shadow: 0 0 20px rgba(188, 228, 108, 0.3);
+        }
+
+        /* 旋转装饰星 */
+        .star-decoration {
+            position: absolute;
+            color: #BCE46C;
+            opacity: 0.4;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <!-- 背景层 -->
+        <div class="grid-overlay"></div>
+        <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-brand/10 blur-[120px] rounded-full"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-brand/5 blur-[120px] rounded-full"></div>
+
+        <!-- 装饰星号 -->
+        <div class="star-decoration top-20 left-20 text-3xl animate-pulse"><i class="fa-solid fa-star-of-life"></i></div>
+        <div class="star-decoration bottom-24 right-32 text-2xl rotate-45"><i class="fa-solid fa-star"></i></div>
+
+        <!-- 顶部装饰线条 (位置略微下移，以便与标题呼应) -->
+        <div class="mt-12 flex items-center gap-4 opacity-50 z-10">
+            <div class="h-[1px] w-24 bg-gradient-to-r from-transparent to-brand"></div>
+            <span class="text-brand text-[10px] font-mono tracking-[0.5em] uppercase">Confidential / 2024 Edition</span>
+            <div class="h-[1px] w-24 bg-gradient-to-l from-transparent to-brand"></div>
+        </div>
+
+        <!-- 主内容区域 (减小了顶部的 margin) -->
+        <div class="mt-8 text-center z-10 flex flex-col items-center">
+            <!-- 1. 业务标签 (现在的间距更紧凑) -->
+            <div class="inline-block px-4 py-1 border border-brand/30 rounded-full mb-8">
+                <span class="text-brand text-xs font-bold tracking-[0.3em] uppercase">Strategic Work Report</span>
+            </div>
+
+            <!-- 2. Slogan -->
+            <div class="mb-6 flex items-center justify-center gap-6">
+                <div class="h-[1px] w-8 bg-white/20"></div>
+                <p class="text-brand/80 text-lg font-light tracking-[0.4em] uppercase">
+                    Passion • Innovation • Artistry
+                </p>
+                <div class="h-[1px] w-8 bg-white/20"></div>
+            </div>
+            
+            <!-- 3. 主标题 -->
+            <h1 class="flex flex-col items-center">
+                <span class="text-[100px] leading-[0.8] font-black text-white tracking-tighter uppercase mb-4">
+                    Professional
+                </span>
+                <span class="text-[120px] leading-[0.8] font-light italic text-brand tracking-tight glow-text">
+                    Adventure
+                </span>
+            </h1>
+        </div>
+
+        <!-- 汇报人信息区域 (绝对定位在底部) -->
+        <div class="absolute bottom-20 flex flex-col items-center z-10">
+            <div class="flex flex-col items-center group cursor-default">
+                <div class="text-textGray/40 text-[10px] font-bold tracking-[0.3em] uppercase mb-4">Presented by</div>
+                
+                <div class="relative px-12 py-4">
+                    <!-- 边角装饰 -->
+                    <div class="absolute top-0 left-0 w-2 h-2 border-l border-t border-brand"></div>
+                    <div class="absolute top-0 right-0 w-2 h-2 border-r border-t border-brand"></div>
+                    <div class="absolute bottom-0 left-0 w-2 h-2 border-l border-b border-brand"></div>
+                    <div class="absolute bottom-0 right-0 w-2 h-2 border-r border-b border-brand"></div>
+                    
+                    <!-- 汇报人名字 -->
+                    <span class="text-white text-3xl font-medium tracking-widest">
+                        OLIVIA <span class="font-bold text-brand italic">WILSON</span>
+                    </span>
+                </div>
+                
+                <div class="mt-4 text-textGray/40 text-xs font-mono tracking-widest">
+                    Senior Creative Strategist
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash Flow Statement - Financial Keynote</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #050510;
+            overflow: hidden;
+        }
+        .glow-sphere { position: absolute; border-radius: 50%; filter: blur(80px); z-index: 0; }
+        .glow-1 { width: 500px; height: 500px; background-color: #2D2B55; top: -100px; left: -100px; opacity: 0.6; }
+        .glow-2 { width: 600px; height: 600px; background-color: #1F1D36; bottom: -150px; right: -100px; opacity: 0.5; }
+        .main-grid {
+            display: grid;
+            grid-template-columns: 360px 1fr;
+            gap: 40px;
+            height: calc(100% - 140px);
+            position: relative;
+            z-index: 10;
+            padding: 0 60px;
+        }
+        .text-mint { color: #D0F4DE; }
+        .text-cyan { color: #8DE4E6; }
+        .text-gray { color: #B0B0B8; }
+        .activity-card {
+            background-color: rgba(31, 29, 54, 0.6);
+            border: 1px solid rgba(141, 228, 230, 0.1);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+        }
+        .icon-box { width: 64px; height: 64px; display: flex; align-items: center; justify-content: center; border-radius: 50%; margin-right: 20px; font-size: 24px; }
+        .icon-bg-1 { background: linear-gradient(135deg, #4E86B3, #1F1D36); color: #D0F4DE; }
+        .icon-bg-2 { background: linear-gradient(135deg, #5DAFCC, #1F1D36); color: #8DE4E6; }
+        .icon-bg-3 { background: linear-gradient(135deg, #8DE4E6, #1F1D36); color: #050510; }
+    </style>
+</head>
+<body>
+    <div class="page_container">
+        <div class="glow-sphere glow-1"></div>
+        <div class="glow-sphere glow-2"></div>
+
+        <header class="relative z-20 w-full pt-16 px-16 flex justify-start items-center">
+            <div class="flex items-center">
+                <div class="w-[4px] h-12 bg-gradient-to-b from-[#8DE4E6] to-[#4E86B3] rounded-full mr-8 shadow-[0_0_15px_rgba(141,228,230,0.4)]"></div>
+                <div class="flex flex-col">
+                    <h2 class="text-5xl font-black tracking-[0.35em] text-white leading-none uppercase">CASHFLOW</h2>
+                    <p class="text-[11px] text-[#5DAFCC] tracking-[0.5em] font-medium uppercase mt-3 opacity-80">Cash Flow Statement Report</p>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-grid mt-4">
+            <div style="display: flex; flex-direction: column; justify-content: center;">
+                <div class="activity-card">
+                    <div class="icon-box icon-bg-1"><i class="fa-solid fa-gears"></i></div>
+                    <div>
+                        <h3 class="text-mint font-semibold text-xl">Operating</h3>
+                        <p class="text-gray text-xs tracking-wider">Primary revenue generation</p>
+                    </div>
+                </div>
+                <div class="activity-card">
+                    <div class="icon-box icon-bg-2"><i class="fa-solid fa-chart-pie"></i></div>
+                    <div>
+                        <h3 class="text-cyan font-semibold text-xl">Investing</h3>
+                        <p class="text-gray text-xs tracking-wider">Asset acquisition & disposal</p>
+                    </div>
+                </div>
+                <div class="activity-card">
+                    <div class="icon-box icon-bg-3"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+                    <div>
+                        <h3 style="color:#5DAFCC" class="font-semibold text-xl">Financing</h3>
+                        <p class="text-gray text-xs tracking-wider">Equity & borrowings flow</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; justify-content: center; padding-left: 20px;">
+                <div style="margin-bottom: 30px;">
+                    <h1 class="text-mint text-5xl font-bold leading-tight mb-2">Cash Flow Statement</h1>
+                    <div style="width: 80px; height: 4px; background: linear-gradient(90deg, #D0F4DE, #5DAFCC); border-radius: 2px;"></div>
+                </div>
+                <div id="mainChart" style="width: 100%; height: 320px;"></div>
+                <div style="margin-top: 20px;">
+                    <p class="text-gray text-sm leading-relaxed max-w-[90%]">
+                        Analysis of liquid capital movement across core operational metrics. This visualization tracks the strategic allocation and inflow of organizational resources.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var chartDom = document.getElementById('mainChart');
+        var myChart = echarts.init(chartDom);
+        var option = {
+            backgroundColor: 'transparent',
+            grid: { left: '0%', right: '4%', bottom: '10%', top: '15%', containLabel: true },
+            legend: { data: ['Projected Flow', 'Actual Flow'], top: 0, right: 0, textStyle: { color: '#B0B0B8' }, icon: 'circle' },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5', 'Item 6', 'Item 7'],
+                axisLine: { lineStyle: { color: '#4E86B3', opacity: 0.3 } },
+                axisLabel: { color: '#B0B0B8', margin: 15 }
+            },
+            yAxis: {
+                type: 'value',
+                splitLine: { lineStyle: { color: '#2D2B55', type: 'dashed', opacity: 0.5 } },
+                axisLabel: { color: '#B0B0B8' }
+            },
+            series: [
+                {
+                    name: 'Projected Flow',
+                    type: 'line',
+                    smooth: true,
+                    areaStyle: { opacity: 0.6, color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{ offset: 0, color: '#8DE4E6' }, { offset: 1, color: 'transparent' }]) },
+                    lineStyle: { width: 3, color: '#8DE4E6' },
+                    data: [10, 20, 30, 32, 30, 25, 20]
+                },
+                {
+                    name: 'Actual Flow',
+                    type: 'line',
+                    smooth: true,
+                    areaStyle: { opacity: 0.6, color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{ offset: 0, color: '#5DAFCC' }, { offset: 1, color: 'transparent' }]) },
+                    lineStyle: { width: 3, color: '#5DAFCC' },
+                    data: [12, 18, 25, 28, 32, 40, 48]
+                }
+            ]
+        };
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

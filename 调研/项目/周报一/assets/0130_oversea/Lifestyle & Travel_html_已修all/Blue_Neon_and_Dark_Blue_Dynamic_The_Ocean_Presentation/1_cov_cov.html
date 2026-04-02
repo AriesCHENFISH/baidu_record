@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocean - Cover Page with Bubbles</title>
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700;900&family=Libre+Baskerville:ital,wght@1,400&display=swap">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        #page_container {
+            width: 1280px; height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background: #010510; 
+            overflow: hidden;
+            color: #FFFFFF;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 主标题渐变 */
+        .main-title {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 160px;
+            background: linear-gradient(180deg, #FFFFFF 30%, rgba(79, 189, 242, 0.4) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 0.8;
+            letter-spacing: -8px;
+            filter: drop-shadow(0 0 30px rgba(79, 189, 242, 0.2));
+            z-index: 50;
+        }
+
+        /* 有机透明泡泡装饰 */
+        .bubble-frame {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.05);
+            z-index: 10;
+            animation: float 10s infinite alternate ease-in-out;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            100% { transform: translateY(-20px) rotate(5deg); }
+        }
+
+        /* 汇报人标签 */
+        .presenter-tag {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 12px 32px;
+            border-radius: 100px;
+            margin-top: 80px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            z-index: 60;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <div class="absolute w-[800px] h-[600px] bg-[#0A1E4D] blur-[120px] opacity-30 top-[-100px] left-[-100px]"></div>
+
+        <div class="bubble-frame w-48 h-48 left-[10%] top-[15%]" 
+             style="border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;"></div>
+        
+        <div class="bubble-frame w-64 h-64 right-[8%] top-[25%]" 
+             style="border-radius: 30% 70% 70% 30% / 50% 60% 40% 50%; animation-delay: -2s;"></div>
+
+        <div class="bubble-frame w-96 h-96 left-[20%] bottom-[-50px] opacity-40" 
+             style="border-radius: 50% 50% 20% 80% / 40% 40% 60% 60%; animation-delay: -5s; filter: blur(4px);"></div>
+
+        <div class="relative z-50 flex flex-col items-center">
+            <div class="flex items-center gap-4 mb-6">
+                <span class="h-[1px] w-12 bg-[#4FBDF2]"></span>
+                <span class="text-[#4FBDF2] text-xs font-bold tracking-[0.6em] uppercase">Discovery Series</span>
+                <span class="h-[1px] w-12 bg-[#4FBDF2]"></span>
+            </div>
+
+            <h1 class="main-title italic">the Ocean</h1>
+            
+            <p class="text-white/40 font-light text-xl tracking-[0.8em] uppercase mt-4">Marine Biodiversity</p>
+
+            <div class="presenter-tag">
+                <div class="flex flex-col items-start border-r border-white/20 pr-6">
+                    <span class="text-[10px] text-white/40 uppercase tracking-widest mb-1">Presented by</span>
+                    <span class="text-sm font-bold tracking-widest uppercase">Salford & Co. Team</span>
+                </div>
+                <div class="flex flex-col items-start">
+                    <span class="text-[10px] text-white/40 uppercase tracking-widest mb-1">Project Phase</span>
+                    <span class="text-sm font-bold tracking-widest uppercase text-[#4FBDF2]">Exploration 02</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-12 opacity-30 tracking-[0.4em] text-[10px] font-bold">
+            SALFORD & CO. RESEARCH INSTITUTION
+        </div>
+
+        <div class="absolute w-1 h-1 bg-white rounded-full top-1/4 right-1/3 animate-pulse"></div>
+        <div class="absolute w-1.5 h-1.5 bg-[#4FBDF2] rounded-full bottom-1/4 left-1/4 animate-ping"></div>
+    </div>
+
+</body>
+</html>

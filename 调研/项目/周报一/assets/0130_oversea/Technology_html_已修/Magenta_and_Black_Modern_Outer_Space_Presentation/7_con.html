@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Surprises Keynote</title>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts: Inter for modern UI, Noto Sans SC for compatibility -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgPrimary: '#1E121E',
+                        headingPrimary: '#E65A71',
+                        textPrimary: '#E0E0E0',
+                        stroke: '#FFFFFF',
+                        shadowDark: '#3B243B',
+                        accent: '#6A2C55',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans SC', 'sans-serif'],
+                    },
+                    spacing: {
+                        '1280': '1280px',
+                        '720': '720px',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Global Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container - Strict 1280x720 */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #1E121E;
+            overflow: hidden;
+            /* Applying the texture/shadow color via gradient as base */
+            background: linear-gradient(135deg, #1E121E 40%, #3B243B 100%);
+        }
+
+        /* Utilities not covered by Tailwind default config */
+        .text-shadow-glow {
+            text-shadow: 0 0 20px rgba(230, 90, 113, 0.4);
+        }
+
+        /* Custom Shapes */
+        .shape-hexagon {
+            clip-path: polygon(20% 0%, 80% 0%, 100% 50%, 80% 100%, 20% 100%, 0% 50%);
+        }
+        
+        /* Glassmorphism Effect */
+        .glass-panel {
+            background: rgba(106, 44, 85, 0.2); /* Using Accent Color with opacity */
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Hide scrollbars if content overflows slightly */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main PPT Container -->
+    <div id="page_container">
+        
+        <!-- Layer 0: Atmospheric Background Image (Mountain/Alien Landscape) -->
+        <!-- Using a dark Unsplash image to simulate the alien terrain silhouette -->
+        <div class="absolute inset-0 z-0 opacity-60">
+            <img src="https://images.unsplash.com/photo-1534234828563-025114792676?q=80&w=1280&auto=format&fit=crop" 
+                 alt="Alien Landscape Background" 
+                 class="w-full h-full object-cover grayscale mix-blend-overlay">
+            <!-- 1280*720 -->
+        </div>
+
+        <!-- Layer 0.5: Gradient Overlay for Readability -->
+        <div class="absolute inset-0 z-0 bg-gradient-to-r from-[#1E121E] via-[#1E121E]/90 to-transparent"></div>
+
+        <!-- Layer 1: Content Grid -->
+        <div class="relative z-10 w-full h-full grid grid-cols-12 gap-8 px-16 py-12">
+
+            <!-- Left Column: Typography & Content (7 Columns) -->
+            <div class="col-span-7 flex flex-col justify-between h-full">
+                
+                <!-- Top Navigation -->
+                <nav class="w-full mb-8">
+                    <ul class="flex items-center space-x-12 border-b border-stroke/30 pb-4">
+                        <li class="relative">
+                            <h6 class="text-white text-xs font-bold tracking-[0.2em] uppercase cursor-pointer">Unveiling the Bizarre</h6>
+                            <!-- Active Indicator -->
+                            <div class="absolute -bottom-4 left-0 w-full h-[2px] bg-headingPrimary shadow-[0_0_8px_#E65A71]"></div>
+                        </li>
+                        <li>
+                            <h6 class="text-textPrimary/60 text-xs font-medium tracking-[0.2em] uppercase">Beyond the Known</h6>
+                        </li>
+                        <li>
+                            <h6 class="text-textPrimary/60 text-xs font-medium tracking-[0.2em] uppercase">Cosmic Curiosities</h6>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Main Content Area -->
+                <div class="flex-grow flex flex-col justify-center pr-8">
+                    <!-- Main Title -->
+                    <div class="mb-2">
+                        <h1 class="text-headingPrimary text-7xl font-extrabold uppercase leading-[0.9] tracking-tight text-shadow-glow">
+                            The Universe Is<br>
+                            <span class="text-white">Full Of</span> Surprises
+                        </h1>
+                    </div>
+
+                    <!-- Subtitle / Decorative Separator -->
+                    <div class="flex items-center space-x-4 mb-8 mt-6">
+                        <div class="h-[2px] w-12 bg-headingPrimary"></div>
+                        <h2 class="text-white text-2xl font-light italic tracking-wide">
+                            The Universe is Full of Surprises
+                        </h2>
+                    </div>
+
+                    <!-- Body Text -->
+                    <div class="max-w-xl">
+                        <p class="text-textPrimary text-lg leading-relaxed font-light">
+                            We think we know space – planets orbiting stars, stars forming galaxies. But the cosmos hides some truly <b class="text-white font-semibold">bizarre phenomena</b> that defy our everyday experience. From planets made of diamond to regions of unimaginable cold, prepare to have your mind blown by the universe's weirdest wonders!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Footer / Metadata (Optional decoration to fill space) -->
+                <div class="flex items-center space-x-6 text-textPrimary/40 text-xs">
+                     <div class="flex items-center space-x-2">
+                        <i class="fa-solid fa-planet-ringed"></i>
+                        <span>Cosmic Archive Vol. 04</span>
+                     </div>
+                     <div class="h-1 w-1 bg-white rounded-full"></div>
+                     <span>Exploration Series</span>
+                </div>
+            </div>
+
+            <!-- Right Column: Visual Composition (5 Columns) -->
+            <div class="col-span-5 relative h-full">
+                
+                <!-- Visual 1: Main "Planet" Image (Top Right) -->
+                <!-- Styled as a futuristic portal/hexagon -->
+                <div class="absolute top-10 right-0 w-[420px] h-[380px] z-20 transition-transform">
+                    <!-- Decorative border glow -->
+                    <div class="absolute inset-0 bg-headingPrimary opacity-20 blur-xl rounded-full"></div>
+                    
+                    <!-- Mask Container -->
+                    <div class="relative w-full h-full shape-hexagon overflow-hidden border-2 border-stroke/20 bg-shadowDark">
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=600&auto=format&fit=crop" 
+                             alt="Planets and Orbit" 
+                             class="w-full h-full object-cover transform scale-110 hover:scale-105 transition-transform duration-700">
+                        <!-- 420*380 -->
+                        
+                        <!-- Overlay Gradient -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-bgPrimary/80 to-transparent mix-blend-multiply"></div>
+                    </div>
+
+                    <!-- Floating Badge -->
+                    <div class="absolute bottom-10 right-10 z-30 glass-panel px-4 py-2 rounded-full">
+                        <span class="text-white text-xs font-bold tracking-widest uppercase">
+                            <i class="fa-solid fa-atom mr-2 text-headingPrimary"></i>Anomaly
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Visual 2: Secondary "Galaxy" Image (Bottom Left overlap) -->
+                <!-- Styled as a rounded sleek card -->
+                <div class="absolute bottom-12 left-0 w-[320px] h-[200px] z-30">
+                     <!-- Card Container -->
+                    <div class="relative w-full h-full rounded-[2rem] overflow-hidden border border-stroke/30 shadow-[0_20px_40px_rgba(0,0,0,0.5)] bg-bgPrimary">
+                        <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=400&auto=format&fit=crop" 
+                             alt="Spiral Galaxy" 
+                             class="w-full h-full object-cover opacity-90">
+                        <!-- 320*200 -->
+
+                        <!-- Text Overlay on Image -->
+                        <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-bgPrimary to-transparent">
+                            <h4 class="text-white text-sm font-bold uppercase tracking-wider mb-1">Galactic Spiral</h4>
+                            <div class="h-[2px] w-8 bg-headingPrimary mb-1"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Decorative Elements (Grid Lines / Abstract) -->
+                <div class="absolute top-0 right-12 w-[1px] h-full bg-gradient-to-b from-transparent via-stroke/10 to-transparent z-0"></div>
+                <div class="absolute bottom-20 right-8 text-accent opacity-20 text-9xl z-0">
+                    <i class="fa-brands fa-space-awesome"></i>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High-End Presentation Slide - Thank You</title>
+    
+    <!-- Tailwind CSS (via CDN) -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts (Baidu CDN as requested) -->
+    <link href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css" rel="stylesheet">
+
+    <!-- Tailwind Config for Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBlack: '#111111',
+                        limeAccent: '#DFFF5E',
+                        lightGray: '#E0E0E0',
+                        darkText: '#0a0a0a'
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Basic Setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Main Slide Container - Fixed 1280x720 */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #111111; /* Global Background Color */
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+            /* No shadow allowed per instructions */
+        }
+
+        /* Utility for center alignment */
+        .flex-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Typography Enhancements */
+        .title-huge {
+            font-size: 180px;
+            line-height: 0.85;
+            font-weight: 900;
+            letter-spacing: -6px;
+        }
+
+        /* Custom Capsule Styles */
+        .capsule {
+            border: 1px solid #111111;
+            padding: 8px 24px;
+            border-radius: 999px;
+            font-weight: 500;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+
+        .capsule-dark {
+            background-color: #111111;
+            color: #DFFF5E;
+            border: 1px solid #111111;
+        }
+
+        /* Decorative Line styling */
+        .deco-line {
+            height: 1px;
+            background-color: #111111;
+            width: 100%;
+            margin: 0 20px;
+            position: relative;
+        }
+
+        .deco-line::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: -2px;
+            width: 5px;
+            height: 5px;
+            background-color: #111111;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Presentation Container -->
+    <div id="page_container">
+        
+        <!-- TOP SECTION: The "Green Card" -->
+        <!-- Logic: Uses the Accent Color (#DFFF5E) as the dominant background for high impact, with rounded corners to separate from footer. -->
+        <div class="w-full h-[70%] bg-limeAccent rounded-b-[80px] px-16 pt-12 pb-8 flex flex-col justify-between relative z-10">
+            
+            <!-- Header: Capsules & Decorative Line -->
+            <div class="flex items-center justify-between w-full">
+                <div class="flex items-center gap-4">
+                    <!-- Left Pill -->
+                    <div class="capsule text-deepBlack">
+                        <span>Paucek and Lage</span>
+                    </div>
+                    <!-- Right Pill with Icon -->
+                    <div class="capsule text-deepBlack flex items-center gap-2">
+                        <i class="fa-solid fa-globe"></i>
+                        <span>Presentation</span>
+                    </div>
+                </div>
+
+                <!-- Decorative Line & Sparkles -->
+                <div class="flex-1 flex items-center justify-end ml-8">
+                    <div class="deco-line opacity-50"></div>
+                    <div class="flex gap-2 text-deepBlack text-lg">
+                        <i class="fa-solid fa-star-of-life fa-spin-pulse" style="animation-duration: 3s;"></i>
+                        <i class="fa-solid fa-star text-sm mt-1"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content: Huge Typography -->
+            <div class="flex flex-col items-center justify-center flex-grow mt-4">
+                <!-- Main Title -->
+                <h1 class="title-huge text-deepBlack text-center uppercase">
+                    Thank You
+                </h1>
+                
+                <!-- Sub-Info Pills centered below title -->
+                <div class="flex items-center gap-6 mt-8">
+                    <!-- Handle -->
+                    <div class="capsule text-deepBlack uppercase tracking-widest text-lg px-8 py-3 border-2 border-deepBlack">
+                        <span>@ReallyGreatSite</span>
+                    </div>
+                    <!-- Year -->
+                    <div class="capsule-dark px-10 py-3 text-lg font-bold">
+                        <span>2024</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BOTTOM SECTION: Contact Details -->
+        <!-- Logic: Uses the Dark Background (#111111) for contrast, housing detailed information in a structured grid. -->
+        <div class="w-full h-[30%] bg-deepBlack text-white px-16 flex items-center">
+            
+            <!-- Grid Container for Contact Info -->
+            <div class="grid grid-cols-3 w-full gap-8 text-center">
+                
+                <!-- Contact Item 1: Email -->
+                <div class="flex flex-col items-center gap-2">
+                    <p class="text-limeAccent text-xs uppercase tracking-widest font-bold mb-1">
+                        Email
+                    </p>
+                    <h3 class="text-2xl font-bold tracking-wide">
+                        HELLO@REALLYGREATSITE.COM
+                    </h3>
+                </div>
+
+                <!-- Contact Item 2: Phone -->
+                <div class="flex flex-col items-center gap-2 border-x border-zinc-800">
+                    <p class="text-limeAccent text-xs uppercase tracking-widest font-bold mb-1">
+                        Phone Number
+                    </p>
+                    <h3 class="text-2xl font-bold tracking-wide text-lightGray">
+                        123-456-7890
+                    </h3>
+                </div>
+
+                <!-- Contact Item 3: Website -->
+                <div class="flex flex-col items-center gap-2">
+                    <p class="text-limeAccent text-xs uppercase tracking-widest font-bold mb-1">
+                        Website
+                    </p>
+                    <h3 class="text-2xl font-bold tracking-wide">
+                        REALLYGREATSITE.COM
+                    </h3>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Decorative Floating Elements (Subtle Background Detail) -->
+        <!-- Adds depth without breaking the "No SVG code" rule by using CSS rounded divs -->
+        <div class="absolute bottom-[-50px] left-[-50px] w-40 h-40 bg-limeAccent blur-[80px] opacity-10 rounded-full z-0"></div>
+        <div class="absolute bottom-[-50px] right-[-50px] w-40 h-40 bg-limeAccent blur-[80px] opacity-10 rounded-full z-0"></div>
+
+    </div>
+
+</body>
+</html>

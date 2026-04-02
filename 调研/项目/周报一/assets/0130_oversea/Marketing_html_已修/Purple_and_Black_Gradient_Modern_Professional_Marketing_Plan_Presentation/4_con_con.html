@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branding Strategy - Keynote Slide</title>
+    
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- Google Fonts / Baidu Mirror as requested -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- Tailwind Config for Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#050505',
+                        primaryStart: '#A962E3',
+                        primaryEnd: '#C98BF2',
+                        textPrimary: '#FFFFFF',
+                        // Correcting the invalid hex #BKA8C8 from prompt to a valid closest match #BCA8C8 (Greyish Purple)
+                        textSecondary: '#BCA8C8', 
+                        cardBg: '#F8F0FA',
+                        cardText: '#1A1A1A',
+                        strokeColor: 'rgba(224, 224, 224, 0.3)', // #E0E0E0 with opacity
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'Inter', 'Roboto', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* Page Container Definition */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #050505;
+            position: relative;
+            overflow: hidden;
+            box-shadow: none; /* Explicitly requested no shadow on outer frame */
+            display: grid;
+            margin: 0 auto;
+            grid-template-columns: 35% 65%; /* Left Text area, Right Diagram area */
+        }
+
+        /* Utility: Gradients */
+        .bg-gradient-primary {
+            background: linear-gradient(135deg, #A962E3, #C98BF2);
+        }
+        
+        /* Decorative Elements */
+        .decor-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #A962E3, #C98BF2);
+            opacity: 0.8;
+            filter: blur(2px);
+        }
+
+        /* Diagram Specifics */
+        .orbit-ring {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 2px solid rgba(224, 224, 224, 0.3); /* #E0E0E0 opacity */
+            border-radius: 50%;
+            width: 450px;
+            height: 450px;
+            z-index: 10;
+        }
+
+        .center-node {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #A962E3, #C98BF2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 20;
+            box-shadow: 0 0 40px rgba(169, 98, 227, 0.4);
+            /* Inner border effect using box-shadow inset */
+            border: 4px solid rgba(255,255,255,0.2); 
+        }
+
+        .satellite-card {
+            position: absolute;
+            background-color: #F8F0FA;
+            color: #1A1A1A;
+            padding: 16px 20px;
+            border-radius: 16px;
+            width: 180px;
+            text-align: center;
+            font-size: 14px;
+            line-height: 1.4;
+            font-weight: 500;
+            z-index: 30;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 80px;
+            /* Center the card on its anchor point */
+            transform: translate(-50%, -50%); 
+        }
+
+        /* Positioning logic for satellites based on a 450px diameter circle (225px radius) */
+        /* Angles: 0(Right), 60, 120, 180(Left), 240, 300 */
+        /* Adjusted for layout balance: -150, -90, -30, 30, 90, 150 degrees roughly */
+        
+        /* Using simplified absolute positioning relative to the container center for pixel perfection */
+        
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <!-- Decorative Background Elements (Top Left & Bottom Left corners) -->
+        <div class="decor-circle" style="width: 200px; height: 200px; top: -50px; left: -50px;"></div>
+        <div class="decor-circle" style="width: 300px; height: 300px; bottom: -100px; left: -50px; opacity: 0.6;"></div>
+
+        <!-- Left Column: Content -->
+        <div class="relative z-20 flex flex-col justify-center px-16 h-full">
+            <!-- Title -->
+            <h1 class="text-textPrimary text-6xl font-bold mb-8 tracking-tight drop-shadow-md">
+                Branding
+            </h1>
+            
+            <!-- Description Paragraph -->
+            <div class="border-l-4 border-primaryStart pl-6">
+                <p class="text-textSecondary text-xl leading-relaxed font-light">
+                    Given the user personas identified for the campaign, elaborate on the branding identity that the campaign will project.
+                </p>
+            </div>
+            
+            <!-- Optional: Icon/Decoration below text -->
+            <div class="mt-12 text-primaryStart opacity-50">
+                <i class="fa-solid fa-bullseye fa-2x"></i>
+            </div>
+        </div>
+
+        <!-- Right Column: The System Diagram -->
+        <div class="relative h-full w-full flex items-center justify-center">
+            
+            <!-- Diagram Container -->
+            <div class="relative w-[600px] h-[600px]">
+                
+                <!-- The Orbit Ring -->
+                <div class="orbit-ring"></div>
+
+                <!-- Center Node -->
+                <div class="center-node">
+                    <div class="text-center">
+                        <h2 class="text-white text-xl font-bold mb-1">User/Buyer</h2>
+                        <h3 class="text-white text-lg font-light opacity-90">Persona</h3>
+                    </div>
+                </div>
+
+                <!-- Satellite Nodes (Calculated Positions based on Ring Radius 225px + Center Offset 300px) -->
+                
+                <!-- Position: Top (Right side) ~ -60deg -->
+                <div class="satellite-card" style="top: 15%; left: 75%;">
+                    <p>Write identity or value here</p>
+                </div>
+
+                <!-- Position: Right ~ 0deg -->
+                <div class="satellite-card" style="top: 50%; left: 95%;">
+                    <p>Write identity or value here</p>
+                </div>
+
+                <!-- Position: Bottom (Right side) ~ 60deg -->
+                <div class="satellite-card" style="top: 85%; left: 75%;">
+                    <p>Write identity or value here</p>
+                </div>
+
+                <!-- Position: Bottom (Left side) ~ 120deg -->
+                <div class="satellite-card" style="top: 85%; left: 25%;">
+                    <p>Write identity or value here</p>
+                </div>
+
+                <!-- Position: Left ~ 180deg -->
+                <div class="satellite-card" style="top: 50%; left: 5%;">
+                    <p>Write identity or value here</p>
+                </div>
+
+                <!-- Position: Top (Left side) ~ 240deg -->
+                <div class="satellite-card" style="top: 15%; left: 25%;">
+                    <p>Write identity or value here</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

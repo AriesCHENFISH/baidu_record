@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Cover - Warner & Spencer</title>
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0F3C6F',
+                        secondary: '#2D6CC0',
+                        accent: '#4A90E2',
+                        neutral: '#666666',
+                        texture: '#E8EFF7',
+                        border: '#8BB1D9',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background-color: #FFFFFF;
+        }
+
+        /* 复刻参考页面的深邃渐变遮罩 */
+        .bg-primary-gradient {
+            background: linear-gradient(105deg, #0F3C6F 0%, #0F3C6F 40%, rgba(15, 60, 111, 0.8) 60%, rgba(15, 60, 111, 0) 100%);
+        }
+
+        /* 玻璃质感卡片设计 */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        /* 标题字母间距优化 */
+        .title-kerning { letter-spacing: -0.05em; line-height: 0.85; }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <!-- 1. 背景底图层 -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?q=80&w=1280&auto=format&fit=crop" 
+                 alt="Lab Background" 
+                 class="w-full h-full object-cover"
+                 style="object-position: center;">
+        </div>
+
+        <!-- 2. 渐变叠加层 (左侧重色，右侧透出底图) -->
+        <div class="absolute inset-0 z-10 bg-primary-gradient"></div>
+
+        <!-- 3. 装饰性元素 (大号加号水印) -->
+        <div class="absolute -right-20 -bottom-20 text-white opacity-5 text-[400px] z-10 pointer-events-none">
+            <i class="fa-solid fa-plus"></i>
+        </div>
+
+        <!-- 4. 内容层 -->
+        <div class="relative z-20 h-full flex flex-col justify-between p-20">
+
+            <!-- 顶部: 品牌 Logo (完全复刻参考页) -->
+            <header class="flex flex-col">
+                <div class="flex items-baseline">
+                    <span class="text-white font-black text-3xl tracking-[0.15em]">WARNER</span>
+                    <span class="text-accent font-light text-3xl mx-1">&</span>
+                    <span class="text-white font-light text-3xl tracking-[0.15em]">SPENCER</span>
+                </div>
+                <div class="flex items-center gap-2 mt-1">
+                    <div class="h-[1px] w-10 bg-accent opacity-60"></div>
+                    <span class="text-[10px] text-white opacity-60 font-bold tracking-[0.4em] uppercase">Pharmaceuticals</span>
+                </div>
+            </header>
+
+            <!-- 中间: 极大主标题 (取消长句子) -->
+            <main class="relative mt-12">
+                <!-- 背景字母水印 "P" -->
+                <span class="absolute -top-32 -left-12 text-[300px] font-black text-white opacity-5 select-none z-[-1]">P</span>
+                
+                <div class="flex flex-col">
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="h-1.5 w-24 bg-accent rounded-full"></div>
+                        <span class="text-accent text-sm font-bold tracking-[0.5em] uppercase opacity-80">Global Presentation</span>
+                    </div>
+                    
+                    <h1 class="text-white text-[120px] font-black title-kerning uppercase">
+                        PHARMA
+                    </h1>
+                    <h2 class="text-accent text-[84px] font-extralight italic title-kerning mt-2">
+                        Product Strategy
+                    </h2>
+                </div>
+            </main>
+
+            <!-- 底部: 汇报信息 (玻璃卡片美化) -->
+            <footer class="w-full max-w-3xl">
+                <div class="grid grid-cols-2 gap-6">
+                    
+                    <!-- 卡片 1: 时间 -->
+                    <div class="glass-card rounded-3xl p-6 flex items-center gap-6">
+                        <div class="w-14 h-14 rounded-2xl flex items-center justify-center shrink-0 shadow-xl"
+                             style="background: linear-gradient(135deg, #4A90E2, #2D6CC0);">
+                            <i class="fa-solid fa-calendar-check text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <span class="block text-accent text-[11px] font-bold uppercase tracking-[0.3em] mb-1">Schedule Date</span>
+                            <span class="block text-white text-2xl font-bold tracking-tight">2025.10.24</span>
+                        </div>
+                    </div>
+
+                    <!-- 卡片 2: 演讲人 -->
+                    <div class="glass-card rounded-3xl p-6 flex items-center gap-6">
+                        <div class="w-14 h-14 rounded-2xl flex items-center justify-center shrink-0 shadow-xl"
+                             style="background: linear-gradient(135deg, #4A90E2, #2D6CC0);">
+                            <i class="fa-solid fa-user-doctor text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <span class="block text-accent text-[11px] font-bold uppercase tracking-[0.3em] mb-1">Lead Presenter</span>
+                            <span class="block text-white text-2xl font-bold tracking-tight">M. Anderson</span>
+                        </div>
+                    </div>
+
+                    <!-- 底部状态条 -->
+                    <div class="col-span-2 glass-card rounded-2xl px-8 py-3 flex items-center justify-between border-white/10">
+                        <div class="flex items-center gap-3">
+                            <div class="w-2 h-2 rounded-full bg-accent animate-pulse"></div>
+                            <span class="text-white/40 text-[10px] font-bold tracking-[0.3em] uppercase">Document Status: Secure & Confidential</span>
+                        </div>
+                        <div class="text-white/30 text-[10px] font-bold tracking-widest uppercase">
+                            Ref: WS-SYNTH-2025-Q4
+                        </div>
+                    </div>
+
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+</body>
+</html>

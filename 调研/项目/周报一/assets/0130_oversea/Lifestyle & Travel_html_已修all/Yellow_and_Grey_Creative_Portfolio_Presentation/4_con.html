@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Capabilities</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Noto Sans SC', sans-serif; }
+        #page_container {
+            width: 1280px; height: 720px; background-color: #F4F4F4;
+            position: relative; overflow: hidden; margin: 0 auto; color: #1A1A1A;
+        }
+        .bg-grid {
+            background-image: 
+                linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .text-stroke { -webkit-text-stroke: 1px black; color: transparent; }
+    </style>
+</head>
+<body>
+
+    <div id="page_container" class="bg-grid">
+        
+        <!-- Abstract Grid Layout -->
+        <div class="absolute inset-0 grid grid-cols-4 grid-rows-2 pointer-events-none">
+            <div class="border-r border-black opacity-10"></div>
+            <div class="border-r border-black opacity-10"></div>
+            <div class="border-r border-black opacity-10"></div>
+            <div></div>
+            <div class="border-r border-t border-black opacity-10"></div>
+            <div class="border-r border-t border-black opacity-10"></div>
+            <div class="border-r border-t border-black opacity-10"></div>
+            <div class="border-t border-black opacity-10"></div>
+        </div>
+
+        <div class="w-full h-full flex flex-col p-16">
+            
+            <!-- Header Section -->
+            <div class="flex justify-between items-end mb-16 relative z-10">
+                <div>
+                    <h5 class="text-[10px] font-bold tracking-[0.4em] uppercase mb-4 text-gray-500">Expertise Area</h5>
+                    <div class="relative">
+                        <h1 class="text-[100px] font-black leading-[0.8] uppercase">Core</h1>
+                        <h1 class="text-[100px] font-black leading-[0.8] uppercase text-stroke ml-16">Skills</h1>
+                    </div>
+                </div>
+                <!-- Rotating SVG Badge -->
+                <div class="w-48 h-48 border border-black rounded-full flex items-center justify-center animate-[spin_10s_linear_infinite]">
+                    <svg viewBox="0 0 100 100" class="w-full h-full p-2">
+                        <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="transparent" />
+                        <text font-size="11" font-weight="bold" letter-spacing="2px">
+                            <textPath href="#circlePath" class="uppercase">
+                                Strategy • Design • Development • 
+                            </textPath>
+                        </text>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Content Grid -->
+            <div class="grid grid-cols-3 gap-8 flex-grow relative z-10">
+                
+                <!-- Card 1 -->
+                <div class="bg-black text-white p-8 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 opacity-50">
+                        <i class="fa-solid fa-layer-group text-4xl"></i>
+                    </div>
+                    <div class="h-full flex flex-col justify-between">
+                        <h3 class="text-3xl font-bold uppercase">Product<br>Design</h3>
+                        <ul class="text-[11px] font-medium uppercase tracking-wider leading-loose opacity-80">
+                            <li>+ UI/UX Systems</li>
+                            <li>+ Prototyping</li>
+                            <li>+ Mobile Apps</li>
+                            <li>+ Interaction</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white border border-black p-8 relative group hover:bg-black hover:text-white transition-colors duration-300">
+                    <div class="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-50 group-hover:text-white">
+                        <i class="fa-solid fa-code text-4xl"></i>
+                    </div>
+                    <div class="h-full flex flex-col justify-between">
+                        <h3 class="text-3xl font-bold uppercase">Web<br>Dev</h3>
+                        <ul class="text-[11px] font-medium uppercase tracking-wider leading-loose opacity-80">
+                            <li>+ Frontend (React)</li>
+                            <li>+ Tailwind CSS</li>
+                            <li>+ Motion (GSAP)</li>
+                            <li>+ CMS Integration</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white border border-black p-8 relative group hover:bg-black hover:text-white transition-colors duration-300">
+                    <div class="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-50 group-hover:text-white">
+                        <i class="fa-solid fa-bullseye text-4xl"></i>
+                    </div>
+                    <div class="h-full flex flex-col justify-between">
+                        <h3 class="text-3xl font-bold uppercase">Brand<br>Strategy</h3>
+                        <ul class="text-[11px] font-medium uppercase tracking-wider leading-loose opacity-80">
+                            <li>+ Visual Identity</li>
+                            <li>+ Market Research</li>
+                            <li>+ Social Assets</li>
+                            <li>+ Art Direction</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

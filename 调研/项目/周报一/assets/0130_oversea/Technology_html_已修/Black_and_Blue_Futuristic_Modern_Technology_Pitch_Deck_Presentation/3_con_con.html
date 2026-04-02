@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High-End Tech Presentation Slide</title>
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #000000;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* 统一背景网格 */
+        .bg-grid {
+            background-image: 
+                linear-gradient(rgba(77, 238, 234, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(77, 238, 234, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0.2));
+            -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0.2));
+        }
+
+        /* 统一顶部 Marker 样式 */
+        .marker-line {
+            height: 4px;
+            background: #4DEEEA;
+            transform: skew(-20deg);
+            margin-bottom: 4px;
+        }
+
+        /* 统一文本发光效果 */
+        .glow-text {
+            text-shadow: 0 0 10px rgba(77, 238, 234, 0.6);
+        }
+        
+        .box-glow {
+            box-shadow: 0 0 25px rgba(77, 238, 234, 0.2);
+        }
+
+        /* 装饰圆环旋转动画 */
+        @keyframes rotate-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-rotate {
+            animation: rotate-slow 20s linear infinite;
+        }
+    </style>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: {
+                            black: '#000000',
+                            white: '#FFFFFF',
+                            cyan: '#4DEEEA',
+                            text: '#D1D5DB',
+                            darkblue: '#0F172A',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div id="page_container">
+        <div class="bg-grid"></div>
+
+        <div class="absolute top-[-100px] right-[-100px] w-[500px] h-[500px] bg-[#4DEEEA] opacity-10 rounded-full blur-[100px] z-0"></div>
+        <div class="absolute bottom-[-100px] left-[-100px] w-[600px] h-[600px] bg-[#0F172A] opacity-80 rounded-full blur-[80px] z-0"></div>
+
+        <div class="relative z-10 grid grid-cols-12 h-full w-full">
+            
+            <div class="col-span-5 flex flex-col pl-16 pt-12 relative">
+                
+                <div class="w-16 mb-8 opacity-80">
+                    <div class="marker-line w-12"></div>
+                    <div class="marker-line w-8 opacity-60"></div>
+                </div>
+
+                <div class="mt-4">
+                    <h1 class="text-6xl font-bold text-white mb-8 tracking-tight">
+                        Core <span class="text-cyber-cyan glow-text">Introduction</span>
+                    </h1>
+
+                    <p class="text-cyber-text text-lg leading-relaxed mb-6 font-light">
+                        Our advanced neural architecture provides unprecedented scalability for high-density computing tasks. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+                    </p>
+
+                    <p class="text-cyber-text text-lg leading-relaxed mb-10 font-light opacity-60 border-l border-cyber-cyan/30 pl-6">
+                        Integrating next-generation hardware acceleration with seamless API protocols to redefine the boundaries of autonomous systems.
+                    </p>
+
+                    <div class="flex items-center group cursor-pointer">
+                        <div class="relative px-10 py-3 border border-cyber-cyan rounded-sm text-cyber-cyan font-bold tracking-[0.2em] transition-all hover:bg-cyber-cyan hover:text-black box-glow uppercase text-sm">
+                            <span class="mr-3">Initiate Protocol</span>
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="absolute -bottom-16 -left-16 w-64 h-64 border border-cyber-cyan/10 rounded-full pointer-events-none">
+                    <div class="absolute inset-4 border border-dashed border-cyber-cyan/20 rounded-full"></div>
+                </div>
+            </div>
+
+            <div class="col-span-7 relative flex items-center justify-center">
+                
+                <div class="absolute w-[620px] h-[620px] rounded-full border border-cyber-cyan/10 animate-rotate">
+                    <div class="absolute -top-1 left-1/2 w-2 h-2 bg-cyber-cyan rounded-full box-glow"></div>
+                </div>
+                <div class="absolute w-[550px] h-[550px] rounded-full border border-dashed border-white/5 rotate-45"></div>
+
+                <div class="relative w-[480px] h-[480px] rounded-full p-1 bg-gradient-to-tr from-cyber-cyan/40 to-transparent">
+                    <div class="w-full h-full rounded-full overflow-hidden bg-black relative shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1555664424-778a69022365?q=80&w=1000&auto=format&fit=crop" 
+                             alt="Advanced Microchip" 
+                             class="w-full h-full object-cover opacity-80 filter brightness-110 contrast-125"
+                             style="mix-blend-mode: luminosity;">
+                        
+                        <div class="absolute inset-0 bg-gradient-to-t from-cyber-black via-transparent to-transparent opacity-60"></div>
+                        <div class="absolute bottom-12 left-0 w-full flex justify-center">
+                            <div class="px-4 py-1 bg-cyber-cyan/10 border border-cyber-cyan/40 backdrop-blur-md">
+                                <span class="text-[10px] text-cyber-cyan font-mono tracking-[0.4em]">SYSTEM_CORE_V.09</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="absolute right-0 top-1/2 w-24 h-[1px] bg-gradient-to-r from-cyber-cyan/50 to-transparent"></div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-8 right-16 flex items-center gap-6 opacity-40">
+             <p class="text-cyber-cyan text-xs font-mono tracking-widest uppercase">Node: 0x882_Alpha</p>
+             <div class="flex gap-1.5 items-end h-4">
+                 <div class="w-1.5 h-full bg-cyber-cyan"></div>
+                 <div class="w-1.5 h-[70%] bg-cyber-cyan"></div>
+                 <div class="w-1.5 h-[40%] bg-cyber-cyan"></div>
+             </div>
+        </div>
+
+    </div>
+</body>
+</html>

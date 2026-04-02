@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecological Imbalance - Refined Layout</title>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        /* --- 1. 核心容器与网格布局 --- */
+        #page_container {
+            width: 1280px; height: 720px;
+            margin: 0 auto; position: relative;
+            background-color: #15291E;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 64px 1fr;
+            grid-template-rows: 64px 1fr;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* --- 2. 文本内容注入 (全部在 Style 中) --- */
+        .top-bar-text::before {
+            content: "CRISIS REPORT —";
+            color: #F8F272; font-weight: 700; font-size: 14px; letter-spacing: 0.2em;
+        }
+        .top-bar-text::after {
+            content: "STATUS: CRITICAL";
+            color: #D9E3CC; font-weight: 300; font-size: 10px; letter-spacing: 0.2em; margin-left: auto;
+        }
+
+        .side-bar-top::before {
+            content: "BALANCE FRAGMENTED";
+            writing-mode: vertical-rl; transform: rotate(180deg);
+            color: #D9E3CC; font-size: 9px; letter-spacing: 0.3em; opacity: 0.5;
+        }
+        .side-bar-bottom::before {
+            content: "SILENT WARNING";
+            writing-mode: vertical-rl; transform: rotate(180deg);
+            color: #F8F272; font-size: 9px; letter-spacing: 0.3em; font-weight: 700;
+        }
+
+        .main-title-group::before {
+            content: "The Fragile Equilibrium";
+            display: block; color: #8FB55F; font-family: 'Times New Roman', serif; font-style: italic; font-size: 24px; margin-bottom: 0.5rem;
+        }
+        .main-title-group::after {
+            content: "Imbalance.";
+            display: block; color: #F8F272; font-family: 'Times New Roman', serif; font-size: 96px; font-weight: 700; line-height: 0.9;
+        }
+
+        .list-01-head::before { content: "01"; color: #8FB55F; font-family: 'Times New Roman', serif; font-style: italic; font-size: 32px; }
+        .list-01-body::before { content: "BIODIVERSITY LOSS"; display: block; color: #F8F272; font-weight: 700; font-size: 14px; letter-spacing: 0.1em; margin-bottom: 4px; }
+        .list-01-body::after { content: "The disappearance of key species creates a domino effect, weakening the entire ecosystem's resilience."; display: block; color: #D9E3CC; font-size: 14px; font-weight: 300; line-height: 1.6; opacity: 0.8; }
+
+        .list-02-head::before { content: "02"; color: #F8F272; font-family: 'Times New Roman', serif; font-style: italic; font-size: 32px; }
+        .list-02-body::before { content: "THERMAL ACCELERATION"; display: block; color: #F8F272; font-weight: 700; font-size: 14px; letter-spacing: 0.1em; margin-bottom: 4px; }
+        .list-02-body::after { content: "Global temperature rise disrupts seasonal cycles, leading to mismatches in ecological timing."; display: block; color: #D9E3CC; font-size: 14px; font-weight: 300; line-height: 1.6; opacity: 0.8; }
+
+        .action-label::before { content: "RESTORE"; color: #15291E; font-weight: 900; font-size: 36px; letter-spacing: -0.05em; }
+
+        /* --- 3. 辅助布局类 --- */
+        .clip-polygon { clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%); }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+
+        <div class="col-span-2 border-b border-[#8FB55F]/20 flex items-center px-8 top-bar-text z-50 bg-[#15291E]">
+            <i class="fa-solid fa-triangle-exclamation text-[#8FB55F] text-sm mr-2"></i>
+        </div>
+
+        <div class="row-start-2 col-start-1 border-r border-[#8FB55F]/20 flex flex-col justify-between py-12 items-center z-50 bg-[#15291E]">
+            <div class="side-bar-top"></div>
+            <div class="w-px h-24 bg-gradient-to-b from-[#F8F272] to-transparent"></div>
+            <div class="side-bar-bottom"></div>
+        </div>
+
+        <div class="row-start-2 col-start-2 grid grid-cols-12 relative">
+            
+            <div class="col-span-5 flex items-center justify-center relative overflow-hidden">
+                <div class="absolute w-[400px] h-[400px] bg-[#8FB55F]/5 rounded-full blur-[100px] z-0"></div>
+                <img src="https://images.unsplash.com/photo-1500829243541-74b677fecc30?q=80&w=1200&auto=format&fit=crop" 
+                     class="relative z-10 w-[110%] h-auto drop-shadow-[20px_20px_40px_rgba(0,0,0,0.6)] rotate-[2deg] grayscale-[20%] transition-transform duration-700 hover:scale-105">
+            </div>
+
+            <div class="col-span-7 flex flex-col justify-center pl-12 pr-20 z-30">
+                <div class="main-title-group mb-8"></div>
+                
+                <div class="space-y-8">
+                    <div class="flex gap-6 border-l-2 border-[#8FB55F]/40 pl-6">
+                        <div class="list-01-head pt-1"></div>
+                        <div class="list-01-body"></div>
+                    </div>
+                    <div class="flex gap-6 border-l-2 border-[#F8F272]/40 pl-6">
+                        <div class="list-02-head pt-1"></div>
+                        <div class="list-02-body"></div>
+                    </div>
+                </div>
+
+                <div class="flex gap-16 mt-12 border-t border-[#8FB55F]/10 pt-8">
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-[#F8F272] text-3xl font-serif font-bold italic">15%</span>
+                        <span class="text-[#D9E3CC] text-[10px] uppercase opacity-60 italic leading-none">Habitat<br>Remaining</span>
+                    </div>
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-[#8FB55F] text-3xl font-serif font-bold italic">2.4°</span>
+                        <span class="text-[#D9E3CC] text-[10px] uppercase opacity-60 italic leading-none">Temp.<br>Threshold</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 right-0 w-[40%] h-[120px] bg-[#8FB55F] z-10 clip-polygon flex items-center justify-end pr-12 opacity-95 action-label"></div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Performance</title>
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome (CDN) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+
+    <!-- ECharts (CDN) -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+
+    <!-- Google Fonts (CDN) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        /* CSS Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #131122;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        .decorative-ring {
+            position: absolute;
+            bottom: -150px;
+            right: -100px;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(217, 245, 91, 0.15) 0%, rgba(19, 17, 34, 0) 70%);
+            z-index: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <!-- HEADER SECTION -->
+        <header class="w-full h-24 px-12 flex items-center justify-between z-10 shrink-0">
+            <div class="flex items-center gap-3">
+                <i class="fa-solid fa-chart-pie text-[#D9F55B] text-2xl"></i>
+                <h2 class="text-[#B0B0B8] text-xl font-medium tracking-wide">Larana</h2>
+            </div>
+            <nav>
+                <ul class="flex gap-4 list-none">
+                    <li><div class="px-6 py-2 rounded-full border border-[#D9F55B] text-white text-sm cursor-default">List Of Content</div></li>
+                    <li><div class="px-6 py-2 rounded-full border border-[#D9F55B] text-white text-sm cursor-default">Who We Are</div></li>
+                    <li><div class="px-6 py-2 rounded-full border border-[#D9F55B] text-white text-sm cursor-default">Market Insight</div></li>
+                    <li><div class="px-6 py-2 rounded-full bg-[#D9F55B] text-[#131122] font-bold text-sm cursor-default shadow-[0_0_15px_rgba(217,245,91,0.3)]">Our Performance</div></li>
+                </ul>
+            </nav>
+            <div><p class="text-[#B0B0B8] text-sm font-medium">05 June, 2025</p></div>
+        </header>
+
+        <!-- MAIN CONTENT AREA -->
+        <main class="flex-1 px-12 pb-12 pt-4 flex flex-col gap-6 z-10 relative">
+
+            <!-- Top: Title & Intro -->
+            <div class="flex justify-between items-end">
+                <div class="w-1/2">
+                    <h1 class="text-[#D9F55B] text-[80px] leading-[0.9] font-black tracking-tighter uppercase drop-shadow-lg">
+                        Our<br>Performance
+                    </h1>
+                </div>
+                <div class="w-1/2 pb-2 pl-8 border-l border-[#D9F55B]/20">
+                    <p class="text-[#B0B0B8] text-sm leading-relaxed text-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl eu sem tristique, sit amet convallis ex aliquam. Maecenas varius lectus hendrerit augue blandit.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Bottom: Dashboard Card -->
+            <div class="flex-1 bg-[#1A182D]/80 backdrop-blur-sm border border-[#D9F55B] rounded-[40px] p-8 flex gap-8 relative overflow-hidden">
+                
+                <!-- Left: Stats Column -->
+                <div class="w-[30%] flex flex-col justify-between border-r border-[#D9F55B]/10 pr-8">
+                    <!-- Stat 1 -->
+                    <div>
+                        <h3 class="text-[#D9F55B] text-6xl font-bold tracking-tight mb-2">+70K</h3>
+                        <p class="text-white text-xs opacity-70 leading-relaxed">
+                            Total active users across all platforms in the last quarter.
+                        </p>
+                    </div>
+                    <!-- Stat 2 -->
+                    <div>
+                        <p class="text-white text-xs opacity-70 leading-relaxed mb-2">
+                            Year-over-year growth rate compared to previous fiscal year.
+                        </p>
+                        <h3 class="text-[#D9F55B] text-6xl font-bold tracking-tight">63%</h3>
+                    </div>
+                </div>
+
+                <!-- Right: Chart Area -->
+                <div class="flex-1 h-full relative">
+                    <div id="performanceChart" class="w-full h-full"></div>
+                </div>
+
+                <!-- Decorative Glow -->
+                <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-[#D9F55B]/5 rounded-full blur-3xl pointer-events-none"></div>
+            </div>
+
+        </main>
+
+        <div class="decorative-ring"></div>
+    </div>
+
+    <!-- ECharts Script -->
+    <script type="text/javascript">
+        var chartDom = document.getElementById('performanceChart');
+        var myChart = echarts.init(chartDom);
+        var option;
+
+        option = {
+            backgroundColor: 'transparent',
+            tooltip: { trigger: 'axis' },
+            legend: {
+                top: '0%',
+                right: '0%',
+                textStyle: { color: '#B0B0B8' },
+                itemGap: 20
+            },
+            grid: {
+                left: '0%',
+                right: '2%',
+                bottom: '5%',
+                top: '15%',
+                containLabel: true
+            },
+            xAxis: {
+                type: 'category',
+                data: ['Q1', 'Q2', 'Q3', 'Q4'],
+                axisLine: { show: false },
+                axisTick: { show: false },
+                axisLabel: { color: '#B0B0B8', fontSize: 12, margin: 15 }
+            },
+            yAxis: {
+                type: 'value',
+                splitLine: {
+                    lineStyle: { color: 'rgba(255, 255, 255, 0.05)', type: 'dashed' }
+                },
+                axisLabel: { color: '#B0B0B8' }
+            },
+            series: [
+                {
+                    name: 'Revenue',
+                    type: 'bar',
+                    data: [320, 380, 450, 520],
+                    itemStyle: { color: '#D9F55B', borderRadius: [4, 4, 0, 0] },
+                    barWidth: '20%'
+                },
+                {
+                    name: 'Target',
+                    type: 'bar',
+                    data: [300, 350, 400, 480],
+                    itemStyle: { color: '#FFFFFF', borderRadius: [4, 4, 0, 0] },
+                    barWidth: '20%',
+                    barGap: '30%'
+                }
+            ]
+        };
+
+        option && myChart.setOption(option);
+        window.addEventListener('resize', myChart.resize);
+    </script>
+</body>
+</html>

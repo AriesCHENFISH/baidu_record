@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layers of Life - Forest Structure</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts Mirror (Domestic) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    
+    <style>
+        /* CSS Reset & Global Config */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container - Strict 1280x720 */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background-color: #0D110C; /* Background Primary */
+            margin: 0 auto;
+            overflow: hidden;
+            color: #F2F2F2; /* Text Primary */
+        }
+
+        /* Typography Override for Cinematic Feel */
+        .font-serif-display {
+            font-family: 'Times New Roman', serif; /* Using system serif for that classic editorial look */
+            letter-spacing: -0.02em;
+        }
+
+        /* Custom Utilities for Glow Effects */
+        .text-glow-white {
+            text-shadow: 0 0 25px rgba(242, 242, 242, 0.4);
+        }
+        
+        .text-glow-gold {
+            text-shadow: 0 0 35px rgba(234, 217, 125, 0.6), 0 0 10px rgba(234, 217, 125, 0.4);
+        }
+
+        .glass-panel {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 100%);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Gradient Overlay for Background Texture */
+        .bg-overlay {
+            background: linear-gradient(to bottom, rgba(13, 17, 12, 0.3), rgba(13, 17, 12, 0.95));
+        }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0D110C',
+                        text: '#F2F2F2',
+                        accent: '#EAD97D',
+                        overlay: '#1A2018',
+                        secondary: '#A6AFA3'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <!-- Background Texture Layer -->
+        <!-- Using a dark moss/forest floor texture to give depth -->
+        <div class="absolute inset-0 z-0 opacity-40">
+            <img src="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?q=80&w=1280&auto=format&fit=crop" alt="Forest Floor Texture" class="w-full h-full object-cover grayscale mix-blend-overlay">
+            <!-- 1280*720 -->
+        </div>
+        
+        <!-- Dark Overlay Gradient to ensure text readability -->
+        <div class="absolute inset-0 z-0 bg-overlay"></div>
+
+        <!-- Main Grid Layout -->
+        <div class="relative z-10 w-full h-full p-16 grid grid-rows-12 gap-4">
+
+            <!-- Top Section: Image & Main Title (Rows 1-6) -->
+            <div class="row-span-6 grid grid-cols-12 gap-8 items-center">
+                
+                <!-- Left: Hero Image (Forest Aerial) -->
+                <div class="col-span-6 relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-gray-700 to-gray-900 rounded-lg opacity-30 blur"></div>
+                    <div class="relative overflow-hidden rounded-lg shadow-2xl border border-white/10 h-64">
+                        <img src="https://images.unsplash.com/photo-1448375240586-dfd8f3793371?q=80&w=800&auto=format&fit=crop" alt="Aerial view of lush forest" class="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-700 ease-in-out">
+                        <!-- 560*256 -->
+                    </div>
+                </div>
+
+                <!-- Right: Typography Title -->
+                <div class="col-span-6 flex flex-col items-end justify-center text-right">
+                    <h1 class="font-serif-display text-8xl leading-none tracking-tighter text-glow-white mb-2">
+                        Layers of
+                    </h1>
+                    <h1 class="font-serif-display text-9xl italic font-bold text-accent text-glow-gold leading-none transform -translate-y-4">
+                        Life
+                    </h1>
+                </div>
+            </div>
+
+            <!-- Middle Section: Subtitle & Play Button (Rows 7-8) -->
+            <div class="row-span-2 grid grid-cols-12 gap-8 items-center border-t border-white/5 pt-4">
+                <!-- Subtitle -->
+                <div class="col-span-5">
+                    <h2 class="text-2xl font-light text-text tracking-wide">
+                        Exploring the Vertical Structure of a Forest
+                    </h2>
+                </div>
+
+                <!-- Play Button Interaction -->
+                <div class="col-span-7 flex items-center">
+                    <div class="flex items-center gap-4 cursor-pointer group">
+                        <div class="w-14 h-14 rounded-full bg-accent flex items-center justify-center shadow-[0_0_20px_rgba(234,217,125,0.4)] group-hover:scale-110 transition-all duration-300">
+                            <i class="fa-solid fa-play text-primary text-xl ml-1"></i>
+                        </div>
+                        <span class="text-secondary text-sm uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300">Watch Video</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section: Content Columns (Rows 9-12) -->
+            <div class="row-span-4 grid grid-cols-3 gap-12 items-start pt-8">
+                
+                <!-- Column 1: Canopy -->
+                <div class="space-y-3">
+                    <div class="h-0.5 w-12 bg-accent/50 mb-4"></div>
+                    <h3 class="text-lg font-bold text-text italic font-serif-display">Canopy Layer</h3>
+                    <p class="text-sm text-secondary leading-relaxed">
+                        The uppermost level where tall trees absorb sunlight and offer shelter to birds, insects, and mammals. It acts as the forest's solar panel.
+                    </p>
+                </div>
+
+                <!-- Column 2: Understory -->
+                <div class="space-y-3">
+                    <div class="h-0.5 w-12 bg-accent/50 mb-4"></div>
+                    <h3 class="text-lg font-bold text-text italic font-serif-display">Understory Layer</h3>
+                    <p class="text-sm text-secondary leading-relaxed">
+                        Found below the canopy, this layer includes shrubs and small trees that have adapted to low light and high humidity conditions.
+                    </p>
+                </div>
+
+                <!-- Column 3: Forest Floor -->
+                <div class="space-y-3">
+                    <div class="h-0.5 w-12 bg-accent/50 mb-4"></div>
+                    <h3 class="text-lg font-bold text-text italic font-serif-display">Forest Floor</h3>
+                    <p class="text-sm text-secondary leading-relaxed">
+                        The lowest layer, filled with decomposing matter, fungi, and crawling life. It is essential for breaking down organic material and recycling nutrients.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Footer Logo (Absolute Positioning for precision) -->
+            <div class="absolute bottom-10 right-16 flex items-center gap-3 opacity-80">
+                <i class="fa-solid fa-leaf text-accent text-lg"></i>
+                <span class="text-sm font-medium tracking-wider text-text">Giggling Platypus Co.</span>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

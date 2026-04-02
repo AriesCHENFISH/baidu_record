@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenges - Text Boxes</title>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepSpace: '#05020D',
+                        darkVoid: '#140A26',
+                        cyberViolet: '#7A3E9C',
+                        holographicPink: '#FF99D6',
+                        auroraCyan: '#70F3FF',
+                        mistGrey: '#D1C7E0',
+                        deepIndigo: '#23153C'
+                    },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px; position: relative; background-color: #05020D;
+            overflow: hidden; margin: 0 auto;
+        }
+        ::-webkit-scrollbar { display: none; }
+        .ring-shape { position: absolute; border-radius: 50%; border: 25px solid; box-shadow: 0 0 30px rgba(122, 62, 156, 0.5), inset 0 0 20px rgba(122, 62, 156, 0.5); }
+        .ring-1 { width: 200px; height: 200px; border-color: #70F3FF; border-right-color: #FF99D6; transform: rotateX(60deg) rotateY(-20deg); filter: blur(1px); }
+        .ring-2 { width: 300px; height: 300px; border-color: #7A3E9C; border-top-color: #FF99D6; transform: rotateX(45deg) rotateY(45deg); filter: blur(2px); }
+        .bg-orb { position: absolute; border-radius: 50%; filter: blur(80px); z-index: 0; }
+        
+        /* 文本框悬停微动效 */
+        .tech-box { transition: all 0.3s ease; }
+        .tech-box:hover { background-color: rgba(35, 21, 60, 0.6); border-color: rgba(122, 62, 156, 0.6); transform: translateX(-5px); }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+
+        <div style="position: absolute; top: 60px; left: 80px; z-index: 50; display: flex; align-items: center; opacity: 0.9;">
+             <div style="width: 40px; height: 40px; border: 2px solid #FF99D6; border-radius: 4px; display: flex; align-items: center; justify-content: center; transform: rotate(45deg); box-shadow: 0 0 15px rgba(255,153,214,0.4);">
+                <div style="width: 20px; height: 20px; background-color: rgba(112, 243, 255, 0.8); border-radius: 2px;"></div>
+            </div>
+            <div style="display: flex; flex-direction: column; justify-content: center; margin-left: 16px;">
+                 <h6 style="color: #FFFFFF; font-size: 12px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; line-height: 1; margin-bottom: 4px;">Studio</h6>
+                 <h6 style="color: #D1C7E0; font-size: 12px; font-weight: 300; letter-spacing: 0.3em; text-transform: uppercase; line-height: 1;">Shodwe</h6>
+            </div>
+        </div>
+
+        <div class="bg-orb w-[600px] h-[600px] bg-cyberViolet/20 -top-[200px] -right-[100px]"></div>
+        <div class="bg-orb w-[500px] h-[500px] bg-darkVoid/80 -bottom-[100px] -left-[100px]"></div>
+        
+        <div class="ring-shape ring-2 absolute -top-10 -right-10 opacity-80 z-10"></div>
+        <div class="ring-shape ring-1 absolute bottom-20 -left-10 opacity-80 z-10"></div>
+
+
+        <div class="relative z-20 w-full h-full flex flex-row items-center px-16 pt-10">
+            
+            <div class="w-[55%] h-[400px] relative pr-12">
+                <div class="relative w-full h-full p-1 group">
+                    <div class="absolute -top-4 left-0 w-full h-6 flex justify-between items-end">
+                        <div class="w-[30%] h-[2px] bg-cyberViolet"></div>
+                        <div class="w-[40%] h-[4px] bg-gradient-to-r from-cyberViolet via-holographicPink to-auroraCyan rounded-t-sm"></div>
+                        <div class="w-[30%] h-[2px] bg-cyberViolet"></div>
+                    </div>
+
+                    <div class="w-full h-full relative overflow-hidden bg-darkVoid border-l-2 border-r-2 border-cyberViolet/30">
+                        <img src="https://images.unsplash.com/photo-1617802690992-15d93263d3a9?q=80&w=1280&auto=format&fit=crop" 
+                             alt="VR Experience" 
+                             class="w-full h-full object-cover opacity-90 mix-blend-lighten contrast-125">
+                        <div class="absolute inset-0 bg-gradient-to-t from-deepSpace via-transparent to-transparent opacity-60"></div>
+                    </div>
+
+                    <div class="absolute -bottom-4 left-0 w-full h-8 flex justify-between items-start">
+                        <div class="w-[15%] h-[2px] bg-holographicPink"></div>
+                        <div class="w-[60%] h-full relative">
+                            <div class="absolute top-0 left-0 w-full h-[4px] bg-gradient-to-r from-holographicPink to-cyberViolet"></div>
+                            <div class="absolute top-2 right-4 flex gap-1">
+                                <div class="w-8 h-1 bg-mistGrey/20 -skew-x-12"></div>
+                                <div class="w-8 h-1 bg-mistGrey/20 -skew-x-12"></div>
+                                <div class="w-8 h-1 bg-mistGrey/20 -skew-x-12"></div>
+                            </div>
+                        </div>
+                        <div class="w-[15%] h-[2px] bg-cyberViolet"></div>
+                    </div>
+                    <div class="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-white"></div>
+                    <div class="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-auroraCyan"></div>
+                </div>
+            </div>
+
+            <div class="w-[45%] flex flex-col justify-center pl-4 relative">
+                <div class="absolute -left-10 top-1/2 -translate-y-1/2 w-full h-[300px] bg-darkVoid/50 blur-3xl -z-10 rounded-full"></div>
+                
+                <h1 class="text-white text-7xl font-black uppercase tracking-tight mb-6 leading-none drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]">
+                    CHALLENGES
+                </h1>
+
+                <div class="flex flex-col gap-5 w-full pr-8">
+                    
+                    <div class="tech-box relative p-5 bg-deepIndigo/30 border border-cyberViolet/20 backdrop-blur-sm">
+                        <div class="absolute top-0 left-0 w-1 h-full bg-holographicPink shadow-[0_0_10px_rgba(255,153,214,0.5)]"></div>
+                        <div class="absolute top-0 right-0 w-3 h-3 border-t border-r border-holographicPink/50"></div>
+                        
+                        <h3 class="text-holographicPink font-bold text-lg mb-2 tracking-wider flex items-center">
+                            <span class="text-xs opacity-60 mr-2">01.</span> ANALYSIS
+                        </h3>
+                        <p class="text-mistGrey text-sm leading-relaxed font-light text-justify opacity-90">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+                        </p>
+                    </div>
+
+                    <div class="tech-box relative p-5 bg-deepIndigo/30 border border-cyberViolet/20 backdrop-blur-sm">
+                        <div class="absolute top-0 left-0 w-1 h-full bg-auroraCyan shadow-[0_0_10px_rgba(112,243,255,0.5)]"></div>
+                        <div class="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-auroraCyan/50"></div>
+
+                        <h3 class="text-auroraCyan font-bold text-lg mb-2 tracking-wider flex items-center">
+                            <span class="text-xs opacity-60 mr-2">02.</span> STRATEGY
+                        </h3>
+                        <p class="text-mistGrey text-sm leading-relaxed font-light text-justify opacity-90">
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 right-12 z-30">
+            <div class="w-12 h-12 rounded-full border border-mistGrey/30 flex items-center justify-center hover:bg-white/10 transition-colors duration-300 group cursor-pointer">
+                <i class="fa-solid fa-arrow-right text-white text-xl group-hover:translate-x-1 transition-transform"></i>
+            </div>
+        </div>
+
+        <div style="position: absolute; bottom: 50px; left: 80px; z-index: 20;">
+            <p style="color: #FFFFFF; font-size: 14px; letter-spacing: 2px; margin-bottom: 4px; font-weight: 700;">PAGE</p>
+            <p style="color: #70F3FF; font-size: 14px; letter-spacing: 1px;">06 / 15</p>
+        </div>
+
+    </div>
+</body>
+</html>

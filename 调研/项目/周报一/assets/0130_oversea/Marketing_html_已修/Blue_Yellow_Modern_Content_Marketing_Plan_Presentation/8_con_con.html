@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Distribution Channels</title>
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts (Mandatory Source) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        /* CSS Reset & Global Settings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container Specs */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FFFFFF; /* Neutral Background */
+            overflow: hidden;
+        }
+
+        /* Custom Utilities not in standard Tailwind */
+        .text-justify-custom {
+            text-align: justify;
+            text-justify: inter-word;
+        }
+        
+        /* Decorative Elements */
+        .decoration-star {
+            position: absolute;
+            color: #FCEE7D; /* Accent Color */
+            font-size: 2rem;
+            z-index: 10;
+        }
+    </style>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0A33B3',    // Main Blue
+                        secondary: '#2248C3',  // Lighter Blue for Cards
+                        accent: '#FCEE7D',     // Yellow
+                        neutral: '#FFFFFF',    // White
+                        dark: '#1a1a1a',       // Text Dark
+                        subtext: '#64748b'     // Text Grey
+                    },
+                    spacing: {
+                        '128': '32rem',
+                    },
+                    borderRadius: {
+                        '4xl': '2rem',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div id="page_container">
+        <!-- Layout Grid: 12 Columns -->
+        <div class="grid grid-cols-12 h-full p-12 gap-6">
+
+            <!-- ================= HEADER SECTION (Logo & Title) ================= -->
+            <div class="col-span-12 flex flex-col justify-between h-[25%] mb-4">
+                <!-- Top Bar: Logo -->
+                <div class="flex items-center gap-3 mb-2">
+                    <div class="text-accent text-2xl">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-primary tracking-wide">Borcelle</h2>
+                </div>
+
+                <!-- Title & Intro Split -->
+                <div class="flex items-end justify-between w-full">
+                    <!-- Main Title -->
+                    <div class="w-7/12">
+                        <h1 class="text-6xl font-bold text-primary leading-tight tracking-tight">
+                            Content Distribution <br> Channels
+                        </h1>
+                    </div>
+                    
+                    <!-- Intro Paragraph -->
+                    <div class="w-4/12 pb-2">
+                        <p class="text-sm text-subtext leading-relaxed border-l-4 border-accent pl-4">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar sit amet urna eget pulvinar. Donec faucibus diam non sem lacinia vulputate eu et enim.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= CONTENT CARDS SECTION (Bottom Left) ================= -->
+            <!-- We use a sub-grid logic here. 3 Cards take up 8 columns -->
+            <div class="col-span-8 grid grid-cols-3 gap-5 h-[80%]">
+                
+                <!-- Card 1: Owned Media -->
+                <div class="bg-primary rounded-3xl p-8 flex flex-col justify-between relative overflow-hidden group">
+                    <!-- Decorative Background Circle -->
+                    <div class="absolute -right-6 -top-6 w-24 h-24 bg-secondary rounded-full opacity-50"></div>
+
+                    <!-- Header Pill -->
+                    <div class="z-10 w-full">
+                        <div class="bg-accent rounded-full py-2 px-4 inline-block mb-6 shadow-md">
+                            <h3 class="text-primary font-bold text-lg text-center">Owned Media</h3>
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="z-10">
+                        <p class="text-white text-base leading-7 opacity-90 font-light">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar sit amet urna eget pulvinar.
+                        </p>
+                    </div>
+
+                    <!-- Bottom Icon -->
+                    <div class="mt-4 text-accent opacity-60">
+                        <i class="fa-regular fa-folder-open text-2xl"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2: Earned Media -->
+                <div class="bg-primary rounded-3xl p-8 flex flex-col justify-between relative overflow-hidden">
+                    <!-- Decorative Background Circle -->
+                    <div class="absolute -right-6 -top-6 w-24 h-24 bg-secondary rounded-full opacity-50"></div>
+
+                    <!-- Header Pill -->
+                    <div class="z-10 w-full">
+                        <div class="bg-accent rounded-full py-2 px-4 inline-block mb-6 shadow-md">
+                            <h3 class="text-primary font-bold text-lg text-center">Earned Media</h3>
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="z-10">
+                        <p class="text-white text-base leading-7 opacity-90 font-light">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar sit amet urna eget pulvinar.
+                        </p>
+                    </div>
+
+                    <!-- Bottom Icon -->
+                    <div class="mt-4 text-accent opacity-60">
+                        <i class="fa-solid fa-bullhorn text-2xl"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3: Paid Media -->
+                <div class="bg-primary rounded-3xl p-8 flex flex-col justify-between relative overflow-hidden">
+                    <!-- Decorative Background Circle -->
+                    <div class="absolute -right-6 -top-6 w-24 h-24 bg-secondary rounded-full opacity-50"></div>
+
+                    <!-- Header Pill -->
+                    <div class="z-10 w-full">
+                        <div class="bg-accent rounded-full py-2 px-4 inline-block mb-6 shadow-md">
+                            <h3 class="text-primary font-bold text-lg text-center">Paid Media</h3>
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="z-10">
+                        <p class="text-white text-base leading-7 opacity-90 font-light">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar sit amet urna eget pulvinar.
+                        </p>
+                    </div>
+
+                    <!-- Bottom Icon -->
+                    <div class="mt-4 text-accent opacity-60">
+                        <i class="fa-solid fa-sack-dollar text-2xl"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= IMAGE SECTION (Bottom Right) ================= -->
+            <div class="col-span-4 h-[80%] relative">
+                <div class="w-full h-full rounded-3xl overflow-hidden relative shadow-lg">
+                    <!-- Image Overlay Gradient for Text Readability if needed, but keeping clean here -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent z-10"></div>
+                    
+                    <!-- Main Image -->
+                    <img src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Team meeting for content strategy" 
+                         class="w-full h-full object-cover">
+                    <!-- 400*500 -->
+
+                    <!-- Decorative Star Bottom Left -->
+                    <div class="absolute bottom-4 left-4 z-20 text-accent">
+                        <i class="fa-solid fa-star text-3xl"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Decorative Star Top Right (Absolute Positioning) -->
+        <div class="decoration-star top-12 right-12">
+            <i class="fa-solid fa-star-of-life"></i>
+        </div>
+
+    </div>
+
+</body>
+</html>

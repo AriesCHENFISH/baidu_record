@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Rise of Cyber Monday - Dual Text Layout</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            black: '#000000',
+                            white: '#FFFFFF',
+                            red: '#D94545',
+                            grey: '#B0B0B0',
+                            darkGrey: '#1A1A1A'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif'],
+                        cyber: ['Orbitron', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'neon': '0 0 20px rgba(217, 69, 69, 0.2)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        .page-container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #000000;
+            overflow: hidden;
+            display: flex;
+        }
+
+        /* Adjusted Cyber Shape for the narrower image */
+        .cyber-shape {
+            clip-path: polygon(
+                0% 0%, 
+                75% 0%, 
+                100% 20%, 
+                100% 100%, 
+                0% 100%
+            );
+        }
+
+        .img-cover {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+        }
+        
+        .grid-bg {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-container">
+        
+        <div class="grid-bg"></div>
+
+        <div class="z-10 w-full h-full p-16 grid grid-cols-12 gap-12">
+
+            <div class="col-span-7 flex flex-col justify-center h-full relative pr-8">
+                
+                <header class="mb-12">
+                    <h1 class="font-cyber font-black text-6xl text-brand-white leading-[0.9] tracking-widest uppercase">
+                        The Rise<br>
+                        Of<br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-white to-brand-grey">Cyber</span><br>
+                        Monday
+                    </h1>
+                </header>
+
+                <div class="flex flex-col gap-10">
+                    
+                    <div class="group">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-2 h-2 bg-brand-red rotate-45"></div>
+                            <h3 class="font-cyber text-brand-red text-lg font-bold tracking-wider uppercase">
+                                Digital Shift
+                            </h3>
+                        </div>
+                        <div class="pl-5 border-l border-brand-grey/30 group-hover:border-brand-red transition-colors duration-500">
+                            <p class="text-brand-grey text-sm leading-6 font-sans text-justify">
+                                Cyber Monday began as an online version of Black Friday but soon became a global symbol of e-commerce growth. It revolutionized how consumers approach shopping, highlighting speed and accessibility.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-2 h-2 bg-brand-white rotate-45 opacity-50"></div>
+                            <h3 class="font-cyber text-brand-white text-lg font-bold tracking-wider uppercase">
+                                Global Impact
+                            </h3>
+                        </div>
+                        <div class="pl-5 border-l border-brand-grey/30 group-hover:border-brand-white transition-colors duration-500">
+                            <p class="text-brand-grey text-sm leading-6 font-sans text-justify">
+                                Beyond mere discounts, this event drives digital trust and infrastructure innovation. Every year, millions join this virtual rush, turning a single day into a massive wave of online retail opportunity worldwide.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-span-5 relative h-full flex items-center justify-end">
+                
+                <div class="absolute top-0 right-0 text-brand-white text-4xl opacity-50">
+                    <i class="fa-solid fa-arrow-right -rotate-45"></i>
+                </div>
+
+                <div class="cyber-shape bg-brand-red w-full h-[85%] relative shadow-neon overflow-hidden group">
+                    
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-black opacity-20 -skew-x-12 transform translate-x-10 -translate-y-10"></div>
+
+                    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=600&auto=format&fit=crop" 
+                         alt="Woman shopping online" 
+                         class="img-cover mix-blend-normal scale-100 group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                    
+                    <div class="absolute bottom-0 left-0 w-full h-1/4 bg-gradient-to-t from-black/80 to-transparent"></div>
+                    
+                    <div class="absolute bottom-6 right-6 bg-black/80 backdrop-blur-sm px-4 py-2 border-l-2 border-brand-white">
+                        <span class="text-brand-red font-cyber font-bold text-xl">12.4B</span>
+                        <span class="text-brand-grey text-[10px] uppercase block">Sales Vol.</span>
+                    </div>
+                </div>
+
+                <div class="absolute bottom-10 -left-6 w-12 h-12 border-l border-b border-brand-white/20"></div>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

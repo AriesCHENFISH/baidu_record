@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanksgiving Parade Presentation</title>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <!-- Google Fonts (Strict Source) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6B722C',
+                        lightText: '#F2F2F2',
+                        divider: '#899052',
+                        accentBg: '#EAD3B6',
+                        accentDecor: '#5D3A1A',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Global Refactoring */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container Specs */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #6B722C;
+            /* Subtle gradient for depth within the primary color range */
+            background: linear-gradient(160deg, #6B722C, #5a6025);
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+            color: #F2F2F2;
+        }
+
+        /* Utility Helpers */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(137, 144, 82, 0.3);
+        }
+
+        .text-shadow-sm {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <!-- Background Decoration: Large Watermark Number -->
+        <div class="absolute -right-20 -top-24 select-none pointer-events-none z-0">
+            <h1 class="text-[350px] font-bold text-[#899052] opacity-20 tracking-tighter leading-none">08</h1>
+        </div>
+
+        <!-- Decorative Grid Lines -->
+        <div class="absolute inset-0 pointer-events-none z-0 opacity-20">
+            <div class="h-full w-full border-r border-[#899052] absolute left-1/3 top-0"></div>
+            <div class="h-full w-full border-b border-[#899052] absolute left-0 top-32"></div>
+        </div>
+
+        <!-- Main Layout Grid -->
+        <div class="relative z-10 grid grid-cols-12 h-full p-12 gap-8">
+            
+            <!-- Header Section (Spanning Top) -->
+            <div class="col-span-12 flex items-end justify-between h-20 mb-8 border-b border-[#899052]">
+                <div class="flex items-center gap-4 pb-4">
+                    <div class="bg-accentBg text-accentDecor w-10 h-10 flex items-center justify-center rounded-full font-bold text-lg">
+                        08
+                    </div>
+                    <h1 class="text-5xl font-light tracking-wide">Thanksgiving <b class="font-bold">parade</b></h1>
+                </div>
+                <div class="pb-4 text-divider text-sm tracking-widest uppercase">
+                    Annual Event Series
+                </div>
+            </div>
+
+            <!-- Left Content Column: Quote & Visual -->
+            <div class="col-span-5 flex flex-col justify-between h-[500px]">
+                
+                <!-- The Quote -->
+                <div class="mb-8 relative">
+                    <i class="fa-solid fa-quote-left text-4xl text-accentBg opacity-50 absolute -top-6 -left-4"></i>
+                    <h2 class="text-4xl font-light leading-tight relative z-10 text-shadow-sm">
+                        The most <br/>
+                        <span class="text-accentBg font-bold italic border-b-2 border-accentBg">anticipated event</span> <br/>
+                        of the year.
+                    </h2>
+                </div>
+
+                <!-- The Image Card -->
+                <!-- Visual Logic: Replaced the circle with a modern arch/card shape with accent background -->
+                <div class="bg-accentBg p-2 rounded-t-[150px] rounded-b-xl flex-grow relative shadow-lg group">
+                    <div class="w-full h-full overflow-hidden rounded-t-[145px] rounded-b-lg relative">
+                        <!-- Image Source: Unsplash (High quality Thanksgiving pie/feast) -->
+                        <img src="https://images.unsplash.com/photo-1509456592530-5d38e33f3fdd?q=80&w=800&auto=format&fit=crop" 
+                             alt="Traditional Thanksgiving Pumpkin Pie" 
+                             class="w-full h-full object-cover transform scale-105 group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                        <!-- 450*350 -->
+                        
+                        <!-- Overlay Gradient for depth -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent"></div>
+                    </div>
+                    
+                    <!-- Decorative Badge -->
+                    <div class="absolute bottom-4 right-4 bg-white text-accentDecor w-12 h-12 rounded-full flex items-center justify-center shadow-md">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Center Divider (Spacer) -->
+            <div class="col-span-1 flex justify-center h-[500px]">
+                <!-- The vertical line is handled by the absolute bg decor, this is just for grid spacing -->
+            </div>
+
+            <!-- Right Content Column: Body Text -->
+            <div class="col-span-6 flex flex-col justify-center h-[500px] pr-8">
+                <div class="glass-panel p-8 rounded-xl border-l-4 border-accentBg">
+                    <div class="mb-6 text-accentBg text-xl">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    
+                    <!-- Paragraph 1 -->
+                    <p class="text-lg leading-relaxed text-gray-200 mb-6 font-light">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    
+                    <!-- Paragraph 2 -->
+                    <p class="text-lg leading-relaxed text-gray-200 font-light opacity-90">
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+
+                <!-- Bottom Metadata/decoration -->
+                <div class="mt-8 flex gap-6 text-divider text-sm">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-regular fa-clock"></i>
+                        <span>Start: 9:00 AM</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Main Avenue</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, initial-scale=1.0">
+    <title>08 - High Density Services</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; overflow: hidden; font-family: 'Noto Sans SC', sans-serif; background-color: #f0f4f8; }
+        
+        .glass-panel { 
+            background: rgba(255, 255, 255, 0.65); 
+            backdrop-filter: blur(24px); 
+            border: 1px solid rgba(255, 255, 255, 0.6); 
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.08); 
+        }
+
+        .service-card {
+            background: white;
+            border: 1px solid rgba(0,0,0,0.06);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Hover Effect: Lift and Border Highlight */
+        .service-card:hover {
+            transform: translateY(-4px);
+            border-color: #4A3AFF;
+            box-shadow: 0 20px 40px -10px rgba(74, 58, 255, 0.1);
+        }
+
+        /* Hover Effect: Show decorative background */
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle at top right, rgba(74, 58, 255, 0.1), transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .service-card:hover::before {
+            opacity: 1;
+        }
+
+        .mesh-bg { position: absolute; inset: 0; z-index: 0; background: linear-gradient(135deg, #FFD6D6 0%, #D6EBFF 50%, #E0D6FF 100%); }
+        .blob { position: absolute; border-radius: 50%; filter: blur(80px); z-index: 0; opacity: 0.8; }
+        .text-gradient { background: linear-gradient(to right, #4A3AFF, #9333ea); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        .tech-tag {
+            font-size: 10px;
+            font-family: monospace;
+            padding: 4px 8px;
+            border-radius: 4px;
+            background-color: #F3F4F6;
+            color: #34D399;
+            border: 1px solid #E5E7EB;
+        }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <div class="mesh-bg"></div>
+        <div class="blob w-[600px] h-[600px] bg-[#D6EBFF] top-[-200px] right-[-100px] opacity-60"></div>
+        <div class="blob w-[500px] h-[500px] bg-[#FFD6D6] bottom-[-100px] left-[-100px] opacity-50"></div>
+
+        <div class="absolute top-0 left-0 w-full px-12 py-10 flex items-center justify-between z-50">
+            <div class="glass-panel rounded-full px-8 py-4 flex items-center gap-6">
+                <div class="flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-full bg-[#4A3AFF] animate-pulse"></span>
+                    <span class="text-sm font-bold tracking-widest text-[#0F172A] uppercase">Capabilities</span>
+                </div>
+                <span class="text-gray-400">|</span>
+                <span class="text-sm font-bold tracking-widest text-[#475569] uppercase">Scope</span>
+                <span class="text-gray-400">|</span>
+                <span class="text-sm font-bold tracking-widest text-[#475569] uppercase">Impact</span>
+            </div>
+            <div class="glass-panel w-14 h-14 rounded-full flex items-center justify-center cursor-pointer text-[#2E2E99] hover:bg-white transition-colors">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </div>
+        </div>
+
+        <div class="relative z-10 w-full h-full flex pt-32 px-12 pb-12 gap-10">
+            
+            <div class="w-[35%] flex flex-col h-full relative justify-center">
+                <div class="absolute -left-6 top-0 text-[200px] font-black text-[#4A3AFF] opacity-[0.05] leading-none select-none pointer-events-none">08</div>
+                
+                <div class="relative z-10">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="h-[3px] w-12 bg-[#4A3AFF]"></span>
+                        <span class="text-sm font-bold tracking-[0.25em] text-[#4A3AFF] uppercase">Our Expertise</span>
+                    </div>
+
+                    <h1 class="text-5xl font-black text-[#0F172A] mb-8 leading-[1.1]">
+                        HOLISTIC <br> <span class="text-gradient">SOLUTIONS</span>
+                    </h1>
+
+                    <p class="text-base text-gray-700 leading-relaxed text-justify mb-8 pr-6 font-medium">
+                        Our comprehensive suite of technology services is designed to handle complexity at scale. We combine engineering excellence with strategic foresight.
+                    </p>
+
+                    <div class="flex items-center gap-4 p-4 rounded-xl bg-white/40 border border-white/50 backdrop-blur-sm">
+                        <div class="w-10 h-10 rounded-full bg-[#4A3AFF]/10 flex items-center justify-center text-[#4A3AFF]">
+                            <i class="fa-solid fa-certificate text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-gray-500 uppercase tracking-wider">Certified Standard</p>
+                            <p class="text-base font-bold text-[#1A1A1A]">ISO 9001 / 27001 Compliant</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-[65%] glass-panel rounded-[32px] p-6 grid grid-cols-2 gap-5 h-full">
+                
+                <div class="service-card rounded-2xl p-6 flex flex-col h-full justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="text-xs font-mono text-gray-400 border border-gray-200 px-2 py-0.5 rounded">01</span>
+                            <i class="fa-brands fa-app-store-ios text-[#4A3AFF] text-xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-[#1A1A1A] mb-3">App Engineering</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Full-cycle development for scalable web and mobile applications. We focus on high-performance architecture and seamless UX.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="w-full h-[1px] bg-gray-100 my-4"></div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">TypeScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card rounded-2xl p-6 flex flex-col h-full justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="text-xs font-mono text-gray-400 border border-gray-200 px-2 py-0.5 rounded">02</span>
+                            <i class="fa-solid fa-cloud text-[#4A3AFF] text-xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-[#1A1A1A] mb-3">Cloud Infrastructure</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Designing resilient cloud-native environments. From migration strategies to serverless architecture optimization.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="w-full h-[1px] bg-gray-100 my-4"></div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-tag">AWS / Azure</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Kubernetes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card rounded-2xl p-6 flex flex-col h-full justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="text-xs font-mono text-gray-400 border border-gray-200 px-2 py-0.5 rounded">03</span>
+                            <i class="fa-solid fa-database text-[#4A3AFF] text-xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-[#1A1A1A] mb-3">Data Analytics</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Turning raw data into actionable business intelligence through advanced warehousing and visualization pipelines.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="w-full h-[1px] bg-gray-100 my-4"></div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-tag">Snowflake</span>
+                            <span class="tech-tag">Tableau</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card rounded-2xl p-6 flex flex-col h-full justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="text-xs font-mono text-gray-400 border border-gray-200 px-2 py-0.5 rounded">04</span>
+                            <i class="fa-solid fa-brain text-[#4A3AFF] text-xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-[#1A1A1A] mb-3">AI & Automation</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Implementing machine learning models and LLM integrations to automate workflows and enhance decision making.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="w-full h-[1px] bg-gray-100 my-4"></div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-tag">OpenAI API</span>
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">TensorFlow</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 right-12 z-50">
+            <div class="w-14 h-14 rounded-full border-2 border-[#2E2E99] flex items-center justify-center text-[#2E2E99] hover:bg-[#2E2E99] hover:text-white transition-all duration-300 cursor-pointer">
+                <i class="fa-solid fa-arrow-right text-xl"></i>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

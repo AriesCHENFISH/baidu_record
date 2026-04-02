@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, height=720, initial-scale=1.0">
+    <title>Project Portfolio - Harper Russo</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { brand: { blue: '#3B71F3', black: '#000000', accent: '#6F9FFF', dark: '#1A1A1A' } },
+                    boxShadow: { 'pop': '10px 10px 0px 0px rgba(0,0,0,1)', 'pop-sm': '4px 4px 0px 0px rgba(0,0,0,1)' }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px; background-color: #3B71F3;
+            position: relative; margin: 0 auto; overflow: hidden;
+            background-image: linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        /* 标题缩小并增加描边控制 */
+        .text-mega { font-size: 8.5rem; line-height: 0.8; letter-spacing: -0.05em; }
+        .text-stroke-white { -webkit-text-stroke: 3px white; color: transparent; }
+        
+        /* 斜切装饰背景层 */
+        .side-image-mask {
+            position: absolute; right: 0; top: 0; width: 40%; height: 100%;
+            background-color: black; clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+            z-index: 5;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container" class="flex flex-col">
+        
+        <header class="w-full flex justify-between items-center px-12 py-8 z-30">
+            <div class="flex items-center gap-4">
+                <div class="bg-black text-white p-2 px-4 rotate-[-2deg] font-black text-2xl shadow-pop-sm">P.J</div>
+                <div class="h-[2px] w-24 bg-black"></div>
+            </div>
+            <div class="flex gap-4">
+                <span class="bg-white border-2 border-black px-6 py-1 rounded-full font-bold uppercase tracking-widest text-sm shadow-pop-sm">Case Studies</span>
+                <span class="bg-black text-brand-accent border-2 border-black px-6 py-1 rounded-full font-bold uppercase tracking-widest text-sm shadow-pop-sm">2025 Projects</span>
+            </div>
+            <div class="flex gap-6 text-black text-2xl">
+                <i class="fa-solid fa-grid-2"></i>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </div>
+        </header>
+
+        <main class="flex-1 px-12 flex flex-col justify-center z-10">
+            
+            <div class="mb-8">
+                <h1 class="font-black text-black text-8xl uppercase">
+                    PROJECT<br>
+                    <span class="text-stroke-white">PORTFOLIO</span>
+                </h1>
+            </div>
+
+            <div class="flex gap-6 mb-12">
+                <div class="bg-black text-brand-accent px-10 py-4 font-black uppercase tracking-tighter shadow-pop-sm flex items-center gap-4 cursor-pointer hover:bg-white hover:text-black transition-all">
+                    <span>Explore 01</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+                <div class="bg-white text-black border-4 border-black px-10 py-4 font-black uppercase tracking-tighter shadow-pop-sm flex items-center gap-4 cursor-pointer hover:bg-brand-accent transition-all">
+                    <span>Case 02</span>
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-8 max-w-2xl bg-white/10 p-6 backdrop-blur-sm border-2 border-black/20 rounded-xl">
+                <div>
+                    <h4 class="font-black text-sm uppercase text-black border-b-4 border-brand-accent w-fit mb-3">The Concept</h4>
+                    <p class="text-brand-dark text-[13px] leading-relaxed font-bold">A curated selection of high-impact visual identities and digital experiences developed for industry leaders and global innovators.</p>
+                </div>
+                <div>
+                    <h4 class="font-black text-sm uppercase text-black border-b-4 border-brand-accent w-fit mb-3">Execution</h4>
+                    <p class="text-brand-dark text-[13px] leading-relaxed font-bold">Utilizing cutting-edge production techniques to bridge the gap between bold art direction and commercial success.</p>
+                </div>
+            </div>
+        </main>
+
+        <div class="side-image-mask">
+            <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1280&auto=format&fit=crop" 
+                 class="w-full h-full object-cover opacity-40 grayscale contrast-150">
+            <div class="absolute bottom-12 right-12 flex flex-col items-end">
+                <p class="text-white/20 text-7xl font-black uppercase rotate-90 origin-bottom-right mb-12">STUDIO_X</p>
+                <div class="w-20 h-20 rounded-full border-4 border-brand-accent flex items-center justify-center text-brand-accent animate-pulse">
+                    <i class="fa-solid fa-asterisk text-3xl"></i>
+                </div>
+            </div>
+        </div>
+
+        <footer class="px-12 py-8 flex justify-between items-center z-20">
+            <div class="flex gap-2">
+                <div class="w-8 h-8 rounded-full border border-black flex-center"><i class="fa-solid fa-circle text-[6px]"></i></div>
+                <div class="w-8 h-8 rounded-full border border-black flex-center"><i class="fa-solid fa-circle text-[6px]"></i></div>
+                <div class="w-8 h-8 rounded-full border border-black flex-center"><i class="fa-solid fa-circle text-[6px]"></i></div>
+            </div>
+            <p class="text-black font-black italic text-sm tracking-widest">© HARPER RUSSO CREATIVE</p>
+        </footer>
+    </div>
+
+</body>
+</html>

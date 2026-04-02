@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departments - Borcelle Hospital</title>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { medical: { dark: '#01315B', primary: '#005BB7', light: '#F0F7FF', accent: '#22C55E' } }, fontFamily: { sans: ['"Noto Sans SC"', 'sans-serif'] } } }
+        }
+    </script>
+    <style>
+        .page_container { width: 1280px; height: 720px; background-color: #FDFDFD; position: relative; margin: 0 auto; overflow: hidden; display: flex; flex-direction: column; }
+        .thin-grid { background-image: linear-gradient(#e5e7eb 1px, transparent 1px), linear-gradient(90deg, #e5e7eb 1px, transparent 1px); background-size: 40px 40px; mask-image: radial-gradient(circle at 0% 0%, black, transparent 80%); }
+        .accent-line { position: absolute; width: 4px; height: 80px; background: #22C55E; left: -20px; top: 8px; }
+        .bg-text { position: absolute; font-size: 200px; font-weight: 900; color: #005BB7; opacity: 0.03; top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; white-space: nowrap; }
+    </style>
+</head>
+<body>
+    <div class="page_container">
+        <div class="absolute inset-0 thin-grid opacity-30"></div>
+        <div class="bg-text">DEPARTMENTS</div>
+
+        <header class="relative z-50 pt-10 px-20 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <div class="w-10 h-10 bg-medical-primary flex items-center justify-center rounded-xl shadow-md"><i class="fa-solid fa-hospital text-white text-xl"></i></div>
+                <div>
+                    <h2 class="text-xl font-black text-medical-dark tracking-tighter leading-none">BORCELLE</h2>
+                    <p class="text-[14px] text-medical-primary font-bold tracking-[0.1em] uppercase">Medical Excellence</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-2 border-l-2 border-gray-100 pl-6 h-8">
+                <p class="text-sm font-bold text-gray-400 uppercase tracking-widest">Medical Center</p>
+            </div>
+        </header>
+
+        <main class="flex-1 grid grid-cols-12 gap-0 px-20 py-10 items-stretch relative z-10">
+            <div class="col-span-5 flex flex-col justify-center pr-12 border-r border-gray-100">
+                <div class="relative mb-8">
+                    <div class="accent-line"></div>
+                    <p class="text-medical-primary font-bold text-sm tracking-[0.2em] mb-3 uppercase flex items-center gap-3">
+                        <span class="w-8 h-[2px] bg-medical-primary"></span> Specialist Scope
+                    </p>
+                    <h1 class="text-[64px] font-black text-medical-dark leading-[1] mb-6 tracking-tighter">Clinical <br><span class="text-medical-primary">Disciplines.</span></h1>
+                    <p class="text-gray-600 text-[16px] leading-relaxed">Providing world-class medical services across multiple specialties with integrated precision technology.</p>
+                </div>
+                <div class="bg-medical-dark p-8 rounded-3xl text-white shadow-xl">
+                    <p class="text-sm uppercase font-bold tracking-widest opacity-60 mb-2">Total Departments</p>
+                    <p class="text-4xl font-black">24+ Specialty Units</p>
+                </div>
+            </div>
+
+            <div class="col-span-7 grid grid-cols-2 gap-6 pl-12 items-center">
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-medical-primary hover:-translate-y-2 transition-transform">
+                    <i class="fa-solid fa-heart-pulse text-3xl text-medical-primary mb-4"></i>
+                    <h3 class="text-lg font-black text-medical-dark mb-2">Cardiology</h3>
+                    <p class="text-sm text-gray-500">Advanced electrophysiology and interventional cardiac surgery center.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-medical-accent hover:-translate-y-2 transition-transform">
+                    <i class="fa-solid fa-brain text-3xl text-medical-accent mb-4"></i>
+                    <h3 class="text-lg font-black text-medical-dark mb-2">Neurology</h3>
+                    <p class="text-sm text-gray-500">Leading the way in neurodegenerative research and complex spinal care.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-medical-primary hover:-translate-y-2 transition-transform">
+                    <i class="fa-solid fa-dna text-3xl text-medical-primary mb-4"></i>
+                    <h3 class="text-lg font-black text-medical-dark mb-2">Genomics</h3>
+                    <p class="text-sm text-gray-500">Mapping individual health data to provide personalized oncology solutions.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-medical-accent hover:-translate-y-2 transition-transform">
+                    <i class="fa-solid fa-microscope text-3xl text-medical-accent mb-4"></i>
+                    <h3 class="text-lg font-black text-medical-dark mb-2">Diagnostics</h3>
+                    <p class="text-sm text-gray-500">24/7 fully automated laboratory with AI-powered pathology screening.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

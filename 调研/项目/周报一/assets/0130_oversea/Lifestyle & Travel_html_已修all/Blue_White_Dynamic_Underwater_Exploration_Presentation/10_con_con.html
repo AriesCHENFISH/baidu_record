@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salford & Co. - Exploration Redesign</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans SC', sans-serif; background: #fff; }
+        #page_container {
+            width: 1280px; height: 720px;
+            margin: 0 auto; position: relative;
+            background-color: #FFFFFF; overflow: hidden;
+            display: flex; flex-direction: column;
+        }
+        .title-stroke { -webkit-text-stroke: 2px #0A2342; color: transparent; }
+    </style>
+</head>
+<body>
+    <div id="page_container" class="p-16">
+        
+        <!-- 1. 统一 Logo 规范 -->
+        <div class="flex justify-between items-center mb-6 z-30">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 bg-[#0A2342] flex items-center justify-center">
+                    <i class="fa-solid fa-water text-white text-[12px]"></i>
+                </div>
+                <span class="text-[#0A2342] text-sm font-bold tracking-[0.4em] uppercase">Salford & Co.</span>
+            </div>
+            <div class="h-[1px] w-24 bg-gray-100"></div>
+        </div>
+
+        <!-- 2. 主标题区域 (上移并固定) -->
+        <div class="mb-8">
+            <h1 class="text-[#0A2342] text-[100px] font-black leading-[0.85] tracking-tighter uppercase">
+                EXPLORA <span class="title-stroke">TION</span>
+            </h1>
+            <div class="flex items-center space-x-4 mt-2">
+                <div class="w-12 h-[2px] bg-[#6A8FAF]"></div>
+                <span class="text-[#6A8FAF] text-xs font-bold tracking-[0.3em] uppercase">Unlocking The Ocean’s Future</span>
+            </div>
+        </div>
+
+        <!-- 3. 内容区域：使用 flex-grow 和 items-center 让右侧图像垂直居中 -->
+        <div class="grid grid-cols-12 gap-16 flex-grow items-center">
+            
+            <!-- 左侧：双文本框布局 -->
+            <div class="col-span-5 space-y-12">
+                
+                <!-- 文本框 1：技术手段 -->
+                <div class="group border-l-2 border-gray-100 pl-8 hover:border-[#0A2342] transition-colors duration-500">
+                    <h4 class="text-[#0A2342] font-black text-lg tracking-widest uppercase mb-4 flex items-center">
+                        <span class="w-2 h-2 bg-[#6A8FAF] mr-3"></span>Technological Reach
+                    </h4>
+                    <p class="text-gray-500 text-[14px] leading-relaxed text-justify font-light">
+                        Modern technology unlocks hidden ocean realms. Submarines dive into trenches, drones record remote habitats, and satellites map currents shaping climate. These tools expand human knowledge and inspire global conservation.
+                    </p>
+                </div>
+
+                <!-- 文本框 2：未来责任 -->
+                <div class="group border-l-2 border-gray-100 pl-8 hover:border-[#0A2342] transition-colors duration-500">
+                    <h4 class="text-[#0A2342] font-black text-lg tracking-widest uppercase mb-4 flex items-center">
+                        <span class="w-2 h-2 bg-[#6A8FAF] mr-3"></span>Future Responsibility
+                    </h4>
+                    <p class="text-gray-500 text-[14px] leading-relaxed text-justify font-light">
+                        Future exploration promises responsibility—understanding fragile ecosystems to guide balanced use. Unlocking mysteries beneath the waves helps humanity protect Earth’s last uncharted frontier.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 右侧：高图布局 & 垂直居中 -->
+            <div class="col-span-7 h-full flex items-center justify-end relative">
+                <!-- 装饰线框 (随高图调整尺寸) -->
+                <div class="absolute top-1/2 -translate-y-1/2 right-0 w-[90%] h-[540px] border border-gray-100 -z-0 translate-x-4 -translate-y-[45%]"></div>
+                
+                <!-- 核心高图 -->
+                <div class="relative w-[95%] h-[380px] rounded-sm overflow-hidden shadow-[40px_40px_80px_-20px_rgba(10,35,66,0.25)] z-10 group">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=2070&auto=format&fit=crop" 
+                         class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000">
+                    
+                    <!-- 图像遮罩点缀 -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0A2342]/20 to-transparent"></div>
+                    
+                    <!-- 图像浮层：技术刻度感装饰 -->
+                    <div class="absolute top-8 right-8 border-t border-r border-white/40 w-12 h-12"></div>
+                    <div class="absolute bottom-8 left-8 border-b border-l border-white/40 w-12 h-12"></div>
+                </div>
+
+                <!-- 垂直修饰文字 -->
+                <div class="absolute -right-6 top-1/2 -translate-y-1/2 text-gray-50 text-[120px] font-black uppercase -z-10 tracking-widest opacity-40" style="writing-mode: vertical-rl;">
+                    DIVE
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

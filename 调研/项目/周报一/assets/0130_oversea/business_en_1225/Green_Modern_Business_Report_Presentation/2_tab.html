@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Report - Table of Contents</title>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        black: '#050505',
+                        white: '#FFFFFF',
+                        /* Defined based on your snippet requirements */
+                        accentStart: '#50C878', 
+                        accentEnd: '#D0F0C0',
+                        primaryText: '#FFFFFF', 
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans SC', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'brand-gradient': 'linear-gradient(135deg, #50C878, #D0F0C0)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative;
+            background-color: #050505; overflow: hidden; font-family: 'Inter', sans-serif; color: #FFFFFF;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #50C878, #D0F0C0);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+
+        /* Glassmorphism List Item */
+        .toc-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .toc-item:hover {
+            background: rgba(80, 200, 120, 0.08); /* Green tint on hover */
+            border-color: rgba(80, 200, 120, 0.3);
+            transform: translateX(10px);
+        }
+
+        .toc-number {
+            font-variant-numeric: tabular-nums;
+        }
+
+        /* Abstract Decoration */
+        .bg-glow {
+            position: absolute; width: 600px; height: 600px; border-radius: 50%;
+            background: radial-gradient(circle, rgba(80,200,120,0.08) 0%, rgba(0,0,0,0) 70%);
+            top: 50%; right: -100px; transform: translateY(-50%); pointer-events: none;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <div class="bg-glow"></div>
+
+        <div class="w-full h-full grid grid-cols-12 p-16 relative z-10">
+
+            <div class="col-span-4 flex flex-col justify-between border-r border-white/10 pr-12">
+                
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="flex items-center justify-center w-8 h-8">
+                        <i class="fa-solid fa-layer-group text-2xl text-accentStart"></i>
+                    </div>
+                    <h6 class="text-primaryText font-bold text-sm tracking-[0.2em] uppercase opacity-90">
+                        Thynk Unlimited
+                    </h6>
+                </div>
+
+                <div>
+                    <h1 class="text-[120px] font-black leading-none tracking-tighter text-white/10 select-none absolute top-32 -left-4 z-0">
+                        02
+                    </h1>
+                    <h2 class="text-5xl font-bold text-white relative z-10 mb-6">
+                        Table of <br>
+                        <span class="text-gradient">Contents</span>
+                    </h2>
+                    <p class="text-gray-400 font-light text-sm leading-relaxed relative z-10">
+                        This presentation covers the key performance indicators, financial outcomes, and strategic initiatives planned for the upcoming fiscal year.
+                    </p>
+                </div>
+
+                <div class="flex gap-2">
+                    <div class="w-12 h-1 bg-brand-gradient rounded-full"></div>
+                    <div class="w-2 h-1 bg-white/20 rounded-full"></div>
+                    <div class="w-2 h-1 bg-white/20 rounded-full"></div>
+                </div>
+            </div>
+
+            <div class="col-span-8 flex flex-col justify-center pl-16 gap-5">
+                
+                <div class="toc-item p-6 rounded-xl flex items-center justify-between group cursor-pointer">
+                    <div class="flex items-center gap-6">
+                        <span class="toc-number text-3xl font-light text-[#50C878] opacity-50 group-hover:opacity-100">01</span>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-1">Executive Summary</h3>
+                            <p class="text-xs text-gray-500 uppercase tracking-wider">High Level Overview</p>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-arrow-right text-white/20 group-hover:text-[#50C878] transition-colors"></i>
+                </div>
+
+                <div class="toc-item p-6 rounded-xl flex items-center justify-between group cursor-pointer">
+                    <div class="flex items-center gap-6">
+                        <span class="toc-number text-3xl font-light text-[#50C878] opacity-50 group-hover:opacity-100">02</span>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-1">Market Analysis</h3>
+                            <p class="text-xs text-gray-500 uppercase tracking-wider">Trends & Competitors</p>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-arrow-right text-white/20 group-hover:text-[#50C878] transition-colors"></i>
+                </div>
+
+                <div class="toc-item p-6 rounded-xl flex items-center justify-between group cursor-pointer">
+                    <div class="flex items-center gap-6">
+                        <span class="toc-number text-3xl font-light text-[#50C878] opacity-50 group-hover:opacity-100">03</span>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-1">Financial Performance</h3>
+                            <p class="text-xs text-gray-500 uppercase tracking-wider">Q1 - Q4 Revenue Data</p>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-arrow-right text-white/20 group-hover:text-[#50C878] transition-colors"></i>
+                </div>
+
+                <div class="toc-item p-6 rounded-xl flex items-center justify-between group cursor-pointer">
+                    <div class="flex items-center gap-6">
+                        <span class="toc-number text-3xl font-light text-[#50C878] opacity-50 group-hover:opacity-100">04</span>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-1">Future Roadmap</h3>
+                            <p class="text-xs text-gray-500 uppercase tracking-wider">Strategic Goals 2026</p>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-arrow-right text-white/20 group-hover:text-[#50C878] transition-colors"></i>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

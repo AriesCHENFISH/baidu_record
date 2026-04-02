@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Portfolio - Creative Keynote</title>
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts (via Baidu CDN as requested) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        /* CSS Reset & Basics */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* Page Container - Strict 1280x720 */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background-color: #E5E5E5; /* Main Background Color */
+            margin: 0 auto;
+            overflow: hidden;
+            /* No outer shadow as requested */
+        }
+
+        /* Typography Utilities */
+        .font-heading {
+            font-weight: 500; /* Medium weight for the clean look */
+            letter-spacing: -0.04em; /* Tight tracking for modern feel */
+            line-height: 0.95;
+        }
+
+        .text-primary { color: #000000; }
+        .text-secondary { color: #333333; }
+        .border-stroke { border-color: #666666; }
+        
+        /* Custom Shape Classes */
+        .shape-pill {
+            border-radius: 200px; /* Extreme rounded corners for pill shape */
+        }
+        
+        /* Absolute Positioning Helpers for the Collage */
+        .collage-wrapper {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60%;
+            height: 100%;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div id="page_container">
+
+        <!-- Background Ambient Glow (Top Left) -->
+        <!-- Using a blurred div to simulate the glow using allowed properties -->
+        <div style="position: absolute; top: -100px; left: -100px; width: 600px; height: 600px; background: linear-gradient(135deg, #D6E8C7, transparent); opacity: 0.6; filter: blur(80px); z-index: 1;"></div>
+        
+        <!-- Background Ambient Glow (Bottom Right) -->
+        <div style="position: absolute; bottom: -100px; right: -100px; width: 500px; height: 500px; background: linear-gradient(-45deg, #D6E8C7, transparent); opacity: 0.5; filter: blur(60px); z-index: 1;"></div>
+
+        <!-- Grid Layout System -->
+        <div class="grid grid-cols-12 h-full relative z-20">
+            
+            <!-- Left Column: Content -->
+            <div class="col-span-5 flex flex-col justify-center pl-24 pr-8 h-full">
+                
+                <!-- Main Title -->
+                <h1 class="font-heading text-primary text-[110px] mb-2">
+                    Our<br>Portfolio
+                </h1>
+
+                <!-- Divider Line -->
+                <!-- Using div for graphical line as requested -->
+                <div class="h-[1px] bg-[#666666] w-32 mt-12 mb-8"></div>
+
+                <!-- Subtitle -->
+                <h2 class="text-[32px] font-normal text-primary mb-6 tracking-tight">
+                    Transformative Campaigns
+                </h2>
+
+                <!-- Body Text -->
+                <p class="text-secondary text-base leading-relaxed max-w-[400px]">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl eu sem tristique, sit amet convallis ex aliquam. Maecenas varius lectus hendrerit augue blandit, ut posuere erat aliquam. Praesent auctor tellus eget nisl blandit, at varius purus elementum.
+                </p>
+
+                <!-- Optional: Decorative Icon/Link indicator -->
+                <div class="mt-8 text-[#666666]">
+                    <i class="fa-solid fa-arrow-right-long text-xl"></i>
+                </div>
+            </div>
+
+            <!-- Right Column: Visual Collage -->
+            <div class="col-span-7 relative h-full">
+                
+                <!-- 
+                   COLLAGE CONSTRUCTION 
+                   Using absolute positioning relative to this column to achieve the precise overlap 
+                   seen in the reference art direction.
+                -->
+
+                <!-- 1. Top Right Decorative Circle (Dark Grey) -->
+                <!-- Positioned off-s slightly -->
+                <div class="absolute -top-24 -right-12 w-64 h-64 rounded-full bg-[#333333] z-10"></div>
+
+                <!-- 2. Large Accent Circle (Mint Green) -->
+                <!-- The visual focal point behind the pill -->
+                <div class="absolute top-24 right-20 w-[380px] h-[380px] rounded-full border border-[#666666] bg-[#6FE6AA] z-20"></div>
+
+                <!-- 3. Main Image (Pill Shape) -->
+                <!-- The primary visual anchor -->
+                <div class="absolute top-20 left-12 w-[340px] h-[580px] shape-pill border border-[#666666] overflow-hidden bg-white z-30 shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Team Collaboration" 
+                         class="w-full h-full object-cover">
+                    <!-- 340*580 -->
+                </div>
+
+                <!-- 4. Image Circle (Bottom Right Overlap) -->
+                <!-- Represents partnership/agreement -->
+                <div class="absolute bottom-24 -right-12 w-[300px] h-[300px] rounded-full border border-[#666666] overflow-hidden bg-gray-200 z-40">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                         alt="Handshake Meeting" 
+                         class="w-full h-full object-cover">
+                    <!-- 300*300 -->
+                </div>
+
+                <!-- 5. Bottom Left Decorative Circle (Teal/Green Gradient) -->
+                <!-- Balancing the composition at the bottom -->
+                <div class="absolute -bottom-24 left-32 w-64 h-64 rounded-full border border-[#666666] z-20" 
+                     style="background: linear-gradient(180deg, #6FE6AA, #D6E8C7);">
+                </div>
+
+                <!-- 6. Bottom Right Corner Outline (Subtle detail) -->
+                <div class="absolute -bottom-32 right-48 w-64 h-64 rounded-full border border-[#666666] bg-[#E5E5E5] z-10"></div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Shodwe - Table of Contents Redesign</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { 
+            width: 1280px; height: 720px; margin: 0 auto; 
+            position: relative; background-color: #050505; 
+            overflow: hidden; display: flex; flex-direction: column; 
+        }
+        .gradient-bg { background: linear-gradient(135deg, #4A3AFF, #C471ED); }
+        .text-gradient { 
+            background: linear-gradient(to right, #4A3AFF, #FFFFFF); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+        .grid-bg {
+            background-image: linear-gradient(rgba(74, 58, 255, 0.05) 1px, transparent 1px), 
+                              linear-gradient(90deg, rgba(74, 58, 255, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+        
+        /* 修改点：移除 hover 伪类，让样式直接生效 */
+        .toc-item { 
+            transform: translateX(15px); 
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); 
+        }
+        .toc-number { 
+            color: #C471ED; 
+            text-shadow: 0 0 15px rgba(196, 113, 237, 0.6); 
+        }
+        /* 下划线条设为 100% 宽度和不透明 */
+        .toc-bar { 
+            width: 100%; 
+            opacity: 1; 
+        }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <div class="absolute inset-0 grid-bg pointer-events-none"></div>
+        <div class="absolute top-[-10%] left-[-5%] w-[600px] h-[600px] bg-[#4A3AFF] rounded-full blur-[200px] opacity-[0.1] pointer-events-none"></div>
+        <div class="absolute bottom-[-10%] right-[-5%] w-[600px] h-[600px] bg-[#C471ED] rounded-full blur-[200px] opacity-[0.1] pointer-events-none"></div>
+
+        <header class="w-full h-24 px-12 flex justify-between items-center z-50 relative border-b border-white/5 bg-white/[0.01] backdrop-blur-sm">
+            <div class="flex items-center gap-4">
+                <div class="w-1.5 h-10 gradient-bg rounded-full"></div>
+                <div class="flex flex-col">
+                    <h4 class="text-white font-black tracking-[0.25em] text-lg uppercase leading-none">Studio Shodwe</h4>
+                    <span class="text-[10px] text-[#BCA6F6] font-medium tracking-[0.4em] uppercase mt-1 opacity-80">Directory Index</span>
+                </div>
+            </div>
+            <div class="text-white/20 text-xs font-bold tracking-[0.5em] uppercase italic">Table of Contents</div>
+        </header>
+
+        <div class="flex-1 grid grid-cols-12 px-12 py-10 relative z-10">
+            <div class="col-span-4 flex flex-col justify-center">
+                <div class="mb-6 flex items-center gap-3">
+                    <span class="w-12 h-[2px] bg-[#4A3AFF]"></span>
+                    <h6 class="text-[#BCA6F6] font-bold tracking-[0.4em] text-xs uppercase">Program Flow</h6>
+                </div>
+                <h1 class="text-6xl font-black text-white leading-[0.85] tracking-tighter italic mb-8">
+                    DATA<br><span class="text-gradient">STREAM</span>
+                </h1>
+                <p class="text-[#B0B0B0] text-sm leading-relaxed max-w-xs border-l border-white/10 pl-6 opacity-60">
+                    A comprehensive walkthrough of the Project 2025 infrastructure and creative milestones.
+                </p>
+            </div>
+
+            <div class="col-span-8 grid grid-cols-2 gap-x-12 content-center">
+                <div class="space-y-1">
+                    <div class="toc-item py-4 flex items-center gap-6 border-b border-white/5">
+                        <span class="toc-number text-4xl font-black italic transition-colors duration-300">01</span>
+                        <div class="flex-1 relative">
+                            <h3 class="text-white text-lg font-bold tracking-widest uppercase">Introduction & Vision</h3>
+                            <div class="toc-bar absolute bottom-[-4px] left-0 h-[2px] gradient-bg transition-all duration-500"></div>
+                        </div>
+                    </div>
+                    <div class="toc-item py-4 flex items-center gap-6 border-b border-white/5">
+                        <span class="toc-number text-4xl font-black italic">02</span>
+                        <div class="flex-1 relative">
+                            <h3 class="text-white text-lg font-bold tracking-widest uppercase">The Market Landscape</h3>
+                            <div class="toc-bar absolute bottom-[-4px] left-0 h-[2px] gradient-bg transition-all duration-500"></div>
+                        </div>
+                    </div>
+                    <div class="toc-item py-4 flex items-center gap-6 border-b border-white/5">
+                        <span class="toc-number text-4xl font-black italic">03</span>
+                        <div class="flex-1 relative">
+                            <h3 class="text-white text-lg font-bold tracking-widest uppercase">Advanced Tech-Stack</h3>
+                            <div class="toc-bar absolute bottom-[-4px] left-0 h-[2px] gradient-bg transition-all duration-500"></div>
+                        </div>
+                    </div>
+                    <div class="toc-item py-4 flex items-center gap-6 border-b border-white/5">
+                        <span class="toc-number text-4xl font-black italic">04</span>
+                        <div class="flex-1 relative">
+                            <h3 class="text-white text-lg font-bold tracking-widest uppercase">Digital Evolution Phase</h3>
+                            <div class="toc-bar absolute bottom-[-4px] left-0 h-[2px] gradient-bg transition-all duration-500"></div>
+                        </div>
+                    </div>
+                    <div class="toc-item py-4 flex items-center gap-6 border-b border-white/5">
+                        <span class="toc-number text-4xl font-black italic">05</span>
+                        <div class="flex-1 relative">
+                            <h3 class="text-white text-lg font-bold tracking-widest uppercase">Mission 2025 Goals</h3>
+                            <div class="toc-bar absolute bottom-[-4px] left-0 h-[2px] gradient-bg transition-all duration-500"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-1">
+                    <div class="toc-item py-4 flex items-center gap-6 border-b border-white/5">
+                        <span class="toc-number text-4xl font-black italic transition-colors duration-300">06</span>
+                        <div class="flex-1 relative">
+                            <h3 class="text-white text-lg font-bold tracking-widest uppercase">Core System Analysis</h3>
+                            <div class="toc-bar absolute bottom-[-4px] left-0 h-[2px] gradient-bg transition-all duration-500"></div>
+                        </div>
+                    </div>
+                    <div class="toc-item py-4 flex items-center gap-6 border-b border-white/5">
+                        <span class="toc-number text-4xl font-black italic">07</span>
+                        <div class="flex-1 relative">
+                            <h3 class="text-white text-lg font-bold tracking-widest uppercase">User Journey Design</h3>
+                            <div class="toc-bar absolute bottom-[-4px] left-0 h-[2px] gradient-bg transition-all duration-500"></div>
+                        </div>
+                    </div>
+                    <div class="toc-item py-4 flex items-center gap-6 border-b border-white/5">
+                        <span class="toc-number text-4xl font-black italic">08</span>
+                        <div class="flex-1 relative">
+                            <h3 class="text-white text-lg font-bold tracking-widest uppercase">Quantum Security</h3>
+                            <div class="toc-bar absolute bottom-[-4px] left-0 h-[2px] gradient-bg transition-all duration-500"></div>
+                        </div>
+                    </div>
+                    <div class="toc-item py-4 flex items-center gap-6 border-b border-white/5">
+                        <span class="toc-number text-4xl font-black italic">09</span>
+                        <div class="flex-1 relative">
+                            <h3 class="text-white text-lg font-bold tracking-widest uppercase">Meet Our Architects</h3>
+                            <div class="toc-bar absolute bottom-[-4px] left-0 h-[2px] gradient-bg transition-all duration-500"></div>
+                        </div>
+                    </div>
+                    <div class="toc-item py-4 flex items-center gap-6 border-b border-white/5">
+                        <span class="toc-number text-4xl font-black italic">10</span>
+                        <div class="flex-1 relative">
+                            <h3 class="text-white text-lg font-bold tracking-widest uppercase">Contact & Reach</h3>
+                            <div class="toc-bar absolute bottom-[-4px] left-0 h-[2px] gradient-bg transition-all duration-500"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-12 flex items-center gap-4 opacity-30">
+            <div class="w-2 h-2 rounded-full gradient-bg"></div>
+            <span class="text-white text-[10px] tracking-[0.5em] uppercase">Studio Shodwe Navigation Module v2.0</span>
+        </div>
+    </div>
+</body>
+</html>

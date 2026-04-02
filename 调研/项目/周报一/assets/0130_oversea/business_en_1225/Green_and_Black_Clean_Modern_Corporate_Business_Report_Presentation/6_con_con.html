@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Initiatives - Borcelle</title>
+    
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts (Domestic CDN as requested) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- Tailwind Config for Custom Colors and Fonts -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#111113',
+                        primaryWhite: '#FFFFFF',
+                        accentGreen: '#8DAF53',
+                        textGray: '#E0E0E0',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 
+         * Page Container Strict Rules:
+         * Width: 1280px, Height: 720px
+         * No shadow on container
+         * Centered
+         */
+        .page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #111113;
+            overflow: hidden; /* Ensure content doesn't spill out */
+        }
+
+        /* Typography Utilities */
+        h1, h2, h3, h4, h5, h6, p, li, a {
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div class="page_container">
+        
+        <!-- Header / Navigation Section -->
+        <!-- Flexbox for alignment: Logo left, Nav right -->
+        <div class="flex justify-between items-center px-16 py-10 w-full z-20 relative">
+            <!-- Logo Area -->
+            <div class="tracking-widest">
+                <h3 class="text-primaryWhite text-xl font-bold uppercase tracking-[0.2em]">Borcelle</h3>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="flex items-center gap-12">
+                <ul class="flex gap-10 list-none">
+                    <li><a href="#" class="text-primaryWhite text-sm font-medium hover:text-accentGreen no-underline transition-colors">Home</a></li>
+                    <li><a href="#" class="text-primaryWhite text-sm font-medium hover:text-accentGreen no-underline transition-colors">About</a></li>
+                    <li><a href="#" class="text-primaryWhite text-sm font-medium hover:text-accentGreen no-underline transition-colors">Contact</a></li>
+                </ul>
+                <!-- Hamburger Menu Icon -->
+                <div class="text-primaryWhite text-2xl cursor-pointer">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Grid -->
+        <!-- 12-column grid layout for precision placement -->
+        <div class="grid grid-cols-12 gap-8 h-full px-0 absolute top-0 left-0 w-full pt-28 pb-0">
+            
+            <!-- Left Column: Image Area (Spans 5 columns) -->
+            <!-- Adjusted padding to create the floating card effect shown in reference -->
+            <div class="col-span-5 pl-0 pb-0 h-full flex flex-col justify-end">
+                <!-- Image Container with top-right border radius -->
+                <div class="w-full h-[580px] bg-gray-800 rounded-tr-[60px] overflow-hidden relative mr-8">
+                    <img 
+                        src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=1000&auto=format&fit=crop" 
+                        alt="Dark green leaves texture" 
+                        class="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-700"
+                    >
+                    <!-- 533*580 -->
+                    
+                    <!-- Optional overlay to ensure text contrast if needed, though mostly for mood here -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                </div>
+            </div>
+
+            <!-- Right Column: Text Content (Spans 7 columns) -->
+            <div class="col-span-7 flex flex-col justify-center pr-24 pl-8 pb-16">
+                
+                <!-- Main Heading -->
+                <div class="mb-10">
+                    <h1 class="text-primaryWhite text-[5.5rem] leading-[0.9] font-bold uppercase tracking-tighter">
+                        Current<br>
+                        <span class="font-light">Initiatives</span>
+                    </h1>
+                </div>
+
+                <!-- Body Text -->
+                <!-- Restricting width for better readability line-length -->
+                <div class="max-w-xl">
+                    <p class="text-textGray text-sm leading-7 font-light text-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Elements -->
+
+        <!-- Decorative Green Accent Block (Bottom Right) -->
+        <div class="absolute bottom-0 right-0 w-24 h-24 bg-accentGreen z-0"></div>
+
+    </div>
+
+</body>
+</html>

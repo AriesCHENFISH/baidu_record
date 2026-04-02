@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear Energy - Challenges Redesign</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { brand: { yellow: '#FFEA4A', black: '#0A0A0A', accent: '#FF3D00' } },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'sans-serif'], mono: ['Courier New', 'monospace'] }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        #page_container { width: 1280px; height: 720px; position: relative; background-color: #FFEA4A; overflow: hidden; margin: 0 auto; font-family: "Noto Sans SC", sans-serif; }
+        .grid-bg { background-image: radial-gradient(rgba(0,0,0,0.2) 1px, transparent 0); background-size: 30px 30px; opacity: 0.3; }
+        #page_container::before, #page_container::after { content: ''; position: absolute; width: 40px; height: 40px; border: 2px solid rgba(0,0,0,0.2); z-index: 5; }
+        #page_container::before { top: 30px; left: 30px; border-right: 0; border-bottom: 0; }
+        #page_container::after { bottom: 30px; right: 30px; border-left: 0; border-top: 0; }
+        .outline-text { -webkit-text-stroke: 1.5px #0A0A0A; color: transparent; text-transform: uppercase; }
+        
+        /* 移除悬停变黑动态，仅保留极简的工业边框样式 */
+        .challenge-card { 
+            border: 1px solid rgba(0,0,0,0.15); 
+            border-left: 4px solid #0A0A0A; 
+            background: rgba(0,0,0,0.03); 
+            transition: transform 0.2s ease;
+        }
+        .challenge-card:hover {
+            transform: translateX(4px); /* 轻微右移反馈 */
+            background: rgba(0,0,0,0.05);
+        }
+
+        .img-scan { position: relative; }
+        .img-scan::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: rgba(255, 234, 74, 0.5); box-shadow: 0 0 15px #FFEA4A; animation: scan 4s linear infinite; }
+        @keyframes scan { 0% { top: 0; } 100% { top: 100%; } }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <div class="absolute inset-0 grid-bg"></div>
+        <div class="absolute -right-10 top-1/2 -translate-y-1/2 text-[260px] font-black opacity-[0.04] leading-none select-none tracking-tighter">
+            CAUTION
+        </div>
+
+        <div class="relative z-10 w-full h-full p-16 flex flex-col">
+            <!-- Header -->
+            <div class="flex justify-between items-center mb-10">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-black flex items-center justify-center">
+                        <i class="fa-solid fa-earth-americas text-brand-yellow text-2xl"></i>
+                    </div>
+                    <div>
+                        <h6 class="text-xs font-black uppercase tracking-widest">Giggling Platypus Co.</h6>
+                        <p class="text-[9px] font-bold opacity-50 uppercase tracking-tighter">Risk Assessment / Archive 2026</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-6 font-mono">
+                    <div class="text-right">
+                        <span class="block text-[10px] font-bold opacity-40 uppercase">Critical Level</span>
+                        <span class="block text-sm font-black text-brand-accent italic">MODERATE</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Title -->
+            <div class="mb-12">
+                <h1 class="text-[85px] leading-[0.8] font-[950] text-brand-black tracking-tighter uppercase">
+                    Challenges & 
+                    <span class="outline-text">Concerns</span>
+                </h1>
+            </div>
+
+            <div class="grid grid-cols-12 gap-8 flex-1">
+                <!-- Visual Left -->
+                <div class="col-span-4 flex flex-col">
+                    <div class="img-scan flex-1 border-[2.5px] border-black bg-black overflow-hidden shadow-[15px_15px_0px_0px_rgba(0,0,0,1)]">
+                        <img src="https://images.unsplash.com/photo-1596328618270-4d87b337852f?q=80&w=1000&auto=format&fit=crop" 
+                             class="w-full h-full object-cover grayscale contrast-125 opacity-80">
+                        <div class="absolute top-4 left-4 bg-brand-accent text-white px-2 py-1 font-mono text-[9px] font-bold">
+                            ALARM: SEC_ZONE_7
+                        </div>
+                    </div>
+                    <div class="mt-8 border-t-2 border-black pt-4">
+                        <p class="text-[10px] font-bold uppercase tracking-widest leading-relaxed">
+                            Systemic risks must be mitigated through rigorous protocol adherence and architectural redundancy.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Content Right Grid -->
+                <div class="col-span-8 grid grid-cols-2 gap-6">
+                    <div class="challenge-card p-6 flex flex-col justify-between">
+                        <div>
+                            <span class="text-brand-accent font-mono text-sm font-black mb-4 block">#01_WASTE</span>
+                            <h4 class="text-xl font-black uppercase mb-3 text-brand-black">Waste Management</h4>
+                            <p class="text-xs font-bold opacity-60 leading-relaxed text-brand-black">Long-term storage solutions for radioactive byproducts remain a complex logistical and geological challenge.</p>
+                        </div>
+                    </div>
+                    <div class="challenge-card p-6 flex flex-col justify-between">
+                        <div>
+                            <span class="text-brand-accent font-mono text-sm font-black mb-4 block">#02_COST</span>
+                            <h4 class="text-xl font-black uppercase mb-3 text-brand-black">Construction Cost</h4>
+                            <p class="text-xs font-bold opacity-60 leading-relaxed text-brand-black">Initial capital investment and long construction timelines present significant financial hurdles for developers.</p>
+                        </div>
+                    </div>
+                    <div class="challenge-card p-6 flex flex-col justify-between">
+                        <div>
+                            <span class="text-brand-accent font-mono text-sm font-black mb-4 block">#03_SAFETY</span>
+                            <h4 class="text-xl font-black uppercase mb-3 text-brand-black">Nuclear Accidents</h4>
+                            <p class="text-xs font-bold opacity-60 leading-relaxed text-brand-black">While rare, the potential impact of containment failure requires absolute fail-safe engineering standards.</p>
+                        </div>
+                    </div>
+                    <div class="challenge-card p-6 flex flex-col justify-between">
+                        <div>
+                            <span class="text-brand-accent font-mono text-sm font-black mb-4 block">#04_PUBLIC</span>
+                            <h4 class="text-xl font-black uppercase mb-3 text-brand-black">Public Perception</h4>
+                            <p class="text-xs font-bold opacity-60 leading-relaxed text-brand-black">Political opposition and societal concerns regarding safety impact the expansion of nuclear energy networks.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

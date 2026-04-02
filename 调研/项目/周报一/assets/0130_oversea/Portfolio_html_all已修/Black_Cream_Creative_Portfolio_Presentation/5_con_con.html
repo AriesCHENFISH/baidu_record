@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Philosophy & Process</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#050505',
+                        primaryText: '#FDF6E3',
+                        secondaryText: '#9A9A9A',
+                        accent: '#D65DB1',
+                        footerAccent: '#FEF3D5',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #050505;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* 垂直居中 */
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <!-- 背景装饰 (SVG) - 居中背景 -->
+        <div class="absolute top-[80px] left-1/2 -translate-x-1/2 z-0 pointer-events-none opacity-40">
+            <svg width="600" height="200" viewBox="0 0 400 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50 100C100 20 300 150 350 50" 
+                      stroke="#D65DB1" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+
+        <!-- 装饰星号 -->
+        <div class="absolute top-[100px] right-[15%] text-accent text-6xl animate-pulse z-0 opacity-60">
+            <i class="fa-solid fa-asterisk rotate-12"></i>
+        </div>
+
+        <!-- 主内容区 -->
+        <main class="w-full px-12 z-10 flex flex-col items-center">
+            
+            <!-- 居中标题 -->
+            <div class="mb-20 text-center">
+                <h1 class="font-display font-bold text-7xl text-primaryText leading-[1.1] tracking-tight uppercase">
+                    Design Philosophy <span class="text-accent">/</span> Process
+                </h1>
+                <div class="w-24 h-1 bg-accent mx-auto mt-6"></div>
+            </div>
+
+            <!-- 时间轴视觉 -->
+            <div class="relative w-full h-[380px] grid grid-cols-5 gap-6 items-center">
+                
+                <!-- 中心基准线 -->
+                <div class="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-gray-600 to-transparent z-0"></div>
+
+                <!-- Step 1: Research & Discovery -->
+                <div class="flex flex-col h-full relative z-10 group text-center">
+                    <div class="h-1/2 flex items-end pb-6 justify-center">
+                         <div class="w-[200px] h-[140px] bg-gray-900 rounded-lg overflow-hidden border border-gray-800 opacity-80 group-hover:opacity-100 transition-opacity">
+                            <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=400&q=80" alt="Research" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                         </div>
+                    </div>
+                    <!-- Axis Dot -->
+                    <div class="absolute top-[calc(50%-4px)] left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-accent shadow-[0_0_8px_#D65DB1]"></div>
+                    <div class="h-1/2 pt-6 px-2">
+                        <h3 class="font-display text-lg text-primaryText uppercase font-bold mb-2">Research & Discovery</h3>
+                        <p class="text-secondaryText text-sm leading-relaxed opacity-80 line-clamp-3">
+                            Deep diving into user needs and market trends to establish a solid foundation for the project strategy.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 2: Concept Development -->
+                <div class="flex flex-col h-full relative z-10 group text-center">
+                    <div class="h-1/2 pt-6 px-2 order-1 flex flex-col justify-end pb-6">
+                        <h3 class="font-display text-lg text-primaryText uppercase font-bold mb-2">Concept Development</h3>
+                        <p class="text-secondaryText text-sm leading-relaxed opacity-80 line-clamp-3">
+                            Synthesizing research into visual directions and core concepts that align with brand values.
+                        </p>
+                    </div>
+                    <div class="absolute top-[calc(50%-4px)] left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-secondaryText group-hover:bg-accent transition-colors"></div>
+                    <div class="h-1/2 pt-6 justify-center flex order-2">
+                        <div class="w-[200px] h-[140px] bg-gray-900 rounded-lg overflow-hidden border border-gray-800 opacity-80 group-hover:opacity-100 transition-opacity">
+                            <img src="https://images.unsplash.com/photo-1626785774573-4b799314346d?auto=format&fit=crop&w=400&q=80" alt="Concept Sketches" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Design Execution -->
+                <div class="flex flex-col h-full relative z-10 group text-center">
+                    <div class="h-1/2 flex items-end pb-6 justify-center">
+                        <div class="w-[200px] h-[140px] bg-gray-900 rounded-lg overflow-hidden border border-gray-800 opacity-80 group-hover:opacity-100 transition-opacity">
+                             <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=400&q=80" alt="Design Execution" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                        </div>
+                    </div>
+                    <div class="absolute top-[calc(50%-4px)] left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-secondaryText group-hover:bg-accent transition-colors"></div>
+                    <div class="h-1/2 pt-6 px-2">
+                        <h3 class="font-display text-lg text-primaryText uppercase font-bold mb-2">Design Execution</h3>
+                        <p class="text-secondaryText text-sm leading-relaxed opacity-80 line-clamp-3">
+                            Transforming concepts into high-fidelity designs, focusing on pixel-perfect details and systems.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 4: Feedback & Iteration -->
+                <div class="flex flex-col h-full relative z-10 group text-center">
+                    <div class="h-1/2 pt-6 px-2 order-1 flex flex-col justify-end pb-6">
+                        <h3 class="font-display text-lg text-primaryText uppercase font-bold mb-2">Feedback & Iteration</h3>
+                        <p class="text-secondaryText text-sm leading-relaxed opacity-80 line-clamp-3">
+                            Refining the product through rigorous testing cycles and stakeholder feedback loops.
+                        </p>
+                    </div>
+                    <div class="absolute top-[calc(50%-4px)] left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-secondaryText group-hover:bg-accent transition-colors"></div>
+                    <div class="h-1/2 pt-6 justify-center flex order-2">
+                         <div class="w-[200px] h-[140px] bg-gray-900 rounded-lg overflow-hidden border border-gray-800 opacity-80 group-hover:opacity-100 transition-opacity">
+                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=400&q=80" alt="Team Feedback" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Step 5: Final Delivery -->
+                <div class="flex flex-col h-full relative z-10 group text-center">
+                    <div class="h-1/2 flex items-end pb-6 justify-center">
+                         <div class="w-[200px] h-[140px] bg-gray-900 rounded-lg overflow-hidden border border-gray-800 opacity-80 group-hover:opacity-100 transition-opacity">
+                            <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=400&q=80" alt="Final Delivery" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                        </div>
+                    </div>
+                    <div class="absolute top-[calc(50%-4px)] left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-secondaryText group-hover:bg-accent transition-colors"></div>
+                    <div class="h-1/2 pt-6 px-2">
+                        <h3 class="font-display text-lg text-primaryText uppercase font-bold mb-2">Final Delivery</h3>
+                        <p class="text-secondaryText text-sm leading-relaxed opacity-80 line-clamp-3">
+                            Preparing assets for development handoff and ensuring design integrity in production.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- 底部微弱装饰线 (保留原有的 footerAccent 概念，但以极简线条呈现) -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 w-1/3 h-[2px] bg-footerAccent opacity-20"></div>
+
+    </div>
+</body>
+</html>

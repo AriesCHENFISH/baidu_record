@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodiversity Hotspot - Cinematic Keynote</title>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0D110C',   /* Deep Forest Black */
+                        textMain: '#F2F2F2',  /* Off-white */
+                        accent: '#EAD97D',    /* Golden Glow */
+                        secondary: '#A6AFA3', /* Sage Grey */
+                        overlay: '#1A2018',   /* Dark Overlay */
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                        serif: ['"Times New Roman"', 'Times', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #0D110C;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .bg-texture {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1518531933037-9a64aa5d09da?q=80&w=2000&auto=format&fit=crop'); 
+            background-size: cover;
+            background-position: center;
+            opacity: 0.15;
+            z-index: 1;
+        }
+        
+        .bg-gradient-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(13, 17, 12, 0.4) 0%, rgba(13, 17, 12, 0.98) 100%);
+            z-index: 2;
+        }
+
+        .content-layer {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+            padding: 60px 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .text-glow {
+            text-shadow: 0 0 30px rgba(234, 217, 125, 0.4);
+        }
+
+        .text-glow-white {
+            text-shadow: 0 0 20px rgba(242, 242, 242, 0.3);
+        }
+
+        /* 统一的金色装饰线样式 */
+        .accent-line {
+            height: 2px;
+            width: 48px;
+            background: linear-gradient(90deg, #EAD97D, transparent);
+        }
+
+        .cinematic-img {
+            object-fit: cover;
+            border-radius: 2px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <div class="bg-texture"></div>
+        <div class="bg-gradient-overlay"></div>
+
+        <div class="content-layer">
+            
+            <div class="w-full flex justify-between items-start h-[340px]">
+                
+                <div class="w-[35%] h-full flex flex-col justify-between py-2">
+                    
+                    <div class="flex flex-col">
+                        <div class="accent-line mb-4"></div>
+                        <h4 class="text-2xl font-bold italic serif-font leading-none mb-3">
+                            <span class="text-white text-glow-white">Species</span>
+                            <span class="text-accent ml-2">Richness</span>
+                        </h4>
+                        <p class="text-secondary text-sm leading-relaxed font-light text-justify pr-8">
+                            Tropical forests alone contain half of the world's plant and animal species, creating a dense network of biological complexity.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col">
+                        <div class="accent-line mb-4"></div>
+                        <h4 class="text-2xl font-bold italic serif-font leading-none mb-3">
+                            <span class="text-white text-glow-white">Genetic</span>
+                            <span class="text-accent ml-2">Variety</span>
+                        </h4>
+                        <p class="text-secondary text-sm leading-relaxed font-light text-justify pr-8">
+                            High genetic diversity allows forest species to adapt to changing environments, ensuring long-term ecosystem resilience.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="w-[62%] h-full relative group">
+                    <div class="absolute inset-0 z-10 border border-accent/20 translate-x-3 translate-y-3 pointer-events-none transition-transform group-hover:translate-x-4 group-hover:translate-y-4 duration-500"></div>
+                    
+                    <div class="relative z-20 w-full h-full overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1440342359726-591831b254d7?q=80&w=1200&auto=format&fit=crop" 
+                             alt="River flowing through forest" 
+                             class="cinematic-img w-full h-full opacity-90 group-hover:scale-105 transition-transform duration-1000">
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full flex justify-between items-end">
+                
+                <div class="w-[45%] flex flex-col justify-end">
+                    <h3 class="text-textMain text-2xl font-normal leading-tight mb-4 tracking-wide border-l-2 border-accent pl-4 italic serif-font">
+                        Sanctuaries of Evolutionary Treasures
+                    </h3>
+
+                    <div class="text-secondary text-sm leading-relaxed mb-10 max-w-md pl-4">
+                        <p>
+                            Forests house more than 80% of Earth’s land species. Their diverse life forms form intricate systems that balance ecosystems and preserve climate stability.
+                        </p>
+                    </div>
+
+                    <div class="flex items-center gap-6 pl-4">
+                        <div class="flex items-center gap-3 text-textMain/80">
+                            <i class="fa-solid fa-leaf text-accent"></i>
+                            <span class="text-xs tracking-widest uppercase font-semibold">Giggling Platypus Co.</span>
+                        </div>
+                        
+                        <div class="w-10 h-10 rounded-full bg-accent flex items-center justify-center shadow-[0_0_15px_rgba(234,217,125,0.5)] cursor-pointer hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-play text-primary text-sm ml-1"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-[50%] flex flex-col items-end text-right">
+                    <div class="mb-[-15px] relative z-10">
+                        <h2 class="text-textMain font-serif text-6xl italic tracking-tight opacity-90">
+                            Biodiversity
+                        </h2>
+                    </div>
+                    
+                    <div class="relative z-20">
+                        <h1 class="text-accent font-serif text-[140px] leading-none italic text-glow font-medium">
+                            Hotspot
+                        </h1>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

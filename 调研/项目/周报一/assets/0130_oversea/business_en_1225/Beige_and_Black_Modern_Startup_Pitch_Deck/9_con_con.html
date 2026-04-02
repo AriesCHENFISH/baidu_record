@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Analysis - Strategic Overview</title>
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <!-- FontAwesome (CDN) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+
+    <!-- Google Fonts (Baidu Mirror as requested) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- ECharts (CDN) -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+
+    <!-- Custom Theme Configuration for Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgPrimary: '#0B0F19',
+                        bgDark: '#161B26',
+                        textPrimary: '#F2F0EB',
+                        textSecondary: '#B0B3B8',
+                        accentBorder: 'rgba(242, 240, 235, 0.2)',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Global Standards */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Enforce fixed layout container */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background-color: #0A0E17;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Utility for image grayscale to match mood */
+        .grayscale-img {
+            filter: grayscale(100%) contrast(110%);
+            transition: transform 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div id="page_container">
+
+        <!-- Header Section: Logo, Navigation, Date -->
+        <header class="flex justify-between items-center px-12 pt-10 mb-8">
+            <!-- Logo Area -->
+            <div class="flex items-center gap-3 text-textPrimary">
+                <i class="fa-solid fa-cube text-2xl"></i>
+                <h1 class="text-xl font-bold tracking-[0.2em] uppercase">LARANA & CO.</h1>
+            </div>
+
+            <!-- Central Toggle (Visual Navigation) -->
+            <div class="flex items-center bg-bgDark rounded-full p-1 border border-accentBorder">
+                <!-- Active Pill -->
+                <div class="bg-textPrimary text-bgPrimary px-6 py-2 rounded-full font-medium text-sm transition-all">
+                    <span>Startup Pitch Deck</span>
+                </div>
+                <!-- Inactive Section -->
+                <div class="px-6 py-2 text-textSecondary font-serif italic text-sm">
+                    <span>Business Presentation</span>
+                </div>
+            </div>
+
+            <!-- Date Display -->
+            <div class="bg-textPrimary text-bgPrimary px-6 py-2 rounded-full font-medium text-sm">
+                <span>September 18, 2025</span>
+            </div>
+        </header>
+
+        <!-- Main Content Area: Title & Description -->
+        <section class="px-12 mb-10">
+            <div class="flex items-start gap-8">
+                <!-- Typography: Huge Title -->
+                <div class="flex-shrink-0">
+                    <h2 class="text-8xl font-light text-textPrimary tracking-tighter leading-[0.9]">
+                        Market<br>
+                        <span class="font-medium">Analysis</span>
+                    </h2>
+                </div>
+
+                <!-- Decorator: Divider -->
+                <div class="text-6xl text-textSecondary font-thin opacity-50 pt-2 transform -skew-x-12">
+                    //
+                </div>
+
+                <!-- Text Content -->
+                <div class="max-w-xl pt-4">
+                    <p class="text-textSecondary text-base leading-relaxed text-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl eu sem tristique, sit amet convallis ex aliquam. Maecenas varius lectus hendrerit augue blandit, ut posuere erat aliquam. Praesent auctor tellus eget nisl blandit, at varius purus elementum.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visuals Grid: Imagery & Data -->
+        <section class="grid grid-cols-2 gap-8 px-12 h-[340px]">
+            
+            <!-- Left Column: Architectural Image -->
+            <div class="relative w-full h-full rounded-[2rem] overflow-hidden border border-accentBorder group">
+                <!-- Using Unsplash for Architectural content as per instructions -->
+                <img 
+                    src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop" 
+                    alt="Modern Architecture Building" 
+                    class="w-full h-full object-cover grayscale-img"
+                >
+                <!-- 580*340 -->
+
+                <!-- Overlay Gradient for Depth -->
+                <div class="absolute inset-0 bg-gradient-to-t from-bgPrimary/60 to-transparent"></div>
+            </div>
+
+            <!-- Right Column: Chart Visualization -->
+            <!-- Note: Using light background as per reference image to create contrast -->
+            <div class="w-full h-full bg-[#F2F0EB] rounded-[2rem] p-6 relative flex flex-col justify-center">
+                <!-- Chart Container -->
+                <div id="marketChart" class="w-full h-full"></div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Script: ECharts Configuration -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var chartDom = document.getElementById('marketChart');
+            var myChart = echarts.init(chartDom);
+            var option;
+
+            option = {
+                // Remove default background to let container color show
+                backgroundColor: 'transparent',
+                
+                // Legend configuration
+                legend: {
+                    top: '5%',
+                    right: '10%',
+                    icon: 'circle',
+                    textStyle: {
+                        color: '#0B0F19', // Dark text for light background
+                        fontFamily: 'Noto Sans SC',
+                        fontWeight: 600
+                    }
+                },
+                
+                // Grid layout within the s
+                grid: {
+                    left: '5%',
+                    right: '5%',
+                    bottom: '5%',
+                    top: '20%',
+                    containLabel: true
+                },
+                
+                // Tooltip for interactivity
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: { type: 'shadow' }
+                },
+
+                // X-Axis Configuration
+                xAxis: {
+                    type: 'category',
+                    data: ['Item 1', 'Item 2', 'Item 3'],
+                    axisLine: { show: false },
+                    axisTick: { show: false },
+                    axisLabel: {
+                        color: '#0B0F19',
+                        fontWeight: 'bold',
+                        fontSize: 14,
+                        margin: 15,
+                        fontFamily: 'Noto Sans SC'
+                    }
+                },
+
+                // Y-Axis Configuration
+                yAxis: {
+                    type: 'value',
+                    splitLine: {
+                        show: true,
+                        lineStyle: {
+                            color: 'rgba(0,0,0,0.1)', // Subtle grid lines
+                            type: 'dashed'
+                        }
+                    },
+                    axisLabel: {
+                        color: '#555',
+                        fontWeight: 500,
+                        fontFamily: 'Noto Sans SC'
+                    }
+                },
+
+                // Data Series
+                series: [
+                    {
+                        name: 'Series 1',
+                        type: 'bar',
+                        data: [3, 8, 16],
+                        barWidth: '35%',
+                        itemStyle: {
+                            color: '#5B7C99', // Muted Blue-Grey
+                            borderRadius: [6, 6, 0, 0] // Rounded top
+                        },
+                        barGap: '20%' // Gap between bars in same category
+                    },
+                    {
+                        name: 'Series 2',
+                        type: 'bar',
+                        data: [6, 14, 18],
+                        barWidth: '35%',
+                        itemStyle: {
+                            color: '#0B0F19', // Deep Black/Blue
+                            borderRadius: [6, 6, 0, 0]
+                        }
+                    }
+                ],
+                animation: false // No animation as per requirements
+            };
+
+            myChart.setOption(option);
+        });
+    </script>
+</body>
+</html>

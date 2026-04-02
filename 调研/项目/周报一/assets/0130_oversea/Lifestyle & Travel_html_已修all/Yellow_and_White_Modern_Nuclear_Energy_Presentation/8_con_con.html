@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear Energy - Safety Redesign</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { brand: { yellow: '#FFEA4A', black: '#0A0A0A', accent: '#00D1FF' /* 使用青色代表安全/稳定 */ } },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'sans-serif'], mono: ['Courier New', 'monospace'] }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        #page_container { width: 1280px; height: 720px; position: relative; background-color: #FFEA4A; overflow: hidden; margin: 0 auto; font-family: "Noto Sans SC", sans-serif; }
+        .grid-bg { background-image: radial-gradient(rgba(0,0,0,0.2) 1px, transparent 0); background-size: 30px 30px; opacity: 0.3; }
+        #page_container::before, #page_container::after { content: ''; position: absolute; width: 40px; height: 40px; border: 2px solid rgba(0,0,0,0.2); z-index: 5; }
+        #page_container::before { top: 30px; left: 30px; border-right: 0; border-bottom: 0; }
+        #page_container::after { bottom: 30px; right: 30px; border-left: 0; border-top: 0; }
+        .outline-text { -webkit-text-stroke: 1.5px #0A0A0A; color: transparent; text-transform: uppercase; }
+        .step-divider { position: relative; padding-left: 2rem; border-left: 2px solid #0A0A0A; }
+        .step-divider::before { content: ''; position: absolute; left: -5px; top: 12px; width: 8px; height: 8px; background: #0A0A0A; transform: rotate(45deg); }
+        .img-scan { position: relative; }
+        .img-scan::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: rgba(0, 209, 255, 0.5); box-shadow: 0 0 15px #00D1FF; animation: scan 4s linear infinite; }
+        @keyframes scan { 0% { top: 0; } 100% { top: 100%; } }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <div class="absolute inset-0 grid-bg"></div>
+        <div class="absolute -left-10 bottom-10 text-[260px] font-black opacity-[0.04] leading-none select-none tracking-tighter">
+            SECURE
+        </div>
+
+        <div class="relative z-10 w-full h-full p-16 flex flex-col">
+            <!-- Header -->
+            <div class="flex justify-between items-center mb-10">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-black flex items-center justify-center">
+                        <i class="fa-solid fa-earth-americas text-brand-yellow text-2xl"></i>
+                    </div>
+                    <div>
+                        <h6 class="text-xs font-black uppercase tracking-widest">Giggling Platypus Co.</h6>
+                        <p class="text-[9px] font-bold opacity-50 uppercase tracking-tighter">Safety Protocol / Archive 2026</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-6 font-mono text-xs font-bold">
+                    <span class="px-2 py-1 bg-black text-brand-accent animate-pulse">SYSTEM_SHIELD: ON</span>
+                </div>
+            </div>
+
+            <!-- Title -->
+            <div class="mb-12">
+                <h1 class="text-[90px] leading-[0.8] font-[950] text-brand-black tracking-tighter uppercase">
+                    Safety 
+                    <span class="outline-text">Measures</span>
+                </h1>
+            </div>
+
+            <div class="grid grid-cols-12 gap-16 flex-1 items-stretch">
+                <!-- Content Left -->
+                <div class="col-span-7 flex flex-col justify-center space-y-10">
+                    <div class="step-divider">
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="text-xs font-mono font-bold bg-black text-white px-1.5 py-0.5">LAYER_01</span>
+                            <h3 class="text-2xl font-black uppercase">Multiple Barriers</h3>
+                        </div>
+                        <p class="text-sm font-bold opacity-70 leading-relaxed">
+                            <span class="text-brand-black mr-2">//</span> Defense-in-depth reactor design with physical containment vessels.
+                        </p>
+                    </div>
+
+                    <div class="step-divider">
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="text-xs font-mono font-bold bg-black text-white px-1.5 py-0.5">LAYER_02</span>
+                            <h3 class="text-2xl font-black uppercase">International Standards</h3>
+                        </div>
+                        <p class="text-base font-bold opacity-70 leading-relaxed">
+                            <span class="text-brand-black mr-2">//</span> Global compliance with IAEA regulations and cross-border safety protocols.
+                        </p>
+                    </div>
+
+                    <div class="step-divider">
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="text-xs font-mono font-bold bg-black text-white px-1.5 py-0.5">LAYER_03</span>
+                            <h3 class="text-2xl font-black uppercase">Active Monitoring</h3>
+                        </div>
+                        <p class="text-base font-bold opacity-70 leading-relaxed">
+                            <span class="text-brand-black mr-2">//</span> 24/7 AI-driven surveillance and continuous professional staff training.
+                        </p>
+                    </div>
+
+                    <div class="step-divider border-l-brand-accent">
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="text-xs font-mono font-bold bg-brand-accent text-black px-1.5 py-0.5">UPDATE</span>
+                            <h3 class="text-2xl font-black uppercase">Post-Fukushima Upgrades</h3>
+                        </div>
+                        <p class="text-base font-bold opacity-70 leading-relaxed">
+                            <span class="text-brand-black mr-2">//</span> Implementation of advanced cooling systems and seismic reinforcement.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Visual Right -->
+                <div class="col-span-5 flex flex-col justify-center">
+                    <div class="img-scan border-[2.5px] border-black shadow-[20px_20px_0px_0px_rgba(0,209,255,1)] bg-black overflow-hidden h-[420px]">
+                        <img src="https://images.unsplash.com/photo-1603785606059-e3c3b4a25997?q=80&w=1000&auto=format&fit=crop" 
+                             class="w-full h-full object-cover grayscale contrast-125">
+                        <div class="absolute bottom-4 right-4 bg-brand-yellow text-black px-2 py-1 font-mono text-[9px] font-bold">
+                            PROTOCOL_V4.2
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 03 - Analytics</title>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { deepBlack: '#020204', accentPink: '#FF7EB6', accentPurple: '#9D50E6', accentCyan: '#00D1FF' },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { margin: 0; padding: 0; overflow: hidden; }
+        .chart-ring { transform: rotate(-90deg); transform-origin: 50% 50%; }
+        .chart-segment { transition: stroke-dasharray 1s ease-out; }
+    </style>
+</head>
+<body>
+    <div class="relative w-[1280px] h-[720px] mx-auto bg-deepBlack text-white overflow-hidden font-sans">
+        
+        <!-- Background Decor -->
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-accentPurple opacity-5 rounded-full blur-[100px]"></div>
+        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accentPink opacity-5 rounded-full blur-[80px]"></div>
+
+        <div class="flex h-full p-16 relative z-10 gap-16 items-center">
+            
+            <!-- Left: Text Content -->
+            <div class="w-5/12">
+                <div class="inline-flex items-center space-x-2 border-l-4 border-accentPurple pl-4 mb-6">
+                    <span class="text-sm tracking-[0.2em] text-gray-400 uppercase">Growth Metrics</span>
+                </div>
+                
+                <h1 class="text-6xl font-bold leading-none mb-6">
+                    Market<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-accentPurple to-accentPink">Dominance</span>
+                </h1>
+                
+                <p class="text-gray-400 mb-10 leading-relaxed">
+                    Visualizing our user base distribution across different sectors. Our adaptive algorithms have secured a majority share in the creative tech industry.
+                </p>
+
+                <!-- Legend -->
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between p-4 bg-white/5 rounded-lg border border-white/5">
+                        <div class="flex items-center gap-3">
+                            <div class="w-3 h-3 rounded-full bg-accentPink shadow-[0_0_10px_#FF7EB6]"></div>
+                            <span class="font-bold">Creative SaaS</span>
+                        </div>
+                        <span class="font-mono text-accentPink">45%</span>
+                    </div>
+                    <div class="flex items-center justify-between p-4 bg-white/5 rounded-lg border border-white/5">
+                        <div class="flex items-center gap-3">
+                            <div class="w-3 h-3 rounded-full bg-accentPurple shadow-[0_0_10px_#9D50E6]"></div>
+                            <span class="font-bold">Enterprise</span>
+                        </div>
+                        <span class="font-mono text-accentPurple">35%</span>
+                    </div>
+                    <div class="flex items-center justify-between p-4 bg-white/5 rounded-lg border border-white/5">
+                        <div class="flex items-center gap-3">
+                            <div class="w-3 h-3 rounded-full bg-accentCyan shadow-[0_0_10px_#00D1FF]"></div>
+                            <span class="font-bold">Consumer</span>
+                        </div>
+                        <span class="font-mono text-accentCyan">20%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: The Pie Chart Visual -->
+            <div class="w-7/12 flex items-center justify-center relative">
+                <!-- Glowing Backdrop -->
+                <div class="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent rounded-full blur-3xl transform scale-75"></div>
+                
+                <!-- SVG Chart -->
+                <div class="relative w-[500px] h-[500px]">
+                    <svg viewBox="0 0 100 100" class="w-full h-full chart-ring">
+                        <!-- Track -->
+                        <circle cx="50" cy="50" r="40" fill="transparent" stroke="rgba(255,255,255,0.05)" stroke-width="12"></circle>
+                        
+                        <!-- Segment 1: Cyan (Consumer 20%) - Dasharray calculation: 2*PI*40 * 0.2 ~= 50 -->
+                        <circle cx="50" cy="50" r="40" fill="transparent" stroke="#00D1FF" stroke-width="12" 
+                                stroke-dasharray="50 201" stroke-dashoffset="0" stroke-linecap="round"></circle>
+                                
+                        <!-- Segment 2: Purple (Enterprise 35%) - Starts after Cyan. 20% of circ is ~50. Dasharray: ~88 -->
+                        <circle cx="50" cy="50" r="40" fill="transparent" stroke="#9D50E6" stroke-width="12" 
+                                stroke-dasharray="88 163" stroke-dashoffset="-55" stroke-linecap="round"></circle>
+                                
+                        <!-- Segment 3: Pink (Creative 45%) - Starts after others. Dasharray: ~113 -->
+                        <circle cx="50" cy="50" r="40" fill="transparent" stroke="#FF7EB6" stroke-width="12" 
+                                stroke-dasharray="113 138" stroke-dashoffset="-148" stroke-linecap="round"></circle>
+                    </svg>
+
+                    <!-- Center Stats -->
+                    <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+                        <div class="text-5xl font-bold text-white mb-1">2.4M</div>
+                        <div class="text-sm text-gray-400 uppercase tracking-widest">Active Users</div>
+                    </div>
+
+                    <!-- Floating Card Decor -->
+                    <div class="absolute top-10 right-0 bg-gray-900/80 backdrop-blur-md p-4 rounded-xl border border-white/10 shadow-2xl animate-bounce" style="animation-duration: 3s;">
+                        <i class="fa-solid fa-arrow-trend-up text-green-400 mr-2"></i>
+                        <span class="text-sm font-bold text-white">+12.5% YoY</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

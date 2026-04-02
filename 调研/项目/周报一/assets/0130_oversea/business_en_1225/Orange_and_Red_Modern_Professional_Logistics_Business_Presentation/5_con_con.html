@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salford & Co - Financial Overview</title>
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts (Domestic Mirror as requested) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <!-- ECharts -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+
+    <style>
+        /* CSS Reset & Global Rules */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* Main Page Container */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #F9F9FB; /* Global Background */
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            /* Decorative background shapes using CSS gradients */
+            background-image: 
+                radial-gradient(circle at 90% 10%, rgba(217, 112, 54, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 10% 90%, rgba(217, 112, 54, 0.03) 0%, transparent 30%);
+        }
+
+        /* Typography & Utilities */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            color: #000000;
+            line-height: 1.2;
+        }
+
+        p {
+            color: #333333;
+            line-height: 1.6;
+        }
+
+        /* Decorative Line Pattern (CSS Implementation of the wave) */
+        .deco-line {
+            position: absolute;
+            border: 1px solid #E8C9BC;
+            border-radius: 50%;
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        /* Custom Scrollbar hide */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#D97036',
+                        bgLight: '#F9F9FB',
+                        cardNeutral: '#EBEBEB',
+                        textMain: '#000000',
+                        textBody: '#333333',
+                        textInvert: '#FFFFFF',
+                        deco: '#E8C9BC'
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans SC', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Main Container -->
+    <div id="page_container">
+        
+        <!-- Background Decoration (Abstract Geometry) -->
+        <div class="deco-line" style="width: 600px; height: 600px; right: -200px; bottom: -200px;"></div>
+        <div class="deco-line" style="width: 500px; height: 500px; right: -150px; bottom: -150px;"></div>
+        <div class="deco-line" style="width: 400px; height: 400px; right: -100px; bottom: -100px;"></div>
+
+        <!-- Header Section -->
+        <header class="absolute top-0 left-0 w-full px-12 py-8 flex justify-between items-center z-20">
+            <!-- Brand Identity -->
+            <div class="flex items-center gap-4">
+                <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center shadow-lg shadow-orange-200">
+                    <i class="fa-solid fa-lightbulb text-textInvert text-lg"></i>
+                </div>
+                <span class="text-xl font-bold tracking-wide text-textMain">Salford & Co</span>
+            </div>
+            <!-- Page Number -->
+            <div class="text-textBody font-medium tracking-widest text-sm opacity-60">06/12</div>
+        </header>
+
+        <!-- Main Content Grid -->
+        <div class="grid grid-cols-12 gap-10 px-12 h-full content-center pt-16">
+            
+            <!-- Left Column: Data Visualization (Replaces dark cards with clean modern cards) -->
+            <div class="col-span-7 grid grid-rows-[55%_45%] gap-6 h-[540px]">
+                
+                <!-- Row 1: Line Chart & Donut Chart -->
+                <div class="grid grid-cols-2 gap-6 h-full">
+                    
+                    <!-- Line Chart Card -->
+                    <div class="bg-white rounded-2xl p-6 shadow-xl shadow-gray-100/50 flex flex-col relative border border-gray-100">
+                        <div class="flex justify-between items-center mb-2">
+                             <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider">Total Revenue Trend</h3>
+                             <div class="flex items-center gap-2">
+                                 <span class="w-2 h-2 rounded-full bg-primary"></span>
+                                 <span class="text-xs text-gray-400">Revenue</span>
+                             </div>
+                        </div>
+                        <!-- EChart Container -->
+                        <div id="chart-line" class="flex-1 w-full h-full"></div>
+                    </div>
+
+                    <!-- Donut Chart Card -->
+                    <div class="bg-primary rounded-2xl p-6 shadow-xl shadow-orange-200 flex flex-col items-center justify-center relative text-textInvert">
+                        <div class="absolute top-4 left-4 text-xs opacity-80 uppercase tracking-wider">Market Share</div>
+                        <!-- EChart Container -->
+                        <div id="chart-donut" class="w-full h-40"></div>
+                        <div class="mt-2 text-center">
+                            <h3 class="text-lg font-bold">Salford & Co.</h3>
+                            <p class="text-xs opacity-80 mt-1 font-light">Performance dominance in 2024</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Row 2: Bar Chart Card -->
+                <div class="bg-white rounded-2xl p-6 shadow-xl shadow-gray-100/50 flex flex-col border border-gray-100">
+                     <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider">Profitability Analysis</h3>
+                        <div class="flex gap-4">
+                            <div class="flex items-center gap-1">
+                                <span class="w-2 h-2 bg-[#E8C9BC]"></span>
+                                <span class="text-xs text-gray-400">Net Profit</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <span class="w-2 h-2 bg-primary"></span>
+                                <span class="text-xs text-gray-400">EBITDA</span>
+                            </div>
+                        </div>
+                   </div>
+                   <!-- EChart Container -->
+                   <div id="chart-bar" class="flex-1 w-full h-full"></div>
+                </div>
+
+            </div>
+
+            <!-- Right Column: Text Content -->
+            <div class="col-span-5 flex flex-col justify-center pl-4 pr-8 relative z-10">
+                <!-- Title -->
+                <h1 class="text-6xl mb-6 tracking-tight">
+                    Overview of <br>
+                    <span class="text-primary relative inline-block">
+                        Financial
+                        <!-- Subtle underline decoration -->
+                        <span class="absolute bottom-2 left-0 w-full h-3 bg-orange-100 -z-10 rounded-sm opacity-50"></span>
+                    </span> <br>
+                    Performance
+                </h1>
+
+                <!-- Body Text -->
+                <div class="mb-8">
+                    <p class="text-lg text-gray-600 font-light mb-4 text-justify">
+                        In 2024, Salford & Co. demonstrated robust financial performance, as its total revenue increased from <b>$1.07 billion</b> in 2023 to <b>$1.2 billion</b>. 
+                    </p>
+                    <p class="text-lg text-gray-600 font-light text-justify">
+                        Operational efficiencies and cost-saving initiatives throughout the supply chain contributed to a <b>3% increase</b> in our gross profit margin. The following is a concise overview of our primary financial metrics.
+                    </p>
+                </div>
+
+                <!-- Footer Tag/Button -->
+                <div>
+                    <div class="inline-flex items-center gap-3 bg-gray-900 text-white px-6 py-3 rounded-full shadow-lg">
+                        <div class="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center">
+                            <i class="fa-solid fa-chart-line text-primary text-sm"></i>
+                        </div>
+                        <span class="font-medium tracking-wide">Financial Report 2024</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ECharts Logic -->
+    <script>
+        // 1. Line Chart (Top Left)
+        const lineChart = echarts.init(document.getElementById('chart-line'));
+        const lineOption = {
+            grid: { top: '15%', right: '5%', bottom: '15%', left: '10%' },
+            tooltip: { trigger: 'axis' },
+            xAxis: {
+                type: 'category',
+                data: ['Q1', 'Q2', 'Q3', 'Q4', 'YE'],
+                axisLine: { show: false },
+                axisTick: { show: false },
+                axisLabel: { color: '#999', fontSize: 10 }
+            },
+            yAxis: {
+                type: 'value',
+                splitLine: { lineStyle: { type: 'dashed', color: '#eee' } },
+                axisLabel: { color: '#999', fontSize: 10 }
+            },
+            series: [{
+                data: [18, 26, 23, 35, 36],
+                type: 'line',
+                smooth: true,
+                symbol: 'circle',
+                symbolSize: 8,
+                itemStyle: { color: '#D97036' },
+                lineStyle: { width: 3, color: '#D97036' },
+                areaStyle: {
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                        { offset: 0, color: 'rgba(217, 112, 54, 0.2)' },
+                        { offset: 1, color: 'rgba(217, 112, 54, 0)' }
+                    ])
+                }
+            }]
+        };
+        lineChart.setOption(lineOption);
+
+        // 2. Donut Chart (Top Right)
+        const donutChart = echarts.init(document.getElementById('chart-donut'));
+        const donutOption = {
+            tooltip: { show: false },
+            series: [
+                {
+                    name: 'Performance',
+                    type: 'pie',
+                    radius: ['60%', '80%'],
+                    avoidLabelOverlap: false,
+                    label: { show: false },
+                    emphasis: { scale: false },
+                    labelLine: { show: false },
+                    data: [
+                        { value: 75, itemStyle: { color: '#FFFFFF' } }, // White part (Main)
+                        { value: 25, itemStyle: { color: 'rgba(255,255,255,0.3)' } } // Transparent part
+                    ]
+                }
+            ]
+        };
+        donutChart.setOption(donutOption);
+
+        // 3. Bar Chart (Bottom)
+        const barChart = echarts.init(document.getElementById('chart-bar'));
+        const barOption = {
+            grid: { top: '10%', right: '5%', bottom: '15%', left: '15%' },
+            tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
+            xAxis: {
+                type: 'value',
+                splitLine: { show: false },
+                axisLabel: { show: false }
+            },
+            yAxis: {
+                type: 'category',
+                data: ['Ops', 'Sales', 'Mkt'],
+                axisLine: { show: false },
+                axisTick: { show: false },
+                axisLabel: { color: '#666', fontWeight: 500 }
+            },
+            series: [
+                {
+                    name: 'Net Profit',
+                    type: 'bar',
+                    stack: 'total',
+                    label: { show: false },
+                    itemStyle: { color: '#E8C9BC', borderRadius: [0, 0, 0, 0] },
+                    data: [320, 302, 301]
+                },
+                {
+                    name: 'EBITDA',
+                    type: 'bar',
+                    stack: 'total',
+                    label: { show: false },
+                    itemStyle: { color: '#D97036', borderRadius: [0, 4, 4, 0] },
+                    data: [120, 132, 101]
+                }
+            ]
+        };
+        barChart.setOption(barOption);
+
+        // Resize handler
+        window.addEventListener('resize', () => {
+            lineChart.resize();
+            donutChart.resize();
+            barChart.resize();
+        });
+    </script>
+</body>
+</html>

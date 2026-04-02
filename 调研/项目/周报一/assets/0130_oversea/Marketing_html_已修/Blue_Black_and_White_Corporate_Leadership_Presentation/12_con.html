@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Analysis - Keynote Slide</title>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.2/echarts.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgMain: '#FAFAFA', textPrimary: '#1A1A1A', textSecondary: '#555555',
+                        accentOrange: '#E57D48', accentBlue: '#4D9EF4', pureWhite: '#FFFFFF',
+                    },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        .page-container { width: 1280px; height: 720px; margin: 0 auto; background-color: #FAFAFA; overflow: hidden; font-family: 'Noto Sans SC', sans-serif; display: flex; padding: 60px 80px; position: relative; }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <div class="w-2/5 flex flex-col justify-between pr-8 z-10">
+            <div>
+                <h1 class="text-5xl text-textPrimary font-bold mb-6 leading-tight">Market<br>Competitiveness</h1>
+                <p class="text-textSecondary text-sm leading-relaxed mb-4 text-justify">
+                    Our analysis indicates a strong lead in customer satisfaction and product innovation. However, brand awareness in tier-2 cities requires immediate attention to maintain our growth trajectory.
+                </p>
+                <ul class="list-disc pl-5 text-textSecondary text-sm space-y-2">
+                    <li><span class="font-bold text-accentOrange">Innovation:</span> 20% higher than avg.</li>
+                    <li><span class="font-bold text-accentBlue">Service:</span> Top-tier ranking.</li>
+                    <li><span class="font-bold text-textPrimary">Price:</span> Competitive but pressing.</li>
+                </ul>
+            </div>
+
+            <div class="relative w-full max-w-sm mt-8">
+                <div class="absolute -top-8 left-0 bg-accentOrange text-pureWhite px-6 py-2 rounded-t-xl text-sm font-medium shadow-sm">
+                    Key Takeaway
+                </div>
+                <div class="relative bg-white border border-gray-200 p-4 rounded-2xl rounded-tl-none shadow-xl flex items-center gap-4">
+                    <div class="bg-gray-100 rounded-xl overflow-hidden w-24 h-24 flex-shrink-0 relative shadow-inner">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="text-lg font-bold text-textPrimary">Action Req.</h4>
+                        <p class="text-xs text-textSecondary mt-1">Increase marketing budget for Q3 to boost awareness.</p>
+                    </div>
+                    <div class="pr-2"><i class="fa-solid fa-arrow-right text-accentBlue text-xl"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-3/5 flex items-center justify-center relative">
+            <div class="absolute top-10 right-10 w-64 h-64 bg-accentBlue opacity-5 rounded-full blur-3xl -z-1"></div>
+            <div id="radarChart" class="w-full h-[600px]"></div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var chartDom = document.getElementById('radarChart');
+            var myChart = echarts.init(chartDom);
+            const colorOrange = '#E57D48';
+            const colorBlue = '#4D9EF4';
+
+            var option = {
+                animation: false,
+                legend: { bottom: '5%', icon: 'circle' },
+                radar: {
+                    indicator: [
+                        { name: 'Innovation', max: 100 },
+                        { name: 'Marketing', max: 100 },
+                        { name: 'Sales', max: 100 },
+                        { name: 'Support', max: 100 },
+                        { name: 'Tech', max: 100 },
+                        { name: 'Admin', max: 100 }
+                    ],
+                    shape: 'circle',
+                    splitNumber: 4,
+                    axisName: { color: '#1A1A1A', fontSize: 14, fontFamily: 'Inter', fontWeight: 'bold' },
+                    splitArea: { areaStyle: { color: ['#fff', '#fafafa'] } },
+                    axisLine: { lineStyle: { color: '#E0E0E0' } },
+                    splitLine: { lineStyle: { color: '#E0E0E0' } }
+                },
+                series: [{
+                    type: 'radar',
+                    data: [
+                        {
+                            value: [90, 60, 85, 95, 88, 70],
+                            name: 'Our Company',
+                            symbol: 'none',
+                            itemStyle: { color: colorOrange },
+                            areaStyle: { color: colorOrange, opacity: 0.3 }
+                        },
+                        {
+                            value: [70, 85, 75, 60, 70, 80],
+                            name: 'Competitor A',
+                            symbol: 'none',
+                            itemStyle: { color: colorBlue },
+                            areaStyle: { color: colorBlue, opacity: 0.1 } // Faint background
+                        }
+                    ]
+                }]
+            };
+            myChart.setOption(option);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear Energy - Premium Redesign</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            yellow: '#FFEA4A',
+                            black: '#0A0A0A',
+                            accent: '#FF3D00'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                        mono: ['Courier New', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* 1. 基础容器美化 */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background-color: #FFEA4A;
+            overflow: hidden;
+            margin: 0 auto;
+            font-family: "Noto Sans SC", sans-serif;
+        }
+
+        /* 2. 增加点阵背景纹理 */
+        .grid-bg {
+            background-image: radial-gradient(rgba(0,0,0,0.2) 1px, transparent 0);
+            background-size: 30px 30px;
+            opacity: 0.3;
+        }
+
+        /* 3. 容器四角的对焦装饰线 */
+        #page_container::before, #page_container::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border: 2px solid rgba(0,0,0,0.2);
+            z-index: 5;
+            pointer-events: none;
+        }
+        #page_container::before { top: 30px; left: 30px; border-right: 0; border-bottom: 0; }
+        #page_container::after { bottom: 30px; right: 30px; border-left: 0; border-top: 0; }
+
+        /* 4. 文字描边效果 */
+        .outline-text {
+            -webkit-text-stroke: 1.5px #0A0A0A;
+            color: transparent;
+            text-transform: uppercase;
+        }
+
+        /* 5. 步骤条辅助线 */
+        .step-divider {
+            position: relative;
+            padding-left: 2rem;
+            border-left: 1px solid rgba(0,0,0,0.1);
+        }
+        .step-divider::before {
+            content: '';
+            position: absolute;
+            left: -3px;
+            top: 10px;
+            width: 5px;
+            height: 5px;
+            background: #0A0A0A;
+            border-radius: 50%;
+        }
+
+        /* 6. 图片扫描光效 */
+        .img-scan {
+            position: relative;
+        }
+        .img-scan::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 2px;
+            background: rgba(255, 234, 74, 0.5);
+            box-shadow: 0 0 15px #FFEA4A;
+            animation: scan 4s linear infinite;
+        }
+        @keyframes scan {
+            0% { top: 0; }
+            100% { top: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <div class="absolute inset-0 grid-bg"></div>
+        
+        <div class="absolute -right-10 top-1/2 -translate-y-1/2 text-[260px] font-black opacity-[0.04] leading-none select-none tracking-tighter">
+            SYSTEM
+        </div>
+
+        <div class="relative z-10 w-full h-full p-16 flex flex-col">
+            
+            <div class="flex justify-between items-center mb-10">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-black flex items-center justify-center">
+                        <i class="fa-solid fa-earth-americas text-brand-yellow text-2xl"></i>
+                    </div>
+                    <div>
+                        <h6 class="text-xs font-black uppercase tracking-widest">Giggling Platypus Co.</h6>
+                        <p class="text-[9px] font-bold opacity-50 uppercase tracking-tighter">Nuclear Research / Archive 2026</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-6">
+                    <div class="text-right">
+                        <span class="block text-[10px] font-bold opacity-40 uppercase">Efficiency Rate</span>
+                        <span class="block text-sm font-black">98.4%</span>
+                    </div>
+                    <div class="w-px h-8 bg-black/10"></div>
+                    <div class="text-right">
+                        <span class="block text-[10px] font-bold opacity-40 uppercase">Current Phase</span>
+                        <span class="block text-sm font-black text-brand-accent italic font-mono">STABLE</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-12">
+                <h1 class="text-[90px] leading-[0.8] font-[950] text-brand-black tracking-tighter uppercase">
+                    How Nuclear<br>
+                    <span class="outline-text">Energy</span> Works
+                </h1>
+            </div>
+
+            <div class="grid grid-cols-12 gap-16 flex-1 items-stretch">
+                
+                <div class="col-span-6 flex flex-col justify-end">
+                    <div class="relative group">
+                        <div class="img-scan relative overflow-hidden border-[2.5px] border-black shadow-[20px_20px_0px_0px_rgba(0,0,0,1)] bg-black">
+                            
+                            <img src="https://images.unsplash.com/photo-1597843787498-4c8d76a20d43?q=80&w=1200&auto=format&fit=crop" 
+                                 class="w-full h-[340px] object-cover contrast-125 grayscale hover:grayscale-0 transition-all duration-700 opacity-90">
+                            
+                            <div class="absolute top-4 right-4 bg-brand-yellow text-black px-2 py-1 font-mono text-[9px] font-bold">
+                                DATA_STREAM: 0x442
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-span-6 flex flex-col justify-between py-4">
+                    
+                    <div class="step-divider">
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="text-xs font-mono font-bold bg-black text-brand-yellow px-1.5 py-0.5">STEP 01</span>
+                            <h3 class="text-xl font-black uppercase">Nuclear Fission</h3>
+                        </div>
+                        <p class="text-sm font-bold opacity-70 leading-relaxed max-w-md">
+                            Neutrons collide with heavy atoms (Uranium-235), causing them to split and release intense thermal energy.
+                        </p>
+                    </div>
+
+                    <div class="step-divider">
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="text-xs font-mono font-bold bg-black text-brand-yellow px-1.5 py-0.5">STEP 02</span>
+                            <h3 class="text-xl font-black uppercase">Thermal Transfer</h3>
+                        </div>
+                        <p class="text-sm font-bold opacity-70 leading-relaxed max-w-md">
+                            Concentrated heat transforms pure water into high-velocity steam within a pressurized containment system.
+                        </p>
+                    </div>
+
+                    <div class="step-divider border-l-0"> <div class="flex items-center gap-3 mb-2">
+                            <span class="text-xs font-mono font-bold bg-brand-accent text-white px-1.5 py-0.5 animate-pulse">OUTPUT</span>
+                            <h3 class="text-xl font-black uppercase text-brand-black">Kinetic Energy</h3>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <p class="text-sm font-bold opacity-70 leading-relaxed">
+                                Expanding steam drives massive turbine blades, converting kinetic energy into carbon-free electricity.
+                            </p>
+                            <i class="fa-solid fa-arrow-right-long text-2xl mt-1"></i>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

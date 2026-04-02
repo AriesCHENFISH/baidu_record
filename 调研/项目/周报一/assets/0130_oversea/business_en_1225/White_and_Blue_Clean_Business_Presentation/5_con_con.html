@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is Teamwork? - Keynote Slide</title>
+    
+    <!-- 1. FontAwesome CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- 2. Google Fonts (Domestic Mirror as requested) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- 3. Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <!-- 4. Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2D3A7C', // Deep Blue
+                        accent: '#F5AD41',  // Orange/Yellow
+                        bgLight: '#F3F4F6', // Light Gray for subtle contrast
+                        textMain: '#2D3A7C',
+                        textGray: '#6B7280',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    },
+                    spacing: {
+                        '128': '32rem',
+                    },
+                    borderRadius: {
+                        '4xl': '2.5rem',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- 5. Global Styles & Reset -->
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container - Strict 1280x720 */
+        .page-container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FFFFFF;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Geometric Decoration Circles */
+        .decoration-circle {
+            position: absolute;
+            border-radius: 50%;
+            border: 2px solid #E8E8E8;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Text Utilities */
+        .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            transform: rotate(180deg);
+        }
+        
+        /* Custom Shadow for depth */
+        .soft-shadow {
+            box-shadow: 0 20px 40px -10px rgba(45, 58, 124, 0.15);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div class="page-container">
+        
+        <!-- Background Decorations (Subtle geometry) -->
+        <div class="decoration-circle" style="width: 800px; height: 800px; left: -200px; bottom: -400px; opacity: 0.6;"></div>
+        <div class="decoration-circle" style="width: 600px; height: 600px; left: -100px; bottom: -300px; opacity: 0.4;"></div>
+        <div class="decoration-circle" style="width: 1000px; height: 1000px; right: -300px; top: -300px; border-color: #F8F8F8;"></div>
+
+        <!-- Content Grid: 12 Columns -->
+        <div class="grid grid-cols-12 h-full relative z-10 p-16 gap-12">
+            
+            <!-- Left Column: Typography & Content (5 Columns) -->
+            <div class="col-span-5 flex flex-col justify-center pr-8">
+                
+                <!-- Decorative Accent Pill -->
+                <div class="w-24 h-3 bg-accent rounded-full mb-8"></div>
+
+                <!-- Main Title -->
+                <h1 class="text-7xl font-bold text-primary leading-tight mb-8">
+                    What is <br>
+                    <span class="text-primary">teamwork?</span>
+                </h1>
+
+                <!-- Body Text -->
+                <article class="prose">
+                    <p class="text-textGray text-gl leading-relaxed text-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper orci sapien, vel volutpat diam euismod lobortis. Praesent auctor massa sed nisl auctor dictum. Mauris ut tempus risus. Donec iaculis tincidunt odio vel dapibus. Curabitur accumsan aliquam convallis. Phasellus nec arcu tortor. Aliquam placerat quam ut auctor ornare.
+                    </p>
+                </article>
+
+            </div>
+
+            <!-- Right Column: Visual Compositions (7 Columns) -->
+            <div class="col-span-7 flex flex-col justify-center h-full gap-8 pl-4">
+
+                <!-- Top Visual: Team Image + Floating Button -->
+                <div class="relative w-full h-64 soft-shadow rounded-4xl overflow-visible">
+                    <!-- Image Container -->
+                    <div class="absolute inset-0 rounded-4xl overflow-hidden bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Team collaborating around a laptop" 
+                             class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700">
+                        <!-- 560*256 -->
+                    </div>
+
+                    <!-- Floating "Business" Action Pill -->
+                    <div class="absolute -bottom-6 left-12 flex items-center shadow-lg">
+                        <!-- Icon Circle -->
+                        <div class="w-12 h-12 rounded-full bg-accent flex items-center justify-center z-10">
+                            <i class="fa-solid fa-chevron-right text-white text-lg"></i>
+                        </div>
+                        <!-- Label Rectangle -->
+                        <div class="bg-primary h-12 flex items-center px-8 rounded-r-full -ml-6 pl-8">
+                            <span class="text-white font-medium tracking-wide">Business</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Visual: 2025 Year + Handshake -->
+                <div class="relative w-full h-64 flex mt-4 soft-shadow">
+                    
+                    <!-- Vertical Year Banner (Left part of the card) -->
+                    <div class="w-24 bg-primary rounded-l-4xl flex items-center justify-center flex-shrink-0 relative overflow-hidden">
+                        <!-- Decorative circle inside blue bar -->
+                        <div class="absolute w-32 h-32 border border-white/20 rounded-full -top-10 -left-10"></div>
+                        
+                        <!-- Vertical Text -->
+                        <h2 class="vertical-text text-white font-bold text-4xl tracking-widest opacity-90">
+                            2025
+                        </h2>
+                    </div>
+
+                    <!-- Image Container (Right part of the card) -->
+                    <div class="flex-grow rounded-r-4xl overflow-hidden bg-gray-100 relative">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Professional handshake close up" 
+                             class="w-full h-full object-cover">
+                        <!-- 460*256 -->
+                        
+                        <!-- Subtle Overlay Gradient for better integration -->
+                        <div class="absolute inset-0" style="background: linear-gradient(90deg, rgba(45, 58, 124, 0.2), transparent);"></div>
+                    </div>
+
+                    <!-- Decorative Accent Arc on the right edge -->
+                    <div class="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-1/2 w-4 h-32 bg-accent rounded-l-full opacity-0"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Sports Keynote</title>
+    
+    <!-- Google Fonts (Domestic CDN) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <!-- Tailwind Config for Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FFFFFF',
+                        bgBlue: '#4A89C6',
+                        accentGreen: '#7FA956',
+                        darkBlue: '#3A6CA0',
+                        inkBlack: '#000000',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* No styles on body allowed per rules, keep clean */
+            font-family: 'Noto Sans SC', sans-serif;
+            background-color: #f0f0f0; /* Just for preview contrast outside container */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Page Container Specs */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #4A89C6, #3A6CA0); /* Sky Blue to Dark Blue Gradient */
+        }
+
+        /* Utility Helpers */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .text-shadow-lg {
+            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div id="page_container">
+        
+        <!-- Decorative Background Elements (Abstract Clouds/Wind) -->
+        <div class="absolute top-[-100px] right-[-100px] w-[500px] h-[500px] rounded-full opacity-20" style="background: radial-gradient(circle, #FFFFFF, transparent);"></div>
+        <div class="absolute bottom-[-50px] left-[-50px] w-[400px] h-[400px] rounded-full opacity-10" style="background: radial-gradient(circle, #FFFFFF, transparent);"></div>
+
+        <!-- Header / Logo Area -->
+        <div class="absolute top-10 left-12 z-20">
+            <div class="bg-primary px-6 py-2 rounded-full shadow-lg flex items-center gap-3">
+                <i class="fa-solid fa-futbol text-inkBlack text-xl"></i>
+                <h6 class="text-inkBlack font-bold text-sm tracking-wide uppercase">Fradel and Spies Co.</h6>
+            </div>
+        </div>
+
+        <!-- Grid Layout for Content -->
+        <div class="grid grid-cols-12 h-full w-full relative z-10 p-12 pt-24">
+            
+            <!-- Left Column: Big Title & Bottom Image -->
+            <div class="col-span-7 flex flex-col justify-between h-full relative">
+                
+                <!-- Main Typography -->
+                <div class="mt-4 relative z-20">
+                    <!-- Top Decorative Lines -->
+                    <div class="flex gap-2 mb-4 opacity-80">
+                        <div class="w-8 h-2 bg-primary transform -skew-x-[20deg]"></div>
+                        <div class="w-4 h-2 bg-accentGreen transform -skew-x-[20deg]"></div>
+                        <div class="w-32 h-2 bg-primary transform -skew-x-[20deg]"></div>
+                    </div>
+
+                    <h1 class="text-[140px] leading-[0.85] font-black text-primary tracking-tighter text-shadow-lg">
+                        THANK<br>
+                        <span class="text-transparent" style="-webkit-text-stroke: 3px #FFFFFF;">YOU</span>
+                    </h1>
+                </div>
+
+                <!-- Bottom Left Image (Sitting Player) -->
+                <!-- Positioning absolute relative to column to achieve overlap effect -->
+                <div class="relative w-[420px] h-[280px] mt-8 group">
+                    <div class="absolute inset-0 bg-accentGreen rounded-xl transform rotate-[-3deg] translate-x-3 translate-y-3 opacity-80"></div>
+                    <div class="relative w-full h-full rounded-xl overflow-hidden shadow-2xl border-4 border-white/20">
+                        <img src="https://images.unsplash.com/photo-1517466787929-bc90951d6dbb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Soccer player sitting on field" 
+                             class="w-full h-full object-cover">
+                        <!-- 420*280 -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Top Image & Contact Info -->
+            <div class="col-span-5 flex flex-col justify-between h-full pl-8 pb-8">
+                
+                <!-- Top Right Image (Looking away) -->
+                <div class="relative w-[440px] h-[260px] self-end mt-4 mb-8">
+                    <div class="absolute inset-0 bg-primary rounded-xl transform rotate-[2deg] translate-x-2 translate-y-2 opacity-30"></div>
+                    <div class="relative w-full h-full rounded-xl overflow-hidden shadow-2xl border-4 border-white/20">
+                        <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Soccer player resting" 
+                             class="w-full h-full object-cover">
+                        <!-- 440*260 -->
+                    </div>
+                </div>
+
+                <!-- Contact Information Grid -->
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/10 shadow-lg mt-auto">
+                    <h5 class="text-accentGreen font-bold tracking-widest uppercase text-sm mb-6 border-b border-white/20 pb-2">Get in Touch</h5>
+                    
+                    <div class="grid grid-cols-1 gap-y-6">
+                        <!-- Row 1 -->
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <h6 class="text-primary/70 text-xs font-semibold uppercase tracking-wider mb-1">
+                                    <i class="fa-solid fa-envelope mr-2"></i>Email
+                                </h6>
+                                <p class="text-primary font-medium text-sm">hello@reallygreatsite.com</p>
+                            </div>
+                            <div>
+                                <h6 class="text-primary/70 text-xs font-semibold uppercase tracking-wider mb-1">
+                                    <i class="fa-solid fa-phone mr-2"></i>Phone
+                                </h6>
+                                <p class="text-primary font-medium text-sm">+123-456-7890</p>
+                            </div>
+                        </div>
+
+                        <!-- Row 2 -->
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <h6 class="text-primary/70 text-xs font-semibold uppercase tracking-wider mb-1">
+                                    <i class="fa-solid fa-globe mr-2"></i>Website
+                                </h6>
+                                <p class="text-primary font-medium text-sm">www.reallygreatsite.com</p>
+                            </div>
+                            <div>
+                                <h6 class="text-primary/70 text-xs font-semibold uppercase tracking-wider mb-1">
+                                    <i class="fa-solid fa-location-dot mr-2"></i>Address
+                                </h6>
+                                <p class="text-primary font-medium text-sm leading-snug">123 Anywhere St., Any City</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Decorative Lines -->
+                <div class="flex gap-2 mt-8 justify-end opacity-80">
+                    <div class="w-32 h-2 bg-primary transform -skew-x-[20deg]"></div>
+                    <div class="w-4 h-2 bg-accentGreen transform -skew-x-[20deg]"></div>
+                    <div class="w-8 h-2 bg-primary transform -skew-x-[20deg]"></div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Water and Sanitation - Premium Edition</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', 'Noto Sans SC', sans-serif; }
+        
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #F8F9FB; /* 统一背景色 */
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            padding: 0 80px;
+        }
+
+        .blob {
+            position: absolute;
+            filter: blur(100px);
+            z-index: 0;
+            border-radius: 50%;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #6236FF 0%, #B621FE 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* 胶囊型配图框 */
+        .capsule-frame {
+            width: 440px;
+            height: 560px;
+            background: white;
+            border-radius: 220px 220px 40px 40px;
+            overflow: hidden;
+            border: 8px solid white;
+            box-shadow: 0 30px 60px rgba(98, 54, 255, 0.12);
+        }
+
+        /* 升级后的卡片设计 */
+        .info-card {
+            background: white;
+            border-radius: 24px;
+            padding: 24px;
+            border: 1px solid rgba(0,0,0,0.03);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(98,54,255,0.08);
+        }
+        .info-card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: #6236FF;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .info-card:hover::before {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <!-- 背景装饰 -->
+        <div class="blob bg-purple-100 w-[500px] h-[500px] -top-20 -left-20 opacity-60"></div>
+        <div class="blob bg-blue-50 w-[400px] h-[400px] bottom-0 right-0 opacity-40"></div>
+
+        <div class="grid grid-cols-12 w-full relative z-10 items-center gap-12">
+            
+            <!-- 左侧内容区 (7列) -->
+            <div class="col-span-7 flex flex-col justify-center">
+                
+                <!-- 顶部主标题 -->
+                <div class="mb-12">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="h-[3px] w-12 bg-purple-600"></div>
+                        <span class="text-purple-600 font-bold uppercase tracking-[0.2em] text-xs">Sustainability Goal</span>
+                    </div>
+                    <h1 class="text-[72px] font-black text-gray-900 leading-[1.05] tracking-tight">
+                        Clean Water & <br>
+                        <span class="text-gradient">Sanitation</span>
+                    </h1>
+                </div>
+
+                <!-- 2x2 精致小卡片 -->
+                <div class="grid grid-cols-2 gap-6">
+                    
+                    <!-- 卡片 1 -->
+                    <div class="info-card">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-12 h-12 rounded-2xl bg-purple-50 flex items-center justify-center text-purple-600">
+                                <i class="fa-solid fa-glass-water text-xl"></i>
+                            </div>
+                            <!-- 修改为紫色圆点按钮 -->
+                            <div class="w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center text-white shadow-lg shadow-purple-200">
+                                <i class="fa-solid fa-arrow-up-right text-[10px]"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 italic">Safe Drinking Water</h3>
+                        <p class="text-sm text-gray-500 leading-relaxed">Prevents waterborne diseases and supports essential clinical health.</p>
+                    </div>
+
+                    <!-- 卡片 2 -->
+                    <div class="info-card">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600">
+                                <i class="fa-solid fa-hands-bubbles text-xl"></i>
+                            </div>
+                            <!-- 修改为紫色圆点按钮 -->
+                            <div class="w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center text-white shadow-lg shadow-purple-200">
+                                <i class="fa-solid fa-arrow-up-right text-[10px]"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 italic">Proper Sanitation</h3>
+                        <p class="text-sm text-gray-500 leading-relaxed">Reduces community contamination and environmental health risks.</p>
+                    </div>
+
+                    <!-- 卡片 3 -->
+                    <div class="info-card">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-12 h-12 rounded-2xl bg-green-50 flex items-center justify-center text-green-600">
+                                <i class="fa-solid fa-pump-soap text-xl"></i>
+                            </div>
+                            <!-- 修改为紫色圆点按钮 -->
+                            <div class="w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center text-white shadow-lg shadow-purple-200">
+                                <i class="fa-solid fa-arrow-up-right text-[10px]"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 italic">Hygiene Practices</h3>
+                        <p class="text-sm text-gray-500 leading-relaxed">Regular handwashing helps stop the rapid spread of viral infections.</p>
+                    </div>
+
+                    <!-- 卡片 4 -->
+                    <div class="info-card">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-12 h-12 rounded-2xl bg-orange-50 flex items-center justify-center text-orange-600">
+                                <i class="fa-solid fa-hand-holding-medical text-xl"></i>
+                            </div>
+                            <!-- 修改为紫色圆点按钮 -->
+                            <div class="w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center text-white shadow-lg shadow-purple-200">
+                                <i class="fa-solid fa-arrow-up-right text-[10px]"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 italic">Global Criticality</h3>
+                        <p class="text-sm text-gray-500 leading-relaxed">Especially vital for resilient health systems in low-resource areas.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 右侧视觉区 (5列) -->
+            <div class="col-span-5 relative flex flex-col items-end">
+                
+                <div class="capsule-frame relative">
+                    <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=1000&auto=format&fit=crop" 
+                         alt="Elderly medical care" 
+                         class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-purple-900/10 to-transparent"></div>
+                </div>
+
+                <!-- 浮动数据标签 1 -->
+                <div class="absolute -right-6 top-16 bg-white/90 backdrop-blur p-6 rounded-3xl shadow-2xl border border-white z-20">
+                    <h2 class="text-4xl font-black text-gray-900">25%</h2>
+                    <div class="w-8 h-1 bg-purple-600 my-2 rounded-full"></div>
+                    <p class="text-xs font-bold text-gray-400 uppercase tracking-widest">Access Gap</p>
+                </div>
+
+                <!-- 浮动数据标签 2 -->
+                <div class="absolute -left-12 bottom-20 bg-purple-600 p-8 rounded-3xl shadow-2xl z-30 min-w-[200px]">
+                    <h2 class="text-5xl font-black text-white">45%</h2>
+                    <p class="text-lg text-white/90 font-medium italic mt-2 leading-none">Sanitation</p>
+                    <p class="text-sm text-white/60 font-light mt-1 uppercase tracking-tighter">System Deficit</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 装饰性元素 -->
+        <div class="absolute bottom-10 right-10 text-gray-300 text-[10px] font-bold tracking-[0.5em] uppercase">
+            Healthcare.Core.2025
+        </div>
+    </div>
+
+</body>
+</html>

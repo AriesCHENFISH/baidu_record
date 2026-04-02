@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Portfolio Keynote</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts CDN (Specific Link) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- Custom Config for Tailwind to match specific colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#20457C',
+                        secondary: '#3A5A6D',
+                        line: '#5A7A90',
+                        bgWhite: '#FFFFFF',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    },
+                    spacing: {
+                        '1280': '1280px',
+                        '720': '720px',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Enforcing the Page Container Constraints */
+        .page-container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FFFFFF;
+            overflow: hidden; /* Ensure content doesn't spill out */
+            display: grid;
+            grid-template-rows: 72% 28%; /* Visual Split */
+        }
+
+        /* Text Utilities override to ensure no span block issues */
+        p, h1, h2, h3, h4, h5, h6 {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div class="page-container">
+
+        <!-- Top Section: Hero Image & Title -->
+        <!-- Using a grid cell to hold the image and overlay content -->
+        <div class="relative w-full h-full bg-slate-200 overflow-hidden group">
+            
+            <!-- Background Image: Ocean Texture -->
+            <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?q=80&w=2070&auto=format&fit=crop" 
+                 alt="Deep Blue Ocean Texture" 
+                 class="absolute inset-0 w-full h-full object-cover opacity-95">
+            <!-- 1280*518 -->
+
+            <!-- Gradient Overlay for Legibility -->
+            <div class="absolute inset-0" style="background: linear-gradient(180deg, rgba(32,69,124,0.2) 0%, rgba(32,69,124,0.4) 100%);"></div>
+
+            <!-- Decorative Frame Line (Abstracting the original curved line) -->
+            <!-- Creating a sophisticated border effect -->
+            <div class="absolute top-8 left-8 bottom-0 right-auto w-24 border-l-4 border-t-4 border-white/80 rounded-tl-[60px]"></div>
+
+            <!-- Content Wrapper -->
+            <div class="relative z-10 w-full h-full flex flex-col justify-center items-center">
+                <!-- Main Title -->
+                <div class="text-center">
+                    <h1 class="text-white font-black text-[130px] leading-[0.85] tracking-tighter uppercase drop-shadow-xl" style="text-shadow: 0 4px 30px rgba(0,0,0,0.3);">
+                        Creative
+                    </h1>
+                    <h1 class="text-white font-black text-[130px] leading-[0.85] tracking-tighter uppercase drop-shadow-xl" style="text-shadow: 0 4px 30px rgba(0,0,0,0.3);">
+                        Portfolio
+                    </h1>
+                </div>
+                
+                <!-- Decorative Icon separator -->
+                <div class="mt-6 text-white/80 text-2xl">
+                    <i class="fa-solid fa-water"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Section: Info Footer -->
+        <!-- Using flexbox for columnar layout -->
+        <div class="w-full h-full bg-white px-16 py-0 flex items-center justify-between">
+            
+            <!-- Left Column: Role & Credit -->
+            <div class="flex flex-col justify-center items-start gap-1 w-1/3 border-l-4 border-primary pl-6">
+                <h2 class="text-primary font-bold text-3xl tracking-tight">Graphic Designer</h2>
+                <div class="flex items-center gap-2 text-secondary text-sm font-medium uppercase tracking-widest mt-1">
+                    <i class="fa-solid fa-pen-nib text-xs"></i>
+                    <span>Designed by: Olivia Wilson</span>
+                </div>
+            </div>
+
+            <!-- Center Column: Date & Meta -->
+            <div class="flex flex-col justify-center items-center w-1/3">
+                <h2 class="text-primary font-black text-5xl tracking-widest" style="font-variant-numeric: tabular-nums;">
+                    30<span class="text-line mx-2 font-light">-</span>04<span class="text-line mx-2 font-light">-</span>27
+                </h2>
+                <p class="text-secondary text-sm font-semibold uppercase tracking-[0.2em] mt-2 opacity-80">
+                    Presentations Template
+                </p>
+            </div>
+
+            <!-- Right Column: Description Text -->
+            <div class="flex flex-col justify-center items-end w-1/3 text-right">
+                <div class="max-w-xs">
+                    <p class="text-secondary text-sm leading-relaxed font-normal">
+                        Presentations are communication tools that can be used as demonstration lectures, speeches, reports, and more. It is mostly presented before an audience.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

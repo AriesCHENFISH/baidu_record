@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet The Artist - Presentation Slide</title>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            black: '#000000',
+                            accent: '#BCE46C',
+                            dark: '#1A2E05',
+                            text: '#E0E0E0'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px;
+            background-color: #000000; overflow: hidden;
+            margin: 0 auto; position: relative;
+        }
+
+        .title-underline {
+            height: 4px; width: 80px;
+            background: linear-gradient(90deg, #BCE46C, transparent);
+            border-radius: 2px; margin-top: 1.5rem;
+        }
+
+        .organic-shape {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+
+        /* 强调段落的特殊装饰 */
+        .highlight-quote::before {
+            content: '"';
+            position: absolute;
+            left: -40px;
+            top: -20px;
+            font-size: 80px;
+            color: #BCE46C;
+            font-family: serif;
+            opacity: 0.3;
+        }
+
+        .ambient-glow {
+            position: absolute; width: 800px; height: 800px;
+            background: radial-gradient(circle, rgba(188, 228, 108, 0.08) 0%, rgba(0,0,0,0) 70%);
+            bottom: -200px; right: -200px; pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <div class="ambient-glow"></div>
+
+        <div class="grid grid-cols-12 h-full w-full relative z-10">
+            
+            <div class="col-span-6 flex flex-col justify-center pl-24 pr-12">
+                
+                <div class="mb-10">
+                    <div class="relative inline-block group">
+                        <div class="absolute -inset-1 bg-brand-accent/20 rounded-full blur opacity-25"></div>
+                        <div class="relative border border-brand-accent/50 bg-black rounded-full px-6 py-1.5 flex items-center shadow-lg">
+                            <span class="w-1.5 h-1.5 bg-brand-accent rounded-full mr-3 animate-pulse"></span>
+                            <span class="text-brand-accent text-xs font-bold tracking-[0.2em] uppercase">About Me</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-16">
+                    <h1 class="text-[72px] leading-[0.9] font-black text-white tracking-tighter uppercase">
+                        Meet The <br>
+                        <span class="text-brand-accent font-light italic">Artist</span>
+                    </h1>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="relative space-y-12">
+                    <div class="relative highlight-quote">
+                        <p class="text-white text-2xl font-medium leading-snug tracking-tight italic">
+                            Hello, my name is <span class="text-brand-accent not-italic font-black border-b-2 border-brand-accent/30">Olivia Wilson</span>, 
+                            and I craft multidisciplinary experiences that bridge the gap between imagination and reality.
+                        </p>
+                    </div>
+                    
+                    <div class="ml-8 flex gap-5">
+                        <div class="w-1 h-auto bg-gradient-to-b from-brand-accent to-transparent opacity-40"></div>
+                        <p class="text-brand-text text-base font-light leading-relaxed opacity-60 max-w-sm italic">
+                            I specialize in functional aesthetics, experimenting with colors and techniques to help bring your design dreams to life. Let's create something amazing together.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-span-6 h-full relative flex items-center justify-center">
+                <div class="absolute w-[580px] h-[580px] organic-shape opacity-10 bg-brand-accent blur-3xl animate-pulse"></div>
+                
+                <div class="relative w-[520px] h-[520px] organic-shape overflow-hidden border-2 border-brand-accent/20 shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1000&auto=format&fit=crop" 
+                         alt="Artist Portrait" 
+                         class="w-full h-full object-cover grayscale transition-all duration-1000 hover:grayscale-0 hover:scale-105">
+                </div>
+
+                <div class="absolute bottom-20 right-20 bg-brand-dark/80 backdrop-blur-md border border-brand-accent/30 px-4 py-3 rounded-2xl flex items-center gap-4 shadow-xl">
+                    <div class="w-10 h-10 rounded-full bg-brand-accent flex items-center justify-center">
+                        <i class="fa-solid fa-signature text-black"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-brand-accent text-[10px] font-bold uppercase tracking-tighter">Verified Artist</span>
+                        <span class="text-white text-xs font-mono">OW-2026-PORTFOLIO</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

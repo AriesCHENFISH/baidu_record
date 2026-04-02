@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Performance Report</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBlack: '#000000',
+                        accentGreen: '#C3E86C',
+                        textGray: '#CCCCCC',
+                        lineGray: '#333333',
+                        subText: '#666666'
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+
+    <!-- ECharts CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+
+    <!-- Google Fonts (Domestic Mirror as requested) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        /* CSS Reset & Global Refactoring */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container - Strict 1280x720 */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #000000;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+            /* Box-shadow forbidden by strict rules */
+        }
+
+        /* Custom Scrollbar hide */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Utility for flex centering */
+        .flex-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div id="page_container">
+
+        <!-- Header / Logo Section -->
+        <div class="absolute top-8 left-10 z-20 flex items-center gap-3">
+            <div class="text-accentGreen text-2xl">
+                <i class="fa-solid fa-bolt"></i>
+            </div>
+            <h2 class="text-white text-lg font-medium tracking-wide">Rimberio Marketing</h2>
+        </div>
+
+        <!-- Main Content Grid -->
+        <div class="w-full h-full flex">
+            
+            <!-- Left Panel: Visual/Image -->
+            <!-- Using a high-quality Unsplash image to replace the original vlogger photo -->
+            <div class="w-[35%] h-full relative border-r border-lineGray overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1000&auto=format&fit=crop" 
+                     alt="Content Creator Vlogging" 
+                     class="w-full h-full object-cover opacity-80 grayscale hover:grayscale-0 transition-all duration-700">
+                <!-- 448*720 -->
+                
+                <!-- Gradient Overlay for text readability at bottom if needed -->
+                <div class="absolute bottom-0 left-0 w-full h-32" style="background: linear-gradient(to top, #000000, transparent);"></div>
+            </div>
+
+            <!-- Right Panel: Data Analysis -->
+            <div class="w-[65%] h-full flex flex-col px-12 pt-12 pb-8 relative">
+                
+                <!-- Page Title -->
+                <div class="mb-8 border-b border-lineGray pb-4">
+                    <h1 class="text-6xl text-white font-light tracking-tighter">
+                        Content <span class="italic font-serif text-accentGreen">Performance</span>
+                    </h1>
+                </div>
+
+                <!-- Comparison Grid -->
+                <div class="flex w-full h-full">
+                    
+                    <!-- Column: Post A -->
+                    <div class="w-1/2 pr-8 border-r border-lineGray border-dashed flex flex-col justify-between">
+                        
+                        <!-- Top Section -->
+                        <div>
+                            <p class="text-accentGreen text-sm font-bold uppercase tracking-widest mb-2">Top Posts:</p>
+                            <h3 class="text-4xl text-white font-medium mb-6">Post A</h3>
+
+                            <!-- Metrics Row -->
+                            <div class="flex gap-6 mb-6">
+                                <div class="flex items-center gap-2 text-textGray">
+                                    <i class="fa-solid fa-heart text-accentGreen text-xs"></i>
+                                    <span class="text-sm">3,000</span>
+                                </div>
+                                <div class="flex items-center gap-2 text-textGray">
+                                    <i class="fa-solid fa-comment text-accentGreen text-xs"></i>
+                                    <span class="text-sm">1,200</span>
+                                </div>
+                                <div class="flex items-center gap-2 text-textGray">
+                                    <i class="fa-solid fa-share text-accentGreen text-xs"></i>
+                                    <span class="text-sm">1,500</span>
+                                </div>
+                            </div>
+
+                            <!-- Chart Container -->
+                            <div id="chartA" class="w-full h-[180px]"></div>
+                        </div>
+
+                        <!-- Bottom Analysis -->
+                        <div class="mt-4">
+                            <p class="text-subText text-xs uppercase mb-1">Content Type Analysis:</p>
+                            <div class="flex justify-between items-end">
+                                <span class="text-white text-xl">Images</span>
+                                <div class="text-right">
+                                    <h4 class="text-5xl text-white font-bold tracking-tight">5.0<span class="text-2xl text-accentGreen">%</span></h4>
+                                    <p class="text-subText text-xs mt-1">Engagement Rate</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column: Post B -->
+                    <div class="w-1/2 pl-8 flex flex-col justify-between">
+                         <!-- Top Section -->
+                         <div>
+                            <p class="text-accentGreen text-sm font-bold uppercase tracking-widest mb-2">Top Posts:</p>
+                            <h3 class="text-4xl text-white font-medium mb-6">Post B</h3>
+
+                            <!-- Metrics Row -->
+                            <div class="flex gap-6 mb-6">
+                                <div class="flex items-center gap-2 text-textGray">
+                                    <i class="fa-solid fa-heart text-accentGreen text-xs"></i>
+                                    <span class="text-sm">950</span>
+                                </div>
+                                <div class="flex items-center gap-2 text-textGray">
+                                    <i class="fa-solid fa-comment text-accentGreen text-xs"></i>
+                                    <span class="text-sm">250</span>
+                                </div>
+                                <div class="flex items-center gap-2 text-textGray">
+                                    <i class="fa-solid fa-share text-accentGreen text-xs"></i>
+                                    <span class="text-sm">100</span>
+                                </div>
+                            </div>
+
+                            <!-- Chart Container -->
+                            <div id="chartB" class="w-full h-[180px]"></div>
+                        </div>
+
+                        <!-- Bottom Analysis -->
+                        <div class="mt-4">
+                            <p class="text-subText text-xs uppercase mb-1">Content Type Analysis:</p>
+                            <div class="flex justify-between items-end">
+                                <span class="text-white text-xl">Videos</span>
+                                <div class="text-right">
+                                    <h4 class="text-5xl text-white font-bold tracking-tight">4.0<span class="text-2xl text-accentGreen">%</span></h4>
+                                    <p class="text-subText text-xs mt-1">Engagement Rate</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Footer Info -->
+                <div class="absolute bottom-6 w-full pr-24 flex justify-between text-subText text-xs">
+                    <p>Monthly Performance Report</p>
+                    <p>www.reallygreatsite.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ECharts Logic -->
+    <script type="text/javascript">
+        // Shared chart configuration function
+        function getOption(dataValues) {
+            return {
+                backgroundColor: 'transparent',
+                grid: {
+                    left: '0%',
+                    right: '10%',
+                    top: '10%',
+                    bottom: '0%',
+                    containLabel: true
+                },
+                xAxis: {
+                    type: 'value',
+                    splitLine: { show: false },
+                    axisLabel: { show: false },
+                    axisLine: { show: false },
+                    axisTick: { show: false }
+                },
+                yAxis: {
+                    type: 'category',
+                    data: ['Share', 'Comment', 'Like'],
+                    axisLine: { show: false },
+                    axisTick: { show: false },
+                    axisLabel: {
+                        color: '#999',
+                        fontSize: 10,
+                        fontFamily: 'Noto Sans SC',
+                        margin: 10
+                    }
+                },
+                series: [
+                    {
+                        name: 'Interactions',
+                        type: 'bar',
+                        data: dataValues, // Input data here [Share, Comment, Like] to match yAxis order
+                        barWidth: 12,
+                        itemStyle: {
+                            color: '#C3E86C',
+                            borderRadius: [0, 20, 20, 0] // Rounded ends
+                        },
+                        label: {
+                            show: false
+                        }
+                    }
+                ]
+            };
+        }
+
+        // Initialize Chart A
+        var chartADom = document.getElementById('chartA');
+        var myChartA = echarts.init(chartADom);
+        // Post A Data: Like 3000, Comment 1200, Share 1500 -> Reverse order for bar chart: [1500, 1200, 3000]
+        var optionA = getOption([1500, 1200, 3000]);
+        myChartA.setOption(optionA);
+
+        // Initialize Chart B
+        var chartBDom = document.getElementById('chartB');
+        var myChartB = echarts.init(chartBDom);
+        // Post B Data: Like 950, Comment 250, Share 100 -> Reverse order for bar chart: [100, 250, 950]
+        var optionB = getOption([100, 250, 950]);
+        myChartB.setOption(optionB);
+
+        // Handle Resize (Optional strictly for this task since fixed px, but good practice)
+        window.addEventListener('resize', function() {
+            myChartA.resize();
+            myChartB.resize();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Keynote Cover - Liceria & Co.</title>
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #2A4029;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* 旋转动画 */
+        @keyframes rotate-text {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-rotate {
+            animation: rotate-text 20s linear infinite;
+        }
+
+        /* 标题呼吸发光 */
+        @keyframes title-glow {
+            0%, 100% { text-shadow: 0 0 20px rgba(255,255,255,0.2); }
+            50% { text-shadow: 0 0 50px rgba(217, 70, 62, 0.5); }
+        }
+        .glow-text {
+            animation: title-glow 4s ease-in-out infinite;
+        }
+
+        /* 进度条条纹 */
+        .striped-bar {
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 4px,
+                rgba(224, 230, 223, 0.4) 4px,
+                rgba(224, 230, 223, 0.4) 8px
+            );
+        }
+
+        .pitch-line {
+            border-color: rgba(140, 155, 138, 0.4);
+        }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryBg: '#2A4029',
+                        contentBox: '#617360',
+                        textMain: '#FFFFFF',
+                        textBody: '#E0E6DF',
+                        lineColor: '#8C9B8A',
+                        accentRed: '#D9463E',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <!-- 1. 背景层 -->
+        <div class="absolute inset-0 z-0">
+            <!-- 草地纹理 -->
+            <img src="https://images.unsplash.com/photo-1529900748604-07564a03e7a6?q=80&w=2500&auto=format&fit=crop" 
+                 class="w-full h-full object-cover opacity-30 mix-blend-overlay">
+            <!-- 叠加径向渐变，制造舞台中心感 -->
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#1a2919_100%)] opacity-80"></div>
+        </div>
+
+        <!-- 2. 球场几何装饰线条 (Pitch Structure) -->
+        <div class="absolute inset-0 z-10 pointer-events-none">
+            <div class="absolute left-1/2 top-0 bottom-0 w-[1px] bg-lineColor/20 transform -translate-x-1/2"></div>
+            <div class="absolute left-1/2 top-1/2 w-[600px] h-[600px] border border-lineColor/20 rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
+            <!-- 角标装饰 -->
+            <div class="absolute top-10 left-10 w-20 h-20 border-t border-l border-lineColor/30"></div>
+            <div class="absolute top-10 right-10 w-20 h-20 border-t border-r border-lineColor/30"></div>
+        </div>
+
+        <!-- 3. [统一品牌Logo] 顶部 Header -->
+        <div class="absolute top-12 left-16 z-30 flex items-start gap-5">
+            <div class="relative w-28 h-28 flex items-center justify-center">
+                <svg class="absolute w-full h-full animate-rotate" viewBox="0 0 100 100">
+                    <defs>
+                        <path id="coverLogoPath" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" />
+                    </defs>
+                    <text fill="#FFFFFF" font-size="7.5" font-weight="600" letter-spacing="2.5" class="opacity-80 uppercase">
+                        <textPath xlink:href="#coverLogoPath">• LICERIA SPORTS & CO • PREMIUM KEYNOTE •</textPath>
+                    </text>
+                </svg>
+                <div class="w-14 h-14 bg-accentRed rounded-full border border-white/20 flex items-center justify-center shadow-[0_0_20px_rgba(217,70,62,0.4)]">
+                    <i class="fa-solid fa-futbol text-white text-2xl"></i>
+                </div>
+            </div>
+            <div class="mt-5">
+                <h6 class="text-textMain text-xl font-bold tracking-[0.3em] leading-none uppercase">Liceria</h6>
+                <p class="text-lineColor text-[10px] tracking-[0.5em] font-light mt-2 uppercase">Sports Presentation v2.0</p>
+            </div>
+        </div>
+
+        <!-- 4. 核心标题区 -->
+        <div class="relative z-20 w-full h-full flex flex-col justify-center items-center">
+            
+            <div class="text-center">
+                <!-- 顶部副标题装饰 -->
+                <div class="mb-6 flex items-center justify-center gap-4">
+                    <div class="h-[1px] w-12 bg-accentRed"></div>
+                    <span class="text-textBody text-sm font-bold tracking-[0.5em] uppercase opacity-70">The Strategy of Excellence</span>
+                    <div class="h-[1px] w-12 bg-accentRed"></div>
+                </div>
+
+                <!-- 主标题：使用了更大的字号和呼吸发光效果 -->
+                <div class="relative">
+                    <h1 class="text-white text-[180px] leading-none font-black tracking-tighter uppercase glow-text italic">
+                        Football
+                    </h1>
+                    <!-- 装饰性的半透明大数字 -->
+                    <div class="absolute -top-10 -right-10 text-white/5 text-[240px] font-black -z-10 select-none">26</div>
+                </div>
+
+                <!-- 底部口号 -->
+                <p class="mt-4 text-lineColor text-xl font-light tracking-[0.8em] uppercase ml-[0.8em]">
+                    Mastering the Beautiful Game
+                </p>
+            </div>
+
+        </div>
+
+        <!-- 5. 底部 HUD 数据面板 -->
+        <div class="absolute bottom-12 left-0 w-full z-20 px-20 flex justify-between items-end">
+            
+            <!-- 左侧 HUD -->
+            <div class="flex flex-col gap-3">
+                <div class="flex items-center gap-4">
+                    <div class="w-48 h-2 border border-lineColor/30 p-[1px]">
+                        <div class="w-full h-full striped-bar opacity-60"></div>
+                    </div>
+                    <span class="text-textBody text-[10px] font-mono tracking-widest">ANALYSIS_MODE: ACTIVE</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <div class="w-2 h-2 bg-accentRed rounded-full animate-pulse"></div>
+                    <p class="text-lineColor text-[10px] tracking-[0.3em] uppercase">Tactical Research Division</p>
+                </div>
+            </div>
+
+            <!-- 右侧 HUD -->
+            <div class="flex flex-col gap-3 items-end">
+                <div class="flex items-center gap-4 flex-row-reverse">
+                    <div class="w-48 h-2 border border-lineColor/30 p-[1px]">
+                        <div class="w-[75%] h-full bg-accentRed/60"></div>
+                    </div>
+                    <span class="text-textBody text-[10px] font-mono tracking-widest">SYSTEM_STABLE_98%</span>
+                </div>
+                <div class="flex items-center gap-6">
+                    <div class="flex gap-1">
+                        <div class="w-1 h-4 bg-lineColor/40"></div>
+                        <div class="w-1 h-4 bg-lineColor/40"></div>
+                        <div class="w-1 h-4 bg-accentRed"></div>
+                    </div>
+                    <p class="text-lineColor text-[10px] tracking-[0.3em] uppercase italic">Presentation Archive // 2026</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 装饰线条：扫描光束 -->
+        <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-accentRed/30 to-transparent z-30 animate-[pulse_3s_infinite]"></div>
+
+    </div>
+
+</body>
+</html>

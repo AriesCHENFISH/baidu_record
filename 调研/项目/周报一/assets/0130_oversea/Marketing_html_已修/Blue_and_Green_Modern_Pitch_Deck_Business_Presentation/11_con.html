@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Reach - Larana</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px; background-color: #131122;
+            position: relative; margin: 0 auto; overflow: hidden;
+            display: flex; flex-direction: column; font-family: 'Noto Sans SC', sans-serif;
+        }
+        .decorative-ring {
+            position: absolute; bottom: -150px; right: -100px; width: 500px; height: 500px;
+            border-radius: 50%; background: radial-gradient(circle, rgba(217, 245, 91, 0.15) 0%, rgba(19, 17, 34, 0) 70%);
+            z-index: 0; pointer-events: none;
+        }
+        .map-dot {
+            width: 12px; height: 12px; background-color: #D9F55B; border-radius: 50%;
+            position: absolute; box-shadow: 0 0 15px #D9F55B;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.5); opacity: 0.5; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <!-- UNIFIED HEADER -->
+        <header class="w-full h-24 px-12 flex items-center justify-between z-10 shrink-0">
+            <div class="flex items-center gap-3">
+                <i class="fa-solid fa-chart-pie text-[#D9F55B] text-2xl"></i>
+                <h2 class="text-[#B0B0B8] text-xl font-medium tracking-wide">Larana</h2>
+            </div>
+            <nav>
+                <ul class="flex gap-4 list-none">
+                    <li><div class="px-6 py-2 rounded-full border border-[#D9F55B] text-white text-sm cursor-default">List Of Content</div></li>
+                    <li><div class="px-6 py-2 rounded-full border border-[#D9F55B] text-white text-sm cursor-default">Who We Are</div></li>
+                    <!-- Active State -->
+                    <li><div class="px-6 py-2 rounded-full bg-[#D9F55B] text-[#131122] font-bold text-sm cursor-default shadow-[0_0_15px_rgba(217,245,91,0.3)]">Market Insight</div></li>
+                    <li><div class="px-6 py-2 rounded-full border border-[#D9F55B] text-white text-sm cursor-default">Our Performance</div></li>
+                </ul>
+            </nav>
+            <div><p class="text-[#B0B0B8] text-sm font-medium">05 June, 2025</p></div>
+        </header>
+
+        <!-- MAIN CONTENT: MAP & STATS -->
+        <main class="flex-1 px-12 pb-12 pt-6 grid grid-cols-12 gap-10 z-10 relative">
+            
+            <!-- Left: Stats & Text -->
+            <div class="col-span-4 flex flex-col justify-center gap-8">
+                <div>
+                    <h1 class="text-[#D9F55B] text-[80px] leading-[0.85] font-black tracking-tighter uppercase drop-shadow-lg">
+                        Global<br>Reach
+                    </h1>
+                </div>
+                
+                <div class="flex flex-col gap-6">
+                    <div class="border-b border-[#D9F55B]/20 pb-4">
+                        <h3 class="text-white text-4xl font-bold mb-1">32+</h3>
+                        <p class="text-[#B0B0B8] text-sm uppercase tracking-wider">Countries Served</p>
+                    </div>
+                    <div class="border-b border-[#D9F55B]/20 pb-4">
+                        <h3 class="text-white text-4xl font-bold mb-1">150</h3>
+                        <p class="text-[#B0B0B8] text-sm uppercase tracking-wider">Partner Offices</p>
+                    </div>
+                </div>
+
+                <p class="text-white/80 text-sm leading-relaxed text-justify">
+                    Our network spans across major financial hubs, ensuring real-time data processing and local compliance.
+                </p>
+            </div>
+
+            <!-- Right: Map Visualization -->
+            <div class="col-span-8 relative">
+                <div class="w-full h-full bg-[#1A182D] rounded-[40px] border border-[#D9F55B]/50 relative overflow-hidden shadow-2xl">
+                    <!-- Dark Map Image -->
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop" 
+                         class="w-full h-full object-cover opacity-60 mix-blend-luminosity">
+                    
+                    <!-- Overlay Dots (Hotspots) -->
+                    <div class="map-dot top-[30%] left-[25%]"></div> <!-- NA -->
+                    <div class="map-dot top-[35%] left-[28%]"></div> <!-- NA -->
+                    <div class="map-dot top-[25%] left-[48%]"></div> <!-- EU -->
+                    <div class="map-dot top-[45%] left-[75%]"></div> <!-- Asia -->
+                    <div class="map-dot top-[65%] left-[80%]"></div> <!-- Aus -->
+                    
+                    <!-- Floating Card on Map -->
+                    <div class="absolute bottom-6 right-6 bg-[#D9F55B] p-4 rounded-[16px] w-48 shadow-lg">
+                        <div class="flex items-center gap-2 mb-2">
+                            <i class="fa-solid fa-signal text-[#131122]"></i>
+                            <span class="text-[#131122] font-bold text-xs uppercase">Live Traffic</span>
+                        </div>
+                        <h4 class="text-[#131122] text-2xl font-bold">1.2M</h4>
+                        <p class="text-[#131122]/80 text-[10px]">Active users currently online</p>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        <div class="decorative-ring"></div>
+    </div>
+</body>
+</html>

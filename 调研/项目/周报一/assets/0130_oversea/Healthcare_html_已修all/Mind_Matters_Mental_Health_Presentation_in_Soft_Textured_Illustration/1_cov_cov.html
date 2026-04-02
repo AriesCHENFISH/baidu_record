@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind Matters - Balanced Cover with Presenter</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,900&family=Courier+Prime:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-base: #EAE5DE;
+            --rose: #C97B88;
+            --maroon: #9E5A65;
+            --ink: #1A1816;
+            --paper: #F2F0ED;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        #page_container {
+            width: 1280px; height: 720px;
+            margin: 0 auto; position: relative;
+            background-color: var(--bg-base);
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+            background-image: 
+                repeating-linear-gradient(rgba(0,0,0,0.01) 0px, rgba(0,0,0,0.01) 1px, transparent 1px, transparent 40px),
+                repeating-linear-gradient(90deg, rgba(0,0,0,0.01) 0px, rgba(0,0,0,0.01) 1px, transparent 1px, transparent 40px);
+        }
+
+        .texture-noise {
+            position: absolute; inset: 0; pointer-events: none; z-index: 100; opacity: 0.1;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.6' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        }
+
+        .torn-paper {
+            clip-path: polygon(0% 2px, 2% 0px, 98% 1px, 100% 3px, 99% 98%, 97% 100%, 3% 99%, 0% 97%);
+        }
+
+        .washi-tape {
+            background-color: rgba(201, 123, 136, 0.4);
+            backdrop-filter: blur(1px);
+            clip-path: polygon(5% 0%, 95% 2%, 100% 90%, 0% 100%);
+        }
+
+        .font-display { font-family: 'Playfair Display', serif; }
+        .font-mono { font-family: 'Courier Prime', monospace; }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <div class="texture-noise"></div>
+
+        <div class="absolute inset-0 flex justify-center items-center">
+            <div class="w-[600px] h-[300px] bg-[var(--rose)] opacity-20 blur-[100px] rounded-full"></div>
+        </div>
+
+        <div class="relative w-full h-full flex flex-col items-center justify-center z-10 pt-4">
+            <div class="mb-10 border-y-[1px] border-[var(--ink)] py-1 opacity-50">
+                <span class="font-mono text-xs tracking-[1em] uppercase font-bold text-[var(--ink)]">Issue No. 2026 / Mental Wellness</span>
+            </div>
+
+            <div class="relative text-center px-12">
+                <div class="absolute inset-x-0 top-1/2 -translate-y-1/2 h-[120px] bg-[var(--rose)] opacity-40 -skew-x-12 -rotate-1"></div>
+                
+                <h1 class="relative font-display text-[150px] leading-none text-[var(--ink)] tracking-tighter">
+                    MIND <span class="italic font-light">matters</span>
+                </h1>
+                
+                <div class="mt-8 transform -rotate-1">
+                    <div class="bg-[var(--paper)] px-12 py-4 shadow-xl torn-paper border border-gray-200 inline-block">
+                        <p class="font-mono text-xl text-[var(--maroon)] uppercase tracking-[0.2em] font-bold">
+                            Exploring the Spectrum of Well-Being
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 h-12 w-[1px] bg-[var(--ink)] opacity-20"></div>
+            <div class="mt-4 text-[var(--maroon)] opacity-60"><i class="fa-solid fa-star-of-life"></i></div>
+        </div>
+
+        <div class="absolute bottom-16 left-12 max-w-sm z-20 transform -rotate-2">
+            <div class="bg-[var(--paper)] p-6 torn-paper shadow-lg border border-gray-100 opacity-90">
+                <p class="font-mono text-xs leading-relaxed text-[var(--ink)] uppercase opacity-70">
+                    "Mental health is a state of well-being in which an individual realizes his or her own abilities."
+                </p>
+            </div>
+        </div>
+
+        <div class="absolute bottom-16 right-12 z-20 transform rotate-1">
+            <div class="washi-tape absolute -top-4 left-1/2 -translate-x-1/2 w-24 h-6 z-30"></div>
+            
+            <div class="bg-[var(--paper)] p-8 shadow-xl border border-gray-200 text-right"
+                 style="border-radius: 5px 35px 2px 20px / 20px 2px 35px 5px;">
+                <span class="font-mono text-[10px] tracking-widest uppercase text-[var(--maroon)] block mb-1">Presented By</span>
+                <h2 class="text-3xl font-black text-[var(--ink)] tracking-tighter uppercase leading-none mb-1">Gemini</h2>
+                <p class="font-mono text-[9px] text-[var(--ink)] opacity-50 uppercase tracking-widest">Lead Researcher / Psychology Dept.</p>
+            </div>
+        </div>
+
+        <div class="absolute top-12 left-12 flex items-center gap-4 opacity-70">
+            <div class="w-12 h-12 bg-[var(--ink)] flex items-center justify-center text-[var(--paper)] font-display text-2xl font-bold">M</div>
+            <div class="text-[9px] font-mono leading-tight tracking-tighter uppercase">
+                Mental Health<br>Archive 2026
+            </div>
+        </div>
+
+        <div class="absolute top-12 right-12 w-24 h-24 border-2 border-dashed border-[var(--maroon)] rounded-full flex flex-col items-center justify-center opacity-30 scale-90 rotate-12">
+            <span class="text-[10px] font-bold text-[var(--maroon)] uppercase">Authenticated</span>
+            <span class="text-lg font-mono font-black text-[var(--maroon)] leading-none mt-1">GUIDE</span>
+        </div>
+
+    </div>
+
+</body>
+</html>

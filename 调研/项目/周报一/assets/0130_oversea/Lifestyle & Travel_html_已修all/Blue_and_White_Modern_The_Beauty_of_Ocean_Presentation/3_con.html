@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Ocean - Blue Editorial Style</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        oceanDeep: '#0F1C52',
+                        oceanLight: '#1A2C75',
+                        electricCyan: '#00E5FF',
+                        sand: '#C5A059',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background: linear-gradient(135deg, #0F1C52 0%, #081033 100%);
+            color: #FFFFFF;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+        }
+
+        /* Ambient Ocean Glow */
+        .ocean-glow {
+            position: absolute;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(0, 229, 255, 0.08) 0%, rgba(15, 28, 82, 0) 70%);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        /* Modern Image Mask */
+        .img-mask {
+            clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
+        }
+
+        /* Decorative Strokes */
+        .text-outline {
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
+            color: transparent;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <div class="ocean-glow" style="top: -300px; left: -200px;"></div>
+        <div class="ocean-glow" style="bottom: -300px; right: -200px; opacity: 0.6;"></div>
+
+        <header class="relative z-20 px-20 pt-14 flex items-center justify-between">
+            <div class="flex items-center gap-5">
+                <div class="w-12 h-12 border-2 border-electricCyan flex flex-col items-center justify-center gap-1">
+                    <div class="w-6 h-0.5 bg-white"></div>
+                    <div class="w-4 h-0.5 bg-electricCyan"></div>
+                    <div class="w-6 h-0.5 bg-white"></div>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-black tracking-widest uppercase leading-none">Abyssal</h2>
+                    <span class="text-[9px] tracking-[0.5em] text-electricCyan uppercase font-bold">Research Archive</span>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-12 text-[10px] tracking-[0.2em] font-medium text-white/40 uppercase">
+                <div class="flex flex-col items-end">
+                    <span>Depth Station</span>
+                    <span class="text-white font-bold">Mariana 0-1</span>
+                </div>
+                <div class="w-px h-6 bg-white/20"></div>
+                <div class="flex flex-col items-end">
+                    <span>Coordinate</span>
+                    <span class="text-white font-bold">11.3°N 142.2°E</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="flex-1 flex items-center px-20 z-10">
+            
+            <div class="w-1/2 pr-10">
+                <div class="flex items-center gap-4 mb-6">
+                    <span class="text-xs font-black tracking-[0.4em] text-electricCyan uppercase">Chapter Intro</span>
+                    <div class="h-px flex-1 bg-gradient-to-r from-electricCyan/50 to-transparent"></div>
+                </div>
+
+                <h1 class="text-8xl font-serif italic leading-[0.85] mb-8">
+                    Deep <span class="font-sans not-italic font-black block text-9xl text-outline mt-2 uppercase">Horizon</span>
+                </h1>
+
+                <div class="max-w-md space-y-6">
+                    <p class="text-gray-200 text-sm leading-relaxed font-light">
+                        Discover the uncharted territories of the world's oceans. Our mission explores the intersection of marine biology and deep-sea geology in the most extreme environments on Earth.
+                    </p>
+                    <div class="flex items-center gap-8 mt-10">
+                        <div class="group cursor-pointer">
+                            <span class="text-[10px] font-bold tracking-[0.3em] uppercase border-b border-electricCyan pb-1 group-hover:text-electricCyan transition-colors">Learn More</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <i class="fa-brands fa-instagram text-white/30 hover:text-white cursor-pointer transition-colors"></i>
+                            <i class="fa-brands fa-twitter text-white/30 hover:text-white cursor-pointer transition-colors"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-1/2 h-[460px] relative flex justify-end items-center">
+                
+                <div class="absolute -right-10 top-1/2 -translate-y-1/2 opacity-[0.05] pointer-events-none select-none">
+                    <span class="text-[220px] font-black leading-none">SEA</span>
+                </div>
+
+                <div class="relative w-[440px] h-[340px] z-10">
+                    <div class="absolute inset-0 border border-electricCyan/30 translate-x-4 -translate-y-4 img-mask"></div>
+                    <div class="w-full h-full overflow-hidden img-mask shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=2070&auto=format&fit=crop" 
+                             class="w-full h-full object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-700" alt="ocean">
+                    </div>
+                    
+                    <div class="absolute -bottom-10 -left-16 bg-white p-8 w-60 shadow-2xl">
+                        <div class="text-oceanDeep">
+                            <p class="text-[10px] font-black tracking-widest uppercase mb-2 text-electricCyan">Visual Data</p>
+                            <h3 class="text-xl font-bold leading-tight mb-3">Exploring Life In The Abyss</h3>
+                            <p class="text-[9px] leading-relaxed text-gray-500 font-medium">Capture from Sub-Drone 04. Marine ecosystems at 4000m depth.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="absolute top-0 right-0 w-32 h-44 border-4 border-oceanDeep overflow-hidden shadow-xl z-20">
+                    <img src="https://images.unsplash.com/photo-1524704654690-b56c05c78a00?q=80&w=2069&auto=format&fit=crop" 
+                         class="w-full h-full object-cover" alt="coral">
+                </div>
+            </div>
+
+        </main>
+
+    </div>
+</body>
+</html>

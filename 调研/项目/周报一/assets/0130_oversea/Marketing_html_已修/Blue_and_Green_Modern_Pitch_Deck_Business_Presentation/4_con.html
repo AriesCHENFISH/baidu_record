@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Insight Keynote</title>
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome (CDN) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- ECharts (CDN) -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+
+    <!-- Google Fonts (Requested CDN) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        /* CSS Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container - Strict 1280x720 */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #131122; /* Dark Background Primary */
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Typography Utilities */
+        .text-accent {
+            color: #D9F55B;
+        }
+        
+        .bg-accent {
+            background-color: #D9F55B;
+        }
+
+        .border-accent {
+            border-color: #D9F55B;
+        }
+
+        /* Decorative Gradient Ring */
+        .decorative-ring {
+            position: absolute;
+            bottom: -150px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            border: 60px solid transparent;
+            /* Gradient simulating the ring logic */
+            background: linear-gradient(#131122, #131122) padding-box,
+                        linear-gradient(135deg, rgba(217, 245, 91, 0.1) 0%, rgba(217, 245, 91, 0.6) 100%) border-box;
+            z-index: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div id="page_container">
+        
+        <!-- HEADER SECTION -->
+        <!-- Flexbox row for alignment: Logo - Nav - Date -->
+        <header class="w-full h-24 px-12 flex items-center justify-between z-10">
+            
+            <!-- Logo Area -->
+            <div class="flex items-center gap-3">
+                <i class="fa-solid fa-chart-pie text-[#D9F55B] text-2xl"></i>
+                <h2 class="text-[#B0B0B8] text-xl font-medium tracking-wide">Larana</h2>
+            </div>
+
+            <!-- Navigation Pills -->
+            <nav>
+                <ul class="flex gap-4 list-none">
+                    <li>
+                        <div class="px-6 py-2 rounded-full border border-[#D9F55B] text-white text-sm cursor-default">
+                            List Of Content
+                        </div>
+                    </li>
+                    <li>
+                        <div class="px-6 py-2 rounded-full border border-[#D9F55B] text-white text-sm cursor-default">
+                            Who We Are
+                        </div>
+                    </li>
+                    <!-- Active State -->
+                    <li>
+                        <div class="px-6 py-2 rounded-full bg-[#D9F55B] text-[#131122] font-bold text-sm cursor-default shadow-[0_0_15px_rgba(217,245,91,0.3)]">
+                            Market Insight
+                        </div>
+                    </li>
+                    <li>
+                        <div class="px-6 py-2 rounded-full border border-[#D9F55B] text-white text-sm cursor-default">
+                            Our Performance
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Date -->
+            <div>
+                <p class="text-[#B0B0B8] text-sm font-medium">05 June, 2025</p>
+            </div>
+        </header>
+
+        <!-- MAIN CONTENT AREA -->
+        <main class="flex-1 px-12 pb-12 flex flex-col gap-8 z-10 relative">
+
+            <!-- Top Section: Data & Visual Card -->
+            <!-- Container Background: #1A182D with Accent Border -->
+            <section class="w-full h-[320px] bg-[#1A182D] rounded-[40px] border border-[#D9F55B] p-2 flex overflow-hidden relative">
+                
+                <!-- Left: Charts (60% Width) -->
+                <div class="w-[60%] h-full p-6 relative">
+                    <!-- ECharts Container -->
+                    <div id="mainChart" class="w-full h-full"></div>
+                </div>
+
+                <!-- Right: Image (40% Width) -->
+                <div class="w-[40%] h-full relative rounded-[32px] overflow-hidden">
+                    <!-- High quality Unsplash image for "Business Analysis" -->
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2670&auto=format&fit=crop" 
+                         alt="Team analyzing financial data on tablet" 
+                         class="w-full h-full object-cover">
+                    <!-- 480*300 -->
+                    
+                    <!-- Subtle overlay to blend slightly -->
+                    <div class="absolute inset-0 bg-[#131122] opacity-10"></div>
+                </div>
+
+            </section>
+
+            <!-- Bottom Section: Typography & Content -->
+            <section class="w-full flex justify-between items-start pt-4">
+                
+                <!-- Left: Huge Typography -->
+                <div class="w-[40%]">
+                    <h1 class="text-8xl font-bold text-[#D9F55B] leading-[0.85] tracking-tighter uppercase drop-shadow-lg">
+                        Market<br>Insight
+                    </h1>
+                </div>
+
+                <!-- Center Divider (Visual separator) -->
+                <div class="w-[1px] h-32 bg-[#D9F55B] opacity-20 mx-8 mt-2"></div>
+
+                <!-- Right: Text Content -->
+                <div class="w-[55%] flex gap-8">
+                    <!-- Paragraph 1 -->
+                    <div class="flex-1">
+                        <p class="text-white text-sm leading-relaxed opacity-90 text-justify">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl eu sem tristique, sit amet convallis ex aliquam. Maecenas varius lectus hendrerit augue blandit, ut posuere erat aliquam. Praesent auctor tellus eget nisl blandit, at varius purus elementum.
+                        </p>
+                    </div>
+                    <!-- Paragraph 2 -->
+                    <div class="flex-1">
+                        <p class="text-white text-sm leading-relaxed opacity-90 text-justify">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl eu sem tristique, sit amet convallis ex aliquam. Maecenas varius lectus hendrerit augue blandit, ut posuere erat aliquam.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+
+        <!-- Decorative Element (Bottom Right Ring) -->
+        <div class="decorative-ring"></div>
+
+    </div>
+
+    <!-- ECharts Initialization Script -->
+    <script type="text/javascript">
+        // Initialize the chart
+        var chartDom = document.getElementById('mainChart');
+        var myChart = echarts.init(chartDom);
+        var option;
+
+        // Custom Theme Colors
+        const colorPalette = ['#FFFFFF', '#D9F55B']; // White and Lime Green
+
+        option = {
+            backgroundColor: 'transparent',
+            // Legend configuration
+            legend: {
+                top: '5%',
+                icon: 'circle',
+                textStyle: {
+                    color: '#B0B0B8',
+                    fontFamily: 'Noto Sans SC',
+                    fontSize: 12
+                },
+                itemGap: 25,
+                data: ['Series 1', 'Series 2']
+            },
+            // Grid layout to control chart size/padding
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '10%',
+                top: '25%',
+                containLabel: true
+            },
+            // X-Axis configuration
+            xAxis: {
+                type: 'category',
+                data: ['Item 1', 'Item 2', 'Item 3'],
+                axisLine: { show: false }, // Hide axis line
+                axisTick: { show: false }, // Hide ticks
+                axisLabel: {
+                    color: '#FFFFFF',
+                    fontFamily: 'Noto Sans SC',
+                    fontSize: 14,
+                    fontWeight: 'bold',
+                    margin: 15
+                }
+            },
+            // Y-Axis configuration
+            yAxis: {
+                type: 'value',
+                splitLine: {
+                    lineStyle: {
+                        color: 'rgba(255, 255, 255, 0.05)', // Very subtle grid lines
+                        type: 'dashed'
+                    }
+                },
+                axisLabel: {
+                    color: '#FFFFFF',
+                    fontFamily: 'Noto Sans SC',
+                    fontWeight: 'bold'
+                }
+            },
+            // Series Data (Grouped Bar Chart)
+            series: [
+                {
+                    name: 'Series 1',
+                    type: 'bar',
+                    data: [3, 8, 16], // Approximate data from image
+                    itemStyle: {
+                        borderRadius: [6, 6, 0, 0], // Rounded top
+                        color: '#FFFFFF'
+                    },
+                    barWidth: '25%',
+                    barGap: '20%' // Gap between bars in a group
+                },
+                {
+                    name: 'Series 2',
+                    type: 'bar',
+                    data: [6, 14, 18], // Approximate data from image
+                    itemStyle: {
+                        borderRadius: [6, 6, 0, 0], // Rounded top
+                        color: '#D9F55B'
+                    },
+                    barWidth: '25%'
+                }
+            ]
+        };
+
+        option && myChart.setOption(option);
+
+        // Ensure chart resizes if window changes (though container is fixed)
+        window.addEventListener('resize', myChart.resize);
+    </script>
+</body>
+</html>

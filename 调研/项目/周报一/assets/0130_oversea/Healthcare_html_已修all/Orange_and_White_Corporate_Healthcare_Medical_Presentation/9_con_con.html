@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology in Health Care - Editorial Style</title>
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #121212;
+            overflow: hidden;
+            color: #F5F5F5;
+        }
+
+        .font-serif-italic {
+            font-family: 'Georgia', serif;
+            font-style: italic;
+        }
+
+        .bg-primary-gradient {
+            background: linear-gradient(135deg, #B63914 0%, #D65A2C 100%);
+        }
+
+        /* 统一标准化Logo样式 */
+        .hospital-logo-box {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #B63914 0%, #D65A2C 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* 背景装饰：垂直巨型水印 */
+        .bg-text-vertical {
+            position: absolute;
+            font-size: 180px;
+            font-weight: 900;
+            color: rgba(214, 90, 44, 0.04);
+            line-height: 0.8;
+            z-index: 0;
+            writing-mode: vertical-rl;
+            right: 20px;
+            top: 0;
+            pointer-events: none;
+        }
+
+        /* 玻璃感卡片 */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border-left: 3px solid #B63914;
+        }
+
+        /* 穿插式图片裁切 */
+        .image-pillar {
+            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container" class="relative">
+        
+        <!-- 背景设计：垂直水印与氛围光晕 -->
+        <div class="bg-text-vertical uppercase">Digital</div>
+        <div class="absolute bottom-[-10%] left-[20%] w-[500px] h-[500px] bg-[#D65A2C] opacity-[0.06] blur-[150px] rounded-full"></div>
+
+        <!-- 顶部：标准Logo区 (统一左上角布局) -->
+        <div class="absolute top-12 left-16 z-50">
+            <div class="flex items-center gap-4">
+                <div class="hospital-logo-box">
+                    <i class="fa-solid fa-plus text-white text-lg"></i>
+                </div>
+                <span class="text-xl font-bold tracking-widest uppercase">Borcelle Hospital</span>
+            </div>
+        </div>
+
+        <!-- 主布局：三栏交错重构 -->
+        <div class="flex h-full w-full relative z-10 px-16">
+            
+            <!-- 第一栏：标题区 (4/12) -->
+            <div class="w-4/12 h-full flex flex-col justify-center pr-12">
+                <div class="mb-10">
+                    <h1 class="text-[80px] leading-[0.85] tracking-tighter flex flex-col">
+                        <span class="font-serif-italic text-[#D65A2C] mb-2">Technology</span>
+                        <span class="font-bold">IN HEALTH</span>
+                        <span class="font-bold">CARE.</span>
+                    </h1>
+                    <div class="w-20 h-1.5 bg-primary-gradient mt-8"></div>
+                </div>
+                <p class="text-lg font-light opacity-50 leading-relaxed italic pr-6">
+                    Integrating cutting-edge digital solutions to transform patient experience and clinical precision.
+                </p>
+            </div>
+
+            <!-- 第二栏：视觉中心 (4/12) -->
+            <div class="w-4/12 h-full flex items-center justify-center">
+                <div class="image-pillar w-full h-[75%] bg-zinc-900 overflow-hidden relative shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1576091160611-2591e9d72ef2?q=80&w=2070&auto=format&fit=crop" 
+                         class="w-full h-full object-cover grayscale brightness-75 hover:grayscale-0 transition-all duration-1000">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#B63914]/30 to-transparent"></div>
+                    <div class="absolute top-10 right-10 flex flex-col items-end">
+                        <span class="text-xs font-bold tracking-widest bg-primary-gradient px-3 py-1 rounded">IOT CONNECTED</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 第三栏：功能模块 (4/12) -->
+            <div class="w-4/12 h-full flex flex-col justify-center pl-12 gap-6">
+                
+                <!-- 模块 01 -->
+                <div class="glass-panel p-6 transform hover:translate-x-4 transition-transform duration-300">
+                    <div class="flex items-center gap-4 mb-2">
+                        <span class="text-2xl font-serif-italic text-[#B63914]">01.</span>
+                        <h3 class="font-bold tracking-widest uppercase text-xs">Telemedicine</h3>
+                    </div>
+                    <p class="text-sm opacity-50">Mobile apps connecting patients with specialists across distant borders instantly.</p>
+                </div>
+
+                <!-- 模块 02 -->
+                <div class="glass-panel p-6 transform hover:translate-x-4 transition-transform duration-300">
+                    <div class="flex items-center gap-4 mb-2">
+                        <span class="text-2xl font-serif-italic text-[#B63914]">02.</span>
+                        <h3 class="font-bold tracking-widest uppercase text-xs">Digital Records</h3>
+                    </div>
+                    <p class="text-sm opacity-50">Smart EHR systems ensuring diagnosis accuracy and seamless history tracking.</p>
+                </div>
+
+                <!-- 模块 03 -->
+                <div class="glass-panel p-6 transform hover:translate-x-4 transition-transform duration-300">
+                    <div class="flex items-center gap-4 mb-2">
+                        <span class="text-2xl font-serif-italic text-[#B63914]">03.</span>
+                        <h3 class="font-bold tracking-widest uppercase text-xs">Real-time Care</h3>
+                    </div>
+                    <p class="text-sm opacity-50">Precision monitoring for timely treatments and clinical coordination.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 底部信息：状态线与版本号 -->
+        <div class="absolute bottom-12 left-16 right-16 flex justify-between items-center opacity-30 text-[10px] font-bold tracking-[0.5em] uppercase">
+            <div class="flex items-center gap-6">
+                <span>System v6.2</span>
+                <div class="w-8 h-[1px] bg-white"></div>
+                <span>Digital Infrastructure</span>
+            </div>
+            <span>Future of Medicine 2024</span>
+        </div>
+
+    </div>
+
+</body>
+</html>

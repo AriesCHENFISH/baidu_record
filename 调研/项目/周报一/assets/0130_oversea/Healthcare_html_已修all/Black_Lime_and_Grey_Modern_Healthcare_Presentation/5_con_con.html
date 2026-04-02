@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Diagnostic Capabilities - Standardized</title>
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- Google Fonts (Baidu Mirror) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FFFFFF;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+            height: 100%;
+            padding: 60px 80px;
+        }
+        .deco-circle {
+            position: absolute;
+            border-radius: 50%;
+            z-index: 0;
+        }
+        .bg-lime-accent { background-color: #D2F050; }
+        .text-lime-accent { color: #D2F050; }
+        .border-lime-accent { border-color: #D2F050; }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: '#D2F050', dark: '#000000', secondary: '#1A1A1A' }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div id="page_container">
+        <!-- 背景装饰 -->
+        <div class="deco-circle" style="width: 600px; height: 600px; background: radial-gradient(circle, rgba(210, 240, 80, 0.15) 0%, rgba(255,255,255,0) 70%); top: -100px; right: -100px;"></div>
+        
+        <div class="grid-layout">
+            
+            <!-- 左侧内容列 (5栏) -->
+            <div class="col-span-5 flex flex-col justify-center z-10">
+                
+                <!-- 统一的主标题设计样式 -->
+                <div class="mb-10">
+                    <div class="flex items-center gap-3 mb-4">
+                        <!-- 品牌色装饰条 -->
+                        <div class="w-12 h-1 bg-lime-accent"></div>
+                        <!-- 小标题标签 -->
+                        <h4 class="text-sm font-bold tracking-widest uppercase text-gray-500">Medical Innovation</h4>
+                    </div>
+                    <!-- 超大号黑体标题 -->
+                    <h1 class="text-7xl font-black text-dark uppercase leading-[0.95]">
+                        Advanced<br>
+                        Diagnosti
+                    </h1>
+                </div>
+
+                <p class="text-lg text-secondary leading-relaxed mb-10 pr-8 font-normal">
+                    Equipped with modern tools, we offer fast and precise assessments. These technologies help detect problems early and guide treatment choices for every patient.
+                </p>
+
+                <!-- 按钮区域 -->
+                <div class="flex items-center gap-6">
+                    <div class="bg-dark text-white px-10 py-4 rounded-full font-bold text-lg cursor-pointer hover:bg-zinc-800 transition-all shadow-lg">
+                        Learn More
+                    </div>
+                    <div class="w-14 h-14 rounded-full border-2 border-dark flex items-center justify-center cursor-pointer hover:bg-dark hover:text-white transition-colors">
+                        <i class="fa-solid fa-arrow-right text-xl"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右侧视觉列 (7栏) -->
+            <div class="col-span-7 relative z-10">
+                <div class="relative w-full h-full">
+                    
+                    <!-- 辅助图像 (右上) -->
+                    <div class="absolute top-12 right-0 w-96 h-64 z-10">
+                        <div class="w-full h-full overflow-hidden rounded-[40px] shadow-lg">
+                            <img src="https://images.unsplash.com/photo-1666214280557-f1b5022eb634?auto=format&fit=crop&q=80&w=800" 
+                                 class="w-full h-full object-cover grayscale opacity-90" 
+                                 alt="Technology">
+                        </div>
+                    </div>
+
+                    <!-- 核心图像 (左下) -->
+                    <div class="absolute bottom-24 left-0 w-72 h-96 z-20 bg-white p-2 rounded-[32px] shadow-2xl border border-gray-100">
+                        <div class="w-full h-full overflow-hidden rounded-[24px] relative">
+                            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=600" 
+                                 class="w-full h-full object-cover" 
+                                 alt="Analysis">
+                            <div class="absolute bottom-4 left-4 bg-dark/90 backdrop-blur-sm px-4 py-2 rounded-lg">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-2 h-2 rounded-full bg-lime-accent animate-pulse"></div>
+                                    <span class="text-white text-xs font-bold tracking-wider uppercase">High Precision</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 右下角引用卡片 (保持不变) -->
+                    <div class="absolute bottom-4 right-0 w-[350px] bg-white/90 backdrop-blur-md p-8 rounded-[40px] border-l-[12px] border-lime-accent shadow-2xl z-30">
+                        <i class="fa-solid fa-quote-left text-lime-accent text-5xl mb-4 opacity-40 block"></i>
+                        <p class="text-xl font-medium italic leading-relaxed text-dark mb-4">
+                            "Accuracy in diagnosis is not just a standard; it is the vital foundation of every successful recovery journey."
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-[1px] bg-dark opacity-30"></div>
+                            <span class="text-xs font-black uppercase tracking-[0.2em] text-gray-500">Professional Promise</span>
+                        </div>
+                    </div>
+
+                    <!-- 装饰圆环 -->
+                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0 opacity-10">
+                        <svg width="300" height="300" viewBox="0 0 200 200">
+                            <circle cx="100" cy="100" r="98" stroke="currentColor" stroke-width="0.5" stroke-dasharray="12 12"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

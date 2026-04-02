@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flat Design TOC - No Shadow</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        .font-main { font-family: 'Noto Sans SC', sans-serif; }
+        
+        /* Module Card Style - Flat & Green Border */
+        .module-card {
+            background: white;
+            border: 1px solid #E2E8F0; /* Thin gray outline */
+            border-left: 6px solid #71B7C5; /* Always visible Green/Teal border */
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.2s ease-in-out;
+            height: 100%;
+            /* No Box Shadow */
+        }
+
+        .module-card:hover {
+            background: #F1F5F9; /* Slight gray on hover */
+            border-left-color: #2D3236; /* Darker interaction feedback */
+        }
+
+        .icon-box {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            background-color: #F1F5F9;
+            color: #71B7C5; /* Colored icon by default */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+        
+        .module-card:hover .icon-box {
+            background-color: #E2E8F0;
+            color: #2D3236;
+        }
+
+        /* Subtle Gradient Background */
+        .bg-flat-gradient {
+            background: linear-gradient(135deg, #F8FAFC 0%, #FFFFFF 100%);
+        }
+        
+        /* Decorative Blob */
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: 0;
+            opacity: 0.05;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Container 1280x720 (No Shadow on Container) -->
+    <div id="page_container" class="relative w-[1280px] h-[720px] mx-auto overflow-hidden flex bg-white">
+        
+        <!-- Left Sidebar (Title) - 25% Width -->
+        <div class="w-[25%] h-full bg-[#2D3236] text-white flex flex-col justify-between p-10 relative z-20">
+            
+            <!-- Top Content -->
+            <div>
+                <!-- Icon Box -->
+                <div class="w-12 h-12 border border-[#71B7C5] text-[#71B7C5] rounded-xl flex items-center justify-center text-2xl mb-8">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </div>
+                
+                <h2 class="text-sm font-bold text-[#71B7C5] tracking-[0.2em] uppercase mb-2">Structure</h2>
+                <h1 class="text-5xl font-extrabold leading-tight mb-6">
+                    Table of <br> Contents
+                </h1>
+                <div class="w-16 h-1 bg-white/20 rounded-full"></div>
+            </div>
+
+            <!-- Description -->
+            <p class="text-sm text-gray-400 leading-relaxed">
+                A ten-part comprehensive breakdown of our medical facility's operational guidelines.
+            </p>
+
+            <!-- Bottom Counter -->
+            <div class="relative">
+                <div class="flex items-center gap-3 mt-10 border-t border-gray-600 pt-6">
+                    <span class="text-4xl font-bold text-[#71B7C5]">10</span>
+                    <span class="text-xs text-gray-400 uppercase font-medium">Modules <br> Included</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Content Area (Grid) - 75% Width -->
+        <div class="w-[75%] h-full relative bg-flat-gradient p-8 flex flex-col justify-center">
+            
+            <!-- Abstract Background (Subtle) -->
+            <div class="blob w-96 h-96 bg-[#71B7C5] top-[-100px] right-[-100px]"></div>
+            <div class="blob w-96 h-96 bg-[#2D3236] bottom-[-100px] left-[0]"></div>
+
+            <!-- The Grid: 2 Columns x 5 Rows -->
+            <div class="grid grid-cols-2 gap-4 h-full relative z-10">
+                
+                <!-- 01 -->
+                <div class="module-card">
+                    <div class="flex items-center gap-4">
+                        <span class="text-2xl font-bold text-[#CBD5E1] font-mono w-8">01</span>
+                        <div>
+                            <h3 class="text-base font-bold text-[#2D3236]">Executive Summary</h3>
+                            <p class="text-[11px] text-gray-500 uppercase tracking-wide">Hospital Vision</p>
+                        </div>
+                    </div>
+                    <div class="icon-box"><i class="fa-solid fa-hospital-user"></i></div>
+                </div>
+
+                <!-- 06 -->
+                <div class="module-card">
+                    <div class="flex items-center gap-4">
+                        <span class="text-2xl font-bold text-[#CBD5E1] font-mono w-8">06</span>
+                        <div>
+                            <h3 class="text-base font-bold text-[#2D3236]">Emergency Response</h3>
+                            <p class="text-[11px] text-gray-500 uppercase tracking-wide">Code Protocols</p>
+                        </div>
+                    </div>
+                    <div class="icon-box"><i class="fa-solid fa-truck-medical"></i></div>
+                </div>
+
+                <!-- 02 -->
+                <div class="module-card">
+                    <div class="flex items-center gap-4">
+                        <span class="text-2xl font-bold text-[#CBD5E1] font-mono w-8">02</span>
+                        <div>
+                            <h3 class="text-base font-bold text-[#2D3236]">Hygiene Standards</h3>
+                            <p class="text-[11px] text-gray-500 uppercase tracking-wide">Sanitization</p>
+                        </div>
+                    </div>
+                    <div class="icon-box"><i class="fa-solid fa-hands-bubbles"></i></div>
+                </div>
+
+                <!-- 07 -->
+                <div class="module-card">
+                    <div class="flex items-center gap-4">
+                        <span class="text-2xl font-bold text-[#CBD5E1] font-mono w-8">07</span>
+                        <div>
+                            <h3 class="text-base font-bold text-[#2D3236]">Patient Care</h3>
+                            <p class="text-[11px] text-gray-500 uppercase tracking-wide">Monitoring</p>
+                        </div>
+                    </div>
+                    <div class="icon-box"><i class="fa-solid fa-bed-pulse"></i></div>
+                </div>
+
+                <!-- 03 -->
+                <div class="module-card">
+                    <div class="flex items-center gap-4">
+                        <span class="text-2xl font-bold text-[#CBD5E1] font-mono w-8">03</span>
+                        <div>
+                            <h3 class="text-base font-bold text-[#2D3236]">Infection Control</h3>
+                            <p class="text-[11px] text-gray-500 uppercase tracking-wide">Prevention</p>
+                        </div>
+                    </div>
+                    <div class="icon-box"><i class="fa-solid fa-shield-virus"></i></div>
+                </div>
+
+                <!-- 08 -->
+                <div class="module-card">
+                    <div class="flex items-center gap-4">
+                        <span class="text-2xl font-bold text-[#CBD5E1] font-mono w-8">08</span>
+                        <div>
+                            <h3 class="text-base font-bold text-[#2D3236]">Medical Equipment</h3>
+                            <p class="text-[11px] text-gray-500 uppercase tracking-wide">Maintenance</p>
+                        </div>
+                    </div>
+                    <div class="icon-box"><i class="fa-solid fa-stethoscope"></i></div>
+                </div>
+
+                <!-- 04 -->
+                <div class="module-card">
+                    <div class="flex items-center gap-4">
+                        <span class="text-2xl font-bold text-[#CBD5E1] font-mono w-8">04</span>
+                        <div>
+                            <h3 class="text-base font-bold text-[#2D3236]">Staff Guidelines</h3>
+                            <p class="text-[11px] text-gray-500 uppercase tracking-wide">HR Policy</p>
+                        </div>
+                    </div>
+                    <div class="icon-box"><i class="fa-solid fa-user-nurse"></i></div>
+                </div>
+
+                <!-- 09 -->
+                <div class="module-card">
+                    <div class="flex items-center gap-4">
+                        <span class="text-2xl font-bold text-[#CBD5E1] font-mono w-8">09</span>
+                        <div>
+                            <h3 class="text-base font-bold text-[#2D3236]">Pharmacy & Drugs</h3>
+                            <p class="text-[11px] text-gray-500 uppercase tracking-wide">Distribution</p>
+                        </div>
+                    </div>
+                    <div class="icon-box"><i class="fa-solid fa-pills"></i></div>
+                </div>
+
+                <!-- 05 -->
+                <div class="module-card">
+                    <div class="flex items-center gap-4">
+                        <span class="text-2xl font-bold text-[#CBD5E1] font-mono w-8">05</span>
+                        <div>
+                            <h3 class="text-base font-bold text-[#2D3236]">Waste Management</h3>
+                            <p class="text-[11px] text-gray-500 uppercase tracking-wide">Biohazard</p>
+                        </div>
+                    </div>
+                    <div class="icon-box"><i class="fa-solid fa-recycle"></i></div>
+                </div>
+
+                <!-- 10 -->
+                <div class="module-card">
+                    <div class="flex items-center gap-4">
+                        <span class="text-2xl font-bold text-[#CBD5E1] font-mono w-8">10</span>
+                        <div>
+                            <h3 class="text-base font-bold text-[#2D3236]">Financial Report</h3>
+                            <p class="text-[11px] text-gray-500 uppercase tracking-wide">Q3 Analysis</p>
+                        </div>
+                    </div>
+                    <div class="icon-box"><i class="fa-solid fa-chart-line"></i></div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

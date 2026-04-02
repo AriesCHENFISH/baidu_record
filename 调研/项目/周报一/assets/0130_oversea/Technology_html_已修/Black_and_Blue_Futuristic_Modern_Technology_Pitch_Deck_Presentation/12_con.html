@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core Operatives - Cyberpunk Team</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { cyber: { black: '#000', white: '#FFF', cyan: '#4DEEEA', text: '#94A3B8', darkblue: '#0F172A' } },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #000; overflow: hidden; font-family: 'Noto Sans SC', sans-serif; }
+        .bg-grid {
+            background-image: linear-gradient(rgba(77, 238, 234, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(77, 238, 234, 0.03) 1px, transparent 1px);
+            background-size: 30px 30px; position: absolute; inset: 0; z-index: 0; mask-image: radial-gradient(circle at center, black, transparent 80%);
+        }
+        /* 核心卡片样式 */
+        .tech-card-v2 {
+            position: relative; background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.7) 100%);
+            border-left: 2px solid #4DEEEA; clip-path: polygon(0% 0%, 92% 0%, 100% 15%, 100% 100%, 0% 100%);
+            padding: 24px; transition: all 0.3s ease; backdrop-filter: blur(10px);
+        }
+        .tech-card-v2:hover { transform: translateY(-5px); background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%); box-shadow: 0 10px 30px rgba(77, 238, 234, 0.15); }
+        .card-tag { position: absolute; top: 0; left: 24px; background: #4DEEEA; color: #000; font-size: 10px; font-weight: 800; padding: 2px 8px; font-family: monospace; clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%); }
+        .title-accent { height: 2px; width: 20px; background: #4DEEEA; display: inline-block; margin-right: 8px; }
+        .dot-matrix { display: grid; grid-template-columns: repeat(4, 3px); gap: 2px; position: absolute; bottom: 12px; right: 12px; opacity: 0.5; }
+        .dot { width: 3px; height: 3px; background: #4DEEEA; }
+        .marker-line { height: 4px; background: #4DEEEA; transform: skew(-20deg); margin-bottom: 4px; }
+        .glow-text { text-shadow: 0 0 15px rgba(77, 238, 234, 0.5); }
+        
+        /* 头像六边形裁切 */
+        .hexagon-mask {
+             clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <div class="bg-grid"></div>
+        <div class="absolute bottom-[-100px] right-[-100px] w-[500px] h-[500px] bg-cyber-cyan opacity-10 rounded-full blur-[120px] z-0"></div>
+
+        <div class="relative z-10 flex flex-col pt-16 px-20 h-full">
+            <div class="flex flex-col items-start mb-12">
+                <div class="marker-line w-16 opacity-80"></div>
+                <div class="marker-line w-10 opacity-60"></div>
+                <h1 class="text-6xl font-bold text-white tracking-tighter mt-4">
+                    Core <span class="text-cyber-cyan glow-text">Operatives</span>
+                </h1>
+            </div>
+
+            <div class="grid grid-cols-3 gap-8 flex-grow items-start">
+                
+                <div class="tech-card-v2 flex flex-col items-center">
+                    <div class="card-tag">UNIT_ID: 01 // LEAD</div>
+                    <div class="w-36 h-36 hexagon-mask bg-cyber-cyan/10 p-1 mb-6 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=256&auto=format&fit=crop" class="w-full h-full object-cover hexagon-mask opacity-90 grayscale contrast-125 hover:grayscale-0 transition-all duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-cyber-darkblue/80 to-transparent pointer-events-none"></div>
+                    </div>
+                    <div class="text-center mb-6">
+                        <h2 class="text-2xl font-bold text-white tracking-wide">Alex Chen</h2>
+                        <p class="text-cyber-cyan text-sm font-mono tracking-wider opacity-80">Neural Architect</p>
+                    </div>
+                    <div class="w-full flex flex-col gap-3 px-4">
+                        <div>
+                            <div class="flex justify-between text-sm text-cyber-text mb-1"><span>System Link</span><span>98%</span></div>
+                            <div class="h-1 w-full bg-cyber-darkblue/50 rounded-full overflow-hidden"><div class="h-full bg-cyber-cyan w-[98%] shadow-[0_0_10px_#4DEEEA]"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm text-cyber-text mb-1"><span>Encryption</span><span>92%</span></div>
+                            <div class="h-1 w-full bg-cyber-darkblue/50 rounded-full overflow-hidden"><div class="h-full bg-cyber-cyan w-[92%] opacity-80"></div></div>
+                        </div>
+                    </div>
+                    <div class="dot-matrix"><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+                </div>
+
+                <div class="tech-card-v2 flex flex-col items-center mt-12"> <div class="card-tag">UNIT_ID: 02 // OPS</div>
+                    <div class="w-36 h-36 hexagon-mask bg-cyber-cyan/10 p-1 mb-6 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=256&auto=format&fit=crop" class="w-full h-full object-cover hexagon-mask opacity-90 grayscale contrast-125 hover:grayscale-0 transition-all duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-cyber-darkblue/80 to-transparent pointer-events-none"></div>
+                    </div>
+                    <div class="text-center mb-6">
+                        <h2 class="text-2xl font-bold text-white tracking-wide">Sarah Vance</h2>
+                        <p class="text-cyber-cyan text-sm font-mono tracking-wider opacity-80">Field Operations</p>
+                    </div>
+                    <div class="w-full flex flex-col gap-3 px-4">
+                        <div>
+                            <div class="flex justify-between text-sm text-cyber-text mb-1"><span>Tactical</span><span>95%</span></div>
+                            <div class="h-1 w-full bg-cyber-darkblue/50 rounded-full overflow-hidden"><div class="h-full bg-cyber-cyan w-[95%] shadow-[0_0_10px_#4DEEEA]"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm text-cyber-text mb-1"><span>Hardware</span><span>88%</span></div>
+                            <div class="h-1 w-full bg-cyber-darkblue/50 rounded-full overflow-hidden"><div class="h-full bg-cyber-cyan w-[88%] opacity-80"></div></div>
+                        </div>
+                    </div>
+                    <div class="dot-matrix"><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+                </div>
+
+                <div class="tech-card-v2 flex flex-col items-center">
+                    <div class="card-tag">UNIT_ID: 03 // SEC</div>
+                    <div class="w-36 h-36 hexagon-mask bg-cyber-cyan/10 p-1 mb-6 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=256&auto=format&fit=crop" class="w-full h-full object-cover hexagon-mask opacity-90 grayscale contrast-125 hover:grayscale-0 transition-all duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-cyber-darkblue/80 to-transparent pointer-events-none"></div>
+                    </div>
+                    <div class="text-center mb-6">
+                        <h2 class="text-2xl font-bold text-white tracking-wide">Marcus Thorne</h2>
+                        <p class="text-cyber-cyan text-sm font-mono tracking-wider opacity-80">Cyber Security</p>
+                    </div>
+                    <div class="w-full flex flex-col gap-3 px-4">
+                        <div>
+                            <div class="flex justify-between text-sm text-cyber-text mb-1"><span>Firewall</span><span>99%</span></div>
+                            <div class="h-1 w-full bg-cyber-darkblue/50 rounded-full overflow-hidden"><div class="h-full bg-cyber-cyan w-[99%] shadow-[0_0_10px_#4DEEEA]"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm text-cyber-text mb-1"><span>Counter-Intel</span><span>90%</span></div>
+                            <div class="h-1 w-full bg-cyber-darkblue/50 rounded-full overflow-hidden"><div class="h-full bg-cyber-cyan w-[90%] opacity-80"></div></div>
+                        </div>
+                    </div>
+                    <div class="dot-matrix"><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="absolute bottom-8 left-20 flex gap-10 items-center opacity-30">
+            <div class="text-[10px] text-cyber-cyan font-mono tracking-widest uppercase">Personnel Status: Active</div>
+            <div class="flex gap-1 items-end h-3"><div class="w-1 h-full bg-cyber-cyan"></div><div class="w-1 h-[60%] bg-cyber-cyan"></div></div>
+        </div>
+    </div>
+</body>
+</html>

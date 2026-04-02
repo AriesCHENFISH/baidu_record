@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wardiere Inc. - Agenda</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { 
+            width: 1280px; height: 720px; margin: 0 auto; position: relative; 
+            background-color: #111111; 
+            overflow: hidden; font-family: 'Noto Sans SC', sans-serif; 
+        }
+        @keyframes pulse-soft { 0%, 100% { opacity: 0.15; transform: scale(1); } 50% { opacity: 0.3; transform: scale(1.1); } }
+        .logo-glow { animation: pulse-soft 4s infinite ease-in-out; }
+        
+        /* 目录卡片设计 */
+        .agenda-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(152, 216, 110, 0.15);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .agenda-card:hover {
+            background: rgba(152, 216, 110, 0.05);
+            border-color: #98D86E;
+            transform: translateX(10px);
+        }
+        
+        /* 绿色圆形序号 */
+        .circle-num {
+            width: 54px; height: 54px;
+            background-color: #98D86E;
+            color: #111111;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 1.4rem;
+            flex-shrink: 0;
+            box-shadow: 0 0 20px rgba(152, 216, 110, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div id="page_container" class="flex flex-col px-20">
+        
+        <header class="w-full pt-10 pb-6 flex justify-between items-center z-20">
+            <div class="flex items-center gap-4 border border-[#98D86E]/30 rounded-full px-6 py-3 bg-[#111111]/40 backdrop-blur-md">
+                <div class="flex flex-col gap-1.5"><span class="w-6 h-[2px] bg-[#98D86E]"></span><span class="w-4 h-[2px] bg-[#98D86E]"></span></div>
+                <span class="text-white text-xs font-bold tracking-[0.2em] uppercase opacity-80">Explore Menu</span>
+            </div>
+            <div class="relative group cursor-default">
+                <div class="absolute inset-0 bg-[#98D86E] rounded-full blur-2xl logo-glow"></div>
+                <div class="relative flex items-center gap-4 bg-[#111111]/60 backdrop-blur-sm border-b border-[#98D86E]/50 px-5 py-2">
+                    <div class="w-10 h-10 bg-[#98D86E] rounded-br-2xl flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-500">
+                        <i class="fa-solid fa-seedling text-[#111111] text-lg"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <h2 class="text-white font-black text-xl tracking-tight leading-none">WARDIERE <span class="text-[#98D86E]">INC.</span></h2>
+                        <span class="text-[9px] text-[#98D86E] tracking-[0.4em] font-light uppercase mt-1 opacity-70">Smart Agriculture</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="flex-1 flex flex-col justify-center">
+            <div class="mb-10 flex items-center gap-6">
+                <h1 class="text-6xl text-white font-black uppercase tracking-tighter">Table Of <span class="text-[#98D86E]">Contents</span></h1>
+                <div class="flex-1 h-[1px] bg-gradient-to-r from-[#98D86E]/50 to-transparent"></div>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-x-10 gap-y-4 max-w-[1100px]">
+                
+                <div class="agenda-card rounded-2xl p-5 flex items-center gap-6">
+                    <div class="circle-num">01</div>
+                    <div>
+                        <h3 class="text-white font-bold text-lg uppercase tracking-wide leading-tight">Company Introduction</h3>
+                        <p class="text-[#98D86E] text-[10px] font-bold uppercase tracking-widest mt-1 opacity-60">Founding & Core Values</p>
+                    </div>
+                </div>
+
+                <div class="agenda-card rounded-2xl p-5 flex items-center gap-6">
+                    <div class="circle-num">02</div>
+                    <div>
+                        <h3 class="text-white font-bold text-lg uppercase tracking-wide leading-tight">Vision & Mission</h3>
+                        <p class="text-[#98D86E] text-[10px] font-bold uppercase tracking-widest mt-1 opacity-60">Strategic Direction</p>
+                    </div>
+                </div>
+
+                <div class="agenda-card rounded-2xl p-5 flex items-center gap-6">
+                    <div class="circle-num">03</div>
+                    <div>
+                        <h3 class="text-white font-bold text-lg uppercase tracking-wide leading-tight">Service Solutions</h3>
+                        <p class="text-[#98D86E] text-[10px] font-bold uppercase tracking-widest mt-1 opacity-60">Smart Farming Service</p>
+                    </div>
+                </div>
+
+                <div class="agenda-card rounded-2xl p-5 flex items-center gap-6">
+                    <div class="circle-num">04</div>
+                    <div>
+                        <h3 class="text-white font-bold text-lg uppercase tracking-wide leading-tight">Product Innovation</h3>
+                        <p class="text-[#98D86E] text-[10px] font-bold uppercase tracking-widest mt-1 opacity-60">Agricultural Hardware</p>
+                    </div>
+                </div>
+
+                <div class="agenda-card rounded-2xl p-5 flex items-center gap-6">
+                    <div class="circle-num">05</div>
+                    <div>
+                        <h3 class="text-white font-bold text-lg uppercase tracking-wide leading-tight">Technical Excellence</h3>
+                        <p class="text-[#98D86E] text-[10px] font-bold uppercase tracking-widest mt-1 opacity-60">R&D and Analytics</p>
+                    </div>
+                </div>
+
+                <div class="agenda-card rounded-2xl p-5 flex items-center gap-6">
+                    <div class="circle-num">06</div>
+                    <div>
+                        <h3 class="text-white font-bold text-lg uppercase tracking-wide leading-tight">Global Market</h3>
+                        <p class="text-[#98D86E] text-[10px] font-bold uppercase tracking-widest mt-1 opacity-60">World-wide Footprint</p>
+                    </div>
+                </div>
+
+                <div class="agenda-card rounded-2xl p-5 flex items-center gap-6">
+                    <div class="circle-num">07</div>
+                    <div>
+                        <h3 class="text-white font-bold text-lg uppercase tracking-wide leading-tight">Expert Team</h3>
+                        <p class="text-[#98D86E] text-[10px] font-bold uppercase tracking-widest mt-1 opacity-60">Leading Specialists</p>
+                    </div>
+                </div>
+
+                <div class="agenda-card rounded-2xl p-5 flex items-center gap-6">
+                    <div class="circle-num">08</div>
+                    <div>
+                        <h3 class="text-white font-bold text-lg uppercase tracking-wide leading-tight">Contact Network</h3>
+                        <p class="text-[#98D86E] text-[10px] font-bold uppercase tracking-widest mt-1 opacity-60">Global Support Hub</p>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+        
+        <div class="absolute -bottom-20 -left-20 w-96 h-96 bg-[#98D86E]/10 rounded-full blur-[100px] pointer-events-none"></div>
+    </div>
+</body>
+</html>

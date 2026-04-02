@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Health Through Balanced Nutrition</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- ECharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.2/echarts.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            primary: '#CDEE9E',
+                            dark: '#3C3A32',
+                            grid: '#E0E0E0',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FFFFFF;
+            overflow: hidden;
+            display: flex;
+        }
+
+        /* 统一Logo文字样式 */
+        .logo-text {
+            letter-spacing: 0.15em;
+            display: flex;
+            align-items: center;
+        }
+        .logo-divider {
+            width: 1px;
+            height: 16px;
+            background-color: #3C3A32;
+            margin: 0 12px;
+            opacity: 0.3;
+        }
+
+        /* 左下角文字块装饰 */
+        .accent-dot {
+            width: 4px;
+            height: 4px;
+            background-color: #CDEE9E;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+
+        <!-- 左侧栏: 内容区域 (42% 宽度) -->
+        <div class="w-[42%] h-full flex flex-col relative bg-brand-primary">
+            
+            <!-- 头部 Logo (与第一页一致) -->
+            <div class="pt-12 px-12 z-10">
+                <div class="logo-text">
+                    <span class="font-bold text-xl text-brand-dark">BORCELLE</span>
+                    <div class="logo-divider"></div>
+                    <span class="font-light text-lg text-brand-dark opacity-80 uppercase tracking-widest">Medical Group</span>
+                </div>
+            </div>
+
+            <!-- 主标题区域 -->
+            <div class="px-12 mt-20 z-10 flex-grow">
+                <div class="w-16 h-1.5 bg-brand-dark mb-6"></div>
+                <h1 class="text-brand-dark text-[72px] font-bold leading-[1.05] tracking-tighter italic">
+                    Building<br/>Health.
+                </h1>
+                <p class="text-brand-dark text-xl font-medium mt-4 opacity-60 tracking-wide uppercase">Balanced Nutrition</p>
+            </div>
+
+            <!-- 底部深色信息盒 -->
+            <div class="bg-brand-dark p-12 text-white relative z-10 rounded-tr-[60px] shadow-2xl">
+                <div class="flex items-center gap-2 mb-6">
+                    <div class="accent-dot"></div>
+                    <span class="text-[10px] tracking-[0.2em] font-bold text-brand-primary uppercase">Expert Insight</span>
+                </div>
+                <p class="text-[15px] leading-relaxed text-gray-300 font-light text-justify">
+                    Good nutrition is essential to maintaining a strong immune system and supporting growth. A balanced diet with fruits, vegetables, and lean proteins fuels the body effectively. Avoiding excessive sugar and processed foods further protects against chronic conditions such as diabetes and cardiovascular disease.
+                </p>
+            </div>
+        </div>
+
+        <!-- 右侧栏: 数据可视化 (58% 宽度) -->
+        <div class="flex-1 h-full bg-white relative flex flex-col p-12">
+            
+            <div class="flex justify-between items-start w-full mb-8">
+                <!-- 占位，保持顶部平衡 -->
+                <div></div>
+                <!-- 页码 -->
+                <div class="text-brand-dark font-bold text-5xl opacity-10">03</div>
+            </div>
+
+            <!-- 图表容器 -->
+            <div id="chart-container" class="w-full h-full flex-grow"></div>
+
+            <!-- 装饰背景 -->
+            <div class="absolute bottom-0 right-0 w-48 h-48 bg-brand-primary opacity-10 rounded-tl-full pointer-events-none"></div>
+        </div>
+
+    </div>
+
+    <!-- ECharts 初始化 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var chartDom = document.getElementById('chart-container');
+            var myChart = echarts.init(chartDom);
+            
+            var option = {
+                backgroundColor: 'transparent',
+                textStyle: {
+                    fontFamily: '"Noto Sans SC", sans-serif'
+                },
+                tooltip: {
+                    trigger: 'axis',
+                    backgroundColor: '#3C3A32',
+                    borderColor: '#3C3A32',
+                    padding: [10, 15],
+                    textStyle: { color: '#fff' }
+                },
+                legend: {
+                    data: ['Nutrition Index', 'Control Group'],
+                    top: '0%',
+                    left: '0%',
+                    icon: 'rect',
+                    itemWidth: 12,
+                    itemHeight: 12,
+                    itemGap: 30,
+                    textStyle: {
+                        fontSize: 14,
+                        color: '#3C3A32',
+                        fontWeight: 500
+                    }
+                },
+                grid: {
+                    left: '2%',
+                    right: '5%',
+                    bottom: '5%',
+                    top: '15%',
+                    containLabel: true
+                },
+                xAxis: {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: ['Phase 1', 'Phase 2', 'Phase 3', 'Phase 4'],
+                    axisLine: { lineStyle: { color: '#E0E0E0' } },
+                    axisLabel: {
+                        fontSize: 14,
+                        color: '#999',
+                        margin: 15
+                    },
+                    splitLine: { show: true, lineStyle: { color: '#F5F5F5' } }
+                },
+                yAxis: {
+                    type: 'value',
+                    axisLabel: { fontSize: 14, color: '#999' },
+                    splitLine: { lineStyle: { color: '#F5F5F5' } }
+                },
+                series: [
+                    {
+                        name: 'Nutrition Index',
+                        type: 'line',
+                        smooth: 0.4,
+                        symbol: 'circle',
+                        symbolSize: 8,
+                        data: [5, 15, 38, 32],
+                        itemStyle: { color: '#CDEE9E' },
+                        lineStyle: { width: 4, color: '#CDEE9E' },
+                        areaStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                                { offset: 0, color: 'rgba(205, 238, 158, 0.4)' },
+                                { offset: 1, color: 'rgba(205, 238, 158, 0)' }
+                            ])
+                        }
+                    },
+                    {
+                        name: 'Control Group',
+                        type: 'line',
+                        smooth: 0.4,
+                        symbol: 'circle',
+                        symbolSize: 8,
+                        data: [12, 8, 20, 14],
+                        itemStyle: { color: '#3C3A32' },
+                        lineStyle: { width: 3, color: '#3C3A32', type: 'dashed' }
+                    }
+                ]
+            };
+
+            myChart.setOption(option);
+        });
+    </script>
+</body>
+</html>

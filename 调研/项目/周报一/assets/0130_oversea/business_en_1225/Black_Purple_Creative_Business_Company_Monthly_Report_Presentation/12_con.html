@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Overview - Next Gen Slide</title>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBlack: '#000000',
+                        brightWhite: '#FFFFFF',
+                        electricPurple: '#8C66FF',
+                        deepPurple: '#4A2C8A',
+                        mutedGrey: '#B0B0B0',
+                        darkViolet: '#1A1625',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #000000;
+            overflow: hidden;
+            font-family: "Noto Sans SC", sans-serif;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .fluid-shape {
+            filter: blur(80px);
+            animation: pulse 8s infinite alternate;
+        }
+
+        @keyframes pulse {
+            from { transform: scale(1); opacity: 0.2; }
+            to { transform: scale(1.2); opacity: 0.4; }
+        }
+
+        /* 图片遮罩效果 */
+        .image-mask {
+            mask-image: linear-gradient(to left, black 80%, transparent);
+            -webkit-mask-image: linear-gradient(to left, black 80%, transparent);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page_container flex flex-row">
+        
+        <div class="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] rounded-full bg-deepPurple fluid-shape z-0"></div>
+
+        <div class="relative z-10 w-[45%] flex flex-col p-16 justify-between">
+            <div>
+                <div class="mb-12">
+                    <h2 class="text-electricPurple text-5xl font-black italic tracking-tighter uppercase transform -skew-x-6">Project</h2>
+                    <h1 class="text-brightWhite text-7xl font-bold tracking-tight leading-none mt-2">Overview</h1>
+                    <div class="w-24 h-1.5 bg-electricPurple mt-6"></div>
+                </div>
+
+                <div class="space-y-10">
+                    <div class="flex items-start gap-5">
+                        <div class="mt-1 text-electricPurple text-xl"><i class="fa-solid fa-rocket"></i></div>
+                        <div>
+                            <h3 class="text-brightWhite text-xl font-bold mb-2">Strategic Goals</h3>
+                            <p class="text-mutedGrey text-sm leading-relaxed max-w-sm">Aligning project objectives with long-term corporate vision and market needs.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-5">
+                        <div class="mt-1 text-electricPurple text-xl"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                        <div>
+                            <h3 class="text-brightWhite text-xl font-bold mb-2">Market Analysis</h3>
+                            <p class="text-mutedGrey text-sm leading-relaxed max-w-sm">In-depth research into competitor landscapes and target user personas.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-5">
+                        <div class="mt-1 text-electricPurple text-xl"><i class="fa-solid fa-code"></i></div>
+                        <div>
+                            <h3 class="text-brightWhite text-xl font-bold mb-2">Core Development</h3>
+                            <p class="text-mutedGrey text-sm leading-relaxed max-w-sm">Iterative prototyping and core architectural setup are currently underway.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-[10px] text-mutedGrey tracking-[0.3em] uppercase">
+                Confidential Report | 2025
+            </div>
+        </div>
+
+        <div class="relative w-[55%] h-full overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?q=80&w=1280&auto=format&fit=crop" 
+                 class="absolute inset-0 w-full h-full object-cover image-mask">
+            
+            <div class="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent"></div>
+
+            <div class="absolute bottom-16 right-16 flex flex-col gap-6">
+                <div class="glass-card p-6 rounded-2xl w-64">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-brightWhite text-xs font-bold uppercase tracking-widest">Budget Status</span>
+                        <span class="text-electricPurple font-black">60%</span>
+                    </div>
+                    <div class="w-full bg-white/10 h-1.5 rounded-full overflow-hidden">
+                        <div class="bg-electricPurple h-full w-[60%] shadow-[0_0_10px_#8C66FF]"></div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl w-64">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-electricPurple flex items-center justify-center text-white text-xl">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <div>
+                            <div class="text-mutedGrey text-[10px] uppercase">Efficiency</div>
+                            <div class="text-brightWhite text-xl font-bold">+24.8%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="w-64 py-4 bg-brightWhite text-black text-xs font-bold uppercase tracking-widest rounded-xl hover:bg-electricPurple hover:text-white transition-all duration-300">
+                    View Full Metrics <i class="fa-solid fa-arrow-right ml-2"></i>
+                </button>
+            </div>
+
+            <div class="absolute top-12 right-12 flex gap-3">
+                <div class="w-10 h-10 rounded-full glass-card flex items-center justify-center text-white text-sm">
+                    <i class="fa-solid fa-share-nodes"></i>
+                </div>
+                <div class="w-10 h-10 rounded-full glass-card flex items-center justify-center text-white text-sm">
+                    <i class="fa-solid fa-download"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

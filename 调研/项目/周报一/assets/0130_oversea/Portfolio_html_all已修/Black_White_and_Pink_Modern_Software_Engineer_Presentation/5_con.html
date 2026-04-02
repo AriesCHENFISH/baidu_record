@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is SE - Refined Style</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .page_container { width: 1280px; height: 720px; background-color: #050505; position: relative; margin: 0 auto; overflow: hidden; font-family: 'Noto Sans SC', sans-serif; color: white; }
+        .logo-container { border-left: 3px solid #E87EA1; padding-left: 1.5rem; }
+        .logo-text { font-family: serif; letter-spacing: 0.2em; line-height: 1; }
+        .text-outline { -webkit-text-stroke: 1px rgba(232, 126, 161, 0.08); color: transparent; font-size: 140px; line-height: 1; pointer-events: none; }
+        
+        /* 文本美化组件 */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.02);
+            border-left: 2px solid rgba(232, 126, 161, 0.5);
+            backdrop-filter: blur(10px);
+        }
+        .tag {
+            border: 1px solid rgba(232, 126, 161, 0.3);
+            font-size: 10px;
+            padding: 2px 8px;
+            border-radius: 2px;
+            color: #E87EA1;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .step-line {
+            width: 1px;
+            height: 100%;
+            background: linear-gradient(to bottom, #E87EA1 0%, rgba(232, 126, 161, 0) 100%);
+        }
+    </style>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { brandPink: '#E87EA1', textSecondary: '#CCCCCC' } } } }
+    </script>
+</head>
+<body>
+    <div class="page_container">
+        <!-- 背景装饰大字 -->
+        <div class="absolute -top-6 -right-10 text-outline font-black uppercase">Definition</div>
+
+        <div class="grid grid-cols-12 h-full">
+            <!-- 左侧内容 (7列) -->
+            <div class="col-span-7 p-16 flex flex-col justify-between border-r border-white/5 relative z-10">
+                <!-- 统一 Logo -->
+                <div class="logo-container flex flex-col">
+                    <div class="text-3xl font-light logo-text">THYNK<span class="font-bold text-brandPink ml-1">.</span></div>
+                    <div class="text-[10px] uppercase tracking-[0.8em] text-brandPink/60 mt-3 font-medium">Systems Unlimited</div>
+                </div>
+
+                <!-- 统一大标题 -->
+                <div class="relative">
+                    <h1 class="text-7xl font-bold leading-[0.85] tracking-tighter">
+                        WHAT IS<br>
+                        <span class="text-brandPink">SOFTWARE</span> <br>
+                        <span class="text-4xl font-extralight tracking-[0.2em] text-white/70 uppercase">Engineering?</span>
+                    </h1>
+                </div>
+
+                <!-- 优化后的文本内容区 -->
+                <div class="flex gap-10 mt-6 h-[260px]">
+                    <!-- 左侧步骤线 -->
+                    <div class="flex flex-col items-center pt-2">
+                        <div class="w-2 h-2 rounded-full bg-brandPink"></div>
+                        <div class="step-line my-2"></div>
+                        <div class="w-2 h-2 rounded-full border border-brandPink/50"></div>
+                    </div>
+
+                    <!-- 右侧内容 -->
+                    <div class="flex flex-col justify-between py-1">
+                        <!-- 第一块：核心定义 -->
+                        <div class="glass-panel p-5 relative">
+                            <span class="absolute -top-3 left-4 bg-brandPink text-black text-[9px] font-bold px-2 py-0.5 font-mono">DEFINITION.CORE</span>
+                            <p class="text-textSecondary text-sm leading-7 font-light">
+                                A <span class="text-white font-medium border-b border-brandPink/30">structured approach</span> to designing, developing, and maintaining complex systems. It blends computer science with rigorous engineering principles to ensure <span class="text-white">Reliability</span> & <span class="text-white">Performance</span>.
+                            </p>
+                        </div>
+
+                        <!-- 第二块：战略焦点 -->
+                        <div class="p-5 border-l-2 border-white/10">
+                            <h3 class="text-brandPink text-xs font-bold tracking-widest uppercase mb-3 font-mono">// STRATEGIC_FOCUS</h3>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="tag">Scalability</span>
+                                <span class="tag">Security</span>
+                                <span class="tag">Adaptability</span>
+                                <span class="tag">Efficiency</span>
+                            </div>
+                            <p class="text-textSecondary text-[13px] leading-6 font-light">
+                                Sustaining critical digital infrastructure across global sectors: 
+                                <span class="text-white/60 italic ml-1 underline decoration-brandPink/20">Healthcare, Finance, & Entertainment.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 底部装饰线 -->
+                <div class="mt-4 flex items-center gap-4">
+                    <div class="w-24 h-[1px] bg-brandPink"></div>
+                    <div class="text-[9px] text-brandPink/50 uppercase tracking-[0.3em]">Engineering the future of systems</div>
+                </div>
+            </div>
+
+            <!-- 右侧视觉 (5列) -->
+            <div class="col-span-5 relative flex items-center justify-center bg-black p-12">
+                <div class="relative w-full h-[85%] border border-white/5 group">
+                    <!-- 装饰边角 -->
+                    <div class="absolute -top-2 -left-2 w-6 h-6 border-t-2 border-l-2 border-brandPink transition-all group-hover:w-10 group-hover:h-10"></div>
+                    
+                    <div class="w-full h-full overflow-hidden grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover transform group-hover:scale-110 duration-1000">
+                    </div>
+
+                    <!-- 代码浮窗：增加动感 -->
+                    <div class="absolute -left-8 bottom-20 bg-black/90 p-5 border-l-4 border-brandPink shadow-[20px_20px_40px_rgba(0,0,0,0.8)] backdrop-blur-md">
+                        <div class="flex items-center gap-2 mb-2 border-b border-white/10 pb-1">
+                            <div class="w-2 h-2 rounded-full bg-red-500/50"></div>
+                            <div class="w-2 h-2 rounded-full bg-yellow-500/50"></div>
+                            <div class="w-2 h-2 rounded-full bg-green-500/50"></div>
+                        </div>
+                        <pre class="text-[11px] font-mono leading-relaxed"><span class="text-brandPink">class</span> <span class="text-white">SoftwareEngine</span> {<br>  <span class="text-brandPink">constructor</span>() {<br>    <span class="text-brandPink">this</span>.focus = <span class="text-white">"Efficiency"</span>;<br>    <span class="text-brandPink">this</span>.goal = <span class="text-white">"Scalability"</span>;<br>  }<br>}</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

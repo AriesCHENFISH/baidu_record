@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, initial-scale=1.0">
+    <title>Ginyard - Financial Projections</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- ECharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#101214',
+                        cardBg: '#1B1E21',
+                        textPrimary: '#FFFFFF',
+                        textSecondary: '#C8CACC',
+                        brandAccent: '#61C3C6',
+                    },
+                    fontFamily: { sans: ['Inter', '"Noto Sans SC"', 'sans-serif'] },
+                    spacing: { '1280': '1280px', '720': '720px' }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; overflow: hidden; background-color: #101214; }
+        .glow-effect { position: absolute; width: 600px; height: 600px; background: radial-gradient(circle, rgba(97, 195, 198, 0.08) 0%, transparent 70%); border-radius: 50%; pointer-events: none; }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <!-- Background Decor -->
+        <div class="glow-effect" style="top: -200px; left: -100px;"></div>
+
+        <!-- Header -->
+        <div class="absolute top-0 left-0 w-full px-16 py-10 flex justify-between items-center z-20">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-cardBg flex items-center justify-center border border-brandAccent">
+                    <i class="fa-solid fa-layer-group text-brandAccent text-lg"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-textPrimary tracking-tight">ginyard</h2>
+            </div>
+            <div class="flex items-center gap-12">
+                <ul class="flex gap-10 list-none">
+                    <li><a href="#" class="text-textSecondary text-sm font-medium no-underline">Menu</a></li>
+                    <li><a href="#" class="text-textSecondary text-sm font-medium no-underline">About Us</a></li>
+                </ul>
+                <div class="px-6 py-2 border border-brandAccent rounded-full text-brandAccent text-sm font-medium">
+                    @reallygreatsite
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="grid grid-cols-12 gap-10 h-full w-full px-16 pt-28 pb-12 relative z-10 items-center">
+            
+            <!-- Left Column: Context (Span 4) -->
+            <div class="col-span-4 flex flex-col justify-center h-full pr-4">
+                <div class="mb-8">
+                    <p class="text-brandAccent uppercase tracking-[0.2em] text-xs font-bold mb-3">Forecast</p>
+                    <h1 class="text-5xl font-bold text-textPrimary leading-tight mb-4">
+                        Financial <br>Projections
+                    </h1>
+                    <p class="text-textSecondary text-sm leading-relaxed text-justify mb-6">
+                        Projected revenue growth remains strong through Q4, driven by seasonal demand and new product launches. We anticipate a steady upward trend in net profitability as operational efficiencies take hold.
+                    </p>
+                    
+                    <!-- Key Indicator Box -->
+                    <div class="bg-cardBg p-5 rounded-2xl border-l-4 border-brandAccent">
+                        <h4 class="text-white font-bold text-2xl mb-1">+18.5%</h4>
+                        <p class="text-xs text-textSecondary uppercase">YoY Revenue Growth</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Line Chart (Span 8) -->
+            <div class="col-span-8 h-full flex flex-col justify-center">
+                <!-- Chart Container with Card Style -->
+                <div class="w-full h-[450px] bg-cardBg rounded-3xl border border-gray-800 p-6 relative">
+                    <!-- Chart Title inside card -->
+                    <div class="absolute top-6 left-8 z-10">
+                        <h3 class="text-white text-lg font-bold">2024 Revenue Trend</h3>
+                        <p class="text-gray-500 text-xs">Millions USD</p>
+                    </div>
+                    
+                    <!-- ECharts Div -->
+                    <div id="line-chart" class="w-full h-full"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ECharts Config -->
+    <script>
+        var chartDom = document.getElementById('line-chart');
+        var myChart = echarts.init(chartDom);
+        var option = {
+            backgroundColor: 'transparent',
+            tooltip: {
+                trigger: 'axis',
+                backgroundColor: 'rgba(27, 30, 33, 0.9)',
+                borderColor: '#61C3C6',
+                textStyle: { color: '#fff' }
+            },
+            grid: {
+                top: '20%',
+                left: '5%',
+                right: '5%',
+                bottom: '10%',
+                containLabel: true
+            },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                axisLine: { lineStyle: { color: '#4B5563' } },
+                axisLabel: { color: '#9CA3AF', fontSize: 12 }
+            },
+            yAxis: {
+                type: 'value',
+                splitLine: { lineStyle: { color: '#374151', type: 'dashed', opacity: 0.5 } },
+                axisLabel: { color: '#9CA3AF' }
+            },
+            series: [
+                {
+                    name: 'Projected',
+                    type: 'line',
+                    smooth: true,
+                    showSymbol: false,
+                    lineStyle: { width: 4, color: '#61C3C6' },
+                    areaStyle: {
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                            { offset: 0, color: 'rgba(97, 195, 198, 0.4)' },
+                            { offset: 1, color: 'rgba(97, 195, 198, 0)' }
+                        ])
+                    },
+                    data: [120, 132, 145, 150, 165, 180, 190, 210, 230, 245, 260, 280]
+                },
+                {
+                    name: 'Actual',
+                    type: 'line',
+                    smooth: true,
+                    showSymbol: true,
+                    symbol: 'circle',
+                    symbolSize: 8,
+                    itemStyle: { color: '#fff', borderColor: '#61C3C6', borderWidth: 2 },
+                    lineStyle: { width: 2, type: 'dashed', color: '#FFFFFF', opacity: 0.6 },
+                    data: [118, 128, 142, 155, 160, 175, 195, null, null, null, null, null] // Partial data
+                }
+            ]
+        };
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

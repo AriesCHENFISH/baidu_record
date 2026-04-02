@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberpunk Team Presentation</title>
+    
+    <!-- Google Fonts (Domestic Mirror as requested) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: {
+                            black: '#000000',
+                            cyan: '#4DEEEA',
+                            darkblue: '#0F172A',
+                            text: '#D1D5DB',
+                            white: '#FFFFFF',
+                            metallic: '#A3A3A3'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'neon': '0 0 10px rgba(77, 238, 234, 0.5), 0 0 20px rgba(77, 238, 234, 0.3)',
+                        'glow-text': '0 0 5px rgba(77, 238, 234, 0.4)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Basic Setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Tech Grid Background Pattern */
+        .tech-grid {
+            background-size: 40px 40px;
+            background-image:
+                linear-gradient(to right, rgba(15, 23, 42, 1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(15, 23, 42, 1) 1px, transparent 1px);
+            mask-image: linear-gradient(to top, black 0%, transparent 80%);
+            -webkit-mask-image: linear-gradient(to top, black 0%, transparent 80%);
+        }
+
+        /* Slanted decoration lines */
+        .slant-stripes {
+            background: repeating-linear-gradient(
+                45deg,
+                #4DEEEA,
+                #4DEEEA 4px,
+                transparent 4px,
+                transparent 8px
+            );
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Page Container -->
+    <div id="page_container" class="relative mx-auto overflow-hidden bg-cyber-black font-sans text-cyber-text" style="width: 1280px; height: 720px;">
+
+        <!-- 1. Background Layers -->
+        <!-- Floor Grid Simulation -->
+        <div class="absolute bottom-0 left-0 w-full h-[300px] tech-grid opacity-50 z-0"></div>
+        <!-- Ambient Glow Bottom -->
+        <div class="absolute bottom-0 left-0 w-full h-[200px] z-0" style="background: linear-gradient(0deg, rgba(15, 23, 42, 0.8), rgba(0,0,0,0));"></div>
+
+        <!-- 2. Decorative Elements (HUD & Graphics) -->
+        
+        <!-- Top Left: Tech Decor -->
+        <div class="absolute top-[50px] left-[60px] flex flex-col gap-2 z-10">
+            <div class="flex items-center gap-2">
+                <!-- Slanted stripes block -->
+                <div class="w-[60px] h-[12px] slant-stripes rounded-sm shadow-neon"></div>
+                <!-- Connecting line -->
+                <div class="w-[100px] h-[1px] bg-cyber-darkblue relative">
+                    <div class="absolute right-0 top-[-2px] w-[5px] h-[5px] rounded-full bg-cyber-cyan"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Top Right: HUD Circle -->
+        <div class="absolute top-[-50px] right-[-50px] w-[200px] h-[200px] z-10 opacity-80">
+            <!-- Outer partial ring -->
+            <div class="absolute inset-0 border-[4px] border-cyber-darkblue rounded-full border-t-cyber-cyan border-r-transparent border-b-cyber-darkblue border-l-transparent transform rotate-45"></div>
+            <!-- Inner dashed ring -->
+            <div class="absolute inset-[20px] border-[2px] border-dashed border-cyber-cyan rounded-full opacity-40 animate-spin-slow"></div>
+            <!-- Core solid ring segments -->
+            <div class="absolute inset-[10px] border-[8px] border-transparent border-t-cyber-cyan rounded-full opacity-60"></div>
+        </div>
+
+
+        <!-- 3. Main Content Grid -->
+        <div class="absolute top-0 left-0 w-full h-full z-20 flex px-[100px] items-center">
+            
+            <!-- Left Column: Text Content -->
+            <div class="w-[45%] pr-[40px] flex flex-col justify-center">
+                
+                <!-- Headline -->
+                <h1 class="text-[64px] leading-[1.1] font-bold text-cyber-white mb-6 tracking-tight">
+                    Our Best <br>
+                    <span class="text-cyber-cyan text-shadow-glow">Team</span>
+                </h1>
+
+                <!-- Body Text -->
+                <p class="text-[16px] leading-[1.8] text-gray-400 mb-10 font-light max-w-[480px]">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+
+                <!-- Button -->
+                <div class="flex">
+                    <div class="group relative overflow-hidden rounded-full border border-cyber-cyan px-8 py-3 cursor-pointer transition-all hover:bg-cyber-cyan hover:bg-opacity-10 shadow-neon">
+                        <span class="text-cyber-cyan font-medium text-[16px] tracking-wide group-hover:text-white transition-colors">
+                            Learn More
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Column: Profile Cards -->
+            <div class="w-[55%] flex gap-[40px] items-end justify-center pl-4">
+
+                <!-- Profile 1: Olivia -->
+                <div class="flex flex-col items-center group">
+                    <!-- Tech Frame Wrapper -->
+                    <div class="relative p-[10px] mb-6">
+                        <!-- Top Left Bracket -->
+                        <div class="absolute top-0 left-0 w-[30px] h-[30px] border-t-[4px] border-l-[4px] border-cyber-cyan shadow-neon"></div>
+                        <!-- Top Right Vertical Bar (Decorative) -->
+                        <div class="absolute top-[10px] right-[-10px] w-[4px] h-[40px] bg-cyber-cyan opacity-50"></div>
+                        <!-- Bottom Right Bracket -->
+                        <div class="absolute bottom-0 right-0 w-[80px] h-[30px] border-b-[4px] border-r-[4px] border-cyber-cyan shadow-neon"></div>
+                        <!-- Bottom Left Vertical Bar (Decorative) -->
+                        <div class="absolute bottom-[20px] left-[-10px] w-[4px] h-[30px] bg-cyber-cyan opacity-50"></div>
+
+                        <!-- Image Container -->
+                        <div class="w-[240px] h-[300px] overflow-hidden bg-gray-800 relative z-10 grayscale hover:grayscale-0 transition-all duration-500 ease-in-out">
+                             <!-- Image: Cyberpunk Female Portrait -->
+                             <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=764&auto=format&fit=crop" 
+                                  alt="Olivia Wilson" 
+                                  class="w-full h-full object-cover opacity-90 hover:opacity-100 hover:scale-105 transition-transform duration-700">
+                             <!-- 240*300 -->
+                             <!-- Overlay gradient for depth -->
+                             <div class="absolute bottom-0 left-0 w-full h-[100px]" style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);"></div>
+                        </div>
+                    </div>
+
+                    <!-- Text Info -->
+                    <h3 class="text-[22px] font-bold text-cyber-cyan mb-1 shadow-glow-text">Olivia Wilson</h3>
+                    <p class="text-[14px] text-gray-400 font-light tracking-wider uppercase">Founder Borcelle</p>
+                </div>
+
+                <!-- Profile 2: Rufus -->
+                <div class="flex flex-col items-center group mt-[40px]">
+                    <!-- Tech Frame Wrapper -->
+                    <div class="relative p-[10px] mb-6">
+                         <!-- Top Left Bracket -->
+                         <div class="absolute top-0 left-0 w-[30px] h-[30px] border-t-[4px] border-l-[4px] border-cyber-cyan shadow-neon"></div>
+                         <!-- Top Right Vertical Bar (Decorative) -->
+                         <div class="absolute top-[10px] right-[-10px] w-[4px] h-[40px] bg-cyber-cyan opacity-50"></div>
+                         <!-- Bottom Right Bracket -->
+                         <div class="absolute bottom-0 right-0 w-[80px] h-[30px] border-b-[4px] border-r-[4px] border-cyber-cyan shadow-neon"></div>
+                         <!-- Bottom Left Vertical Bar (Decorative) -->
+                         <div class="absolute bottom-[20px] left-[-10px] w-[4px] h-[30px] bg-cyber-cyan opacity-50"></div>
+
+                        <!-- Image Container -->
+                        <div class="w-[240px] h-[300px] overflow-hidden bg-gray-800 relative z-10 grayscale hover:grayscale-0 transition-all duration-500 ease-in-out">
+                            <!-- Image: Cyberpunk Male Portrait -->
+                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=687&auto=format&fit=crop" 
+                                 alt="Rufus Stewart" 
+                                 class="w-full h-full object-cover opacity-90 hover:opacity-100 hover:scale-105 transition-transform duration-700">
+                            <!-- 240*300 -->
+                             <!-- Overlay gradient for depth -->
+                             <div class="absolute bottom-0 left-0 w-full h-[100px]" style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);"></div>
+                        </div>
+                    </div>
+
+                    <!-- Text Info -->
+                    <h3 class="text-[22px] font-bold text-cyber-cyan mb-1 shadow-glow-text">Rufus Stewart</h3>
+                    <p class="text-[14px] text-gray-400 font-light tracking-wider uppercase">Manager</p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Security Presentation</title>
+    <!-- Import Noto Sans SC Font as requested -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Tailwind Configuration for Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#040710',
+                        textPrimary: '#FFFFFF',
+                        textSecondary: '#B0B3B8',
+                        accentCyan: '#4FB0C0',
+                        accentBlue: '#2C6FCA',
+                        cardBg: '#1A1B1F',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'gradient-tech': 'linear-gradient(to bottom, #2C6FCA, #4FB0C0)',
+                        'gradient-card': 'linear-gradient(135deg, rgba(26, 27, 31, 0.95), rgba(4, 7, 16, 0.98))',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Global Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container - Strict Dimensions */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #040710;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            box-shadow: none; /* Explicitly requested no shadow */
+        }
+
+        /* Utility for absolute centering if needed */
+        .flex-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Custom Scrollbar hide */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Text Utilities */
+        .tracking-wide-xl {
+            letter-spacing: 0.05em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div id="page_container">
+        
+        <!-- Grid Layout: Left Image Area (5 columns) / Right Content Area (7 columns) -->
+        <div class="grid grid-cols-12 h-full w-full">
+
+            <!-- Left Column: Visual & Data -->
+            <div class="col-span-5 relative h-full">
+                <!-- Main Background Image for Left Side -->
+                <div class="absolute inset-0 z-0">
+                    <img src="https://images.unsplash.com/photo-1558494949-ef526b01201b?q=80&w=1280&auto=format&fit=crop" 
+                         alt="Abstract Cyber Circuit Board" 
+                         class="w-full h-full object-cover opacity-80"
+                         style="mask-image: linear-gradient(to right, black 80%, transparent 100%); -webkit-mask-image: linear-gradient(to right, black 80%, transparent 100%);">
+                    <!-- 533*720 -->
+                </div>
+
+                <!-- Decorative Tech Overlay (Simulating HUD) -->
+                <div class="absolute inset-0 z-10 bg-gradient-to-t from-[#040710] via-transparent to-transparent opacity-60"></div>
+
+                <!-- Floating Data Card (Bottom Left) -->
+                <div class="absolute bottom-16 left-12 right-12 z-20">
+                    <div class="bg-[#1A1B1F] border-l-4 border-accentCyan p-6 rounded-r-lg shadow-2xl backdrop-blur-sm bg-opacity-90">
+                        <div class="flex justify-between items-end mb-2">
+                            <h4 class="text-white font-bold text-lg uppercase tracking-wider">Evolution of Attack</h4>
+                            <span class="text-accentCyan font-bold text-2xl">90%</span>
+                        </div>
+                        
+                        <!-- Progress Bar Container -->
+                        <div class="w-full bg-gray-700 h-3 rounded-full overflow-hidden">
+                            <!-- Gradient Progress Bar -->
+                            <div class="h-full rounded-full" style="width: 90%; background: linear-gradient(to right, #2C6FCA, #4FB0C0);"></div>
+                        </div>
+                        <p class="text-textSecondary text-xs mt-3">
+                            <i class="fa-solid fa-shield-halved mr-1 text-accentCyan"></i>
+                            Real-time threat analysis active
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Content & Typography -->
+            <div class="col-span-7 h-full flex flex-col justify-center px-16 relative z-10">
+                
+                <!-- Background Decoration (Top Right Network Mesh) -->
+                <div class="absolute top-0 right-0 w-1/2 h-1/2 overflow-hidden pointer-events-none z-0 opacity-20">
+                     <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1000&auto=format&fit=crop" 
+                          alt="Network Connection Background" 
+                          class="w-full h-full object-cover mix-blend-screen">
+                     <!-- 400*300 -->
+                </div>
+
+                <!-- Content Wrapper -->
+                <div class="relative z-10">
+                    
+                    <!-- Decorative Line -->
+                    <div class="w-16 h-1 bg-accentCyan mb-8"></div>
+
+                    <!-- Main Title Group -->
+                    <div class="mb-10">
+                        <h2 class="text-textPrimary text-5xl font-light tracking-wide mb-2">ABOUT US</h2>
+                        <h1 class="text-textPrimary text-7xl font-bold leading-tight">
+                            CYBER <br>
+                            <span class="text-accentCyan">SECURITY</span>
+                        </h1>
+                    </div>
+
+                    <!-- Body Text -->
+                    <div class="max-w-xl mb-12">
+                        <p class="text-textSecondary text-gl leading-relaxed mb-6">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse molestie massa ac odio euismod, sit amet rutrum sapien dignissim. Nulla in sollicitudin.
+                        </p>
+                        
+                        <!-- Sub-feature Section -->
+                        <div class="border-l-2 border-accentBlue pl-6 py-2">
+                            <h3 class="text-accentCyan text-2xl font-bold mb-2">Protecting Digital Integrity</h3>
+                            <p class="text-textPrimary text-base leading-relaxed">
+                                We are dedicated to safeguarding your digital assets with cutting-edge security solutions, ensuring resilience against evolving threats.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Functional Icons (Visual Enhancement) -->
+                    <div class="flex space-x-8 text-textSecondary">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 rounded-full bg-cardBg flex items-center justify-center border border-gray-700">
+                                <i class="fa-solid fa-lock text-accentCyan"></i>
+                            </div>
+                            <span class="text-sm font-medium">Encrypted</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 rounded-full bg-cardBg flex items-center justify-center border border-gray-700">
+                                <i class="fa-solid fa-server text-accentCyan"></i>
+                            </div>
+                            <span class="text-sm font-medium">Secure Host</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Geometric Decoration Bottom Right -->
+        <div class="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-accentBlue to-transparent opacity-10 rounded-tl-full pointer-events-none"></div>
+    </div>
+
+</body>
+</html>

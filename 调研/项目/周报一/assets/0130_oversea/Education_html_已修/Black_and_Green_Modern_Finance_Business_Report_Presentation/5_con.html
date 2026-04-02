@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, initial-scale=1.0">
+    <title>Ginyard - Finance Division</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#101214',
+                        cardBg: '#1B1E21',
+                        textPrimary: '#FFFFFF',
+                        textSecondary: '#C8CACC',
+                        brandAccent: '#61C3C6',
+                    },
+                    fontFamily: { sans: ['Inter', '"Noto Sans SC"', 'sans-serif'] },
+                    spacing: { '1280': '1280px', '720': '720px' }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; overflow: hidden; background-color: #101214; }
+        .glow-effect { position: absolute; width: 800px; height: 800px; background: radial-gradient(circle, rgba(97, 195, 198, 0.1) 0%, transparent 70%); border-radius: 50%; pointer-events: none; z-index: 0; }
+        .active-card-gradient { background: linear-gradient(135deg, #3B8E99, #61C3C6); }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <!-- Background Glow -->
+        <div class="glow-effect" style="top: -400px; left: 240px;"></div>
+
+        <!-- Header -->
+        <div class="absolute top-0 left-0 w-full px-16 py-10 flex justify-between items-center z-20">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-cardBg flex items-center justify-center border border-brandAccent">
+                    <i class="fa-solid fa-layer-group text-brandAccent text-lg"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-textPrimary tracking-tight">ginyard</h2>
+            </div>
+            <div class="flex items-center gap-12">
+                <ul class="flex gap-10 list-none">
+                    <li><a href="#" class="text-textSecondary text-sm font-medium no-underline">Menu</a></li>
+                    <li><a href="#" class="text-textSecondary text-sm font-medium no-underline">About Us</a></li>
+                </ul>
+                <div class="px-6 py-2 border border-brandAccent rounded-full text-brandAccent text-sm font-medium">
+                    @reallygreatsite
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex flex-col justify-between h-full px-16 pt-32 pb-12 relative z-10">
+            
+            <!-- Hero Text Section -->
+            <div class="flex flex-col items-center text-center max-w-4xl mx-auto">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-12 h-[2px] bg-brandAccent"></div>
+                    <p class="text-brandAccent uppercase tracking-[0.2em] text-sm font-bold">Overview</p>
+                    <div class="w-12 h-[2px] bg-brandAccent"></div>
+                </div>
+                <h1 class="text-5xl font-bold text-textPrimary mb-6">Finance Division Overview</h1>
+                <p class="text-textSecondary text-lg leading-relaxed">
+                    The Finance Division plays a crucial role in supporting the organization’s strategic objectives through effective financial management. We ensure the financial health of the company by implementing robust controls and providing insights that drive informed decision-making.
+                </p>
+            </div>
+
+            <!-- Cards Grid (5 Columns) -->
+            <div class="grid grid-cols-5 gap-6 mt-10 h-[260px]">
+                
+                <!-- Active Card (Highlighted) -->
+                <div class="active-card-gradient rounded-3xl p-6 flex flex-col justify-between shadow-lg">
+                    <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-white text-xl font-bold leading-tight mb-2">Financial<br>Planning</h3>
+                        <div class="w-full h-[1px] bg-white/30 my-2"></div>
+                        <p class="text-white/80 text-sm">Analysis & Forecasting</p>
+                    </div>
+                </div>
+
+                <!-- Static Card 1 (Visible Border) -->
+                <div class="bg-cardBg rounded-3xl p-6 flex flex-col justify-between border border-[#2A3036]">
+                    <div class="w-10 h-10 rounded-full bg-[#2A3036] flex items-center justify-center text-brandAccent">
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-white text-xl font-bold leading-tight mb-2">Accounting<br>& Compliance</h3>
+                        <p class="text-textSecondary text-sm">Audit & Regulations</p>
+                    </div>
+                </div>
+
+                <!-- Static Card 2 -->
+                <div class="bg-cardBg rounded-3xl p-6 flex flex-col justify-between border border-[#2A3036]">
+                    <div class="w-10 h-10 rounded-full bg-[#2A3036] flex items-center justify-center text-brandAccent">
+                        <i class="fa-solid fa-coins"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-white text-xl font-bold leading-tight mb-2">Cost<br>Management</h3>
+                        <p class="text-textSecondary text-sm">Optimization</p>
+                    </div>
+                </div>
+
+                <!-- Static Card 3 -->
+                <div class="bg-cardBg rounded-3xl p-6 flex flex-col justify-between border border-[#2A3036]">
+                    <div class="w-10 h-10 rounded-full bg-[#2A3036] flex items-center justify-center text-brandAccent">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-white text-xl font-bold leading-tight mb-2">Treasury<br>& Risk</h3>
+                        <p class="text-textSecondary text-sm">Liquidity Control</p>
+                    </div>
+                </div>
+
+                <!-- Static Card 4 -->
+                <div class="bg-cardBg rounded-3xl p-6 flex flex-col justify-between border border-[#2A3036]">
+                    <div class="w-10 h-10 rounded-full bg-[#2A3036] flex items-center justify-center text-brandAccent">
+                        <i class="fa-solid fa-chart-pie"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-white text-xl font-bold leading-tight mb-2">Performance<br>Measurement</h3>
+                        <p class="text-textSecondary text-sm">KPI Tracking</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

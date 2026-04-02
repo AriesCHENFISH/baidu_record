@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Presentation Slide</title>
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <!-- FontAwesome (Icons) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+
+    <!-- Google Fonts (Specific Mirror as requested) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- ECharts (Charts) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+
+    <!-- Configuration & Custom Styles -->
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* Page Container - Fixed Dimensions 1280x720 */
+        .page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #F0F0F0;
+            overflow: hidden; /* Prevent scrolling within the slide */
+            display: flex;
+            flex-direction: column;
+            color: #000000;
+        }
+
+        /* Custom utility for absolute centering if needed */
+        .center-absolute {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Typography overrides for specific aesthetic */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 400; /* Minimalist default */
+        }
+
+        /* Utility for 1px lines to ensure sharpness */
+        .border-line {
+            height: 1px;
+            background-color: #000000;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div class="page_container p-12">
+
+        <!-- Header Section: Title & Brand -->
+        <div class="w-full flex justify-between items-start h-32">
+            <!-- Left: Title Area -->
+            <div class="flex items-start gap-4">
+                <h1 class="text-[110px] leading-none tracking-tighter font-medium text-black">
+                    Budget
+                </h1>
+            </div>
+
+            <!-- Right: Brand Identity -->
+            <div class="flex items-center gap-6 mt-4">
+                <div class="text-right">
+                    <h4 class="text-2xl font-bold uppercase leading-tight tracking-wide">
+                        WARNER &<br>SPENCER
+                    </h4>
+                </div>
+                <!-- Vertical Divider -->
+                <div class="h-12 w-[2px] bg-black"></div>
+                <!-- Logo Icon -->
+                <div class="text-5xl text-black">
+                    <i class="fa-solid fa-circle-notch fa-spin-pulse" style="--fa-animation-duration: 15s;"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Horizontal Divider -->
+        <div class="w-full h-[2px] bg-black my-4"></div>
+
+        <!-- Main Content Grid -->
+        <div class="flex-1 grid grid-cols-12 gap-12 pt-4">
+            
+            <!-- Left Column: Chart & Description (Span 8) -->
+            <div class="col-span-8 flex flex-col justify-between relative">
+                
+                <!-- Chart Container -->
+                <div class="w-full h-[320px] relative">
+                    <!-- ECharts DOM -->
+                    <div id="budgetChart" class="w-full h-full"></div>
+                </div>
+
+                <!-- Divider for bottom text -->
+                <div class="w-full h-[1px] bg-black mb-6"></div>
+
+                <!-- Bottom Description Text -->
+                <div class="w-2/3">
+                    <p class="text-gl font-medium uppercase leading-relaxed tracking-wide text-black">
+                        Use the graph to present the expenses associated with the campaign.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Column: Budget List (Span 4) -->
+            <div class="col-span-4 flex flex-col justify-between h-full pl-6">
+                
+                <!-- List Items Container -->
+                <div class="flex flex-col gap-10">
+                    
+                    <!-- Item 01 -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 uppercase tracking-wide">Budget - 01</h3>
+                        <p class="text-base text-gray-800 leading-relaxed font-light">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod id sem quis accumsan. Cras suscipit est.
+                        </p>
+                    </div>
+
+                    <!-- Item 02 -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 uppercase tracking-wide">Budget - 02</h3>
+                        <p class="text-base text-gray-800 leading-relaxed font-light">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod id sem quis accumsan. Cras suscipit est.
+                        </p>
+                    </div>
+
+                    <!-- Item 03 -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 uppercase tracking-wide">Budget - 03</h3>
+                        <p class="text-base text-gray-800 leading-relaxed font-light">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod id sem quis accumsan. Cras suscipit est.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Footer Date -->
+                <div class="text-right mt-auto pb-2">
+                    <p class="text-xl font-bold uppercase tracking-wider">Aug 2040</p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ECharts Initialization Script -->
+    <script type="text/javascript">
+        // Initialize chart
+        var chartDom = document.getElementById('budgetChart');
+        var myChart = echarts.init(chartDom, null, {
+            renderer: 'svg' // Use SVG for sharper rendering
+        });
+        
+        var option;
+
+        option = {
+            // ECharts Configuration matching the minimalist style
+            grid: {
+                left: '0%',
+                right: '5%',
+                bottom: '10%',
+                top: '5%',
+                containLabel: true
+            },
+            xAxis: {
+                type: 'value',
+                splitLine: {
+                    show: true,
+                    lineStyle: {
+                        color: '#E0E0E0',
+                        type: 'dashed'
+                    }
+                },
+                axisLabel: {
+                    fontFamily: 'Noto Sans SC',
+                    fontWeight: 'bold',
+                    color: '#000000',
+                    fontSize: 12
+                }
+            },
+            yAxis: {
+                type: 'category',
+                data: ['B - 03', 'B - 02', 'B - 01'], // Reversed order for display top-down usually
+                axisLine: { show: false },
+                axisTick: { show: false },
+                axisLabel: {
+                    fontFamily: 'Noto Sans SC',
+                    fontWeight: 'bold',
+                    fontSize: 14,
+                    color: '#000000',
+                    margin: 20
+                }
+            },
+            series: [
+                {
+                    name: 'Budget',
+                    type: 'bar',
+                    data: [18, 15, 23], // Data approximating the visual
+                    barWidth: 35, // Thick bars
+                    itemStyle: {
+                        color: '#111111', // Almost black
+                        borderRadius: [0, 4, 4, 0] // Slight roundness on the end
+                    },
+                    // Label inside or outside bars not strictly required by image, 
+                    // but cleaner without labels on bars for this style
+                }
+            ],
+            animation: false // No animation per requirements
+        };
+
+        // Apply config
+        option && myChart.setOption(option);
+
+        // Resize handler (though container is fixed 1280x720, good practice)
+        window.addEventListener('resize', function() {
+            myChart.resize();
+        });
+    </script>
+</body>
+</html>

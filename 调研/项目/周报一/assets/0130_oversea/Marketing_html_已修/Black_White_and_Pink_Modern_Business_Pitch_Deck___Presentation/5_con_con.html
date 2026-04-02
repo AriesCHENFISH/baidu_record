@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Larana Company - Services Pitch Deck</title>
+    
+    <!-- Import FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Import Google Fonts (Domestic CDN) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBlack: '#050505',
+                        softPink: '#F5C2D4',
+                        ambientPurple: '#1A1520',
+                        lightSilver: '#D1D1D1',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'Inter', 'sans-serif'],
+                    },
+                    spacing: {
+                        '720': '720px',
+                        '1280': '1280px',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Internal CSS for Reset and Specific Constraints -->
+    <style>
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container Definition */
+        .page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background-color: #050505;
+            font-family: 'Noto Sans SC', sans-serif;
+            /* No external box-shadow as requested */
+        }
+
+        /* Custom Utility for Glassmorphism to ensure consistency */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Gradient Text Utility */
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(135deg, #ffffff 0%, #D1D1D1 100%);
+        }
+        
+        /* Specific element overrides to ensure margin usage over padding for layout where possible */
+        h1, h2, h3, h4, h5, h6, p {
+            margin-bottom: 0.5em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Container -->
+    <div class="page_container">
+
+        <!-- Background Decor: Ambient Lighting (Using CSS Gradients) -->
+        <!-- Purpose: Creates the "Deep Space" atmosphere with subtle purple glow -->
+        <div class="absolute top-[-200px] right-[-100px] w-[800px] h-[800px] rounded-full opacity-30" 
+             style="background: radial-gradient(circle, #2d2436 0%, transparent 70%); pointer-events: none;"></div>
+        
+        <div class="absolute bottom-[-300px] left-[-100px] w-[1000px] h-[1000px] rounded-full opacity-20" 
+             style="background: radial-gradient(circle, #1A1520 0%, transparent 70%); pointer-events: none;"></div>
+
+        <!-- Decorative Shape: Abstract Flow -->
+        <!-- Purpose: Adds depth behind the cards similar to the swirl in the original image -->
+        <div class="absolute top-[20%] left-[10%] w-[80%] h-[400px] border border-white/5 rounded-[100%] transform -rotate-12 pointer-events-none opacity-20"></div>
+
+        <!-- Header Section -->
+        <!-- Purpose: Top navigation area with Logo, Title, and Date -->
+        <div class="relative w-full h-[80px] flex justify-between items-center px-12 pt-8 z-20">
+            
+            <!-- Logo Area -->
+            <div class="flex items-center gap-3">
+                <div class="text-softPink text-xl">
+                    <i class="fa-solid fa-shapes"></i>
+                </div>
+                <h4 class="text-white text-lg font-medium tracking-wide">Larana Company</h4>
+            </div>
+
+            <!-- Top Right Capsule Navigation -->
+            <!-- Glassmorphism container for the header pill -->
+            <div class="flex items-center rounded-full glass-panel pl-1 pr-6 py-1 gap-6">
+                <!-- Pink Highlight Pill -->
+                <div class="bg-softPink rounded-full px-6 py-2">
+                    <h5 class="text-deepBlack text-sm font-bold tracking-tight">Pitch Deck Business Presentation</h5>
+                </div>
+                <!-- Date -->
+                <h6 class="text-lightSilver text-sm font-light tracking-widest">August 2025</h6>
+            </div>
+        </div>
+
+        <!-- Main Content Area: Cards -->
+        <!-- Purpose: Display the 3 Services using a grid layout -->
+        <div class="relative w-full px-12 mt-12 z-10">
+            <!-- Grid Wrapper -->
+            <div class="grid grid-cols-3 gap-8">
+                
+                <!-- Card 01: Frosted Glass Style -->
+                <div class="glass-panel rounded-2xl p-8 relative group transition-all duration-300 border-t border-white/20">
+                    <!-- Icon / Arrow -->
+                    <div class="flex justify-end mb-4 text-lightSilver opacity-70">
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xl"></i>
+                    </div>
+                    
+                    <!-- Title -->
+                    <h3 class="text-white text-3xl font-light mb-6">Service 01</h3>
+                    
+                    <!-- Content -->
+                    <p class="text-lightSilver text-sm leading-relaxed font-light opacity-80">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl eu sem tristique, sit amet convallis ex aliquam. Maecenas varius lectus hendrerit augue blandit.
+                    </p>
+                </div>
+
+                <!-- Card 02: Frosted Glass Style -->
+                <div class="glass-panel rounded-2xl p-8 relative border-t border-white/20">
+                    <!-- Icon / Arrow -->
+                    <div class="flex justify-end mb-4 text-lightSilver opacity-70">
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xl"></i>
+                    </div>
+                    
+                    <!-- Title -->
+                    <h3 class="text-white text-3xl font-light mb-6">Service 02</h3>
+                    
+                    <!-- Content -->
+                    <p class="text-lightSilver text-sm leading-relaxed font-light opacity-80">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl eu sem tristique, sit amet convallis ex aliquam. Maecenas varius lectus hendrerit augue blandit.
+                    </p>
+                </div>
+
+                <!-- Card 03: Highlighted Style (Active State) -->
+                <!-- Purpose: Visual hierarchy to show active or primary service, mimics the white card in original -->
+                <div class="bg-gradient-to-br from-gray-100 to-gray-300 rounded-2xl p-8 relative shadow-2xl shadow-white/5">
+                    <!-- Icon / Arrow (Dark for contrast) -->
+                    <div class="flex justify-end mb-4 text-deepBlack">
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xl"></i>
+                    </div>
+                    
+                    <!-- Title (Dark for contrast) -->
+                    <h3 class="text-deepBlack text-3xl font-normal mb-6">Service 03</h3>
+                    
+                    <!-- Content (Dark for contrast) -->
+                    <p class="text-gray-600 text-sm leading-relaxed font-normal">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl eu sem tristique, sit amet convallis ex aliquam. Maecenas varius lectus hendrerit augue blandit.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer Section: Big Typography & Description -->
+        <!-- Purpose: Anchors the bottom of the slide with the main section title and additional context -->
+        <div class="absolute bottom-0 left-0 w-full px-12 pb-12 z-20">
+            <div class="flex items-end justify-between w-full">
+                
+                <!-- Large Typography Title -->
+                <div class="w-1/2">
+                    <h1 class="text-white text-8xl font-medium tracking-tighter leading-[0.9]">
+                        Services
+                    </h1>
+                    <h1 class="text-white text-8xl font-medium tracking-tighter leading-[0.9]">
+                        We Offer
+                    </h1>
+                </div>
+
+                <!-- Footer Text Block -->
+                <div class="w-[450px] mb-2">
+                    <p class="text-lightSilver text-sm leading-relaxed font-light border-l-2 border-softPink pl-6">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl eu sem tristique, sit amet convallis ex aliquam. Maecenas varius lectus hendrerit augue blandit, ut posuere erat aliquam. Praesent auctor tellus eget nisl blandit.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

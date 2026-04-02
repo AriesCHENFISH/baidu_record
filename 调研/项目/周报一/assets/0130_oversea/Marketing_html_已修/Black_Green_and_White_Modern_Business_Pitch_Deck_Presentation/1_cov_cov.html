@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitch Deck Presentation</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts CDN (Provided Source) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    
+    <style>
+        /* CSS Reset & Basic Setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Typography Override */
+        body {
+            font-family: 'Noto Sans SC', 'Inter', 'Roboto', sans-serif;
+            background-color: #f0f0f0; /* Outer background for viewing context */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Page Container - Strict 1280x720 */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #E5E5E5; /* Main Background Color */
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        /* Utility classes for specific gradients required by the prompt style */
+        .bg-glow-tl {
+            background: radial-gradient(circle at center, #D6E8C7 0%, transparent 70%);
+        }
+        .bg-glow-br {
+            background: radial-gradient(circle at center, #D6E8C7 0%, transparent 70%);
+        }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: '#E5E5E5',
+                            text: '#000000',
+                            subtext: '#333333',
+                            accent: '#6FE6AA',
+                            stroke: '#666666',
+                            glow: '#D6E8C7'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans SC', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div id="page_container" class="flex flex-col justify-between p-16">
+        
+        <!-- Background Decoration: Top Left Glow -->
+        <div class="absolute top-[-100px] left-[-100px] w-[600px] h-[600px] bg-glow-tl opacity-60 z-0 pointer-events-none"></div>
+        
+        <!-- Background Decoration: Bottom Right Glow -->
+        <div class="absolute bottom-[-150px] right-[-100px] w-[700px] h-[700px] bg-glow-br opacity-50 z-0 pointer-events-none"></div>
+
+        <!-- Header Section: Logo and Date -->
+        <header class="relative z-10 flex justify-between items-center w-full">
+            <!-- Logo Area -->
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 flex items-center justify-center bg-brand-accent rounded text-brand-text">
+                    <i class="fa-solid fa-shapes text-lg"></i>
+                </div>
+                <h2 class="text-2xl font-bold tracking-tight text-brand-text">Fauget</h2>
+            </div>
+
+            <!-- Date Display -->
+            <div class="border border-brand-stroke rounded-full px-6 py-2">
+                <p class="text-brand-subtext font-medium text-sm">July 16, 2025</p>
+            </div>
+        </header>
+
+        <!-- Main Content: Title -->
+        <main class="relative z-10 flex-grow flex flex-col justify-center items-center mt-4">
+            <!-- Massive Title -->
+            <h1 class="text-[180px] leading-[0.85] font-bold text-brand-text tracking-tighter text-center select-none">
+                Pitch Deck
+            </h1>
+        </main>
+
+        <!-- Footer Section: Interactive-style Pills & Credits -->
+        <footer class="relative z-10 w-full flex justify-between items-end">
+            
+            <!-- Left: Context Pill (Styled as a toggle switch) -->
+            <div class="flex items-center">
+                <div class="bg-brand-accent h-16 rounded-full flex items-center pl-8 pr-2 gap-8 shadow-sm">
+                    <p class="text-xl font-semibold text-brand-text whitespace-nowrap">
+                        Business Presentation
+                    </p>
+                    <!-- Toggle Circle Indicator -->
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+                        <i class="fa-solid fa-arrow-right -rotate-45 text-brand-text text-lg"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Presented By Information -->
+            <div class="flex items-center gap-4">
+                <!-- Label Pill -->
+                <div class="border border-brand-stroke rounded-full px-8 py-4 h-16 flex items-center">
+                    <p class="text-brand-subtext text-lg font-medium">Presented</p>
+                </div>
+
+                <!-- Connector -->
+                <div class="bg-white rounded-full w-16 h-16 flex items-center justify-center border border-brand-stroke/20">
+                    <span class="text-brand-subtext font-medium italic">by</span>
+                </div>
+
+                <!-- Name Pill (Highlighted) -->
+                <div class="bg-[#333333] h-16 rounded-full px-8 flex items-center shadow-lg">
+                    <p class="text-white text-lg font-bold tracking-wide">
+                        Ketut Susilo
+                    </p>
+                </div>
+            </div>
+
+        </footer>
+
+        <!-- Optional: Geometric Decoration (Lines) -->
+        <div class="absolute right-0 top-1/2 -translate-y-1/2 opacity-10 pointer-events-none">
+             <!-- Abstract decorative circles -->
+             <div class="w-[400px] h-[400px] border border-brand-stroke rounded-full absolute right-[-200px] top-[-200px]"></div>
+             <div class="w-[600px] h-[600px] border border-brand-stroke rounded-full absolute right-[-300px] top-[-300px]"></div>
+        </div>
+
+    </div>
+
+</body>
+</html>

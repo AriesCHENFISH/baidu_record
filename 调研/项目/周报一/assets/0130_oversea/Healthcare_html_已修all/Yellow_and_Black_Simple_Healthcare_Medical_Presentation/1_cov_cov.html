@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovative Medical Cover</title>
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#D6F847', // 酸性绿
+                        dark: '#1A1A1A',    // 墨黑
+                        accent: '#2E5AAC',  // 钴蓝
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background-color: #D6F847;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        
+        /* 极端排版辅助线 */
+        .vertical-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            background: #1A1A1A;
+            opacity: 0.1;
+        }
+
+        /* 文字描边效果 */
+        .text-outline {
+            -webkit-text-stroke: 1.5px #1A1A1A;
+            color: transparent;
+        }
+
+        /* 旋转的笑脸动画 */
+        .smiley-spin {
+            animation: slow-spin 20s linear infinite;
+        }
+        @keyframes slow-spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .heavy-shadow { box-shadow: 15px 15px 0px #1A1A1A; }
+    </style>
+</head>
+<body>
+
+    <div id="page_container" class="flex flex-col justify-center px-16">
+        
+        <!-- 背景装饰块 (非网格/非点阵) -->
+        <div class="absolute -top-20 -right-20 w-96 h-96 bg-accent rounded-full opacity-10"></div>
+        <div class="absolute top-1/2 left-0 w-full h-[1px] bg-dark opacity-10"></div>
+        
+        <!-- 侧边垂直标签 -->
+        <div class="absolute left-10 top-1/2 -translate-y-1/2 -rotate-90 origin-left flex items-center gap-4">
+            <span class="text-dark font-black tracking-[0.5em] text-xs uppercase">Future Healthcare Infrastructure</span>
+            <div class="h-[2px] w-24 bg-dark"></div>
+        </div>
+
+        <!-- 主标题区：错落叠印排版 -->
+        <div class="relative z-10 select-none">
+            
+            <!-- 第一行：MEDICAL (描边+实心交替) -->
+            <div class="flex items-baseline gap-4 mb-[-20px]">
+                <h1 class="text-[160px] font-black text-dark leading-none tracking-tighter">MED</h1>
+                <h1 class="text-[160px] font-black text-outline leading-none tracking-tighter italic">ICAL</h1>
+            </div>
+
+            <!-- 第二行：HEALTHCARE (钴蓝突出+偏移) -->
+            <div class="relative ml-32">
+                <h2 class="text-[140px] font-black text-accent leading-none tracking-[0.1em] uppercase">
+                    HEALTH<span class="text-dark">CARE</span>
+                </h2>
+                <!-- 装饰线条 -->
+                <div class="absolute -bottom-4 left-0 w-full h-8 bg-dark -z-10 skew-x-[-12deg]"></div>
+            </div>
+
+            <!-- 第三行：PRESENTATION (垂直压缩+间距拉伸) -->
+            <div class="mt-8 flex items-center gap-10">
+                <div class="flex-grow h-4 bg-dark"></div>
+                <h3 class="text-[72px] font-black text-dark leading-none tracking-[0.4em] uppercase scale-y-125">
+                    PRESENTATION
+                </h3>
+            </div>
+        </div>
+
+        <!-- 创新交互元素：蓝色笑脸 (作为页面的视觉锚点) -->
+        <div class="absolute top-16 right-32">
+            <div class="relative">
+                <!-- 围绕笑脸的圆形文字轨道 -->
+                <div class="smiley-spin w-48 h-48 border-[2px] border-dashed border-dark rounded-full flex items-center justify-center">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-dark text-primary px-3 py-1 text-[10px] font-black uppercase">Core Vision</div>
+                </div>
+                <!-- 笑脸主体 -->
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-accent rounded-full border-4 border-dark flex items-center justify-center heavy-shadow">
+                    <i class="fa-solid fa-face-smile text-primary text-[84px]"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部元数据区：不对称网格 -->
+        <div class="mt-24 grid grid-cols-12 gap-0 border-t-4 border-dark pt-8">
+            <div class="col-span-4">
+                <p class="text-[10px] font-black uppercase text-dark/40 mb-2">Category</p>
+                <p class="text-xl font-black text-dark uppercase tracking-widest">Medical Ethics & Tech</p>
+            </div>
+            <div class="col-span-3 border-l-2 border-dark/20 pl-8">
+                <p class="text-[10px] font-black uppercase text-dark/40 mb-2">Issue Date</p>
+                <p class="text-xl font-black text-dark uppercase tracking-widest">2026 / Q1</p>
+            </div>
+            <div class="col-span-5 flex justify-end items-end gap-6">
+                <!-- 类似条形码的装饰块 -->
+                <div class="flex gap-1 h-12">
+                    <div class="w-1 bg-dark"></div>
+                    <div class="w-2 bg-dark"></div>
+                    <div class="w-[1px] bg-dark"></div>
+                    <div class="w-4 bg-dark"></div>
+                    <div class="w-1 bg-accent"></div>
+                    <div class="w-1 bg-dark"></div>
+                </div>
+                <p class="text-sm font-black text-dark uppercase text-right leading-none">
+                    Document Ref:<br><span class="text-accent italic">#BMG-0026-X</span>
+                </p>
+            </div>
+        </div>
+
+        <!-- 装饰性漂浮几何体 -->
+        <div class="absolute bottom-10 right-10 flex gap-2">
+            <div class="w-4 h-4 border-2 border-dark rotate-45"></div>
+            <div class="w-4 h-4 border-2 border-dark rounded-full"></div>
+            <div class="w-4 h-4 bg-dark"></div>
+        </div>
+
+    </div>
+
+</body>
+</html>

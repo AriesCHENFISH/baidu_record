@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crystal Waters - Research Archive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { oceanDeep: '#081033', electricCyan: '#00E5FF' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Playfair Display', 'serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        #page_container { width: 1280px; height: 720px; position: relative; background: #081033; color: #FFFFFF; overflow: hidden; display: flex; flex-direction: column; margin: 0 auto; }
+        .text-outline { -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3); color: transparent; }
+        .img-mask-slant { clip-path: polygon(15% 0, 100% 0, 85% 100%, 0 100%); }
+        .vertical-text { writing-mode: vertical-rl; transform: rotate(180deg); }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <!-- Header -->
+        <header class="relative z-20 px-20 pt-12 flex items-center justify-between">
+            <div class="flex items-center gap-5">
+                <div class="w-12 h-12 border-2 border-electricCyan flex flex-col items-center justify-center gap-1">
+                    <div class="w-6 h-0.5 bg-white"></div>
+                    <div class="w-4 h-0.5 bg-electricCyan"></div>
+                    <div class="w-6 h-0.5 bg-white"></div>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-black tracking-widest uppercase leading-none">Abyssal</h2>
+                    <span class="text-[9px] tracking-[0.5em] text-electricCyan uppercase font-bold">Research Archive</span>
+                </div>
+            </div>
+            <div class="text-[9px] tracking-[0.2em] text-white/40 uppercase text-right">
+                <span class="block text-white font-bold italic font-serif text-sm">Transparency Index</span>
+                <span>Sub-Level Survey 05</span>
+            </div>
+        </header>
+
+        <main class="flex-1 px-20 flex flex-col justify-center">
+            <!-- 4-Grid Image Gallery -->
+            <div class="grid grid-cols-4 gap-4 w-full h-64 mb-16 relative">
+                <div class="absolute -top-12 left-0 text-[100px] font-black text-white/[0.02] pointer-events-none">CRYSTAL</div>
+                <!-- Image 1 -->
+                <div class="overflow-hidden img-mask-slant border border-white/10 group">
+                    <img src="https://images.unsplash.com/photo-1568430462989-44163eb1752f?q=80" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
+                </div>
+                <!-- Image 2 -->
+                <div class="overflow-hidden img-mask-slant border border-electricCyan/30 group">
+                    <img src="https://images.unsplash.com/photo-1570459800438-232cb202f5a6?q=80" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
+                </div>
+                <!-- Image 3 -->
+                <div class="overflow-hidden img-mask-slant border border-white/10 group">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
+                </div>
+                <!-- Image 4 -->
+                <div class="overflow-hidden img-mask-slant border border-white/10 group">
+                    <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?q=80" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
+                </div>
+            </div>
+
+            <!-- Bottom Title & Text -->
+            <div class="grid grid-cols-12 gap-8 items-end">
+                <div class="col-span-6">
+                    <div class="flex items-center gap-3 mb-2">
+                        <div class="w-8 h-[1px] bg-electricCyan"></div>
+                        <span class="text-[12px] tracking-[0.4em] text-electricCyan font-bold uppercase">Refractive Purity</span>
+                    </div>
+                    <h1 class="text-7xl font-serif italic leading-[0.9]">Crystal <br><span class="font-sans not-italic font-black text-8xl text-outline uppercase">Waters</span></h1>
+                </div>
+                <div class="col-span-6 grid grid-cols-2 gap-8 border-l border-white/10 pl-10">
+                    <p class="text-gray-400 text-sm leading-relaxed font-light">
+                        Optical clarity measurements at the 400m shelf indicate 99.8% photon penetration. These waters represent the highest purity recorded in the northern sector.
+                    </p>
+                    <div class="flex flex-col justify-end">
+                        <div class="flex items-baseline gap-2 mb-2">
+                            <span class="text-3xl font-light text-electricCyan">1.333</span>
+                            <span class="text-[10px] text-white/40 uppercase">Refractive Index</span>
+                        </div>
+                        <div class="w-full h-[1px] bg-gradient-to-r from-electricCyan to-transparent"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

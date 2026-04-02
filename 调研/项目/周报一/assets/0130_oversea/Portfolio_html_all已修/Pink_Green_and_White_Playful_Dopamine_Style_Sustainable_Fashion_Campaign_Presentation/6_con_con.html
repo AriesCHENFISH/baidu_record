@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campaign Goals</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryPink: '#D66D92',
+                        offWhite: '#FBF9F6',
+                        brandGreen: '#3D5A45',
+                        accentYellow: '#F6C845',
+                        accentMagenta: '#C95C85'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .page-container { width: 1280px; height: 720px; background: #D66D92; overflow: hidden; position: relative; display: flex; align-items: center; justify-content: center;
+        margin: 0 auto; }        .inner-card { width: 1180px; height: 640px; background: #FBF9F6; border-radius: 4px; position: relative; overflow: hidden; }
+        .goal-card { background: white; border: 2px solid #3D5A45; border-radius: 12px; transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: pointer; }
+        .goal-card:hover { transform: scale(1.05) rotate(0deg) !important; z-index: 50; box-shadow: 10px 10px 0px #F6C845; }
+        .center-hub { width: 320px; height: 320px; background: #F6C845; border-radius: 50%; border: 4px solid white; box-shadow: 0 10px 30px rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; z-index: 20; }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <div class="inner-card flex items-center justify-center">
+            
+            <!-- 背景纹理 -->
+            <div class="absolute inset-0 opacity-5" style="background-image: url('https://www.transparenttextures.com/patterns/grid-me.png');"></div>
+
+            <!-- 中心主题 -->
+            <div class="center-hub">
+                <i class="fa-solid fa-star-of-life text-brandGreen text-4xl mb-4 animate-spin [animation-duration:10s]"></i>
+                <h1 class="font-serif text-5xl text-brandGreen leading-none uppercase tracking-tighter">
+                    Campaign<br><span class="text-white text-6xl drop-shadow-md">Goals</span>
+                </h1>
+                <p class="mt-4 text-[10px] font-bold tracking-[0.3em] text-brandGreen/60 uppercase">Strategy // 2024</p>
+            </div>
+
+            <!-- 四个角的目标 -->
+            <!-- Top Left -->
+            <div class="goal-card absolute top-16 left-20 w-72 p-6 -rotate-3">
+                <div class="text-accentMagenta text-3xl mb-4"><i class="fa-solid fa-graduation-cap"></i></div>
+                <h3 class="font-bold text-brandGreen text-lg mb-2 uppercase">Eco Knowledge</h3>
+                <p class="text-sm text-gray-500 leading-relaxed">Raise awareness of the environmental and social effects of fashion.</p>
+            </div>
+
+            <!-- Top Right -->
+            <div class="goal-card absolute top-20 right-24 w-72 p-6 rotate-2">
+                <div class="text-brandGreen text-3xl mb-4"><i class="fa-solid fa-recycle"></i></div>
+                <h3 class="font-bold text-brandGreen text-lg mb-2 uppercase">Reduce Waste</h3>
+                <p class="text-sm text-gray-500 leading-relaxed">Reducing textile waste focuses on recycling and responsible production.</p>
+            </div>
+
+            <!-- Bottom Left -->
+            <div class="goal-card absolute bottom-20 left-24 w-72 p-6 rotate-1">
+                <div class="text-brandGreen text-3xl mb-4"><i class="fa-solid fa-leaf"></i></div>
+                <h3 class="font-bold text-brandGreen text-lg mb-2 uppercase">Best Practices</h3>
+                <p class="text-sm text-gray-500 leading-relaxed">Motivate consumers and brands to embrace sustainable operations.</p>
+            </div>
+
+            <!-- Bottom Right -->
+            <div class="goal-card absolute bottom-16 right-20 w-72 p-6 -rotate-2">
+                <div class="text-accentMagenta text-3xl mb-4"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                <h3 class="font-bold text-brandGreen text-lg mb-2 uppercase">Ethical Manufacture</h3>
+                <p class="text-sm text-gray-500 leading-relaxed">Back brands that guarantee safe working conditions and fair wages.</p>
+            </div>
+
+            <!-- 装饰连接线 (可选) -->
+            <svg class="absolute inset-0 w-full h-full pointer-events-none opacity-20" style="z-index: 10;">
+                <line x1="50%" y1="50%" x2="25%" y2="25%" stroke="#3D5A45" stroke-width="2" stroke-dasharray="8"/>
+                <line x1="50%" y1="50%" x2="75%" y2="25%" stroke="#3D5A45" stroke-width="2" stroke-dasharray="8"/>
+                <line x1="50%" y1="50%" x2="25%" y2="75%" stroke="#3D5A45" stroke-width="2" stroke-dasharray="8"/>
+                <line x1="50%" y1="50%" x2="75%" y2="75%" stroke="#3D5A45" stroke-width="2" stroke-dasharray="8"/>
+            </svg>
+        </div>
+    </div>
+</body>
+</html>

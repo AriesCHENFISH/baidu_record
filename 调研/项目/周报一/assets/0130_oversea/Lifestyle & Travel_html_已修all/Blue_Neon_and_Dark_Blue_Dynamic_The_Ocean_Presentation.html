@@ -1,0 +1,1878 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Responsive Merged HTML
+  </title>
+  <style>
+   body {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .page-wrapper {
+                width: 100%;
+                margin: 15px 0;
+                position: relative;
+            }
+            .page-title {
+                background: #f5f5f5;
+                padding: 5px 10px;
+                border-radius: 3px 3px 0 0;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+            }
+            .responsive-iframe {
+                border: none;
+                width: 100%;
+                display: block;
+            }
+  </style>
+ </head>
+ <body>
+  <!-- 内容将在这里插入 -->
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 1
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Ocean - Cover Page with Bubbles&lt;/title&gt;
+    
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700;900&amp;family=Libre+Baskerville:ital,wght@1,400&amp;display=swap&quot;&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        #page_container {
+            width: 1280px; height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background: #010510; 
+            overflow: hidden;
+            color: #FFFFFF;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 主标题渐变 */
+        .main-title {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 160px;
+            background: linear-gradient(180deg, #FFFFFF 30%, rgba(79, 189, 242, 0.4) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 0.8;
+            letter-spacing: -8px;
+            filter: drop-shadow(0 0 30px rgba(79, 189, 242, 0.2));
+            z-index: 50;
+        }
+
+        /* 有机透明泡泡装饰 */
+        .bubble-frame {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.05);
+            z-index: 10;
+            animation: float 10s infinite alternate ease-in-out;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            100% { transform: translateY(-20px) rotate(5deg); }
+        }
+
+        /* 汇报人标签 */
+        .presenter-tag {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 12px 32px;
+            border-radius: 100px;
+            margin-top: 80px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            z-index: 60;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;div class=&quot;absolute w-[800px] h-[600px] bg-[#0A1E4D] blur-[120px] opacity-30 top-[-100px] left-[-100px]&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;bubble-frame w-48 h-48 left-[10%] top-[15%]&quot; 
+             style=&quot;border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;&quot;&gt;&lt;/div&gt;
+        
+        &lt;div class=&quot;bubble-frame w-64 h-64 right-[8%] top-[25%]&quot; 
+             style=&quot;border-radius: 30% 70% 70% 30% / 50% 60% 40% 50%; animation-delay: -2s;&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;bubble-frame w-96 h-96 left-[20%] bottom-[-50px] opacity-40&quot; 
+             style=&quot;border-radius: 50% 50% 20% 80% / 40% 40% 60% 60%; animation-delay: -5s; filter: blur(4px);&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;relative z-50 flex flex-col items-center&quot;&gt;
+            &lt;div class=&quot;flex items-center gap-4 mb-6&quot;&gt;
+                &lt;span class=&quot;h-[1px] w-12 bg-[#4FBDF2]&quot;&gt;&lt;/span&gt;
+                &lt;span class=&quot;text-[#4FBDF2] text-xs font-bold tracking-[0.6em] uppercase&quot;&gt;Discovery Series&lt;/span&gt;
+                &lt;span class=&quot;h-[1px] w-12 bg-[#4FBDF2]&quot;&gt;&lt;/span&gt;
+            &lt;/div&gt;
+
+            &lt;h1 class=&quot;main-title italic&quot;&gt;the Ocean&lt;/h1&gt;
+            
+            &lt;p class=&quot;text-white/40 font-light text-xl tracking-[0.8em] uppercase mt-4&quot;&gt;Marine Biodiversity&lt;/p&gt;
+
+            &lt;div class=&quot;presenter-tag&quot;&gt;
+                &lt;div class=&quot;flex flex-col items-start border-r border-white/20 pr-6&quot;&gt;
+                    &lt;span class=&quot;text-[10px] text-white/40 uppercase tracking-widest mb-1&quot;&gt;Presented by&lt;/span&gt;
+                    &lt;span class=&quot;text-sm font-bold tracking-widest uppercase&quot;&gt;Salford &amp; Co. Team&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;flex flex-col items-start&quot;&gt;
+                    &lt;span class=&quot;text-[10px] text-white/40 uppercase tracking-widest mb-1&quot;&gt;Project Phase&lt;/span&gt;
+                    &lt;span class=&quot;text-sm font-bold tracking-widest uppercase text-[#4FBDF2]&quot;&gt;Exploration 02&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute bottom-12 opacity-30 tracking-[0.4em] text-[10px] font-bold&quot;&gt;
+            SALFORD &amp; CO. RESEARCH INSTITUTION
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute w-1 h-1 bg-white rounded-full top-1/4 right-1/3 animate-pulse&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute w-1.5 h-1.5 bg-[#4FBDF2] rounded-full bottom-1/4 left-1/4 animate-ping&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 2
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Ocean - Contents Page&lt;/title&gt;
+    
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600;800&amp;family=Libre+Baskerville:ital,wght@1,400&amp;display=swap&quot;&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        #page_container {
+            width: 1280px; height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background: #010510; 
+            overflow: hidden;
+            color: #FFFFFF;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* 目录标题样式：延续封面斜体渐变感 */
+        .page-title {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 80px;
+            background: linear-gradient(180deg, #FFFFFF 40%, rgba(79, 189, 242, 0.3) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+            letter-spacing: -3px;
+        }
+
+        /* 目录项悬停效果 */
+        .content-item {
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            cursor: pointer;
+        }
+        
+        .content-item:hover {
+            padding-left: 20px;
+            background: linear-gradient(90deg, rgba(79, 189, 242, 0.05) 0%, transparent 100%);
+            border-bottom-color: rgba(79, 189, 242, 0.4);
+        }
+
+        /* 数字索引样式 */
+        .index-num {
+            font-family: 'Libre Baskerville', serif;
+            color: #4FBDF2;
+            opacity: 0.6;
+            font-style: italic;
+        }
+
+        /* 透明泡泡装饰 */
+        .bubble-deco {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            z-index: 5;
+            animation: float 12s infinite alternate ease-in-out;
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            100% { transform: translate(-30px, -20px) rotate(10deg); }
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot; class=&quot;flex&quot;&gt;
+        
+        &lt;div class=&quot;absolute w-[600px] h-[600px] bg-[#0A1E4D] blur-[100px] opacity-40 -top-20 -right-20&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;bubble-deco w-[500px] h-[500px] -right-20 top-20 opacity-60&quot; 
+             style=&quot;border-radius: 40% 60% 70% 30% / 50% 40% 60% 50%;&quot;&gt;
+            &lt;div class=&quot;w-full h-full flex items-center justify-center p-20 opacity-20&quot;&gt;
+                &lt;i class=&quot;fa-solid fa-compass text-[200px] text-[#4FBDF2]&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;relative z-20 w-[65%] h-full flex flex-col justify-center pl-24 pr-12&quot;&gt;
+            
+            &lt;div class=&quot;mb-12&quot;&gt;
+                &lt;div class=&quot;flex items-center gap-4 mb-4&quot;&gt;
+                    &lt;span class=&quot;h-[1px] w-8 bg-[#4FBDF2]&quot;&gt;&lt;/span&gt;
+                    &lt;span class=&quot;text-[#4FBDF2] text-[10px] font-bold tracking-[0.6em] uppercase&quot;&gt;Navigation&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;h1 class=&quot;page-title italic&quot;&gt;Contents&lt;/h1&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;grid grid-cols-2 gap-x-16 gap-y-2&quot;&gt;
+                
+                &lt;div class=&quot;content-item py-4 flex items-baseline gap-4 group&quot;&gt;
+                    &lt;span class=&quot;index-num text-xl&quot;&gt;01&lt;/span&gt;
+                    &lt;span class=&quot;text-white/80 text-lg font-light tracking-widest uppercase group-hover:text-white&quot;&gt;Ocean Geography&lt;/span&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;content-item py-4 flex items-baseline gap-4 group&quot;&gt;
+                    &lt;span class=&quot;index-num text-xl&quot;&gt;05&lt;/span&gt;
+                    &lt;span class=&quot;text-white/80 text-lg font-light tracking-widest uppercase group-hover:text-white&quot;&gt;Climate Regulation&lt;/span&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;content-item py-4 flex items-baseline gap-4 group&quot;&gt;
+                    &lt;span class=&quot;index-num text-xl&quot;&gt;02&lt;/span&gt;
+                    &lt;span class=&quot;text-white/80 text-lg font-light tracking-widest uppercase group-hover:text-white&quot;&gt;Marine Biodiversity&lt;/span&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;content-item py-4 flex items-baseline gap-4 group&quot;&gt;
+                    &lt;span class=&quot;index-num text-xl&quot;&gt;06&lt;/span&gt;
+                    &lt;span class=&quot;text-white/80 text-lg font-light tracking-widest uppercase group-hover:text-white&quot;&gt;The Abyssal Zone&lt;/span&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;content-item py-4 flex items-baseline gap-4 group&quot;&gt;
+                    &lt;span class=&quot;index-num text-xl&quot;&gt;03&lt;/span&gt;
+                    &lt;span class=&quot;text-white/80 text-lg font-light tracking-widest uppercase group-hover:text-white&quot;&gt;Tidal Systems&lt;/span&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;content-item py-4 flex items-baseline gap-4 group&quot;&gt;
+                    &lt;span class=&quot;index-num text-xl&quot;&gt;07&lt;/span&gt;
+                    &lt;span class=&quot;text-white/80 text-lg font-light tracking-widest uppercase group-hover:text-white&quot;&gt;Urgent Threats&lt;/span&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;content-item py-4 flex items-baseline gap-4 group&quot;&gt;
+                    &lt;span class=&quot;index-num text-xl&quot;&gt;04&lt;/span&gt;
+                    &lt;span class=&quot;text-white/80 text-lg font-light tracking-widest uppercase group-hover:text-white&quot;&gt;Resource Scarcity&lt;/span&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;content-item py-4 flex items-baseline gap-4 group&quot;&gt;
+                    &lt;span class=&quot;index-num text-xl&quot;&gt;08&lt;/span&gt;
+                    &lt;span class=&quot;text-white/80 text-lg font-light tracking-widest uppercase group-hover:text-white&quot;&gt;Conservation Action&lt;/span&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute bottom-12 left-24 flex items-center gap-12 opacity-30&quot;&gt;
+            &lt;div class=&quot;flex items-center gap-2&quot;&gt;
+                &lt;span class=&quot;text-[10px] font-bold tracking-widest uppercase&quot;&gt;Page Index&lt;/span&gt;
+                &lt;span class=&quot;text-[10px] font-light&quot;&gt;/ 02&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;h-[1px] w-24 bg-white/50&quot;&gt;&lt;/div&gt;
+            &lt;span class=&quot;text-[10px] font-bold tracking-[0.4em] uppercase&quot;&gt;Salford &amp; Co. Research&lt;/span&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute right-12 top-1/2 -translate-y-1/2 flex flex-col gap-4 opacity-20&quot;&gt;
+            &lt;div class=&quot;w-1 h-1 bg-white rounded-full&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;w-1 h-12 bg-gradient-to-b from-[#4FBDF2] to-transparent&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;w-1 h-1 bg-white rounded-full&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 3
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Marine Biodiversity - Refined&lt;/title&gt;
+    
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&amp;family=Libre+Baskerville:ital@1&amp;display=swap&quot;&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepOcean: '#020B26',
+                        accentBlue: '#4FBDF2',
+                        softGray: '#A0AEC0',
+                        coral: '#FF7F50'
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Libre Baskerville', 'serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        .page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background: #020B26;
+            background: radial-gradient(circle at 80% 20%, #0A1E4D 0%, #020B26 100%);
+            overflow: hidden;
+            color: #FFFFFF;
+        }
+
+        /* 优化后的主标题：更小、更精致 */
+        .main-title {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 80px;
+            letter-spacing: -2px;
+            background: linear-gradient(180deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.1) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+        }
+
+        /* 装饰线条 */
+        .decorative-line {
+            width: 60px;
+            height: 2px;
+            background: #4FBDF2;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 15px;
+        }
+
+        /* 毛玻璃信息块 */
+        .info-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border-left: 3px solid #4FBDF2;
+            transition: all 0.3s ease;
+        }
+
+        /* 图片形状优化 */
+        .visual-frame {
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            box-shadow: 0 0 50px rgba(79, 189, 242, 0.15);
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div class=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;absolute top-10 right-20 text-[180px] font-bold opacity-[0.02] pointer-events-none select-none&quot;&gt;
+            OCEAN
+        &lt;/div&gt;
+
+        &lt;div class=&quot;relative z-10 w-full h-full p-20 flex flex-col justify-between&quot;&gt;
+            
+            &lt;div class=&quot;flex flex-col&quot;&gt;
+                &lt;div class=&quot;flex items-center mb-4&quot;&gt;
+                    &lt;span class=&quot;decorative-line&quot;&gt;&lt;/span&gt;
+                    &lt;span class=&quot;text-accentBlue uppercase tracking-[0.3em] text-xs font-semibold&quot;&gt;Discovery Series 2026&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;h1 class=&quot;main-title&quot;&gt;Introduction&lt;/h1&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;grid grid-cols-12 gap-16 items-center&quot;&gt;
+                
+                &lt;div class=&quot;col-span-5 space-y-10&quot;&gt;
+                    &lt;div class=&quot;relative&quot;&gt;
+                        &lt;span class=&quot;text-7xl font-extrabold text-white leading-none&quot;&gt;70%&lt;/span&gt;
+                        &lt;div class=&quot;inline-block ml-4 align-top pt-2&quot;&gt;
+                            &lt;p class=&quot;text-accentBlue font-semibold text-lg leading-tight italic&quot;&gt;Ocean&lt;br&gt;Covered&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;p class=&quot;mt-4 text-softGray leading-relaxed max-w-sm font-light&quot;&gt;
+                            The vast expanse of our oceans represents the largest habitat on Earth, governing the very pulse of our planet's survival.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;space-y-4&quot;&gt;
+                        &lt;div class=&quot;info-card p-5 group hover:bg-white/5 cursor-default&quot;&gt;
+                            &lt;h3 class=&quot;text-white font-semibold text-sm uppercase tracking-widest mb-1 group-hover:text-accentBlue transition-colors&quot;&gt;Climate Regulator&lt;/h3&gt;
+                            &lt;p class=&quot;text-xs text-softGray leading-normal&quot;&gt;Oceans absorb over 90% of the excess heat trapped by greenhouse gases.&lt;/p&gt;
+                        &lt;/div&gt;
+                        
+                        &lt;div class=&quot;info-card p-5 group hover:bg-white/5 cursor-default&quot;&gt;
+                            &lt;h3 class=&quot;text-white font-semibold text-sm uppercase tracking-widest mb-1 group-hover:text-accentBlue transition-colors&quot;&gt;Species Diversity&lt;/h3&gt;
+                            &lt;p class=&quot;text-xs text-softGray leading-normal&quot;&gt;Home to millions of unique species, many of which remain undiscovered in the deep sea.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;col-span-7 relative&quot;&gt;
+                    &lt;div class=&quot;absolute -top-6 -left-6 z-20 bg-white text-deepOcean px-4 py-2 text-[10px] font-black uppercase tracking-tighter&quot;&gt;
+                        Marine Eco System
+                    &lt;/div&gt;
+                    
+                    &lt;div class=&quot;visual-frame w-full h-[400px] overflow-hidden border border-white/10&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1546026423-cc4642628d2b?q=80&amp;w=1200&amp;auto=format&amp;fit=crop&quot; 
+                             class=&quot;w-full h-full object-cover opacity-90 scale-110&quot; alt=&quot;Underwater&quot;&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;absolute -bottom-10 right-10 flex gap-2&quot;&gt;
+                        &lt;div class=&quot;w-1.5 h-1.5 rounded-full bg-coral&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;w-1.5 h-1.5 rounded-full bg-white/20&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;w-1.5 h-1.5 rounded-full bg-white/20&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;flex justify-between items-end border-t border-white/5 pt-6&quot;&gt;
+                &lt;div class=&quot;flex gap-8 text-[10px] text-softGray font-medium tracking-widest&quot;&gt;
+                    &lt;span&gt;EXPLORE&lt;/span&gt;
+                    &lt;span&gt;CONSERVE&lt;/span&gt;
+                    &lt;span&gt;PROTECT&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;text-right&quot;&gt;
+                    &lt;p class=&quot;text-[10px] text-softGray tracking-[0.2em] font-light&quot;&gt;RESEARCH BY&lt;/p&gt;
+                    &lt;p class=&quot;text-sm font-semibold tracking-widest&quot;&gt;SALFORD &amp; CO. INSTITUTION&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 4
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Marine Biodiversity - Refined&lt;/title&gt;
+    
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&amp;family=Montserrat:wght@300;600;800&amp;family=Libre+Baskerville:ital@1&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepOcean: '#04143D',
+                        accentBlue: '#4FBDF2',
+                        bubbleBlue: '#6A80B5',
+                        coralOrange: '#E88523',
+                        textWhite: '#E0E6F8',
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Libre Baskerville', 'serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        #page_container {
+            width: 1280px; height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background: radial-gradient(circle at 15% 15%, #0f2d6e 0%, #04143D 85%);
+            overflow: hidden;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* 统一标题样式 */
+        .main-title {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 80px;
+            background: linear-gradient(180deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.2) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+            letter-spacing: -2px;
+        }
+
+        .info-bubble {
+            background: rgba(106, 128, 181, 0.12);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(110, 169, 217, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            box-shadow: inset 0 0 15px rgba(255,255,255,0.05);
+        }
+
+        .list-dot {
+            width: 12px; height: 12px;
+            border: 2px solid #4FBDF2;
+            border-radius: 50%;
+            position: relative;
+        }
+        .list-dot::after {
+            content: '';
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 4px; height: 4px;
+            background: #4FBDF2;
+            border-radius: 50%;
+        }
+
+        .visual-frame {
+            clip-path: polygon(12% 0%, 100% 0%, 100% 100%, 0% 100%);
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;svg class=&quot;absolute top-0 right-0 w-full h-full opacity-10 pointer-events-none&quot; viewBox=&quot;0 0 1280 720&quot;&gt;
+            &lt;path d=&quot;M-100,360 Q300,300 640,360 T1380,360&quot; fill=&quot;none&quot; stroke=&quot;#4FBDF2&quot; stroke-width=&quot;2&quot; /&gt;
+            &lt;path d=&quot;M-100,400 Q300,340 640,400 T1380,400&quot; fill=&quot;none&quot; stroke=&quot;#4FBDF2&quot; stroke-width=&quot;1&quot; stroke-dasharray=&quot;10 10&quot; /&gt;
+        &lt;/svg&gt;
+
+        &lt;div class=&quot;relative z-10 w-full h-full flex&quot;&gt;
+            &lt;div class=&quot;w-[480px] h-full p-16 flex flex-col justify-between bg-deepOcean/40 backdrop-blur-md&quot;&gt;
+                &lt;div class=&quot;space-y-6&quot;&gt;
+                    &lt;div&gt;
+                        &lt;div class=&quot;flex items-center mb-4&quot;&gt;
+                            &lt;span class=&quot;w-12 h-[2px] bg-accentBlue mr-4&quot;&gt;&lt;/span&gt;
+                            &lt;span class=&quot;text-accentBlue uppercase tracking-[0.3em] text-xs font-semibold&quot;&gt;Discovery Series&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;h1 class=&quot;main-title italic&quot;&gt;Marine Biodiversity&lt;/h1&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;space-y-8 mt-12&quot;&gt;
+                        &lt;h2 class=&quot;text-xs font-bold tracking-widest text-white/40 uppercase mb-4&quot;&gt;Pillars of the Ocean&lt;/h2&gt;
+                        &lt;div class=&quot;flex gap-4 items-start group&quot;&gt;
+                            &lt;div class=&quot;list-dot mt-1 flex-shrink-0&quot;&gt;&lt;/div&gt;
+                            &lt;p class=&quot;text-sm text-textWhite/80 leading-relaxed group-hover:text-white transition-colors&quot;&gt;
+                                Tiny plankton form the base of the &lt;span class=&quot;text-accentBlue font-semibold&quot;&gt;food web&lt;/span&gt;, fueling all marine life.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;flex gap-4 items-start group&quot;&gt;
+                            &lt;div class=&quot;list-dot mt-1 flex-shrink-0&quot;&gt;&lt;/div&gt;
+                            &lt;p class=&quot;text-sm text-textWhite/80 leading-relaxed group-hover:text-white transition-colors&quot;&gt;
+                                Coral reefs are vital nurseries, supporting &lt;span class=&quot;text-coralOrange font-semibold&quot;&gt;25%&lt;/span&gt; of all known marine species.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;flex gap-4 items-start group&quot;&gt;
+                            &lt;div class=&quot;list-dot mt-1 flex-shrink-0&quot;&gt;&lt;/div&gt;
+                            &lt;p class=&quot;text-sm text-textWhite/80 leading-relaxed group-hover:text-white transition-colors&quot;&gt;
+                                From the smallest organism to the &lt;span class=&quot;text-white font-bold&quot;&gt;blue whale&lt;/span&gt;, it represents a spectrum of life.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;bg-accentBlue/10 border border-accentBlue/30 px-6 py-3 rounded-xl flex items-center justify-between&quot;&gt;
+                    &lt;span class=&quot;text-[10px] font-bold tracking-widest text-accentBlue uppercase&quot;&gt;Salford &amp; Co. Institution&lt;/span&gt;
+                    &lt;i class=&quot;fa-solid fa-anchor text-accentBlue opacity-50&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;flex-grow h-full relative&quot;&gt;
+                &lt;div class=&quot;absolute inset-0 visual-frame overflow-hidden&quot;&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1546026423-cc4642628d2b?q=80&amp;w=1200&amp;auto=format&amp;fit=crop&quot; 
+                         class=&quot;w-full h-full object-cover opacity-70&quot; alt=&quot;Ocean&quot;&gt;
+                    &lt;div class=&quot;absolute inset-0 bg-gradient-to-r from-deepOcean via-transparent to-transparent&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;absolute top-[12%] right-[15%] w-[300px] h-[200px] z-30&quot;&gt;
+                    &lt;div class=&quot;info-bubble w-full h-full rounded-[60%_40%_50%_50%/50%_50%_60%_40%]&quot;&gt;
+                        &lt;div&gt;
+                            &lt;p class=&quot;text-textWhite/70 text-sm font-light uppercase tracking-widest&quot;&gt;Oceans host over&lt;/p&gt;
+                            &lt;p class=&quot;text-5xl font-extrabold text-white mt-1&quot;&gt;230,000&lt;/p&gt;
+                            &lt;p class=&quot;text-textWhite text-lg font-light&quot;&gt;known species&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;absolute bottom-[20%] right-[30%] w-[260px] h-[160px] z-30&quot;&gt;
+                    &lt;div class=&quot;info-bubble w-full h-full rounded-[40%_60%_70%_30%/40%_50%_60%_50%]&quot;&gt;
+                        &lt;div class=&quot;px-6&quot;&gt;
+                            &lt;p class=&quot;text-textWhite text-sm font-light mb-1 italic&quot;&gt;Coral reefs are:&lt;/p&gt;
+                            &lt;p class=&quot;text-2xl font-bold text-white leading-tight italic&quot;&gt;&quot;Rainforests&lt;br&gt;of the sea&quot;&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;absolute -left-4 bottom-0 w-3 h-3 rounded-full bg-accentBlue animate-ping&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 5
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Climate Regulation - Refined&lt;/title&gt;
+    
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&amp;family=Libre+Baskerville:ital@1&amp;display=swap&quot;&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepOcean: '#04143D',
+                        accentBlue: '#4FBDF2',
+                        supportText: '#A0AEC0',
+                        coral: '#E88523'
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Libre Baskerville', 'serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        #page_container {
+            width: 1280px; height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background: #04143D;
+            background: linear-gradient(to right, #04143D 45%, #061b52 100%);
+            overflow: hidden;
+            color: #FFFFFF;
+        }
+
+        /* 统一标题样式 */
+        .main-title {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 72px; /* 略微缩小以适应多行 */
+            background: linear-gradient(180deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.2) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+            letter-spacing: -2px;
+        }
+
+        .image-frame {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            transition: all 0.5s ease;
+        }
+
+        .data-tag {
+            background: rgba(79, 189, 242, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(79, 189, 242, 0.4);
+        }
+
+        ::-webkit-scrollbar { display: none; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot; class=&quot;font-sans flex&quot;&gt;
+        &lt;div class=&quot;w-[45%] h-full p-20 flex flex-col justify-between relative z-20 bg-deepOcean/50&quot;&gt;
+            &lt;div class=&quot;space-y-12&quot;&gt;
+                &lt;div&gt;
+                    &lt;div class=&quot;flex items-center mb-4&quot;&gt;
+                        &lt;span class=&quot;w-12 h-[2px] bg-accentBlue mr-4&quot;&gt;&lt;/span&gt;
+                        &lt;span class=&quot;text-accentBlue uppercase tracking-[0.4em] text-xs font-bold&quot;&gt;Global Ecosystems&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;font-serif italic text-2xl text-accentBlue mb-2 opacity-80&quot;&gt;The Ocean's&lt;/p&gt;
+                    &lt;h1 class=&quot;main-title italic&quot;&gt;Climate Regulation&lt;/h1&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;space-y-8 mt-16&quot;&gt;
+                    &lt;div class=&quot;flex gap-6 group&quot;&gt;
+                        &lt;div class=&quot;w-12 h-12 flex-shrink-0 rounded-xl bg-white/5 flex items-center justify-center text-accentBlue group-hover:bg-accentBlue group-hover:text-white transition-all&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-wind text-xl&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;h4 class=&quot;text-sm font-bold tracking-widest uppercase mb-1&quot;&gt;Solar Heat Distribution&lt;/h4&gt;
+                            &lt;p class=&quot;text-xs text-supportText leading-relaxed max-w-[300px]&quot;&gt;Storing and moving solar energy via global currents to stabilize temperatures.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;flex gap-6 group&quot;&gt;
+                        &lt;div class=&quot;w-12 h-12 flex-shrink-0 rounded-xl bg-white/5 flex items-center justify-center text-coral group-hover:bg-coral group-hover:text-white transition-all&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-cloud-sun text-xl&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;h4 class=&quot;text-sm font-bold tracking-widest uppercase mb-1&quot;&gt;Weather Pattern Guard&lt;/h4&gt;
+                            &lt;p class=&quot;text-xs text-supportText leading-relaxed max-w-[300px]&quot;&gt;Maintaining global weather stability and buffering seasonal extremes.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;flex items-center justify-between text-[10px] text-white/30 tracking-widest border-t border-white/10 pt-8&quot;&gt;
+                &lt;span&gt;PHASE 02 / REGULATION&lt;/span&gt;
+                &lt;span class=&quot;font-bold&quot;&gt;SALFORD &amp; CO.&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;w-[55%] h-full relative&quot;&gt;
+            &lt;div class=&quot;absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 z-30&quot;&gt;
+                &lt;div class=&quot;data-tag px-10 py-8 rounded-3xl text-center shadow-2xl&quot;&gt;
+                    &lt;p class=&quot;text-xs tracking-[0.3em] text-accentBlue font-bold mb-2 uppercase&quot;&gt;Absorbs&lt;/p&gt;
+                    &lt;p class=&quot;text-7xl font-black&quot;&gt;30%&lt;/p&gt;
+                    &lt;p class=&quot;text-sm font-medium text-white/60 mt-2 italic&quot;&gt;of CO&lt;sub&gt;2&lt;/sub&gt; Emissions&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;absolute top-[10%] right-[10%] w-[80%] h-[55%] z-10&quot;&gt;
+                &lt;div class=&quot;image-frame w-full h-full overflow-hidden shadow-2xl&quot;&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1582967788606-a171f1080ca8?q=80&amp;w=1200&amp;auto=format&amp;fit=crop&quot; 
+                         class=&quot;w-full h-full object-cover&quot; alt=&quot;Marine Life&quot;&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;absolute bottom-[10%] right-[15%] w-[60%] h-[30%] z-20&quot;&gt;
+                &lt;div class=&quot;rounded-2xl w-full h-full overflow-hidden border-4 border-deepOcean shadow-2xl&quot;&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1468581264429-2548ef9eb732?q=80&amp;w=800&amp;auto=format&amp;fit=crop&quot; 
+                         class=&quot;w-full h-full object-cover opacity-80&quot; alt=&quot;Ocean Texture&quot;&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 6
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Deep Ocean Inspiring Facts - Refined&lt;/title&gt;
+    
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&amp;family=Libre+Baskerville:ital@1&amp;display=swap&quot;&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepOcean: '#020B26',
+                        accentBlue: '#4FBDF2',
+                        softGray: '#A0AEC0',
+                        coral: '#FF7F50',
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Libre Baskerville', 'serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        .page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background: #020B26;
+            background: radial-gradient(circle at 15% 15%, #0A1E4D 0%, #020B26 100%);
+            overflow: hidden;
+            color: #FFFFFF;
+        }
+
+        /* 标题：延续第一页的半透明渐变衬线体 */
+        .main-title {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 80px;
+            background: linear-gradient(180deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.2) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+            letter-spacing: -2px;
+        }
+
+        /* 升级后的“泡泡”：异形毛玻璃卡片 */
+        .glass-bubble {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(79, 189, 242, 0.15);
+            transition: all 0.5s ease;
+        }
+        
+        .glass-bubble:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-color: rgba(79, 189, 242, 0.5);
+            transform: translateY(-10px);
+        }
+
+        /* 有机形状图片框：与第一页呼应 */
+        .visual-frame {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            box-shadow: 0 0 60px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .decorative-dot {
+            width: 10px;
+            height: 10px;
+            background: #4FBDF2;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 15px #4FBDF2;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div class=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;absolute -bottom-10 right-10 text-[220px] font-bold opacity-[0.02] pointer-events-none select-none italic font-serif&quot;&gt;
+            Facts
+        &lt;/div&gt;
+
+        &lt;div class=&quot;relative z-10 w-full h-full p-20 flex flex-col&quot;&gt;
+            
+            &lt;div class=&quot;flex justify-between items-start mb-10&quot;&gt;
+                &lt;div&gt;
+                    &lt;div class=&quot;flex items-center mb-4&quot;&gt;
+                        &lt;span class=&quot;w-12 h-[2px] bg-accentBlue mr-4&quot;&gt;&lt;/span&gt;
+                        &lt;span class=&quot;text-accentBlue uppercase tracking-[0.3em] text-xs font-semibold&quot;&gt;Scientific Discovery&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;h1 class=&quot;main-title italic&quot;&gt;Inspiring Ocean Facts&lt;/h1&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;text-right&quot;&gt;
+                    &lt;p class=&quot;text-[10px] text-softGray tracking-widest uppercase mb-1&quot;&gt;Chapter&lt;/p&gt;
+                    &lt;p class=&quot;text-3xl font-light font-serif&quot;&gt;02&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;grid grid-cols-12 gap-12 items-center flex-1&quot;&gt;
+                
+                &lt;div class=&quot;col-span-4 relative&quot;&gt;
+                    &lt;div class=&quot;visual-frame w-full aspect-[4/5] overflow-hidden&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&amp;w=1000&amp;auto=format&amp;fit=crop&quot; 
+                             class=&quot;w-full h-full object-cover scale-110&quot; alt=&quot;Marine Life&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;absolute -top-4 -right-4 bg-white text-deepOcean px-4 py-2 text-[10px] font-black uppercase tracking-widest shadow-xl&quot;&gt;
+                        Salford &amp; Co.
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;col-span-8 grid grid-cols-2 gap-6&quot;&gt;
+                    
+                    &lt;div class=&quot;glass-bubble p-8 rounded-[40px] flex flex-col justify-center&quot;&gt;
+                        &lt;div class=&quot;mb-4&quot;&gt;&lt;span class=&quot;decorative-dot&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+                        &lt;h3 class=&quot;text-white font-bold text-lg mb-2 uppercase tracking-tighter&quot;&gt;The Deepest Point&lt;/h3&gt;
+                        &lt;p class=&quot;text-softGray text-sm leading-relaxed font-light&quot;&gt;
+                            The Mariana Trench is the deepest part of the ocean, plunging down &lt;span class=&quot;text-white font-semibold&quot;&gt;11,000 meters&lt;/span&gt;.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;glass-bubble p-10 rounded-[60px] transform translate-y-12&quot;&gt;
+                        &lt;div class=&quot;text-coral mb-4&quot;&gt;
+                            &lt;svg class=&quot;w-8 h-8&quot; fill=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z&quot;/&gt;&lt;/svg&gt;
+                        &lt;/div&gt;
+                        &lt;p class=&quot;text-white text-xl font-medium leading-tight mb-2&quot;&gt;
+                            Oceans produce over &lt;span class=&quot;text-coral font-bold text-3xl&quot;&gt;50%&lt;/span&gt;
+                        &lt;/p&gt;
+                        &lt;p class=&quot;text-softGray text-xs uppercase tracking-widest&quot;&gt;Of the oxygen we breathe&lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;glass-bubble p-8 rounded-[40px] col-span-2 mt-10 flex items-center&quot;&gt;
+                        &lt;div class=&quot;w-16 h-16 rounded-full border border-accentBlue/30 flex items-center justify-center mr-8 flex-shrink-0&quot;&gt;
+                            &lt;span class=&quot;text-accentBlue font-serif italic text-2xl&quot;&gt;!&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;h3 class=&quot;text-white font-bold text-lg mb-1 tracking-tight&quot;&gt;Space vs. Sea&lt;/h3&gt;
+                            &lt;p class=&quot;text-softGray text-sm font-light&quot;&gt;
+                                More humans have been to &lt;span class=&quot;text-white&quot;&gt;outer space&lt;/span&gt; than have explored the deepest floor of our oceans.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 7
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Threats to Oceans - Consistent Style&lt;/title&gt;
+    
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&amp;family=Libre+Baskerville:ital@1&amp;display=swap&quot;&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepOcean: '#04143D',
+                        accentBlue: '#4FBDF2',
+                        bubbleBlue: '#6A80B5',
+                        coralOrange: '#E88523',
+                        textWhite: '#E0E6F8',
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Libre Baskerville', 'serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        #page_container {
+            width: 1280px; height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background: radial-gradient(circle at 85% 30%, #0f2d6e 0%, #04143D 85%);
+            overflow: hidden;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* 统一的主标题样式 */
+        .main-title {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 80px;
+            background: linear-gradient(180deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.2) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+            letter-spacing: -2px;
+        }
+
+        .info-bubble {
+            background: rgba(106, 128, 181, 0.12);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(110, 169, 217, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 24px;
+            box-shadow: inset 0 0 15px rgba(255,255,255,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .info-bubble:hover {
+            background: rgba(106, 128, 181, 0.2);
+            border-color: rgba(79, 189, 242, 0.6);
+        }
+
+        .list-dot {
+            width: 12px; height: 12px;
+            border: 2px solid #E88523;
+            border-radius: 50%;
+            position: relative;
+            margin-bottom: 12px;
+        }
+        .list-dot::after {
+            content: '';
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 4px; height: 4px;
+            background: #E88523;
+            border-radius: 50%;
+        }
+
+        .visual-frame-left {
+            clip-path: polygon(0% 0%, 88% 0%, 100% 100%, 0% 100%);
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;svg class=&quot;absolute bottom-0 left-0 w-full h-full opacity-10 pointer-events-none transform rotate-180&quot; viewBox=&quot;0 0 1280 720&quot;&gt;
+            &lt;path d=&quot;M-100,360 Q300,300 640,360 T1380,360&quot; fill=&quot;none&quot; stroke=&quot;#4FBDF2&quot; stroke-width=&quot;2&quot; /&gt;
+            &lt;path d=&quot;M-100,400 Q300,340 640,400 T1380,400&quot; fill=&quot;none&quot; stroke=&quot;#4FBDF2&quot; stroke-width=&quot;1&quot; stroke-dasharray=&quot;10 10&quot; /&gt;
+        &lt;/svg&gt;
+
+        &lt;div class=&quot;relative z-10 w-full h-full flex&quot;&gt;
+            &lt;div class=&quot;w-[55%] h-full relative&quot;&gt;
+                &lt;div class=&quot;absolute inset-0 visual-frame-left overflow-hidden&quot;&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1618331835717-801e976710b2?q=80&amp;w=1200&amp;auto=format&amp;fit=crop&quot; 
+                         class=&quot;w-full h-full object-cover opacity-80&quot; alt=&quot;Ocean Pollution&quot;&gt;
+                    &lt;div class=&quot;absolute inset-0 bg-gradient-to-l from-deepOcean via-transparent to-transparent&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;absolute top-[20%] right-[15%] w-[180px] h-[180px] z-30&quot;&gt;
+                    &lt;div class=&quot;info-bubble w-full h-full rounded-full items-center text-center !p-0&quot;&gt;
+                        &lt;div&gt;
+                            &lt;p class=&quot;text-textWhite/70 text-xs font-light uppercase tracking-widest&quot;&gt;Plastic Waste&lt;/p&gt;
+                            &lt;p class=&quot;text-4xl font-extrabold text-white mt-2&quot;&gt;8M&lt;/p&gt;
+                            &lt;p class=&quot;text-textWhite text-sm font-light&quot;&gt;tons / year&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;w-[45%] h-full p-16 flex flex-col justify-center bg-transparent&quot;&gt;
+                &lt;div class=&quot;mb-12&quot;&gt;
+                    &lt;div class=&quot;flex items-center justify-end mb-4&quot;&gt;
+                        &lt;span class=&quot;text-coralOrange uppercase tracking-[0.3em] text-xs font-semibold&quot;&gt;Critical Issues&lt;/span&gt;
+                        &lt;span class=&quot;w-12 h-[2px] bg-coralOrange ml-4&quot;&gt;&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;h1 class=&quot;main-title italic text-right&quot;&gt;Urgent Threats&lt;/h1&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;grid grid-cols-2 gap-5&quot;&gt;
+                    &lt;div class=&quot;info-bubble rounded-[20px_20px_0_20px]&quot;&gt;
+                        &lt;div class=&quot;list-dot border-accentBlue bg-transparent after:bg-accentBlue&quot;&gt;&lt;/div&gt;
+                        &lt;h3 class=&quot;text-white font-bold text-lg mb-2 uppercase tracking-tighter&quot;&gt;Pollution&lt;/h3&gt;
+                        &lt;p class=&quot;text-sm text-textWhite/80 leading-relaxed&quot;&gt;
+                            Microplastics and chemicals disrupt the hormonal balance of marine life.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;info-bubble rounded-[20px_20px_20px_0]&quot;&gt;
+                        &lt;div class=&quot;list-dot border-coralOrange bg-transparent after:bg-coralOrange&quot;&gt;&lt;/div&gt;
+                        &lt;h3 class=&quot;text-white font-bold text-lg mb-2 uppercase tracking-tighter&quot;&gt;Overfishing&lt;/h3&gt;
+                        &lt;p class=&quot;text-sm text-textWhite/80 leading-relaxed&quot;&gt;
+                            Removing species faster than they can reproduce, collapsing food webs.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;info-bubble col-span-2 rounded-[0_0_20px_20px] flex-row items-center gap-6&quot;&gt;
+                        &lt;div class=&quot;w-12 h-12 rounded-full border border-white/10 flex items-center justify-center flex-shrink-0&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-temperature-arrow-up text-coralOrange&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;h3 class=&quot;text-white font-bold text-lg mb-1 uppercase tracking-tighter&quot;&gt;Ocean Acidification&lt;/h3&gt;
+                            &lt;p class=&quot;text-xs text-textWhite/80 leading-relaxed&quot;&gt;
+                                Absorption of CO2 is lowering pH levels, dissolving coral reefs.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;mt-12 flex justify-end items-center gap-4 opacity-70&quot;&gt;
+                    &lt;span class=&quot;text-[10px] font-bold tracking-widest text-textWhite uppercase&quot;&gt;Salford &amp; Co. Report&lt;/span&gt;
+                    &lt;i class=&quot;fa-solid fa-file-waveform text-accentBlue&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 8
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Ocean Conservation - Refined&lt;/title&gt;
+    
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;800&amp;family=Libre+Baskerville:ital@1&amp;display=swap&quot;&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepOcean: '#04143D',
+                        accentBlue: '#4FBDF2',
+                        bubbleBlue: '#6A80B5',
+                        coralOrange: '#E88523',
+                        textWhite: '#E0E6F8',
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Libre Baskerville', 'serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        #page_container {
+            width: 1280px; height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background: radial-gradient(circle at 80% 20%, #0f2d6e 0%, #04143D 80%);
+            overflow: hidden;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* 统一的主标题样式 */
+        .main-title {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 76px;
+            background: linear-gradient(180deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.2) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+            letter-spacing: -2px;
+        }
+
+        .glass-card {
+            background: rgba(4, 20, 61, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(110, 169, 217, 0.25);
+            border-top: 1px solid rgba(110, 169, 217, 0.4);
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .glass-card:hover {
+            background: rgba(79, 189, 242, 0.1);
+            transform: translateY(-5px);
+            border-color: rgba(79, 189, 242, 0.5);
+        }
+
+        .image-pod {
+            border-radius: 40px 40px 0 40px;
+            overflow: hidden;
+            box-shadow: 20px 20px 0px rgba(79, 189, 242, 0.05);
+            position: relative;
+        }
+        
+        .bg-line {
+            position: absolute;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(79, 189, 242, 0.3), transparent);
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;bg-line top-[20%] left-0 w-full&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;bg-line bottom-[35%] left-0 w-full opacity-50&quot;&gt;&lt;/div&gt;
+        
+        &lt;div class=&quot;absolute top-12 left-12 flex items-center gap-4 z-20&quot;&gt;
+            &lt;div class=&quot;w-10 h-10 rounded-full border border-accentBlue flex items-center justify-center&quot;&gt;
+                &lt;i class=&quot;fa-solid fa-water text-accentBlue&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+            &lt;span class=&quot;text-[10px] tracking-[0.3em] font-bold text-white uppercase opacity-80&quot;&gt;Salford &amp; Co. Conservation&lt;/span&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;w-full h-full p-12 relative z-10 flex flex-col justify-between&quot;&gt;
+            &lt;div class=&quot;flex justify-between items-start mt-10&quot;&gt;
+                &lt;div class=&quot;w-[500px] mt-8&quot;&gt;
+                    &lt;div class=&quot;flex items-center mb-6&quot;&gt;
+                        &lt;span class=&quot;w-12 h-[2px] bg-accentBlue mr-4&quot;&gt;&lt;/span&gt;
+                        &lt;span class=&quot;text-accentBlue uppercase tracking-[0.3em] text-xs font-semibold&quot;&gt;Future Action&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;h1 class=&quot;main-title italic mb-6&quot;&gt;Protect our oceans&lt;/h1&gt;
+                    &lt;p class=&quot;text-textWhite/80 text-sm leading-7 pr-10 border-l-2 border-coralOrange/50 pl-6&quot;&gt;
+                        The ocean drives global systems that make the Earth habitable for humankind. Our rainwater, drinking water, weather, climate, and coastlines are all ultimately regulated by the sea.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;w-[580px] h-[320px] image-pod group&quot;&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1484291470158-b8f8d608850d?q=80&amp;w=800&amp;auto=format&amp;fit=crop&quot; 
+                         class=&quot;w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700&quot; 
+                         alt=&quot;Ocean Waves&quot;&gt;
+                    &lt;div class=&quot;absolute top-6 right-6 bg-deepOcean/80 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/10&quot;&gt;
+                        &lt;span class=&quot;text-accentBlue font-bold text-xs tracking-widest uppercase&quot;&gt;Status: Critical&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;w-full grid grid-cols-3 gap-6 mt-4&quot;&gt;
+                &lt;div class=&quot;glass-card p-6 flex flex-col justify-between h-[200px] relative overflow-hidden&quot;&gt;
+                    &lt;div class=&quot;absolute -right-4 -top-4 text-[80px] text-white/5 rotate-12&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-bottle-water&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div&gt;
+                        &lt;div class=&quot;text-coralOrange mb-3 text-xl&quot;&gt;&lt;i class=&quot;fa-solid fa-trash-can-arrow-up&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                        &lt;h3 class=&quot;text-white font-bold text-lg mb-2 uppercase tracking-tighter&quot;&gt;Plastic Pollution&lt;/h3&gt;
+                        &lt;p class=&quot;text-xs text-textWhite/70 leading-relaxed&quot;&gt;
+                            8 million tons of plastic enter our oceans every year.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;w-full bg-white/10 h-1 rounded-full mt-4 overflow-hidden&quot;&gt;
+                        &lt;div class=&quot;bg-coralOrange w-[75%] h-full rounded-full&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;glass-card p-6 flex flex-col justify-between h-[200px] relative overflow-hidden&quot;&gt;
+                    &lt;div class=&quot;absolute -right-4 -top-4 text-[80px] text-white/5 rotate-12&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-temperature-arrow-up&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div&gt;
+                        &lt;div class=&quot;text-accentBlue mb-3 text-xl&quot;&gt;&lt;i class=&quot;fa-solid fa-icicles&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                        &lt;h3 class=&quot;text-white font-bold text-lg mb-2 uppercase tracking-tighter&quot;&gt;Climate Change&lt;/h3&gt;
+                        &lt;p class=&quot;text-xs text-textWhite/70 leading-relaxed&quot;&gt;
+                            Absorbing 90% of excess heat, causing acidification.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;w-full bg-white/10 h-1 rounded-full mt-4 overflow-hidden&quot;&gt;
+                        &lt;div class=&quot;bg-accentBlue w-[60%] h-full rounded-full&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;glass-card p-6 flex flex-col justify-between h-[200px] relative overflow-hidden&quot;&gt;
+                    &lt;div class=&quot;absolute -right-4 -top-4 text-[80px] text-white/5 rotate-12&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-fish-fins&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div&gt;
+                        &lt;div class=&quot;text-bubbleBlue mb-3 text-xl&quot;&gt;&lt;i class=&quot;fa-solid fa-anchor&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                        &lt;h3 class=&quot;text-white font-bold text-lg mb-2 uppercase tracking-tighter&quot;&gt;Overfishing&lt;/h3&gt;
+                        &lt;p class=&quot;text-xs text-textWhite/70 leading-relaxed&quot;&gt;
+                            34% of global fish stocks are overfished levels.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;w-full bg-white/10 h-1 rounded-full mt-4 overflow-hidden&quot;&gt;
+                        &lt;div class=&quot;bg-bubbleBlue w-[40%] h-full rounded-full&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 9
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Deep Ocean Inspiring Facts - Unique Layout&lt;/title&gt;
+    
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&amp;family=Libre+Baskerville:ital@1&amp;display=swap&quot;&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepOcean: '#020B26',
+                        accentBlue: '#4FBDF2',
+                        softGray: '#A0AEC0',
+                        coral: '#FF7F50'
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Libre Baskerville', 'serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background: #020B26;
+            background: radial-gradient(circle at 70% 50%, #0A245A 0%, #020B26 100%);
+            overflow: hidden;
+            color: #FFFFFF;
+        }
+
+        /* 标题样式：通过垂直排列和缩进区别于第一页 */
+        .vertical-title {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 72px;
+            line-height: 1;
+            background: linear-gradient(to bottom, #fff 30%, rgba(255,255,255,0.1) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* 气泡卡片：采用不同的圆角逻辑，模拟不规则液体感 */
+        .bubble-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-left: 1px solid rgba(79, 189, 242, 0.4);
+            border-top: 1px solid rgba(79, 189, 242, 0.4);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .bubble-card:hover {
+            background: rgba(255, 255, 255, 0.06);
+            transform: scale(1.02) translateX(5px);
+        }
+
+        /* 异形图片框：采用右侧大面积裁切 */
+        .organic-frame {
+            border-radius: 65% 35% 42% 58% / 51% 57% 43% 49%;
+            box-shadow: 0 0 100px rgba(10, 36, 90, 0.8);
+        }
+
+        .scroll-text {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot; class=&quot;flex items-center&quot;&gt;
+        &lt;div class=&quot;absolute left-10 h-3/4 flex flex-col justify-between items-center py-10 border-l border-white/5&quot;&gt;
+            &lt;span class=&quot;scroll-text text-[10px] tracking-[0.5em] text-softGray font-light&quot;&gt;EST. 2026&lt;/span&gt;
+            &lt;div class=&quot;w-1 h-1 bg-accentBlue rounded-full&quot;&gt;&lt;/div&gt;
+            &lt;span class=&quot;scroll-text text-[10px] tracking-[0.5em] text-softGray font-light uppercase&quot;&gt;Oceanic Data&lt;/span&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;grid grid-cols-12 w-full h-full px-24 items-center&quot;&gt;
+            
+            &lt;div class=&quot;col-span-4 space-y-8 z-20&quot;&gt;
+                &lt;div class=&quot;space-y-2&quot;&gt;
+                    &lt;p class=&quot;text-accentBlue text-xs font-bold tracking-[0.4em] uppercase&quot;&gt;Insight Focus&lt;/p&gt;
+                    &lt;h1 class=&quot;vertical-title italic&quot;&gt;Inspiring&lt;br&gt;&lt;span class=&quot;pl-12&quot;&gt;Facts.&lt;/span&gt;&lt;/h1&gt;
+                &lt;/div&gt;
+                
+                &lt;p class=&quot;text-softGray text-gl leading-relaxed font-light max-w-xs&quot;&gt;
+                    Beyond the reach of sunlight lies a world that challenges our understanding of life, physics, and the very origins of our planet.
+                &lt;/p&gt;
+
+                &lt;div class=&quot;pt-4 flex items-center gap-4&quot;&gt;
+                    &lt;div class=&quot;w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-xs font-serif italic text-accentBlue&quot;&gt;02&lt;/div&gt;
+                    &lt;span class=&quot;text-[10px] tracking-widest text-softGray uppercase&quot;&gt;Deep Sea&lt;br&gt;Exploration&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;col-span-4 flex flex-col gap-6 -ml-10 z-30&quot;&gt;
+                &lt;div class=&quot;bubble-card p-6 rounded-tr-[50px] rounded-bl-[50px]&quot;&gt;
+                    &lt;div class=&quot;flex items-center gap-3 mb-2&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-water text-accentBlue text-xs&quot;&gt;&lt;/i&gt;
+                        &lt;span class=&quot;text-sm font-bold tracking-widest text-white/40 uppercase&quot;&gt;Depth Range&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-gl font-light leading-snug&quot;&gt;
+                        The &lt;span class=&quot;text-white font-semibold&quot;&gt;Mariana Trench&lt;/span&gt; descends &lt;b class=&quot;text-lg text-accentBlue&quot;&gt;11,034m&lt;/b&gt;. If Everest was placed inside, its peak would still be 2km underwater.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;bubble-card p-6 rounded-tl-[50px] rounded-br-[50px] transform translate-x-8&quot;&gt;
+                    &lt;div class=&quot;flex items-center gap-3 mb-2&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-wind text-coral text-xs&quot;&gt;&lt;/i&gt;
+                        &lt;span class=&quot;text-sm font-bold tracking-widest text-white/40 uppercase&quot;&gt;Oxygen Supply&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-gl font-light leading-snug&quot;&gt;
+                        Marine organisms, primarily &lt;span class=&quot;text-coral font-medium&quot;&gt;Prochlorococcus&lt;/span&gt;, generate 1 in every 5 breaths you take.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;bubble-card p-6 rounded-[30px]&quot;&gt;
+                    &lt;div class=&quot;flex items-center gap-3 mb-2&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-rocket text-white/60 text-xs&quot;&gt;&lt;/i&gt;
+                        &lt;span class=&quot;text-sm font-bold tracking-widest text-white/40 uppercase&quot;&gt;Discovery Gap&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-gl font-light leading-snug italic&quot;&gt;
+                        &quot;We have better maps of the surface of &lt;span class=&quot;text-white font-medium&quot;&gt;Mars&lt;/span&gt; than we do of our own ocean floor.&quot;
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;col-span-4 relative h-full flex items-center&quot;&gt;
+                &lt;div class=&quot;organic-frame w-[450px] h-[550px] overflow-hidden rotate-3 transform translate-x-10&quot;&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&amp;w=1200&amp;auto=format&amp;fit=crop&quot; 
+                         class=&quot;w-full h-full object-cover scale-110 grayscale-[0.2] hover:grayscale-0 transition-all duration-700&quot;&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;absolute top-20 right-0 w-24 h-24 border border-white/5 rounded-full animate-pulse&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;absolute bottom-40 -left-10 w-12 h-12 bg-accentBlue/20 blur-xl rounded-full&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute bottom-10 right-24 flex items-end gap-4&quot;&gt;
+            &lt;span class=&quot;text-4xl font-serif italic text-white/10&quot;&gt;02&lt;/span&gt;
+            &lt;div class=&quot;mb-2 w-20 h-[1px] bg-white/10&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 10
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Abyssal Frontier - Cinematic Layout&lt;/title&gt;
+    
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;800&amp;family=Libre+Baskerville:ital,wght@1,400&amp;display=swap&quot;&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBlack: '#010510',
+                        cyanNeon: '#4FBDF2',
+                        dataGold: '#D4AF37',
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Libre Baskerville', 'serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        #page_container {
+            width: 1280px; height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background: #010510;
+            overflow: hidden;
+            color: #FFFFFF;
+        }
+
+        /* 核心主标题：极细与极粗的视觉反差 */
+        .main-title {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 90px;
+            background: linear-gradient(180deg, #FFFFFF 30%, rgba(255,255,255,0) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 0.9;
+            letter-spacing: -4px;
+        }
+
+        /* 电影感遮罩：从中心向外辐射的暗影 */
+        .cinematic-overlay {
+            background: radial-gradient(circle at 70% 50%, transparent 0%, #010510 75%);
+        }
+
+        /* 异形视窗：采用极大的圆角斜切，模拟潜水器视口 */
+        .view-port {
+            border-radius: 300px 0 0 300px;
+            box-shadow: -20px 0 60px rgba(79, 189, 242, 0.1);
+            border-left: 1px solid rgba(79, 189, 242, 0.3);
+        }
+
+        /* 动态扫描线装饰 */
+        .scan-line {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #4FBDF2, transparent);
+            position: absolute;
+            top: 50%;
+            opacity: 0.3;
+            animation: scan 4s linear infinite;
+        }
+
+        @keyframes scan {
+            0% { top: 0%; }
+            100% { top: 100%; }
+        }
+
+        .data-label {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot; class=&quot;flex items-center&quot;&gt;
+        
+        &lt;div class=&quot;absolute right-0 top-0 w-[70%] h-full view-port overflow-hidden&quot;&gt;
+            &lt;img src=&quot;https://images.unsplash.com/photo-1518467166778-b88f373ffec7?q=80&amp;w=1600&amp;auto=format&amp;fit=crop&quot; 
+                 class=&quot;w-full h-full object-cover opacity-60 scale-110&quot; alt=&quot;Deep Sea Bioluminescence&quot;&gt;
+            &lt;div class=&quot;absolute inset-0 cinematic-overlay&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;scan-line&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;relative z-20 w-[600px] pl-24 flex flex-col justify-center h-full&quot;&gt;
+            
+            &lt;div class=&quot;mb-12&quot;&gt;
+                &lt;div class=&quot;flex items-center gap-4 mb-8&quot;&gt;
+                    &lt;span class=&quot;text-cyanNeon font-bold tracking-[0.5em] text-[10px] uppercase&quot;&gt;Telemetry Active&lt;/span&gt;
+                    &lt;div class=&quot;w-2 h-2 rounded-full bg-cyanNeon animate-ping&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                
+                &lt;h1 class=&quot;main-title italic mb-6&quot;&gt;The Abyssal&lt;br&gt;Frontier&lt;/h1&gt;
+                
+                &lt;p class=&quot;text-white/50 font-light text-gl leading-relaxed max-w-sm border-l-2 border-cyanNeon/30 pl-8&quot;&gt;
+                    Beyond 4,000 meters, the ocean becomes a realm of eternal darkness and crushing silence. 
+                    Here, evolution takes a different path.
+                &lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;grid grid-cols-2 gap-10 mt-4&quot;&gt;
+                &lt;div class=&quot;space-y-2&quot;&gt;
+                    &lt;p class=&quot;text-[10px] text-cyanNeon font-bold tracking-widest uppercase&quot;&gt;Observed Pressure&lt;/p&gt;
+                    &lt;div class=&quot;flex items-baseline gap-2&quot;&gt;
+                        &lt;span class=&quot;text-4xl font-extralight italic serif&quot;&gt;11,000&lt;/span&gt;
+                        &lt;span class=&quot;text-xs opacity-40&quot;&gt;PSI&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;space-y-2&quot;&gt;
+                    &lt;p class=&quot;text-[10px] text-cyanNeon font-bold tracking-widest uppercase&quot;&gt;Biodiversity Rate&lt;/p&gt;
+                    &lt;div class=&quot;flex items-baseline gap-2&quot;&gt;
+                        &lt;span class=&quot;text-4xl font-extralight italic serif&quot;&gt;12.4&lt;/span&gt;
+                        &lt;span class=&quot;text-xs opacity-40&quot;&gt;new species / km&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute right-12 h-[60%] flex flex-col justify-between items-center z-30 py-8 border-l border-white/10&quot;&gt;
+            &lt;span class=&quot;data-label text-[10px] text-white/20 tracking-[0.5em] uppercase&quot;&gt;Navigation System 2.0&lt;/span&gt;
+            &lt;div class=&quot;flex flex-col gap-4&quot;&gt;
+                &lt;div class=&quot;w-1 h-8 bg-cyanNeon/20&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;w-1 h-12 bg-cyanNeon&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;w-1 h-6 bg-cyanNeon/20&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;span class=&quot;text-xs font-bold text-white/40&quot;&gt;092°&lt;/span&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute bottom-16 left-24 right-0  bg-gradient-to-r from-cyanNeon/60 via-white/10 to-transparent flex items-center&quot;&gt;
+            &lt;div class=&quot;absolute -top-1 left-0 w-2 h-2 bg-cyanNeon rotate-45&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;ml-12 flex gap-12&quot;&gt;
+                &lt;span class=&quot;text-[9px] font-bold tracking-widest opacity-40 uppercase&quot;&gt;Sector: 7G-Abyss&lt;/span&gt;
+                &lt;span class=&quot;text-[9px] font-bold tracking-widest opacity-40 uppercase&quot;&gt;Temp: 2.1°C&lt;/span&gt;
+                &lt;span class=&quot;text-[9px] font-bold tracking-widest opacity-40 uppercase&quot;&gt;Salford &amp; Co. Research&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute top-12 right-24 text-6xl font-light opacity-10 font-serif italic&quot;&gt;IV&lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 11
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Ocean Geography - Refined Experience&lt;/title&gt;
+    
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;800&amp;family=Libre+Baskerville:ital,wght@1,400&amp;display=swap&quot;&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        #page_container {
+            width: 1280px; height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background: #010510; /* 更深邃的底色 */
+            overflow: hidden;
+            color: #FFFFFF;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* 核心渐变标题 */
+        .main-title {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 84px;
+            background: linear-gradient(180deg, #FFFFFF 20%, rgba(79, 189, 242, 0.4) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+            letter-spacing: -3px;
+            filter: drop-shadow(0 0 20px rgba(79, 189, 242, 0.3));
+        }
+
+        /* 有机流体卡片：使用复杂的 border-radius 模拟水滴 */
+        .fluid-card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(79, 189, 242, 0.2);
+            box-shadow: inset 0 0 20px rgba(79, 189, 242, 0.1);
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            position: relative;
+        }
+
+        .fluid-card:hover {
+            border-color: rgba(79, 189, 242, 0.5);
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateY(-5px) scale(1.02);
+        }
+
+        /* 动态背景光晕 */
+        .glow-sphere {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: 0;
+            opacity: 0.15;
+            animation: pulse 8s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.1; }
+            100% { transform: scale(1.3); opacity: 0.25; }
+        }
+
+        /* 扫描线纹理 */
+        .overlay-texture {
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(0deg, rgba(0,0,0,0.1) 0px, rgba(0,0,0,0.1) 1px, transparent 1px, transparent 2px);
+            pointer-events: none;
+            z-index: 5;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;overlay-texture&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;glow-sphere w-[500px] h-[500px] bg-blue-500 -top-20 -left-20&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;glow-sphere w-[400px] h-[400px] bg-cyan-400 bottom-10 right-10&quot; style=&quot;animation-delay: -2s;&quot;&gt;&lt;/div&gt;
+
+        &lt;svg class=&quot;absolute inset-0 w-full h-full opacity-10 pointer-events-none&quot; viewBox=&quot;0 0 1280 720&quot;&gt;
+            &lt;circle cx=&quot;640&quot; cy=&quot;360&quot; r=&quot;300&quot; fill=&quot;none&quot; stroke=&quot;#4FBDF2&quot; stroke-width=&quot;1&quot; stroke-dasharray=&quot;4 8&quot; /&gt;
+            &lt;line x1=&quot;0&quot; y1=&quot;360&quot; x2=&quot;1280&quot; y2=&quot;360&quot; stroke=&quot;#4FBDF2&quot; stroke-width=&quot;0.5&quot; /&gt;
+            &lt;line x1=&quot;640&quot; y1=&quot;0&quot; x2=&quot;640&quot; y2=&quot;720&quot; stroke=&quot;#4FBDF2&quot; stroke-width=&quot;0.5&quot; /&gt;
+        &lt;/svg&gt;
+
+        &lt;div class=&quot;relative z-10 w-full h-full flex flex-col px-20 py-16&quot;&gt;
+            
+            &lt;div class=&quot;flex justify-between items-end mb-16&quot;&gt;
+                &lt;div class=&quot;space-y-2&quot;&gt;
+                    &lt;div class=&quot;flex items-center gap-3&quot;&gt;
+                        &lt;span class=&quot;w-10 h-[1px] bg-cyanNeon/50 bg-[#4FBDF2]&quot;&gt;&lt;/span&gt;
+                        &lt;span class=&quot;text-[10px] tracking-[0.4em] font-bold text-[#4FBDF2] uppercase&quot;&gt;Global Database v.2.0&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;h1 class=&quot;main-title italic&quot;&gt;Ocean Geography&lt;/h1&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;text-right pb-2&quot;&gt;
+                    &lt;p class=&quot;text-[10px] text-white/30 tracking-widest uppercase mb-1&quot;&gt;Chapter&lt;/p&gt;
+                    &lt;p class=&quot;text-3xl font-light font-serif text-white/60&quot;&gt;03&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;flex-1 flex gap-12 items-center&quot;&gt;
+                
+                &lt;div class=&quot;w-1/4&quot;&gt;
+                    &lt;div class=&quot;fluid-card p-10 h-[380px] flex flex-col justify-center text-center&quot;
+                         style=&quot;border-radius: 65% 35% 45% 55% / 55% 45% 55% 45%;&quot;&gt;
+                        &lt;div class=&quot;text-[#4FBDF2] mb-6 text-4xl opacity-50&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-expand&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;h3 class=&quot;text-white text-xl font-light leading-relaxed&quot;&gt;
+                            The &lt;span class=&quot;font-bold text-2xl block mt-1&quot;&gt;Pacific&lt;/span&gt; 
+                            &lt;span class=&quot;text-sm opacity-50 uppercase tracking-widest block my-3&quot;&gt;— Largest —&lt;/span&gt;
+                            The &lt;span class=&quot;font-bold text-2xl block mt-1&quot;&gt;Arctic&lt;/span&gt;
+                            &lt;span class=&quot;text-sm opacity-50 uppercase tracking-widest block mt-3&quot;&gt;— Smallest —&lt;/span&gt;
+                        &lt;/h3&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;w-2/5 relative&quot;&gt;
+                    &lt;div class=&quot;absolute -inset-4 bg-[#4FBDF2]/5 blur-2xl rounded-full&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;fluid-card p-12 h-[480px] flex flex-col items-center justify-center text-center overflow-hidden&quot;
+                         style=&quot;border-radius: 40% 60% 60% 40% / 45% 45% 55% 55%;&quot;&gt;
+                        
+                        &lt;div class=&quot;bg-white text-black px-4 py-1 text-[9px] font-black uppercase tracking-[0.3em] mb-10&quot;&gt;
+                            Five Major Systems
+                        &lt;/div&gt;
+
+                        &lt;ul class=&quot;space-y-3&quot;&gt;
+                            &lt;li class=&quot;group&quot;&gt;
+                                &lt;span class=&quot;text-6xl font-extrabold text-white tracking-tighter opacity-100 group-hover:text-[#4FBDF2] transition-colors&quot;&gt;Pacific&lt;/span&gt;
+                            &lt;/li&gt;
+                            &lt;li class=&quot;flex items-center justify-center gap-6&quot;&gt;
+                                &lt;span class=&quot;text-3xl font-light text-white/70 italic serif&quot;&gt;Atlantic&lt;/span&gt;
+                                &lt;span class=&quot;w-2 h-2 rounded-full bg-[#4FBDF2]/30&quot;&gt;&lt;/span&gt;
+                                &lt;span class=&quot;text-3xl font-light text-white/70 italic serif&quot;&gt;Indian&lt;/span&gt;
+                            &lt;/li&gt;
+                            &lt;li class=&quot;flex items-center justify-center gap-6 mt-2&quot;&gt;
+                                &lt;span class=&quot;text-xl font-medium text-white/40 tracking-widest uppercase&quot;&gt;Southern&lt;/span&gt;
+                                &lt;span class=&quot;text-xl font-medium text-white/40 tracking-widest uppercase&quot;&gt;Arctic&lt;/span&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;w-1/3 pl-8&quot;&gt;
+                    &lt;div class=&quot;space-y-8 relative&quot;&gt;
+                        &lt;div class=&quot;absolute -left-6 top-0 bottom-0 w-[1px] bg-gradient-to-b from-transparent via-[#4FBDF2]/40 to-transparent&quot;&gt;&lt;/div&gt;
+                        
+                        &lt;div class=&quot;relative group&quot;&gt;
+                            &lt;div class=&quot;w-14 h-14 rounded-2xl bg-gradient-to-br from-[#E88523] to-orange-700 flex items-center justify-center text-2xl shadow-[0_0_30px_rgba(232,133,35,0.3)] mb-6 transition-transform group-hover:rotate-12&quot;&gt;
+                                &lt;i class=&quot;fa-solid fa-globe-americas text-white&quot;&gt;&lt;/i&gt;
+                            &lt;/div&gt;
+                            &lt;h4 class=&quot;text-white text-2xl font-bold mb-4&quot;&gt;Unified System&lt;/h4&gt;
+                            &lt;p class=&quot;text-white/50 text-base font-light leading-relaxed&quot;&gt;
+                                Our oceans are not isolated basins but &lt;span class=&quot;text-[#4FBDF2] italic&quot;&gt;interconnected&lt;/span&gt; pathways, forming a single global circulatory body.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class=&quot;pt-8&quot;&gt;
+                            &lt;div class=&quot;flex items-center gap-4 text-[#6A80B5]&quot;&gt;
+                                &lt;span class=&quot;text-[10px] font-black uppercase tracking-[0.4em]&quot;&gt;Data Integrity&lt;/span&gt;
+                                &lt;div class=&quot;flex-1 h-[1px] bg-[#6A80B5]/20&quot;&gt;&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;p class=&quot;text-[10px] text-white/30 mt-4 leading-loose&quot;&gt;
+                                SALFORD &amp; CO. OCEANOGRAPHIC DIVISION&lt;br&gt;
+                                SURVEY REF: 092-MARINE-GEO
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;mt-auto flex justify-between items-center&quot;&gt;
+                &lt;div class=&quot;flex items-center gap-6 opacity-40&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-water text-xl text-[#4FBDF2]&quot;&gt;&lt;/i&gt;
+                    &lt;div class=&quot;flex flex-col&quot;&gt;
+                        &lt;span class=&quot;text-[9px] font-bold tracking-widest uppercase&quot;&gt;Planetary Scale&lt;/span&gt;
+                        &lt;span class=&quot;text-[8px] opacity-60&quot;&gt;71% Earth Surface Coverage&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;flex gap-1&quot;&gt;
+                    &lt;div class=&quot;w-12 h-[2px] bg-[#4FBDF2]&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-4 h-[2px] bg-[#4FBDF2]/40&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-2 h-[2px] bg-[#4FBDF2]/20&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <script>
+   // 自动调整iframe高度
+    function resizeIframes() {
+        document.querySelectorAll('.responsive-iframe').forEach(iframe => {
+            try {
+                const doc = iframe.contentDocument || iframe.contentWindow.document;
+                const height = Math.max(
+                    doc.body.scrollHeight,
+                    doc.documentElement.scrollHeight,
+                    doc.body.offsetHeight,
+                    doc.documentElement.offsetHeight,
+                    doc.body.clientHeight,
+                    doc.documentElement.clientHeight
+                );
+                iframe.style.height = height + 'px';
+            } catch (e) {
+                console.log('无法调整iframe高度:', e);
+            }
+        });
+    }
+    
+    // 初始调整
+    window.addEventListener('load', resizeIframes);
+    
+    // 内容加载后调整
+    document.querySelectorAll('.responsive-iframe').forEach(iframe => {
+        iframe.addEventListener('load', function() {
+            resizeIframes();
+            // 对动态内容进行定期检查
+            setInterval(resizeIframes, 1000);
+        });
+    });
+  </script>
+ </body>
+</html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campaign Overview Dashboard</title>
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgMain: '#F2F2F2',
+                        cardBg: '#FFFFFF',
+                        primaryText: '#000000',
+                        secondaryText: '#666666',
+                        accent: '#5D3B95',
+                        accentLight: '#8B6BC5', 
+                        accentPale: '#D5CCEB',
+                        iconColor: '#444444',
+                        divider: '#E0E0E0'
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Global Standards */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* Main Page Container - 1280x720 Fixed */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #F2F2F2;
+            position: relative;
+            overflow: hidden;
+            box-shadow: none; /* No external shadow as requested */
+            margin: 0 auto;
+        }
+
+        /* Subtle Decorative Background Blob */
+        .bg-decoration {
+            position: absolute;
+            top: -200px;
+            right: -100px;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(93, 59, 149, 0.05) 0%, rgba(242, 242, 242, 0) 70%);
+            z-index: 0;
+            pointer-events: none;
+        }
+        
+        .bg-decoration-2 {
+            position: absolute;
+            bottom: -150px;
+            left: -150px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(93, 59, 149, 0.03) 0%, rgba(242, 242, 242, 0) 70%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Specific Text Handling */
+        p, h1, h2, h3, h4, h5, h6 {
+            cursor: default;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <div class="bg-decoration"></div>
+        <div class="bg-decoration-2"></div>
+
+        <section class="relative z-10 px-12 mb-8 pt-14 flex justify-between items-end">
+            <div>
+                <h1 class="text-primaryText text-6xl font-bold tracking-tight mb-2">Campaign Overview</h1>
+                <div class="h-1 w-20 bg-accent rounded-full"></div>
+            </div>
+            <div class="max-w-md text-right">
+                <p class="text-secondaryText text-sm leading-relaxed">
+                    An overview of each campaign's reach, engagement, and cost analysis for the current fiscal period.
+                </p>
+            </div>
+        </section>
+
+        <main class="relative z-10 px-12 grid grid-cols-4 gap-6 h-[480px]">
+            
+            <div class="bg-cardBg rounded-2xl shadow-xl p-6 flex flex-col justify-between border border-gray-100">
+                <div class="mb-2">
+                    <p class="text-secondaryText text-xs font-semibold uppercase tracking-wider mb-1">Top Campaign</p>
+                    <h2 class="text-primaryText text-2xl font-bold">Campaign A</h2>
+                </div>
+
+                <div id="chart_campaign_a" class="w-full h-[160px]"></div>
+
+                <div class="mt-4">
+                    <ul class="flex flex-col gap-3">
+                        <li class="flex items-center justify-between border-b border-divider pb-2">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-bullhorn text-iconColor text-xs w-4"></i>
+                                <span class="text-secondaryText text-sm">Impressions</span>
+                            </div>
+                            <b class="text-primaryText text-sm">2,000,000</b>
+                        </li>
+                        <li class="flex items-center justify-between border-b border-divider pb-2">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-computer-mouse text-iconColor text-xs w-4"></i>
+                                <span class="text-secondaryText text-sm">Clicks</span>
+                            </div>
+                            <b class="text-primaryText text-sm">120,000</b>
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-users text-iconColor text-xs w-4"></i>
+                                <span class="text-secondaryText text-sm">Conversions</span>
+                            </div>
+                            <b class="text-accent text-sm">10,000</b>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-cardBg rounded-2xl shadow-xl p-6 flex flex-col justify-between border border-gray-100">
+                <div class="mb-2">
+                    <p class="text-secondaryText text-xs font-semibold uppercase tracking-wider mb-1 opacity-0">Spacer</p>
+                    <h2 class="text-primaryText text-2xl font-bold">Campaign B</h2>
+                </div>
+
+                <div id="chart_campaign_b" class="w-full h-[160px]"></div>
+
+                <div class="mt-4">
+                    <ul class="flex flex-col gap-3">
+                        <li class="flex items-center justify-between border-b border-divider pb-2">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-bullhorn text-iconColor text-xs w-4"></i>
+                                <span class="text-secondaryText text-sm">Impressions</span>
+                            </div>
+                            <b class="text-primaryText text-sm">1,500,000</b>
+                        </li>
+                        <li class="flex items-center justify-between border-b border-divider pb-2">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-computer-mouse text-iconColor text-xs w-4"></i>
+                                <span class="text-secondaryText text-sm">Clicks</span>
+                            </div>
+                            <b class="text-primaryText text-sm">100,000</b>
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-users text-iconColor text-xs w-4"></i>
+                                <span class="text-secondaryText text-sm">Conversions</span>
+                            </div>
+                            <b class="text-accent text-sm">8,000</b>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-cardBg rounded-2xl shadow-xl p-6 flex flex-col justify-between border border-gray-100">
+                <div class="mb-2">
+                    <p class="text-secondaryText text-xs font-semibold uppercase tracking-wider mb-1 opacity-0">Spacer</p>
+                    <h2 class="text-primaryText text-2xl font-bold">Campaign C</h2>
+                </div>
+
+                <div id="chart_campaign_c" class="w-full h-[160px]"></div>
+
+                <div class="mt-4">
+                    <ul class="flex flex-col gap-3">
+                        <li class="flex items-center justify-between border-b border-divider pb-2">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-bullhorn text-iconColor text-xs w-4"></i>
+                                <span class="text-secondaryText text-sm">Impressions</span>
+                            </div>
+                            <b class="text-primaryText text-sm">1,500,000</b>
+                        </li>
+                        <li class="flex items-center justify-between border-b border-divider pb-2">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-computer-mouse text-iconColor text-xs w-4"></i>
+                                <span class="text-secondaryText text-sm">Clicks</span>
+                            </div>
+                            <b class="text-primaryText text-sm">80,000</b>
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-users text-iconColor text-xs w-4"></i>
+                                <span class="text-secondaryText text-sm">Conversions</span>
+                            </div>
+                            <b class="text-accent text-sm">7,000</b>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-cardBg rounded-2xl shadow-xl p-6 flex flex-col justify-between border border-gray-100 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-24 h-24 bg-accent opacity-5 rounded-bl-full pointer-events-none"></div>
+
+                <div class="text-center mb-2">
+                    <p class="text-secondaryText text-sm font-medium mb-1">Ad Spent Total</p>
+                    <h2 class="text-accent text-4xl font-bold tracking-tight">$150,000</h2>
+                </div>
+
+                <div id="chart_ad_spend" class="w-full h-[200px]"></div>
+
+                <div class="mt-2">
+                    <div class="flex justify-center gap-2 mb-4">
+                        <div class="bg-accent text-white text-[10px] px-2 py-1 rounded-full font-bold">A</div>
+                        <div class="bg-accentLight text-white text-[10px] px-2 py-1 rounded-full font-bold">B</div>
+                        <div class="bg-accentPale text-accent text-[10px] px-2 py-1 rounded-full font-bold">C</div>
+                    </div>
+
+                    <div class="flex justify-between items-center mb-4 px-1">
+                        <div class="text-center">
+                            <p class="text-xs text-secondaryText">Camp A</p>
+                            <b class="text-primaryText text-sm">$60k</b>
+                        </div>
+                        <div class="w-px h-6 bg-divider"></div>
+                        <div class="text-center">
+                            <p class="text-xs text-secondaryText">Camp B</p>
+                            <b class="text-primaryText text-sm">$50k</b>
+                        </div>
+                        <div class="w-px h-6 bg-divider"></div>
+                        <div class="text-center">
+                            <p class="text-xs text-secondaryText">Camp C</p>
+                            <b class="text-primaryText text-sm">$40k</b>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-bgMain rounded-lg py-2 text-center">
+                        <p class="text-secondaryText text-xs">
+                            Avg. Engagement Rate: <b class="text-primaryText">6%</b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+    <script>
+        // Common Color Palette
+        const colors = {
+            primary: '#5D3B95',
+            secondary: '#8B6BC5',
+            tertiary: '#D5CCEB',
+            text: '#666666'
+        };
+
+        // Function to create standard bar chart options
+        function createBarOption(data) {
+            return {
+                grid: {
+                    top: '5%',
+                    left: '2%',
+                    right: '5%',
+                    bottom: '5%',
+                    containLabel: true
+                },
+                xAxis: {
+                    type: 'value',
+                    splitLine: { show: false },
+                    axisLabel: { show: false },
+                    axisLine: { show: false }
+                },
+                yAxis: {
+                    type: 'category',
+                    data: ['Conv.', 'Clicks', 'Imp.'],
+                    axisLine: { show: false },
+                    axisTick: { show: false },
+                    axisLabel: {
+                        color: colors.text,
+                        fontSize: 10,
+                        fontWeight: 500
+                    }
+                },
+                series: [
+                    {
+                        type: 'bar',
+                        data: data,
+                        barWidth: 16,
+                        itemStyle: {
+                            color: colors.primary,
+                            borderRadius: [0, 4, 4, 0] // Rounded ends
+                        },
+                        label: {
+                            show: false
+                        }
+                    }
+                ]
+            };
+        }
+
+        // Initialize Charts
+        
+        // Campaign A
+        // Note: Data is [Conversions, Clicks, Impressions] based on Y-axis order
+        // Scaled for visual representation since absolute numbers vary too much
+        // Real data: 10k, 120k, 2M. 
+        const chartA = echarts.init(document.getElementById('chart_campaign_a'));
+        chartA.setOption(createBarOption([
+            {value: 10000, itemStyle: {color: colors.tertiary}}, 
+            {value: 120000, itemStyle: {color: colors.secondary}}, 
+            {value: 2000000, itemStyle: {color: colors.primary}}
+        ]));
+
+        // Campaign B
+        // Real data: 8k, 100k, 1.5M
+        const chartB = echarts.init(document.getElementById('chart_campaign_b'));
+        chartB.setOption(createBarOption([
+            {value: 8000, itemStyle: {color: colors.tertiary}}, 
+            {value: 100000, itemStyle: {color: colors.secondary}}, 
+            {value: 1500000, itemStyle: {color: colors.primary}}
+        ]));
+
+        // Campaign C
+        // Real data: 7k, 80k, 1.5M
+        const chartC = echarts.init(document.getElementById('chart_campaign_c'));
+        chartC.setOption(createBarOption([
+            {value: 7000, itemStyle: {color: colors.tertiary}}, 
+            {value: 80000, itemStyle: {color: colors.secondary}}, 
+            {value: 1500000, itemStyle: {color: colors.primary}}
+        ]));
+
+        // Ad Spend Donut Chart
+        const chartSpend = echarts.init(document.getElementById('chart_ad_spend'));
+        const optionSpend = {
+            series: [
+                {
+                    name: 'Ad Spend',
+                    type: 'pie',
+                    radius: ['55%', '85%'],
+                    center: ['50%', '50%'],
+                    avoidLabelOverlap: false,
+                    itemStyle: {
+                        borderRadius: 5,
+                        borderColor: '#fff',
+                        borderWidth: 2
+                    },
+                    label: {
+                        show: false,
+                        position: 'center'
+                    },
+                    emphasis: {
+                        label: {
+                            show: true,
+                            fontSize: 14,
+                            fontWeight: 'bold',
+                            formatter: '{c}'
+                        },
+                        scale: true,
+                        scaleSize: 5
+                    },
+                    labelLine: {
+                        show: false
+                    },
+                    data: [
+                        { value: 60000, name: 'Campaign A', itemStyle: { color: colors.primary } },
+                        { value: 50000, name: 'Campaign B', itemStyle: { color: colors.secondary } },
+                        { value: 40000, name: 'Campaign C', itemStyle: { color: colors.tertiary } }
+                    ]
+                }
+            ]
+        };
+        chartSpend.setOption(optionSpend);
+
+        // Handle Resize
+        window.addEventListener('resize', () => {
+            chartA.resize();
+            chartB.resize();
+            chartC.resize();
+            chartSpend.resize();
+        });
+
+    </script>
+</body>
+</html>

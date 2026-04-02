@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Water - Editorial Style</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #121212; overflow: hidden; color: #F5F5F5; }
+        .font-serif-italic { font-family: 'Georgia', serif; font-style: italic; }
+        .bg-primary-gradient { background: linear-gradient(135deg, #B63914 0%, #D65A2C 100%); }
+        .hospital-logo-box { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+        
+        /* 背景设计：垂直水印 PURE */
+        .bg-text-vertical { position: absolute; font-size: 180px; font-weight: 900; color: rgba(214, 90, 44, 0.04); line-height: 0.8; z-index: 0; writing-mode: vertical-rl; right: 20px; top: 0; pointer-events: none; }
+        
+        .glass-bar { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border-right: 3px solid #D65A2C; }
+        .image-pillar { clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%); }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <!-- 背景设计补全 -->
+        <div class="bg-text-vertical uppercase">Pure</div>
+        <div class="absolute bottom-[20%] right-[40%] w-[500px] h-[500px] bg-[#D65A2C] opacity-[0.08] blur-[150px] rounded-full"></div>
+
+        <!-- 统一Logo区 -->
+        <div class="absolute top-12 left-16 z-50">
+            <div class="flex items-center gap-4">
+                <div class="hospital-logo-box bg-primary-gradient"><i class="fa-solid fa-plus text-white text-lg"></i></div>
+                <span class="text-xl font-bold tracking-widest uppercase">Borcelle Hospital</span>
+            </div>
+        </div>
+
+        <div class="flex h-full w-full">
+            <!-- 第一栏：视觉 -->
+            <div class="w-4/12 h-full flex items-center justify-center pl-16">
+                <div class="image-pillar w-full h-[85%] bg-zinc-900 overflow-hidden relative shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1541675154750-0444c7d51e8e?q=80&w=1000" class="w-full h-full object-cover grayscale opacity-80">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-[#D65A2C]/40 to-transparent"></div>
+                </div>
+            </div>
+
+            <!-- 第二栏：标题与详情 -->
+            <div class="w-8/12 h-full flex flex-col justify-center px-20 z-10">
+                <div class="mb-12">
+                    <h1 class="text-[120px] leading-[0.8] tracking-tighter">
+                        <span class="font-serif-italic text-[#D65A2C]">Clean</span>
+                        <span class="font-bold">WATER.</span>
+                    </h1>
+                    <p class="text-xl font-light tracking-[0.4em] opacity-40 uppercase mt-4">Sanitation & Hygiene</p>
+                </div>
+
+                <div class="grid grid-cols-2 gap-12">
+                    <div class="glass-bar p-8">
+                        <p class="text-lg leading-relaxed font-light opacity-90 italic">
+                            "Safe drinking water is the most fundamental medicine, preventing disease before it begins."
+                        </p>
+                    </div>
+                    <div class="flex flex-col justify-center gap-6">
+                        <div class="flex items-center gap-4">
+                            <span class="text-2xl font-serif-italic text-[#B63914]">01.</span>
+                            <span class="text-sm font-bold tracking-widest uppercase">Filtration Systems</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="text-2xl font-serif-italic text-[#B63914]">02.</span>
+                            <span class="text-sm font-bold tracking-widest uppercase">Waste Management</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="text-2xl font-serif-italic text-[#B63914]">03.</span>
+                            <span class="text-sm font-bold tracking-widest uppercase">Public Education</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部信息补全 -->
+        <div class="absolute bottom-12 left-16 flex items-center gap-8 opacity-30 text-[10px] font-bold tracking-[0.5em] uppercase">
+            <span>Standard v4.0</span>
+            <div class="w-8 h-[1px] bg-white"></div>
+            <span>Environmental Safety</span>
+        </div>
+    </div>
+</body>
+</html>

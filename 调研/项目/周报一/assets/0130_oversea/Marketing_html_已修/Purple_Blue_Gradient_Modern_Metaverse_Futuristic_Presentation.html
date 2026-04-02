@@ -1,0 +1,2575 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Responsive Merged HTML
+  </title>
+  <style>
+   body {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .page-wrapper {
+                width: 100%;
+                margin: 15px 0;
+                position: relative;
+            }
+            .page-title {
+                background: #f5f5f5;
+                padding: 5px 10px;
+                border-radius: 3px 3px 0 0;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+            }
+            .responsive-iframe {
+                border: none;
+                width: 100%;
+                display: block;
+            }
+  </style>
+ </head>
+ <body>
+  <!-- 内容将在这里插入 -->
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 1
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Metaverse Cover - Boxed Redesign&lt;/title&gt;
+    
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBlack: '#05020D',
+                        cyberViolet: '#7A3E9C',
+                        holoPink: '#FF99D6',
+                        auroraCyan: '#70F3FF',
+                        mistGrey: '#D1C7E0',
+                        glassDark: 'rgba(15, 10, 30, 0.85)',
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'],
+                        mono: ['&quot;Courier New&quot;', 'monospace'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-glow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative;
+            background-color: #05020D; overflow: hidden; font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* --- Background Textures --- */
+        .bg-noise {
+            position: absolute; inset: 0;
+            background-image: url(&quot;data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E&quot;);
+            pointer-events: none; z-index: 1; mix-blend-mode: overlay;
+        }
+
+        .bg-orb { position: absolute; border-radius: 50%; filter: blur(100px); z-index: 0; pointer-events: none; }
+
+        /* --- The Main Text Box (Cyber Panel) --- */
+        .cyber-panel {
+            position: relative;
+            background: rgba(20, 12, 38, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+            /* Cut Corners using clip-path */
+            clip-path: polygon(
+                40px 0, 100% 0, 
+                100% calc(100% - 40px), calc(100% - 40px) 100%, 
+                0 100%, 0 40px
+            );
+        }
+
+        /* Decorative Grid inside the panel */
+        .panel-grid {
+            position: absolute; inset: 0;
+            background-image: linear-gradient(rgba(112, 243, 255, 0.05) 1px, transparent 1px), 
+                              linear-gradient(90deg, rgba(112, 243, 255, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none; z-index: 0;
+        }
+
+        /* Typography */
+        .title-gradient {
+            background: linear-gradient(180deg, #FFFFFF 20%, #A5B4FC 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 20px rgba(112, 243, 255, 0.4));
+        }
+
+        .subtitle-stroke {
+            font-family: 'Arial Black', sans-serif;
+            -webkit-text-stroke: 1px #70F3FF;
+            color: transparent;
+            letter-spacing: 0.5em;
+        }
+
+        /* Footer Glitch Bar */
+        .footer-bar {
+            height: 4px;
+            width: 100%;
+            background: linear-gradient(90deg, #7A3E9C, #FF99D6, #70F3FF);
+            position: absolute; bottom: 0; left: 0;
+        }
+
+        ::-webkit-scrollbar { display: none; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+
+        &lt;div class=&quot;bg-noise&quot;&gt;&lt;/div&gt;
+        
+        &lt;div class=&quot;bg-orb top-[-200px] left-[-100px] w-[800px] h-[800px]&quot; style=&quot;background: radial-gradient(circle, rgba(58, 36, 89, 0.5) 0%, transparent 70%);&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;bg-orb bottom-[-300px] right-[-100px] w-[900px] h-[900px]&quot; style=&quot;background: radial-gradient(circle, rgba(112, 243, 255, 0.15) 0%, transparent 70%);&quot;&gt;&lt;/div&gt;
+        
+        &lt;div class=&quot;absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] border border-white/5 rounded-full opacity-30 animate-[spin_60s_linear_infinite] pointer-events-none -z-10&quot;&gt;&lt;/div&gt;
+
+
+        &lt;div style=&quot;position: absolute; top: 60px; left: 80px; z-index: 50; display: flex; align-items: center; opacity: 0.9;&quot;&gt;
+             &lt;div style=&quot;width: 40px; height: 40px; border: 2px solid #FF99D6; border-radius: 4px; display: flex; align-items: center; justify-content: center; transform: rotate(45deg); box-shadow: 0 0 15px rgba(255,153,214,0.4);&quot;&gt;
+                &lt;div style=&quot;width: 20px; height: 20px; background-color: rgba(112, 243, 255, 0.8); border-radius: 2px;&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div style=&quot;display: flex; flex-direction: column; justify-content: center; margin-left: 16px;&quot;&gt;
+                 &lt;h6 style=&quot;color: #FFFFFF; font-size: 12px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; line-height: 1; margin-bottom: 4px;&quot;&gt;Studio&lt;/h6&gt;
+                 &lt;h6 style=&quot;color: #D1C7E0; font-size: 12px; font-weight: 300; letter-spacing: 0.3em; text-transform: uppercase; line-height: 1;&quot;&gt;Shodwe&lt;/h6&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+
+        &lt;div class=&quot;absolute inset-0 flex items-center justify-center z-10 p-12&quot;&gt;
+            
+            &lt;div class=&quot;cyber-panel w-[900px] h-[480px] flex flex-col items-center justify-center text-center animate-float&quot;&gt;
+                
+                &lt;div class=&quot;panel-grid&quot;&gt;&lt;/div&gt;
+
+                &lt;div class=&quot;absolute top-0 left-0 w-[150px] h-[2px] bg-gradient-to-r from-holoPink to-transparent&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;absolute top-0 left-0 w-[2px] h-[100px] bg-gradient-to-b from-holoPink to-transparent&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;absolute bottom-0 right-0 w-[150px] h-[2px] bg-gradient-to-l from-auroraCyan to-transparent&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;absolute bottom-0 right-0 w-[2px] h-[100px] bg-gradient-to-t from-auroraCyan to-transparent&quot;&gt;&lt;/div&gt;
+
+                &lt;div class=&quot;relative z-10 flex flex-col items-center&quot;&gt;
+                    
+                    &lt;div class=&quot;flex items-center gap-4 mb-6 opacity-80&quot;&gt;
+                        &lt;div class=&quot;w-2 h-2 bg-auroraCyan rounded-full animate-pulse&quot;&gt;&lt;/div&gt;
+                        &lt;span class=&quot;font-mono text-auroraCyan text-xs tracking-[0.4em] uppercase&quot;&gt;Keynote Presentation&lt;/span&gt;
+                        &lt;div class=&quot;w-2 h-2 bg-auroraCyan rounded-full animate-pulse&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;h1 class=&quot;text-[110px] font-black leading-[0.9] tracking-tighter title-gradient uppercase mb-2&quot;&gt;
+                        Metaverse
+                    &lt;/h1&gt;
+                    
+                    &lt;h2 class=&quot;text-4xl font-light tracking-[0.6em] text-white uppercase relative inline-block pl-[0.6em]&quot;&gt;
+                        Expansion
+                        &lt;span class=&quot;absolute -bottom-4 left-1/2 -translate-x-1/2 w-1/3 h-[1px] bg-gradient-to-r from-transparent via-holoPink to-transparent&quot;&gt;&lt;/span&gt;
+                    &lt;/h2&gt;
+
+                    &lt;div class=&quot;mt-16 flex items-center gap-12 text-mistGrey/60 font-mono text-xs&quot;&gt;
+                        &lt;div class=&quot;flex flex-col items-center gap-1&quot;&gt;
+                            &lt;span class=&quot;text-white font-bold text-lg&quot;&gt;2025&lt;/span&gt;
+                            &lt;span class=&quot;tracking-widest font-size: 16px&quot;&gt;VISION&lt;/span&gt;
+                        &lt;/div&gt;
+                        
+                        &lt;div class=&quot;h-8 w-[1px] bg-white/10&quot;&gt;&lt;/div&gt;
+                        
+                        &lt;div class=&quot;flex flex-col items-center gap-1&quot;&gt;
+                            &lt;span class=&quot;text-white font-bold text-lg&quot;&gt;v.2.0&lt;/span&gt;
+                            &lt;span class=&quot;tracking-widest font-size: 16px&quot;&gt;RELEASE&lt;/span&gt;
+                        &lt;/div&gt;
+                        
+                        &lt;div class=&quot;h-8 w-[1px] bg-white/10&quot;&gt;&lt;/div&gt;
+                        
+                        &lt;div class=&quot;flex flex-col items-center gap-1&quot;&gt;
+                            &lt;span class=&quot;text-white font-bold text-lg&quot;&gt;Q3&lt;/span&gt;
+                            &lt;span class=&quot;tracking-widest font-size: 16px&quot;&gt;REPORT&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+
+        &lt;div style=&quot;position: absolute; bottom: 50px; left: 80px; z-index: 20;&quot;&gt;
+            &lt;p style=&quot;color: #FFFFFF; font-size: 14px; letter-spacing: 2px; margin-bottom: 4px; font-weight: 700;&quot;&gt;PAGE&lt;/p&gt;
+            &lt;p style=&quot;color: #70F3FF; font-size: 14px; letter-spacing: 1px;&quot;&gt;01 / 15&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute bottom-[40px] right-[80px] z-20 group cursor-pointer&quot;&gt;
+            &lt;div class=&quot;w-14 h-14 rounded-full border border-mistGrey/30 flex items-center justify-center transition-all duration-300 group-hover:bg-white group-hover:border-white group-hover:shadow-[0_0_20px_#fff]&quot;&gt;
+                &lt;i class=&quot;fa-solid fa-arrow-right text-white text-xl transition-transform duration-300 group-hover:text-deepBlack group-hover:translate-x-1&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 2
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Cover Agenda - Cyberpunk Final&lt;/title&gt;
+    
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBlack: '#05020D',
+                        cyberViolet: '#7A3E9C',
+                        holoPink: '#FF99D6',
+                        auroraCyan: '#70F3FF',
+                        mistGrey: '#D1C7E0',
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'],
+                        mono: ['&quot;Courier New&quot;', 'monospace'],
+                    },
+                    animation: {
+                        'scanline': 'scanline 10s linear infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        scanline: {
+                            '0%': { transform: 'translateY(-100%)' },
+                            '100%': { transform: 'translateY(100%)' },
+                        }
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative;
+            background-color: #05020D; overflow: hidden; font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Background Textures */
+        .bg-noise {
+            position: absolute; inset: 0;
+            background-image: url(&quot;data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E&quot;);
+            pointer-events: none; z-index: 1; mix-blend-mode: overlay;
+        }
+
+        .bg-scanlines {
+            position: absolute; inset: 0;
+            background: repeating-linear-gradient(to bottom, transparent 0px, transparent 2px, rgba(0,0,0,0.2) 3px, rgba(0,0,0,0.2) 4px);
+            pointer-events: none; z-index: 2;
+        }
+
+        /* Ambient Glows */
+        .bg-orb { position: absolute; border-radius: 50%; filter: blur(120px); z-index: 0; pointer-events: none; opacity: 0.4; }
+
+        /* --- Tech Item Styles (Modified for Permanent Visibility) --- */
+        .tech-item-container {
+            position: relative;
+            padding: 1rem 0.5rem;
+            border-left: 2px solid; /* Base solid border */
+            transition: all 0.3s ease;
+            /* No hover float effect */
+        }
+
+        /* Corner Markers - Always Visible */
+        .tech-item-container::before {
+            content: ''; position: absolute; top: 0; left: -2px; width: 10px; height: 10px;
+            border-top: 2px solid; border-left: 2px solid; opacity: 0.8;
+        }
+        .tech-item-container::after {
+            content: ''; position: absolute; bottom: 0; right: 0; width: 10px; height: 10px;
+            border-bottom: 2px solid; border-right: 2px solid; opacity: 0.8;
+        }
+        
+        /* Theme-specific Permanent Styles (Cyan) */
+        .tech-item-container.cyan {
+            border-color: rgba(112, 243, 255, 0.5);
+            background: linear-gradient(90deg, rgba(112, 243, 255, 0.05), transparent);
+            color: #70F3FF; /* For markers */
+        }
+        /* Theme-specific Permanent Styles (Pink) */
+        .tech-item-container.pink {
+            border-color: rgba(255, 153, 214, 0.5);
+            background: linear-gradient(90deg, rgba(255, 153, 214, 0.05), transparent);
+            color: #FF99D6;
+        }
+        /* Theme-specific Permanent Styles (Purple) */
+        .tech-item-container.purple {
+            border-color: rgba(122, 62, 156, 0.5);
+            background: linear-gradient(90deg, rgba(122, 62, 156, 0.05), transparent);
+            color: #7A3E9C;
+        }
+
+        /* Animated Tech Energy Bar (On Hover) */
+        .tech-bar {
+            height: 2px; width: 100%; background: rgba(255, 255, 255, 0.1); position: relative; overflow: hidden; margin-top: 0.5rem;
+        }
+        .tech-bar::after {
+            content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
+            background: currentColor; transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 0 10px currentColor;
+        }
+        .group:hover .tech-bar::after { left: 0; }
+
+        /* Text Glow Utilities for Hover */
+        .text-glow-cyan { text-shadow: 0 0 10px rgba(112, 243, 255, 0.7); }
+        .text-glow-pink { text-shadow: 0 0 10px rgba(255, 153, 214, 0.7); }
+        .text-glow-purple { text-shadow: 0 0 10px rgba(122, 62, 156, 0.7); }
+
+        /* Scrollbar hide */
+        ::-webkit-scrollbar { display: none; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+
+        &lt;div class=&quot;bg-noise&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;bg-scanlines&quot;&gt;&lt;/div&gt;
+        
+        &lt;div class=&quot;absolute inset-0 z-0 pointer-events-none overflow-hidden&quot;&gt;
+            &lt;div class=&quot;absolute top-0 left-[20%] w-[1px] h-full bg-gradient-to-b from-transparent via-auroraCyan/20 to-transparent animate-scanline&quot; style=&quot;animation-duration: 8s;&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;absolute top-0 left-[50%] w-[1px] h-full bg-gradient-to-b from-transparent via-holoPink/20 to-transparent animate-scanline&quot; style=&quot;animation-duration: 12s; animation-delay: 2s;&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;absolute top-0 left-[80%] w-[1px] h-full bg-gradient-to-b from-transparent via-cyberViolet/20 to-transparent animate-scanline&quot; style=&quot;animation-duration: 10s; animation-delay: 1s;&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;div class=&quot;bg-orb top-[-200px] right-[-150px] w-[700px] h-[700px]&quot; style=&quot;background: radial-gradient(circle, rgba(122, 62, 156, 0.4) 0%, transparent 70%);&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;bg-orb bottom-[-200px] left-[-150px] w-[700px] h-[700px]&quot; style=&quot;background: radial-gradient(circle, rgba(35, 21, 60, 0.5) 0%, transparent 70%);&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;bg-orb top-[20%] left-[30%] w-[400px] h-[400px]&quot; style=&quot;background: radial-gradient(circle, rgba(112, 243, 255, 0.15) 0%, transparent 70%);&quot;&gt;&lt;/div&gt;
+
+
+        &lt;div style=&quot;position: absolute; top: 60px; left: 80px; z-index: 50; display: flex; align-items: center; opacity: 0.9;&quot;&gt;
+             &lt;div style=&quot;width: 40px; height: 40px; border: 2px solid #FF99D6; border-radius: 4px; display: flex; align-items: center; justify-content: center; transform: rotate(45deg); box-shadow: 0 0 15px rgba(255,153,214,0.4);&quot;&gt;
+                &lt;div style=&quot;width: 20px; height: 20px; background-color: rgba(112, 243, 255, 0.8); border-radius: 2px;&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div style=&quot;display: flex; flex-direction: column; justify-content: center; margin-left: 16px;&quot;&gt;
+                 &lt;h6 style=&quot;color: #FFFFFF; font-size: 12px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; line-height: 1; margin-bottom: 4px;&quot;&gt;Studio&lt;/h6&gt;
+                 &lt;h6 style=&quot;color: #D1C7E0; font-size: 12px; font-weight: 300; letter-spacing: 0.3em; text-transform: uppercase; line-height: 1;&quot;&gt;Shodwe&lt;/h6&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;relative z-10 w-full h-full flex flex-col pt-10 px-24&quot;&gt;
+            
+            &lt;div class=&quot;w-full text-center mb-12 pl-[40px] relative&quot;&gt; 
+                &lt;div class=&quot;absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2/3 h-20 bg-auroraCyan/5 blur-2xl -z-10&quot;&gt;&lt;/div&gt;
+                
+                &lt;h1 class=&quot;text-5xl font-black text-white tracking-[0.1em] uppercase drop-shadow-[0_0_25px_rgba(112,243,255,0.5)] relative inline-block&quot;&gt;
+                    Agenda &lt;span class=&quot;text-transparent bg-clip-text bg-gradient-to-r from-auroraCyan to-holoPink&quot;&gt;Overview&lt;/span&gt;
+                    &lt;span class=&quot;absolute top-0 left-[-20px] h-full w-[4px] bg-holoPink/50 skew-x-12&quot;&gt;&lt;/span&gt;
+                     &lt;span class=&quot;absolute top-0 right-[-20px] h-full w-[4px] bg-auroraCyan/50 skew-x-12&quot;&gt;&lt;/span&gt;
+                &lt;/h1&gt;
+                &lt;p class=&quot;text-mistGrey tracking-[0.3em] text-sm mt-3 font-mono uppercase&quot;&gt;System Protocol v2.025 // Executing...&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;grid grid-cols-3 gap-x-20 gap-y-8 w-full pr-10&quot;&gt;
+                
+                &lt;div class=&quot;flex flex-col gap-6&quot;&gt;
+                    &lt;div class=&quot;group cursor-pointer&quot;&gt;
+                        &lt;div class=&quot;tech-item-container cyan&quot;&gt;
+                            &lt;div class=&quot;flex items-baseline gap-3 mb-1&quot;&gt;
+                                &lt;span class=&quot;text-auroraCyan font-mono text-2xl font-bold opacity-70 group-hover:opacity-100 transition-all group-hover:text-glow-cyan&quot;&gt;01_&lt;/span&gt;
+                                &lt;h3 class=&quot;text-white font-bold text-lg uppercase tracking-wider leading-none group-hover:text-auroraCyan transition-colors&quot;&gt;Executive Summary&lt;/h3&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;tech-bar text-auroraCyan&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;group cursor-pointer&quot;&gt;
+                        &lt;div class=&quot;tech-item-container cyan&quot;&gt;
+                            &lt;div class=&quot;flex items-baseline gap-3 mb-1&quot;&gt;
+                                &lt;span class=&quot;text-auroraCyan font-mono text-2xl font-bold opacity-70 group-hover:opacity-100 transition-all group-hover:text-glow-cyan&quot;&gt;02_&lt;/span&gt;
+                                &lt;h3 class=&quot;text-white font-bold text-lg uppercase tracking-wider leading-none group-hover:text-auroraCyan transition-colors&quot;&gt;Market Analysis&lt;/h3&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;tech-bar text-auroraCyan&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;group cursor-pointer&quot;&gt;
+                        &lt;div class=&quot;tech-item-container cyan&quot;&gt;
+                            &lt;div class=&quot;flex items-baseline gap-3 mb-1&quot;&gt;
+                                &lt;span class=&quot;text-auroraCyan font-mono text-2xl font-bold opacity-70 group-hover:opacity-100 transition-all group-hover:text-glow-cyan&quot;&gt;03_&lt;/span&gt;
+                                &lt;h3 class=&quot;text-white font-bold text-lg uppercase tracking-wider leading-none group-hover:text-auroraCyan transition-colors&quot;&gt;Problem Statement&lt;/h3&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;tech-bar text-auroraCyan&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;group cursor-pointer&quot;&gt;
+                        &lt;div class=&quot;tech-item-container cyan&quot;&gt;
+                            &lt;div class=&quot;flex items-baseline gap-3 mb-1&quot;&gt;
+                                &lt;span class=&quot;text-auroraCyan font-mono text-2xl font-bold opacity-70 group-hover:opacity-100 transition-all group-hover:text-glow-cyan&quot;&gt;04_&lt;/span&gt;
+                                &lt;h3 class=&quot;text-white font-bold text-lg uppercase tracking-wider leading-none group-hover:text-auroraCyan transition-colors&quot;&gt;Core Solutions&lt;/h3&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;tech-bar text-auroraCyan&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;flex flex-col gap-6&quot;&gt;
+                    &lt;div class=&quot;group cursor-pointer&quot;&gt;
+                        &lt;div class=&quot;tech-item-container pink&quot;&gt;
+                            &lt;div class=&quot;flex items-baseline gap-3 mb-1&quot;&gt;
+                                &lt;span class=&quot;text-holoPink font-mono text-2xl font-bold opacity-70 group-hover:opacity-100 transition-all group-hover:text-glow-pink&quot;&gt;05_&lt;/span&gt;
+                                &lt;h3 class=&quot;text-white font-bold text-lg uppercase tracking-wider leading-none group-hover:text-holoPink transition-colors&quot;&gt;Product Demo&lt;/h3&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;tech-bar text-holoPink&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;group cursor-pointer&quot;&gt;
+                        &lt;div class=&quot;tech-item-container pink&quot;&gt;
+                            &lt;div class=&quot;flex items-baseline gap-3 mb-1&quot;&gt;
+                                &lt;span class=&quot;text-holoPink font-mono text-2xl font-bold opacity-70 group-hover:opacity-100 transition-all group-hover:text-glow-pink&quot;&gt;06_&lt;/span&gt;
+                                &lt;h3 class=&quot;text-white font-bold text-lg uppercase tracking-wider leading-none group-hover:text-holoPink transition-colors&quot;&gt;Tech Architecture&lt;/h3&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;tech-bar text-holoPink&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;group cursor-pointer&quot;&gt;
+                        &lt;div class=&quot;tech-item-container pink&quot;&gt;
+                            &lt;div class=&quot;flex items-baseline gap-3 mb-1&quot;&gt;
+                                &lt;span class=&quot;text-holoPink font-mono text-2xl font-bold opacity-70 group-hover:opacity-100 transition-all group-hover:text-glow-pink&quot;&gt;07_&lt;/span&gt;
+                                &lt;h3 class=&quot;text-white font-bold text-lg uppercase tracking-wider leading-none group-hover:text-holoPink transition-colors&quot;&gt;Business Model&lt;/h3&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;tech-bar text-holoPink&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;group cursor-pointer&quot;&gt;
+                        &lt;div class=&quot;tech-item-container pink&quot;&gt;
+                            &lt;div class=&quot;flex items-baseline gap-3 mb-1&quot;&gt;
+                                &lt;span class=&quot;text-holoPink font-mono text-2xl font-bold opacity-70 group-hover:opacity-100 transition-all group-hover:text-glow-pink&quot;&gt;08_&lt;/span&gt;
+                                &lt;h3 class=&quot;text-white font-bold text-lg uppercase tracking-wider leading-none group-hover:text-holoPink transition-colors&quot;&gt;Marketing Strategy&lt;/h3&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;tech-bar text-holoPink&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;flex flex-col gap-6&quot;&gt;
+                    &lt;div class=&quot;group cursor-pointer&quot;&gt;
+                        &lt;div class=&quot;tech-item-container purple&quot;&gt;
+                            &lt;div class=&quot;flex items-baseline gap-3 mb-1&quot;&gt;
+                                &lt;span class=&quot;text-cyberViolet font-mono text-2xl font-bold opacity-70 group-hover:opacity-100 transition-all group-hover:text-glow-purple&quot;&gt;09_&lt;/span&gt;
+                                &lt;h3 class=&quot;text-white font-bold text-lg uppercase tracking-wider leading-none group-hover:text-cyberViolet transition-colors&quot;&gt;Financial Plan&lt;/h3&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;tech-bar text-cyberViolet&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;group cursor-pointer&quot;&gt;
+                        &lt;div class=&quot;tech-item-container purple&quot;&gt;
+                            &lt;div class=&quot;flex items-baseline gap-3 mb-1&quot;&gt;
+                                &lt;span class=&quot;text-cyberViolet font-mono text-2xl font-bold opacity-70 group-hover:opacity-100 transition-all group-hover:text-glow-purple&quot;&gt;10_&lt;/span&gt;
+                                &lt;h3 class=&quot;text-white font-bold text-lg uppercase tracking-wider leading-none group-hover:text-cyberViolet transition-colors&quot;&gt;Risk Analysis&lt;/h3&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;tech-bar text-cyberViolet&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;group cursor-pointer&quot;&gt;
+                        &lt;div class=&quot;tech-item-container purple&quot;&gt;
+                            &lt;div class=&quot;flex items-baseline gap-3 mb-1&quot;&gt;
+                                &lt;span class=&quot;text-cyberViolet font-mono text-2xl font-bold opacity-70 group-hover:opacity-100 transition-all group-hover:text-glow-purple&quot;&gt;11_&lt;/span&gt;
+                                &lt;h3 class=&quot;text-white font-bold text-lg uppercase tracking-wider leading-none group-hover:text-cyberViolet transition-colors&quot;&gt;Team &amp; Partners&lt;/h3&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;tech-bar text-cyberViolet&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;group cursor-pointer&quot;&gt;
+                        &lt;div class=&quot;tech-item-container purple&quot;&gt;
+                            &lt;div class=&quot;flex items-baseline gap-3 mb-1&quot;&gt;
+                                &lt;span class=&quot;text-cyberViolet font-mono text-2xl font-bold opacity-70 group-hover:opacity-100 transition-all group-hover:text-glow-purple&quot;&gt;12_&lt;/span&gt;
+                                &lt;h3 class=&quot;text-white font-bold text-lg uppercase tracking-wider leading-none group-hover:text-cyberViolet transition-colors&quot;&gt;Future Roadmap&lt;/h3&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;tech-bar text-cyberViolet&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div style=&quot;position: absolute; bottom: 50px; left: 80px; z-index: 20;&quot;&gt;
+            &lt;div class=&quot;flex items-center gap-3&quot;&gt;
+                &lt;i class=&quot;fa-solid fa-microchip text-auroraCyan animate-pulse-slow&quot;&gt;&lt;/i&gt;
+                &lt;p style=&quot;color: #FFFFFF; font-size: 14px; letter-spacing: 2px; font-weight: 700;&quot;&gt;PAGE &lt;span style=&quot;color: #70F3FF;&quot;&gt;2 / 15&lt;/span&gt;&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-auroraCyan/50 to-transparent opacity-50&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute bottom-2 right-10 flex gap-2 opacity-30&quot;&gt;
+            &lt;div class=&quot;w-2 h-2 bg-holoPink rounded-full&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;w-2 h-2 bg-auroraCyan rounded-full&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;w-2 h-2 bg-cyberViolet rounded-full&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 3
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Introduction to Metaverse - Modified&lt;/title&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepSpace: '#05020D',
+                        darkVoid: '#140A26',
+                        cyberViolet: '#7A3E9C',
+                        holographicPink: '#FF99D6',
+                        auroraCyan: '#70F3FF',
+                        mistGrey: '#D1C7E0',
+                        glassPurple: 'rgba(58, 36, 89, 0.5)',
+                        deepIndigo: '#23153C',
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'],
+                        display: ['&quot;Noto Sans SC&quot;', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'neon': '0 0 20px rgba(122, 62, 156, 0.5), 0 0 60px rgba(112, 243, 255, 0.1)',
+                        'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
+                        'glow-text': '0 0 10px rgba(255, 255, 255, 0.5)',
+                    },
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .cyber-ring {
+            position: absolute;
+            border-radius: 50%;
+            border: 2px solid transparent;
+            background: linear-gradient(#140A26, #140A26) padding-box,
+                        linear-gradient(45deg, #70F3FF, #FF99D6, #7A3E9C) border-box;
+            box-shadow: 0 0 30px rgba(112, 243, 255, 0.2), inset 0 0 20px rgba(122, 62, 156, 0.2);
+            opacity: 0.9;
+        }
+        .glass-panel {
+            background: rgba(58, 36, 89, 0.4);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            border-left: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5), inset 0 0 0 1px rgba(255,255,255,0.05);
+        }
+        .text-box-glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+        ::-webkit-scrollbar { display: none; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot; class=&quot;w-[1280px] h-[720px] mx-auto relative overflow-hidden bg-deepSpace font-sans text-mistGrey selection:bg-holographicPink selection:text-deepSpace&quot;&gt;
+
+        &lt;div class=&quot;absolute top-[-20%] left-[-10%] w-[800px] h-[800px] rounded-full bg-darkVoid blur-[120px] opacity-80 z-0&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute bottom-[-30%] right-[-10%] w-[900px] h-[900px] rounded-full bg-cyberViolet blur-[150px] opacity-20 z-0&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute top-[20%] right-[10%] w-[400px] h-[400px] rounded-full bg-deepIndigo blur-[100px] opacity-60 z-0&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;cyber-ring w-[400px] h-[400px] left-[-100px] top-[150px] z-0 transform rotate-[60deg] skew-x-12 opacity-80&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;cyber-ring w-[500px] h-[500px] right-[-150px] bottom-[-100px] z-0 transform rotate-[-30deg] skew-y-6 opacity-60&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;cyber-ring w-[100px] h-[100px] right-[250px] top-[100px] z-0 blur-[2px] transform rotate-[15deg]&quot;&gt;&lt;/div&gt;
+
+        &lt;div style=&quot;position: absolute; top: 60px; left: 80px; z-index: 20; display: flex; align-items: center; opacity: 0.9;&quot;&gt;
+             &lt;div style=&quot;width: 40px; height: 40px; border: 2px solid #FF99D6; border-radius: 4px; display: flex; align-items: center; justify-content: center; transform: rotate(45deg); box-shadow: 0 0 15px rgba(255,153,214,0.4);&quot;&gt;
+                &lt;div style=&quot;width: 20px; height: 20px; background-color: rgba(112, 243, 255, 0.8); border-radius: 2px;&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div style=&quot;display: flex; flex-direction: column; justify-content: center; margin-left: 16px;&quot;&gt;
+                 &lt;h6 style=&quot;color: #FFFFFF; font-size: 12px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; line-height: 1; margin-bottom: 4px;&quot;&gt;Studio&lt;/h6&gt;
+                 &lt;h6 style=&quot;color: #D1C7E0; font-size: 12px; font-weight: 300; letter-spacing: 0.3em; text-transform: uppercase; line-height: 1;&quot;&gt;Shodwe&lt;/h6&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div style=&quot;position: absolute; bottom: 50px; left: 80px; z-index: 20;&quot;&gt;
+            &lt;p style=&quot;color: #FFFFFF; font-size: 14px; letter-spacing: 2px; margin-bottom: 4px; font-weight: 700;&quot;&gt;PAGE&lt;/p&gt;
+            &lt;p style=&quot;color: #70F3FF; font-size: 14px; letter-spacing: 1px;&quot;&gt;03 / 15&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;relative z-10 flex flex-col h-full justify-between p-16&quot;&gt;
+            
+            &lt;div class=&quot;h-10&quot;&gt;&lt;/div&gt; 
+
+            &lt;div class=&quot;flex flex-col items-center justify-center w-full max-w-6xl mx-auto flex-grow gap-10 mt-[-20px]&quot;&gt;
+
+                &lt;div class=&quot;glass-panel rounded-2xl px-16 py-6 relative group transform transition-transform duration-500 hover:scale-[1.02]&quot;&gt;
+                    &lt;div class=&quot;absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-holographicPink rounded-tl-lg&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-auroraCyan rounded-br-lg&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-transparent group-hover:border-white/20 transition-colors&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-transparent group-hover:border-white/20 transition-colors&quot;&gt;&lt;/div&gt;
+                    
+                    &lt;div class=&quot;absolute inset-0 bg-cyberViolet/20 blur-xl rounded-2xl -z-10&quot;&gt;&lt;/div&gt;
+
+                    &lt;h1 class=&quot;text-5xl font-black text-center text-white uppercase tracking-tighter drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] leading-tight&quot;&gt;
+                        Introduction to &lt;span class=&quot;text-transparent bg-clip-text bg-gradient-to-r from-auroraCyan to-holographicPink&quot;&gt;Metaverse&lt;/span&gt;
+                    &lt;/h1&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;w-full grid grid-cols-2 gap-10 relative&quot;&gt;
+                    &lt;div class=&quot;absolute left-[-20px] top-4 bottom-4 w-[2px] bg-gradient-to-b from-transparent via-mistGrey/20 to-transparent&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;absolute right-[-20px] top-4 bottom-4 w-[2px] bg-gradient-to-b from-transparent via-mistGrey/20 to-transparent&quot;&gt;&lt;/div&gt;
+
+                    &lt;div class=&quot;text-box-glass p-8 rounded-xl relative group hover:bg-white/5 transition-colors duration-300&quot;&gt;
+                        &lt;div class=&quot;absolute top-0 left-8 right-8 h-[1px] bg-gradient-to-r from-transparent via-holographicPink/50 to-transparent opacity-50&quot;&gt;&lt;/div&gt;
+                        
+                        &lt;h3 class=&quot;text-white text-lg font-bold mb-4 tracking-wider flex items-center gap-2&quot;&gt;
+                            &lt;span class=&quot;w-2 h-2 rounded-full bg-holographicPink shadow-[0_0_8px_#FF99D6]&quot;&gt;&lt;/span&gt;
+                            CONCEPT
+                        &lt;/h3&gt;
+                        &lt;p class=&quot;text-mistGrey text-base leading-relaxed font-light text-justify opacity-90&quot;&gt;
+                            The Metaverse is a collective virtual shared space, created by the convergence of virtually enhanced physical reality and physically persistent virtual space. It represents the next iteration of the internet, where users can interact with a computer-generated environment and other users.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;text-box-glass p-8 rounded-xl relative group hover:bg-white/5 transition-colors duration-300&quot;&gt;
+                        &lt;div class=&quot;absolute top-0 left-8 right-8 h-[1px] bg-gradient-to-r from-transparent via-auroraCyan/50 to-transparent opacity-50&quot;&gt;&lt;/div&gt;
+
+                        &lt;h3 class=&quot;text-white text-lg font-bold mb-4 tracking-wider flex items-center gap-2&quot;&gt;
+                            &lt;span class=&quot;w-2 h-2 rounded-full bg-auroraCyan shadow-[0_0_8px_#70F3FF]&quot;&gt;&lt;/span&gt;
+                            EVOLUTION
+                        &lt;/h3&gt;
+                        &lt;p class=&quot;text-mistGrey text-base leading-relaxed font-light text-justify opacity-90&quot;&gt;
+                             Rhcus est pellentesque elit ullamcorper dignissim cras tincidunt lobortis. Et molestie ac feugiat sed lectus vestibulum mattis. Diam in arcu cursus euismod quis viverra nibh cras pulvinar. Maecenas ultricies mi eget mauris. Sed elementum tempus egestas sed.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+
+            &lt;div class=&quot;flex items-end justify-end w-full opacity-80&quot;&gt;
+                &lt;div class=&quot;group cursor-pointer&quot;&gt;
+                    &lt;div class=&quot;w-14 h-14 rounded-full border border-mistGrey/30 flex items-center justify-center relative overflow-hidden transition-all duration-300 group-hover:border-holographicPink group-hover:shadow-[0_0_20px_rgba(255,153,214,0.4)] bg-darkVoid/50 backdrop-blur-sm&quot;&gt;
+                        &lt;div class=&quot;absolute inset-0 bg-cyberViolet/50 transform scale-0 group-hover:scale-100 transition-transform duration-300 rounded-full origin-center&quot;&gt;&lt;/div&gt;
+                        
+                        &lt;i class=&quot;fa-solid fa-arrow-right text-white text-xl relative z-10 transform group-hover:translate-x-1 transition-transform&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+        
+        &lt;div class=&quot;absolute inset-0 pointer-events-none z-20 opacity-[0.03]&quot; style=&quot;background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06)); background-size: 100% 2px, 3px 100%;&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 4
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Current Trends - Cyberpunk Keynote Modified&lt;/title&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepSpace: '#05020D',
+                        darkVoid: '#140A26',
+                        cyberViolet: '#7A3E9C',
+                        holographicPink: '#FF99D6',
+                        auroraCyan: '#70F3FF',
+                        mistGrey: '#D1C7E0',
+                        glassyPurple: 'rgba(58, 36, 89, 0.6)',
+                        deepIndigo: '#23153C',
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #05020D;
+            overflow: hidden;
+        }
+        ::-webkit-scrollbar { display: none; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;div class=&quot;absolute top-[-100px] left-[-100px] w-[600px] h-[600px] rounded-full bg-[#140A26] blur-[100px] opacity-80 z-0&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute bottom-[-150px] left-[30%] w-[500px] h-[500px] rounded-full bg-[#7A3E9C] blur-[120px] opacity-30 z-0&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute top-[-50px] right-[-50px] w-[400px] h-[400px] rounded-full bg-[#70F3FF] blur-[150px] opacity-10 z-0&quot;&gt;&lt;/div&gt;
+
+
+        &lt;div style=&quot;position: absolute; top: 60px; left: 80px; z-index: 20; display: flex; align-items: center; opacity: 0.9;&quot;&gt;
+             &lt;div style=&quot;width: 40px; height: 40px; border: 2px solid #FF99D6; border-radius: 4px; display: flex; align-items: center; justify-content: center; transform: rotate(45deg); box-shadow: 0 0 15px rgba(255,153,214,0.4);&quot;&gt;
+                &lt;div style=&quot;width: 20px; height: 20px; background-color: rgba(112, 243, 255, 0.8); border-radius: 2px;&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div style=&quot;display: flex; flex-direction: column; justify-content: center; margin-left: 16px;&quot;&gt;
+                 &lt;h6 style=&quot;color: #FFFFFF; font-size: 12px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; line-height: 1; margin-bottom: 4px;&quot;&gt;Studio&lt;/h6&gt;
+                 &lt;h6 style=&quot;color: #D1C7E0; font-size: 12px; font-weight: 300; letter-spacing: 0.3em; text-transform: uppercase; line-height: 1;&quot;&gt;Shodwe&lt;/h6&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;relative z-20 w-full h-full flex flex-row&quot;&gt;
+            
+            &lt;div class=&quot;w-[38%] h-full flex flex-col justify-center pl-[80px] pr-[20px] relative&quot;&gt;
+                
+                &lt;div class=&quot;relative mt-[-40px]&quot;&gt;
+                    &lt;div class=&quot;w-[60px] h-[4px] bg-gradient-to-r from-holographicPink to-cyberViolet mb-6 rounded-full&quot;&gt;&lt;/div&gt;
+                    
+                    &lt;h1 class=&quot;text-white text-[92px] leading-[0.85] font-[900] uppercase tracking-tighter drop-shadow-2xl&quot;&gt;
+                        Current
+                    &lt;/h1&gt;
+                    &lt;h1 class=&quot;text-transparent bg-clip-text bg-gradient-to-br from-white via-mistGrey to-auroraCyan text-[96px] leading-[0.85] font-[900] uppercase tracking-tighter&quot;&gt;
+                        Trends
+                    &lt;/h1&gt;
+                &lt;/div&gt;
+
+                &lt;/div&gt;
+
+            &lt;div class=&quot;w-[60%] h-full flex items-center justify-center pr-[60px]&quot;&gt;
+                
+                &lt;div class=&quot;relative w-full max-w-[760px] p-[2px] rounded-[24px] bg-gradient-to-br from-holographicPink via-transparent to-auroraCyan shadow-[0_0_40px_rgba(122,62,156,0.2)]&quot;&gt;
+                    
+                    &lt;div class=&quot;w-full h-full bg-[#080414] rounded-[22px] p-[30px] flex gap-[20px] backdrop-blur-sm&quot;&gt;
+                        
+                        &lt;div class=&quot;flex-1 flex flex-col rounded-[12px] overflow-hidden group hover:translate-y-[-5px] transition-transform duration-300&quot;&gt;
+                            &lt;div class=&quot;h-[100px] bg-gradient-to-b from-cyberViolet to-[#2A1B45] p-5 flex items-center justify-center text-center relative overflow-hidden&quot;&gt;
+                                &lt;div class=&quot;absolute top-0 left-0 w-full h-[1px] bg-white opacity-20&quot;&gt;&lt;/div&gt;
+                                &lt;h3 class=&quot;text-white font-bold text-[18px] leading-tight&quot;&gt;
+                                    Growth in User&lt;br&gt;Engagement
+                                &lt;/h3&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;flex-1 bg-deepIndigo p-5 pt-6 border-t border-[#ffffff10]&quot;&gt;
+                                &lt;p class=&quot;text-mistGrey text-[13px] leading-[1.6] font-light text-justify&quot;&gt;
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class=&quot;flex-1 flex flex-col rounded-[12px] overflow-hidden group hover:translate-y-[-5px] transition-transform duration-300 delay-75&quot;&gt;
+                            &lt;div class=&quot;h-[100px] bg-gradient-to-b from-cyberViolet to-[#2A1B45] p-5 flex items-center justify-center text-center relative overflow-hidden&quot;&gt;
+                                &lt;div class=&quot;absolute top-0 left-0 w-full h-[1px] bg-white opacity-20&quot;&gt;&lt;/div&gt;
+                                &lt;h3 class=&quot;text-white font-bold text-[18px] leading-tight&quot;&gt;
+                                    Major Companies&lt;br&gt;Investing
+                                &lt;/h3&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;flex-1 bg-deepIndigo p-5 pt-6 border-t border-[#ffffff10]&quot;&gt;
+                                &lt;p class=&quot;text-mistGrey text-[13px] leading-[1.6] font-light text-justify&quot;&gt;
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class=&quot;flex-1 flex flex-col rounded-[12px] overflow-hidden group hover:translate-y-[-5px] transition-transform duration-300 delay-150&quot;&gt;
+                            &lt;div class=&quot;h-[100px] bg-gradient-to-b from-cyberViolet to-[#2A1B45] p-5 flex items-center justify-center text-center relative overflow-hidden&quot;&gt;
+                                &lt;div class=&quot;absolute top-0 left-0 w-full h-[1px] bg-white opacity-20&quot;&gt;&lt;/div&gt;
+                                &lt;h3 class=&quot;text-white font-bold text-[18px] leading-tight&quot;&gt;
+                                    Increasing&lt;br&gt;Virtual Events
+                                &lt;/h3&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;flex-1 bg-deepIndigo p-5 pt-6 border-t border-[#ffffff10]&quot;&gt;
+                                &lt;p class=&quot;text-mistGrey text-[13px] leading-[1.6] font-light text-justify&quot;&gt;
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+            
+        &lt;/div&gt;
+
+        &lt;div style=&quot;position: absolute; bottom: 50px; left: 80px; z-index: 20;&quot;&gt;
+            &lt;p style=&quot;color: #FFFFFF; font-size: 14px; letter-spacing: 2px; margin-bottom: 4px; font-weight: 700;&quot;&gt;PAGE&lt;/p&gt;
+            &lt;p style=&quot;color: #70F3FF; font-size: 14px; letter-spacing: 1px;&quot;&gt;04 / 15&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute bottom-[60px] right-[60px] z-30&quot;&gt;
+            &lt;div class=&quot;w-[50px] h-[50px] rounded-full border-[2px] border-white flex items-center justify-center text-white hover:bg-white hover:text-deepSpace transition-colors duration-300 cursor-pointer&quot;&gt;
+                &lt;i class=&quot;fa-solid fa-arrow-right text-lg&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 5
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Company Opportunities - Modified&lt;/title&gt;
+    
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans SC', sans-serif; -webkit-font-smoothing: antialiased; }
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative;
+            background-color: #05020D; overflow: hidden;
+        }
+        .bg-gradient-card-title { background: linear-gradient(135deg, rgba(122, 62, 156, 0.9), rgba(35, 21, 60, 0.8)); }
+        .bg-glassy { background-color: rgba(58, 36, 89, 0.4); }
+        .orb-glow { position: absolute; border-radius: 50%; filter: blur(80px); z-index: 0; }
+        ::-webkit-scrollbar { display: none; }
+    &lt;/style&gt;
+    
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBlack: '#05020D',
+                        voidPurple: '#140A26',
+                        cyberViolet: '#7A3E9C',
+                        holographicPink: '#FF99D6',
+                        auroraCyan: '#70F3FF',
+                        mistGrey: '#D1C7E0',
+                        glassPurple: '#3A2459',
+                    },
+                    boxShadow: {
+                        'neon': '0 0 15px rgba(112, 243, 255, 0.3)',
+                        'card': '0 4px 30px rgba(0, 0, 0, 0.5)',
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;div style=&quot;position: absolute; top: 60px; left: 80px; z-index: 50; display: flex; align-items: center; opacity: 0.9;&quot;&gt;
+             &lt;div style=&quot;width: 40px; height: 40px; border: 2px solid #FF99D6; border-radius: 4px; display: flex; align-items: center; justify-content: center; transform: rotate(45deg); box-shadow: 0 0 15px rgba(255,153,214,0.4);&quot;&gt;
+                &lt;div style=&quot;width: 20px; height: 20px; background-color: rgba(112, 243, 255, 0.8); border-radius: 2px;&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div style=&quot;display: flex; flex-direction: column; justify-content: center; margin-left: 16px;&quot;&gt;
+                 &lt;h6 style=&quot;color: #FFFFFF; font-size: 12px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; line-height: 1; margin-bottom: 4px;&quot;&gt;Studio&lt;/h6&gt;
+                 &lt;h6 style=&quot;color: #D1C7E0; font-size: 12px; font-weight: 300; letter-spacing: 0.3em; text-transform: uppercase; line-height: 1;&quot;&gt;Shodwe&lt;/h6&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;orb-glow&quot; style=&quot;width: 600px; height: 600px; left: -100px; top: -200px; background: radial-gradient(circle, #2e1065 0%, transparent 70%);&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;orb-glow&quot; style=&quot;width: 500px; height: 500px; right: -100px; bottom: -150px; background: radial-gradient(circle, #140A26 0%, transparent 70%);&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;relative z-10 grid grid-cols-12 h-full w-full pl-16 pr-16 pt-12 pb-10 gap-8&quot;&gt;
+
+            &lt;div class=&quot;col-span-5 flex flex-col justify-between h-full&quot;&gt;
+                
+                &lt;div class=&quot;h-[60px]&quot;&gt;&lt;/div&gt;
+
+                &lt;div class=&quot;mb-4 mt-8&quot;&gt;
+                    &lt;h1 class=&quot;text-6xl font-black text-white leading-[0.9] tracking-tight uppercase&quot; style=&quot;text-shadow: 0 0 20px rgba(122, 62, 156, 0.5);&quot;&gt;
+                        Company&lt;br&gt;
+                        &lt;span class=&quot;text-transparent bg-clip-text bg-gradient-to-r from-white to-mistGrey&quot;&gt;Opportunities&lt;/span&gt;
+                    &lt;/h1&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;relative w-full flex-grow flex items-end pb-4&quot;&gt;
+                    &lt;div class=&quot;absolute inset-0 bg-cyberViolet opacity-20 blur-2xl rounded-full transform translate-y-10 scale-75&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;relative w-[420px] h-[300px] border-4 border-gray-800 rounded-[2rem] overflow-hidden shadow-2xl bg-black ml-4 ring-1 ring-white/20&quot;&gt;
+                        &lt;div class=&quot;absolute top-0 left-1/2 transform -translate-x-1/2 w-1/3 h-6 bg-gray-800 rounded-b-xl z-20&quot;&gt;&lt;/div&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1622979135225-d2ba269fb1ac?q=80&amp;w=600&amp;auto=format&amp;fit=crop&quot; 
+                             alt=&quot;VR Experience&quot; 
+                             class=&quot;w-full h-full object-cover opacity-90 mix-blend-screen&quot;&gt;
+                        &lt;div class=&quot;absolute inset-0 bg-gradient-to-t from-cyberViolet/50 to-transparent pointer-events-none&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;h-[40px]&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;col-span-7 flex flex-col justify-center h-full pl-8 relative&quot;&gt;
+                
+                &lt;div class=&quot;absolute left-8 top-20 bottom-20 w-[2px] bg-gradient-to-b from-transparent via-gray-700 to-transparent&quot;&gt;&lt;/div&gt;
+
+                &lt;ul class=&quot;space-y-10 w-full relative z-10&quot;&gt;
+                    &lt;li class=&quot;flex group&quot;&gt;
+                        &lt;div class=&quot;mr-8 relative mt-6&quot;&gt;
+                            &lt;div class=&quot;w-4 h-4 rounded-full bg-deepBlack border-2 border-white group-hover:border-holographicPink transition-colors z-20 relative shadow-[0_0_10px_rgba(255,255,255,0.5)]&quot;&gt;&lt;/div&gt;
+                            &lt;div class=&quot;absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-cyberViolet opacity-30 rounded-full blur-md&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;flex flex-row items-stretch w-full&quot;&gt;
+                            &lt;div class=&quot;w-48 bg-gradient-card-title p-5 flex items-center justify-center rounded-l-lg border-l-4 border-holographicPink shadow-card&quot;&gt;
+                                &lt;h3 class=&quot;text-white font-bold text-lg leading-tight&quot;&gt;New&lt;br&gt;business&lt;br&gt;models&lt;/h3&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;flex-1 bg-glassy p-5 rounded-r-lg border-t border-r border-b border-white/10 flex items-center&quot;&gt;
+                                &lt;p class=&quot;text-mistGrey text-sm leading-relaxed&quot;&gt;
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/li&gt;
+
+                    &lt;li class=&quot;flex group&quot;&gt;
+                        &lt;div class=&quot;mr-8 relative mt-6&quot;&gt;
+                            &lt;div class=&quot;w-4 h-4 rounded-full bg-deepBlack border-2 border-white z-20 relative shadow-[0_0_10px_rgba(255,255,255,0.5)]&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;flex flex-row items-stretch w-full&quot;&gt;
+                            &lt;div class=&quot;w-48 bg-gradient-to-br from-[#2e1a47] to-[#1a102e] p-5 flex items-center justify-center rounded-l-lg border-l-4 border-auroraCyan shadow-card&quot;&gt;
+                                &lt;h3 class=&quot;text-white font-bold text-lg leading-tight&quot;&gt;Enhanced&lt;br&gt;Social&lt;br&gt;Interactions&lt;/h3&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;flex-1 bg-glassy p-5 rounded-r-lg border-t border-r border-b border-white/10 flex items-center&quot;&gt;
+                                &lt;p class=&quot;text-mistGrey text-sm leading-relaxed&quot;&gt;
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/li&gt;
+
+                    &lt;li class=&quot;flex group&quot;&gt;
+                        &lt;div class=&quot;mr-8 relative mt-6&quot;&gt;
+                            &lt;div class=&quot;w-4 h-4 rounded-full bg-deepBlack border-2 border-white z-20 relative shadow-[0_0_10px_rgba(255,255,255,0.5)]&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;flex flex-row items-stretch w-full&quot;&gt;
+                            &lt;div class=&quot;w-48 bg-gradient-to-br from-[#2e1a47] to-[#1a102e] p-5 flex items-center justify-center rounded-l-lg border-l-4 border-cyberViolet shadow-card&quot;&gt;
+                                &lt;h3 class=&quot;text-white font-bold text-lg leading-tight&quot;&gt;Innovative&lt;br&gt;Marketing&lt;br&gt;Strategies&lt;/h3&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;flex-1 bg-glassy p-5 rounded-r-lg border-t border-r border-b border-white/10 flex items-center&quot;&gt;
+                                &lt;p class=&quot;text-mistGrey text-sm leading-relaxed&quot;&gt;
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+
+                &lt;div class=&quot;absolute bottom-0 right-0&quot;&gt;
+                    &lt;div class=&quot;w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white text-xl shadow-neon&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-arrow-right&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div style=&quot;position: absolute; bottom: 50px; left: 80px; z-index: 20;&quot;&gt;
+            &lt;p style=&quot;color: #FFFFFF; font-size: 14px; letter-spacing: 2px; margin-bottom: 4px; font-weight: 700;&quot;&gt;PAGE&lt;/p&gt;
+            &lt;p style=&quot;color: #70F3FF; font-size: 14px; letter-spacing: 1px;&quot;&gt;05 / 15&lt;/p&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 6
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Challenges - Text Boxes&lt;/title&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepSpace: '#05020D',
+                        darkVoid: '#140A26',
+                        cyberViolet: '#7A3E9C',
+                        holographicPink: '#FF99D6',
+                        auroraCyan: '#70F3FF',
+                        mistGrey: '#D1C7E0',
+                        deepIndigo: '#23153C'
+                    },
+                    fontFamily: { sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'] }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px; position: relative; background-color: #05020D;
+            overflow: hidden; margin: 0 auto;
+        }
+        ::-webkit-scrollbar { display: none; }
+        .ring-shape { position: absolute; border-radius: 50%; border: 25px solid; box-shadow: 0 0 30px rgba(122, 62, 156, 0.5), inset 0 0 20px rgba(122, 62, 156, 0.5); }
+        .ring-1 { width: 200px; height: 200px; border-color: #70F3FF; border-right-color: #FF99D6; transform: rotateX(60deg) rotateY(-20deg); filter: blur(1px); }
+        .ring-2 { width: 300px; height: 300px; border-color: #7A3E9C; border-top-color: #FF99D6; transform: rotateX(45deg) rotateY(45deg); filter: blur(2px); }
+        .bg-orb { position: absolute; border-radius: 50%; filter: blur(80px); z-index: 0; }
+        
+        /* 文本框悬停微动效 */
+        .tech-box { transition: all 0.3s ease; }
+        .tech-box:hover { background-color: rgba(35, 21, 60, 0.6); border-color: rgba(122, 62, 156, 0.6); transform: translateX(-5px); }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+
+        &lt;div style=&quot;position: absolute; top: 60px; left: 80px; z-index: 50; display: flex; align-items: center; opacity: 0.9;&quot;&gt;
+             &lt;div style=&quot;width: 40px; height: 40px; border: 2px solid #FF99D6; border-radius: 4px; display: flex; align-items: center; justify-content: center; transform: rotate(45deg); box-shadow: 0 0 15px rgba(255,153,214,0.4);&quot;&gt;
+                &lt;div style=&quot;width: 20px; height: 20px; background-color: rgba(112, 243, 255, 0.8); border-radius: 2px;&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div style=&quot;display: flex; flex-direction: column; justify-content: center; margin-left: 16px;&quot;&gt;
+                 &lt;h6 style=&quot;color: #FFFFFF; font-size: 12px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; line-height: 1; margin-bottom: 4px;&quot;&gt;Studio&lt;/h6&gt;
+                 &lt;h6 style=&quot;color: #D1C7E0; font-size: 12px; font-weight: 300; letter-spacing: 0.3em; text-transform: uppercase; line-height: 1;&quot;&gt;Shodwe&lt;/h6&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;bg-orb w-[600px] h-[600px] bg-cyberViolet/20 -top-[200px] -right-[100px]&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;bg-orb w-[500px] h-[500px] bg-darkVoid/80 -bottom-[100px] -left-[100px]&quot;&gt;&lt;/div&gt;
+        
+        &lt;div class=&quot;ring-shape ring-2 absolute -top-10 -right-10 opacity-80 z-10&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;ring-shape ring-1 absolute bottom-20 -left-10 opacity-80 z-10&quot;&gt;&lt;/div&gt;
+
+
+        &lt;div class=&quot;relative z-20 w-full h-full flex flex-row items-center px-16 pt-10&quot;&gt;
+            
+            &lt;div class=&quot;w-[55%] h-[400px] relative pr-12&quot;&gt;
+                &lt;div class=&quot;relative w-full h-full p-1 group&quot;&gt;
+                    &lt;div class=&quot;absolute -top-4 left-0 w-full h-6 flex justify-between items-end&quot;&gt;
+                        &lt;div class=&quot;w-[30%] h-[2px] bg-cyberViolet&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;w-[40%] h-[4px] bg-gradient-to-r from-cyberViolet via-holographicPink to-auroraCyan rounded-t-sm&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;w-[30%] h-[2px] bg-cyberViolet&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;w-full h-full relative overflow-hidden bg-darkVoid border-l-2 border-r-2 border-cyberViolet/30&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1617802690992-15d93263d3a9?q=80&amp;w=1280&amp;auto=format&amp;fit=crop&quot; 
+                             alt=&quot;VR Experience&quot; 
+                             class=&quot;w-full h-full object-cover opacity-90 mix-blend-lighten contrast-125&quot;&gt;
+                        &lt;div class=&quot;absolute inset-0 bg-gradient-to-t from-deepSpace via-transparent to-transparent opacity-60&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;absolute -bottom-4 left-0 w-full h-8 flex justify-between items-start&quot;&gt;
+                        &lt;div class=&quot;w-[15%] h-[2px] bg-holographicPink&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;w-[60%] h-full relative&quot;&gt;
+                            &lt;div class=&quot;absolute top-0 left-0 w-full h-[4px] bg-gradient-to-r from-holographicPink to-cyberViolet&quot;&gt;&lt;/div&gt;
+                            &lt;div class=&quot;absolute top-2 right-4 flex gap-1&quot;&gt;
+                                &lt;div class=&quot;w-8 h-1 bg-mistGrey/20 -skew-x-12&quot;&gt;&lt;/div&gt;
+                                &lt;div class=&quot;w-8 h-1 bg-mistGrey/20 -skew-x-12&quot;&gt;&lt;/div&gt;
+                                &lt;div class=&quot;w-8 h-1 bg-mistGrey/20 -skew-x-12&quot;&gt;&lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;w-[15%] h-[2px] bg-cyberViolet&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-white&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-auroraCyan&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;w-[45%] flex flex-col justify-center pl-4 relative&quot;&gt;
+                &lt;div class=&quot;absolute -left-10 top-1/2 -translate-y-1/2 w-full h-[300px] bg-darkVoid/50 blur-3xl -z-10 rounded-full&quot;&gt;&lt;/div&gt;
+                
+                &lt;h1 class=&quot;text-white text-7xl font-black uppercase tracking-tight mb-6 leading-none drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]&quot;&gt;
+                    CHALLENGES
+                &lt;/h1&gt;
+
+                &lt;div class=&quot;flex flex-col gap-5 w-full pr-8&quot;&gt;
+                    
+                    &lt;div class=&quot;tech-box relative p-5 bg-deepIndigo/30 border border-cyberViolet/20 backdrop-blur-sm&quot;&gt;
+                        &lt;div class=&quot;absolute top-0 left-0 w-1 h-full bg-holographicPink shadow-[0_0_10px_rgba(255,153,214,0.5)]&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;absolute top-0 right-0 w-3 h-3 border-t border-r border-holographicPink/50&quot;&gt;&lt;/div&gt;
+                        
+                        &lt;h3 class=&quot;text-holographicPink font-bold text-lg mb-2 tracking-wider flex items-center&quot;&gt;
+                            &lt;span class=&quot;text-xs opacity-60 mr-2&quot;&gt;01.&lt;/span&gt; ANALYSIS
+                        &lt;/h3&gt;
+                        &lt;p class=&quot;text-mistGrey text-sm leading-relaxed font-light text-justify opacity-90&quot;&gt;
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;tech-box relative p-5 bg-deepIndigo/30 border border-cyberViolet/20 backdrop-blur-sm&quot;&gt;
+                        &lt;div class=&quot;absolute top-0 left-0 w-1 h-full bg-auroraCyan shadow-[0_0_10px_rgba(112,243,255,0.5)]&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;absolute bottom-0 right-0 w-3 h-3 border-b border-r border-auroraCyan/50&quot;&gt;&lt;/div&gt;
+
+                        &lt;h3 class=&quot;text-auroraCyan font-bold text-lg mb-2 tracking-wider flex items-center&quot;&gt;
+                            &lt;span class=&quot;text-xs opacity-60 mr-2&quot;&gt;02.&lt;/span&gt; STRATEGY
+                        &lt;/h3&gt;
+                        &lt;p class=&quot;text-mistGrey text-sm leading-relaxed font-light text-justify opacity-90&quot;&gt;
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute bottom-10 right-12 z-30&quot;&gt;
+            &lt;div class=&quot;w-12 h-12 rounded-full border border-mistGrey/30 flex items-center justify-center hover:bg-white/10 transition-colors duration-300 group cursor-pointer&quot;&gt;
+                &lt;i class=&quot;fa-solid fa-arrow-right text-white text-xl group-hover:translate-x-1 transition-transform&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div style=&quot;position: absolute; bottom: 50px; left: 80px; z-index: 20;&quot;&gt;
+            &lt;p style=&quot;color: #FFFFFF; font-size: 14px; letter-spacing: 2px; margin-bottom: 4px; font-weight: 700;&quot;&gt;PAGE&lt;/p&gt;
+            &lt;p style=&quot;color: #70F3FF; font-size: 14px; letter-spacing: 1px;&quot;&gt;06 / 15&lt;/p&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 7
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Our Vision - Modified&lt;/title&gt;
+    
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px; position: relative; background-color: #05020D;
+            overflow: hidden; margin: 0 auto;
+        }
+        .text-glow { text-shadow: 0 0 20px rgba(255, 255, 255, 0.3); }
+        .neon-bar {
+            box-shadow: 0 4px 15px rgba(122, 62, 156, 0.2);
+            backdrop-filter: blur(5px);
+            background: linear-gradient(90deg, rgba(35, 21, 60, 0.8) 0%, rgba(122, 62, 156, 0.3) 100%);
+        }
+    &lt;/style&gt;
+    
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBlack: '#05020D',
+                        voidPurple: '#140A26',
+                        cyberViolet: '#7A3E9C',
+                        holoPink: '#FF99D6',
+                        auroraCyan: '#70F3FF',
+                        mistGrey: '#D1C7E0',
+                        glassPurple: 'rgba(58, 36, 89, 0.5)'
+                    },
+                    fontFamily: { sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'] }
+                }
+            }
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+
+        &lt;div style=&quot;position: absolute; top: 60px; left: 80px; z-index: 50; display: flex; align-items: center; opacity: 0.9;&quot;&gt;
+             &lt;div style=&quot;width: 40px; height: 40px; border: 2px solid #FF99D6; border-radius: 4px; display: flex; align-items: center; justify-content: center; transform: rotate(45deg); box-shadow: 0 0 15px rgba(255,153,214,0.4);&quot;&gt;
+                &lt;div style=&quot;width: 20px; height: 20px; background-color: rgba(112, 243, 255, 0.8); border-radius: 2px;&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div style=&quot;display: flex; flex-direction: column; justify-content: center; margin-left: 16px;&quot;&gt;
+                 &lt;h6 style=&quot;color: #FFFFFF; font-size: 12px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; line-height: 1; margin-bottom: 4px;&quot;&gt;Studio&lt;/h6&gt;
+                 &lt;h6 style=&quot;color: #D1C7E0; font-size: 12px; font-weight: 300; letter-spacing: 0.3em; text-transform: uppercase; line-height: 1;&quot;&gt;Shodwe&lt;/h6&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute top-[-100px] left-[-100px] w-[600px] h-[600px] rounded-full opacity-20&quot;
+             style=&quot;background: radial-gradient(circle, #3A2459 0%, transparent 70%); filter: blur(80px);&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute bottom-[-50px] left-[30%] w-[500px] h-[400px] rounded-full opacity-15&quot;
+             style=&quot;background: radial-gradient(circle, #7A3E9C 0%, transparent 70%); filter: blur(60px);&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute top-[50px] right-[100px] w-[200px] h-[200px] rounded-full opacity-10&quot;
+             style=&quot;background: radial-gradient(circle, #70F3FF 0%, transparent 70%); filter: blur(40px);&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;relative z-10 w-full h-full grid grid-cols-12 gap-0 p-16&quot;&gt;
+
+            &lt;div class=&quot;col-span-4 flex flex-col justify-center h-full pr-8&quot;&gt;
+                &lt;div class=&quot;flex flex-col justify-center mt-10&quot;&gt;
+                    &lt;h1 class=&quot;text-white text-[7rem] leading-[0.85] font-black uppercase tracking-tighter text-glow&quot; style=&quot;font-style: italic;&quot;&gt;
+                        OUR&lt;br&gt;
+                    &lt;/h1&gt;
+                    &lt;div class=&quot;w-20 h-1 bg-gradient-to-r from-auroraCyan to-transparent mt-8 ml-2&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;/div&gt;
+
+            &lt;div class=&quot;col-span-8 relative flex flex-col justify-center pl-16 pr-8&quot;&gt;
+                
+                &lt;div class=&quot;w-full max-w-3xl flex flex-col gap-8 z-20&quot;&gt;
+                    
+                    &lt;div class=&quot;relative group&quot;&gt;
+                        &lt;div class=&quot;py-3 px-8 rounded-r-full w-full mb-3 neon-bar transform transition-all duration-300 group-hover:translate-x-2 border-l-[4px] border-auroraCyan&quot;&gt;
+                            &lt;h2 class=&quot;text-white font-bold text-xl tracking-wide flex items-center gap-3&quot;&gt;
+                                &lt;span class=&quot;text-auroraCyan text-sm&quot;&gt;01.&lt;/span&gt; Seamless Digital Experiences
+                            &lt;/h2&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;pl-8 pr-4&quot;&gt;
+                            &lt;p class=&quot;text-mistGrey text-base leading-relaxed font-light opacity-80 group-hover:opacity-100 transition-opacity&quot;&gt;
+                                Leveraging cutting-edge rendering to create immersive environments where physical and digital realities converge effortlessly for every user.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;relative group&quot;&gt;
+                        &lt;div class=&quot;py-3 px-8 rounded-r-full w-full mb-3 neon-bar transform transition-all duration-300 group-hover:translate-x-2 border-l-[4px] border-holoPink&quot;&gt;
+                            &lt;h2 class=&quot;text-white font-bold text-xl tracking-wide flex items-center gap-3&quot;&gt;
+                                &lt;span class=&quot;text-holoPink text-sm&quot;&gt;02.&lt;/span&gt; Safe and Secure Environments
+                            &lt;/h2&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;pl-8 pr-4&quot;&gt;
+                            &lt;p class=&quot;text-mistGrey text-base leading-relaxed font-light opacity-80 group-hover:opacity-100 transition-opacity&quot;&gt;
+                                Prioritizing user data protection and community integrity through decentralized governance and robust security protocols.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;relative group&quot;&gt;
+                        &lt;div class=&quot;py-3 px-8 rounded-r-full w-full mb-3 neon-bar transform transition-all duration-300 group-hover:translate-x-2 border-l-[4px] border-cyberViolet&quot;&gt;
+                            &lt;h2 class=&quot;text-white font-bold text-xl tracking-wide flex items-center gap-3&quot;&gt;
+                                &lt;span class=&quot;text-cyberViolet text-sm&quot;&gt;03.&lt;/span&gt; Infinite Scalability
+                            &lt;/h2&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;pl-8 pr-4&quot;&gt;
+                            &lt;p class=&quot;text-mistGrey text-base leading-relaxed font-light opacity-80 group-hover:opacity-100 transition-opacity&quot;&gt;
+                                Building an infrastructure designed to grow indefinitely, supporting millions of concurrent users without compromising performance.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+
+                &lt;div class=&quot;absolute bottom-0 right-0 p-4&quot;&gt;
+                    &lt;div class=&quot;w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-cyberViolet hover:border-cyberViolet transition-all duration-300 cursor-pointer shadow-[0_0_15px_rgba(122,62,156,0.3)]&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-arrow-right&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div style=&quot;position: absolute; bottom: 50px; left: 80px; z-index: 20;&quot;&gt;
+            &lt;p style=&quot;color: #FFFFFF; font-size: 14px; letter-spacing: 2px; margin-bottom: 4px; font-weight: 700;&quot;&gt;PAGE&lt;/p&gt;
+            &lt;p style=&quot;color: #70F3FF; font-size: 14px; letter-spacing: 1px;&quot;&gt;07 / 15&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-deepBlack via-cyberViolet to-deepBlack opacity-50&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 8
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Key Technologies - Modified&lt;/title&gt;
+    
+    &lt;link href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepSpace: '#05020D',
+                        voidPurple: '#140A26',
+                        cyberViolet: '#7A3E9C',
+                        holoPink: '#FF99D6',
+                        auroraCyan: '#70F3FF',
+                        mistGrey: '#D1C7E0',
+                        pureWhite: '#FFFFFF'
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'neon': '0 0 20px rgba(122, 62, 156, 0.4)',
+                        'glow': '0 0 15px rgba(112, 243, 255, 0.3)'
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        ::-webkit-scrollbar { display: none; }
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative;
+            background-color: #05020D; overflow: hidden; font-family: 'Noto Sans SC', sans-serif;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+
+        &lt;div style=&quot;position: absolute; top: 60px; left: 80px; z-index: 50; display: flex; align-items: center; opacity: 0.9;&quot;&gt;
+             &lt;div style=&quot;width: 40px; height: 40px; border: 2px solid #FF99D6; border-radius: 4px; display: flex; align-items: center; justify-content: center; transform: rotate(45deg); box-shadow: 0 0 15px rgba(255,153,214,0.4);&quot;&gt;
+                &lt;div style=&quot;width: 20px; height: 20px; background-color: rgba(112, 243, 255, 0.8); border-radius: 2px;&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div style=&quot;display: flex; flex-direction: column; justify-content: center; margin-left: 16px;&quot;&gt;
+                 &lt;h6 style=&quot;color: #FFFFFF; font-size: 12px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; line-height: 1; margin-bottom: 4px;&quot;&gt;Studio&lt;/h6&gt;
+                 &lt;h6 style=&quot;color: #D1C7E0; font-size: 12px; font-weight: 300; letter-spacing: 0.3em; text-transform: uppercase; line-height: 1;&quot;&gt;Shodwe&lt;/h6&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute inset-0 z-0 pointer-events-none&quot;&gt;
+            &lt;div class=&quot;absolute top-[-150px] left-[-150px] w-[800px] h-[800px] rounded-full opacity-40 blur-[100px]&quot; style=&quot;background: linear-gradient(135deg, #140A26, #7A3E9C);&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;absolute bottom-[-200px] right-[-100px] w-[900px] h-[900px] rounded-full opacity-30 blur-[120px]&quot; style=&quot;background: linear-gradient(to top, #23153C, #05020D);&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;absolute top-[20%] right-[30%] w-[200px] h-[200px] rounded-full opacity-20 blur-[60px]&quot; style=&quot;background: linear-gradient(#70F3FF, transparent);&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;absolute bottom-0 w-full h-[300px] opacity-10&quot; style=&quot;background: repeating-linear-gradient(90deg, transparent 0, transparent 40px, #70F3FF 41px), repeating-linear-gradient(0deg, transparent 0, transparent 40px, #70F3FF 41px);&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;relative z-10 grid grid-cols-12 h-full p-12&quot;&gt;
+            
+            &lt;div class=&quot;col-span-5 flex flex-col justify-between h-full pr-8&quot;&gt;
+                
+                &lt;div class=&quot;h-16&quot;&gt;&lt;/div&gt;
+
+                &lt;div class=&quot;relative flex items-center justify-center flex-grow&quot;&gt;
+                    &lt;div class=&quot;absolute w-[350px] h-[350px] bg-cyberViolet rounded-full blur-[80px] opacity-40 animate-pulse&quot;&gt;&lt;/div&gt;
+                    
+                    &lt;div class=&quot;relative z-10 rounded-2xl overflow-hidden border border-white/10 shadow-neon transform transition-transform hover:scale-105 duration-500&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&amp;w=1000&amp;auto=format&amp;fit=crop&quot; 
+                             alt=&quot;3D Abstract Wireframe Cube&quot; 
+                             class=&quot;w-[400px] h-[400px] object-cover mix-blend-lighten opacity-90&quot;&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;absolute top-10 right-0 w-3 h-3 bg-auroraCyan rounded-full shadow-[0_0_10px_#70F3FF]&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;absolute bottom-20 left-10 w-2 h-2 bg-holoPink rounded-full shadow-[0_0_10px_#FF99D6]&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;h-10&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;col-span-7 flex flex-col justify-center pl-4&quot;&gt;
+                
+                &lt;div class=&quot;mb-10 relative&quot;&gt;
+                    &lt;h1 class=&quot;text-6xl font-black text-pureWhite uppercase tracking-tight leading-none drop-shadow-lg&quot;&gt;
+                        Key &lt;br&gt;
+                        &lt;span class=&quot;text-transparent bg-clip-text&quot; style=&quot;background-image: linear-gradient(to right, #FFFFFF, #70F3FF);&quot;&gt;Technologies&lt;/span&gt;
+                    &lt;/h1&gt;
+                    &lt;div class=&quot;w-24 h-1 mt-4 rounded-full&quot; style=&quot;background: linear-gradient(to right, #7A3E9C, #FF99D6);&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;ul class=&quot;flex flex-col gap-6 w-full&quot;&gt;
+                    &lt;li class=&quot;flex items-start group&quot;&gt;
+                        &lt;div class=&quot;w-[240px] flex-shrink-0 p-5 rounded-lg mr-6 border-l-4 border-cyberViolet relative overflow-hidden&quot; 
+                             style=&quot;background: linear-gradient(135deg, rgba(58, 36, 89, 0.8), rgba(35, 21, 60, 0.9));&quot;&gt;
+                            &lt;h3 class=&quot;text-lg font-bold text-white leading-tight&quot;&gt;
+                                Virtual Reality &lt;br&gt;
+                                &lt;span class=&quot;text-auroraCyan&quot;&gt;(VR)&lt;/span&gt; Headsets
+                            &lt;/h3&gt;
+                            &lt;div class=&quot;absolute top-0 right-0 w-16 h-16 bg-white opacity-5 rounded-full blur-xl transform translate-x-1/2 -translate-y-1/2&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;flex-grow pt-2&quot;&gt;
+                            &lt;p class=&quot;text-mistGrey text-base font-light leading-relaxed&quot;&gt;
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/li&gt;
+
+                    &lt;li class=&quot;flex items-start group&quot;&gt;
+                        &lt;div class=&quot;w-[240px] flex-shrink-0 p-5 rounded-lg mr-6 border-l-4 border-holoPink relative overflow-hidden&quot; 
+                             style=&quot;background: linear-gradient(135deg, rgba(58, 36, 89, 0.8), rgba(35, 21, 60, 0.9));&quot;&gt;
+                            &lt;h3 class=&quot;text-lg font-bold text-white leading-tight&quot;&gt;
+                                Blockchain for &lt;br&gt;
+                                Digital Assets
+                            &lt;/h3&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;flex-grow pt-2&quot;&gt;
+                            &lt;p class=&quot;text-mistGrey text-base font-light leading-relaxed&quot;&gt;
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/li&gt;
+
+                    &lt;li class=&quot;flex items-start group&quot;&gt;
+                        &lt;div class=&quot;w-[240px] flex-shrink-0 p-5 rounded-lg mr-6 border-l-4 border-auroraCyan relative overflow-hidden&quot; 
+                             style=&quot;background: linear-gradient(135deg, rgba(58, 36, 89, 0.8), rgba(35, 21, 60, 0.9));&quot;&gt;
+                            &lt;h3 class=&quot;text-lg font-bold text-white leading-tight&quot;&gt;
+                                AI for Immersive &lt;br&gt;
+                                Experiences
+                            &lt;/h3&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;flex-grow pt-2&quot;&gt;
+                            &lt;p class=&quot;text-mistGrey text-base font-light leading-relaxed&quot;&gt;
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+
+                &lt;div class=&quot;absolute bottom-12 right-12&quot;&gt;
+                    &lt;div class=&quot;w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-white hover:text-deepSpace transition-all duration-300 cursor-pointer shadow-glow&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-arrow-right text-lg&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div style=&quot;position: absolute; bottom: 50px; left: 80px; z-index: 20;&quot;&gt;
+            &lt;p style=&quot;color: #FFFFFF; font-size: 14px; letter-spacing: 2px; margin-bottom: 4px; font-weight: 700;&quot;&gt;PAGE&lt;/p&gt;
+            &lt;p style=&quot;color: #70F3FF; font-size: 14px; letter-spacing: 1px;&quot;&gt;08 / 15&lt;/p&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 9
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc='&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;User Experience - Modified&lt;/title&gt;
+    &lt;script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"&gt;&lt;/script&gt;
+    &lt;link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css"&gt;
+    &lt;link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css"&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative;
+            background-color: #05020D; overflow: hidden;
+        }
+        .blur-blob { position: absolute; border-radius: 50%; filter: blur(80px); z-index: 1; }
+        h1, h2, h3, h4, h5, h6 { line-height: 1.1; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id="page_container"&gt;
+
+        &lt;div style="position: absolute; top: 60px; left: 80px; z-index: 50; display: flex; align-items: center; opacity: 0.9;"&gt;
+             &lt;div style="width: 40px; height: 40px; border: 2px solid #FF99D6; border-radius: 4px; display: flex; align-items: center; justify-content: center; transform: rotate(45deg); box-shadow: 0 0 15px rgba(255,153,214,0.4);"&gt;
+                &lt;div style="width: 20px; height: 20px; background-color: rgba(112, 243, 255, 0.8); border-radius: 2px;"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div style="display: flex; flex-direction: column; justify-content: center; margin-left: 16px;"&gt;
+                 &lt;h6 style="color: #FFFFFF; font-size: 12px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; line-height: 1; margin-bottom: 4px;"&gt;Studio&lt;/h6&gt;
+                 &lt;h6 style="color: #D1C7E0; font-size: 12px; font-weight: 300; letter-spacing: 0.3em; text-transform: uppercase; line-height: 1;"&gt;Shodwe&lt;/h6&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="blur-blob" style="width: 500px; height: 500px; top: -150px; left: -100px; background-color: #140A26; opacity: 0.8;"&gt;&lt;/div&gt;
+        &lt;div class="blur-blob" style="width: 400px; height: 400px; bottom: -100px; left: -100px; background-color: #23153C; opacity: 0.6;"&gt;&lt;/div&gt;
+        &lt;div class="blur-blob" style="width: 600px; height: 600px; top: 50px; right: -200px; background-color: #05020D; box-shadow: 0 0 100px #3A2459;"&gt;&lt;/div&gt;
+
+        &lt;div class="relative z-10 grid grid-cols-12 h-full w-full pl-24 pr-16 pt-16 pb-12"&gt;
+            
+            &lt;div class="col-span-5 flex flex-col justify-center relative"&gt;
+                
+                &lt;div class="h-20"&gt;&lt;/div&gt;
+
+                &lt;div class="mb-8"&gt;
+                    &lt;h1 class="text-7xl font-black text-white tracking-tighter leading-[0.85] uppercase" style="text-shadow: 0 0 20px rgba(122, 62, 156, 0.4);"&gt;
+                        User&lt;br&gt;
+                        &lt;span class="text-[#D1C7E0]"&gt;Experience&lt;/span&gt;
+                    &lt;/h1&gt;
+                &lt;/div&gt;
+
+                &lt;div class="mb-12 pr-8"&gt;
+                    &lt;p class="text-[#D1C7E0] text-lg font-light leading-relaxed"&gt;
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        &lt;b class="text-[#70F3FF] font-normal"&gt;Volutpat est velit&lt;/b&gt; egestas dui id ornare arcu.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class="h-10"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class="col-span-7 relative flex flex-col justify-center items-center pl-10"&gt;
+                
+                &lt;div class="relative z-20 bg-[#05020D] p-3 rounded-t-2xl rounded-b-md border border-[#3A2459] shadow-[0_0_50px_-10px_rgba(122,62,156,0.5)]" style="width: 640px;"&gt;
+                    &lt;div class="absolute top-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-[#3A2459] rounded-full"&gt;&lt;/div&gt;
+                    &lt;div class="w-full h-[360px] bg-[#140A26] overflow-hidden rounded border border-[#23153C] relative group"&gt;
+                        &lt;div class="w-full h-full relative"&gt;
+                            &lt;div class="absolute top-0 left-0 w-full h-full z-10 pointer-events-none border-[1px] border-[#70F3FF] opacity-20 m-4 rounded" style="width: calc(100% - 2rem); height: calc(100% - 2rem);"&gt;&lt;/div&gt;
+                            &lt;div class="absolute top-10 right-10 w-20 h-20 border-t-2 border-r-2 border-[#FF99D6] opacity-50 z-10"&gt;&lt;/div&gt;
+                            &lt;img src="https://images.unsplash.com/photo-1592478411213-61535fdd861d?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1280&amp;q=80" 
+                                 alt="VR Experience" 
+                                 class="w-full h-full object-cover opacity-90 mix-blend-screen"
+                                 style="filter: contrast(1.1) brightness(1.1);"&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="h-3 w-full bg-[#140A26] mt-0 rounded-b-md flex justify-center items-center border-t border-[#000]"&gt;
+                         &lt;div class="w-16 h-1 bg-[#23153C] rounded-full"&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                
+                &lt;div class="w-[700px] h-3 bg-[#D1C7E0] rounded-b-xl relative z-20 shadow-lg mt-[-2px]"&gt;&lt;/div&gt;
+
+                &lt;div class="absolute bottom-[100px] w-[500px] h-[100px] rounded-[100%] border-[2px] border-[#7A3E9C] z-0 flex items-center justify-center opacity-80"
+                     style="background: linear-gradient(180deg, rgba(20,10,38,0), rgba(122,62,156,0.1)); transform: perspective(800px) rotateX(60deg) translateY(80px);"&gt;
+                &lt;/div&gt;
+                &lt;div class="absolute bottom-[100px] w-[460px] h-[80px] rounded-[100%] border-[4px] border-[#70F3FF] z-0 shadow-[0_0_20px_#70F3FF]"
+                     style="background: transparent; transform: perspective(800px) rotateX(60deg) translateY(80px); opacity: 0.6;"&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="absolute bottom-10 right-10 z-30"&gt;
+            &lt;div class="w-12 h-12 rounded-full border border-white flex items-center justify-center text-white opacity-80"&gt;
+                &lt;i class="fa-solid fa-arrow-right"&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="absolute top-0 right-0 w-1/3 h-full z-0 opacity-10 pointer-events-none" 
+             style="background-image: linear-gradient(#7A3E9C 1px, transparent 1px), linear-gradient(90deg, #7A3E9C 1px, transparent 1px); background-size: 40px 40px; mask-image: linear-gradient(to left, black, transparent);"&gt;
+        &lt;/div&gt;
+
+        &lt;div style="position: absolute; bottom: 50px; left: 80px; z-index: 20;"&gt;
+            &lt;p style="color: #FFFFFF; font-size: 14px; letter-spacing: 2px; margin-bottom: 4px; font-weight: 700;"&gt;PAGE&lt;/p&gt;
+            &lt;p style="color: #70F3FF; font-size: 14px; letter-spacing: 1px;"&gt;09 / 15&lt;/p&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;'>
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 10
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Market Potential - Modified&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative;
+            background-color: #05020D; overflow: hidden; color: #FFFFFF;
+        }
+        ::-webkit-scrollbar { display: none; }
+        .gradient-bar-1 { background: linear-gradient(90deg, #3A2459, #7A3E9C, transparent); }
+        .gradient-bar-2 { background: linear-gradient(90deg, #3A2459, #FF99D6, transparent); }
+        .gradient-bar-3 { background: linear-gradient(90deg, #3A2459, #70F3FF, transparent); }
+        .bg-glow-purple { background: radial-gradient(circle, rgba(122,62,156,0.4) 0%, rgba(20,10,38,0) 70%); }
+        .bg-glow-pink { background: radial-gradient(circle, rgba(255,153,214,0.3) 0%, rgba(20,10,38,0) 70%); }
+        .text-neon-shadow { text-shadow: 0 0 20px rgba(122, 62, 156, 0.5); }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+
+        &lt;div style=&quot;position: absolute; top: 60px; left: 80px; z-index: 50; display: flex; align-items: center; opacity: 0.9;&quot;&gt;
+             &lt;div style=&quot;width: 40px; height: 40px; border: 2px solid #FF99D6; border-radius: 4px; display: flex; align-items: center; justify-content: center; transform: rotate(45deg); box-shadow: 0 0 15px rgba(255,153,214,0.4);&quot;&gt;
+                &lt;div style=&quot;width: 20px; height: 20px; background-color: rgba(112, 243, 255, 0.8); border-radius: 2px;&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div style=&quot;display: flex; flex-direction: column; justify-content: center; margin-left: 16px;&quot;&gt;
+                 &lt;h6 style=&quot;color: #FFFFFF; font-size: 12px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; line-height: 1; margin-bottom: 4px;&quot;&gt;Studio&lt;/h6&gt;
+                 &lt;h6 style=&quot;color: #D1C7E0; font-size: 12px; font-weight: 300; letter-spacing: 0.3em; text-transform: uppercase; line-height: 1;&quot;&gt;Shodwe&lt;/h6&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div style=&quot;position: absolute; top: -100px; left: -100px; width: 600px; height: 600px; z-index: 1;&quot; class=&quot;bg-glow-purple&quot;&gt;&lt;/div&gt;
+        &lt;div style=&quot;position: absolute; bottom: -150px; right: 100px; width: 500px; height: 500px; z-index: 1;&quot; class=&quot;bg-glow-pink&quot;&gt;&lt;/div&gt;
+
+        &lt;div style=&quot;position: relative; z-index: 10; height: 100%; display: flex; flex-direction: column; padding: 48px 64px;&quot;&gt;
+
+            &lt;div style=&quot;height: 60px;&quot;&gt;&lt;/div&gt;
+
+            &lt;div style=&quot;display: grid; grid-template-columns: 5fr 7fr; gap: 40px; height: 100%;&quot;&gt;
+                
+                &lt;div style=&quot;display: flex; flex-direction: column; justify-content: center;&quot;&gt;
+                    &lt;div style=&quot;margin-bottom: 40px;&quot;&gt;
+                        &lt;h1 style=&quot;font-size: 84px; line-height: 0.9; font-weight: 800; font-family: 'Impact', sans-serif; text-transform: uppercase;&quot;&gt;
+                            &lt;span class=&quot;text-neon-shadow&quot;&gt;MARKET&lt;/span&gt;&lt;br&gt;
+                            &lt;span style=&quot;color: #FFFFFF;&quot;&gt;POTENTIAL&lt;/span&gt;
+                        &lt;/h1&gt;
+                    &lt;/div&gt;
+
+                    &lt;div style=&quot;position: relative; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.5);&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1639322537228-ad7155463db0?q=80&amp;w=1632&amp;auto=format&amp;fit=crop&quot; 
+                             alt=&quot;3D Abstract Growth Chart&quot; 
+                             style=&quot;width: 100%; height: auto; display: block; object-fit: cover;&quot;&gt;
+                        &lt;div style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%); pointer-events: none;&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div style=&quot;display: flex; flex-direction: column; justify-content: center; padding-left: 20px;&quot;&gt;
+                    
+                    &lt;div style=&quot;margin-bottom: 48px;&quot;&gt;
+                        &lt;div class=&quot;gradient-bar-1&quot; style=&quot;height: 16px; width: 200px; border-radius: 4px; margin-bottom: 16px;&quot;&gt;&lt;/div&gt;
+                        &lt;div style=&quot;display: grid; grid-template-columns: 180px 1fr; gap: 24px;&quot;&gt;
+                            &lt;div&gt;
+                                &lt;h3 style=&quot;font-size: 24px; font-weight: 700; line-height: 1.2; color: #FFFFFF;&quot;&gt;
+                                    Rapid&lt;br&gt;Growth&lt;br&gt;Forecast
+                                &lt;/h3&gt;
+                            &lt;/div&gt;
+                            &lt;div&gt;
+                                &lt;p style=&quot;font-size: 16px; line-height: 1.6; color: #D1C7E0;&quot;&gt;
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div style=&quot;margin-bottom: 48px;&quot;&gt;
+                        &lt;div class=&quot;gradient-bar-2&quot; style=&quot;height: 16px; width: 200px; border-radius: 4px; margin-bottom: 16px;&quot;&gt;&lt;/div&gt;
+                        &lt;div style=&quot;display: grid; grid-template-columns: 180px 1fr; gap: 24px;&quot;&gt;
+                            &lt;div&gt;
+                                &lt;h3 style=&quot;font-size: 24px; font-weight: 700; line-height: 1.2; color: #FFFFFF;&quot;&gt;
+                                    Diverse&lt;br&gt;Industry&lt;br&gt;Applications
+                                &lt;/h3&gt;
+                            &lt;/div&gt;
+                            &lt;div&gt;
+                                &lt;p style=&quot;font-size: 16px; line-height: 1.6; color: #D1C7E0;&quot;&gt;
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div&gt;
+                        &lt;div class=&quot;gradient-bar-3&quot; style=&quot;height: 16px; width: 200px; border-radius: 4px; margin-bottom: 16px;&quot;&gt;&lt;/div&gt;
+                        &lt;div style=&quot;display: grid; grid-template-columns: 180px 1fr; gap: 24px;&quot;&gt;
+                            &lt;div&gt;
+                                &lt;h3 style=&quot;font-size: 24px; font-weight: 700; line-height: 1.2; color: #FFFFFF;&quot;&gt;
+                                    Expanding&lt;br&gt;User Base
+                                &lt;/h3&gt;
+                            &lt;/div&gt;
+                            &lt;div&gt;
+                                &lt;p style=&quot;font-size: 16px; line-height: 1.6; color: #D1C7E0;&quot;&gt;
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div style=&quot;position: absolute; bottom: 40px; right: 64px; z-index: 20;&quot;&gt;
+                &lt;div style=&quot;width: 48px; height: 48px; border: 2px solid #FFFFFF; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s ease;&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-arrow-right&quot; style=&quot;color: #FFFFFF; font-size: 20px;&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+
+        &lt;div style=&quot;position: absolute; bottom: 50px; left: 80px; z-index: 20;&quot;&gt;
+            &lt;p style=&quot;color: #FFFFFF; font-size: 14px; letter-spacing: 2px; margin-bottom: 4px; font-weight: 700;&quot;&gt;PAGE&lt;/p&gt;
+            &lt;p style=&quot;color: #70F3FF; font-size: 14px; letter-spacing: 1px;&quot;&gt;10 / 15&lt;/p&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 11
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Case Studies - Modified&lt;/title&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBlack: '#05020D',
+                        voidPurple: '#140A26',
+                        cyberViolet: '#7A3E9C',
+                        holoPink: '#FF99D6',
+                        auroraCyan: '#70F3FF',
+                        mistGrey: '#D1C7E0',
+                        glassPurple: 'rgba(58, 36, 89, 0.4)',
+                        deepIndigo: '#23153C',
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative;
+            background-color: #05020D; overflow: hidden; font-family: 'Noto Sans SC', sans-serif;
+            color: #ffffff;
+        }
+
+        .orb { position: absolute; border-radius: 50%; filter: blur(80px); z-index: 0; }
+        .orb-1 { width: 500px; height: 500px; top: -150px; left: -100px; background: radial-gradient(circle, rgba(122, 62, 156, 0.3) 0%, rgba(20, 10, 38, 0) 70%); }
+        .orb-2 { width: 600px; height: 600px; bottom: -200px; right: -100px; background: radial-gradient(circle, rgba(112, 243, 255, 0.15) 0%, rgba(5, 2, 13, 0) 70%); }
+
+        .glass-card {
+            background: rgba(58, 36, 89, 0.25);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;div style=&quot;position: absolute; top: 60px; left: 80px; z-index: 50; display: flex; align-items: center; opacity: 0.9;&quot;&gt;
+             &lt;div style=&quot;width: 40px; height: 40px; border: 2px solid #FF99D6; border-radius: 4px; display: flex; align-items: center; justify-content: center; transform: rotate(45deg); box-shadow: 0 0 15px rgba(255,153,214,0.4);&quot;&gt;
+                &lt;div style=&quot;width: 20px; height: 20px; background-color: rgba(112, 243, 255, 0.8); border-radius: 2px;&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div style=&quot;display: flex; flex-direction: column; justify-content: center; margin-left: 16px;&quot;&gt;
+                 &lt;h6 style=&quot;color: #FFFFFF; font-size: 12px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; line-height: 1; margin-bottom: 4px;&quot;&gt;Studio&lt;/h6&gt;
+                 &lt;h6 style=&quot;color: #D1C7E0; font-size: 12px; font-weight: 300; letter-spacing: 0.3em; text-transform: uppercase; line-height: 1;&quot;&gt;Shodwe&lt;/h6&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;orb orb-1&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;orb orb-2&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;relative z-10 w-full h-full flex flex-col pt-12 px-20&quot;&gt;
+            
+            &lt;div class=&quot;w-full text-center mb-8 pl-[60px]&quot;&gt; &lt;h1 class=&quot;text-5xl font-black text-white tracking-tight uppercase&quot; style=&quot;text-shadow: 0 4px 20px rgba(112, 243, 255, 0.2);&quot;&gt;
+                    Case Studies
+                &lt;/h1&gt;
+                &lt;div class=&quot;w-20 h-1 mx-auto mt-3 rounded-full&quot; style=&quot;background: linear-gradient(90deg, transparent, #FF99D6, transparent);&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;flex flex-col gap-8 w-full max-w-6xl mx-auto&quot;&gt;
+                
+                &lt;div class=&quot;grid grid-cols-3 gap-6 w-full&quot;&gt;
+                    &lt;div class=&quot;glass-card flex flex-col overflow-hidden group hover:translate-y-[-5px]&quot;&gt;
+                        &lt;div class=&quot;p-4 bg-gradient-to-r from-deepIndigo/80 to-cyberViolet/30 border-b border-auroraCyan/20 flex items-center gap-3&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-vr-cardboard text-auroraCyan text-xl&quot;&gt;&lt;/i&gt;
+                            &lt;h2 class=&quot;text-lg font-bold leading-tight text-white&quot;&gt;Virtual Events&lt;/h2&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;p-5 bg-deepIndigo/30 flex-grow&quot;&gt;
+                            &lt;p class=&quot;text-mistGrey text-sm leading-relaxed font-light&quot;&gt;
+                                Hosting immersive conferences with over 10k concurrent users in a stable, high-fidelity environment.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;glass-card flex flex-col overflow-hidden group hover:translate-y-[-5px]&quot;&gt;
+                        &lt;div class=&quot;p-4 bg-gradient-to-r from-deepIndigo/80 to-cyberViolet/30 border-b border-holoPink/20 flex items-center gap-3&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-gamepad text-holoPink text-xl&quot;&gt;&lt;/i&gt;
+                            &lt;h2 class=&quot;text-lg font-bold leading-tight text-white&quot;&gt;Gaming Integration&lt;/h2&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;p-5 bg-deepIndigo/30 flex-grow&quot;&gt;
+                            &lt;p class=&quot;text-mistGrey text-sm leading-relaxed font-light&quot;&gt;
+                                Seamlessly blending traditional gaming mechanics with blockchain assets for true ownership.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;glass-card flex flex-col overflow-hidden group hover:translate-y-[-5px]&quot;&gt;
+                        &lt;div class=&quot;p-4 bg-gradient-to-r from-deepIndigo/80 to-cyberViolet/30 border-b border-cyberViolet/20 flex items-center gap-3&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-city text-cyberViolet text-xl&quot;&gt;&lt;/i&gt;
+                            &lt;h2 class=&quot;text-lg font-bold leading-tight text-white&quot;&gt;Virtual Real Estate&lt;/h2&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;p-5 bg-deepIndigo/30 flex-grow&quot;&gt;
+                            &lt;p class=&quot;text-mistGrey text-sm leading-relaxed font-light&quot;&gt;
+                                Developing digital landscapes where brands can build permanent, interactive headquarters.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;w-full h-[220px] relative rounded-xl overflow-hidden border border-white/10 group&quot;&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1535868463750-c78d9543614f?q=80&amp;w=1280&amp;auto=format&amp;fit=crop&quot; 
+                         alt=&quot;Cyberpunk Cityscape&quot; 
+                         class=&quot;w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700&quot;&gt;
+                    
+                    &lt;div class=&quot;absolute inset-0 bg-gradient-to-t from-deepBlack via-transparent to-transparent opacity-80&quot;&gt;&lt;/div&gt;
+                    
+                    &lt;div class=&quot;absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-auroraCyan via-holoPink to-cyberViolet&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;absolute top-4 left-4 px-3 py-1 bg-black/60 border border-auroraCyan/30 rounded backdrop-blur-sm&quot;&gt;
+                        &lt;span class=&quot;text-auroraCyan text-xs tracking-widest font-mono&quot;&gt;PROJECT_NEON&lt;/span&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;absolute bottom-4 right-6 text-right&quot;&gt;
+                        &lt;p class=&quot;text-white text-sm font-bold tracking-wider&quot;&gt;GLOBAL IMPACT&lt;/p&gt;
+                        &lt;p class=&quot;text-mistGrey text-xs&quot;&gt;Connecting realities across 5 continents&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute bottom-10 right-12 z-30&quot;&gt;
+            &lt;div class=&quot;w-12 h-12 rounded-full border border-mistGrey/30 flex items-center justify-center hover:bg-white/10 transition-colors duration-300 cursor-pointer&quot;&gt;
+                &lt;i class=&quot;fa-solid fa-arrow-right text-white text-xl&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div style=&quot;position: absolute; bottom: 50px; left: 80px; z-index: 20;&quot;&gt;
+            &lt;p style=&quot;color: #FFFFFF; font-size: 14px; letter-spacing: 2px; margin-bottom: 4px; font-weight: 700;&quot;&gt;PAGE&lt;/p&gt;
+            &lt;p style=&quot;color: #70F3FF; font-size: 14px; letter-spacing: 1px;&quot;&gt;11 / 15&lt;/p&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 12
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc='&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Future Developments - Modified&lt;/title&gt;
+    &lt;link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css"&gt;
+    &lt;script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"&gt;&lt;/script&gt;
+    &lt;link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css"&gt;
+    
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .flex-center { display: flex; align-items: center; justify-content: center; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id="page_container" class="relative mx-auto overflow-hidden bg-[#05020D]" style="width: 1280px; height: 720px;"&gt;
+
+        &lt;div style="position: absolute; top: 60px; left: 80px; z-index: 50; display: flex; align-items: center; opacity: 0.9;"&gt;
+             &lt;div style="width: 40px; height: 40px; border: 2px solid #FF99D6; border-radius: 4px; display: flex; align-items: center; justify-content: center; transform: rotate(45deg); box-shadow: 0 0 15px rgba(255,153,214,0.4);"&gt;
+                &lt;div style="width: 20px; height: 20px; background-color: rgba(112, 243, 255, 0.8); border-radius: 2px;"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div style="display: flex; flex-direction: column; justify-content: center; margin-left: 16px;"&gt;
+                 &lt;h6 style="color: #FFFFFF; font-size: 12px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; line-height: 1; margin-bottom: 4px;"&gt;Studio&lt;/h6&gt;
+                 &lt;h6 style="color: #D1C7E0; font-size: 12px; font-weight: 300; letter-spacing: 0.3em; text-transform: uppercase; line-height: 1;"&gt;Shodwe&lt;/h6&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="absolute top-[-100px] right-[-100px] w-[600px] h-[600px] rounded-full blur-[120px] opacity-40 pointer-events-none z-0" style="background: radial-gradient(circle, #7A3E9C 0%, #05020D 70%);"&gt;&lt;/div&gt;
+        &lt;div class="absolute bottom-[-150px] left-[-150px] w-[500px] h-[500px] rounded-full blur-[100px] opacity-30 pointer-events-none z-0" style="background: radial-gradient(circle, #140A26 0%, #05020D 80%);"&gt;&lt;/div&gt;
+
+        &lt;main class="grid grid-cols-12 h-full w-full relative z-10 px-[80px]"&gt;
+            
+            &lt;div class="col-span-5 flex flex-col justify-center items-start relative"&gt;
+                &lt;div class="relative w-full aspect-[4/3] group"&gt;
+                    &lt;div class="absolute -inset-[2px] rounded-lg opacity-70 blur-[2px]" style="background: linear-gradient(45deg, #7A3E9C, #70F3FF, #FF99D6);"&gt;&lt;/div&gt;
+                    &lt;div class="relative h-[400px] w-full rounded-lg overflow-hidden border border-[#70F3FF]/30 bg-[#140A26]"&gt;
+                        &lt;img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" 
+                             alt="Futuristic AI Hand Reaching Out" 
+                             class="w-full h-full object-cover opacity-90 mix-blend-lighten hover:scale-105 transition-transform duration-700 ease-out"&gt;
+                        &lt;div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to top, #05020D 0%, transparent 40%);"&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="absolute -bottom-10 left-1/2 transform -translate-x-1/2 w-[80%] h-[20px] rounded-[100%] border border-[#7A3E9C] opacity-60 blur-[1px]"&gt;&lt;/div&gt;
+                     &lt;div class="absolute -bottom-10 left-1/2 transform -translate-x-1/2 w-[80%] h-[20px] bg-[#7A3E9C] opacity-20 blur-[10px]"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class="col-span-7 flex flex-col justify-center pl-[60px] pr-[20px]"&gt;
+                
+                &lt;div class="mb-8"&gt;
+                    &lt;h1 class="text-white text-[80px] leading-[0.9] font-black uppercase italic tracking-tighter drop-shadow-lg"&gt;
+                        Future
+                    &lt;/h1&gt;
+                    &lt;div class="relative mt-2 inline-block"&gt;
+                        &lt;div class="absolute inset-0 skew-x-[-10deg]" style="background: linear-gradient(90deg, #7A3E9C 0%, rgba(122, 62, 156, 0.1) 100%); border-left: 6px solid #70F3FF;"&gt;&lt;/div&gt;
+                        &lt;h2 class="relative text-white text-[60px] leading-[1.1] font-black uppercase tracking-tight px-6 py-1 z-10"&gt;
+                            Developments
+                        &lt;/h2&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class="p-6 rounded-xl border border-white/5" style="background-color: rgba(58, 36, 89, 0.2);"&gt;
+                    &lt;p class="text-[#D1C7E0] text-[18px] leading-[1.8] font-light text-justify"&gt;
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac auctor augue mauris augue neque gravida in. Rhoncus est pellentesque elit ullamcorper dignissim cras tincidunt lobortis. Et molestie ac feugiat sed lectus vestibulum mattis. Tellus pellentesque eu tincidunt tortor aliquam nulla facilisi.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class="mt-6 flex items-center gap-2 opacity-50"&gt;
+                    &lt;div class="h-[2px] w-[50px] bg-[#FF99D6]"&gt;&lt;/div&gt;
+                    &lt;div class="h-[4px] w-[4px] rounded-full bg-[#FF99D6]"&gt;&lt;/div&gt;
+                    &lt;div class="h-[4px] w-[4px] rounded-full bg-[#FF99D6]"&gt;&lt;/div&gt;
+                    &lt;div class="h-[4px] w-[4px] rounded-full bg-[#FF99D6]"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/main&gt;
+
+        &lt;div class="absolute bottom-[40px] right-[80px] z-20 group cursor-pointer"&gt;
+            &lt;div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center transition-all duration-300 group-hover:border-[#70F3FF] group-hover:shadow-[0_0_15px_#70F3FF]"&gt;
+                &lt;i class="fa-solid fa-arrow-right text-white text-lg transition-transform duration-300 group-hover:translate-x-1 group-hover:text-[#70F3FF]"&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div style="position: absolute; bottom: 50px; left: 80px; z-index: 20;"&gt;
+            &lt;p style="color: #FFFFFF; font-size: 14px; letter-spacing: 2px; margin-bottom: 4px; font-weight: 700;"&gt;PAGE&lt;/p&gt;
+            &lt;p style="color: #70F3FF; font-size: 14px; letter-spacing: 1px;"&gt;12 / 15&lt;/p&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;'>
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 13
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Project Showcase - Modified&lt;/title&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBlack: '#05020D',
+                        voidPurple: '#140A26',
+                        cyberViolet: '#7A3E9C',
+                        holoPink: '#FF99D6',
+                        auroraCyan: '#70F3FF',
+                        mistGrey: '#D1C7E0',
+                        glassPurple: 'rgba(58, 36, 89, 0.5)',
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'gradient-border': 'linear-gradient(135deg, #FF99D6, #7A3E9C, #70F3FF)',
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative;
+            background-color: #05020D; overflow: hidden;
+        }
+        .absolute-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+        ::-webkit-scrollbar { display: none; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+
+        &lt;div style=&quot;position: absolute; top: 60px; left: 80px; z-index: 50; display: flex; align-items: center; opacity: 0.9;&quot;&gt;
+             &lt;div style=&quot;width: 40px; height: 40px; border: 2px solid #FF99D6; border-radius: 4px; display: flex; align-items: center; justify-content: center; transform: rotate(45deg); box-shadow: 0 0 15px rgba(255,153,214,0.4);&quot;&gt;
+                &lt;div style=&quot;width: 20px; height: 20px; background-color: rgba(112, 243, 255, 0.8); border-radius: 2px;&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div style=&quot;display: flex; flex-direction: column; justify-content: center; margin-left: 16px;&quot;&gt;
+                 &lt;h6 style=&quot;color: #FFFFFF; font-size: 12px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; line-height: 1; margin-bottom: 4px;&quot;&gt;Studio&lt;/h6&gt;
+                 &lt;h6 style=&quot;color: #D1C7E0; font-size: 12px; font-weight: 300; letter-spacing: 0.3em; text-transform: uppercase; line-height: 1;&quot;&gt;Shodwe&lt;/h6&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute top-[-150px] left-[-150px] w-[600px] h-[600px] rounded-full bg-[#140A26] opacity-60 blur-[100px] z-0&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute bottom-[-200px] right-[-100px] w-[700px] h-[700px] rounded-full bg-[#23153C] opacity-50 blur-[120px] z-0&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute top-[50px] right-[200px] w-[20px] h-[20px] rounded-full bg-[#70F3FF] blur-[10px] opacity-40 z-0&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;relative z-10 w-full h-full grid grid-cols-12 gap-8 px-16 items-center&quot;&gt;
+            
+            &lt;div class=&quot;col-span-5 flex flex-col justify-center relative&quot;&gt;
+                &lt;div class=&quot;h-20&quot;&gt;&lt;/div&gt;
+
+                &lt;div class=&quot;mb-8&quot;&gt;
+                    &lt;h2 class=&quot;text-[#FFFFFF] text-6xl font-bold tracking-tighter uppercase leading-none mb-2 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]&quot;&gt;
+                        OUR
+                    &lt;/h2&gt;
+                    &lt;h1 class=&quot;text-[#FFFFFF] text-8xl font-black tracking-tighter uppercase leading-none text-transparent bg-clip-text bg-[linear-gradient(180deg,#FFFFFF,#D1C7E0)]&quot;&gt;
+                        PROJECTS
+                    &lt;/h1&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;relative w-full h-[150px]&quot;&gt;
+                    &lt;div class=&quot;absolute top-0 left-0 w-[200px] h-[2px] bg-[linear-gradient(90deg,#70F3FF,transparent)]&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;absolute top-0 left-0 w-[2px] h-[40px] bg-[#70F3FF]&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;absolute top-[40px] left-0 w-[400px] h-[1px] bg-[linear-gradient(90deg,#7A3E9C,#FF99D6)] rotate-[15deg] origin-left opacity-70&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;absolute top-[100px] left-[380px] w-[8px] h-[8px] border-2 border-[#FF99D6] rounded-full box-border&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;h-10&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;col-span-7 relative pl-8&quot;&gt;
+                
+                &lt;div class=&quot;relative p-[2px] rounded-2xl bg-[linear-gradient(135deg,#FF99D6,#7A3E9C,#70F3FF)] shadow-[0_0_30px_rgba(122,62,156,0.2)]&quot;&gt;
+                    &lt;div class=&quot;bg-[#140A26]/90 backdrop-blur-md rounded-2xl p-10 h-full w-full relative overflow-hidden&quot;&gt;
+                        &lt;div class=&quot;absolute top-0 right-0 p-4&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-square-poll-vertical text-[#70F3FF] opacity-30 text-xl&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class=&quot;relative z-10 w-3/5&quot;&gt;
+                            &lt;p class=&quot;text-[#FFFFFF] font-bold text-xl mb-4 tracking-wide border-b border-[#7A3E9C] inline-block pb-1&quot;&gt;
+                                PROJECT OVERVIEW
+                            &lt;/p&gt;
+                            &lt;p class=&quot;text-[#D1C7E0] text-gl leading-relaxed font-light&quot;&gt;
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac auctor augue mauris augue neque gravida in. Rhoncus est pellentesque elit ullamcorper dignissim cras tincidunt lobortis.
+                            &lt;/p&gt;
+                            &lt;br&gt;
+                            &lt;p class=&quot;text-[#D1C7E0] text-gl leading-relaxed font-light&quot;&gt;
+                                Et molestie ac feugiat sed lectus vestibulum mattis. Tellus pellentesque eu tincidunt tortor aliquam nulla facilisi.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;absolute bottom-[-50px] right-[-40px] w-[350px] h-[350px] z-20&quot;&gt;
+                    &lt;div class=&quot;absolute bottom-[60px] left-[10%] w-[80%] h-[20px] bg-[#23153C] rounded-[50%] border border-[#7A3E9C] shadow-[0_0_20px_#7A3E9C] transform scale-y-50&quot;&gt;&lt;/div&gt;
+                    &lt;div id=&quot;projectChart&quot; class=&quot;w-full h-full&quot;&gt;&lt;/div&gt;
+                    
+                    &lt;div class=&quot;absolute top-[20%] right-[10%] text-[#70F3FF] text-xs&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-plus animate-pulse&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;absolute bottom-[30%] left-[0%] text-[#FF99D6] text-xs&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-crosshairs&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute bottom-12 right-12 z-20&quot;&gt;
+            &lt;div class=&quot;w-12 h-12 rounded-full border border-[#D1C7E0] flex items-center justify-center text-[#FFFFFF] hover:bg-[#70F3FF] hover:text-[#05020D] hover:border-[#70F3FF] transition-all duration-300 shadow-[0_0_10px_rgba(255,255,255,0.1)]&quot;&gt;
+                &lt;i class=&quot;fa-solid fa-arrow-right&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div style=&quot;position: absolute; bottom: 50px; left: 80px; z-index: 20;&quot;&gt;
+            &lt;p style=&quot;color: #FFFFFF; font-size: 14px; letter-spacing: 2px; margin-bottom: 4px; font-weight: 700;&quot;&gt;PAGE&lt;/p&gt;
+            &lt;p style=&quot;color: #70F3FF; font-size: 14px; letter-spacing: 1px;&quot;&gt;13 / 15&lt;/p&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+    &lt;script&gt;
+        document.addEventListener('DOMContentLoaded', function () {
+            var chartDom = document.getElementById('projectChart');
+            var myChart = echarts.init(chartDom);
+            var option;
+
+            option = {
+                backgroundColor: 'transparent',
+                tooltip: { trigger: 'item' },
+                series: [
+                    {
+                        name: 'Project Stats',
+                        type: 'pie',
+                        radius: ['30%', '70%'],
+                        center: ['50%', '50%'],
+                        roseType: 'area',
+                        itemStyle: { borderRadius: 5, borderColor: '#140A26', borderWidth: 2 },
+                        label: { show: false },
+                        emphasis: { label: { show: true, color: '#fff' } },
+                        data: [
+                            { value: 40, name: 'Design', itemStyle: { color: '#70F3FF' } },
+                            { value: 30, name: 'Dev', itemStyle: { color: '#7A3E9C' } },
+                            { value: 25, name: 'QA', itemStyle: { color: '#FF99D6' } },
+                            { value: 20, name: 'Deploy', itemStyle: { color: '#3A2459' } },
+                            { value: 15, name: 'Docs', itemStyle: { color: '#5046e5' } }
+                        ]
+                    }
+                ]
+            };
+            option &amp;&amp; myChart.setOption(option);
+            window.addEventListener('resize', function() { myChart.resize(); });
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 14
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc='&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Strategic Partnerships - Modified&lt;/title&gt;
+    &lt;script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"&gt;&lt;/script&gt;
+    &lt;link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css"&gt;
+    &lt;link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css"&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative;
+            overflow: hidden; background-color: #05020D;
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #FFFFFF, #D1C7E0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-panel {
+            background-color: rgba(58, 36, 89, 0.4);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(122, 62, 156, 0.3);
+        }
+        .bullet-gradient { background: linear-gradient(135deg, #7A3E9C, #FF99D6); }
+        .bullet-gradient-secondary { background: linear-gradient(135deg, #23153C, #7A3E9C); }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id="page_container"&gt;
+
+        &lt;div style="position: absolute; top: 60px; left: 80px; z-index: 50; display: flex; align-items: center; opacity: 0.9;"&gt;
+             &lt;div style="width: 40px; height: 40px; border: 2px solid #FF99D6; border-radius: 4px; display: flex; align-items: center; justify-content: center; transform: rotate(45deg); box-shadow: 0 0 15px rgba(255,153,214,0.4);"&gt;
+                &lt;div style="width: 20px; height: 20px; background-color: rgba(112, 243, 255, 0.8); border-radius: 2px;"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div style="display: flex; flex-direction: column; justify-content: center; margin-left: 16px;"&gt;
+                 &lt;h6 style="color: #FFFFFF; font-size: 12px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; line-height: 1; margin-bottom: 4px;"&gt;Studio&lt;/h6&gt;
+                 &lt;h6 style="color: #D1C7E0; font-size: 12px; font-weight: 300; letter-spacing: 0.3em; text-transform: uppercase; line-height: 1;"&gt;Shodwe&lt;/h6&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="absolute top-[-100px] left-[-100px] w-[600px] h-[600px] rounded-full blur-[100px] opacity-40 pointer-events-none" style="background: radial-gradient(circle, #140A26, transparent);"&gt;&lt;/div&gt;
+        &lt;div class="absolute bottom-[-100px] right-[-100px] w-[800px] h-[800px] rounded-full blur-[120px] opacity-30 pointer-events-none" style="background: radial-gradient(circle, #7A3E9C, transparent);"&gt;&lt;/div&gt;
+        &lt;div class="absolute top-[20%] right-[30%] w-[200px] h-[200px] rounded-full blur-[60px] opacity-20 pointer-events-none" style="background-color: #70F3FF;"&gt;&lt;/div&gt;
+
+        &lt;div class="w-full h-full grid grid-cols-12 gap-8 px-12 pt-10 pb-12 relative z-10"&gt;
+
+            &lt;div class="col-span-5 flex items-center justify-center relative"&gt;
+                &lt;div class="relative p-[2px] w-[420px] h-[420px]"&gt;
+                    &lt;div class="absolute top-0 left-0 w-full h-full border-l-4 border-t-4 border-b-4 border-r-0 rounded-l-xl opacity-80" style="border-image: linear-gradient(to bottom, #FF99D6, #7A3E9C) 1;"&gt;&lt;/div&gt;
+                    &lt;div class="absolute top-0 right-0 w-full h-full border-r-4 border-t-4 border-b-4 border-l-0 rounded-r-xl opacity-80" style="border-image: linear-gradient(to bottom, #7A3E9C, #70F3FF) 1;"&gt;&lt;/div&gt;
+                    
+                    &lt;div class="w-full h-full overflow-hidden relative bg-[#05020D] flex items-center justify-center"&gt;
+                        &lt;img src="https://images.unsplash.com/photo-1622979135225-d2ba269fb1bd?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" 
+                             alt="VR Experience" 
+                             class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-500"&gt;
+                        &lt;div class="absolute inset-0" style="background: linear-gradient(to top, rgba(5,2,13,0.6), transparent);"&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class="absolute top-[-10px] left-[-10px] w-4 h-4 border-t-2 border-l-2 border-[#FF99D6]"&gt;&lt;/div&gt;
+                    &lt;div class="absolute bottom-[-10px] right-[-10px] w-4 h-4 border-b-2 border-r-2 border-[#70F3FF]"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class="col-span-7 flex flex-col justify-center pl-8 pr-12"&gt;
+                
+                &lt;div class="mb-12"&gt;
+                    &lt;h1 class="text-7xl font-black text-[#FFFFFF] tracking-tighter leading-[0.9] drop-shadow-2xl uppercase"&gt;
+                        Strategic &lt;br&gt;
+                        &lt;span class="text-transparent bg-clip-text" style="background-image: linear-gradient(90deg, #FFFFFF, #D1C7E0);"&gt;Partnerships&lt;/span&gt;
+                    &lt;/h1&gt;
+                &lt;/div&gt;
+
+                &lt;div class="glass-panel p-6 rounded-lg mb-6 relative overflow-hidden group"&gt;
+                    &lt;div class="absolute top-0 left-0 w-1 h-full bg-[#7A3E9C]"&gt;&lt;/div&gt;
+                    &lt;div class="flex items-start gap-4"&gt;
+                        &lt;div class="mt-1 w-6 h-6 flex-shrink-0 rounded flex items-center justify-center bullet-gradient shadow-[0_0_15px_rgba(122,62,156,0.5)]"&gt;
+                            &lt;i class="fa-solid fa-handshake text-white text-xs"&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;h2 class="text-[#FFFFFF] text-xl font-bold mb-2 tracking-wide"&gt;Collaborations with Tech Giants&lt;/h2&gt;
+                            &lt;p class="text-[#D1C7E0] text-sm leading-relaxed font-light opacity-90"&gt;
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leveraging synergies to accelerate immersive technology adoption across global markets.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class="glass-panel p-6 rounded-lg relative overflow-hidden group"&gt;
+                      &lt;div class="absolute top-0 left-0 w-1 h-full bg-[#70F3FF]"&gt;&lt;/div&gt;
+                    &lt;div class="flex items-start gap-4"&gt;
+                        &lt;div class="mt-1 w-6 h-6 flex-shrink-0 rounded flex items-center justify-center bullet-gradient-secondary border border-[#7A3E9C] shadow-[0_0_15px_rgba(58,36,89,0.5)]"&gt;
+                            &lt;i class="fa-solid fa-network-wired text-[#D1C7E0] text-xs"&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;h2 class="text-[#FFFFFF] text-xl font-bold mb-2 tracking-wide"&gt;Network with Blockchain Innovators&lt;/h2&gt;
+                            &lt;p class="text-[#D1C7E0] text-sm leading-relaxed font-light opacity-90"&gt;
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Building decentralized infrastructures for secure and transparent digital asset exchange.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="absolute bottom-8 right-12 z-20"&gt;
+            &lt;div class="w-12 h-12 rounded-full border border-[#7A3E9C] flex items-center justify-center hover:bg-[#7A3E9C] hover:text-white transition-all duration-300 cursor-pointer shadow-[0_0_20px_rgba(122,62,156,0.3)]"&gt;
+                &lt;i class="fa-solid fa-arrow-right text-[#70F3FF] text-lg"&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div style="position: absolute; bottom: 50px; left: 80px; z-index: 20;"&gt;
+            &lt;p style="color: #FFFFFF; font-size: 14px; letter-spacing: 2px; margin-bottom: 4px; font-weight: 700;"&gt;PAGE&lt;/p&gt;
+            &lt;p style="color: #70F3FF; font-size: 14px; letter-spacing: 1px;"&gt;14 / 15&lt;/p&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;'>
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 15
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Cyberpunk About Us Slide - With Titles&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        /* CSS Reset &amp; Global Structure */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Main Page Container Configuration */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #05020D; /* Deep Space Black */
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif; /* Fallback to Google Font */
+
+        }
+
+        /* Typography Utilities */
+        h1 {
+            font-family: 'Inter', 'Noto Sans SC', sans-serif;
+            font-weight: 800;
+        }
+        
+        p {
+            font-family: 'Inter', 'Noto Sans SC', sans-serif;
+            font-weight: 400;
+        }
+
+        /* Gradient Utilities (Strict Adherence) */
+        .grad-line-top {
+            background: linear-gradient(90deg, #FF99D6, #7A3E9C, transparent);
+        }
+        
+        .grad-line-bottom {
+            background: linear-gradient(90deg, transparent, #7A3E9C, #70F3FF);
+        }
+
+        .card-bg {
+            background: linear-gradient(180deg, rgba(58, 36, 89, 0.1), rgba(35, 21, 60, 0.6));
+            backdrop-filter: blur(4px);
+        }
+
+        .text-glow {
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+
+        /* Decorative Blur Blobs */
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            z-index: 0;
+        }
+
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+
+        &lt;div class=&quot;blob&quot; style=&quot;width: 600px; height: 600px; background-color: #140A26; top: -200px; left: -100px; opacity: 0.8;&quot;&gt;&lt;/div&gt;
+        
+        &lt;div class=&quot;blob&quot; style=&quot;width: 400px; height: 400px; background-color: #7A3E9C; top: 100px; left: -100px; opacity: 0.2;&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;blob&quot; style=&quot;width: 700px; height: 500px; background-color: #23153C; bottom: -100px; right: -100px; opacity: 0.6;&quot;&gt;&lt;/div&gt;
+
+        &lt;div style=&quot;position: absolute; top: 230px; left: 80px; width: 260px; height: 260px; border: 2px solid rgba(122, 62, 156, 0.3); border-radius: 50%; z-index: 1;&quot;&gt;&lt;/div&gt;
+        
+        &lt;div style=&quot;position: absolute; top: -50px; right: 200px; width: 300px; height: 300px; border: 1px solid rgba(112, 243, 255, 0.1); border-radius: 50%; z-index: 1;&quot;&gt;&lt;/div&gt;
+
+
+        &lt;div style=&quot;position: absolute; top: 60px; left: 80px; z-index: 20; display: flex; align-items: center; opacity: 0.9;&quot;&gt;
+             &lt;div style=&quot;width: 40px; height: 40px; border: 2px solid #FF99D6; border-radius: 4px; display: flex; align-items: center; justify-content: center; transform: rotate(45deg); box-shadow: 0 0 15px rgba(255,153,214,0.4);&quot;&gt;
+                &lt;div style=&quot;width: 20px; height: 20px; background-color: rgba(112, 243, 255, 0.8); border-radius: 2px;&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div style=&quot;display: flex; flex-direction: column; justify-content: center; margin-left: 16px;&quot;&gt;
+                 &lt;h6 style=&quot;color: #FFFFFF; font-size: 12px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; line-height: 1; margin-bottom: 4px;&quot;&gt;Studio&lt;/h6&gt;
+                 &lt;h6 style=&quot;color: #D1C7E0; font-size: 12px; font-weight: 300; letter-spacing: 0.3em; text-transform: uppercase; line-height: 1;&quot;&gt;Shodwe&lt;/h6&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div style=&quot;display: grid; grid-template-columns: 5fr 7fr; height: 100%; position: relative; z-index: 10;&quot;&gt;
+            
+            &lt;div style=&quot;display: flex; align-items: center; padding-left: 80px;&quot;&gt;
+                &lt;h1 class=&quot;text-glow&quot; style=&quot;font-size: 96px; line-height: 1; color: #FFFFFF; text-transform: uppercase; font-style: italic;&quot;&gt;
+                    ABOUT &lt;br&gt; US
+                &lt;/h1&gt;
+            &lt;/div&gt;
+
+            &lt;div style=&quot;display: flex; flex-direction: column; justify-content: center; padding-right: 80px; padding-left: 40px; gap: 30px;&quot;&gt;
+                
+                &lt;div class=&quot;card-bg&quot; style=&quot;position: relative; width: 100%; padding: 40px 50px; border-left: 1px solid rgba(122, 62, 156, 0.2); border-right: 1px solid rgba(112, 243, 255, 0.2);&quot;&gt;
+                    
+                    &lt;div style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 20px;&quot;&gt;
+                        &lt;div class=&quot;grad-line-top&quot; style=&quot;height: 4px; width: 80%; border-top-left-radius: 2px;&quot;&gt;&lt;/div&gt;
+                        &lt;div style=&quot;position: absolute; top: 0; right: 0; height: 4px; width: 10%; background-color: #7A3E9C; opacity: 0.5;&quot;&gt;&lt;/div&gt;
+                        &lt;div style=&quot;position: absolute; top: 4px; left: 0; width: 20px; height: 10px; border-left: 2px solid #FF99D6;&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div&gt;
+                        &lt;h3 style=&quot;color: #FF99D6; font-size: 20px; font-weight: 700; margin-bottom: 12px; letter-spacing: 2px; text-transform: uppercase;&quot;&gt;
+                            01. Mission
+                        &lt;/h3&gt;
+                        &lt;p style=&quot;color: #D1C7E0; font-size: 16px; line-height: 1.8; text-align: left;&quot;&gt;
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div style=&quot;position: absolute; bottom: 0; right: 0; width: 100%; height: 20px;&quot;&gt;
+                        &lt;div class=&quot;grad-line-bottom&quot; style=&quot;position: absolute; bottom: 0; right: 0; height: 4px; width: 85%; border-bottom-right-radius: 2px;&quot;&gt;&lt;/div&gt;
+                        &lt;div style=&quot;position: absolute; bottom: 0; left: 0; height: 4px; width: 5%; background-color: #7A3E9C; opacity: 0.5;&quot;&gt;&lt;/div&gt;
+                         &lt;div style=&quot;position: absolute; bottom: 10px; right: 20px; display: flex; gap: 4px;&quot;&gt;
+                            &lt;div style=&quot;width: 30px; height: 2px; background-color: #70F3FF; opacity: 0.5; transform: skewX(-45deg);&quot;&gt;&lt;/div&gt;
+                            &lt;div style=&quot;width: 10px; height: 2px; background-color: #70F3FF; opacity: 0.3; transform: skewX(-45deg);&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;card-bg&quot; style=&quot;position: relative; width: 100%; padding: 40px 50px; border-left: 1px solid rgba(122, 62, 156, 0.2); border-right: 1px solid rgba(112, 243, 255, 0.2);&quot;&gt;
+                    
+                    &lt;div style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 20px;&quot;&gt;
+                        &lt;div class=&quot;grad-line-top&quot; style=&quot;height: 4px; width: 80%; border-top-left-radius: 2px;&quot;&gt;&lt;/div&gt;
+                        &lt;div style=&quot;position: absolute; top: 0; right: 0; height: 4px; width: 10%; background-color: #7A3E9C; opacity: 0.5;&quot;&gt;&lt;/div&gt;
+                        &lt;div style=&quot;position: absolute; top: 4px; left: 0; width: 20px; height: 10px; border-left: 2px solid #FF99D6;&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div&gt;
+                        &lt;h3 style=&quot;color: #70F3FF; font-size: 20px; font-weight: 700; margin-bottom: 12px; letter-spacing: 2px; text-transform: uppercase;&quot;&gt;
+                            02. Vision
+                        &lt;/h3&gt;
+                        &lt;p style=&quot;color: #D1C7E0; font-size: 16px; line-height: 1.8; text-align: left;&quot;&gt;
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div style=&quot;position: absolute; bottom: 0; right: 0; width: 100%; height: 20px;&quot;&gt;
+                        &lt;div class=&quot;grad-line-bottom&quot; style=&quot;position: absolute; bottom: 0; right: 0; height: 4px; width: 85%; border-bottom-right-radius: 2px;&quot;&gt;&lt;/div&gt;
+                        &lt;div style=&quot;position: absolute; bottom: 0; left: 0; height: 4px; width: 5%; background-color: #7A3E9C; opacity: 0.5;&quot;&gt;&lt;/div&gt;
+                        &lt;div style=&quot;position: absolute; bottom: 10px; right: 20px; display: flex; gap: 4px;&quot;&gt;
+                            &lt;div style=&quot;width: 30px; height: 2px; background-color: #70F3FF; opacity: 0.5; transform: skewX(-45deg);&quot;&gt;&lt;/div&gt;
+                            &lt;div style=&quot;width: 10px; height: 2px; background-color: #70F3FF; opacity: 0.3; transform: skewX(-45deg);&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div style=&quot;position: absolute; bottom: 50px; left: 80px; z-index: 20;&quot;&gt;
+            &lt;p style=&quot;color: #FFFFFF; font-size: 14px; letter-spacing: 2px; margin-bottom: 4px; font-weight: 700;&quot;&gt;PAGE&lt;/p&gt;
+            &lt;p style=&quot;color: #70F3FF; font-size: 14px; letter-spacing: 1px;&quot;&gt;15 / 15&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div style=&quot;position: absolute; bottom: 50px; right: 80px; z-index: 20; display: flex; align-items: center; gap: 10px;&quot;&gt;
+            &lt;div style=&quot;width: 48px; height: 48px; border: 2px solid #FFFFFF; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.05);&quot;&gt;
+                &lt;i class=&quot;fa-solid fa-arrow-right&quot; style=&quot;color: #FFFFFF; font-size: 18px;&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <script>
+   // 自动调整iframe高度
+    function resizeIframes() {
+        document.querySelectorAll('.responsive-iframe').forEach(iframe => {
+            try {
+                const doc = iframe.contentDocument || iframe.contentWindow.document;
+                const height = Math.max(
+                    doc.body.scrollHeight,
+                    doc.documentElement.scrollHeight,
+                    doc.body.offsetHeight,
+                    doc.documentElement.offsetHeight,
+                    doc.body.clientHeight,
+                    doc.documentElement.clientHeight
+                );
+                iframe.style.height = height + 'px';
+            } catch (e) {
+                console.log('无法调整iframe高度:', e);
+            }
+        });
+    }
+    
+    // 初始调整
+    window.addEventListener('load', resizeIframes);
+    
+    // 内容加载后调整
+    document.querySelectorAll('.responsive-iframe').forEach(iframe => {
+        iframe.addEventListener('load', function() {
+            resizeIframes();
+            // 对动态内容进行定期检查
+            setInterval(resizeIframes, 1000);
+        });
+    });
+  </script>
+ </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esports Challenges - Larana</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Noto Sans SC', sans-serif; }
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative;
+            background-color: #040508; overflow: hidden; color: #ffffff;
+        }
+
+        /* 统一顶部 Logo & 细线 */
+        .top-nav-line {
+            position: absolute; top: 40px; left: 60px; right: 60px; height: 1px;
+            background: linear-gradient(90deg, transparent 0%, rgba(102, 106, 246, 0.3) 20%, rgba(102, 106, 246, 0.3) 80%, transparent 100%);
+            z-index: 20;
+        }
+        .logo-center {
+            position: absolute; top: 25px; left: 50%; transform: translateX(-50%); z-index: 30;
+            display: flex; flex-direction: column; align-items: center;
+        }
+        .logo-dot { width: 4px; height: 4px; background: #666AF6; border-radius: 50%; box-shadow: 0 0 10px #666AF6; margin-bottom: 8px; }
+        
+        /* 标题描边效果 */
+        .text-outline { -webkit-text-stroke: 1px rgba(255,255,255,0.3); -webkit-text-fill-color: transparent; }
+
+        .scan-line {
+            position: absolute; top: 0; left: 0; width: 100%; height: 1px;
+            background: rgba(102, 106, 246, 0.5);
+            box-shadow: 0 0 10px #666AF6;
+            animation: scan 4s infinite linear;
+        }
+        @keyframes scan { 0% { top: 0% } 100% { top: 100% } }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <div class="absolute inset-0 bg-[radial-gradient(rgba(102,106,246,0.05)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+
+        <div class="top-nav-line"></div>
+        <div class="logo-center">
+            <div class="logo-dot"></div>
+            <h1 class="text-xl font-black tracking-[6px] text-white">LARANA</h1>
+            <p class="text-[9px] tracking-[4px] text-[#666AF6] uppercase">Industry Barriers</p>
+        </div>
+
+        <main class="relative z-10 px-20 pt-28 flex w-full h-[540px] items-center">
+            
+            <div class="w-[45%] h-full flex items-center pr-8">
+                <div class="relative w-full h-[380px] rounded-lg overflow-hidden border border-white/10 bg-black shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1593305841991-05c29736ce37?q=80&w=800" class="w-full h-full object-cover opacity-70 grayscale">
+                    <div class="scan-line"></div>
+                </div>
+            </div>
+
+            <div class="w-[55%] h-full flex flex-col justify-center pl-4">
+                <div class="mb-8">
+                    <h1 class="text-6xl font-bold text-white tracking-tight">
+                        INDUSTRY <br>
+                        <span class="text-outline">CHALLENGES</span>
+                    </h1>
+                    <div class="w-20 h-1 bg-[#666AF6] mt-4 rounded-full"></div>
+                </div>
+
+                <div class="flex w-full gap-8">
+                    <div class="w-1/2 flex flex-col gap-4">
+                        <div class="bg-gradient-to-r from-white/5 to-transparent border-l-4 border-[#666AF6] px-6 py-4 rounded-r-lg">
+                            <h3 class="text-white font-semibold text-lg tracking-wide">Player burnout</h3>
+                        </div>
+                        <div class="bg-gradient-to-r from-white/5 to-transparent border-l-4 border-[#B5C2FF] px-6 py-4 rounded-r-lg">
+                            <h3 class="text-white font-semibold text-lg tracking-wide">Toxicity & behavior</h3>
+                        </div>
+                        <div class="bg-gradient-to-r from-white/5 to-transparent border-l-4 border-[#B5C2FF] px-6 py-4 rounded-r-lg">
+                            <h3 class="text-white font-semibold text-lg tracking-wide">Match-fixing</h3>
+                        </div>
+                        <div class="bg-gradient-to-r from-white/5 to-transparent border-l-4 border-[#B5C2FF] px-6 py-4 rounded-r-lg">
+                            <h3 class="text-white font-semibold text-lg tracking-wide">Lack of regulation</h3>
+                        </div>
+                    </div>
+
+                    <div class="w-1/2 flex flex-col gap-6 justify-center">
+                        <p class="text-gray-400 text-xs leading-6 text-justify">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <p class="text-gray-400 text-xs leading-6 text-justify">
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="absolute bottom-10 left-20 right-20 flex justify-between items-center z-20">
+            <div class="text-[10px] text-gray-600 font-bold tracking-[2px]">PAGE 05 // ANALYSIS</div>
+            <div class="flex gap-4">
+                <button class="w-12 h-12 flex items-center justify-center border border-white/10 rounded-full hover:bg-white/5 transition-all">
+                    <i class="fa-solid fa-chevron-left text-xs"></i>
+                </button>
+                <button class="px-10 py-3 bg-[#666AF6] text-xs font-black tracking-widest rounded-full shadow-[0_8px_20px_rgba(102,106,246,0.3)]">
+                    SUBMIT REPORT
+                </button>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

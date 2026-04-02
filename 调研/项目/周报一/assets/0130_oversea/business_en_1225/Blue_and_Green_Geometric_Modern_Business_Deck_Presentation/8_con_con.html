@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Challenge - Business Deck</title>
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Fonts (Using the requested mirror) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        /* CSS Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* No styles on body allowed per instructions, keeping it clean */
+            font-family: 'Noto Sans SC', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* 
+         * Page Container Configuration
+         * Fixed 1280x720 dimensions
+         * Centered
+         * No outer shadow
+         */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background-color: #051532; /* Primary Background */
+        }
+
+        /* Custom font adjustments to match design system vibes */
+        .tracking-tight-custom {
+            letter-spacing: -0.04em;
+        }
+        
+        .tracking-wide-custom {
+            letter-spacing: 0.15em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Page Container -->
+    <div id="page_container">
+        
+        <!-- Grid Layout: Split Screen Design (Left Content / Right Image) -->
+        <div class="grid grid-cols-12 h-full">
+            
+            <!-- LEFT COLUMN: Content Area (Primary Background #051532) -->
+            <div class="col-span-7 bg-[#051532] flex flex-col justify-between p-16 relative z-10">
+                
+                <!-- 1. Header / Brand Area -->
+                <div class="flex items-center gap-3">
+                    <!-- Simple geometric logo mark using FontAwesome -->
+                    <i class="fa-solid fa-cube text-[#F2F2F2] text-xl"></i>
+                    <!-- Brand Name -->
+                    <h6 class="text-[#F2F2F2] text-sm font-bold uppercase tracking-widest">
+                        Studio Shodwe
+                    </h6>
+                </div>
+
+                <!-- 2. Main Content Area -->
+                <div class="flex flex-col gap-8 mt-4">
+                    <!-- Decorative Line -->
+                    <div class="w-12 h-1 bg-blue-500 rounded-full"></div>
+
+                    <!-- Headline: White (#FFFFFF) -->
+                    <h1 class="text-white text-8xl font-bold leading-none tracking-tight-custom">
+                        The<br>Challenge
+                    </h1>
+
+                    <!-- Body Text: Body Color (#E6E8EB) -->
+                    <!-- Max width ensures optimal reading line length -->
+                    <div class="max-w-lg">
+                        <p class="text-[#E6E8EB] text-xl font-light leading-relaxed opacity-90">
+                            Inform your clients about the challenges of the project, the steps required to achieve the goals, and the expected outcomes.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 3. Footer Info -->
+                <div class="flex items-center justify-between border-t border-white/10 pt-6">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-layer-group text-blue-400 text-xs"></i>
+                        <p class="text-[#E6E8EB] text-xs font-bold uppercase tracking-wide-custom">
+                            Business Deck
+                        </p>
+                    </div>
+                    
+                    <div class="flex items-center gap-2">
+                        <i class="fa-regular fa-calendar text-blue-400 text-xs"></i>
+                        <p class="text-[#E6E8EB] text-xs font-bold uppercase tracking-wide-custom">
+                            2025
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Background Abstract Decoration (Pure CSS) -->
+                <!-- Subtle gradient circle to add depth to the flat blue background -->
+                <div class="absolute top-0 right-0 w-96 h-96 bg-blue-900/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 -z-10"></div>
+            </div>
+
+            <!-- RIGHT COLUMN: Image Area -->
+            <!-- Using a warm architectural image to contrast with the cool blue background -->
+            <div class="col-span-5 h-full relative">
+                <div class="absolute inset-0 bg-black/10 z-10"></div> <!-- Subtle overlay for depth -->
+                
+                <!-- Image Container -->
+                <div class="w-full h-full">
+                     <!-- 
+                        Image Selection Logic:
+                        Chosen an architectural image with vertical lines and warm sunlight to match the 
+                        "Business/Challenge" theme and contrast the #051532 background.
+                    -->
+                    <img 
+                        src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" 
+                        alt="Modern skyscraper architecture representing business challenges" 
+                        class="w-full h-full object-cover"
+                    >
+                    <!-- 533*720 -->
+                </div>
+
+                <!-- Decorative numeric marker overlay on image -->
+                <div class="absolute bottom-16 -left-6 z-20">
+                    <div class="bg-white p-6 shadow-xl rounded-sm">
+                        <p class="text-[#051532] text-4xl font-bold leading-none">01</p>
+                        <p class="text-gray-400 text-xs font-medium uppercase mt-1 tracking-wider">Phase</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

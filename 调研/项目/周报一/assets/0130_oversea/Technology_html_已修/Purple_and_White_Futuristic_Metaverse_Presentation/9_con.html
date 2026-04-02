@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metaverse Concept - Studio Shodwe</title>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgPrimary: '#211545',
+                        accent: '#6D3BFE',
+                        cardFill: '#3C2C7A',
+                        neonCyan: '#84D9FF',
+                        gradientBlue: '#4D6AFF',
+                        borderDeco: '#A5A6C4',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #211545;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        .glass-panel {
+            background: rgba(60, 44, 122, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(165, 166, 196, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        .neon-text-glow {
+            text-shadow: 0 0 10px rgba(132, 217, 255, 0.6), 0 0 20px rgba(109, 59, 254, 0.4);
+        }
+
+        .tech-card-shape {
+            clip-path: polygon(15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0 15px);
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #FFFFFF, #84D9FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .planet-glow {
+            background: radial-gradient(circle at 30% 30%, rgba(132, 217, 255, 0.15), rgba(109, 59, 254, 0.1) 60%, transparent 80%);
+        }
+
+        /* Tech Corner Decoration for Images */
+        .img-corner {
+            position: absolute; width: 15px; height: 15px; border-color: #84D9FF; border-style: solid; z-index: 20;
+        }
+        .corner-tl { top: -2px; left: -2px; border-width: 2px 0 0 2px; }
+        .corner-br { bottom: -2px; right: -2px; border-width: 0 2px 2px 0; }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <div class="planet-glow" style="position: absolute; top: -100px; right: -100px; width: 500px; height: 500px; border-radius: 50%; z-index: 1;"></div>
+        <div style="position: absolute; inset: 0; background-image: radial-gradient(#6D3BFE 1px, transparent 1px); background-size: 40px 40px; opacity: 0.1; z-index: 0;"></div>
+
+        <div style="position: relative; z-index: 10; padding: 60px 80px; height: 100%; display: flex; flex-direction: column;">
+            
+            <header style="margin-bottom: 40px;">
+                <p style="color: #A5A6C4; letter-spacing: 4px; font-size: 14px; font-weight: 500; text-transform: uppercase; margin-bottom: 16px;">
+                    Studio Shodwe
+                </p>
+                <h1 class="neon-text-glow" style="font-size: 56px; font-weight: 700; line-height: 1.1; color: white; text-transform: uppercase; letter-spacing: 2px;">
+                    <span class="gradient-text">Metaverse</span> <span style="color: #6D3BFE;">Core Concepts</span>
+                </h1>
+                <div style="width: 100px; height: 4px; background: linear-gradient(90deg, #6D3BFE, #84D9FF); margin-top: 20px; border-radius: 2px;"></div>
+            </header>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 40px;">
+                <div style="position: relative; height: 240px;">
+                    <div class="img-corner corner-tl"></div>
+                    <div class="img-corner corner-br"></div>
+                    <div style="width: 100%; height: 100%; overflow: hidden; border: 1px solid rgba(165,166,196,0.3); background: #000;">
+                        <img src="https://images.unsplash.com/photo-1622979135225-d2ba269fb1bd?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover opacity-80">
+                        <div style="position: absolute; bottom: 15px; left: 15px; display: flex; align-items: center; gap: 10px;">
+                            <i class="fa-solid fa-microchip text-neonCyan"></i>
+                            <span style="color: white; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;">Hardware Interface</span>
+                        </div>
+                    </div>
+                </div>
+                <div style="position: relative; height: 240px;">
+                    <div class="img-corner corner-tl" style="border-color: #6D3BFE;"></div>
+                    <div class="img-corner corner-br" style="border-color: #6D3BFE;"></div>
+                    <div style="width: 100%; height: 100%; overflow: hidden; border: 1px solid rgba(165,166,196,0.3); background: #000;">
+                        <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover opacity-80">
+                        <div style="position: absolute; bottom: 15px; left: 15px; display: flex; align-items: center; gap: 10px;">
+                            <i class="fa-solid fa-network-wired text-accent"></i>
+                            <span style="color: white; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;">Social Synthesis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; flex-grow: 1;">
+                
+                <div class="glass-panel tech-card-shape" style="display: flex; flex-direction: column;">
+                    <div style="background: linear-gradient(90deg, #6D3BFE, #3C2C7A); padding: 15px 20px; display: flex; align-items: center;">
+                        <i class="fa-solid fa-cube" style="color: #84D9FF; margin-right: 12px;"></i>
+                        <h2 style="color: white; font-size: 14px; font-weight: 700; text-transform: uppercase;">Digital Identity</h2>
+                    </div>
+                    <div style="padding: 20px; font-size: 14px; color: #E0E0E0; line-height: 1.6;">
+                        Avatars serve as the primary vehicle for interaction, moving beyond static profiles to dynamic, expressive digital representations.
+                    </div>
+                </div>
+
+                <div class="glass-panel tech-card-shape" style="display: flex; flex-direction: column;">
+                    <div style="background: linear-gradient(90deg, #4D6AFF, #3C2C7A); padding: 15px 20px; display: flex; align-items: center;">
+                        <i class="fa-solid fa-earth-americas" style="color: #84D9FF; margin-right: 12px;"></i>
+                        <h2 style="color: white; font-size: 14px; font-weight: 700; text-transform: uppercase;">Persistence</h2>
+                    </div>
+                    <div style="padding: 20px; font-size: 14px; color: #E0E0E0; line-height: 1.6;">
+                        A continuous experience that doesn't "reset" or end. It exists in real-time and maintains its state regardless of user presence.
+                    </div>
+                </div>
+
+                <div class="glass-panel tech-card-shape" style="display: flex; flex-direction: column;">
+                    <div style="background: linear-gradient(90deg, #84D9FF, #4D6AFF); padding: 15px 20px; display: flex; align-items: center;">
+                        <i class="fa-solid fa-infinite" style="color: #211545; margin-right: 12px;"></i>
+                        <h2 style="color: #211545; font-size: 14px; font-weight: 800; text-transform: uppercase;">Interoperability</h2>
+                    </div>
+                    <div style="padding: 20px; font-size: 14px; color: #E0E0E0; line-height: 1.6;">
+                        The ability to move digital assets, identities, and data seamlessly across different platforms and virtual environments.
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 30px; display: flex; align-items: center; opacity: 0.5;">
+                <div style="height: 1px; flex-grow: 1; background: linear-gradient(90deg, #6D3BFE, transparent);"></div>
+                <div style="font-size: 10px; color: #84D9FF; margin: 0 15px; letter-spacing: 2px;">CONCEPT MODULE 01</div>
+                <div style="height: 1px; flex-grow: 1; background: linear-gradient(-90deg, #6D3BFE, transparent);"></div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

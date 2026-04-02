@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revenue Trends - Chart Page</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        secondary: '#B0B0B0',
+                        accent: '#9D8C9D',
+                        darkbg: '#121212',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative;
+            background-color: #121212; overflow: hidden; font-family: 'Noto Sans SC', sans-serif;
+        }
+        .bg-architectural {
+            position: absolute; inset: 0;
+            background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover; background-position: center; opacity: 0.1; filter: grayscale(100%); z-index: 0;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <div class="bg-architectural"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-[#121212] via-[#121212]/90 to-[#121212]/95 mix-blend-multiply z-0"></div>
+
+        <header class="absolute top-0 left-0 w-full px-12 py-8 flex justify-between items-center z-20">
+            <div class="flex items-center gap-3">
+                <i class="fa-solid fa-layer-group text-accent text-xl"></i> 
+                <h6 class="text-white text-sm font-bold tracking-wide">Fauget.Company</h6>
+            </div>
+            <div class="absolute left-1/2 transform -translate-x-1/2">
+                <p class="text-secondary text-xs font-medium tracking-widest uppercase">Presented by : <span class="text-white">Aaron Loeb</span></p>
+            </div>
+            <div><p class="text-secondary text-xs font-light tracking-wide">www.reallygreatsite.com</p></div>
+        </header>
+
+        <main class="relative z-10 w-full h-full pt-24 px-12 pb-10 grid grid-cols-12 gap-8">
+            <div class="col-span-4 flex flex-col justify-center pr-6">
+                <h1 class="text-6xl font-black text-white uppercase tracking-tighter leading-none mb-6">
+                    Revenue<br>
+                    <span class="text-accent">Trends</span>
+                </h1>
+                <div class="w-16 h-1 bg-accent mb-6"></div>
+                <p class="text-secondary text-sm leading-relaxed mb-8">
+                    Analysis of our quarterly growth shows significant upward momentum, driven by key market expansions and product adoption.
+                </p>
+                 <div class="flex gap-8">
+                    <div>
+                        <h4 class="text-white text-2xl font-bold">+$1.2M</h4>
+                        <p class="text-secondary text-gl">Q4 Growth</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white text-2xl font-bold">18%</h4>
+                        <p class="text-secondary text-gl">YoY Increase</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-span-8 h-full pb-4">
+                <div class="glass-card w-full h-full rounded-3xl p-6 relative">
+                     <div id="revenue-chart" class="w-full h-full"></div>
+                    <div class="absolute bottom-4 right-4 text-accent/30"><i class="fa-solid fa-chart-line text-3xl"></i></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var chartDom = document.getElementById('revenue-chart');
+            var myChart = echarts.init(chartDom);
+            var option;
+
+            option = {
+                backgroundColor: 'transparent',
+                grid: { top: '15%', left: '5%', right: '5%', bottom: '10%', containLabel: true },
+                xAxis: {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+                    axisLine: { lineStyle: { color: 'rgba(255,255,255,0.2)' } },
+                    axisLabel: { color: '#secondary', fontSize: 12 },
+                    axisTick: { show: false }
+                },
+                yAxis: {
+                    type: 'value',
+                    splitLine: { lineStyle: { color: 'rgba(255,255,255,0.05)', type: 'dashed' } },
+                    axisLabel: { color: '#secondary', fontSize: 12 }
+                },
+                series: [{
+                    name: 'Revenue',
+                    type: 'line',
+                    smooth: true,
+                    symbol: 'circle',
+                    symbolSize: 8,
+                    showSymbol: false,
+                    lineStyle: { width: 3, color: '#9D8C9D' },
+                    itemStyle: { color: '#9D8C9D', borderColor: '#fff', borderWidth: 2 },
+                    areaStyle: {
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                            { offset: 0, color: 'rgba(157, 140, 157, 0.5)' },
+                            { offset: 1, color: 'rgba(157, 140, 157, 0.0)' }
+                        ])
+                    },
+                    data: [120, 132, 101, 134, 190, 230, 210, 250, 280]
+                }],
+                animation: false
+            };
+            myChart.setOption(option);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Structure Overview - Keithston and Partners</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+
+    <!-- Google Fonts CDN (Domestic Mirror) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- Styles Initialization -->
+    <style>
+        /* CSS Reset & Global Settings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* Page Container - Strict 1280x720 */
+        .page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FFFFFF;
+            overflow: hidden; /* Prevent overflow */
+        }
+
+        /* Custom Utilities for Gradients if needed (adhering to strict syntax) */
+        .overlay-gradient {
+            background: linear-gradient(#1C0F0A, #1C0F0A);
+            opacity: 0.85;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Container -->
+    <div class="page_container flex flex-col justify-between">
+        
+        <!-- Header Section: Logo & Navigation -->
+        <!-- Purpose: Branding and navigation anchor -->
+        <header class="w-full px-16 pt-12 pb-6 flex justify-between items-center z-20">
+            <!-- Brand Name -->
+            <h2 class="text-[#000000] text-2xl font-bold tracking-wide">
+                Keithston and Partners
+            </h2>
+            
+            <!-- Hamburger Menu Icon -->
+            <div class="text-[#000000] text-3xl cursor-pointer">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="flex-grow flex flex-col w-full">
+            
+            <!-- Page Title -->
+            <!-- Purpose: Strong visual hierarchy introduction -->
+            <section class="w-full text-center mb-10 mt-2">
+                <h1 class="text-[#000000] text-6xl font-black uppercase tracking-tighter scale-y-110" style="letter-spacing: -2px;">
+                    Game Structure Overview
+                </h1>
+            </section>
+
+            <!-- Hero Image Section with Cards -->
+            <!-- Purpose: Visual centerpiece containing core data points -->
+            <section class="relative w-full h-[380px] flex items-center justify-center">
+                
+                <!-- Background Image (Baseball Field) -->
+                <div class="absolute inset-0 z-0">
+                    <img src="https://images.unsplash.com/photo-1508344928928-716d868196c6?q=80&w=1280&auto=format&fit=crop" 
+                         alt="Baseball Field Background" 
+                         class="w-full h-full object-cover grayscale brightness-50 contrast-125">
+                    <!-- 1280*380 -->
+                </div>
+
+                <!-- Dark Overlay (Tone: #1C0F0A) -->
+                <div class="absolute inset-0 z-0 bg-[#1C0F0A] opacity-80 mix-blend-multiply"></div>
+
+                <!-- Content Grid (Cards) -->
+                <div class="relative z-10 w-full max-w-[1100px] grid grid-cols-3 gap-8 px-4">
+                    
+                    <!-- Card 1: Teams -->
+                    <div class="border border-white rounded-2xl p-8 text-center h-56 flex flex-col justify-center items-center backdrop-blur-sm transition-transform">
+                        <h3 class="text-white text-2xl font-bold mb-4">Teams</h3>
+                        <p class="text-white text-sm leading-relaxed font-light opacity-90">
+                            Two opposing teams field nine players each, alternating offense and defense roles throughout gameplay.
+                        </p>
+                    </div>
+
+                    <!-- Card 2: Innings -->
+                    <div class="border border-white rounded-2xl p-8 text-center h-56 flex flex-col justify-center items-center backdrop-blur-sm">
+                        <h3 class="text-white text-2xl font-bold mb-4">Innings</h3>
+                        <p class="text-white text-sm leading-relaxed font-light opacity-90">
+                            Each inning is divided into two halves, allowing both teams to attempt scoring opportunities.
+                        </p>
+                    </div>
+
+                    <!-- Card 3: Duration -->
+                    <div class="border border-white rounded-2xl p-8 text-center h-56 flex flex-col justify-center items-center backdrop-blur-sm">
+                        <h3 class="text-white text-2xl font-bold mb-4">Duration</h3>
+                        <p class="text-white text-sm leading-relaxed font-light opacity-90">
+                            Standard regulation games conclude after nine innings, with extra innings for tied score resolution.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer Section: Summary -->
+        <!-- Purpose: Concluding statement and balanced bottom weight -->
+        <footer class="w-full py-10 px-16 bg-white z-20">
+            <div class="max-w-4xl mx-auto text-center">
+                <p class="text-[#000000] text-lg font-medium leading-relaxed tracking-wide">
+                    A baseball game consists of nine innings, alternating between offense and defense for each team to determine final winning results.
+                </p>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>

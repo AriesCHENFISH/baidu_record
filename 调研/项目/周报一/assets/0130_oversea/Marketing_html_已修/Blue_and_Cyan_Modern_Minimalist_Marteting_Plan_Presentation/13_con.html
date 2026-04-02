@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KPI Dashboard Presentation</title>
+    <link href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+
+    <style>
+        /* CSS Reset & Global Settings */
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative; overflow: hidden;
+            font-family: 'Inter', 'Noto Sans SC', sans-serif;
+            background: linear-gradient(180deg, #8BA4F9 0%, #A8D0E6 50%, #C8F7C5 100%);
+        }
+        ::-webkit-scrollbar { display: none; }
+        
+        /* KPI Card Gradient Hover Effect */
+        .kpi-card { transition: all 0.3s ease; border: 1px solid #F3F4F6; }
+        .kpi-card:hover { transform: translateY(-5px); border-color: #A8D0E6; box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.05); }
+        .icon-box { background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%); color: #3B82F6; }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <div class="absolute top-10 left-16 bg-white px-12 py-4 rounded-full shadow-lg z-20">
+            <h1 class="text-5xl font-bold tracking-tight text-gray-900">KPI DASHBOARD</h1>
+        </div>
+
+        <div class="absolute top-8 right-16 text-white text-opacity-80 z-10">
+            <i class="fa-solid fa-star text-5xl filter drop-shadow-md"></i>
+            <i class="fa-solid fa-star text-2xl absolute -bottom-4 -left-6 opacity-70"></i>
+            <i class="fa-solid fa-star text-xl absolute -top-2 -right-4 opacity-70"></i>
+        </div>
+
+        <div class="absolute top-32 left-0 w-full h-full px-16 pb-8 flex flex-row items-start justify-between">
+            
+            <div class="bg-white rounded-[3rem] shadow-2xl p-10 flex flex-col relative z-10" style="width: 63%; height: 540px;">
+                <div class="mb-8">
+                    <p class="text-gray-600 text-lg leading-relaxed font-light">
+                        Tracking the primary metrics defining campaign success. Current performance versus benchmarks.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-2 grid-rows-2 gap-6 flex-grow">
+                    <div class="kpi-card bg-white rounded-[2rem] p-6 flex flex-col justify-between">
+                        <div class="flex justify-between items-start">
+                            <div class="icon-box w-14 h-14 rounded-2xl flex items-center justify-center text-2xl shadow-sm">
+                                <i class="fa-solid fa-bullseye"></i>
+                            </div>
+                            <span class="text-sm font-semibold text-green-500 flex items-center"><i class="fa-solid fa-arrow-up mr-1"></i> +12.5%</span>
+                        </div>
+                        <div>
+                            <h3 class="text-4xl font-extrabold text-gray-900">4.2%</h3>
+                            <p class="text-gray-500 font-medium mt-1">Conversion Rate</p>
+                        </div>
+                    </div>
+                    <div class="kpi-card bg-white rounded-[2rem] p-6 flex flex-col justify-between">
+                         <div class="flex justify-between items-start">
+                            <div class="icon-box w-14 h-14 rounded-2xl flex items-center justify-center text-2xl shadow-sm" style="background: linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 100%); color: #8B5CF6;">
+                                <i class="fa-solid fa-users-viewfinder"></i>
+                            </div>
+                            <span class="text-sm font-semibold text-green-500 flex items-center"><i class="fa-solid fa-arrow-up mr-1"></i> +8.1%</span>
+                        </div>
+                        <div>
+                            <h3 class="text-4xl font-extrabold text-gray-900">85.4K</h3>
+                            <p class="text-gray-500 font-medium mt-1">Total Impressions</p>
+                        </div>
+                    </div>
+                    <div class="kpi-card bg-white rounded-[2rem] p-6 flex flex-col justify-between">
+                         <div class="flex justify-between items-start">
+                            <div class="icon-box w-14 h-14 rounded-2xl flex items-center justify-center text-2xl shadow-sm" style="background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%); color: #10B981;">
+                                <i class="fa-solid fa-sack-dollar"></i>
+                            </div>
+                            <span class="text-sm font-semibold text-red-400 flex items-center"><i class="fa-solid fa-arrow-down mr-1"></i> -2.4%</span>
+                        </div>
+                        <div>
+                            <h3 class="text-4xl font-extrabold text-gray-900">$12.50</h3>
+                            <p class="text-gray-500 font-medium mt-1">Cost Per Acquisition (CPA)</p>
+                        </div>
+                    </div>
+                    <div class="kpi-card bg-white rounded-[2rem] p-6 flex flex-col justify-between">
+                         <div class="flex justify-between items-start">
+                            <div class="icon-box w-14 h-14 rounded-2xl flex items-center justify-center text-2xl shadow-sm" style="background: linear-gradient(135deg, #FFF7ED 0%, #FFEDD5 100%); color: #F97316;">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                            <span class="text-sm font-semibold text-green-500 flex items-center"><i class="fa-solid fa-arrow-up mr-1"></i> +24%</span>
+                        </div>
+                        <div>
+                            <h3 class="text-4xl font-extrabold text-gray-900">215%</h3>
+                            <p class="text-gray-500 font-medium mt-1">Return on Ad Spend (ROAS)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col justify-center h-[540px] pl-8" style="width: 33%;">
+                <div class="mb-6 text-white opacity-90">
+                    <i class="fa-solid fa-arrow-right-long text-6xl font-light"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-white tracking-wider mb-8 uppercase drop-shadow-sm">
+                    Metric Analysis:
+                </h2>
+                <ul class="w-full">
+                    <li class="mb-6 border-b border-white border-opacity-40 pb-4">
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-circle-check mt-1.5 mr-3 text-[#E0E7FF] text-base"></i>
+                            <p class="text-white text-lg font-light leading-snug text-opacity-95">
+                                <span class="font-bold">Efficiency Focus:</span> CPA is slightly down, indicating better targeting efficiency this week.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="mb-6 border-b border-white border-opacity-40 pb-4">
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-circle-check mt-1.5 mr-3 text-[#E0E7FF] text-base"></i>
+                            <p class="text-white text-lg font-light leading-snug text-opacity-95">
+                                <span class="font-bold">Growth Drivers:</span> High ROAS suggests strong revenue generation from current ad spend.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="mb-2 border-b border-white border-opacity-40 pb-4">
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-circle-check mt-1.5 mr-3 text-[#E0E7FF] text-base"></i>
+                            <p class="text-white text-lg font-light leading-snug text-opacity-95">
+                                <span class="font-bold">Reach:</span> Impressions are aligned with the awareness phase goals set in Q1.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="absolute -bottom-20 -left-20 w-64 h-64 bg-white opacity-10 rounded-full blur-3xl pointer-events-none"></div>
+    </div>
+</body>
+</html>

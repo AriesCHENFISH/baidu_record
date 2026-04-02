@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 2# - Portfolio</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { bgDark: '#050505', primaryText: '#FDF6E3', secondaryText: '#9A9A9A', accent: '#D65DB1' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #050505; overflow: hidden; display: flex; align-items: center; }
+        .text-outline { -webkit-text-stroke: 1px rgba(214, 93, 177, 0.4); color: transparent; }
+    </style>
+</head>
+<body>
+    <div id="page_container" class="px-20">
+        <!-- 装饰涂鸦 -->
+        <div class="absolute top-[40px] left-[10%] opacity-30 rotate-12">
+            <svg width="400" height="300" viewBox="0 0 400 300" fill="none"><path d="M50 250C50 250 20 150 100 120C180 90 200 150 150 200C100 250 50 100 150 50C250 0 350 50 350 150" stroke="#D65DB1" stroke-width="10" stroke-linecap="round"/></svg>
+        </div>
+
+        <div class="grid grid-cols-12 gap-12 w-full items-center z-10">
+            <!-- 左侧文字区：利用大号空心字填补空间 -->
+            <div class="col-span-5 relative">
+                <div class="absolute -top-20 -left-10 font-display text-[180px] font-bold text-outline opacity-20 select-none">02</div>
+                <h1 class="font-display font-bold text-7xl text-primaryText uppercase leading-[0.9] mb-4">
+                    Featured<br><span class="text-accent">/</span> Projects
+                </h1>
+                <h2 class="font-display text-accent text-2xl tracking-[0.3em] font-bold uppercase mb-8">Project 2#</h2>
+                <div class="w-16 h-1 bg-accent mb-8"></div>
+                <p class="text-secondaryText text-sm leading-relaxed font-light text-justify">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget finibus ligula. Quisque tristique, diam a ornare fringilla, dui nisl condimentum ligula, at ultricies nulla tellus at sem. Curabitur et augue pellentesque tortor imperdiet consectetur ac nec felis. Aliquam erat volutpat. Ut ac nunc et neque sagittis maximus posuere sit amet sapien. Donec venenatis nibh lectus, et mollis orci aliquam ac.
+                </p>
+            </div>
+
+            <!-- 右侧图片区：层叠设计 -->
+            <div class="col-span-7 relative h-[500px]">
+                <!-- 主图 -->
+                <div class="absolute top-0 right-0 w-[80%] h-[400px] rounded-3xl overflow-hidden border border-gray-800 shadow-2xl z-10 group">
+                    <img src="https://images.unsplash.com/photo-1481487484168-9b930d55208d?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                </div>
+                <!-- 浮动小图 -->
+                <div class="absolute bottom-0 left-0 w-[50%] h-[260px] rounded-3xl overflow-hidden border-[10px] border-bgDark shadow-2xl z-20 group">
+                    <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-accent/10 group-hover:bg-transparent transition-colors"></div>
+                </div>
+                <!-- 装饰星号 -->
+                <div class="absolute top-10 right-10 text-accent text-4xl animate-pulse z-30"><i class="fa-solid fa-asterisk"></i></div>
+            </div>
+        </div>
+        
+        <!-- 底部极简线条 -->
+        <div class="absolute bottom-12 left-20 w-32 h-[1px] bg-accent opacity-50"></div>
+    </div>
+</body>
+</html>

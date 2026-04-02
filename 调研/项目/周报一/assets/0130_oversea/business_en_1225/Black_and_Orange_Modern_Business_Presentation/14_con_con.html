@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Shodwe - Thank You</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#D95325', // Orange
+                        dark: '#1A1A1A',    // Black
+                        grey: '#808080',    // Grey
+                        light: '#F5F5F5',   // Light Grey
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FFFFFF;
+            overflow: hidden;
+            display: flex; /* Flex layout for split screen */
+        }
+
+        .img-grayscale {
+            filter: grayscale(100%) contrast(110%);
+        }
+
+        /* Diagonal pattern for decoration */
+        .bg-pattern {
+            background-image: repeating-linear-gradient(45deg, #1A1A1A 0, #1A1A1A 1px, transparent 0, transparent 10px);
+            opacity: 0.05;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <div class="w-[40%] h-full relative overflow-hidden bg-dark">
+            <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1000&auto=format&fit=crop" 
+                 alt="Office Detail" 
+                 class="w-full h-full object-cover img-grayscale opacity-60">
+            
+            <div class="absolute inset-0 bg-primary mix-blend-multiply opacity-80"></div>
+            
+            <div class="absolute top-12 left-12 w-20 h-1 bg-white"></div>
+            <div class="absolute bottom-12 right-12 text-white opacity-20">
+                <i class="fa-solid fa-quote-left text-9xl"></i>
+            </div>
+
+            <div class="absolute bottom-16 left-12 text-white z-10">
+                <p class="uppercase tracking-[0.3em] text-sm mb-2 opacity-80">Presentation By</p>
+                <h3 class="text-3xl font-bold">Studio Shodwe</h3>
+            </div>
+        </div>
+
+        <div class="w-[60%] h-full relative bg-white flex flex-col p-16">
+            
+            <div class="absolute top-0 right-0 w-64 h-64 bg-pattern pointer-events-none"></div>
+
+            <div class="flex justify-end mb-12">
+                <div class="flex items-center gap-2">
+                    <span class="text-primary font-bold text-lg">11</span>
+                    <div class="w-12 h-[2px] bg-dark"></div>
+                    <span class="text-dark font-bold text-lg">END</span>
+                </div>
+            </div>
+
+            <div class="mb-12">
+                <h1 class="text-[90px] font-black text-primary leading-[0.8] tracking-tighter mb-4">
+                    THANK<br>YOU
+                </h1>
+                <div class="flex items-center gap-4">
+                    <div class="bg-dark text-white px-3 py-1 font-bold text-sm">Q & A</div>
+                    <p class="text-grey text-lg italic">We are ready for your questions.</p>
+                </div>
+            </div>
+
+            <div class="w-full h-[1px] bg-gray-200 mb-10"></div>
+
+            <div class="grid grid-cols-2 gap-8">
+                
+                <div class="flex flex-col gap-6">
+                    <div class="group">
+                        <h6 class="text-xs font-bold text-primary uppercase tracking-widest mb-1">Email</h6>
+                        <p class="text-dark font-medium text-lg">hello@shodwe.com</p>
+                    </div>
+                    <div class="group">
+                        <h6 class="text-xs font-bold text-primary uppercase tracking-widest mb-1">Phone</h6>
+                        <p class="text-dark font-medium text-lg">+86 021 1234 5678</p>
+                    </div>
+                    <div class="group">
+                        <h6 class="text-xs font-bold text-primary uppercase tracking-widest mb-1">Address</h6>
+                        <p class="text-dark font-medium text-lg leading-tight">
+                            123 Innovation Road,<br>Shanghai, China
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-start">
+                    <h6 class="text-xs font-bold text-primary uppercase tracking-widest mb-3">Scan to Connect</h6>
+                    <div class="w-32 h-32 bg-dark flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-qrcode text-white text-5xl"></i>
+                    </div>
+                    <div class="flex gap-4 text-dark text-xl">
+                        <i class="fa-brands fa-weixin hover:text-primary cursor-pointer transition-colors"></i>
+                        <i class="fa-brands fa-weibo hover:text-primary cursor-pointer transition-colors"></i>
+                        <i class="fa-brands fa-linkedin hover:text-primary cursor-pointer transition-colors"></i>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, initial-scale=1.0">
+    <title>Ginyard - Market Segmentation</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- ECharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#101214',
+                        cardBg: '#1B1E21',
+                        textPrimary: '#FFFFFF',
+                        textSecondary: '#C8CACC',
+                        brandAccent: '#61C3C6',
+                    },
+                    fontFamily: { sans: ['Inter', '"Noto Sans SC"', 'sans-serif'] },
+                    spacing: { '1280': '1280px', '720': '720px' }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; overflow: hidden; background-color: #101214; }
+        .glow-effect { position: absolute; width: 600px; height: 600px; background: radial-gradient(circle, rgba(97, 195, 198, 0.08) 0%, transparent 70%); border-radius: 50%; pointer-events: none; }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <!-- Background Glow -->
+        <div class="glow-effect" style="bottom: -200px; right: -100px;"></div>
+
+        <!-- Header -->
+        <div class="absolute top-0 left-0 w-full px-16 py-10 flex justify-between items-center z-20">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-cardBg flex items-center justify-center border border-brandAccent">
+                    <i class="fa-solid fa-layer-group text-brandAccent text-lg"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-textPrimary tracking-tight">ginyard</h2>
+            </div>
+            <div class="flex items-center gap-12">
+                <ul class="flex gap-10 list-none">
+                    <li><a href="#" class="text-textSecondary text-sm font-medium no-underline">Menu</a></li>
+                    <li><a href="#" class="text-textSecondary text-sm font-medium no-underline">About Us</a></li>
+                </ul>
+                <div class="px-6 py-2 border border-brandAccent rounded-full text-brandAccent text-sm font-medium">
+                    @reallygreatsite
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="grid grid-cols-12 gap-10 h-full w-full px-16 pt-28 pb-12 relative z-10 items-center">
+            
+            <!-- Left Column: Text & Data Context (Span 5) -->
+            <div class="col-span-5 flex flex-col justify-center h-full">
+                <div class="mb-8">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-8 h-[2px] bg-brandAccent"></div>
+                        <p class="text-brandAccent uppercase tracking-[0.2em] text-xs font-bold">2024 Analysis</p>
+                    </div>
+                    <h1 class="text-5xl font-bold text-textPrimary leading-tight mb-4">
+                        Market <br>Segmentation
+                    </h1>
+                    <p class="text-textSecondary text-sm leading-relaxed text-justify">
+                        Our diverse product portfolio allows us to serve multiple industries. In 2024, the Fashion Apparel sector remained our largest revenue driver, while Industrial Textiles showed the fastest year-over-year growth.
+                    </p>
+                </div>
+
+                <!-- Custom Legend / Key Stats -->
+                <div class="flex flex-col gap-4">
+                    <div class="bg-cardBg p-4 rounded-xl border border-gray-700 flex justify-between items-center">
+                        <div class="flex items-center gap-3">
+                            <div class="w-3 h-3 rounded-full bg-[#61C3C6]"></div>
+                            <span class="text-white font-medium">Fashion Apparel</span>
+                        </div>
+                        <span class="text-white font-bold">45%</span>
+                    </div>
+                    <div class="bg-cardBg p-4 rounded-xl border border-gray-700 flex justify-between items-center">
+                        <div class="flex items-center gap-3">
+                            <div class="w-3 h-3 rounded-full bg-[#3B8E99]"></div>
+                            <span class="text-white font-medium">Home Textile</span>
+                        </div>
+                        <span class="text-white font-bold">30%</span>
+                    </div>
+                    <div class="bg-cardBg p-4 rounded-xl border border-gray-700 flex justify-between items-center">
+                        <div class="flex items-center gap-3">
+                            <div class="w-3 h-3 rounded-full bg-[#2A3036]"></div>
+                            <span class="text-white font-medium">Industrial & Others</span>
+                        </div>
+                        <span class="text-white font-bold">25%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Pie Chart (Span 7) -->
+            <div class="col-span-7 h-full flex items-center justify-center relative">
+                <!-- Chart Container -->
+                <div id="market-pie-chart" class="w-full h-[500px]"></div>
+                
+                <!-- Decorative Circle behind chart -->
+                <div class="absolute w-[400px] h-[400px] border border-gray-800 rounded-full opacity-50 -z-10"></div>
+                <div class="absolute w-[500px] h-[500px] border border-gray-800/50 rounded-full opacity-30 -z-10"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ECharts Config -->
+    <script>
+        var chartDom = document.getElementById('market-pie-chart');
+        var myChart = echarts.init(chartDom);
+        var option = {
+            backgroundColor: 'transparent',
+            tooltip: {
+                trigger: 'item',
+                backgroundColor: 'rgba(27, 30, 33, 0.9)',
+                borderColor: '#61C3C6',
+                textStyle: { color: '#fff' }
+            },
+            series: [
+                {
+                    name: 'Revenue Share',
+                    type: 'pie',
+                    radius: ['45%', '70%'],
+                    avoidLabelOverlap: false,
+                    itemStyle: {
+                        borderRadius: 10,
+                        borderColor: '#101214',
+                        borderWidth: 5
+                    },
+                    label: {
+                        show: true,
+                        position: 'outside',
+                        color: '#fff',
+                        formatter: '{b}\n{d}%',
+                        fontSize: 14,
+                        fontWeight: 'bold'
+                    },
+                    labelLine: {
+                        show: true,
+                        lineStyle: { color: '#666' }
+                    },
+                    emphasis: {
+                        label: {
+                            show: true,
+                            fontSize: 20,
+                            fontWeight: 'bold'
+                        }
+                    },
+                    data: [
+                        { value: 45, name: 'Fashion Apparel', itemStyle: { color: '#61C3C6' } }, // Brand Accent
+                        { value: 30, name: 'Home Textile', itemStyle: { color: '#3B8E99' } },   // Darker Accent
+                        { value: 15, name: 'Industrial', itemStyle: { color: '#2C3E50' } },      // Dark Blue/Gray
+                        { value: 10, name: 'Others', itemStyle: { color: '#566573' } }           // Gray
+                    ]
+                }
+            ]
+        };
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

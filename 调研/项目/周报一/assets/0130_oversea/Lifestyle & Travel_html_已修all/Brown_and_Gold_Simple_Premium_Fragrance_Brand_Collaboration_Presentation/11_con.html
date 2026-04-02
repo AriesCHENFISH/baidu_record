@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Growth of Our User - Luxury Keynote</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background-color: #F8F7F5; /* 更柔和的米白色背景 */
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* 隐藏滚动条 */
+        ::-webkit-scrollbar { display: none; }
+
+        /* 更细腻的高级感阴影 */
+        .card-shadow {
+            box-shadow: 0 20px 40px -10px rgba(74, 53, 32, 0.05), 0 10px 15px -5px rgba(74, 53, 32, 0.02);
+        }
+
+        /* 模拟室内自然光影 */
+        .light-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background: radial-gradient(circle at 10% 10%, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 50%),
+                        linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(0,0,0,0.03) 100%);
+            z-index: 1;
+        }
+
+        h1 { font-weight: 700; letter-spacing: -0.02em; }
+        
+        .chart-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 文字首字下沉效果增强设计感 */
+        .intro-text::first-letter {
+            font-size: 2.2rem;
+            float: left;
+            margin-right: 8px;
+            color: #4A3520;
+            font-weight: 700;
+            line-height: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <div class="light-overlay"></div>
+
+        <div class="relative z-10 w-full h-full p-16 grid grid-cols-12 gap-12">
+            
+            <div class="col-span-5 flex flex-col justify-between py-2">
+                <div class="bg-white rounded-3xl card-shadow p-8 h-[47%] w-full">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-xs font-bold text-[#4A3520] uppercase tracking-widest">User Engagement</span>
+                        <div class="h-1 w-8 bg-[#4A3520]"></div>
+                    </div>
+                    <div id="lineChart" class="chart-container"></div>
+                </div>
+
+                <div class="bg-white rounded-3xl card-shadow p-8 h-[47%] w-full">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-xs font-bold text-[#4A3520] uppercase tracking-widest">Preference Ratio</span>
+                        <div class="h-1 w-8 bg-[#8B6D51]"></div>
+                    </div>
+                    <div id="barChart" class="chart-container"></div>
+                </div>
+            </div>
+
+            <div class="col-span-7 flex flex-col justify-center pl-10">
+                
+                <div class="flex items-center gap-4 mb-12">
+                    <div class="text-[#4A3520] text-3xl">
+                        <i class="fa-solid fa-clover"></i>
+                    </div>
+                    <div class="h-[1px] w-12 bg-[#4A3520]/30"></div>
+                    <span class="text-[#4A3520] text-sm font-semibold tracking-[0.2em] uppercase">Hanover & Tyke</span>
+                </div>
+
+                <div class="mb-14">
+                    <h1 class="text-[#4A3520] text-[80px] leading-[0.9] mb-4">
+                        The<br>
+                        Growth of<br>
+                        <span class="italic font-light">Our User</span>
+                    </h1>
+                </div>
+
+                <div class="max-w-[500px]">
+                    <p class="intro-text text-[#5C5248] text-gl leading-relaxed text-justify opacity-90">
+                        Our perfume community is thriving, with a growing number of enthusiasts embracing our scents. It's heartening to see our fragrances becoming an integral scent to daily rituals and special moments alike. The increasing love from our users fuels our passion to craft scents that truly resonate with every individual.
+                    </p>
+                    <div class="mt-8 flex items-center gap-2 text-[#4A3520] font-bold">
+                        <span class="text-sm tracking-tighter">— ESTABLISHED 2024</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const primaryColor = '#4A3520';
+        const accentColor1 = '#C5B4A2'; // 极简浅灰褐
+        const gridColor = '#F0F0F0';
+        const textColor = '#8E8276';
+
+        // --- Line Chart ---
+        const lineChart = echarts.init(document.getElementById('lineChart'));
+        lineChart.setOption({
+            grid: { top: '10%', left: '5%', right: '5%', bottom: '10%', containLabel: true },
+            xAxis: {
+                type: 'category',
+                data: ['JAN', 'FEB', 'MAR', 'APR', 'MAY'],
+                axisLine: { show: false },
+                axisTick: { show: false },
+                axisLabel: { color: textColor, fontSize: 10, margin: 15 }
+            },
+            yAxis: {
+                type: 'value',
+                splitLine: { lineStyle: { color: gridColor } },
+                axisLabel: { color: textColor, fontSize: 10 }
+            },
+            series: [{
+                data: [18, 26, 23, 35, 42],
+                type: 'line',
+                smooth: true,
+                symbol: 'circle',
+                symbolSize: 8,
+                itemStyle: { color: primaryColor },
+                lineStyle: { width: 3, color: primaryColor },
+                areaStyle: {
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                        { offset: 0, color: 'rgba(74, 53, 32, 0.1)' },
+                        { offset: 1, color: 'rgba(74, 53, 32, 0)' }
+                    ])
+                }
+            }]
+        });
+
+        // --- Bar Chart ---
+        const barChart = echarts.init(document.getElementById('barChart'));
+        barChart.setOption({
+            grid: { top: '5%', left: '5%', right: '10%', bottom: '5%', containLabel: true },
+            xAxis: { type: 'value', show: false },
+            yAxis: {
+                type: 'category',
+                data: ['Citrus', 'Woody', 'Floral', 'Musk'],
+                axisLine: { show: false },
+                axisTick: { show: false },
+                axisLabel: { color: textColor, fontSize: 11, margin: 10 }
+            },
+            series: [{
+                type: 'bar',
+                data: [
+                    { value: 45, itemStyle: { color: primaryColor } },
+                    { value: 35, itemStyle: { color: accentColor1 } },
+                    { value: 55, itemStyle: { color: primaryColor } },
+                    { value: 25, itemStyle: { color: accentColor1 } }
+                ],
+                barWidth: '50%',
+                itemStyle: { borderRadius: [0, 20, 20, 0] }
+            }]
+        });
+
+        window.addEventListener('resize', () => {
+            lineChart.resize();
+            barChart.resize();
+        });
+    </script>
+</body>
+</html>

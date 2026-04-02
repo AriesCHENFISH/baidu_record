@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction - Strategic Presentation</title>
+    
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- Google Fonts (Baidu CDN Mirror as requested) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- Configuration for Tailwind to match the Design System -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#0A0E17',
+                        textPrimary: '#FDFDFD',
+                        textSecondary: '#B0B3B8',
+                        accent: '#EBEBEB',
+                        borderStroke: '#FFFFFF',
+                        glass: 'rgba(255, 255, 255, 0.1)',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Global Standards */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Page Container - Strict Dimensions */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #0A0E17;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+            /* No outer shadow as requested */
+        }
+
+        /* Utility for Glassmorphism effects */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        /* Typography utilities */
+        h1 { font-weight: 700; letter-spacing: -0.03em; }
+        p { font-weight: 300; line-height: 1.8; }
+        
+        /* Layout Grid helper */
+        .layout-grid {
+            display: grid;
+            grid-template-columns: 5fr 7fr; /* Ratio suitable for image vs text */
+            height: 100%;
+        }
+
+        /* Specific decoration */
+        .slash-icon {
+            font-family: 'Times New Roman', serif; /* Serif for the slashes adds elegance */
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div id="page_container">
+        
+        <!-- Header / Navigation Area -->
+        <header class="absolute top-0 left-0 w-full px-12 py-8 flex justify-between items-center z-50">
+            <!-- Brand Logo -->
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-white flex items-center justify-center rounded-sm">
+                   <i class="fa-solid fa-cube text-[#0A0E17] text-sm"></i>
+                </div>
+                <h2 class="text-textPrimary font-bold text-lg tracking-wide uppercase">Larana & Co.</h2>
+            </div>
+
+            <!-- Central Pill Navigation -->
+            <div class="glass-panel rounded-full px-1 py-1 flex items-center gap-1">
+                <div class="bg-textPrimary text-[#0A0E17] px-5 py-2 rounded-full">
+                    <span class="text-xs font-bold uppercase tracking-wider">Startup Pitch Deck</span>
+                </div>
+                <div class="px-5 py-2">
+                    <span class="text-textSecondary text-xs font-medium uppercase tracking-wider">Business Presentation</span>
+                </div>
+            </div>
+
+            <!-- Date -->
+            <div class="text-textSecondary text-sm font-medium tracking-wide">
+                <span>September 18, 2025</span>
+            </div>
+        </header>
+
+        <!-- Main Content Grid -->
+        <div class="layout-grid pt-24 pb-12 px-12 h-full gap-16">
+            
+            <!-- Left Column: Visual Composition -->
+            <div class="relative w-full h-full flex flex-col justify-center">
+                
+                <!-- Decorative background elements -->
+                <div class="absolute top-10 -left-10 w-64 h-64 border border-white/5 rounded-full"></div>
+                
+                <!-- Primary Image (Background) -->
+                <div class="absolute top-12 left-0 w-[85%] h-[65%] rounded-t-3xl overflow-hidden opacity-40 grayscale z-0">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1000&auto=format&fit=crop" 
+                         alt="Modern Building Facade Low Angle" 
+                         class="w-full h-full object-cover">
+                    <!-- 450*400 -->
+                </div>
+
+                <!-- Secondary Image (Foreground Focus) -->
+                <div class="absolute bottom-16 right-4 w-[85%] h-[60%] rounded-2xl overflow-hidden z-10 border border-white/20 shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1000&auto=format&fit=crop" 
+                         alt="Architectural Geometry Dark" 
+                         class="w-full h-full object-cover grayscale brightness-90 contrast-125">
+                     <!-- 450*380 -->
+                </div>
+
+                <!-- Connecting Graphic Lines -->
+                <div class="absolute bottom-10 left-10 w-24 h-[1px] bg-white/20"></div>
+                <div class="absolute bottom-10 left-10 w-[1px] h-24 bg-white/20"></div>
+
+            </div>
+
+            <!-- Right Column: Text Content -->
+            <div class="flex flex-col justify-center pl-8 pr-12 relative">
+                
+                <!-- Decorative Icon Box -->
+                <div class="w-16 h-16 glass-panel rounded-xl flex items-center justify-center mb-10">
+                    <span class="text-3xl text-accent slash-icon font-light">//</span>
+                </div>
+
+                <!-- Title -->
+                <h1 class="text-7xl text-textPrimary mb-8 leading-tight">
+                    Introduction
+                </h1>
+
+                <!-- Divider Line -->
+                <div class="w-16 h-1 bg-white/20 mb-8 rounded-full"></div>
+
+                <!-- Body Text -->
+                <div class="max-w-xl">
+                    <p class="text-textSecondary text-lg mb-6">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl eu sem tristique, sit amet convallis ex aliquam. 
+                    </p>
+                    <p class="text-textSecondary text-lg opacity-80">
+                        Maecenas varius lectus hendrerit augue blandit, ut posuere erat aliquam. Praesent auctor tellus eget nisl blandit, at varius purus elementum.
+                    </p>
+                </div>
+
+                <!-- Subtle Background Grid/Data Pattern for Tech feel -->
+                <div class="absolute bottom-0 right-0 opacity-10">
+                    <i class="fa-solid fa-braille text-6xl text-white"></i>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer / Page Number Indicator -->
+        <div class="absolute bottom-8 left-12 text-white/30 text-xs font-mono">
+            01 — 12
+        </div>
+
+    </div>
+</body>
+</html>

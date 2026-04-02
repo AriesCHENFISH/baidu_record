@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning Presentation</title>
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS Reset & Basic Setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container Definition */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            font-family: 'Inter', 'Noto Sans SC', sans-serif;
+            background-color: #192A45;
+            /* Cyberpunk Gradient Background */
+            background: linear-gradient(135deg, #192A45 0%, #0F1A2E 100%);
+        }
+
+        /* Decorative Background Circuit Pattern (Simulated via CSS) */
+        .bg-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(25, 42, 69, 0.9), rgba(15, 26, 46, 0.95)),
+                url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop'); 
+            background-size: cover;
+            background-position: center;
+            opacity: 0.6;
+            z-index: 1;
+        }
+
+        /* Content Layer */
+        .content-layer {
+            position: relative;
+            z-index: 10;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 40px 60px;
+        }
+
+        /* Custom Scrollbar hide */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Tech Frame / HUD Styles */
+        .tech-frame {
+            position: relative;
+            padding: 4px;
+            background: linear-gradient(45deg, rgba(90, 208, 249, 0.1), transparent);
+            border: 1px solid rgba(90, 208, 249, 0.3);
+        }
+
+        /* HUD Corners */
+        .corner {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-style: solid;
+            border-color: #5AD0F9;
+            box-shadow: 0 0 8px #5AD0F9;
+        }
+        .corner-tl { top: -2px; left: -2px; border-width: 3px 0 0 3px; }
+        .corner-tr { top: -2px; right: -2px; border-width: 3px 3px 0 0; }
+        .corner-bl { bottom: -2px; left: -2px; border-width: 0 0 3px 3px; }
+        .corner-br { bottom: -2px; right: -2px; border-width: 0 3px 3px 0; }
+
+        /* Tech Circle for List Numbers */
+        .tech-circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid rgba(90, 208, 249, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0 0 15px rgba(90, 208, 249, 0.1);
+        }
+        /* Rotating ring simulation */
+        .tech-circle::before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            right: -4px;
+            bottom: -4px;
+            border-radius: 50%;
+            border: 1px dashed rgba(90, 208, 249, 0.6);
+            transform: rotate(30deg);
+        }
+
+        /* Typography Utilities */
+        .font-tech {
+            font-family: 'Orbitron', sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <div class="bg-pattern"></div>
+
+        <div class="content-layer">
+            
+            <div class="w-full flex justify-between items-center mb-10 h-20">
+                <div class="flex items-center gap-5 group cursor-default">
+                    <div class="relative w-14 h-14 flex items-center justify-center">
+                        <div class="absolute inset-0 bg-gradient-to-br from-[#5AD0F9]/30 via-transparent to-[#5AD0F9]/10 rounded-lg border border-[#5AD0F9]/40 shadow-[0_0_20px_rgba(90,208,249,0.3)] rotate-[25deg] group-hover:rotate-[45deg] transition-transform duration-500 ease-out"></div>
+                        
+                        <div class="relative z-10 w-11 h-11 border-2 border-[#5AD0F9] flex items-center justify-center rounded-md bg-[#192A45] shadow-[inset_0_0_15px_rgba(90,208,249,0.4)]">
+                            <i class="fa-solid fa-microchip text-[#5AD0F9] text-2xl drop-shadow-[0_0_8px_#5AD0F9]"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col justify-center">
+                        <span class="text-[#5AD0F9] font-bold tracking-[0.35em] text-lg font-tech leading-tight drop-shadow-[0_0_8px_rgba(90,208,249,0.8)]">STUDIO</span>
+                        <span class="text-[#E0E0E0] font-light tracking-[0.4em] text-xs opacity-70 pl-0.5">SHODWE</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-12 gap-12 h-full pb-10">
+                
+                <div class="col-span-5 flex flex-col justify-center">
+                    <div class="mb-10">
+                        <h1 class="text-6xl font-black leading-none tracking-tighter font-tech">
+                            <div class="text-[#5AD0F9] drop-shadow-[0_0_10px_rgba(90,208,249,0.5)] mb-2">MACHINE</div>
+                            <div class="text-white">LEARNING</div>
+                        </h1>
+                    </div>
+
+                    <div class="tech-frame w-full aspect-[4/3] bg-[#192A45]/50 relative mt-4 group">
+                        <div class="corner corner-tl"></div>
+                        <div class="corner corner-tr"></div>
+                        <div class="corner corner-bl"></div>
+                        <div class="corner corner-br"></div>
+                        
+                        <div class="absolute right-[-8px] top-1/2 -translate-y-1/2 w-[4px] h-12 bg-[#5AD0F9] shadow-[0_0_10px_#5AD0F9]"></div>
+
+                        <div class="w-full h-full overflow-hidden relative">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#192A45] via-transparent to-transparent z-10 opacity-40"></div>
+                            
+                            <img src="https://images.unsplash.com/photo-1535378437327-b7149b379c2a?q=80&w=1000&auto=format&fit=crop" 
+                                     class="w-full h-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-105" 
+                                     alt="Futuristic AI Robot Head">
+                            </div>
+                    </div>
+                </div>
+
+                <div class="col-span-7 flex flex-col justify-center pl-8 relative">
+                    <div class="absolute left-0 top-10 bottom-10 w-[1px] bg-gradient-to-b from-transparent via-[#2B4162] to-transparent"></div>
+
+                    <ul class="flex flex-col gap-10">
+                        
+                        <li class="flex gap-6 items-start group">
+                            <div class="flex-shrink-0 pt-1">
+                                <div class="tech-circle">
+                                    <span class="text-[#5AD0F9] font-mono font-bold text-lg">1.</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h3 class="text-white text-xl font-bold tracking-wide group-hover:text-[#5AD0F9] transition-colors">
+                                    PREDICTIVE MODELS
+                                </h3>
+                                <p class="text-[#E0E0E0] text-sm leading-relaxed font-light opacity-80">
+                                    Analyze historical data to forecast future outcomes with high precision. Our algorithms adapt to changing patterns in real-time, ensuring robust predictive capabilities for complex scenarios.
+                                </p>
+                            </div>
+                        </li>
+
+                        <li class="flex gap-6 items-start group">
+                            <div class="flex-shrink-0 pt-1">
+                                <div class="tech-circle">
+                                    <span class="text-[#5AD0F9] font-mono font-bold text-lg">2.</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h3 class="text-white text-xl font-bold tracking-wide group-hover:text-[#5AD0F9] transition-colors">
+                                    AUTOMATED DECISION-MAKING
+                                </h3>
+                                <p class="text-[#E0E0E0] text-sm leading-relaxed font-light opacity-80">
+                                    Streamline operations by delegating routine choices to intelligent systems. Reduce human error and latency while maintaining full audit trails for compliance and transparency.
+                                </p>
+                            </div>
+                        </li>
+
+                        <li class="flex gap-6 items-start group">
+                            <div class="flex-shrink-0 pt-1">
+                                <div class="tech-circle">
+                                    <span class="text-[#5AD0F9] font-mono font-bold text-lg">3.</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h3 class="text-white text-xl font-bold tracking-wide group-hover:text-[#5AD0F9] transition-colors">
+                                    DATA-DRIVEN INSIGHTS
+                                </h3>
+                                <p class="text-[#E0E0E0] text-sm leading-relaxed font-light opacity-80">
+                                    Transform raw unstructured data into actionable strategic intelligence. Unlock hidden correlations that drive innovation and competitive advantage in your market sector.
+                                </p>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                    </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

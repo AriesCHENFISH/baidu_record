@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traction - High End Keynote Slide</title>
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome (CDN) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- ECharts (CDN) -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #050508;
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* 背景装饰 */
+        .glow-purple {
+            position: absolute; width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(140, 122, 230, 0.08) 0%, rgba(0,0,0,0) 70%);
+            top: -200px; right: -100px; pointer-events: none;
+        }
+        
+        /* 核心修改：右侧数据卡片样式 */
+        .metric-card {
+            position: relative;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 24px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* 左侧装饰线条 */
+        .metric-card::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 20%;
+            height: 60%;
+            width: 4px;
+            background: linear-gradient(to bottom, #8C7AE6, #1B3F9B);
+            border-radius: 0 4px 4px 0;
+            box-shadow: 0 0 15px rgba(140, 122, 230, 0.6);
+        }
+
+        /* 数字渐变 */
+        .metric-value {
+            background: linear-gradient(180deg, #ffffff 0%, #a5a5a5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: 'Orbitron', sans-serif; /* 如果有科技字体更好 */
+            font-weight: 800;
+        }
+
+        .chart-card {
+            background: linear-gradient(135deg, rgba(26, 27, 46, 0.4) 0%, rgba(13, 14, 27, 0.6) 100%);
+            border: 1px solid rgba(140, 122, 230, 0.15);
+            border-radius: 24px;
+        }
+
+        .label-text {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .desc-text {
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.2;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <div class="glow-purple"></div>
+
+        <div class="relative z-10 flex flex-col h-full px-20 py-16">
+            
+            <!-- Header Section -->
+            <div class="mb-12">
+                <h1 class="text-6xl font-black text-white tracking-tighter mb-4">TRACTION</h1>
+                <div class="w-20 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mb-6"></div>
+                <p class="text-gray-400 text-lg leading-relaxed max-w-2xl font-light">
+                    Snapshot of key success metrics demonstrating consistent market growth and customer excellence.
+                </p>
+            </div>
+
+            <div class="flex flex-row flex-1 gap-12 items-stretch">
+                
+                <!-- Left: Chart Area -->
+                <div class="w-[60%] flex flex-col">
+                    <div class="chart-card flex-1 p-8 shadow-2xl relative">
+                        <div id="tractionChart" style="width: 100%; height: 100%;"></div>
+                    </div>
+                </div>
+
+                <!-- Right: Beautified Metric Cards -->
+                <div class="w-[40%] flex flex-col justify-between py-2">
+                    
+                    <!-- Item 1 -->
+                    <div class="metric-card">
+                        <div class="flex flex-col flex-1">
+                            <span class="label-text">Performance</span>
+                            <span class="desc-text">Annual revenue growth</span>
+                        </div>
+                        <div class="metric-value text-5xl ml-4">20%</div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="metric-card">
+                        <div class="flex flex-col flex-1">
+                            <span class="label-text">Experience</span>
+                            <span class="desc-text">Customer satisfaction</span>
+                        </div>
+                        <div class="metric-value text-5xl ml-4">90%</div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="metric-card">
+                        <div class="flex flex-col flex-1">
+                            <span class="label-text">Position</span>
+                            <span class="desc-text">Market share segments</span>
+                        </div>
+                        <div class="metric-value text-5xl ml-4">15%</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var myChart = echarts.init(document.getElementById('tractionChart'));
+            var option = {
+                backgroundColor: 'transparent',
+                color: ['#8C7AE6', '#1B3F9B', '#FFFFFF'],
+                tooltip: { trigger: 'axis', backgroundColor: '#1A1B2E', textStyle: {color: '#fff'} },
+                grid: { left: '2%', right: '5%', bottom: '5%', top: '15%', containLabel: true },
+                xAxis: {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: ['Q1', 'Q2', 'Q3', 'Q4', 'Next'],
+                    axisLine: { lineStyle: { color: 'rgba(255,255,255,0.1)' } },
+                    axisLabel: { color: '#888' }
+                },
+                yAxis: {
+                    type: 'value',
+                    splitLine: { lineStyle: { color: 'rgba(255,255,255,0.05)' } },
+                    axisLabel: { color: '#888' }
+                },
+                series: [
+                    { name: 'S1', type: 'line', smooth: true, data: [10, 25, 20, 45, 50], lineStyle: { width: 4 } },
+                    { name: 'S2', type: 'line', smooth: true, data: [20, 15, 40, 35, 60], lineStyle: { width: 4 } }
+                ]
+            };
+            myChart.setOption(option);
+        });
+    </script>
+</body>
+</html>

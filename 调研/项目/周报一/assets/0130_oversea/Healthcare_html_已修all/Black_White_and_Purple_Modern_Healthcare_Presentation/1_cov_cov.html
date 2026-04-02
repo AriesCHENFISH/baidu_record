@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Healthcare Cover</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', 'Noto Sans SC', sans-serif; }
+        
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #F8F9FB;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* 背景装饰球 */
+        .blob {
+            position: absolute;
+            filter: blur(100px);
+            z-index: 0;
+            border-radius: 50%;
+        }
+
+        /* 标题渐变 */
+        .text-gradient {
+            background: linear-gradient(135deg, #6236FF 0%, #B621FE 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* 汇报人信息玻璃卡片 */
+        .presenter-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 40px;
+            padding: 30px 60px;
+            box-shadow: 0 20px 40px rgba(98, 54, 255, 0.08);
+        }
+
+        /* 装饰网格背景 */
+        .grid-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(#6236FF 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.05;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <!-- 装饰背景 -->
+        <div class="grid-pattern"></div>
+        <div class="blob bg-purple-200 w-[600px] h-[600px] -top-60 -left-40 opacity-40"></div>
+        <div class="blob bg-blue-100 w-[500px] h-[500px] -bottom-40 -right-20 opacity-50"></div>
+        <div class="blob bg-purple-100 w-[300px] h-[300px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-30"></div>
+
+        <!-- 顶部 Logo 标识 -->
+        <div class="absolute top-12 flex items-center gap-3">
+            <div class="w-10 h-10 bg-gray-900 rounded-xl flex items-center justify-center text-white">
+                <i class="fa-solid fa-hospital-symbol"></i>
+            </div>
+            <span class="text-xl font-black text-gray-900 tracking-tighter uppercase">Borcelle Hospital</span>
+        </div>
+
+        <!-- 主标题区：垂直水平完全居中 -->
+        <div class="relative z-10 text-center mb-16">
+            <div class="flex items-center justify-center gap-4 mb-8">
+                <div class="h-[2px] w-12 bg-purple-600"></div>
+                <span class="text-purple-600 font-bold uppercase tracking-[0.4em] text-sm">Strategic Report 2025</span>
+                <div class="h-[2px] w-12 bg-purple-600"></div>
+            </div>
+            
+            <h1 class="text-[96px] font-black text-gray-900 leading-[1] tracking-tighter mb-4">
+                Medical <br>
+                <span class="text-gradient">Healthcare</span>
+            </h1>
+            <p class="text-2xl font-light text-gray-400 tracking-[0.2em] uppercase">
+                System Integration & Excellence
+            </p>
+        </div>
+
+        <!-- 汇报人信息区 -->
+        <div class="presenter-card relative z-10 flex items-center gap-16">
+            <!-- 汇报人姓名 -->
+            <div class="flex flex-col">
+                <span class="text-xs font-bold text-purple-600 uppercase tracking-widest mb-1">Presented by</span>
+                <span class="text-2xl font-black text-gray-900">Claudia Alves</span>
+            </div>
+
+            <!-- 分隔线 -->
+            <div class="w-[1px] h-10 bg-gray-200"></div>
+
+            <!-- 职位部门 -->
+            <div class="flex flex-col">
+                <span class="text-xs font-bold text-purple-600 uppercase tracking-widest mb-1">Department</span>
+                <span class="text-xl font-bold text-gray-700">CEO, Borcelle Hospital</span>
+            </div>
+
+            <!-- 分隔线 -->
+            <div class="w-[1px] h-10 bg-gray-200"></div>
+
+            <!-- 日期 -->
+            <div class="flex flex-col">
+                <span class="text-xs font-bold text-purple-600 uppercase tracking-widest mb-1">Report Date</span>
+                <span class="text-xl font-bold text-gray-700">January 20, 2025</span>
+            </div>
+        </div>
+
+        <!-- 底部装饰性图标 -->
+        <div class="absolute bottom-12 flex gap-12 text-gray-300">
+            <i class="fa-solid fa-notes-medical text-3xl"></i>
+            <i class="fa-solid fa-microscope text-3xl"></i>
+            <i class="fa-solid fa-dna text-3xl"></i>
+            <i class="fa-solid fa-kit-medical text-3xl"></i>
+        </div>
+
+        <!-- 装饰性圆形线条 -->
+        <div class="absolute w-[900px] h-[900px] border-[1px] border-purple-100 rounded-full -z-10 opacity-60"></div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Measuring Success</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+    <style>
+        .font-serif-display { font-family: 'Playfair Display', serif; }
+        .font-sans-body { font-family: 'Inter', 'Noto Sans SC', sans-serif; }
+        .content-card-rounded { background-color: #F2E3D5; border-radius: 24px; box-shadow: 0 10px 40px rgba(0,0,0,0.3); }
+        .star-shape { clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); }
+    </style>
+</head>
+<body>
+    <div id="page_container" class="relative w-[1280px] h-[720px] mx-auto bg-[#1E1B1C] overflow-hidden flex flex-col justify-center px-20">
+        
+        <!-- Background Decor -->
+        <div class="absolute top-10 right-20 w-12 h-12 bg-[#E76F51] star-shape opacity-20"></div>
+        
+        <div class="flex items-start gap-16">
+            <!-- Left: Text Content -->
+            <div class="w-[55%]">
+                <header class="mb-10">
+                    <h1 class="text-[#FFFFFF] text-6xl font-serif-display leading-tight">
+                        Measuring Success <br>
+                        <span class="italic font-light text-[#F2E3D5]">& Continuous Growth</span>
+                    </h1>
+                    <div class="w-16 h-1 bg-[#F2E3D5] mt-6"></div>
+                </header>
+
+                <div class="content-card-rounded p-10 relative">
+                    <p class="text-[#1E1B1C] font-sans-body text-lg leading-relaxed text-justify font-medium">
+                        Improving patient outcomes through coordinated care requires regular evaluation. Health systems should monitor metrics such as patient recovery rates, satisfaction scores, and readmission rates to ensure the system evolves to meet future health challenges.
+                    </p>
+                    <div class="mt-8 flex gap-4">
+                        <div class="flex text-[#E76F51] text-sm">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-[#1E1B1C]/40">System Performance Rating</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Chart & Visual -->
+            <div class="w-[45%] flex flex-col gap-6">
+                <div class="bg-white/5 border border-white/10 rounded-[32px] p-8 h-[360px] relative">
+                    <h4 class="text-white/40 text-[10px] font-bold uppercase tracking-[0.2em] mb-4">Core Improvement Metrics</h4>
+                    <div id="pieChart" class="w-full h-full"></div>
+                </div>
+                
+                <div class="flex items-center gap-6 px-4">
+                    <div class="w-16 h-16 rounded-2xl bg-[#F2E3D5] flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-chart-pie text-[#1E1B1C] text-2xl"></i>
+                    </div>
+                    <p class="text-white/50 text-sm font-sans-body leading-relaxed">
+                        Data-driven insights allow providers to identify what works well and where gaps exist in the care continuum.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-20">
+            <p class="text-[#FFFFFF] opacity-20 text-[10px] font-sans-body tracking-[0.2em] uppercase">Metric Evaluation Report 2026</p>
+        </div>
+    </div>
+
+    <script>
+        var chartDom = document.getElementById('pieChart');
+        var myChart = echarts.init(chartDom);
+        var option = {
+            backgroundColor: 'transparent',
+            tooltip: { trigger: 'item' },
+            series: [{
+                name: 'Metrics',
+                type: 'pie',
+                radius: ['55%', '80%'],
+                center: ['50%', '45%'],
+                avoidLabelOverlap: false,
+                itemStyle: { borderRadius: 10, borderColor: '#1E1B1C', borderWidth: 2 },
+                label: { show: false },
+                data: [
+                    { value: 62.5, name: 'Recovery', itemStyle: { color: '#F2E3D5' } },
+                    { value: 25.0, name: 'Satisfaction', itemStyle: { color: '#E76F51' } },
+                    { value: 12.5, name: 'Readmission', itemStyle: { color: 'rgba(242, 227, 213, 0.3)' } }
+                ]
+            }],
+            animation: false
+        };
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

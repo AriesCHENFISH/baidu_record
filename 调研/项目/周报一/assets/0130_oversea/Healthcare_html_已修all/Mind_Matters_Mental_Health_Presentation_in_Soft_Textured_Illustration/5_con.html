@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myths & Misconceptions - Refined Collage</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        :root {
+            --bg-texture: #EAE5DE;
+            --primary-rose: #C97B88;
+            --accent-maroon: #9E5A65;
+            --text-ink: #1A1816;
+            --paper-white: #F2F0ED;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        #page_container {
+            width: 1280px; height: 720px;
+            margin: 0 auto; position: relative;
+            background-color: var(--bg-texture);
+            background-image: 
+                radial-gradient(circle at 50% 50%, rgba(201, 123, 136, 0.15) 0%, transparent 60%),
+                repeating-linear-gradient(45deg, rgba(189, 186, 181, 0.1) 0px, rgba(189, 186, 181, 0.1) 1px, transparent 1px, transparent 10px);
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Large Background Image Cutouts */
+        .bg-img-1 {
+            position: absolute; top: -50px; left: -50px; width: 500px; height: 600px;
+            clip-path: polygon(0% 0%, 90% 10%, 85% 90%, 10% 100%);
+            opacity: 0.15; filter: sepia(1) contrast(1.2) grayscale(0.5);
+            z-index: 0; transform: rotate(-5deg);
+        }
+        .bg-img-2 {
+            position: absolute; bottom: 50px; right: -80px; width: 550px; height: 500px;
+            clip-path: polygon(10% 5%, 100% 0%, 95% 95%, 5% 100%);
+            opacity: 0.15; filter: sepia(1) contrast(1.2) grayscale(0.5);
+            z-index: 0; transform: rotate(8deg);
+        }
+
+        .myth-note {
+            background-color: var(--paper-white);
+            padding: 1.5rem; border: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 6px 6px 15px rgba(0,0,0,0.05);
+            border-radius: 3px 60px 5px 35px / 35px 5px 60px 5px;
+            transition: all 0.3s;
+        }
+
+        .washi-tape {
+            background-color: rgba(201, 123, 136, 0.4);
+            height: 30px; width: 100px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            backdrop-filter: blur(2px);
+            clip-path: polygon(2% 0%, 98% 5%, 100% 95%, 0% 100%);
+        }
+
+        /* --- Unified Footer --- */
+        .torn-paper-footer {
+            position: absolute; bottom: 0; left: 0; width: 100%; height: 120px;
+            background-color: var(--paper-white); z-index: 50;
+            clip-path: polygon(0% 40%, 2% 45%, 4% 35%, 6% 48%, 8% 38%, 10% 46%, 12% 35%, 15% 50%, 18% 38%, 21% 45%, 24% 35%, 27% 48%, 30% 38%, 33% 45%, 36% 30%, 40% 50%, 43% 35%, 46% 45%, 50% 32%, 54% 48%, 58% 36%, 62% 45%, 66% 30%, 70% 48%, 75% 35%, 80% 45%, 85% 30%, 90% 48%, 95% 35%, 98% 45%, 100% 40%, 100% 100%, 0% 100%);
+        }
+        
+        .torn-paper-shadow {
+            position: absolute; bottom: -5px; left: 0; width: 100%; height: 130px;
+            background-color: rgba(0,0,0,0.2); z-index: 45; filter: blur(5px);
+            clip-path: polygon(0% 40%, 2% 45%, 4% 35%, 6% 48%, 8% 38%, 10% 46%, 12% 35%, 15% 50%, 18% 38%, 21% 45%, 24% 35%, 27% 48%, 30% 38%, 33% 45%, 36% 30%, 40% 50%, 43% 35%, 46% 45%, 50% 32%, 54% 48%, 58% 36%, 62% 45%, 66% 30%, 70% 48%, 75% 35%, 80% 45%, 85% 30%, 90% 48%, 95% 35%, 98% 45%, 100% 40%, 100% 100%, 0% 100%);
+        }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <img src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?q=80&w=800" class="bg-img-1">
+        <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=800" class="bg-img-2">
+
+        <div class="relative z-10 w-full pt-16 text-center">
+            <h1 class="text-7xl font-black text-[var(--text-ink)] uppercase tracking-tighter">Myths <span class="italic font-serif opacity-30 lowercase">&</span> Misconceptions</h1>
+            <div class="h-2 w-64 bg-[var(--primary-rose)] mx-auto mt-2 shadow-sm"></div>
+        </div>
+
+        <div class="relative z-20 w-full px-20 mt-12 grid grid-cols-2 gap-10">
+            <div class="space-y-10">
+                <div class="myth-note transform -rotate-1">
+                    <div class="washi-tape absolute -top-4 left-10"></div>
+                    <div class="flex items-center gap-3 mb-2 text-[var(--accent-maroon)] font-bold uppercase tracking-wide">
+                        <i class="fa-solid fa-circle-xmark"></i> <span>The Myth</span>
+                    </div>
+                    <p class="text-lg font-bold mb-4">"Mental illness is a sign of personal weakness or character flaw."</p>
+                    <div class="flex items-center gap-3 text-green-700 font-bold border-t border-dashed border-gray-200 pt-3">
+                        <i class="fa-solid fa-circle-check"></i> <span>The Reality</span>
+                    </div>
+                    <p class="text-base opacity-80 mt-1">It is a medical health issue driven by biological, genetic, and environmental factors.</p>
+                    <div class="flex items-center gap-3 text-green-700 font-bold border-t border-dashed border-gray-200 pt-3">
+                        <i class="fa-solid fa-circle-check"></i> <span>The Reality</span>
+                    </div>
+                    <p class="text-base opacity-80 mt-1">Half of all mental health conditions start by age 14, and early intervention is vital.</p>
+                </div>
+            </div>
+
+            <div class="space-y-10 pt-6">
+                <div class="myth-note transform rotate-1">
+                    <div class="flex items-center gap-3 mb-2 text-[var(--accent-maroon)] font-bold uppercase tracking-wide">
+                        <i class="fa-solid fa-circle-xmark"></i> <span>The Myth</span>
+                    </div>
+                    <p class="text-lg font-bold mb-4">"People with mental health conditions are violent and unpredictable."</p>
+                    <div class="flex items-center gap-3 text-green-700 font-bold border-t border-dashed border-gray-200 pt-3">
+                        <i class="fa-solid fa-circle-check"></i> <span>The Reality</span>
+                    </div>
+                    <p class="text-base opacity-80 mt-1">Statistically, they are far more likely to be victims of violence than perpetrators.</p>
+                    <div class="flex items-center gap-3 text-green-700 font-bold border-t border-dashed border-gray-200 pt-3">
+                        <i class="fa-solid fa-circle-check"></i> <span>The Reality</span>
+                    </div>
+                    <p class="text-base opacity-80 mt-1">Professional therapy and support are proven, effective paths to long-term recovery.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="torn-paper-shadow"></div>
+        <div class="torn-paper-footer flex items-end justify-center pb-5">
+            <span class="text-xs uppercase tracking-[0.4em] font-bold text-[var(--accent-maroon)] opacity-50">Debunking Stigma and Advocating for Truth</span>
+        </div>
+    </div>
+</body>
+</html>

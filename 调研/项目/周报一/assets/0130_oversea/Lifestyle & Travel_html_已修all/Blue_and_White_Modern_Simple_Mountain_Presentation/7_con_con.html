@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Havens of Biodiversity</title>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7695CE',
+                        secondary: '#95ADD8',
+                        textPrimary: '#000000',
+                        textBody: '#333333',
+                    },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Basic Setup */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        ::-webkit-scrollbar { display: none; }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FFFFFF;
+            overflow: hidden;
+            font-family: "Noto Sans SC", sans-serif;
+            /* Added radial gradient background for depth */
+            background: radial-gradient(circle at top left, #F8FAFC, #FFFFFF);
+        }
+
+        /* Circular Images with Hover Effects */
+        .circle-img-wrapper {
+            position: absolute;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid #FFFFFF;
+            /* Enhanced Shadow */
+            box-shadow: 0 20px 40px -10px rgba(118, 149, 206, 0.3), 0 10px 20px -10px rgba(0,0,0,0.1);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 10;
+        }
+        
+        .circle-img-wrapper:hover {
+            transform: scale(1.05);
+            box-shadow: 0 25px 50px -12px rgba(118, 149, 206, 0.5);
+            z-index: 50;
+        }
+
+        .deco-circle {
+            position: absolute;
+            border-radius: 50%;
+            z-index: 0;
+            filter: blur(40px); /* Added blur for softer look */
+        }
+
+        /* List styling */
+        .feature-list-item {
+            position: relative;
+            padding: 12px 16px;
+            margin-bottom: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            border-left: 3px solid #FFFFFF;
+            color: #FFFFFF;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            backdrop-filter: blur(4px);
+            transition: background 0.3s;
+        }
+        
+        .feature-list-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <div class="grid grid-cols-12 h-full w-full">
+            
+            <div class="col-span-7 relative h-full">
+                
+                <div class="deco-circle bg-secondary w-64 h-64 top-[-50px] left-[50px] opacity-30"></div>
+                <div class="deco-circle bg-primary w-80 h-80 bottom-[-50px] left-[-50px] opacity-20"></div>
+                <div class="deco-circle bg-secondary w-48 h-48 top-1/2 right-10 opacity-30"></div>
+
+                <div class="circle-img-wrapper w-[420px] h-[420px] top-[150px] left-[50px] z-20">
+                    <img src="https://images.unsplash.com/photo-1565060169327-0c5658ce5585?q=80&w=1000&auto=format&fit=crop" 
+                         alt="Snow Leopard" class="w-full h-full object-cover">
+                </div>
+
+                <div class="circle-img-wrapper w-[160px] h-[160px] top-[80px] left-[340px] z-30">
+                    <img src="https://images.unsplash.com/photo-1596627733475-474c6d322c36?q=80&w=400&auto=format&fit=crop" 
+                         alt="Protea Flower" class="w-full h-full object-cover">
+                </div>
+
+                <div class="circle-img-wrapper w-[200px] h-[200px] top-[180px] right-[20px] z-10">
+                    <img src="https://images.unsplash.com/photo-1563509931317-268390740924?q=80&w=400&auto=format&fit=crop" 
+                         alt="Lemur" class="w-full h-full object-cover">
+                </div>
+
+                <div class="circle-img-wrapper w-[180px] h-[180px] bottom-[100px] right-[60px] z-30">
+                    <img src="https://images.unsplash.com/photo-1463941031346-601e8529f7f4?q=80&w=400&auto=format&fit=crop" 
+                         alt="Alpine Flowers" class="w-full h-full object-cover">
+                </div>
+
+                <div class="circle-img-wrapper w-[140px] h-[140px] bottom-[60px] left-[320px] z-40">
+                    <img src="https://images.unsplash.com/photo-1544728565-3843a8508605?q=80&w=400&auto=format&fit=crop" 
+                         alt="Red Cardinal" class="w-full h-full object-cover">
+                </div>
+
+            </div>
+
+            <div class="col-span-5 pr-20 pl-4 flex flex-col justify-center h-full relative z-30">
+                
+                <div class="mb-10">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="w-6 h-[2px] bg-secondary"></span>
+                        <h2 class="text-secondary text-sm font-bold tracking-widest uppercase">
+                            Biodiversity Hotspots
+                        </h2>
+                    </div>
+                    
+                    <h1 class="text-textPrimary text-6xl font-bold leading-none mb-6">
+                        Havens of <br><span class="text-primary">Biodiversity</span>
+                    </h1>
+
+                    <p class="text-textBody text-base leading-relaxed text-justify opacity-80 font-light">
+                        Mountains are hotspots of biodiversity, providing habitats for a wide variety of plant and animal species. The varying elevations create diverse ecological zones, each with its unique set of adaptations.
+                    </p>
+                </div>
+
+                <div class="w-full bg-gradient-to-br from-primary to-[#5C7AB5] rounded-2xl p-8 shadow-2xl shadow-blue-200 transform hover:-translate-y-1 transition-transform duration-300">
+                    
+                    <div class="flex items-start gap-5">
+                        <div class="flex-shrink-0">
+                            <div class="w-12 h-12 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center text-white text-xl border border-white/30">
+                                <i class="fa-solid fa-leaf"></i>
+                            </div>
+                        </div>
+
+                        <div class="flex-grow">
+                            <h3 class="text-white font-bold text-lg mb-4">Key Ecological Roles</h3>
+                            <ul>
+                                <li class="feature-list-item">
+                                    Diverse habitats due to elevation changes.
+                                </li>
+                                <li class="feature-list-item">
+                                    Home to many endemic species.
+                                </li>
+                                <li class="feature-list-item mb-0">
+                                    Support rare plant and animal life.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+    </div>
+
+</body>
+</html>

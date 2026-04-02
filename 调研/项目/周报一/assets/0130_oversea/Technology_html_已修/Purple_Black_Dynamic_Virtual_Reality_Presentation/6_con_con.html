@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Reality Vision - Design Concept</title>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- Google Fonts via Baidu CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        /* Global Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container - Strict 1280x720 */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #000000; /* Primary Background */
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr 480px; /* Left Content / Right Image */
+        }
+
+        /* Typography Utilities */
+        .text-primary { color: #FFFFFF; }
+        .text-secondary { color: #B0B0B0; }
+        .text-highlight { color: #BCA6F6; } /* Lavender */
+        
+        /* Gradient Utilities */
+        .bg-gradient-accent {
+            background: linear-gradient(135deg, #4A3AFF, #C471ED);
+        }
+
+        /* Custom Scrollbar hide */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cyber-black': '#050505',
+                        'cyber-gray': '#B0B0B0',
+                        'cyber-lavender': '#BCA6F6',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans SC', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Main Container -->
+    <div id="page_container">
+        
+        <!-- LEFT COLUMN: Content -->
+        <div class="relative flex flex-col justify-between px-16 py-12 z-10">
+            
+            <!-- 1. Header / Navigation -->
+            <header class="flex justify-between items-center w-full mb-8">
+                <!-- Brand -->
+                <div class="flex items-center gap-2">
+                    <h3 class="text-white text-xs font-bold tracking-[0.2em] uppercase opacity-80">Studio Shodwe</h3>
+                </div>
+                
+                <!-- Nav Links -->
+                <nav>
+                    <ul class="flex gap-10 list-none">
+                        <li><a href="#" class="text-xs text-cyber-gray hover:text-white transition-colors tracking-widest uppercase no-underline">About</a></li>
+                        <li><a href="#" class="text-xs text-white font-semibold tracking-widest uppercase no-underline">Project</a></li>
+                        <li><a href="#" class="text-xs text-cyber-gray hover:text-white transition-colors tracking-widest uppercase no-underline">Service</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <!-- 2. Hero Title Section -->
+            <div class="mb-10">
+                <p class="text-cyber-gray text-xs font-bold tracking-[0.15em] uppercase mb-2">Studio Shodwe</p>
+                <h1 class="text-6xl font-bold text-cyber-lavender tracking-tight leading-tight">
+                    Virtual Reality Vision
+                </h1>
+            </div>
+
+            <!-- 3. Feature Grid (2x2) -->
+            <div class="grid grid-cols-2 gap-x-12 gap-y-10">
+                
+                <!-- Item 01 -->
+                <div class="flex flex-col gap-4">
+                    <div class="flex items-center gap-4">
+                        <!-- Number Box -->
+                        <div class="w-12 h-12 bg-gradient-accent rounded-lg flex items-center justify-center shadow-lg shadow-purple-900/20">
+                            <span class="text-white font-bold text-lg">01</span>
+                        </div>
+                        <h2 class="text-2xl text-white font-bold tracking-wide">Our Vision</h2>
+                    </div>
+                    <!-- Description -->
+                    <p class="text-cyber-gray text-sm leading-relaxed text-justify pr-4">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                    </p>
+                </div>
+
+                <!-- Item 02 -->
+                <div class="flex flex-col gap-4">
+                    <div class="flex items-center gap-4">
+                        <!-- Number Box -->
+                        <div class="w-12 h-12 bg-gradient-accent rounded-lg flex items-center justify-center shadow-lg shadow-purple-900/20">
+                            <span class="text-white font-bold text-lg">02</span>
+                        </div>
+                        <h2 class="text-2xl text-white font-bold tracking-wide">Our Strategy</h2>
+                    </div>
+                    <!-- Description -->
+                    <p class="text-cyber-gray text-sm leading-relaxed text-justify pr-4">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                    </p>
+                </div>
+
+                <!-- Item 03 -->
+                <div class="flex flex-col gap-4">
+                    <div class="flex items-center gap-4">
+                        <!-- Number Box -->
+                        <div class="w-12 h-12 bg-gradient-accent rounded-lg flex items-center justify-center shadow-lg shadow-purple-900/20">
+                            <span class="text-white font-bold text-lg">03</span>
+                        </div>
+                        <h2 class="text-2xl text-white font-bold tracking-wide">Our Mission</h2>
+                    </div>
+                    <!-- Description -->
+                    <p class="text-cyber-gray text-sm leading-relaxed text-justify pr-4">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                    </p>
+                </div>
+
+                <!-- Item 04 -->
+                <div class="flex flex-col gap-4">
+                    <div class="flex items-center gap-4">
+                        <!-- Number Box -->
+                        <div class="w-12 h-12 bg-gradient-accent rounded-lg flex items-center justify-center shadow-lg shadow-purple-900/20">
+                            <span class="text-white font-bold text-lg">04</span>
+                        </div>
+                        <h2 class="text-2xl text-white font-bold tracking-wide">Our Future</h2>
+                    </div>
+                    <!-- Description -->
+                    <p class="text-cyber-gray text-sm leading-relaxed text-justify pr-4">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Footer / Bottom Decoration -->
+            <div class="mt-auto pt-4 border-t border-white/10 flex items-center gap-2">
+                 <div class="w-2 h-2 rounded-full bg-cyber-lavender"></div>
+                 <span class="text-cyber-gray text-xs tracking-widest">NEXT GENERATION TECHNOLOGY</span>
+            </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN: Image -->
+        <div class="relative w-full h-full bg-[#0a0a0a]">
+            <!-- Decorative Overlay Gradient for Ambient Glow -->
+            <div class="absolute inset-0 bg-gradient-to-t from-[#662D91]/60 via-transparent to-transparent z-10 mix-blend-overlay pointer-events-none"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent z-10 pointer-events-none"></div>
+            
+            <!-- Main Image -->
+            <div class="w-full h-full overflow-hidden">
+                <img 
+                    src="https://images.unsplash.com/photo-1622979135228-097edccc7460?q=80&w=960&auto=format&fit=crop" 
+                    alt="Man using VR headset in neon environment" 
+                    class="w-full h-full object-cover opacity-90"
+                >
+                <!-- 480*720 -->
+            </div>
+            
+            <!-- Floating Tech Decoration -->
+            <div class="absolute bottom-12 right-12 z-20 flex flex-col items-end gap-1">
+                 <div class="w-16 h-1 bg-white/20 rounded"></div>
+                 <div class="w-8 h-1 bg-cyber-lavender rounded"></div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

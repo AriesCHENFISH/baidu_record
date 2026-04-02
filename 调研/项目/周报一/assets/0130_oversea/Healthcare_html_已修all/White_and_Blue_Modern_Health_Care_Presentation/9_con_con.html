@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environment - Borcelle Hospital</title>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { medical: { dark: '#01315B', primary: '#005BB7', light: '#F0F7FF', accent: '#22C55E' } }, fontFamily: { sans: ['"Noto Sans SC"', 'sans-serif'] } } }
+        }
+    </script>
+    <style>
+        .page_container { width: 1280px; height: 720px; background-color: #FDFDFD; position: relative; margin: 0 auto; overflow: hidden; display: flex; flex-direction: column; }
+        .thin-grid { background-image: linear-gradient(#e5e7eb 1px, transparent 1px), linear-gradient(90deg, #e5e7eb 1px, transparent 1px); background-size: 40px 40px; mask-image: radial-gradient(circle at 100% 0%, black, transparent 80%); }
+        .accent-line { position: absolute; width: 4px; height: 80px; background: #22C55E; left: -20px; top: 8px; }
+        .bg-watermark { position: absolute; font-size: 240px; font-weight: 900; color: #005BB7; opacity: 0.04; bottom: -40px; left: -20px; line-height: 0.8; pointer-events: none; }
+    </style>
+</head>
+<body>
+    <div class="page_container">
+        <div class="absolute inset-0 thin-grid opacity-30"></div>
+        <div class="bg-watermark">COMFORT</div>
+
+        <header class="relative z-50 pt-10 px-20 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <div class="w-10 h-10 bg-medical-primary flex items-center justify-center rounded-xl shadow-md"><i class="fa-solid fa-hospital text-white text-xl"></i></div>
+                <div>
+                    <h2 class="text-xl font-black text-medical-dark tracking-tighter leading-none">BORCELLE</h2>
+                    <p class="text-[14px] text-medical-primary font-bold tracking-[0.1em] uppercase">Medical Excellence</p>
+                </div>
+            </div>
+        </header>
+
+        <main class="flex-1 grid grid-cols-12 gap-8 px-20 py-8 relative z-10 items-center">
+            <!-- Left: Textual Content -->
+            <div class="col-span-5 pr-10">
+                <div class="relative mb-8">
+                    <div class="accent-line"></div>
+                    <p class="text-medical-primary font-bold text-sm tracking-[0.2em] mb-3 uppercase flex items-center gap-3">
+                        <span class="w-8 h-[2px] bg-medical-primary"></span> Luxury & Wellness
+                    </p>
+                    <h1 class="text-[56px] font-black text-medical-dark leading-[0.95] mb-6 tracking-tighter italic">Modern <br>Recovery <span class="text-medical-primary">Spaces.</span></h1>
+                </div>
+                <div class="space-y-6">
+                    <p class="text-gray-600 text-[16px] leading-relaxed border-l-4 border-medical-accent pl-6">
+                        We believe that a healing environment is just as critical as clinical treatment. Our smart-wards feature <span class="text-medical-dark font-bold">circadian lighting systems</span> and private lush garden views.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-medical-light p-4 rounded-xl border border-medical-primary/10">
+                            <i class="fa-solid fa-bed text-medical-primary mb-2"></i>
+                            <p class="text-sm font-black text-medical-dark">VIP Suites</p>
+                            <p class="text-xs text-gray-500">Fully equipped luxury care</p>
+                        </div>
+                        <div class="bg-medical-light p-4 rounded-xl border border-medical-primary/10">
+                            <i class="fa-solid fa-leaf text-medical-primary mb-2"></i>
+                            <p class="text-sm font-black text-medical-dark">Zen Gardens</p>
+                            <p class="text-xs text-gray-500">Outdoor therapeutic zones</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Double Image Composite -->
+            <div class="col-span-7 relative h-full flex items-center">
+                <!-- Large Image -->
+                <div class="w-[80%] h-[400px] rounded-[40px] overflow-hidden shadow-2xl border-[10px] border-white z-10 ml-auto">
+                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=1200&auto=format&fit=crop" class="w-full h-full object-cover">
+                </div>
+                <!-- Small Overlapping Image -->
+                <div class="absolute bottom-10 left-0 w-[300px] h-[220px] rounded-3xl overflow-hidden shadow-2xl border-[8px] border-white z-20">
+                    <img src="https://images.unsplash.com/photo-1538108197017-c1346673919e?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-medical-dark/20 flex items-end p-4">
+                        <span class="text-white font-black text-sm uppercase bg-medical-primary/80 px-3 py-1 rounded-md">Smart Lounge</span>
+                    </div>
+                </div>
+                <!-- Decorative Element -->
+                <div class="absolute top-10 right-10 w-32 h-32 bg-medical-accent/10 rounded-full blur-2xl"></div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

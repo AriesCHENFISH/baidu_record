@@ -1,0 +1,1675 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Responsive Merged HTML
+  </title>
+  <style>
+   body {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .page-wrapper {
+                width: 100%;
+                margin: 15px 0;
+                position: relative;
+            }
+            .page-title {
+                background: #f5f5f5;
+                padding: 5px 10px;
+                border-radius: 3px 3px 0 0;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+            }
+            .responsive-iframe {
+                border: none;
+                width: 100%;
+                display: block;
+            }
+  </style>
+ </head>
+ <body>
+  <!-- 内容将在这里插入 -->
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 1
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;AI Tech Cover&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&amp;family=Inter:wght@300;400;600;800&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative; overflow: hidden;
+            background-color: #0F1A2E; font-family: 'Inter', 'Noto Sans SC', sans-serif;
+            color: #FFFFFF;
+        }
+        .font-tech { font-family: 'Orbitron', sans-serif; }
+
+        /* 统一网格背景 */
+        .circuit-bg {
+            position: absolute; inset: 0; opacity: 0.1;
+            background: linear-gradient(90deg, #5AD0F9 1px, transparent 1px), linear-gradient(#5AD0F9 1px, transparent 1px);
+            background-size: 50px 50px; pointer-events: none; z-index: 0;
+        }
+
+        /* 原有抽象圆环装饰 (增强) */
+        .abstract-orb {
+            position: absolute; width: 900px; height: 900px; border: 1px solid rgba(90, 208, 249, 0.05);
+            border-radius: 50%; top: 50%; right: -300px; transform: translateY(-50%); z-index: 1;
+        }
+        .orb-inner {
+            position: absolute; inset: 150px; border: 2px dashed rgba(90, 208, 249, 0.15);
+            border-radius: 50%; animation: spin 60s linear infinite;
+        }
+        .orb-core {
+            position: absolute; inset: 300px; background: radial-gradient(circle, rgba(90, 208, 249, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+
+        /* 右侧新增加的科技元素 */
+        .tech-data-stream {
+            position: absolute; top: 10%; right: 5%; width: 400px; height: 600px;
+            pointer-events: none; z-index: 2;
+            background: 
+                linear-gradient(transparent 95%, rgba(90, 208, 249, 0.3) 95%) 0 0 / 20px 20px,
+                linear-gradient(90deg, transparent 95%, rgba(90, 208, 249, 0.3) 95%) 0 0 / 20px 20px;
+            mask-image: radial-gradient(circle at center, black 30%, transparent 80%);
+            opacity: 0.4; transform: perspective(1000px) rotateY(-30deg);
+        }
+
+        .floating-hud-element {
+            position: absolute; border: 1px solid #5AD0F9; color: #5AD0F9; font-family: 'Orbitron', sans-serif;
+            font-size: 10px; padding: 4px 8px; opacity: 0.6;
+        }
+        .hud-e1 { top: 20%; right: 35%; }
+        .hud-e2 { top: 45%; right: 15%; border-style: dashed; }
+        .hud-e3 { bottom: 30%; right: 25%; }
+
+        .connecting-lines path {
+            fill: none; stroke: #5AD0F9; stroke-width: 1; stroke-opacity: 0.3;
+            stroke-dasharray: 5, 5; animation: dash 20s linear infinite;
+        }
+        @keyframes dash { to { stroke-dashoffset: 100; } }
+
+        /* 汇报人框 */
+        .presenter-box {
+            background: rgba(43, 65, 98, 0.2); border: 1px solid rgba(90, 208, 249, 0.2);
+            backdrop-filter: blur(10px); padding: 20px 30px; border-left: 4px solid #5AD0F9;
+            position: relative; z-index: 10;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;circuit-bg&quot;&gt;&lt;/div&gt;
+        
+        &lt;div class=&quot;abstract-orb&quot;&gt;
+            &lt;div class=&quot;orb-inner&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;orb-core&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;absolute top-0 right-0 w-[600px] h-[600px] bg-[#5AD0F9]/10 blur-[150px] z-0&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;tech-data-stream&quot;&gt;&lt;/div&gt;
+        &lt;svg class=&quot;absolute top-0 right-0 w-1/2 h-full z-1 connecting-lines&quot; viewBox=&quot;0 0 640 720&quot;&gt;
+            &lt;path d=&quot;M 500 100 L 300 300 L 450 500 L 200 650&quot; /&gt;
+            &lt;path d=&quot;M 100 200 L 250 400 L 50 600&quot; /&gt;
+            &lt;circle cx=&quot;300&quot; cy=&quot;300&quot; r=&quot;5&quot; fill=&quot;#5AD0F9&quot; opacity=&quot;0.5&quot; /&gt;
+            &lt;circle cx=&quot;450&quot; cy=&quot;500&quot; r=&quot;5&quot; fill=&quot;#5AD0F9&quot; opacity=&quot;0.5&quot; /&gt;
+            &lt;circle cx=&quot;250&quot; cy=&quot;400&quot; r=&quot;5&quot; fill=&quot;#5AD0F9&quot; opacity=&quot;0.5&quot; /&gt;
+        &lt;/svg&gt;
+        &lt;div class=&quot;floating-hud-element hud-e1&quot;&gt;DATA_FLOW: OPTIMAL&lt;/div&gt;
+        &lt;div class=&quot;floating-hud-element hud-e2&quot;&gt;NEURAL_NET_STATUS: ACTIVE&lt;/div&gt;
+        &lt;div class=&quot;floating-hud-element hud-e3&quot;&gt;SYS_ID: CX-9904&lt;/div&gt;
+
+
+        &lt;div class=&quot;relative z-10 p-16 h-full flex flex-col justify-between&quot;&gt;
+            
+            &lt;div class=&quot;flex items-center gap-5&quot;&gt;
+                &lt;div class=&quot;relative w-14 h-14 flex items-center justify-center&quot;&gt;
+                    &lt;div class=&quot;absolute inset-0 bg-gradient-to-br from-[#5AD0F9]/30 via-transparent to-[#5AD0F9]/10 rounded-lg border border-[#5AD0F9]/40 shadow-[0_0_20px_rgba(90,208,249,0.3)] rotate-[25deg]&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;relative z-10 w-11 h-11 border-2 border-[#5AD0F9] flex items-center justify-center rounded-md bg-[#192A45] shadow-[inset_0_0_15px_rgba(90,208,249,0.4)]&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-microchip text-[#5AD0F9] text-2xl&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;flex flex-col&quot;&gt;
+                    &lt;span class=&quot;text-[#5AD0F9] font-bold tracking-[0.35em] text-lg font-tech leading-tight&quot;&gt;STUDIO&lt;/span&gt;
+                    &lt;span class=&quot;text-[#E0E0E0] font-light tracking-[0.4em] text-xs opacity-70 pl-0.5 uppercase&quot;&gt;Shodwe&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;mt-10&quot;&gt;
+                &lt;h2 class=&quot;text-[#5AD0F9] font-tech tracking-[0.5em] text-xl mb-4 opacity-80 uppercase&quot;&gt;Annual Innovation Report&lt;/h2&gt;
+                &lt;h1 class=&quot;text-[160px] font-black font-tech leading-[0.8] tracking-tighter&quot;&gt;
+                    &lt;span class=&quot;text-[#5AD0F9] drop-shadow-[0_0_30px_rgba(90,208,249,0.5)]&quot;&gt;AI&lt;/span&gt;&lt;br&gt;
+                    &lt;span class=&quot;text-white&quot;&gt;TECH&lt;/span&gt;
+                &lt;/h1&gt;
+                &lt;div class=&quot;flex items-center gap-6 mt-12&quot;&gt;
+                    &lt;div class=&quot;h-[2px] w-32 bg-[#5AD0F9]&quot;&gt;&lt;/div&gt;
+                    &lt;p class=&quot;text-2xl font-light tracking-widest text-[#E0E0E0]&quot;&gt;SHAPING THE FUTURE INTELLIGENCE&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;flex items-end justify-between relative z-20&quot;&gt;
+                &lt;div class=&quot;presenter-box&quot;&gt;
+                    &lt;div class=&quot;flex gap-10&quot;&gt;
+                        &lt;div&gt;
+                            &lt;p class=&quot;text-[10px] font-tech text-[#5AD0F9] tracking-widest mb-1 opacity-60&quot;&gt;REPORTED BY&lt;/p&gt;
+                            &lt;p class=&quot;text-lg font-bold tracking-wider&quot;&gt;Alex Riverson&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;border-l border-white/10 pl-10&quot;&gt;
+                            &lt;p class=&quot;text-[10px] font-tech text-[#5AD0F9] tracking-widest mb-1 opacity-60&quot;&gt;POSITION&lt;/p&gt;
+                            &lt;p class=&quot;text-lg font-light tracking-wider text-gray-300&quot;&gt;Chief AI Strategist&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;border-l border-white/10 pl-10&quot;&gt;
+                            &lt;p class=&quot;text-[10px] font-tech text-[#5AD0F9] tracking-widest mb-1 opacity-60&quot;&gt;DATE&lt;/p&gt;
+                            &lt;p class=&quot;text-lg font-light tracking-wider text-gray-300&quot;&gt;January 16, 2026&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                
+                &lt;div class=&quot;text-right opacity-40&quot;&gt;
+                    &lt;p class=&quot;font-tech text-xs tracking-[0.5em]&quot;&gt;INTERNAL USE ONLY&lt;/p&gt;
+                    &lt;p class=&quot;font-tech text-xs tracking-[0.5em] mt-1&quot;&gt;CORE_SYSTEM_V.1.0&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 2
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;AI Tech Contents&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&amp;family=Inter:wght@300;400;600&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative; overflow: hidden;
+            background-color: #0F1A2E; font-family: 'Inter', 'Noto Sans SC', sans-serif;
+            color: #FFFFFF;
+        }
+        .font-tech { font-family: 'Orbitron', sans-serif; }
+
+        .circuit-bg {
+            position: absolute; inset: 0; opacity: 0.1;
+            background: linear-gradient(90deg, #5AD0F9 1px, transparent 1px), linear-gradient(#5AD0F9 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+
+        /* 目录项样式 */
+        .toc-item {
+            display: flex; align-items: center; gap: 20px; padding: 12px 20px;
+            background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(90, 208, 249, 0.1);
+            transition: all 0.3s ease; cursor: pointer;
+        }
+        .toc-item:hover {
+            background: rgba(90, 208, 249, 0.1); border-color: #5AD0F9;
+            transform: translateX(10px);
+        }
+        .toc-num {
+            width: 35px; height: 35px; border: 1px solid #5AD0F9; display: flex;
+            align-items: center; justify-content: center; font-family: 'Orbitron', sans-serif;
+            font-size: 14px; color: #5AD0F9; position: relative;
+        }
+        .toc-num::after {
+            content: ''; position: absolute; inset: -4px; border: 1px solid rgba(90, 208, 249, 0.3);
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;circuit-bg&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;relative z-10 p-12 h-full flex flex-col&quot;&gt;
+            
+            &lt;div class=&quot;flex items-center gap-5 mb-12&quot;&gt;
+                &lt;div class=&quot;relative w-14 h-14 flex items-center justify-center&quot;&gt;
+                    &lt;div class=&quot;absolute inset-0 bg-gradient-to-br from-[#5AD0F9]/30 via-transparent to-[#5AD0F9]/10 rounded-lg border border-[#5AD0F9]/40 shadow-[0_0_20px_rgba(90,208,249,0.3)] rotate-[25deg]&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;relative z-10 w-11 h-11 border-2 border-[#5AD0F9] flex items-center justify-center rounded-md bg-[#192A45] shadow-[inset_0_0_15px_rgba(90,208,249,0.4)]&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-microchip text-[#5AD0F9] text-2xl&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;flex flex-col&quot;&gt;
+                    &lt;span class=&quot;text-[#5AD0F9] font-bold tracking-[0.35em] text-lg font-tech leading-tight&quot;&gt;STUDIO&lt;/span&gt;
+                    &lt;span class=&quot;text-[#E0E0E0] font-light tracking-[0.4em] text-xs opacity-70 pl-0.5 uppercase&quot;&gt;Shodwe&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;flex items-end gap-6 mb-12&quot;&gt;
+                &lt;h1 class=&quot;text-6xl font-black font-tech tracking-wider uppercase&quot;&gt;Contents&lt;/h1&gt;
+                &lt;div class=&quot;flex-grow h-[1px] bg-gradient-to-r from-[#5AD0F9] to-transparent mb-4&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;grid grid-cols-2 gap-x-16 gap-y-6 px-4&quot;&gt;
+                
+                &lt;div class=&quot;space-y-4&quot;&gt;
+                    &lt;div class=&quot;toc-item&quot;&gt;
+                        &lt;div class=&quot;toc-num&quot;&gt;01&lt;/div&gt;
+                        &lt;span class=&quot;text-lg font-bold tracking-widest uppercase&quot;&gt;Introduction to AI Tech&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;toc-item&quot;&gt;
+                        &lt;div class=&quot;toc-num&quot;&gt;02&lt;/div&gt;
+                        &lt;span class=&quot;text-lg font-bold tracking-widest uppercase&quot;&gt;Machine Learning Core&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;toc-item&quot;&gt;
+                        &lt;div class=&quot;toc-num&quot;&gt;03&lt;/div&gt;
+                        &lt;span class=&quot;text-lg font-bold tracking-widest uppercase&quot;&gt;Natural Language Processing&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;toc-item&quot;&gt;
+                        &lt;div class=&quot;toc-num&quot;&gt;04&lt;/div&gt;
+                        &lt;span class=&quot;text-lg font-bold tracking-widest uppercase&quot;&gt;Computer Vision Systems&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;toc-item&quot;&gt;
+                        &lt;div class=&quot;toc-num&quot;&gt;05&lt;/div&gt;
+                        &lt;span class=&quot;text-lg font-bold tracking-widest uppercase&quot;&gt;Robotics &amp; Automation&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;space-y-4&quot;&gt;
+                    &lt;div class=&quot;toc-item&quot;&gt;
+                        &lt;div class=&quot;toc-num&quot;&gt;06&lt;/div&gt;
+                        &lt;span class=&quot;text-lg font-bold tracking-widest uppercase&quot;&gt;AI Security Protocols&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;toc-item&quot;&gt;
+                        &lt;div class=&quot;toc-num&quot;&gt;07&lt;/div&gt;
+                        &lt;span class=&quot;text-lg font-bold tracking-widest uppercase&quot;&gt;Healthcare Integration&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;toc-item&quot;&gt;
+                        &lt;div class=&quot;toc-num&quot;&gt;08&lt;/div&gt;
+                        &lt;span class=&quot;text-lg font-bold tracking-widest uppercase&quot;&gt;Financial Intelligence&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;toc-item&quot;&gt;
+                        &lt;div class=&quot;toc-num&quot;&gt;09&lt;/div&gt;
+                        &lt;span class=&quot;text-lg font-bold tracking-widest uppercase&quot;&gt;Retail Transformation&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;toc-item&quot;&gt;
+                        &lt;div class=&quot;toc-num&quot;&gt;10&lt;/div&gt;
+                        &lt;span class=&quot;text-lg font-bold tracking-widest uppercase&quot;&gt;Future Prospects &amp; Beyond&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+
+            &lt;div class=&quot;mt-auto flex justify-between items-center opacity-30&quot;&gt;
+                &lt;div class=&quot;flex gap-2&quot;&gt;
+                    &lt;div class=&quot;w-12 h-1 bg-[#5AD0F9]&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-4 h-1 bg-[#5AD0F9]&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;span class=&quot;text-[10px] font-tech tracking-[1em] text-[#5AD0F9]&quot;&gt;SYSTEM_TOC_SCAN_READY&lt;/span&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 3
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Machine Learning Presentation&lt;/title&gt;
+    
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&amp;family=Orbitron:wght@500;700;900&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+
+    &lt;style&gt;
+        /* CSS Reset &amp; Basic Setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container Definition */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            font-family: 'Inter', 'Noto Sans SC', sans-serif;
+            background-color: #192A45;
+            /* Cyberpunk Gradient Background */
+            background: linear-gradient(135deg, #192A45 0%, #0F1A2E 100%);
+        }
+
+        /* Decorative Background Circuit Pattern (Simulated via CSS) */
+        .bg-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(25, 42, 69, 0.9), rgba(15, 26, 46, 0.95)),
+                url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&amp;w=2070&amp;auto=format&amp;fit=crop'); 
+            background-size: cover;
+            background-position: center;
+            opacity: 0.6;
+            z-index: 1;
+        }
+
+        /* Content Layer */
+        .content-layer {
+            position: relative;
+            z-index: 10;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 40px 60px;
+        }
+
+        /* Custom Scrollbar hide */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Tech Frame / HUD Styles */
+        .tech-frame {
+            position: relative;
+            padding: 4px;
+            background: linear-gradient(45deg, rgba(90, 208, 249, 0.1), transparent);
+            border: 1px solid rgba(90, 208, 249, 0.3);
+        }
+
+        /* HUD Corners */
+        .corner {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-style: solid;
+            border-color: #5AD0F9;
+            box-shadow: 0 0 8px #5AD0F9;
+        }
+        .corner-tl { top: -2px; left: -2px; border-width: 3px 0 0 3px; }
+        .corner-tr { top: -2px; right: -2px; border-width: 3px 3px 0 0; }
+        .corner-bl { bottom: -2px; left: -2px; border-width: 0 0 3px 3px; }
+        .corner-br { bottom: -2px; right: -2px; border-width: 0 3px 3px 0; }
+
+        /* Tech Circle for List Numbers */
+        .tech-circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid rgba(90, 208, 249, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0 0 15px rgba(90, 208, 249, 0.1);
+        }
+        /* Rotating ring simulation */
+        .tech-circle::before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            right: -4px;
+            bottom: -4px;
+            border-radius: 50%;
+            border: 1px dashed rgba(90, 208, 249, 0.6);
+            transform: rotate(30deg);
+        }
+
+        /* Typography Utilities */
+        .font-tech {
+            font-family: 'Orbitron', sans-serif;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;bg-pattern&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;content-layer&quot;&gt;
+            
+            &lt;div class=&quot;w-full flex justify-between items-center mb-10 h-20&quot;&gt;
+                &lt;div class=&quot;flex items-center gap-5 group cursor-default&quot;&gt;
+                    &lt;div class=&quot;relative w-14 h-14 flex items-center justify-center&quot;&gt;
+                        &lt;div class=&quot;absolute inset-0 bg-gradient-to-br from-[#5AD0F9]/30 via-transparent to-[#5AD0F9]/10 rounded-lg border border-[#5AD0F9]/40 shadow-[0_0_20px_rgba(90,208,249,0.3)] rotate-[25deg] group-hover:rotate-[45deg] transition-transform duration-500 ease-out&quot;&gt;&lt;/div&gt;
+                        
+                        &lt;div class=&quot;relative z-10 w-11 h-11 border-2 border-[#5AD0F9] flex items-center justify-center rounded-md bg-[#192A45] shadow-[inset_0_0_15px_rgba(90,208,249,0.4)]&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-microchip text-[#5AD0F9] text-2xl drop-shadow-[0_0_8px_#5AD0F9]&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    
+                    &lt;div class=&quot;flex flex-col justify-center&quot;&gt;
+                        &lt;span class=&quot;text-[#5AD0F9] font-bold tracking-[0.35em] text-lg font-tech leading-tight drop-shadow-[0_0_8px_rgba(90,208,249,0.8)]&quot;&gt;STUDIO&lt;/span&gt;
+                        &lt;span class=&quot;text-[#E0E0E0] font-light tracking-[0.4em] text-xs opacity-70 pl-0.5&quot;&gt;SHODWE&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;grid grid-cols-12 gap-12 h-full pb-10&quot;&gt;
+                
+                &lt;div class=&quot;col-span-5 flex flex-col justify-center&quot;&gt;
+                    &lt;div class=&quot;mb-10&quot;&gt;
+                        &lt;h1 class=&quot;text-6xl font-black leading-none tracking-tighter font-tech&quot;&gt;
+                            &lt;div class=&quot;text-[#5AD0F9] drop-shadow-[0_0_10px_rgba(90,208,249,0.5)] mb-2&quot;&gt;MACHINE&lt;/div&gt;
+                            &lt;div class=&quot;text-white&quot;&gt;LEARNING&lt;/div&gt;
+                        &lt;/h1&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;tech-frame w-full aspect-[4/3] bg-[#192A45]/50 relative mt-4 group&quot;&gt;
+                        &lt;div class=&quot;corner corner-tl&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;corner corner-tr&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;corner corner-bl&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;corner corner-br&quot;&gt;&lt;/div&gt;
+                        
+                        &lt;div class=&quot;absolute right-[-8px] top-1/2 -translate-y-1/2 w-[4px] h-12 bg-[#5AD0F9] shadow-[0_0_10px_#5AD0F9]&quot;&gt;&lt;/div&gt;
+
+                        &lt;div class=&quot;w-full h-full overflow-hidden relative&quot;&gt;
+                            &lt;div class=&quot;absolute inset-0 bg-gradient-to-t from-[#192A45] via-transparent to-transparent z-10 opacity-40&quot;&gt;&lt;/div&gt;
+                            
+                            &lt;img src=&quot;https://images.unsplash.com/photo-1535378437327-b7149b379c2a?q=80&amp;w=1000&amp;auto=format&amp;fit=crop&quot; 
+                                     class=&quot;w-full h-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-105&quot; 
+                                     alt=&quot;Futuristic AI Robot Head&quot;&gt;
+                            &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;col-span-7 flex flex-col justify-center pl-8 relative&quot;&gt;
+                    &lt;div class=&quot;absolute left-0 top-10 bottom-10 w-[1px] bg-gradient-to-b from-transparent via-[#2B4162] to-transparent&quot;&gt;&lt;/div&gt;
+
+                    &lt;ul class=&quot;flex flex-col gap-10&quot;&gt;
+                        
+                        &lt;li class=&quot;flex gap-6 items-start group&quot;&gt;
+                            &lt;div class=&quot;flex-shrink-0 pt-1&quot;&gt;
+                                &lt;div class=&quot;tech-circle&quot;&gt;
+                                    &lt;span class=&quot;text-[#5AD0F9] font-mono font-bold text-lg&quot;&gt;1.&lt;/span&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;flex flex-col gap-2&quot;&gt;
+                                &lt;h3 class=&quot;text-white text-xl font-bold tracking-wide group-hover:text-[#5AD0F9] transition-colors&quot;&gt;
+                                    PREDICTIVE MODELS
+                                &lt;/h3&gt;
+                                &lt;p class=&quot;text-[#E0E0E0] text-sm leading-relaxed font-light opacity-80&quot;&gt;
+                                    Analyze historical data to forecast future outcomes with high precision. Our algorithms adapt to changing patterns in real-time, ensuring robust predictive capabilities for complex scenarios.
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/li&gt;
+
+                        &lt;li class=&quot;flex gap-6 items-start group&quot;&gt;
+                            &lt;div class=&quot;flex-shrink-0 pt-1&quot;&gt;
+                                &lt;div class=&quot;tech-circle&quot;&gt;
+                                    &lt;span class=&quot;text-[#5AD0F9] font-mono font-bold text-lg&quot;&gt;2.&lt;/span&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;flex flex-col gap-2&quot;&gt;
+                                &lt;h3 class=&quot;text-white text-xl font-bold tracking-wide group-hover:text-[#5AD0F9] transition-colors&quot;&gt;
+                                    AUTOMATED DECISION-MAKING
+                                &lt;/h3&gt;
+                                &lt;p class=&quot;text-[#E0E0E0] text-sm leading-relaxed font-light opacity-80&quot;&gt;
+                                    Streamline operations by delegating routine choices to intelligent systems. Reduce human error and latency while maintaining full audit trails for compliance and transparency.
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/li&gt;
+
+                        &lt;li class=&quot;flex gap-6 items-start group&quot;&gt;
+                            &lt;div class=&quot;flex-shrink-0 pt-1&quot;&gt;
+                                &lt;div class=&quot;tech-circle&quot;&gt;
+                                    &lt;span class=&quot;text-[#5AD0F9] font-mono font-bold text-lg&quot;&gt;3.&lt;/span&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;flex flex-col gap-2&quot;&gt;
+                                &lt;h3 class=&quot;text-white text-xl font-bold tracking-wide group-hover:text-[#5AD0F9] transition-colors&quot;&gt;
+                                    DATA-DRIVEN INSIGHTS
+                                &lt;/h3&gt;
+                                &lt;p class=&quot;text-[#E0E0E0] text-sm leading-relaxed font-light opacity-80&quot;&gt;
+                                    Transform raw unstructured data into actionable strategic intelligence. Unlock hidden correlations that drive innovation and competitive advantage in your market sector.
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/li&gt;
+
+                    &lt;/ul&gt;
+
+                    &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 4
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Natural Language Processing - AI Keynote&lt;/title&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&amp;family=Orbitron:wght@500;700;900&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+
+    &lt;style&gt;
+        /* CSS Reset &amp; Global Standards */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container - Strict Dimensions */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #192A45; 
+            overflow: hidden;
+            font-family: 'Inter', 'Noto Sans SC', sans-serif;
+            color: #FFFFFF;
+        }
+
+        /* 背景纹理 */
+        .bg-pattern {
+            position: absolute; inset: 0; opacity: 0.05; pointer-events: none;
+            background-image: linear-gradient(90deg, #5AD0F9 1px, transparent 1px), linear-gradient(#5AD0F9 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        /* Fonts */
+        .font-tech { font-family: 'Orbitron', sans-serif; }
+
+        /* HUD Corners for the text box */
+        .text-box-frame {
+            position: relative;
+            background: rgba(43, 65, 98, 0.2);
+            border: 1px solid rgba(90, 208, 249, 0.2);
+            backdrop-filter: blur(4px);
+            padding: 30px;
+        }
+
+        .corner {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border-style: solid;
+            border-color: #5AD0F9;
+        }
+        .corner-tl { top: -2px; left: -2px; border-width: 2px 0 0 2px; }
+        .corner-tr { top: -2px; right: -2px; border-width: 2px 2px 0 0; }
+        .corner-bl { bottom: -2px; left: -2px; border-width: 0 0 2px 2px; }
+        .corner-br { bottom: -2px; right: -2px; border-width: 0 2px 2px 0; }
+
+        .side-accent {
+            position: absolute;
+            left: -1px;
+            top: 20%;
+            height: 60%;
+            width: 3px;
+            background: #5AD0F9;
+            box-shadow: 0 0 10px #5AD0F9;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot; class=&quot;bg-[linear-gradient(135deg,#192A45_0%,#0F1A2E_100%)]&quot;&gt;
+        
+        &lt;div class=&quot;bg-pattern&quot;&gt;&lt;/div&gt;
+        
+        &lt;div class=&quot;relative z-10 w-full h-full flex flex-col p-12&quot;&gt;
+            
+            &lt;div class=&quot;flex items-center gap-5 mb-8&quot;&gt;
+                &lt;div class=&quot;relative w-14 h-14 flex items-center justify-center&quot;&gt;
+                    &lt;div class=&quot;absolute inset-0 bg-gradient-to-br from-[#5AD0F9]/30 via-transparent to-[#5AD0F9]/10 rounded-lg border border-[#5AD0F9]/40 shadow-[0_0_20px_rgba(90,208,249,0.3)] rotate-[25deg]&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;relative z-10 w-11 h-11 border-2 border-[#5AD0F9] flex items-center justify-center rounded-md bg-[#192A45] shadow-[inset_0_0_15px_rgba(90,208,249,0.4)]&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-microchip text-[#5AD0F9] text-2xl drop-shadow-[0_0_8px_#5AD0F9]&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;flex flex-col&quot;&gt;
+                    &lt;span class=&quot;text-[#5AD0F9] font-bold tracking-[0.35em] text-lg font-tech leading-tight drop-shadow-[0_0_8px_rgba(90,208,249,0.8)]&quot;&gt;STUDIO&lt;/span&gt;
+                    &lt;span class=&quot;text-[#E0E0E0] font-light tracking-[0.4em] text-xs opacity-70 pl-0.5 uppercase&quot;&gt;Shodwe&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;flex flex-grow items-center&quot;&gt;
+                &lt;div class=&quot;w-[45%] h-full flex items-center justify-center&quot;&gt;
+                    &lt;div class=&quot;relative w-[340px] h-[460px] group&quot;&gt;
+                        &lt;div class=&quot;absolute -inset-4 border border-[#3FA0D6] opacity-20 rounded-lg&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;absolute -inset-2 border-l border-r border-[#5AD0F9] opacity-40 rounded-lg&quot;&gt;&lt;/div&gt;
+                        
+                        &lt;div class=&quot;w-full h-full rounded-lg overflow-hidden border border-[#2B4162] relative z-10 shadow-[0_0_30px_rgba(90,208,249,0.1)]&quot;&gt;
+                            &lt;div class=&quot;absolute inset-0 bg-[#5AD0F9] opacity-10 mix-blend-overlay z-20&quot;&gt;&lt;/div&gt;
+                            &lt;img src=&quot;https://images.unsplash.com/photo-1546776310-eef45dd6d63c?q=80&amp;w=800&amp;auto=format&amp;fit=crop&quot; 
+                                 class=&quot;w-full h-full object-cover transform scale-105 group-hover:scale-100 transition-transform duration-1000&quot;&gt;
+                        &lt;/div&gt;
+                        
+                        &lt;div class=&quot;absolute -bottom-6 -right-4 text-[#5AD0F9] opacity-50 text-xs font-mono tracking-widest&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-code-branch&quot;&gt;&lt;/i&gt; DATA_SEQ.04
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;w-[55%] flex flex-col justify-center pl-10&quot;&gt;
+                    &lt;div class=&quot;mb-10&quot;&gt;
+                        &lt;h1 class=&quot;text-[#5AD0F9] text-6xl font-bold uppercase tracking-tight font-tech leading-none mb-2 drop-shadow-[0_0_10px_rgba(90,208,249,0.4)]&quot;&gt;Natural&lt;/h1&gt;
+                        &lt;h1 class=&quot;text-white text-6xl font-bold uppercase tracking-tight font-tech leading-none&quot;&gt;Language&lt;/h1&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;text-box-frame max-w-[580px]&quot;&gt;
+                        &lt;div class=&quot;corner corner-tl&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;corner corner-tr&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;corner corner-bl&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;corner corner-br&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;side-accent&quot;&gt;&lt;/div&gt;
+
+                        &lt;div class=&quot;space-y-5&quot;&gt;
+                            &lt;p class=&quot;text-[#E0E0E0] text-sm leading-relaxed font-light opacity-90 text-justify&quot;&gt;
+                                Natural Language Processing (NLP) is a branch of artificial intelligence that helps computers understand, interpret and manipulate human language. It bridges the gap between human communication and computer understanding.
+                            &lt;/p&gt;
+                            &lt;p class=&quot;text-[#E0E0E0] text-sm leading-relaxed font-light opacity-90 text-justify&quot;&gt;
+                                Using advanced machine learning models, our systems can now process vast amounts of textual data to extract sentiment, perform translations, and generate human-like responses with unprecedented accuracy.
+                            &lt;/p&gt;
+                            &lt;div class=&quot;pt-2 flex items-center gap-3&quot;&gt;
+                                &lt;span class=&quot;w-8 h-[1px] bg-[#5AD0F9]/50&quot;&gt;&lt;/span&gt;
+                                &lt;span class=&quot;text-[10px] font-mono text-[#5AD0F9] uppercase tracking-[0.3em]&quot;&gt;AI Synthesis Ready&lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 5
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Computer Vision Presentation&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative; overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #192A45 0%, #0F1A2E 100%);
+        }
+        .font-tech { font-family: 'Orbitron', sans-serif; }
+        /* 背景纹理 */
+        .bg-pattern {
+            position: absolute; inset: 0; opacity: 0.05; pointer-events: none;
+            background-image: linear-gradient(90deg, #5AD0F9 1px, transparent 1px), linear-gradient(#5AD0F9 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+        /* 文本框组件样式 */
+        .segment-box {
+            position: relative; background: rgba(43, 65, 98, 0.2);
+            border-left: 3px solid #5AD0F9; padding: 16px 20px;
+            backdrop-filter: blur(4px); margin-bottom: 20px;
+        }
+        .segment-tag {
+            font-family: 'Orbitron', sans-serif; font-size: 10px; color: #5AD0F9;
+            letter-spacing: 0.2em; border-bottom: 1px solid rgba(90, 208, 249, 0.3);
+            display: inline-block; margin-bottom: 8px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;bg-pattern&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;relative z-10 p-12 h-full flex flex-col&quot;&gt;
+            &lt;div class=&quot;flex items-center gap-5 mb-10&quot;&gt;
+                &lt;div class=&quot;relative w-14 h-14 flex items-center justify-center&quot;&gt;
+                    &lt;div class=&quot;absolute inset-0 bg-gradient-to-br from-[#5AD0F9]/30 via-transparent to-[#5AD0F9]/10 rounded-lg border border-[#5AD0F9]/40 shadow-[0_0_20px_rgba(90,208,249,0.3)] rotate-[25deg]&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;relative z-10 w-11 h-11 border-2 border-[#5AD0F9] flex items-center justify-center rounded-md bg-[#192A45] shadow-[inset_0_0_15px_rgba(90,208,249,0.4)]&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-microchip text-[#5AD0F9] text-2xl drop-shadow-[0_0_8px_#5AD0F9]&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;flex flex-col&quot;&gt;
+                    &lt;span class=&quot;text-[#5AD0F9] font-bold tracking-[0.35em] text-lg font-tech leading-tight drop-shadow-[0_0_8px_rgba(90,208,249,0.8)]&quot;&gt;STUDIO&lt;/span&gt;
+                    &lt;span class=&quot;text-[#E0E0E0] font-light tracking-[0.4em] text-xs opacity-70 pl-0.5 uppercase&quot;&gt;Shodwe&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;grid grid-cols-12 gap-10 flex-grow items-center&quot;&gt;
+                &lt;div class=&quot;col-span-7&quot;&gt;
+                    &lt;h1 class=&quot;text-7xl font-bold uppercase leading-tight tracking-wide mb-10 font-tech&quot;&gt;
+                        &lt;span class=&quot;text-[#5AD0F9] drop-shadow-[0_0_10px_rgba(90,208,249,0.4)]&quot;&gt;Computer&lt;/span&gt;&lt;br&gt;
+                        &lt;span class=&quot;text-white&quot;&gt;Vision&lt;/span&gt;
+                    &lt;/h1&gt;
+
+                    &lt;div class=&quot;max-w-[600px]&quot;&gt;
+                        &lt;div class=&quot;segment-box&quot;&gt;
+                            &lt;span class=&quot;segment-tag&quot;&gt;01. ANALYSIS_MODULE&lt;/span&gt;
+                            &lt;p class=&quot;text-gray-300 text-sm leading-relaxed text-justify opacity-90&quot;&gt;
+                                Computer vision allows systems to derive meaningful information from digital images and videos. It involves capturing, processing, and analyzing real-world data to automate visual tasks.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;segment-box&quot;&gt;
+                            &lt;span class=&quot;segment-tag&quot;&gt;02. PATTERN_RECOGNITION&lt;/span&gt;
+                            &lt;p class=&quot;text-gray-300 text-sm leading-relaxed text-justify opacity-90&quot;&gt;
+                                Our models excel at identifying complex objects and environmental changes in real-time, providing critical spatial awareness for autonomous operations.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;col-span-5 flex justify-center items-center&quot;&gt;
+                    &lt;div class=&quot;relative w-[420px] h-[420px] flex items-center justify-center&quot;&gt;
+                        &lt;div class=&quot;absolute w-full h-full border-[2px] border-dashed border-[#5AD0F9]/20 rounded-full&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;absolute w-[380px] h-[380px] border-[4px] border-[#5AD0F9] rounded-full border-t-transparent border-l-transparent shadow-[0_0_20px_rgba(90,208,249,0.2)] rotate-45&quot;&gt;&lt;/div&gt;
+                        
+                        &lt;div class=&quot;w-[300px] h-[300px] rounded-full overflow-hidden border-[2px] border-[#5AD0F9] shadow-2xl relative z-20&quot;&gt;
+                            &lt;img src=&quot;https://images.unsplash.com/photo-1535378437327-183c283442e6?q=80&amp;w=600&amp;auto=format&amp;fit=crop&quot; class=&quot;w-full h-full object-cover&quot;&gt;
+                            &lt;div class=&quot;absolute inset-0 bg-gradient-to-t from-[#192A45]/80 to-transparent&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 6
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Robotics Integration&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&amp;family=Inter:wght@300;400;600&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative; overflow: hidden;
+            font-family: 'Inter', 'Noto Sans SC', sans-serif;
+            background-color: #0F1A2E;
+        }
+        .font-tech { font-family: 'Orbitron', sans-serif; }
+        
+        /* 背景纹理 */
+        .bg-pattern {
+            position: absolute; inset: 0; opacity: 0.05; pointer-events: none;
+            background-image: linear-gradient(90deg, #5AD0F9 1px, transparent 1px), linear-gradient(#5AD0F9 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        /* HUD 分段文本框 */
+        .hud-segment {
+            position: relative; border: 1px solid rgba(90, 208, 249, 0.1);
+            background: rgba(255, 255, 255, 0.02); padding: 20px;
+            backdrop-filter: blur(8px); margin-bottom: 15px;
+        }
+        .corner {
+            position: absolute; width: 10px; height: 10px; border-color: #5AD0F9; border-style: solid;
+        }
+        .corner-tl { top: -1px; left: -1px; border-width: 2px 0 0 2px; }
+        .corner-br { bottom: -1px; right: -1px; border-width: 0 2px 2px 0; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;bg-pattern&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;relative z-10 p-12 h-full flex flex-col&quot;&gt;
+            &lt;div class=&quot;flex items-center gap-5 mb-6&quot;&gt;
+                &lt;div class=&quot;relative w-14 h-14 flex items-center justify-center&quot;&gt;
+                    &lt;div class=&quot;absolute inset-0 bg-gradient-to-br from-[#5AD0F9]/30 via-transparent to-[#5AD0F9]/10 rounded-lg border border-[#5AD0F9]/40 shadow-[0_0_20px_rgba(90,208,249,0.3)] rotate-[25deg]&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;relative z-10 w-11 h-11 border-2 border-[#5AD0F9] flex items-center justify-center rounded-md bg-[#192A45] shadow-[inset_0_0_15px_rgba(90,208,249,0.4)]&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-microchip text-[#5AD0F9] text-2xl drop-shadow-[0_0_8px_#5AD0F9]&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;flex flex-col&quot;&gt;
+                    &lt;span class=&quot;text-[#5AD0F9] font-bold tracking-[0.35em] text-lg font-tech leading-tight drop-shadow-[0_0_8px_rgba(90,208,249,0.8)]&quot;&gt;STUDIO&lt;/span&gt;
+                    &lt;span class=&quot;text-[#E0E0E0] font-light tracking-[0.4em] text-xs opacity-70 pl-0.5 uppercase&quot;&gt;Shodwe&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;grid grid-cols-12 gap-8 flex-grow&quot;&gt;
+                &lt;div class=&quot;col-span-5 flex flex-col items-center justify-center relative&quot;&gt;
+                    &lt;div class=&quot;absolute w-[2px] h-[400px] bg-gradient-to-b from-[#5AD0F9]/50 via-transparent to-transparent&quot;&gt;&lt;/div&gt;
+                    
+                    &lt;div class=&quot;relative mb-10&quot;&gt;
+                        &lt;div class=&quot;w-52 h-52 rounded-full overflow-hidden border-2 border-[#5AD0F9] shadow-[0_0_30px_rgba(90,208,249,0.3)] z-10 relative&quot;&gt;
+                            &lt;img src=&quot;https://images.unsplash.com/photo-1531746790731-6c087fecd65a?q=80&amp;w=600&amp;auto=format&amp;fit=crop&quot; class=&quot;w-full h-full object-cover&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;absolute -inset-4 border border-dashed border-[#5AD0F9]/30 rounded-full animate-[spin_20s_linear_infinite]&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;w-40 h-40 rounded-full overflow-hidden border-2 border-white/20 ml-20 shadow-xl&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&amp;w=600&amp;auto=format&amp;fit=crop&quot; class=&quot;w-full h-full object-cover opacity-80&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;col-span-7 flex flex-col justify-center pr-10&quot;&gt;
+                    &lt;div class=&quot;mb-10&quot;&gt;
+                        &lt;h1 class=&quot;text-6xl font-black text-white leading-tight uppercase font-tech&quot;&gt;
+                            &lt;span class=&quot;text-[#5AD0F9] drop-shadow-[0_0_10px_rgba(90,208,249,0.5)]&quot;&gt;Robotics&lt;/span&gt;&lt;br&gt;
+                            Integration
+                        &lt;/h1&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;space-y-4&quot;&gt;
+                        &lt;div class=&quot;hud-segment&quot;&gt;
+                            &lt;div class=&quot;corner corner-tl&quot;&gt;&lt;/div&gt;&lt;div class=&quot;corner corner-br&quot;&gt;&lt;/div&gt;
+                            &lt;h4 class=&quot;text-[#5AD0F9] text-[10px] font-tech tracking-widest mb-2 uppercase&quot;&gt;Core Intelligence&lt;/h4&gt;
+                            &lt;p class=&quot;text-gray-300 text-sm leading-relaxed font-light&quot;&gt;
+                                Seamlessly blending mechanical precision with adaptive AI. Our robotics integration platform focuses on high-speed data processing and tactile responsiveness.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;hud-segment&quot;&gt;
+                            &lt;div class=&quot;corner corner-tl&quot;&gt;&lt;/div&gt;&lt;div class=&quot;corner corner-br&quot;&gt;&lt;/div&gt;
+                            &lt;h4 class=&quot;text-[#5AD0F9] text-[10px] font-tech tracking-widest mb-2 uppercase&quot;&gt;Autonomous Workflow&lt;/h4&gt;
+                            &lt;p class=&quot;text-gray-300 text-sm leading-relaxed font-light&quot;&gt;
+                                From industrial manufacturing to domestic assistance, we provide custom automation frameworks that grow with your operational needs.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            
+            &lt;div class=&quot;flex items-center gap-4 opacity-50&quot;&gt;
+                &lt;div class=&quot;flex gap-1 h-3 items-end&quot;&gt;
+                    &lt;div class=&quot;w-1 h-full bg-[#5AD0F9]&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-1 h-2/3 bg-[#5AD0F9]&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-1 h-1/2 bg-[#5AD0F9]&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;span class=&quot;text-[10px] font-tech text-[#5AD0F9] tracking-widest&quot;&gt;SYSTEMS_INTEGRATED // 2026&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 7
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;AI Security - Cyberpunk Keynote&lt;/title&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&amp;family=Inter:wght@300;400;600&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative; overflow: hidden;
+            background-color: #0F1A2E; font-family: 'Inter', 'Noto Sans SC', sans-serif;
+            color: #FFFFFF;
+        }
+        .font-tech { font-family: 'Orbitron', sans-serif; }
+
+        /* 背景纹理 */
+        .bg-pattern {
+            position: absolute; inset: 0; opacity: 0.05; pointer-events: none;
+            background-image: linear-gradient(90deg, #5AD0F9 1px, transparent 1px), linear-gradient(#5AD0F9 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        /* 标题 HUD 形状 */
+        .hud-header {
+            background: rgba(25, 42, 69, 0.4); border: 2px solid #5AD0F9;
+            clip-path: polygon(30px 0, calc(100% - 30px) 0, 100% 50%, calc(100% - 30px) 100%, 30px 100%, 0 50%);
+            padding: 10px 60px; backdrop-filter: blur(10px);
+        }
+
+        /* 长配图区域 */
+        .long-visual-area {
+            position: absolute; left: 0; bottom: 80px; width: 100%; height: 320px;
+            overflow: hidden; border-top: 1px solid rgba(90, 208, 249, 0.3); border-bottom: 1px solid rgba(90, 208, 249, 0.3);
+        }
+        .scan-line {
+            position: absolute; top: 0; left: 0; width: 100%; height: 2px;
+            background: linear-gradient(90deg, transparent, #5AD0F9, transparent);
+            animation: scan 4s linear infinite; z-index: 5;
+        }
+        @keyframes scan { 0% { top: 0; } 100% { top: 100%; } }
+
+        /* HUD 文本卡片 */
+        .hud-card {
+            background: rgba(15, 26, 46, 0.7); border: 1px solid rgba(90, 208, 249, 0.2);
+            backdrop-filter: blur(12px); padding: 20px; position: relative;
+        }
+        .card-corner { position: absolute; width: 8px; height: 8px; border-color: #5AD0F9; border-style: solid; }
+        .corner-tl { top: -1px; left: -1px; border-width: 2px 0 0 2px; }
+        .corner-br { bottom: -1px; right: -1px; border-width: 0 2px 2px 0; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;bg-pattern&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;relative z-10 p-12 flex justify-between items-center&quot;&gt;
+            &lt;div class=&quot;flex items-center gap-5&quot;&gt;
+                &lt;div class=&quot;relative w-14 h-14 flex items-center justify-center&quot;&gt;
+                    &lt;div class=&quot;absolute inset-0 bg-gradient-to-br from-[#5AD0F9]/30 via-transparent to-[#5AD0F9]/10 rounded-lg border border-[#5AD0F9]/40 shadow-[0_0_20px_rgba(90,208,249,0.3)] rotate-[25deg]&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;relative z-10 w-11 h-11 border-2 border-[#5AD0F9] flex items-center justify-center rounded-md bg-[#192A45] shadow-[inset_0_0_15px_rgba(90,208,249,0.4)]&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-microchip text-[#5AD0F9] text-2xl drop-shadow-[0_0_8px_#5AD0F9]&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;flex flex-col&quot;&gt;
+                    &lt;span class=&quot;text-[#5AD0F9] font-bold tracking-[0.35em] text-lg font-tech leading-tight&quot;&gt;STUDIO&lt;/span&gt;
+                    &lt;span class=&quot;text-[#E0E0E0] font-light tracking-[0.4em] text-xs opacity-70 pl-0.5 uppercase&quot;&gt;Shodwe&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;flex items-center gap-3&quot;&gt;
+                &lt;span class=&quot;w-2 h-2 rounded-full bg-green-500 animate-pulse&quot;&gt;&lt;/span&gt;
+                &lt;span class=&quot;text-[10px] font-tech text-[#5AD0F9] tracking-[0.2em] uppercase&quot;&gt;Security Protocol Active&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;relative z-10 w-full flex flex-col items-center mt-2&quot;&gt;
+            &lt;div class=&quot;hud-header&quot;&gt;
+                &lt;h1 class=&quot;text-6xl font-black tracking-[0.1em] font-tech text-white&quot;&gt;
+                    AI &lt;span class=&quot;text-[#5AD0F9]&quot;&gt;SECURITY&lt;/span&gt;
+                &lt;/h1&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;mt-4 flex gap-4&quot;&gt;
+                &lt;div class=&quot;w-12 h-1 bg-[#5AD0F9] skew-x-[-30deg]&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;w-12 h-1 bg-[#5AD0F9] skew-x-[-30deg] opacity-40&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;w-12 h-1 bg-[#5AD0F9] skew-x-[-30deg] opacity-10&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;long-visual-area&quot;&gt;
+            &lt;div class=&quot;scan-line&quot;&gt;&lt;/div&gt;
+            &lt;img src=&quot;https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&quot; 
+                 class=&quot;w-full h-full object-cover opacity-30 mix-blend-screen scale-110&quot; 
+                 style=&quot;filter: hue-rotate(180deg) brightness(0.8);&quot;&gt;
+            
+            &lt;div class=&quot;absolute inset-0 z-10 grid grid-cols-3 gap-10 px-16 items-center&quot;&gt;
+                &lt;div class=&quot;hud-card&quot;&gt;
+                    &lt;div class=&quot;card-corner corner-tl&quot;&gt;&lt;/div&gt;&lt;div class=&quot;card-corner corner-br&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;flex items-center gap-3 mb-3 border-b border-[#5AD0F9]/30 pb-2&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-shield-halved text-[#5AD0F9]&quot;&gt;&lt;/i&gt;
+                        &lt;h3 class=&quot;text-white font-bold tracking-wider uppercase text-sm&quot;&gt;Threat Detection&lt;/h3&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-[#E0E0E0] text-sm leading-relaxed font-light opacity-90 text-justify&quot;&gt;
+                        Advanced heuristics scan for anomalies in real-time. Our neural engines identify zero-day vulnerabilities before they can be exploited.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;hud-card translate-y-4&quot;&gt;
+                    &lt;div class=&quot;card-corner corner-tl&quot;&gt;&lt;/div&gt;&lt;div class=&quot;card-corner corner-br&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;flex items-center gap-3 mb-3 border-b border-[#5AD0F9]/30 pb-2&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-lock text-[#5AD0F9]&quot;&gt;&lt;/i&gt;
+                        &lt;h3 class=&quot;text-white font-bold tracking-wider uppercase text-sm&quot;&gt;Data Encryption&lt;/h3&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-[#E0E0E0] text-sm leading-relaxed font-light opacity-90 text-justify&quot;&gt;
+                        End-to-end quantum-resistant protection ensures complete data integrity. Multi-layer encryption protocols shield sensitive information.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;hud-card&quot;&gt;
+                    &lt;div class=&quot;card-corner corner-tl&quot;&gt;&lt;/div&gt;&lt;div class=&quot;card-corner corner-br&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;flex items-center gap-3 mb-3 border-b border-[#5AD0F9]/30 pb-2&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-user-shield text-[#5AD0F9]&quot;&gt;&lt;/i&gt;
+                        &lt;h3 class=&quot;text-white font-bold tracking-wider uppercase text-sm&quot;&gt;Fraud Prevention&lt;/h3&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-[#E0E0E0] text-sm leading-relaxed font-light opacity-90 text-justify&quot;&gt;
+                        Neural networks adapt to evolving fraud patterns instantly, providing an invisible layer of trust for all digital transactions.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute bottom-10 left-16 flex items-center gap-10 opacity-40&quot;&gt;
+            &lt;div class=&quot;flex items-end gap-1&quot;&gt;
+                &lt;div class=&quot;w-1 h-2 bg-[#5AD0F9]&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;w-1 h-5 bg-[#5AD0F9]&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;w-1 h-3 bg-[#5AD0F9]&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;w-1 h-6 bg-[#5AD0F9]&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;span class=&quot;text-[10px] font-tech text-[#5AD0F9] tracking-[0.4em] uppercase&quot;&gt;Core_Module: SEC_V07.2&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 8
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;AI in Healthcare Presentation&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&amp;family=Inter:wght@300;400;600&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative; overflow: hidden;
+            background-color: #0F1A2E; font-family: 'Inter', 'Noto Sans SC', sans-serif;
+            color: #FFFFFF;
+        }
+        .font-tech { font-family: 'Orbitron', sans-serif; }
+
+        .tech-grid-bg {
+            position: absolute; inset: 0;
+            background-image: linear-gradient(rgba(25, 42, 69, 0.9), rgba(25, 42, 69, 0.95)),
+                url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&amp;w=2070&amp;auto=format&amp;fit=crop'); 
+            background-size: cover; opacity: 0.6; z-index: 1;
+        }
+
+        /* 医疗感 HUD 卡片 */
+        .medical-hud-card {
+            background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(90, 208, 249, 0.2);
+            backdrop-filter: blur(10px); padding: 25px; border-left: 4px solid #5AD0F9;
+            position: relative; margin-bottom: 25px;
+        }
+        .medical-line {
+            position: absolute; bottom: 10px; right: 20px; width: 60px; height: 20px;
+            opacity: 0.3; background: repeating-linear-gradient(90deg, #5AD0F9, #5AD0F9 2px, transparent 2px, transparent 4px);
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div class=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;tech-grid-bg&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;relative z-10 p-12 h-full flex flex-col&quot;&gt;
+            &lt;div class=&quot;flex items-center gap-5 mb-8&quot;&gt;
+                &lt;div class=&quot;relative w-14 h-14 flex items-center justify-center&quot;&gt;
+                    &lt;div class=&quot;absolute inset-0 bg-gradient-to-br from-[#5AD0F9]/30 via-transparent to-[#5AD0F9]/10 rounded-lg border border-[#5AD0F9]/40 shadow-[0_0_20px_rgba(90,208,249,0.3)] rotate-[25deg]&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;relative z-10 w-11 h-11 border-2 border-[#5AD0F9] flex items-center justify-center rounded-md bg-[#192A45] shadow-[inset_0_0_15px_rgba(90,208,249,0.4)]&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-microchip text-[#5AD0F9] text-2xl drop-shadow-[0_0_8px_#5AD0F9]&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;flex flex-col&quot;&gt;
+                    &lt;span class=&quot;text-[#5AD0F9] font-bold tracking-[0.35em] text-lg font-tech leading-tight&quot;&gt;STUDIO&lt;/span&gt;
+                    &lt;span class=&quot;text-[#E0E0E0] font-light tracking-[0.4em] text-xs opacity-70 pl-0.5 uppercase&quot;&gt;Shodwe&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;grid grid-cols-12 gap-12 flex-grow items-center&quot;&gt;
+                &lt;div class=&quot;col-span-7&quot;&gt;
+                    &lt;div class=&quot;mb-10&quot;&gt;
+                        &lt;h1 class=&quot;text-6xl font-black font-tech leading-tight uppercase&quot;&gt;
+                            &lt;span class=&quot;text-[#5AD0F9] drop-shadow-[0_0_10px_rgba(90,208,249,0.4)]&quot;&gt;AI IN&lt;/span&gt; 
+                            HEALTHCARE
+                        &lt;/h1&gt;
+                        &lt;div class=&quot;w-32 h-1 bg-gradient-to-r from-[#5AD0F9] to-transparent mt-4&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;max-w-[640px]&quot;&gt;
+                        &lt;div class=&quot;medical-hud-card&quot;&gt;
+                            &lt;div class=&quot;flex items-center gap-4 mb-3&quot;&gt;
+                                &lt;div class=&quot;w-10 h-10 rounded-full border border-[#5AD0F9] flex items-center justify-center text-[#5AD0F9] font-tech text-sm&quot;&gt;01&lt;/div&gt;
+                                &lt;h3 class=&quot;text-white text-lg font-bold tracking-wider uppercase&quot;&gt;Diagnostics Tools&lt;/h3&gt;
+                            &lt;/div&gt;
+                            &lt;p class=&quot;text-[#E0E0E0] text-sm leading-relaxed font-light opacity-80 text-justify&quot;&gt;
+                                Advanced machine learning algorithms are now capable of identifying medical anomalies with higher precision than traditional methods, significantly reducing diagnosis time for critical conditions.
+                            &lt;/p&gt;
+                            &lt;div class=&quot;medical-line&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class=&quot;medical-hud-card&quot;&gt;
+                            &lt;div class=&quot;flex items-center gap-4 mb-3&quot;&gt;
+                                &lt;div class=&quot;w-10 h-10 rounded-full border border-[#5AD0F9] flex items-center justify-center text-[#5AD0F9] font-tech text-sm&quot;&gt;02&lt;/div&gt;
+                                &lt;h3 class=&quot;text-white text-lg font-bold tracking-wider uppercase&quot;&gt;Personalized Care&lt;/h3&gt;
+                            &lt;/div&gt;
+                            &lt;p class=&quot;text-[#E0E0E0] text-sm leading-relaxed font-light opacity-80 text-justify&quot;&gt;
+                                Tailoring patient care plans based on genetic profiles and real-time health data monitoring, allowing for predictive intervention and highly customized treatment paths.
+                            &lt;/p&gt;
+                            &lt;div class=&quot;medical-line&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;col-span-5 flex justify-center&quot;&gt;
+                    &lt;div class=&quot;relative group&quot;&gt;
+                        &lt;div class=&quot;absolute -inset-4 border border-[#5AD0F9]/30 rounded-sm&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;absolute -top-4 -left-4 w-8 h-8 border-t-4 border-l-4 border-[#5AD0F9]&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;absolute -bottom-4 -right-4 w-8 h-8 border-b-4 border-r-4 border-[#5AD0F9]&quot;&gt;&lt;/div&gt;
+                        
+                        &lt;div class=&quot;relative z-10 w-[360px] h-[480px] overflow-hidden border border-[#2B4162] shadow-2xl&quot;&gt;
+                            &lt;img src=&quot;https://images.unsplash.com/photo-1535378437803-f3cc87ea42f5?q=80&amp;w=600&amp;auto=format&amp;fit=crop&quot; class=&quot;w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700&quot;&gt;
+                            &lt;div class=&quot;absolute inset-0 bg-gradient-to-t from-[#0F1A2E] to-transparent opacity-40&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        
+                        &lt;div class=&quot;absolute -bottom-8 left-0 text-[10px] font-tech text-[#5AD0F9] tracking-[0.5em] opacity-50&quot;&gt;
+                            SCANNING_ACTIVE // MED_V.08
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 9
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;AI In Finance Keynote&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&amp;family=Inter:wght@300;400;600&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative; overflow: hidden;
+            background-color: #0F1A2E; font-family: 'Inter', 'Noto Sans SC', sans-serif;
+            color: #FFFFFF;
+        }
+        .font-tech { font-family: 'Orbitron', sans-serif; }
+
+        /* --- 统一网格背景设计 --- */
+        .bg-pattern {
+            position: absolute; inset: 0; opacity: 0.05; pointer-events: none;
+            background-image: linear-gradient(90deg, #5AD0F9 1px, transparent 1px), linear-gradient(#5AD0F9 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+        
+        /* 金融感 HUD 卡片 */
+        .finance-card {
+            background: rgba(43, 65, 98, 0.2); border: 1px solid rgba(90, 208, 249, 0.1);
+            backdrop-filter: blur(8px); padding: 20px; position: relative;
+        }
+        .corner { position: absolute; width: 10px; height: 10px; border-color: #5AD0F9; border-style: solid; }
+        .c-tl { top: -1px; left: -1px; border-width: 2px 0 0 2px; }
+        .c-br { bottom: -1px; right: -1px; border-width: 0 2px 2px 0; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div class=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;bg-pattern&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;relative z-10 p-12 h-full flex flex-col&quot;&gt;
+            &lt;div class=&quot;flex items-center gap-5 mb-4&quot;&gt;
+                &lt;div class=&quot;relative w-14 h-14 flex items-center justify-center&quot;&gt;
+                    &lt;div class=&quot;absolute inset-0 bg-gradient-to-br from-[#5AD0F9]/30 via-transparent to-[#5AD0F9]/10 rounded-lg border border-[#5AD0F9]/40 shadow-[0_0_20px_rgba(90,208,249,0.3)] rotate-[25deg]&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;relative z-10 w-11 h-11 border-2 border-[#5AD0F9] flex items-center justify-center rounded-md bg-[#192A45] shadow-[inset_0_0_15px_rgba(90,208,249,0.4)]&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-microchip text-[#5AD0F9] text-2xl drop-shadow-[0_0_8px_#5AD0F9]&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;flex flex-col&quot;&gt;
+                    &lt;span class=&quot;text-[#5AD0F9] font-bold tracking-[0.35em] text-lg font-tech leading-tight&quot;&gt;STUDIO&lt;/span&gt;
+                    &lt;span class=&quot;text-[#E0E0E0] font-light tracking-[0.4em] text-xs opacity-70 pl-0.5 uppercase&quot;&gt;Shodwe&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;grid grid-cols-2 flex-grow items-center&quot;&gt;
+                &lt;div class=&quot;relative flex justify-center items-center&quot;&gt;
+                    &lt;div class=&quot;absolute w-[500px] h-[500px] border border-dashed border-[#5AD0F9]/20 rounded-full animate-[spin_30s_linear_infinite]&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;absolute w-[460px] h-[460px] border-2 border-transparent border-t-[#5AD0F9]/40 border-b-[#5AD0F9]/40 rounded-full rotate-45&quot;&gt;&lt;/div&gt;
+                    
+                    &lt;div class=&quot;relative z-10 w-[380px] h-[380px] rounded-full overflow-hidden border-4 border-[#5AD0F9]/20 shadow-[0_0_50px_rgba(90,208,249,0.15)]&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1624705002806-5d72df96c312?q=80&amp;w=800&amp;auto=format&amp;fit=crop&quot; class=&quot;w-full h-full object-cover&quot;&gt;
+                        &lt;div class=&quot;absolute inset-0 bg-[#0F1A2E]/30 mix-blend-overlay&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;pl-12&quot;&gt;
+                    &lt;div class=&quot;mb-12&quot;&gt;
+                        &lt;h1 class=&quot;text-7xl font-black font-tech uppercase leading-tight&quot;&gt;
+                            AI IN &lt;br&gt;
+                            &lt;span class=&quot;text-[#5AD0F9] drop-shadow-[0_0_10px_rgba(90,208,249,0.5)]&quot;&gt;FINANCE&lt;/span&gt;
+                        &lt;/h1&gt;
+                        &lt;div class=&quot;mt-4 flex items-center gap-4&quot;&gt;
+                            &lt;span class=&quot;text-[10px] font-tech text-[#5AD0F9] tracking-widest&quot;&gt;DATA_ANALYSIS_MODE&lt;/span&gt;
+                            &lt;div class=&quot;flex-grow h-[1px] bg-gradient-to-r from-[#5AD0F9]/50 to-transparent&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;space-y-6 max-w-[500px]&quot;&gt;
+                        &lt;div class=&quot;finance-card&quot;&gt;
+                            &lt;div class=&quot;c-tl corner&quot;&gt;&lt;/div&gt;&lt;div class=&quot;c-br corner&quot;&gt;&lt;/div&gt;
+                            &lt;div class=&quot;flex items-start gap-4&quot;&gt;
+                                &lt;span class=&quot;text-[#5AD0F9] font-tech font-bold&quot;&gt;01/&lt;/span&gt;
+                                &lt;div&gt;
+                                    &lt;h3 class=&quot;text-white text-lg font-bold tracking-widest uppercase mb-2&quot;&gt;Risk Management&lt;/h3&gt;
+                                    &lt;p class=&quot;text-[#E0E0E0] text-sm leading-relaxed font-light opacity-80 text-justify&quot;&gt;
+                                        Processing petabytes of historical data to identify market volatility patterns and credit risks with near-perfect accuracy.
+                                    &lt;/p&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class=&quot;finance-card&quot;&gt;
+                            &lt;div class=&quot;c-tl corner&quot;&gt;&lt;/div&gt;&lt;div class=&quot;c-br corner&quot;&gt;&lt;/div&gt;
+                            &lt;div class=&quot;flex items-start gap-4&quot;&gt;
+                                &lt;span class=&quot;text-[#5AD0F9] font-tech font-bold&quot;&gt;02/&lt;/span&gt;
+                                &lt;div&gt;
+                                    &lt;h3 class=&quot;text-white text-lg font-bold tracking-widest uppercase mb-2&quot;&gt;Fraud Detection&lt;/h3&gt;
+                                    &lt;p class=&quot;text-[#E0E0E0] text-sm leading-relaxed font-light opacity-80 text-justify&quot;&gt;
+                                        Real-time transaction monitoring systems that block suspicious activities instantly through advanced neural network analysis.
+                                    &lt;/p&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;mt-auto flex items-center gap-5 opacity-40&quot;&gt;
+                &lt;div class=&quot;flex gap-1 h-4 items-end&quot;&gt;
+                    &lt;div class=&quot;w-1 h-full bg-[#5AD0F9]&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-1 h-3/4 bg-[#5AD0F9]&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-1 h-1/2 bg-[#5AD0F9]&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;span class=&quot;text-[10px] font-tech tracking-[0.4em] text-[#5AD0F9]&quot;&gt;FIN_SECTOR_INTEGRATION // 2026&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 10
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;AI in Retail - Keynote Slide&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&amp;family=Inter:wght@300;400;600&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative; overflow: hidden;
+            background-color: #0F1A2E; font-family: 'Inter', 'Noto Sans SC', sans-serif;
+            color: #FFFFFF;
+        }
+        .font-tech { font-family: 'Orbitron', sans-serif; }
+
+        .bg-pattern {
+            position: absolute; inset: 0; opacity: 0.05; pointer-events: none;
+            background-image: linear-gradient(90deg, #5AD0F9 1px, transparent 1px), linear-gradient(#5AD0F9 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        /* 原有的 HUD 文本容器 */
+        .retail-hud-box {
+            background: rgba(43, 65, 98, 0.2); border-left: 3px solid #5AD0F9;
+            backdrop-filter: blur(8px); padding: 15px 20px; position: relative;
+        }
+        .retail-hud-box::after {
+            content: ''; position: absolute; right: 0; top: 0; width: 10px; height: 10px;
+            border-top: 1px solid rgba(90, 208, 249, 0.5); border-right: 1px solid rgba(90, 208, 249, 0.5);
+        }
+
+        .tech-ring {
+            border-radius: 50%; border: 2px solid rgba(90, 208, 249, 0.2);
+            position: relative; padding: 6px;
+        }
+        .tech-ring::before {
+            content: ''; position: absolute; inset: -4px; border-radius: 50%;
+            border: 1px dashed rgba(90, 208, 249, 0.4); animation: spin 20s linear infinite;
+        }
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+
+        /* 新增：底部宽总结文本框 */
+        .bottom-summary-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(90, 208, 249, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 20px 30px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            margin-top: auto; /* 推到底部 */
+        }
+        /* 底部框角标装饰 */
+        .bottom-summary-box::before { content: ''; position: absolute; top: -1px; left: -1px; width: 15px; height: 15px; border-top: 2px solid #5AD0F9; border-left: 2px solid #5AD0F9; }
+        .bottom-summary-box::after { content: ''; position: absolute; bottom: -1px; right: -1px; width: 15px; height: 15px; border-bottom: 2px solid #5AD0F9; border-right: 2px solid #5AD0F9; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;bg-pattern&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;relative z-10 p-12 h-full flex flex-col&quot;&gt;
+            &lt;div class=&quot;flex items-center gap-5 mb-8&quot;&gt;
+                &lt;div class=&quot;relative w-14 h-14 flex items-center justify-center&quot;&gt;
+                    &lt;div class=&quot;absolute inset-0 bg-gradient-to-br from-[#5AD0F9]/30 via-transparent to-[#5AD0F9]/10 rounded-lg border border-[#5AD0F9]/40 shadow-[0_0_20px_rgba(90,208,249,0.3)] rotate-[25deg]&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;relative z-10 w-11 h-11 border-2 border-[#5AD0F9] flex items-center justify-center rounded-md bg-[#192A45] shadow-[inset_0_0_15px_rgba(90,208,249,0.4)]&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-microchip text-[#5AD0F9] text-2xl drop-shadow-[0_0_8px_#5AD0F9]&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;flex flex-col&quot;&gt;
+                    &lt;span class=&quot;text-[#5AD0F9] font-bold tracking-[0.35em] text-lg font-tech leading-tight&quot;&gt;STUDIO&lt;/span&gt;
+                    &lt;span class=&quot;text-[#E0E0E0] font-light tracking-[0.4em] text-xs opacity-70 pl-0.5 uppercase&quot;&gt;Shodwe&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;text-center mb-12&quot;&gt;
+                &lt;h1 class=&quot;text-6xl font-black font-tech tracking-wider text-white&quot;&gt;
+                    &lt;span class=&quot;text-[#5AD0F9] drop-shadow-[0_0_15px_rgba(90,208,249,0.5)]&quot;&gt;AI&lt;/span&gt; IN RETAIL
+                &lt;/h1&gt;
+                &lt;div class=&quot;w-24 h-1 bg-[#5AD0F9] mx-auto mt-4 shadow-[0_0_10px_#5AD0F9]&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;grid grid-cols-2 gap-16 px-6 mb-8&quot;&gt;
+                &lt;div class=&quot;flex items-center gap-6&quot;&gt;
+                    &lt;div class=&quot;tech-ring w-40 h-40 flex-shrink-0&quot;&gt;
+                        &lt;div class=&quot;w-full h-full rounded-full overflow-hidden border border-[#5AD0F9]/40&quot;&gt;
+                            &lt;img src=&quot;https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&amp;w=400&amp;auto=format&amp;fit=crop&quot; class=&quot;w-full h-full object-cover&quot;&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div&gt;
+                        &lt;div class=&quot;retail-hud-box mb-3&quot;&gt;
+                            &lt;h3 class=&quot;text-[#5AD0F9] font-tech text-sm tracking-widest mb-1&quot;&gt;01. DATA_CORE&lt;/h3&gt;
+                            &lt;h2 class=&quot;text-white text-lg font-bold uppercase tracking-wide&quot;&gt;Customer Insights&lt;/h2&gt;
+                        &lt;/div&gt;
+                        &lt;p class=&quot;text-[#E0E0E0] text-sm leading-relaxed opacity-80 text-justify&quot;&gt;
+                            Advanced algorithms analyze purchasing behavior and foot traffic patterns to predict consumer needs with surgical precision.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;flex items-center gap-6&quot;&gt;
+                    &lt;div class=&quot;tech-ring w-40 h-40 flex-shrink-0&quot;&gt;
+                        &lt;div class=&quot;w-full h-full rounded-full overflow-hidden border border-[#5AD0F9]/40&quot;&gt;
+                            &lt;img src=&quot;https://images.unsplash.com/photo-1535378437323-9555f3e7f5bb?q=80&amp;w=400&amp;auto=format&amp;fit=crop&quot; class=&quot;w-full h-full object-cover&quot;&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div&gt;
+                        &lt;div class=&quot;retail-hud-box mb-3&quot;&gt;
+                            &lt;h3 class=&quot;text-[#5AD0F9] font-tech text-sm tracking-widest mb-1&quot;&gt;02. LOGISTICS_AI&lt;/h3&gt;
+                            &lt;h2 class=&quot;text-white text-lg font-bold uppercase tracking-wide&quot;&gt;Stock Control&lt;/h2&gt;
+                        &lt;/div&gt;
+                        &lt;p class=&quot;text-[#E0E0E0] text-sm leading-relaxed opacity-80 text-justify&quot;&gt;
+                            Automated inventory scanning reduces human error, optimizing stock levels and ensuring supply chain transparency.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            
+            &lt;div class=&quot;bottom-summary-box mx-6&quot;&gt;
+                &lt;div class=&quot;w-14 h-14 rounded-md border border-[#5AD0F9]/50 flex items-center justify-center bg-[#5AD0F9]/10 shrink-0&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-chart-line text-2xl text-[#5AD0F9]&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;h3 class=&quot;text-white font-bold uppercase tracking-wider mb-2 font-tech&quot;&gt;Market Impact Summary&lt;/h3&gt;
+                    &lt;p class=&quot;text-[#E0E0E0] text-sm leading-relaxed opacity-80&quot;&gt;
+                        AI integration in retail sectors is projected to drive a 35% increase in operational efficiency by 2026, significantly boosting customer retention through hyper-personalized experiences and streamlined supply chains.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;ml-auto flex flex-col items-end gap-1 opacity-50 shrink-0&quot;&gt;
+                     &lt;span class=&quot;text-[10px] font-tech text-[#5AD0F9] tracking-[0.2em] uppercase&quot;&gt;Status: Optimizing&lt;/span&gt;
+                     &lt;div class=&quot;flex gap-1 h-2&quot;&gt;
+                        &lt;div class=&quot;w-4 h-full bg-[#5AD0F9]&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;w-2 h-full bg-[#5AD0F9]/50&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;w-1 h-full bg-[#5AD0F9]/20&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 11
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Future Prospects - AI Keynote&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&amp;family=Inter:wght@300;400;600&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative; overflow: hidden;
+            background-color: #0B1221; font-family: 'Inter', 'Noto Sans SC', sans-serif;
+            color: #FFFFFF;
+        }
+        .font-tech { font-family: 'Orbitron', sans-serif; }
+        /* 背景纹理 */
+        .bg-pattern {
+            position: absolute; inset: 0; opacity: 0.05; pointer-events: none;
+            background-image: linear-gradient(90deg, #5AD0F9 1px, transparent 1px), linear-gradient(#5AD0F9 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        /* 拆分后的文本框设计 */
+        .future-segment {
+            background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(90, 208, 249, 0.15);
+            padding: 18px 25px; position: relative; backdrop-filter: blur(10px);
+            margin-bottom: 20px; border-radius: 4px;
+        }
+        .segment-id {
+            position: absolute; top: -10px; left: 20px; background: #0B1221;
+            padding: 0 10px; color: #5AD0F9; font-family: 'Orbitron', sans-serif;
+            font-size: 10px; letter-spacing: 0.2em; border: 1px solid rgba(90, 208, 249, 0.4);
+        }
+        .corner {
+            position: absolute; width: 10px; height: 10px; border-color: #5AD0F9; border-style: solid;
+        }
+        .corner-tl { top: -1px; left: -1px; border-width: 2px 0 0 2px; }
+        .corner-br { bottom: -1px; right: -1px; border-width: 0 2px 2px 0; }
+
+        /* 图片科技框 */
+        .img-frame {
+            position: relative; border: 1px solid rgba(90, 208, 249, 0.3); padding: 8px;
+        }
+        .img-frame::before {
+            content: ''; position: absolute; top: 50%; left: -10px; width: 4px; height: 40px;
+            background: #5AD0F9; transform: translateY(-50%); box-shadow: 0 0 10px #5AD0F9;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;bg-pattern&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;relative z-10 p-12 h-full flex flex-col&quot;&gt;
+            &lt;div class=&quot;flex items-center gap-5 mb-10&quot;&gt;
+                &lt;div class=&quot;relative w-14 h-14 flex items-center justify-center&quot;&gt;
+                    &lt;div class=&quot;absolute inset-0 bg-gradient-to-br from-[#5AD0F9]/30 via-transparent to-[#5AD0F9]/10 rounded-lg border border-[#5AD0F9]/40 shadow-[0_0_20px_rgba(90,208,249,0.3)] rotate-[25deg]&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;relative z-10 w-11 h-11 border-2 border-[#5AD0F9] flex items-center justify-center rounded-md bg-[#192A45] shadow-[inset_0_0_15px_rgba(90,208,249,0.4)]&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-microchip text-[#5AD0F9] text-2xl drop-shadow-[0_0_8px_#5AD0F9]&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;flex flex-col&quot;&gt;
+                    &lt;span class=&quot;text-[#5AD0F9] font-bold tracking-[0.35em] text-lg font-tech leading-tight&quot;&gt;STUDIO&lt;/span&gt;
+                    &lt;span class=&quot;text-[#E0E0E0] font-light tracking-[0.4em] text-xs opacity-70 pl-0.5 uppercase&quot;&gt;Shodwe&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;grid grid-cols-12 gap-12 flex-grow&quot;&gt;
+                &lt;div class=&quot;col-span-6 flex flex-col justify-center&quot;&gt;
+                    &lt;div class=&quot;mb-10&quot;&gt;
+                        &lt;h1 class=&quot;text-7xl font-black font-tech leading-tight text-white&quot;&gt;
+                            &lt;span class=&quot;text-[#5AD0F9] drop-shadow-[0_0_10px_rgba(90,208,249,0.5)]&quot;&gt;FUTURE&lt;/span&gt;&lt;br&gt;
+                            PROSPECTS
+                        &lt;/h1&gt;
+                        &lt;div class=&quot;w-20 h-1 bg-cyanHighlight mt-4&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;space-y-4&quot;&gt;
+                        &lt;div class=&quot;future-segment&quot;&gt;
+                            &lt;div class=&quot;segment-id&quot;&gt;PROG_01&lt;/div&gt;
+                            &lt;div class=&quot;corner corner-tl&quot;&gt;&lt;/div&gt;&lt;div class=&quot;corner corner-br&quot;&gt;&lt;/div&gt;
+                            &lt;h4 class=&quot;text-white font-bold mb-1 uppercase tracking-wider text-sm&quot;&gt;Hyper-Evolution&lt;/h4&gt;
+                            &lt;p class=&quot;text-[#E0E0E0] text-sm leading-relaxed opacity-80&quot;&gt;
+                                AI is moving beyond simple automation into autonomous reasoning, creating systems that don't just follow protocols but innovate new solutions to global challenges.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;future-segment&quot;&gt;
+                            &lt;div class=&quot;segment-id&quot;&gt;PROG_02&lt;/div&gt;
+                            &lt;div class=&quot;corner corner-tl&quot;&gt;&lt;/div&gt;&lt;div class=&quot;corner corner-br&quot;&gt;&lt;/div&gt;
+                            &lt;h4 class=&quot;text-white font-bold mb-1 uppercase tracking-wider text-sm&quot;&gt;Seamless Integration&lt;/h4&gt;
+                            &lt;p class=&quot;text-[#E0E0E0] text-sm leading-relaxed opacity-80&quot;&gt;
+                                The boundary between biological and artificial systems will continue to blur, fostering an era of human-machine collaboration that enhances cognitive capabilities.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;col-span-6 flex flex-col items-end justify-center gap-8&quot;&gt;
+                    &lt;div class=&quot;img-frame w-[480px] h-[220px]&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&amp;w=600&amp;auto=format&amp;fit=crop&quot; class=&quot;w-full h-full object-cover grayscale-[0.2] contrast-125&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;img-frame w-[480px] h-[220px]&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1535378437323-95288ac55952?q=80&amp;w=600&amp;auto=format&amp;fit=crop&quot; class=&quot;w-full h-full object-cover grayscale-[0.2] contrast-125&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <script>
+   // 自动调整iframe高度
+    function resizeIframes() {
+        document.querySelectorAll('.responsive-iframe').forEach(iframe => {
+            try {
+                const doc = iframe.contentDocument || iframe.contentWindow.document;
+                const height = Math.max(
+                    doc.body.scrollHeight,
+                    doc.documentElement.scrollHeight,
+                    doc.body.offsetHeight,
+                    doc.documentElement.offsetHeight,
+                    doc.body.clientHeight,
+                    doc.documentElement.clientHeight
+                );
+                iframe.style.height = height + 'px';
+            } catch (e) {
+                console.log('无法调整iframe高度:', e);
+            }
+        });
+    }
+    
+    // 初始调整
+    window.addEventListener('load', resizeIframes);
+    
+    // 内容加载后调整
+    document.querySelectorAll('.responsive-iframe').forEach(iframe => {
+        iframe.addEventListener('load', function() {
+            resizeIframes();
+            // 对动态内容进行定期检查
+            setInterval(resizeIframes, 1000);
+        });
+    });
+  </script>
+ </body>
+</html>

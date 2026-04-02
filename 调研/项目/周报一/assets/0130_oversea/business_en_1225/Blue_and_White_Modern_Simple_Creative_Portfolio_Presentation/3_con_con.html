@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro - Portfolio Presentation</title>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- Google Fonts (Domestic CDN) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        /* CSS Reset & Global Standards */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Font Family Application */
+        body {
+            font-family: 'Noto Sans SC', 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Utility for line clamping if text is too long */
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* Custom Scrollbar hide */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#20457C',   /* Deep Ocean Blue */
+                        secondary: '#3A5A6D', /* Dark Slate */
+                        accent: '#5A7A90',    /* Muted Blue Line */
+                        bgWhite: '#FFFFFF',
+                    },
+                    spacing: {
+                        '1280': '1280px',
+                        '720': '720px',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Main Page Container -->
+    <!-- Dimensions: 1280x720, Centered, No Shadow, Relative Positioning -->
+    <div class="page_container w-[1280px] h-[720px] m-auto relative bg-white overflow-hidden flex">
+
+        <!-- Left Content Section (Grid Column 1) -->
+        <!-- Design Logic: High whitespace, strong typography hierarchy -->
+        <div class="w-[780px] h-full flex flex-col justify-center pl-20 pr-12 relative z-10">
+            
+            <!-- Header Group -->
+            <div class="mb-12 border-l-4 border-primary pl-8">
+                <!-- Title -->
+                <h1 class="text-[120px] leading-[0.9] font-bold text-primary tracking-tight mb-4">
+                    Intro
+                </h1>
+                
+                <!-- Subtitle Meta Info -->
+                <div class="flex items-center justify-between w-full max-w-md mt-4">
+                    <h2 class="text-xl font-medium text-secondary uppercase tracking-widest">
+                        Graphic Designer
+                    </h2>
+                    <span class="text-xl font-bold text-primary">2027</span>
+                </div>
+            </div>
+
+            <!-- Body Content Wrapper -->
+            <!-- Using grid gap for semantic separation of text blocks -->
+            <div class="flex flex-col gap-8 text-secondary pr-8">
+                
+                <!-- Paragraph 1 -->
+                <p class="text-sm leading-relaxed font-light text-justify">
+                    Presentations are communication tools that can be used as demonstration lectures, speeches, reports, and more. It is mostly presented before an audience. It serves a variety of purposes, making presentations powerful tools for convincing and teaching.
+                </p>
+
+                <!-- Bullet Point Section (Styled as a block) -->
+                <ul class="list-none border-l border-accent pl-6 py-1">
+                    <li class="relative">
+                        <!-- Decorative Bullet Icon using FontAwesome -->
+                        <i class="fa-solid fa-water absolute -left-[34px] top-1 text-primary text-sm opacity-60"></i>
+                        <p class="text-sm leading-relaxed font-normal text-primary">
+                            Presentations are communication tools that can be used as demonstration lectures, speeches, reports, and more. It is mostly presented before an audience. It serves a variety of purposes, making presentations powerful tools for convincing and teaching.
+                        </p>
+                    </li>
+                </ul>
+
+                <!-- Paragraph 2 -->
+                <p class="text-sm leading-relaxed font-light text-justify opacity-80">
+                    Presentations are communication tools that can be used as demonstration lectures, speeches, reports, and more. It is mostly presented before an audience. It serves a variety of purposes, making presentations powerful tools for convincing and teaching.
+                </p>
+            </div>
+
+            <!-- Page Number (Absolute Bottom Left of Content Area) -->
+            <!-- Design: High contrast block to anchor the page -->
+            <div class="absolute bottom-0 left-0 bg-primary w-24 h-24 flex items-center justify-center">
+                <span class="text-white text-3xl font-bold tracking-tighter">02</span>
+            </div>
+        </div>
+
+        <!-- Right Visual Section -->
+        <!-- Design Logic: Organic Shape (Arch) to contrast strict typography -->
+        <div class="flex-1 h-full relative">
+            <!-- Background Shape Container -->
+            <!-- The shape mimics a window looking out to the ocean, cleaner than the original pill shape -->
+            <div class="absolute top-12 right-12 bottom-12 left-0 rounded-tl-[300px] rounded-bl-[300px] rounded-tr-[20px] rounded-br-[20px] overflow-hidden shadow-none transform translate-x-0">
+                
+                <!-- Image Overlay for Mood -->
+                <div class="absolute inset-0 bg-primary opacity-10 z-10 mix-blend-multiply"></div>
+                
+                <!-- Main Image -->
+                <!-- High quality ocean texture to match theme -->
+                <img 
+                    src="https://images.unsplash.com/photo-1549221568-7c85675c2e17?q=80&w=1000&auto=format&fit=crop" 
+                    alt="Abstract Blue Ocean Texture" 
+                    class="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-700 ease-out"
+                >
+                <!-- 500*720 -->
+
+                <!-- Decorative Geometric Overlay -->
+                <!-- Adds a layer of 'design' feel without clutter -->
+                <div class="absolute bottom-12 right-12 w-24 h-24 border border-white/30 rounded-full z-20"></div>
+                <div class="absolute top-1/2 left-12 w-1 h-24 bg-white/20 z-20"></div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

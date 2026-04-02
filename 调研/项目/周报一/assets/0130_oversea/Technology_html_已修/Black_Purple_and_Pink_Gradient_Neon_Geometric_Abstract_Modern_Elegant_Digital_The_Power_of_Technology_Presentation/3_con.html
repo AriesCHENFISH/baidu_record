@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Categories - List Focus</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative;
+            background-color: #050A14; font-family: 'Noto Sans SC', sans-serif; overflow: hidden; color: #E0E0E0;
+        }
+        .bg-grid {
+            position: absolute; inset: 0;
+            background-image: linear-gradient(rgba(19, 38, 57, 0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(19, 38, 57, 0.4) 1px, transparent 1px);
+            background-size: 50px 50px; z-index: 0; mask-image: radial-gradient(circle at 50% 50%, black, transparent 90%);
+        }
+        
+        .timeline-header {
+            letter-spacing: 0.8em; text-indent: 0.8em;
+            background: linear-gradient(to bottom, #D4C9E8 0%, #8A7FB1 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800;
+        }
+
+        /* 纯文本卡片风格 */
+        .card-cyber-text {
+            background: rgba(13, 25, 48, 0.4); 
+            border: 1px solid rgba(74, 30, 158, 0.2);
+            position: relative; 
+            padding-top: 30px; /* 为浮动标签留出空间 */
+            transition: all 0.3s ease;
+        }
+        .card-cyber-text:hover {
+            border-color: #2D5BFF; 
+            background: rgba(13, 25, 48, 0.7);
+            transform: translateX(10px); /* 向右轻微平移 */
+        }
+
+        .badge-ict {
+            background: linear-gradient(90deg, #4A1E9E, #2D5BFF);
+            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+            position: absolute;
+            top: -16px;
+            left: 20px;
+        }
+
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <div class="bg-grid"></div>
+
+        <div class="relative z-10 w-full h-full px-16 py-12 flex flex-col">
+            
+            <div class="flex flex-col items-center mb-16">
+                <div class="flex items-center space-x-4 mb-2">
+                    <div class="w-8 h-[1px] bg-blue-500 opacity-50"></div>
+                    <span class="text-[10px] text-blue-400 tracking-[0.3em] uppercase opacity-70">Technological Evolution</span>
+                    <div class="w-8 h-[1px] bg-blue-500 opacity-50"></div>
+                </div>
+                <h2 class="timeline-header text-2xl">TIMELINE</h2>
+            </div>
+
+            <div class="flex flex-1 gap-12">
+                
+                <div class="w-4/12">
+                    <div class="h-full rounded-2xl overflow-hidden border border-white/5 relative">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1000" class="w-full h-full object-cover opacity-50 scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-br from-[#4A1E9E]/20 to-[#050A14]"></div>
+                        <div class="absolute inset-6 border border-white/10 rounded-xl"></div>
+                        <div class="absolute bottom-12 left-12">
+                            <i class="fas fa-microchip text-4xl text-blue-500 mb-4 opacity-80"></i>
+                            <h3 class="text-3xl font-bold text-white tracking-tight">Digital<br>Foundation</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-3/12 flex flex-col justify-center">
+                    <div class="mb-8">
+                        <span class="text-blue-500 text-xs font-bold tracking-[0.3em] uppercase">Core Data</span>
+                        <h1 class="text-6xl font-black text-white mt-4">ICT<br>Focus</h1>
+                    </div>
+                    <p class="text-gray-400 text-lg leading-relaxed font-light text-justify border-l-2 border-blue-900/30 pl-6">
+                        The transformation of global communication systems has created a new paradigm of instant data exchange and infinite storage possibilities.
+                    </p>
+                </div>
+
+                <div class="w-5/12 flex flex-col justify-center space-y-10 pr-4">
+                    
+                    <div class="card-cyber-text p-6 rounded-xl">
+                        <div class="badge-ict py-1.5 px-6 z-20">
+                            <span class="text-white font-bold text-[10px] tracking-widest uppercase">Cloud Infrastructure</span>
+                        </div>
+                        <p class="text-gray-400 text-sm leading-relaxed text-justify">
+                            Enabling scalable, on-demand access to computing resources, storage, and specialized services across distributed global networks.
+                        </p>
+                    </div>
+
+                    <div class="card-cyber-text p-6 rounded-xl">
+                        <div class="badge-ict py-1.5 px-6 z-20">
+                            <span class="text-white font-bold text-[10px] tracking-widest uppercase">Network Protocols</span>
+                        </div>
+                        <p class="text-gray-400 text-sm leading-relaxed text-justify">
+                            The standardized rules and formats that govern how data is transmitted, received, and verified across interconnected systems.
+                        </p>
+                    </div>
+
+                    <div class="card-cyber-text p-6 rounded-xl">
+                        <div class="badge-ict py-1.5 px-6 z-20">
+                            <span class="text-white font-bold text-[10px] tracking-widest uppercase">Digital Security</span>
+                        </div>
+                        <p class="text-gray-400 text-sm leading-relaxed text-justify">
+                            Multi-layered protection strategies designed to ensure data integrity, confidentiality, and availability in a hostile digital environment.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="mt-auto flex items-center justify-between opacity-30">
+                <div class="flex items-center space-x-4">
+                    <div class="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
+                    <div class="h-[1px] w-20 bg-blue-900/50"></div>
+                    <span class="text-[9px] font-mono tracking-widest text-blue-400 uppercase">System Intelligence // Node 02</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

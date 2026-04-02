@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everyday Life - Thynk Style</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .page_container { width: 1280px; height: 720px; background-color: #050505; position: relative; margin: 0 auto; overflow: hidden; font-family: 'Noto Sans SC', sans-serif; color: white; }
+        
+        /* 统一Logo样式 */
+        .logo-container { border-left: 3px solid #E87EA1; padding-left: 1.5rem; }
+        .logo-text { font-family: serif; letter-spacing: 0.2em; line-height: 1; }
+
+        /* 背景装饰大字 */
+        .text-outline { -webkit-text-stroke: 1px rgba(232, 126, 161, 0.08); color: transparent; font-size: 140px; line-height: 1; pointer-events: none; }
+        
+        /* 文本框美化：玻璃拟态控制台风格 */
+        .content-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-left: 4px solid #E87EA1;
+        }
+        
+        .image-mask {
+            mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+        }
+    </style>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { brandPink: '#E87EA1', textSecondary: '#CCCCCC' } } } }
+    </script>
+</head>
+<body>
+
+    <div class="page_container">
+        <!-- 背景轮廓文字 -->
+        <div class="absolute -top-6 -left-10 text-outline font-black uppercase">Everyday</div>
+
+        <div class="grid grid-cols-12 h-full">
+            
+            <!-- 左侧内容区 (7列) -->
+            <div class="col-span-7 p-16 flex flex-col justify-between border-r border-white/5 relative z-10">
+                
+                <!-- 统一 Logo -->
+                <div class="logo-container flex flex-col">
+                    <div class="text-3xl font-light logo-text">THYNK<span class="font-bold text-brandPink ml-1">.</span></div>
+                    <div class="text-[10px] uppercase tracking-[0.8em] text-brandPink/60 mt-3 font-medium">Systems Unlimited</div>
+                </div>
+
+                <!-- 统一主标题样式 -->
+                <div class="mt-8">
+                    <h1 class="text-7xl font-bold leading-[0.9] tracking-tighter">
+                        EVERYDAY<br>
+                        <span class="text-brandPink">LIFE</span> <br>
+                        <span class="text-2xl font-extralight tracking-[0.4em] text-white/60 uppercase">With Engineering</span>
+                    </h1>
+                    <div class="mt-8 flex gap-3">
+                        <div class="w-16 h-[1px] bg-brandPink"></div>
+                        <div class="w-8 h-[1px] bg-white/20"></div>
+                    </div>
+                </div>
+
+                <!-- 美化的文本框设计 -->
+                <div class="space-y-6 mt-10">
+                    <div class="content-card p-6 relative">
+                        <div class="absolute -top-3 right-4 bg-brandPink text-black text-[10px] font-bold px-2 py-0.5 rounded uppercase">Context A</div>
+                        <div class="flex gap-4">
+                            <span class="text-brandPink font-mono text-lg">01.</span>
+                            <p class="text-textSecondary text-sm leading-relaxed font-light">
+                                Software is the <span class="text-white font-medium">invisible engine</span> managing our banking apps, powering smart homes, and connecting the world in real-time through digital platforms.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="content-card p-6 relative">
+                        <div class="absolute -top-3 right-4 bg-white/10 text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase">Context B</div>
+                        <div class="flex gap-4">
+                            <span class="text-brandPink font-mono text-lg">02.</span>
+                            <p class="text-textSecondary text-sm leading-relaxed font-light">
+                                Whether booking rides or streaming media, engineering ensures <span class="text-white font-medium">seamless user experiences</span>. It’s the foundation of reliability in modern conveniences.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 底部装饰 -->
+                <div class="text-[10px] text-gray-500 tracking-[0.2em] uppercase mt-4">
+                    Observed Impact / Global Infrastructure / 2024 Report
+                </div>
+            </div>
+
+            <!-- 右侧视觉区 (5列) -->
+            <div class="col-span-5 bg-black relative flex flex-col justify-center p-12">
+                
+                <!-- 笔记本装饰小图 -->
+                <div class="absolute top-12 -left-16 w-64 h-40 rounded-lg overflow-hidden border border-white/10 shadow-2xl z-20">
+                    <div class="absolute inset-0 bg-brandPink/10 mix-blend-overlay"></div>
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover">
+                    <div class="absolute bottom-2 left-2 bg-black/80 px-2 py-1 rounded text-[8px] font-mono text-brandPink">System_Init()</div>
+                </div>
+
+                <!-- 主视觉图片 -->
+                <div class="relative w-full aspect-[3/4] max-h-[580px] group">
+                    <!-- 边角装饰线 -->
+                    <div class="absolute -top-4 -right-4 w-12 h-12 border-t-2 border-r-2 border-brandPink z-10 transition-all group-hover:-top-2 group-hover:-right-2"></div>
+                    <div class="absolute -bottom-4 -left-4 w-12 h-12 border-b-2 border-l-2 border-brandPink z-10 transition-all group-hover:-bottom-2 group-hover:-left-2"></div>
+                    
+                    <div class="w-full h-full overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                    </div>
+
+                    <!-- 图片上的标签 -->
+                    <div class="absolute bottom-6 left-6 flex items-center gap-3">
+                        <div class="w-10 h-[1px] bg-brandPink"></div>
+                        <span class="text-[10px] uppercase tracking-widest font-bold">The Engineering Team</span>
+                    </div>
+                </div>
+
+                <!-- 底部三角形装饰（与第一页呼应） -->
+                <div class="absolute bottom-12 right-12 text-white/20 text-4xl">
+                    <i class="fa-solid fa-play"></i>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, height=720, initial-scale=1.0">
+    <title>Our Team - Larana Company</title>
+
+    <!-- Google Fonts via Domestic CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBlack: '#050505',
+                        softPink: '#F5C2D4',
+                        lightSilver: '#D1D1D1',
+                        ambientPurple: '#1A1520',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Global Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container - Fixed Dimensions */
+        .page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #050505; /* Deep Space Black */
+            overflow: hidden;
+            color: #FFFFFF;
+        }
+
+        /* Utility Helpers for background blur/gradients */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03); /* Unified transparency */
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Card-specific brighter glass */
+        .glass-card-info {
+             background: rgba(255, 255, 255, 0.15);
+             backdrop-filter: blur(12px);
+             -webkit-backdrop-filter: blur(12px);
+             border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div class="page_container">
+        
+        <!-- Ambient Background Light (Purple Glow) -->
+        <div class="absolute top-[-10%] right-[-10%] w-[800px] h-[800px] rounded-full" 
+             style="background: radial-gradient(circle, rgba(26, 21, 32, 1) 0%, rgba(5, 5, 5, 0) 70%); z-index: 0;">
+        </div>
+
+        <!-- Content Wrapper -->
+        <!-- Added padding logic consistent with other pages -->
+        <div class="relative z-10 w-full h-full flex flex-col px-12 pt-8 pb-12">
+
+            <!-- 1. Header Section (Strictly Unified) -->
+            <div class="relative w-full h-[80px] flex justify-between items-center z-20 mb-6">
+                
+                <!-- Logo Area -->
+                <div class="flex items-center gap-3">
+                    <div class="text-softPink text-xl">
+                        <i class="fa-solid fa-shapes"></i>
+                    </div>
+                    <h4 class="text-white text-lg font-medium tracking-wide">Larana Company</h4>
+                </div>
+
+                <!-- Navigation Area (Top Right Capsule) -->
+                <div class="flex items-center rounded-full glass-panel pl-1 pr-6 py-1 gap-6">
+                    <!-- Pink Highlight Pill -->
+                    <div class="bg-softPink rounded-full px-6 py-2">
+                        <h5 class="text-deepBlack text-sm font-bold tracking-tight">Pitch Deck Business Presentation</h5>
+                    </div>
+                    <!-- Date -->
+                    <h6 class="text-lightSilver text-sm font-light tracking-widest">August 2025</h6>
+                </div>
+            </div>
+
+            <!-- Main Content: Team Grid -->
+            <!-- Adjusted margin-top to fit new header spacing -->
+            <div class="relative z-10 grid grid-cols-4 gap-6 h-[400px]">
+                
+                <!-- Card 1: Olivia Wilson (Active/Highlighted) -->
+                <div class="relative w-full h-full rounded-2xl overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop" 
+                         alt="Olivia Wilson" 
+                         class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500 ease-out">
+                    
+                    <!-- Name Tag (Pink Variant for Active) -->
+                    <div class="absolute bottom-4 left-4 right-4 bg-softPink p-4 rounded-xl shadow-lg">
+                        <h3 class="text-deepBlack text-lg font-bold leading-tight">Olivia Wilson</h3>
+                        <p class="text-deepBlack text-xs font-medium mt-1 uppercase tracking-wide opacity-80">CEO & Founder</p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Drew Feig -->
+                <div class="relative w-full h-full rounded-2xl overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&auto=format&fit=crop" 
+                         alt="Drew Feig" 
+                         class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300">
+                    
+                    <!-- Name Tag (Glass Variant) -->
+                    <div class="absolute bottom-4 left-4 right-4 glass-card-info p-4 rounded-xl">
+                        <h3 class="text-white text-lg font-bold leading-tight">Drew Feig</h3>
+                        <p class="text-lightSilver text-xs font-medium mt-1 uppercase tracking-wide">Co - Founder</p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Samira Hadid -->
+                <div class="relative w-full h-full rounded-2xl overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=600&auto=format&fit=crop" 
+                         alt="Samira Hadid" 
+                         class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300">
+
+                    <!-- Name Tag (Glass Variant) -->
+                    <div class="absolute bottom-4 left-4 right-4 glass-card-info p-4 rounded-xl">
+                        <h3 class="text-white text-lg font-bold leading-tight">Samira Hadid</h3>
+                        <p class="text-lightSilver text-xs font-medium mt-1 uppercase tracking-wide">General Manager</p>
+                    </div>
+                </div>
+
+                <!-- Card 4: Daniel Gallego -->
+                <div class="relative w-full h-full rounded-2xl overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=600&auto=format&fit=crop" 
+                         alt="Daniel Gallego" 
+                         class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300">
+
+                    <!-- Name Tag (Glass Variant) -->
+                    <div class="absolute bottom-4 left-4 right-4 glass-card-info p-4 rounded-xl">
+                        <h3 class="text-white text-lg font-bold leading-tight">Daniel Gallego</h3>
+                        <p class="text-lightSilver text-xs font-medium mt-1 uppercase tracking-wide">Digital Marketing</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer Section: Big Title & Description -->
+            <div class="relative z-10 mt-auto flex items-end justify-between">
+                
+                <!-- Huge Title -->
+                <div class="flex flex-col">
+                    <h2 class="text-[100px] leading-none font-thin tracking-tighter text-white">
+                        Our Team
+                    </h2>
+                </div>
+
+                <!-- Description Text -->
+                <div class="w-[480px] pb-4">
+                    <p class="text-lightSilver text-sm leading-relaxed text-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl eu sem tristique, sit amet convallis ex aliquam. Maecenas varius lectus hendrerit augue blandit, ut posuere erat aliquam. Praesent auctor tellus eget nisl blandit, at varius purus elementum.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

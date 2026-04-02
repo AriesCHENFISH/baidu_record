@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who We Are - Corporate Keynote</title>
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts (Domestic Mirror) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#121212',
+                        primary: '#FFFFFF',
+                        secondary: '#B0B0B0',
+                        accent: '#9D8C9D',
+                        glass: 'rgba(255, 255, 255, 0.05)',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Global Structure */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Enforcing strict slide dimensions */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #121212;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+            /* No outer shadow as per requirements */
+        }
+
+        /* Utility for strictly text gradient as per image style */
+        .text-gradient {
+            background: linear-gradient(90deg, #FFFFFF 0%, #9D8C9D 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .accent-gradient-text {
+            background: linear-gradient(90deg, #9D8C9D 0%, #D4C4D4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div id="page_container">
+        
+        <!-- Header / Navigation Area -->
+        <header class="absolute top-0 left-0 w-full px-12 py-8 flex justify-between items-center z-20">
+            <!-- Brand -->
+            <div class="flex items-center gap-3">
+                <i class="fa-solid fa-layer-group text-accent text-xl"></i> <!-- Icon representing Logo -->
+                <h6 class="text-white text-sm font-bold tracking-wide">Fauget.Company</h6>
+            </div>
+            
+            <!-- Presenter Info -->
+            <div class="absolute left-1/2 transform -translate-x-1/2">
+                <p class="text-secondary text-xs font-medium tracking-widest uppercase">
+                    Presented by : <span class="text-white">Aaron Loeb</span>
+                </p>
+            </div>
+
+            <!-- Website -->
+            <div>
+                <p class="text-secondary text-xs font-light tracking-wide">www.reallygreatsite.com</p>
+            </div>
+        </header>
+
+        <!-- Decorative Background Elements (Geometric) -->
+        <!-- Subtle Purple Square Top Left -->
+        <div class="absolute top-28 left-16 w-4 h-4 border border-accent opacity-50"></div>
+        <!-- Filled Purple Squares Bottom Left -->
+        <div class="absolute bottom-36 left-12 flex gap-1">
+            <div class="w-6 h-6 bg-accent opacity-80"></div>
+            <div class="w-6 h-6 bg-accent opacity-40 translate-y-4"></div>
+        </div>
+
+        <!-- Main Content Grid -->
+        <div class="w-full h-full pt-24 pb-12 px-16 grid grid-cols-12 gap-10">
+
+            <!-- Left Column: Imagery & Headline (7 Columns) -->
+            <div class="col-span-7 flex flex-col justify-between h-full relative">
+                
+                <!-- Images Section -->
+                <div class="flex gap-6 items-start h-[400px]">
+                    <!-- Image 1: Square-ish Architectural Detail -->
+                    <div class="w-3/5 h-full rounded-[2rem] overflow-hidden border border-white/10 relative group">
+                        <!-- Glass shine effect -->
+                        <div class="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop" 
+                             alt="Modern architecture glass ceiling" 
+                             class="w-full h-full object-cover grayscale opacity-90 transition-transform duration-700 group-hover:scale-105">
+                        <!-- 420*400 -->
+                    </div>
+
+                    <!-- Image 2: Tall Skyscraper -->
+                    <div class="w-2/5 h-[110%] -mt-4 rounded-[2rem] overflow-hidden border border-white/10 relative group">
+                        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?q=80&w=600&auto=format&fit=crop" 
+                             alt="Skyscraper abstract view" 
+                             class="w-full h-full object-cover grayscale opacity-90 transition-transform duration-700 group-hover:scale-105">
+                        <!-- 280*440 -->
+                    </div>
+                </div>
+
+                <!-- Headline Section -->
+                <div class="mt-auto relative">
+                    <h1 class="text-8xl font-black text-white leading-[0.9] tracking-tighter uppercase">
+                        Who <br> 
+                        <span class="text-white">We Are?</span>
+                    </h1>
+                    
+                    <!-- Decorative Arrow -->
+                    <div class="absolute bottom-2 left-[520px] text-5xl text-accent opacity-80">
+                        <i class="fa-solid fa-arrow-up-right-from-square transform rotate-45"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Text Content & Cards (5 Columns) -->
+            <div class="col-span-5 flex flex-col gap-8 pt-4">
+                
+                <!-- Intro Paragraph -->
+                <div class="mb-4">
+                    <p class="text-secondary text-sm leading-relaxed mb-4 text-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl eu sem tristique, sit amet convallis ex aliquam. Maecenas varius lectus hendrerit augue blandit, ut posuere erat.
+                    </p>
+                    <p class="text-secondary text-xs leading-relaxed opacity-70 text-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl eu sem tristique, sit amet convallis ex aliquam.
+                    </p>
+                </div>
+
+                <!-- Vision Card -->
+                <div class="bg-glass border border-white/10 rounded-2xl p-6 backdrop-blur-sm relative overflow-hidden">
+                    <!-- Subtle accent decoration -->
+                    <div class="absolute top-0 right-0 w-16 h-16 bg-accent blur-[40px] opacity-20 rounded-full"></div>
+                    
+                    <h2 class="text-3xl font-bold mb-3">
+                        <span class="text-white">Our</span> <span class="accent-gradient-text">Vision</span>
+                    </h2>
+                    <p class="text-secondary text-xs leading-relaxed">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl eu sem tristique, sit amet convallis ex aliquam.
+                    </p>
+                </div>
+
+                <!-- Mission Card -->
+                <div class="bg-glass border border-white/10 rounded-2xl p-6 backdrop-blur-sm relative overflow-hidden">
+                    <!-- Subtle accent decoration -->
+                    <div class="absolute bottom-0 left-0 w-16 h-16 bg-accent blur-[40px] opacity-20 rounded-full"></div>
+
+                    <h2 class="text-3xl font-bold mb-3">
+                        <span class="text-white">Our</span> <span class="accent-gradient-text">Mission</span>
+                    </h2>
+                    <p class="text-secondary text-xs leading-relaxed">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl eu sem tristique, sit amet convallis ex aliquam.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Footer / Page Number Placeholder (Hidden per request but structural balance) -->
+        <div class="absolute bottom-8 right-12">
+            <div class="w-2 h-2 bg-accent rounded-full"></div>
+        </div>
+
+    </div>
+
+</body>
+</html>

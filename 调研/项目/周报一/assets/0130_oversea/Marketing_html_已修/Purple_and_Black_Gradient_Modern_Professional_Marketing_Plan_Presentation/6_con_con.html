@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Campaign Report - Modern Keynote</title>
+    
+    <!-- Google Fonts (Domestic Mirror as requested) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- ECharts -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgMain: '#050505',
+                        primaryStart: '#A962E3',
+                        primaryEnd: '#C98BF2',
+                        textMain: '#FFFFFF',
+                        textSec: '#C4B5D4', /* Corrected from invalid BKA8C8 to a valid soft purple-grey */
+                        cardBg: '#F8F0FA',
+                        cardText: '#1A1A1A',
+                        stroke: 'rgba(224, 224, 224, 0.8)',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Re-structure */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Utility to hide scrollbars for presentation view */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Gradient Text Utility */
+        .text-gradient {
+            background: linear-gradient(to right, #A962E3, #C98BF2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        /* Gradient Background Utility */
+        .bg-gradient-primary {
+            background: linear-gradient(135deg, #A962E3, #C98BF2);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div id="page_container" class="relative w-[1280px] h-[720px] bg-bgMain mx-auto overflow-hidden font-sans">
+        
+        <!-- Background Decorative Elements (Glows & Shapes) -->
+        <!-- Top Right Glow -->
+        <div class="absolute -top-[100px] -right-[100px] w-[500px] h-[500px] rounded-full opacity-20 pointer-events-none" 
+             style="background: radial-gradient(circle, #A962E3 0%, transparent 70%); filter: blur(60px);">
+        </div>
+        
+        <!-- Bottom Left Glow -->
+        <div class="absolute -bottom-[150px] -left-[100px] w-[600px] h-[600px] rounded-full opacity-10 pointer-events-none" 
+             style="background: radial-gradient(circle, #C98BF2 0%, transparent 70%); filter: blur(80px);">
+        </div>
+
+        <!-- Decorative Circle Arc (Top Right) -->
+        <div class="absolute top-[-50px] right-[-50px] w-[300px] h-[300px] rounded-full border-[20px] border-[#A962E3] opacity-20 pointer-events-none"></div>
+
+        <!-- Main Layout Grid/Flex -->
+        <div class="relative w-full h-full flex items-center p-16">
+            
+            <!-- Left Column: Image & Floating Card -->
+            <div class="w-5/12 h-full relative flex items-center justify-start pl-4">
+                
+                <!-- Main Visual Image Container -->
+                <div class="relative w-[420px] h-[580px] rounded-[32px] overflow-hidden shadow-2xl border border-white/10 group">
+                    <!-- Image Overlay Gradient for depth -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#A962E3]/40 to-transparent z-10 mix-blend-overlay"></div>
+                    
+                    <!-- High Quality Unsplash Image: Moody Purple Fashion/Tech -->
+                    <img src="https://images.unsplash.com/photo-1535295972055-1c762f4483e5?q=80&w=1000&auto=format&fit=crop" 
+                         alt="Campaign Visual" 
+                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <!-- 420*580 -->
+                </div>
+
+                <!-- Floating Stats Card (Overlapping) -->
+                <div class="absolute top-1/2 right-[-60px] transform -translate-y-1/2 w-[240px] bg-cardBg rounded-3xl p-8 shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-20 flex flex-col items-center justify-center text-center border border-white/50">
+                    
+                    <!-- Icon -->
+                    <div class="mb-4">
+                        <i class="fa-solid fa-bullhorn text-5xl text-[#A962E3]"></i>
+                    </div>
+                    
+                    <!-- Label -->
+                    <h3 class="text-cardText text-xl font-medium mb-1 tracking-wide">Budget</h3>
+                    
+                    <!-- Value -->
+                    <h2 class="text-6xl font-bold text-gradient tracking-tight">100%</h2>
+                </div>
+            </div>
+
+            <!-- Right Column: Content & Chart -->
+            <div class="w-7/12 h-full flex flex-col justify-center pl-24 pr-8 z-10">
+                
+                <!-- Text Content -->
+                <div class="mb-10">
+                    <h1 class="text-6xl font-bold text-textMain mb-6 leading-tight">Budget Analysis</h1>
+                    
+                    <div class="w-20 h-1 bg-gradient-primary rounded-full mb-6"></div>
+                    
+                    <p class="text-textSec text-xl leading-relaxed max-w-lg">
+                        Use the graph to present the expenses associated with the campaign. Visualizing allocation ensures transparent resource management.
+                    </p>
+                </div>
+
+                <!-- Chart Container -->
+                <div id="budgetPieChart" class="w-full h-[320px]">
+                    <!-- ECharts will render here -->
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ECharts Initialization Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var chartDom = document.getElementById('budgetPieChart');
+            var myChart = echarts.init(chartDom);
+            var option;
+
+            // Design System Colors for the chart
+            // Generating a palette from the primary purple to lighter/different shades
+            const colors = ['#A962E3', '#C98BF2', '#D4A5F5', '#E0BFF7', '#EBD9FA'];
+
+            option = {
+                color: colors,
+                tooltip: {
+                    trigger: 'item',
+                    backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                    textStyle: {
+                        color: '#1A1A1A'
+                    }
+                },
+                legend: {
+                    orient: 'vertical',
+                    right: 'right',
+                    top: 'center',
+                    textStyle: {
+                        color: '#C4B5D4', // Using textSec color
+                        fontSize: 14,
+                        fontFamily: '"Noto Sans SC", sans-serif'
+                    },
+                    itemGap: 20,
+                    formatter: function (name) {
+                        return name + '   20%';
+                    }
+                },
+                series: [
+                    {
+                        name: 'Budget Allocation',
+                        type: 'pie',
+                        radius: ['40%', '70%'], // Donut style for modern look
+                        center: ['35%', '50%'], // Shifted left to make room for legend
+                        avoidLabelOverlap: false,
+                        itemStyle: {
+                            borderRadius: 10,
+                            borderColor: '#050505',
+                            borderWidth: 5
+                        },
+                        label: {
+                            show: false,
+                            position: 'center'
+                        },
+                        emphasis: {
+                            label: {
+                                show: true,
+                                fontSize: 24,
+                                fontWeight: 'bold',
+                                color: '#FFFFFF',
+                                formatter: '{d}%'
+                            },
+                            itemStyle: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        },
+                        labelLine: {
+                            show: false
+                        },
+                        data: [
+                            { value: 20, name: 'Item 1' },
+                            { value: 20, name: 'Item 2' },
+                            { value: 20, name: 'Item 3' },
+                            { value: 20, name: 'Item 4' },
+                            { value: 20, name: 'Item 5' }
+                        ]
+                    }
+                ]
+            };
+
+            myChart.setOption(option);
+        });
+    </script>
+</body>
+</html>

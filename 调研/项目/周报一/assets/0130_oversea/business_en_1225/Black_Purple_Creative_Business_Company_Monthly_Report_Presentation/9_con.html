@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Analysis Chart</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { bg: '#050505', primary: '#FFFFFF', secondary: '#A0A0A0', accent: '#8B5CF6', accentDeep: '#4C1D95' },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #050505; overflow: hidden; font-family: 'Noto Sans SC', sans-serif; }
+    </style>
+</head>
+<body>
+    <div id="page_container" class="flex flex-col p-12">
+        
+        <div class="flex justify-between items-end mb-8 border-b border-[#333] pb-4">
+            <h1 class="text-6xl font-bold tracking-tight text-white">
+                <span class="text-accent">Market</span> Analysis
+            </h1>
+            <div class="text-secondary text-lg mb-2">Fiscal Year 2025 - Q4 Report</div>
+        </div>
+
+        <div class="grid grid-cols-12 gap-8 h-full">
+            
+            <div class="col-span-4 flex flex-col justify-center space-y-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-arrow-trend-up text-accent"></i> Growth Trend
+                    </h3>
+                    <p class="text-secondary text-justify leading-relaxed">
+                        The market engagement has shown a significant upward trajectory, outperforming the projected baseline by <strong>15%</strong>.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-bullseye text-accent"></i> Target Audience
+                    </h3>
+                    <p class="text-secondary text-justify leading-relaxed">
+                        Engagement in the 18-35 demographic has doubled, driven primarily by our mobile-first campaign strategy.
+                    </p>
+                </div>
+                <div class="mt-4 p-6 bg-[#111] border border-[#333] rounded-xl">
+                    <span class="block text-secondary text-sm uppercase tracking-widest">Conversion Rate</span>
+                    <span class="block text-4xl font-bold text-white mt-1">8.2% <small class="text-accent text-lg">+1.2%</small></span>
+                </div>
+            </div>
+
+            <div class="col-span-8 relative">
+                <div class="absolute inset-0 bg-accent opacity-5 blur-[80px] rounded-full"></div>
+                <div id="chart-container" class="w-full h-full relative z-10"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var chartDom = document.getElementById('chart-container');
+        var myChart = echarts.init(chartDom);
+        var option;
+
+        option = {
+            backgroundColor: 'transparent',
+            textStyle: { fontFamily: 'Noto Sans SC' },
+            tooltip: { trigger: 'axis', backgroundColor: '#111', borderColor: '#333', textStyle: { color: '#fff' } },
+            grid: { top: '10%', left: '3%', right: '4%', bottom: '3%', containLabel: true },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+                axisLine: { lineStyle: { color: '#333' } },
+                axisLabel: { color: '#A0A0A0' }
+            },
+            yAxis: {
+                type: 'value',
+                splitLine: { lineStyle: { color: '#333', type: 'dashed' } },
+                axisLabel: { color: '#A0A0A0' }
+            },
+            series: [
+                {
+                    name: 'Target',
+                    type: 'line',
+                    smooth: true,
+                    lineStyle: { width: 2, color: '#4C1D95', type: 'dashed' },
+                    showSymbol: false,
+                    data: [120, 132, 101, 134, 90, 230, 210]
+                },
+                {
+                    name: 'Actual',
+                    type: 'line',
+                    smooth: true,
+                    lineStyle: { width: 4, color: '#8B5CF6' },
+                    showSymbol: true,
+                    symbolSize: 8,
+                    itemStyle: { color: '#fff', borderColor: '#8B5CF6', borderWidth: 2 },
+                    areaStyle: {
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                            { offset: 0, color: 'rgba(139, 92, 246, 0.5)' },
+                            { offset: 1, color: 'rgba(139, 92, 246, 0)' }
+                        ])
+                    },
+                    data: [220, 182, 191, 234, 290, 330, 310]
+                }
+            ]
+        };
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

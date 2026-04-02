@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Proposal - Studio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts (Domestic Mirror) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        /* CSS Reset & Global Config */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container - Strict 1280x720 */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #000000;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 550px 80px 1fr; /* Image Area | Divider | Content Area */
+        }
+
+        /* Custom Typography Utilities */
+        .text-stroke-red {
+            color: transparent;
+            -webkit-text-stroke: 2px #8B1C1C; /* Accent Color */
+        }
+
+        /* Vertical Text Utility */
+        .vertical-text-container {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <!-- 1. Left Section: Cinematic Image -->
+        <!-- Using a container to apply the unique border radius effect -->
+        <div class="relative w-full h-full bg-neutral-900 rounded-tr-[240px] overflow-hidden border-r border-neutral-900">
+            <!-- Image of Audience/Cinema -->
+            <img 
+                src="https://images.unsplash.com/photo-1517604931442-71053e68cc23?q=80&w=600&auto=format&fit=crop" 
+                alt="Cinema Audience" 
+                class="w-full h-full object-cover opacity-90 mix-blend-normal"
+            >
+            <!-- 550*720 -->
+            
+            <!-- Gradient Overlay for better integration -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
+        </div>
+
+        <!-- 2. Middle Section: Vertical Label & Separator -->
+        <div class="flex flex-col items-center justify-center h-full relative">
+            <!-- Decorative Line Top -->
+            <div class="w-[1px] h-32 bg-gradient-to-b from-transparent to-[#DCDCDC] mb-6"></div>
+
+            <!-- The Pill Label -->
+            <div class="border border-[#DCDCDC] rounded-full py-8 px-2 flex items-center justify-center">
+                <div class="vertical-text-container">
+                    <p class="text-[#FFFFFF] text-xs font-bold tracking-[0.3em] uppercase whitespace-nowrap">
+                        Business Proposal
+                    </p>
+                </div>
+            </div>
+
+            <!-- Decorative Line Bottom -->
+            <div class="w-[1px] h-32 bg-gradient-to-t from-transparent to-[#DCDCDC] mt-6"></div>
+        </div>
+
+        <!-- 3. Right Section: Content & Typography -->
+        <div class="flex flex-col justify-between px-16 py-16 h-full text-right relative">
+            
+            <!-- Top Content: Descriptive Text -->
+            <div class="flex flex-col items-end">
+                <!-- Icon Decoration -->
+                <div class="text-[#8B1C1C] text-2xl mb-6">
+                    <i class="fa-solid fa-quote-right"></i>
+                </div>
+
+                <!-- Main Paragraph -->
+                <p class="text-[#DCDCDC] text-sm leading-7 tracking-wide max-w-lg font-light text-justify" style="text-align-last: right;">
+                    A business proposal is a detailed document that outlines a company's plan to offer its products or services to potential clients or partners. This proposal typically includes an overview of the business, a description of the products or services offered, pricing, timelines, and terms and conditions. Regardless of the industry, every business can benefit from crafting a well-structured business proposal, as it helps communicate the company's value, differentiates it from competitors, and builds trust and interest among prospective clients.
+                </p>
+            </div>
+
+            <!-- Bottom Content: Massive Title -->
+            <div class="flex flex-col items-end mt-auto relative z-10">
+                <!-- Decorative Element behind text -->
+                <div class="absolute -top-10 -right-10 w-32 h-32 rounded-full border border-[#8B1C1C] opacity-20"></div>
+
+                <!-- Sub Headline "ABOUT" (Outlined) -->
+                <h2 class="text-6xl font-black uppercase italic tracking-tighter text-stroke-red leading-none mb-[-10px] z-10">
+                    About
+                </h2>
+
+                <!-- Main Headline "STUDIO" (Solid) -->
+                <h1 class="text-[#FFFFFF] text-[9rem] font-black uppercase leading-[0.85] tracking-tight z-10">
+                    Studio
+                </h1>
+                
+                <!-- Small tagline below -->
+                <div class="flex items-center gap-3 mt-4">
+                    <div class="h-[1px] w-16 bg-[#8B1C1C]"></div>
+                    <p class="text-[#8B4513] text-xs font-bold tracking-widest uppercase">
+                        Creative Solutions & Strategy
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

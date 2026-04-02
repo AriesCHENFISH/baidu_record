@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quarterly Performance - Dashboard Slide</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.2/echarts.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative;
+            background-color: #FAFAFA; overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+            padding: 50px 60px; /* Internal padding for full page content */
+        }
+    </style>
+</head>
+<body>
+    <div id="page_container" class="flex flex-col justify-between">
+        
+        <div class="absolute top-[-50px] right-[-50px] w-[300px] h-[300px] bg-[#4D9EF4] opacity-5 rounded-full blur-3xl z-0"></div>
+        <div class="absolute bottom-[-20px] left-[-20px] w-[200px] h-[200px] bg-[#E57D48] opacity-5 rounded-full blur-2xl z-0"></div>
+
+        <div class="relative z-10 w-full mb-8 flex justify-between items-end">
+            <div>
+                <h1 class="text-[#1A1A1A] text-5xl font-bold leading-tight">
+                    Quarterly <span class="text-[#E57D48]">Performance</span>
+                </h1>
+                <div class="w-16 h-1.5 bg-[#4D9EF4] rounded-full mt-2"></div>
+            </div>
+            <div class="text-[#555555] text-sm font-medium">
+                Data Updated: Oct 2025
+            </div>
+        </div>
+
+        <div class="relative z-10 grid grid-cols-3 gap-6 mb-8">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between h-32">
+                <div class="flex justify-between items-start">
+                    <span class="text-[#555555] font-medium">Total Revenue</span>
+                    <i class="fa-solid fa-chart-line text-[#4D9EF4] text-xl"></i>
+                </div>
+                <div>
+                    <span class="text-4xl font-bold text-[#1A1A1A]">$4.2M</span>
+                    <span class="text-xs text-green-500 ml-2 font-bold">▲ 12% vs last Q</span>
+                </div>
+            </div>
+
+            <div class="bg-[#E57D48] p-6 rounded-2xl shadow-md text-white flex flex-col justify-between h-32 transform scale-105">
+                <div class="flex justify-between items-start">
+                    <span class="text-white/90 font-medium">New Users</span>
+                    <i class="fa-solid fa-users text-white text-xl"></i>
+                </div>
+                <div>
+                    <span class="text-4xl font-bold">1,240</span>
+                    <span class="text-xs text-white/80 ml-2">Active Accounts</span>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between h-32">
+                <div class="flex justify-between items-start">
+                    <span class="text-[#555555] font-medium">Retention Rate</span>
+                    <i class="fa-solid fa-rotate text-[#4D9EF4] text-xl"></i>
+                </div>
+                <div>
+                    <span class="text-4xl font-bold text-[#1A1A1A]">94.5%</span>
+                    <span class="text-xs text-gray-400 ml-2 font-bold">Stable</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative z-10 flex-grow bg-white rounded-2xl shadow-sm border border-gray-100 p-4">
+            <div id="mainChart" class="w-full h-full"></div>
+        </div>
+
+    </div>
+
+    <script>
+        var myChart = echarts.init(document.getElementById('mainChart'));
+        var option = {
+            grid: { top: '15%', left: '3%', right: '4%', bottom: '3%', containLabel: true },
+            tooltip: { trigger: 'axis' },
+            legend: { top: 0, right: 20, icon: 'circle' },
+            xAxis: { 
+                type: 'category', 
+                data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                axisLine: { lineStyle: { color: '#E0E0E0' } },
+                axisLabel: { color: '#555555' }
+            },
+            yAxis: { 
+                type: 'value',
+                splitLine: { lineStyle: { type: 'dashed', color: '#E0E0E0' } }
+            },
+            series: [
+                {
+                    name: 'Projected',
+                    type: 'bar',
+                    itemStyle: { color: '#E0E0E0', borderRadius: [4, 4, 0, 0] },
+                    barGap: '-100%',
+                    data: [100, 120, 140, 160, 180, 200]
+                },
+                {
+                    name: 'Actual',
+                    type: 'bar',
+                    itemStyle: { color: '#4D9EF4', borderRadius: [4, 4, 0, 0] },
+                    data: [90, 110, 150, 155, 190, 210]
+                },
+                {
+                    name: 'Trend',
+                    type: 'line',
+                    smooth: true,
+                    itemStyle: { color: '#E57D48' },
+                    lineStyle: { width: 3 },
+                    data: [85, 105, 145, 160, 185, 215]
+                }
+            ]
+        };
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

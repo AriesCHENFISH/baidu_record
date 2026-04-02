@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persona Profile - Greta Mae Evans</title>
+    
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- Google Fonts (Domestic Mirror as requested) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- Tailwind Config for Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgBlack: '#000000',
+                        textWhite: '#FFFFFF',
+                        textGray: '#D1D1D1',
+                        accentGold: '#FBD57D',
+                        divider: '#4A4A4A',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Global Rules */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Hide scrollbars */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    
+
+        /* Specific list styling */
+        ul.custom-list li {
+            position: relative;
+            padding-left: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        ul.custom-list li::before {
+            content: '•';
+            color: #FBD57D;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Page Container -->
+    <div id="page_container" class="relative w-[1280px] h-[720px] bg-black overflow-hidden mx-auto text-textWhite">
+        
+        <!-- Decorative Background Elements (Geometric Shapes) -->
+        <div class="absolute right-0 top-[280px] w-32 h-64 bg-accentGold opacity-90 z-0 rounded-l-full"></div>
+        <div class="absolute right-0 bottom-0 w-64 h-64 bg-accentGold opacity-80 z-0 rounded-tl-full"></div>
+
+        <!-- Main Content Wrapper -->
+        <div class="relative z-10 w-full h-full flex flex-col px-16 py-12">
+            
+            <!-- HEADER SECTION: Name, Quote, Photo -->
+            <div class="flex justify-between items-start mb-12 h-[220px]">
+                
+                <!-- Left: Identity -->
+                <div class="flex flex-col justify-center h-full max-w-lg">
+                    <h1 class="text-7xl font-bold tracking-tight text-white mb-2 leading-tight">
+                        Greta Mae<br>Evans
+                    </h1>
+                    <div class="flex items-center gap-3 mt-2">
+                        <div class="h-[1px] w-12 bg-accentGold"></div>
+                        <p class="text-textGray text-xl font-light tracking-wide">(61 years old)</p>
+                    </div>
+                </div>
+
+                <!-- Center: Quote -->
+                <div class="flex-1 flex items-center justify-center px-8 h-full">
+                    <div class="relative max-w-md">
+                        <i class="fa-solid fa-quote-left absolute -top-6 -left-8 text-4xl text-accentGold opacity-30"></i>
+                        <p class="text-2xl font-light italic leading-relaxed text-textWhite">
+                            "A brand isn’t what you say—it’s what people remember after you leave."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right: Photo -->
+                <div class="flex-shrink-0 relative">
+                    <div class="w-[200px] h-[220px] rounded-3xl overflow-hidden border border-divider relative">
+                         <!-- High quality portrait of a senior creative professional -->
+                        <img src="https://images.unsplash.com/photo-1551843073-4a9a5b6fcd5f?q=80&w=987&auto=format&fit=crop" 
+                             alt="Greta Mae Evans" 
+                             class="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-500">
+                        <!-- 200*220 -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- DATA GRID SECTION -->
+            <div class="flex-1 flex flex-col justify-between">
+                
+                <!-- ROW 1: Basic Info -->
+                <div class="w-full border-t border-divider pt-6 pb-2">
+                    <div class="grid grid-cols-4 gap-8">
+                        <!-- Col 1 -->
+                        <div>
+                            <p class="text-textGray text-xs uppercase tracking-widest font-semibold mb-2">Location</p>
+                            <div class="flex items-start gap-2">
+                                <i class="fa-solid fa-location-dot mt-1 text-accentGold text-xs"></i>
+                                <p class="font-medium text-lg leading-snug">123 Anywhere St.,<br>Any City</p>
+                            </div>
+                        </div>
+                        <!-- Col 2 -->
+                        <div>
+                            <p class="text-textGray text-xs uppercase tracking-widest font-semibold mb-2">Occupation</p>
+                            <p class="font-medium text-lg leading-snug">Brand Consultant at<br>Timmerman Industries</p>
+                        </div>
+                        <!-- Col 3 -->
+                        <div>
+                            <p class="text-textGray text-xs uppercase tracking-widest font-semibold mb-2">Education</p>
+                            <p class="font-medium text-lg leading-snug">Bachelor’s in Business<br>Strategy, Borcelle</p>
+                        </div>
+                        <!-- Col 4 -->
+                        <div>
+                            <p class="text-textGray text-xs uppercase tracking-widest font-semibold mb-2">Income</p>
+                            <p class="font-bold text-2xl text-accentGold">$6,800<span class="text-sm text-textWhite font-normal">/month</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ROW 2: Traits & Tech -->
+                <div class="w-full border-t border-divider pt-6 pb-2">
+                    <div class="grid grid-cols-4 gap-8">
+                        <!-- Col 1 -->
+                        <div>
+                            <p class="text-textGray text-xs uppercase tracking-widest font-semibold mb-2">Marital Status</p>
+                            <p class="font-medium text-lg">Married</p>
+                        </div>
+                        <!-- Col 2 -->
+                        <div>
+                            <p class="text-textGray text-xs uppercase tracking-widest font-semibold mb-2">Personality Traits</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-[#1F1F1F] px-3 py-1 rounded text-sm text-textGray border border-divider">Detail-oriented</span>
+                                <span class="bg-[#1F1F1F] px-3 py-1 rounded text-sm text-textGray border border-divider">Strategic</span>
+                                <span class="bg-[#1F1F1F] px-3 py-1 rounded text-sm text-textGray border border-divider">Perceptive</span>
+                            </div>
+                        </div>
+                        <!-- Col 3 -->
+                        <div>
+                            <p class="text-textGray text-xs uppercase tracking-widest font-semibold mb-2">Preferred Devices</p>
+                            <div class="flex gap-4 text-xl text-white">
+                                <i class="fa-solid fa-mobile-screen" title="Smartphone"></i>
+                                <i class="fa-solid fa-tablet-screen-button" title="Tablet"></i>
+                                <span class="text-sm self-center font-medium">Smartphone, Tablet</span>
+                            </div>
+                        </div>
+                        <!-- Col 4 -->
+                        <div>
+                            <p class="text-textGray text-xs uppercase tracking-widest font-semibold mb-2">Favorite Platforms</p>
+                            <p class="font-medium text-lg">Platform B, Platform C</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ROW 3: Deep Dive -->
+                <div class="w-full border-t border-divider pt-6 pb-4">
+                    <div class="grid grid-cols-4 gap-8">
+                        <!-- Col 1 -->
+                        <div class="pr-4">
+                            <p class="text-textGray text-xs uppercase tracking-widest font-semibold mb-3">Digital Behavior</p>
+                            <ul class="custom-list text-sm text-gray-200 leading-relaxed">
+                                <li>Uses brand tracking dashboards and tools</li>
+                            </ul>
+                        </div>
+                        <!-- Col 2 -->
+                        <div class="pr-4">
+                            <p class="text-textGray text-xs uppercase tracking-widest font-semibold mb-3">Goals</p>
+                            <ul class="custom-list text-sm text-gray-200 leading-relaxed">
+                                <li>Push consistent visual identity across touchpoints</li>
+                            </ul>
+                        </div>
+                        <!-- Col 3 -->
+                        <div>
+                            <p class="text-textGray text-xs uppercase tracking-widest font-semibold mb-3">Challenges</p>
+                            <p class="text-sm text-gray-200 leading-relaxed">
+                                Aligning fast design trends with brand consistency.
+                            </p>
+                        </div>
+                        <!-- Col 4 -->
+                        <div>
+                            <p class="text-textGray text-xs uppercase tracking-widest font-semibold mb-3">Brand Values</p>
+                            <p class="text-sm text-gray-200 leading-relaxed">
+                                Authenticity, clarity, emotional connection.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

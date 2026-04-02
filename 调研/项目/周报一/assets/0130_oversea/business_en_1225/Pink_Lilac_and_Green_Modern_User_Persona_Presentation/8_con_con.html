@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools & Tech Used - Design System Slide</title>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts: Noto Sans SC (Domestic Mirror) & Inter for English -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1A1A1A',
+                        secondary: '#666666',
+                        accentGreen: '#326B54',
+                        accentGray: '#F2F2F2',
+                        accentLavender: '#E8D5EB',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans SC', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(0,0,0,0.08)',
+                        'card': '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* CSS Reset & Global Standards */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Page Container */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FFFFFF;
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Utility for geometric decoration */
+        .deco-circle {
+            position: absolute;
+            border-radius: 50%;
+            z-index: 0;
+            filter: blur(60px);
+        }
+        
+        /* Custom scrollbar hide */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <!-- Background Decoration -->
+        <div class="deco-circle bg-accentLavender/40 w-96 h-96 -top-20 -left-20"></div>
+        <div class="deco-circle bg-accentGray w-[500px] h-[500px] -bottom-40 -right-20"></div>
+
+        <!-- Main Grid Layout -->
+        <div class="relative z-10 grid grid-cols-12 h-full w-full p-16 gap-12">
+            
+            <!-- Left Column: Content & Context -->
+            <div class="col-span-4 flex flex-col justify-center h-full">
+                <!-- Header Group -->
+                <div class="mb-12">
+                    <h1 class="text-6xl font-extrabold text-primary leading-[1.1] tracking-tight mb-2">
+                        Tools <span class="font-serif italic text-accentGreen font-light">&</span><br>Tech Used
+                    </h1>
+                    <div class="w-20 h-1 bg-primary mt-6 rounded-full"></div>
+                </div>
+
+                <!-- Navigation Icons (Visual only as per request) -->
+                <div class="flex gap-4 mb-8">
+                    <div class="w-10 h-10 rounded-full border border-primary flex items-center justify-center text-primary cursor-pointer hover:bg-primary hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-chevron-left text-sm"></i>
+                    </div>
+                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white cursor-pointer hover:bg-accentGreen transition-colors duration-300">
+                        <i class="fa-solid fa-chevron-right text-sm"></i>
+                    </div>
+                </div>
+
+                <!-- Narrative Text -->
+                <div class="prose">
+                    <p class="text-secondary text-base leading-7 font-normal text-justify">
+                        As a freelance curriculum developer, Hannah Morales relies on a flexible tech stack to design, test, and deliver engaging learning experiences. Her daily tools span content creation, communication, and collaborative review—ensuring every course meets modern learning standards and client expectations.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Column: Visual Tech Stack (The Chat/Flow Interface) -->
+            <div class="col-span-8 flex items-center h-full pl-8">
+                <!-- Card Container -->
+                <div class="w-full h-[90%] bg-accentGray rounded-[40px] p-10 shadow-soft relative flex flex-col">
+                    
+                    <!-- Decorative Header inside Card -->
+                    <div class="absolute top-8 right-8 text-secondary">
+                        <i class="fa-solid fa-arrow-right-long text-2xl"></i>
+                    </div>
+
+                    <!-- Tech Stack Flow Container -->
+                    <div class="flex flex-col justify-center h-full space-y-8">
+
+                        <!-- Group 1: Left Alignment (Content Creation) -->
+                        <div class="flex flex-col items-start space-y-3 animate-fade-in-up">
+                            <div class="bg-accentGreen text-white px-6 py-2 rounded-tl-2xl rounded-tr-2xl rounded-br-2xl text-sm font-semibold tracking-wide shadow-md transform transition hover:-translate-y-1">
+                                <p><i class="fa-solid fa-pen-nib mr-2 opacity-70"></i>Content Creation</p>
+                            </div>
+                            <div class="bg-white text-primary px-8 py-4 rounded-bl-2xl rounded-tr-2xl rounded-br-2xl shadow-card max-w-[80%] border-l-4 border-accentLavender">
+                                <p class="text-base font-medium">Platforms A, Platforms B, Platforms C</p>
+                            </div>
+                        </div>
+
+                        <!-- Group 2: Right Alignment (Learning Platforms) -->
+                        <div class="flex flex-col items-end space-y-3">
+                            <div class="bg-accentGreen text-white px-6 py-2 rounded-tl-2xl rounded-tr-2xl rounded-bl-2xl text-sm font-semibold tracking-wide shadow-md transform transition hover:-translate-y-1">
+                                <p>Learning Platforms<i class="fa-solid fa-graduation-cap ml-2 opacity-70"></i></p>
+                            </div>
+                            <div class="bg-white text-primary px-8 py-4 rounded-tl-2xl rounded-bl-2xl rounded-br-2xl shadow-card max-w-[80%] text-right border-r-4 border-accentLavender">
+                                <p class="text-base font-medium">Website A, Website B</p>
+                            </div>
+                        </div>
+
+                        <!-- Group 3: Left Alignment (Communication) -->
+                        <div class="flex flex-col items-start space-y-3">
+                            <div class="bg-accentGreen text-white px-6 py-2 rounded-tl-2xl rounded-tr-2xl rounded-br-2xl text-sm font-semibold tracking-wide shadow-md transform transition hover:-translate-y-1">
+                                <p><i class="fa-regular fa-comments mr-2 opacity-70"></i>Communication</p>
+                            </div>
+                            <div class="bg-white text-primary px-8 py-4 rounded-bl-2xl rounded-tr-2xl rounded-br-2xl shadow-card max-w-[80%] border-l-4 border-accentLavender">
+                                <p class="text-base font-medium">Application A, Application B, Application C</p>
+                            </div>
+                        </div>
+
+                        <!-- Group 4: Right Alignment (Review & Collaboration) -->
+                        <div class="flex flex-col items-end space-y-3">
+                            <div class="bg-accentGreen text-white px-6 py-2 rounded-tl-2xl rounded-tr-2xl rounded-bl-2xl text-sm font-semibold tracking-wide shadow-md transform transition hover:-translate-y-1">
+                                <p>Review & Collaboration<i class="fa-solid fa-people-group ml-2 opacity-70"></i></p>
+                            </div>
+                            <div class="bg-white text-primary px-8 py-4 rounded-tl-2xl rounded-bl-2xl rounded-br-2xl shadow-card max-w-[80%] text-right border-r-4 border-accentLavender">
+                                <p class="text-base font-medium">Platforms A, Platforms B, Platforms C</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer / Credits (Subtle branding) -->
+        <div class="absolute bottom-6 left-16 text-secondary/40 text-xs font-medium tracking-widest uppercase">
+            <p>Strategic Workflow Design © 2024</p>
+        </div>
+    </div>
+
+</body>
+</html>

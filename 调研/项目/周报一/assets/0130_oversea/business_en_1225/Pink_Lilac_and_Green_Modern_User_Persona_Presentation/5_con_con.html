@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pain Points & Frustrations - Strategic Overview</title>
+    
+    <!-- Google Fonts: Noto Sans SC for compatibility & Inter for modern aesthetics -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#000000',
+                        secondary: '#666666',
+                        cardGreen: '#326B54',
+                        cardGray: '#F2F2F2',
+                        cardLavender: '#E8D5EB',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans SC', 'sans-serif'],
+                    },
+                    spacing: {
+                        '128': '32rem',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Page Container - Strictly 1280x720 */
+        .page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #FFFFFF;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+            /* No shadow allowed per instructions */
+        }
+
+        /* Utility for text balance */
+        .text-balance {
+            text-wrap: balance;
+        }
+
+        /* Smooth gradient decoration */
+        .bg-decoration {
+            position: absolute;
+            top: -10%;
+            left: -5%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(232, 213, 235, 0.4) 0%, rgba(255, 255, 255, 0) 70%);
+            z-index: 0;
+            pointer-events: none;
+        }
+        
+        /* Card Hover Effect (Visual polish, not interaction) */
+        .info-card {
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div class="page_container">
+        
+        <!-- Background Decoration (Subtle Lavender Glow) -->
+        <div class="bg-decoration"></div>
+
+        <!-- Main Content Grid -->
+        <div class="relative z-10 w-full h-full p-16 flex flex-row">
+            
+            <!-- Left Section: Title & Context -->
+            <div class="w-[30%] flex flex-col justify-start pt-4 pr-8">
+                <!-- Decorative Accent -->
+                <div class="w-12 h-1.5 bg-cardGreen mb-8 rounded-full"></div>
+                
+                <!-- Main Title -->
+                <h1 class="text-6xl font-bold text-primary tracking-tight leading-[1.1] mb-6">
+                    Pain Points<br>
+                    <span class="text-secondary font-medium">& Frustrations</span>
+                </h1>
+                
+                <!-- Context/Subtitle (Optional for spacing balance) -->
+                <p class="text-secondary text-lg font-light leading-relaxed mt-4 max-w-xs">
+                    Identifying key barriers in the current learning ecosystem impacting user engagement and system efficiency.
+                </p>
+            </div>
+
+            <!-- Right Section: Staggered Grid of Cards -->
+            <div class="w-[70%] h-full pl-4">
+                <div class="grid grid-cols-3 gap-6 h-full">
+                    
+                    <!-- Column 1: Aligned Bottom -->
+                    <div class="flex flex-col justify-end h-full pb-2">
+                        <!-- Card: Learner Engagement (Originally Red -> Now Primary Green) -->
+                        <div class="info-card bg-cardGreen rounded-[32px] p-8 h-[280px] flex flex-col justify-between relative overflow-hidden group">
+                             <!-- Icon Container -->
+                            <div class="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center mb-4 backdrop-blur-sm">
+                                <i class="fa-solid fa-chart-pie text-white text-lg"></i>
+                            </div>
+                            <!-- Content -->
+                            <div>
+                                <h3 class="text-white text-2xl font-semibold leading-snug tracking-tight">
+                                    Poor learner engagement data tracking
+                                </h3>
+                            </div>
+                            <!-- Decorative bg shape -->
+                            <div class="absolute -bottom-8 -right-8 w-32 h-32 bg-white/5 rounded-full blur-2xl"></div>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Top & Bottom Cards -->
+                    <div class="flex flex-col h-full justify-end gap-6 pb-2">
+                        <!-- Card: Dashboards (Deep Green) -->
+                        <div class="info-card bg-cardGreen rounded-[32px] p-8 h-[280px] flex flex-col justify-between relative overflow-hidden">
+                            <!-- Icon Container -->
+                            <div class="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center mb-4 backdrop-blur-sm">
+                                <i class="fa-solid fa-table-columns text-white text-lg"></i>
+                            </div>
+                            <!-- Content -->
+                            <div>
+                                <h3 class="text-white text-2xl font-semibold leading-snug tracking-tight">
+                                    Overwhelming dashboards with too many features
+                                </h3>
+                            </div>
+                        </div>
+
+                        <!-- Card: Low Bandwidth (Neutral Light Gray) -->
+                        <div class="info-card bg-cardGray rounded-[32px] p-8 h-[280px] flex flex-col justify-between">
+                            <!-- Icon Container -->
+                            <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center mb-4 shadow-sm">
+                                <i class="fa-solid fa-gauge-high text-cardGreen text-lg"></i>
+                            </div>
+                            <!-- Content -->
+                            <div>
+                                <h3 class="text-secondary text-xl font-medium leading-snug tracking-tight">
+                                    Slow-loading pages in low-bandwidth areas
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 3: Top & Bottom Cards -->
+                    <div class="flex flex-col h-full justify-end gap-6 pb-2">
+                        <!-- Card: Formatting (Neutral Light Gray) -->
+                        <div class="info-card bg-cardGray rounded-[32px] p-8 h-[280px] flex flex-col justify-between">
+                            <!-- Icon Container -->
+                            <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center mb-4 shadow-sm">
+                                <i class="fa-solid fa-laptop-mobile text-cardGreen text-lg"></i>
+                            </div>
+                            <!-- Content -->
+                            <div>
+                                <h3 class="text-secondary text-xl font-medium leading-snug tracking-tight">
+                                    Inconsistent formatting tools across devices
+                                </h3>
+                            </div>
+                        </div>
+
+                        <!-- Card: Integration (Accent Lavender) -->
+                        <div class="info-card bg-cardLavender rounded-[32px] p-8 h-[280px] flex flex-col justify-between">
+                            <!-- Icon Container -->
+                            <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center mb-4 shadow-sm">
+                                <i class="fa-solid fa-puzzle-piece text-cardGreen text-lg"></i>
+                            </div>
+                            <!-- Content -->
+                            <div>
+                                <h3 class="text-[#4A3B4D] text-xl font-semibold leading-snug tracking-tight">
+                                    Limited integration with external tools
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer / Page Marker (Optional for Balance) -->
+        <div class="absolute bottom-6 left-16 text-xs text-gray-400 font-medium tracking-widest uppercase">
+            User Experience Audit &nbsp; // &nbsp; 04
+        </div>
+
+    </div>
+
+</body>
+</html>

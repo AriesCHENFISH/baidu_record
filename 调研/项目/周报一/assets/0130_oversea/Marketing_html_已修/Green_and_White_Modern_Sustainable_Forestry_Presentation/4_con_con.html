@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forests & Climate Regulation</title>
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome (CDN) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts via Baidu CDN (Required) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        /* CSS Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container - Fixed Dimensions */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #1A2818; /* Fallback color */
+            overflow: hidden;
+        }
+
+        /* Typography Override for Elegant Serif Title */
+        .font-serif-elegant {
+            font-family: 'Playfair Display', 'Didot', 'Times New Roman', serif;
+        }
+
+        /* Custom Clip Path for the "Torn Edge" effect */
+        .torn-edge {
+            clip-path: polygon(
+                0% 0%, 
+                72% 0%, 
+                70% 10%, 
+                73% 20%, 
+                69% 32%, 
+                72% 45%, 
+                68% 55%, 
+                71% 70%, 
+                67% 85%, 
+                70% 100%, 
+                0% 100%
+            );
+        }
+
+        /* Utility for text shadow to ensure readability */
+        .text-shadow-sm {
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div id="page_container">
+
+        <!-- 1. Right Side Background Layer (Misty Forest) -->
+        <!-- This image sits at the bottom and covers the right side visible area -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=1632&auto=format&fit=crop" 
+                 class="w-full h-full object-cover object-right" 
+                 alt="Misty Forest Background">
+            <!-- 1280*720 -->
+        </div>
+
+        <!-- 2. Left Side Dark Overlay Layer (The "Content Area") -->
+        <!-- Uses clip-path to create the jagged/organic rock edge effect -->
+        <div class="absolute inset-0 z-10 bg-[#1A2818] torn-edge">
+            <!-- Inner Texture for the dark area (Palm leaves/Shadows) -->
+            <!-- Using mix-blend-mode to blend with the dark green background -->
+            <div class="absolute inset-0 opacity-20 mix-blend-multiply">
+                <img src="https://images.unsplash.com/photo-1596323676646-689369324506?q=80&w=1280&auto=format&fit=crop" 
+                     class="w-full h-full object-cover" 
+                     alt="Dark Texture">
+                <!-- 800*720 -->
+            </div>
+        </div>
+
+        <!-- 3. Content Layer (Text and Elements) -->
+        <!-- Grid layout to manage the two distinct visual zones -->
+        <div class="relative z-20 w-full h-full grid grid-cols-12 pointer-events-none">
+            
+            <!-- Left Content Column (Spans approx 7 columns) -->
+            <div class="col-span-8 h-full flex flex-col justify-center pl-20 pr-32 pointer-events-auto">
+            
+
+                <!-- Main Headline -->
+                <!-- Using serif font for high-end editorial look -->
+                <div class="mb-6">
+                    <h1 class="text-[#FFFFFF] text-6xl font-serif-elegant leading-tight font-medium tracking-tight">
+                        Forests & Climate <br/>
+                        <span class="italic">Regulation</span>
+                    </h1>
+                </div>
+
+                <!-- Descriptive Paragraph -->
+                <div class="mb-10 pr-10">
+                    <p class="text-[#FFFFFF] text-base leading-relaxed opacity-90 font-light">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor. Forests act as the lungs of our planet, playing a critical role in stabilizing the global climate through carbon sequestration.
+                    </p>
+                </div>
+
+                <!-- Interactive List Items -->
+                <div class="w-full">
+                    <ul class="flex flex-col gap-4">
+                        <!-- List Item 1 -->
+                        <li class="group flex items-center bg-[#5A6F41] border border-white/80 rounded px-6 py-3 shadow-lg transform transition-transform duration-300">
+                            <!-- Icon Container -->
+                            <div class="flex-shrink-0 mr-4">
+                                <i class="fa-solid fa-circle-arrow-right text-[#FFFFFF] text-xl"></i>
+                            </div>
+                            <!-- Text Content -->
+                            <div class="flex-grow">
+                                <span class="text-[#FFFFFF] text-sm font-semibold tracking-wide block">
+                                    Forests absorb carbon dioxide and reduce global warming.
+                                </span>
+                            </div>
+                        </li>
+
+                        <!-- List Item 2 -->
+                        <li class="group flex items-center bg-[#5A6F41] border border-white/80 rounded px-6 py-3 shadow-lg">
+                            <div class="flex-shrink-0 mr-4">
+                                <i class="fa-solid fa-circle-arrow-right text-[#FFFFFF] text-xl"></i>
+                            </div>
+                            <div class="flex-grow">
+                                <span class="text-[#FFFFFF] text-sm font-semibold tracking-wide block">
+                                    They help regulate temperature by providing shade and moisture.
+                                </span>
+                            </div>
+                        </li>
+
+                        <!-- List Item 3 -->
+                        <li class="group flex items-center bg-[#5A6F41] border border-white/80 rounded px-6 py-3 shadow-lg">
+                            <div class="flex-shrink-0 mr-4">
+                                <i class="fa-solid fa-circle-arrow-right text-[#FFFFFF] text-xl"></i>
+                            </div>
+                            <div class="flex-grow">
+                                <span class="text-[#FFFFFF] text-sm font-semibold tracking-wide block">
+                                    Forests play a key role in maintaining the water cycle and rainfall.
+                                </span>
+                            </div>
+                        </li>
+
+                        <!-- List Item 4 -->
+                        <li class="group flex items-center bg-[#5A6F41] border border-white/80 rounded px-6 py-3 shadow-lg">
+                            <div class="flex-shrink-0 mr-4">
+                                <i class="fa-solid fa-circle-arrow-right text-[#FFFFFF] text-xl"></i>
+                            </div>
+                            <div class="flex-grow">
+                                <span class="text-[#FFFFFF] text-sm font-semibold tracking-wide block">
+                                    They protect against extreme weather like floods and droughts.
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Model</title>
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        /* CSS Reset & Global Settings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* Page Container - Strict 1280x720 */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #F4F8F9;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+            box-shadow: none;
+        }
+
+        /* Typography Utilities */
+        .text-primary { color: #333333; }
+        .text-secondary { color: #555555; }
+        .text-muted { color: #777777; }
+        .bg-teal-accent { background-color: #BDE0E2; }
+        .text-teal-accent { color: #BDE0E2; }
+        .border-divider { border-color: #2F2F2F; }
+
+        /* Custom Decoration Gradients */
+        .gradient-glow-tl {
+            position: absolute;
+            top: -100px;
+            left: -100px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, #E0EFF3 0%, rgba(224, 239, 243, 0) 70%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .gradient-glow-br {
+            position: absolute;
+            bottom: -200px;
+            right: -200px;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, #E0EFF3 0%, rgba(224, 239, 243, 0) 70%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* List Styling */
+        .list-bullet {
+            width: 20px;
+            height: 20px;
+            background-color: #707070;
+            border-radius: 50%;
+            flex-shrink: 0;
+            margin-top: 6px; 
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Chart Labels Position */
+        .chart-label {
+            position: absolute;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <div class="gradient-glow-tl"></div>
+        <div class="gradient-glow-br"></div>
+
+        <div class="relative z-10 w-full h-full grid grid-cols-12 gap-12 px-16 py-12">
+            
+            <div class="col-span-7 flex flex-col justify-center gap-12 h-full pr-8 -mt-16">
+                
+                <div>
+                    <div class="mb-4">
+                        <h1 class="text-6xl font-bold text-primary tracking-tight mb-6">Business Model</h1>
+                        <div class="h-1 w-24 bg-[#2F2F2F]"></div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-10">
+                    
+                    <div class="flex gap-6">
+                        <div class="list-bullet"></div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-primary mb-2">75% - Transaction fee (2.5%) per loan</h3>
+                            <p class="text-muted text-lg leading-relaxed font-light">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae elit sed est dapibus mattis est nisi arcu mauris diam vel.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-6">
+                        <div class="list-bullet"></div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-primary mb-2">50% - Subscription for premium plan</h3>
+                            <p class="text-muted text-lg leading-relaxed font-light">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae elit sed est dapibus mattis est nisi arcu mauris diam vel.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-6">
+                        <div class="list-bullet"></div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-primary mb-2">25% - Partnership with local banks</h3>
+                            <p class="text-muted text-lg leading-relaxed font-light">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae elit sed est dapibus mattis est nisi arcu mauris diam vel.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-span-5 relative flex items-center justify-center">
+                <div id="chart-container" class="w-[600px] h-[600px]"></div>
+
+                <div class="chart-label top-1/2 -translate-y-1/2 left-0 text-right pr-4" style="margin-top: -20px;">
+                    <h4 class="text-5xl font-bold text-primary mb-1">25%</h4>
+                    <p class="text-secondary text-sm font-medium leading-tight">Partnership with<br>local banks</p>
+                </div>
+
+                <div class="chart-label top-[15%] right-[5%] text-left pl-4">
+                    <h4 class="text-5xl font-bold text-primary mb-1">50%</h4>
+                    <p class="text-secondary text-sm font-medium leading-tight">Subscription for<br>premium plan</p>
+                </div>
+
+                <div class="chart-label bottom-[25%] right-[5%] text-left pl-4">
+                    <h4 class="text-5xl font-bold text-primary mb-1">75%</h4>
+                    <p class="text-secondary text-sm font-medium leading-tight">Transaction fee<br>(2.5%) per loan</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // Init ECharts
+        var chartDom = document.getElementById('chart-container');
+        var myChart = echarts.init(chartDom);
+        var option;
+
+        // Data Configuration
+        option = {
+            backgroundColor: 'transparent',
+            angleAxis: {
+                max: 100,
+                startAngle: 90,
+                axisLine: { show: false },
+                axisTick: { show: false },
+                axisLabel: { show: false },
+                splitLine: { show: false }
+            },
+            radiusAxis: {
+                type: 'category',
+                data: ['Inner', 'Middle', 'Outer'],
+                z: 10,
+                axisLine: { show: false },
+                axisTick: { show: false },
+                axisLabel: { show: false }
+            },
+            polar: {
+                radius: ['20%', '85%'],
+                center: ['55%', '50%']
+            },
+            series: [
+                {
+                    type: 'bar',
+                    data: [25, 0, 0],
+                    coordinateSystem: 'polar',
+                    name: 'Partnership',
+                    roundCap: false,
+                    color: '#707070',
+                    barWidth: '60%',
+                    z: 2
+                },
+                {
+                    type: 'bar',
+                    data: [0, 50, 0],
+                    coordinateSystem: 'polar',
+                    name: 'Subscription',
+                    roundCap: false,
+                    color: '#8E8E8E',
+                    barWidth: '60%',
+                    z: 2
+                },
+                {
+                    type: 'bar',
+                    data: [0, 0, 75],
+                    coordinateSystem: 'polar',
+                    name: 'Transaction',
+                    roundCap: false,
+                    color: '#707070',
+                    barWidth: '60%',
+                    z: 2
+                },
+                {
+                    type: 'pie',
+                    radius: ['0%', '15%'],
+                    center: ['55%', '50%'],
+                    silent: true,
+                    itemStyle: {
+                        color: '#BDE0E2'
+                    },
+                    data: [{ value: 1, name: 'Center' }],
+                    label: { show: false },
+                    tooltip: { show: false },
+                    animation: false
+                }
+            ],
+            animationDuration: 1500,
+            animationEasing: 'cubicOut'
+        };
+
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

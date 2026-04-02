@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Size Analysis</title>
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- ECharts -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+    <!-- Custom Google Font -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        /* CSS Reset & Basic Setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+
+        /* Page Container - Strict 1280x720 */
+        .page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #000000;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Custom Gradients based on Config */
+        .bg-gradient-primary {
+            background: linear-gradient(90deg, #8C7AE6, #1B3F9B);
+        }
+
+        .bg-gradient-card {
+            background: linear-gradient(135deg, rgba(26, 27, 46, 0.9), rgba(27, 63, 155, 0.2));
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(140, 122, 230, 0.2);
+        }
+        
+        .bg-gradient-bar-1 { background: linear-gradient(180deg, #D1D5DB, #8C7AE6); }
+        .bg-gradient-bar-2 { background: linear-gradient(180deg, #8C7AE6, #1B3F9B); }
+        .bg-gradient-bar-3 { background: linear-gradient(180deg, #B33CE0, #1A1B2E); }
+
+        /* Text Styles */
+        h1 {
+            color: #FFFFFF;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+        
+        p {
+            color: #D1D5DB;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        /* Decorative Glows */
+        .glow-blob {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background-color: #B33CE0;
+            filter: blur(120px);
+            opacity: 0.15;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Layout Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 550px 1fr;
+            gap: 60px;
+            width: 1160px; /* 1280 - 60px padding on sides */
+            height: 600px; /* Vertical padding buffer */
+            z-index: 10;
+        }
+
+        /* Metric Card Styling */
+        .metric-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 24px;
+            padding: 20px 24px;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Pseudo-element for subtle shine on cards */
+        .metric-row::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, #8C7AE6, #B33CE0);
+        }
+
+        /* Chart Container */
+        .chart-wrapper {
+            width: 100%;
+            height: 100%;
+            background: #1A1B2E;
+            border-radius: 20px;
+            padding: 30px;
+            position: relative;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        #marketChart {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page_container">
+        <!-- Decorative Background Elements -->
+        <div class="glow-blob" style="top: -200px; left: -200px; background-color: #1B3F9B;"></div>
+        <div class="glow-blob" style="bottom: -200px; right: -200px; background-color: #B33CE0;"></div>
+
+        <!-- Main Content Grid -->
+        <div class="content-grid">
+            
+            <!-- Left Column: Text & Metrics -->
+            <div style="display: flex; flex-direction: column; justify-content: center;">
+                <!-- Header -->
+                <div style="margin-bottom: 30px;">
+                    <h1 style="font-size: 56px; line-height: 1.1; margin-bottom: 10px; text-transform: uppercase;">
+                        Size of <span style="color: #8C7AE6;">Market</span>
+                    </h1>
+                    <div style="width: 80px; height: 4px; background: linear-gradient(90deg, #B33CE0, transparent); border-radius: 2px;"></div>
+                </div>
+
+                <!-- Paragraph Text -->
+                <div style="margin-bottom: 40px;">
+                    <p style="font-size: 15px; text-align: justify; color: #D1D5DB;">
+                        Understanding the market size is important for us. In the US, there are about 32 million small businesses. We're aiming at industries like technology, e-commerce, and professional services, which are about 30% of all small businesses. That means we're looking at around 9.6 million potential customers. Our goal is to get about 5% of them, which would be roughly 480,000 businesses. This helps us know who to target and plan our growth strategy.
+                    </p>
+                </div>
+
+                <!-- Metrics Section -->
+                <div style="display: flex; flex-direction: column;">
+                    
+                    <!-- Metric 1: TAM -->
+                    <div class="metric-row bg-gradient-card">
+                        <div style="display: flex; flex-direction: column;">
+                            <span style="font-size: 12px; color: #8C7AE6; font-weight: 700; letter-spacing: 1px; margin-bottom: 4px;">TAM</span>
+                            <span style="font-size: 14px; color: #D1D5DB; font-weight: 500;">TOTAL ADDRESSABLE MARKET</span>
+                        </div>
+                        <div>
+                            <span style="font-size: 28px; color: #FFFFFF; font-weight: 700;">32 MILLION</span>
+                        </div>
+                    </div>
+
+                    <!-- Metric 2: SAM -->
+                    <div class="metric-row bg-gradient-card">
+                        <div style="display: flex; flex-direction: column;">
+                            <span style="font-size: 12px; color: #B33CE0; font-weight: 700; letter-spacing: 1px; margin-bottom: 4px;">SAM</span>
+                            <span style="font-size: 14px; color: #D1D5DB; font-weight: 500;">SERVICEABLE ADDRESSABLE MARKET</span>
+                        </div>
+                        <div>
+                            <span style="font-size: 28px; color: #FFFFFF; font-weight: 700;">9.6 MILLION</span>
+                        </div>
+                    </div>
+
+                    <!-- Metric 3: SOM -->
+                    <div class="metric-row bg-gradient-card" style="margin-bottom: 0;">
+                        <div style="display: flex; flex-direction: column;">
+                            <span style="font-size: 12px; color: #ffffff; opacity: 0.8; font-weight: 700; letter-spacing: 1px; margin-bottom: 4px;">SOM</span>
+                            <span style="font-size: 14px; color: #D1D5DB; font-weight: 500;">SERVICEABLE OBTAINABLE MARKET</span>
+                        </div>
+                        <div>
+                            <span style="font-size: 28px; color: #FFFFFF; font-weight: 700;">480,000</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Right Column: Chart -->
+            <div style="display: flex; align-items: center; justify-content: center;">
+                <div class="chart-wrapper">
+                    <!-- Decorative Title inside chart area -->
+                    <div style="position: absolute; top: 30px; left: 30px; z-index: 20;">
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <i class="fa-solid fa-chart-simple" style="color: #8C7AE6;"></i>
+                            <span style="color: #FFFFFF; font-weight: 600; font-size: 16px;">Growth Projection</span>
+                        </div>
+                    </div>
+                    <div id="marketChart"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ECharts Configuration -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var chartDom = document.getElementById('marketChart');
+            var myChart = echarts.init(chartDom);
+            var option;
+
+            // Gradient Definitions for Chart
+            var gradient1 = new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                { offset: 0, color: '#D1D5DB' }, // Light Grey/White
+                { offset: 1, color: '#8C7AE6' }  // Purple Fade
+            ]);
+
+            var gradient2 = new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                { offset: 0, color: '#8C7AE6' }, // Purple
+                { offset: 1, color: '#1B3F9B' }  // Deep Blue
+            ]);
+
+            var gradient3 = new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                { offset: 0, color: '#B33CE0' }, // Neon accent
+                { offset: 1, color: '#5b2c96' }  // Darker Purple
+            ]);
+
+            option = {
+                // Remove default background to let CSS handle it
+                backgroundColor: 'transparent',
+                grid: {
+                    left: '10%',
+                    right: '10%',
+                    bottom: '15%',
+                    top: '25%',
+                    containLabel: true
+                },
+                legend: {
+                    data: ['Item 1', 'Item 2', 'Item 3'],
+                    textStyle: {
+                        color: '#D1D5DB',
+                        fontSize: 12
+                    },
+                    top: '8%',
+                    right: '5%',
+                    itemGap: 20
+                },
+                xAxis: {
+                    type: 'category',
+                    data: ['Item 1', 'Item 2', 'Item 3'],
+                    axisLine: {
+                        lineStyle: {
+                            color: 'rgba(255,255,255,0.1)'
+                        }
+                    },
+                    axisLabel: {
+                        color: '#D1D5DB',
+                        fontSize: 14,
+                        margin: 15
+                    },
+                    axisTick: {
+                        show: false
+                    }
+                },
+                yAxis: {
+                    type: 'value',
+                    splitLine: {
+                        lineStyle: {
+                            color: 'rgba(255,255,255,0.05)',
+                            type: 'dashed'
+                        }
+                    },
+                    axisLabel: {
+                        color: '#D1D5DB',
+                        fontSize: 12
+                    }
+                },
+                series: [
+                    {
+                        name: 'Item 1',
+                        type: 'bar',
+                        data: [
+                            { value: 8, itemStyle: { color: gradient1, borderRadius: [6, 6, 0, 0] } },
+                            null,
+                            null
+                        ],
+                        barWidth: '60%'
+                    },
+                    {
+                        name: 'Item 2',
+                        type: 'bar',
+                        data: [
+                            null,
+                            { value: 12, itemStyle: { color: gradient2, borderRadius: [6, 6, 0, 0] } },
+                            null
+                        ],
+                        barWidth: '60%'
+                    },
+                    {
+                        name: 'Item 3',
+                        type: 'bar',
+                        data: [
+                            null,
+                            null,
+                            { value: 16, itemStyle: { color: gradient3, borderRadius: [6, 6, 0, 0] } }
+                        ],
+                        barWidth: '60%'
+                    }
+                ],
+                // Add a subtle animation
+                animationDuration: 1500,
+                animationEasing: 'cubicOut'
+            };
+
+            // To mimic the stacked visual layout without stacking the data in one column,
+            // we use a custom approach where each series has data only for its specific index position.
+            // However, strictly following the image where bars are side-by-side but labeled differently.
+            // Simplified approach: Single series with multiple colors.
+            
+            var simpleOption = {
+                backgroundColor: 'transparent',
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: { type: 'shadow' }
+                },
+                legend: {
+                    data: ['Item 1', 'Item 2', 'Item 3'],
+                    textStyle: { color: '#D1D5DB' },
+                    right: 20,
+                    top: 20
+                },
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    containLabel: true
+                },
+                xAxis: [
+                    {
+                        type: 'category',
+                        data: ['Item 1', 'Item 2', 'Item 3'],
+                        axisTick: { alignWithLabel: true },
+                        axisLine: { lineStyle: { color: 'rgba(255,255,255,0.2)' } },
+                        axisLabel: { color: '#D1D5DB', fontSize: 14, margin: 15 }
+                    }
+                ],
+                yAxis: [
+                    {
+                        type: 'value',
+                        splitLine: { lineStyle: { color: 'rgba(255,255,255,0.05)' } },
+                        axisLabel: { color: '#8C7AE6' }
+                    }
+                ],
+                series: [
+                    {
+                        name: 'Value',
+                        type: 'bar',
+                        barWidth: '50%',
+                        data: [
+                            {
+                                value: 8,
+                                name: 'Item 1',
+                                itemStyle: {
+                                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                                        { offset: 0, color: '#C7D2FE' },
+                                        { offset: 1, color: '#818CF8' }
+                                    ]),
+                                    borderRadius: [8, 8, 0, 0]
+                                }
+                            },
+                            {
+                                value: 12,
+                                name: 'Item 2',
+                                itemStyle: {
+                                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                                        { offset: 0, color: '#818CF8' },
+                                        { offset: 1, color: '#1B3F9B' }
+                                    ]),
+                                    borderRadius: [8, 8, 0, 0]
+                                }
+                            },
+                            {
+                                value: 16,
+                                name: 'Item 3',
+                                itemStyle: {
+                                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                                        { offset: 0, color: '#C084FC' }, // Light Purple
+                                        { offset: 1, color: '#6B21A8' }  // Dark Purple
+                                    ]),
+                                    borderRadius: [8, 8, 0, 0]
+                                }
+                            }
+                        ]
+                    }
+                ]
+            };
+
+            myChart.setOption(simpleOption);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Methodology - Centered Layout</title>
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#BCE46C',
+                        darkGreen: '#1A2E05',
+                        pageBlack: '#000000',
+                        textGray: '#E0E0E0',
+                        secondaryDark: '#1F1F1F'
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #000000; overflow: hidden; font-family: 'Noto Sans SC', sans-serif; display: flex; flex-direction: column; padding: 60px 80px; }
+        
+        /* 标题下划线居中 */
+        .title-underline { height: 4px; width: 120px; background: linear-gradient(90deg, transparent, #BCE46C, transparent); border-radius: 2px; margin: 1.5rem auto 0; }
+        
+        .timeline-step { background-color: #1A1A1A; border: 1px solid rgba(188, 228, 108, 0.1); border-radius: 12px; padding: 16px 20px; position: relative; }
+        
+        /* 调整时间轴线位置到容器左边缘 */
+        .timeline-line { position: absolute; left: 0px; top: 0; bottom: 0; width: 1px; background: linear-gradient(to bottom, transparent, rgba(188, 228, 108, 0.3), transparent); }
+        .timeline-dot { position: absolute; left: -4px; width: 9px; height: 9px; border-radius: 50%; background-color: #BCE46C; box-shadow: 0 0 10px #BCE46C; }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none opacity-20" style="background: radial-gradient(circle at center 50%, #BCE46C 0%, transparent 40%); z-index: 0;"></div>
+
+        <header class="flex flex-col items-center mb-16 relative z-10 text-center">
+            <div class="relative group mb-6">
+                <div class="absolute -inset-1 bg-brand/20 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                <div class="relative border border-brand/50 bg-pageBlack rounded-full px-6 py-1.5 flex items-center">
+                    <span class="w-1.5 h-1.5 bg-brand rounded-full mr-3 animate-pulse"></span>
+                    <span class="text-brand text-xs font-bold tracking-[0.2em] uppercase">Workflow</span>
+                </div>
+            </div>
+            
+            <div class="relative">
+                <h1 class="text-[72px] leading-[0.9] font-black text-white tracking-tighter uppercase">
+                    Project 
+                    <span class="text-brand font-light italic">Methodology</span>
+                </h1>
+                <div class="title-underline"></div>
+            </div>
+        </header>
+
+        <div class="flex-1 grid grid-cols-2 gap-20 relative z-10 items-center">
+            
+            <div class="flex flex-col space-y-10 pr-10 text-right border-r border-white/5">
+                <div>
+                    <h3 class="text-brand text-sm font-bold mb-2">Phase I</h3>
+                    <h4 class="text-white text-sm font-medium mb-3">Discovery & Planning</h4>
+                    <p class="text-textGray text-sm opacity-70 leading-relaxed">
+                        Deep dive into project requirements, market research, and strategic goal setting to ensure a solid foundation.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-white text-sm font-bold mb-2 opacity-50">Phase II</h3>
+                    <h4 class="text-white text-sm font-medium mb-3 opacity-50">Design & Development</h4>
+                    <p class="text-textGray text-sm opacity-40 leading-relaxed">
+                        Iterative design sprints, prototyping, and core development with continuous feedback loops.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-white text-sm font-bold mb-2 opacity-50">Phase III</h3>
+                    <h4 class="text-white text-sm font-medium mb-3 opacity-50">Testing & Deployment</h4>
+                    <p class="text-textGray text-sm opacity-40 leading-relaxed">
+                        Rigorous quality assurance, user acceptance testing, and seamless rollout to production environments.
+                    </p>
+                </div>
+            </div>
+
+            <div class="relative pl-10 h-full flex flex-col justify-center">
+                <div class="timeline-line"></div>
+                <div class="space-y-6">
+                    <div class="timeline-step">
+                        <div class="timeline-dot top-1/2 -translate-y-1/2"></div>
+                        <p class="text-brand text-gl uppercase tracking-widest mb-1">Step 01</p>
+                        <h4 class="text-white text-base font-bold mb-1">Requirement Gathering</h4>
+                        <p class="text-gray-400 text-sm opacity-80">Conduct workshops and interviews to define project scope.</p>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="timeline-dot top-1/2 -translate-y-1/2"></div>
+                        <p class="text-brand text-gl uppercase tracking-widest mb-1">Step 02</p>
+                        <h4 class="text-white text-base font-bold mb-1">Conceptualization</h4>
+                        <p class="text-gray-400 text-sm opacity-80">Sketch initial ideas and create low-fidelity wireframes.</p>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="timeline-dot top-1/2 -translate-y-1/2"></div>
+                        <p class="text-brand text-gl uppercase tracking-widest mb-1">Step 03</p>
+                        <h4 class="text-white text-base font-bold mb-1">Prototyping</h4>
+                        <p class="text-gray-400 text-sm opacity-80">Develop interactive prototypes for user testing.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="absolute bottom-10 left-80 right-80 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+    </div>
+
+</body>
+</html>

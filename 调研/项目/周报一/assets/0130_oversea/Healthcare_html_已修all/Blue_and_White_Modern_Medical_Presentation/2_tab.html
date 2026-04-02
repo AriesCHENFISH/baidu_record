@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table of Contents - Medical Keynote</title>
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome (CDN) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .logo-text { color: #1E2B9D; }
+        .sub-logo-text { color: #64748B; }
+
+        .title-gradient {
+            background: linear-gradient(to right, #1E2B9D, #3B82F6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* 目录项卡片 */
+        .toc-item {
+            background: #F8FAFC;
+            border-radius: 16px;
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border: 1px solid #E2E8F0;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .toc-item:hover {
+            transform: translateX(10px);
+            background: #F0F7FF;
+            border-color: #3B82F6;
+        }
+
+        /* 背景大数字 */
+        .index-number {
+            font-size: 48px;
+            font-weight: 900;
+            color: #1E2B9D;
+            opacity: 0.1;
+            position: absolute;
+            right: 20px;
+            bottom: -5px;
+            font-style: italic;
+        }
+
+        .item-dot {
+            width: 10px;
+            height: 10px;
+            background: #3B82F6;
+            border-radius: 50%;
+        }
+
+        .vertical-accent {
+            width: 4px;
+            height: 60px;
+            background: #1E2B9D;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <!-- Header Logo -->
+        <div class="absolute top-12 right-16 z-20 flex items-center gap-4">
+            <div class="text-4xl logo-text">
+                <i class="fa-solid fa-staff-snake"></i>
+            </div>
+            <div class="flex flex-col items-start">
+                <h6 class="text-base font-bold tracking-widest uppercase logo-text">Borcelle Hospital</h6>
+                <p class="text-[10px] sub-logo-text tracking-widest uppercase font-medium">Care at Every Step</p>
+            </div>
+        </div>
+
+        <!-- 页面左侧：标题区 -->
+        <div class="absolute top-16 left-24">
+            <div class="flex items-center gap-6">
+                <div class="vertical-accent"></div>
+                <div>
+                    <span class="text-xs font-black tracking-[0.4em] text-blue-400 uppercase">Presentation Roadmap</span>
+                    <h1 class="text-6xl font-black text-slate-900 leading-tight">
+                        Table of <span class="title-gradient">Contents</span>
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- 目录列表区 (2x5 Grid) -->
+        <div class="absolute top-52 w-full px-24">
+            <div class="grid grid-cols-2 gap-x-12 gap-y-4">
+                
+                <!-- 01 -->
+                <div class="toc-item">
+                    <div class="item-dot"></div>
+                    <div>
+                        <h4 class="font-bold text-slate-800 text-lg">Introduction to Healthcare</h4>
+                        <p class="text-[12px] text-slate-400 uppercase tracking-widest">Section 01</p>
+                    </div>
+                    <span class="index-number">01</span>
+                </div>
+
+                <!-- 02 -->
+                <div class="toc-item">
+                    <div class="item-dot"></div>
+                    <div>
+                        <h4 class="font-bold text-slate-800 text-lg">Preventive Health Measures</h4>
+                        <p class="text-[12px] text-slate-400 uppercase tracking-widest">Section 02</p>
+                    </div>
+                    <span class="index-number">02</span>
+                </div>
+
+                <!-- 03 -->
+                <div class="toc-item">
+                    <div class="item-dot"></div>
+                    <div>
+                        <h4 class="font-bold text-slate-800 text-lg">Physical Activity & Well-being</h4>
+                        <p class="text-[12px] text-slate-400 uppercase tracking-widest">Section 03</p>
+                    </div>
+                    <span class="index-number">03</span>
+                </div>
+
+                <!-- 04 -->
+                <div class="toc-item">
+                    <div class="item-dot"></div>
+                    <div>
+                        <h4 class="font-bold text-slate-800 text-lg">Nutrition & Metabolic Health</h4>
+                        <p class="text-[12px] text-slate-400 uppercase tracking-widest">Section 04</p>
+                    </div>
+                    <span class="index-number">04</span>
+                </div>
+
+                <!-- 05 -->
+                <div class="toc-item">
+                    <div class="item-dot"></div>
+                    <div>
+                        <h4 class="font-bold text-slate-800 text-lg">Diagnostic Excellence</h4>
+                        <p class="text-[12px] text-slate-400 uppercase tracking-widest">Section 05</p>
+                    </div>
+                    <span class="index-number">05</span>
+                </div>
+
+                <!-- 06 -->
+                <div class="toc-item">
+                    <div class="item-dot"></div>
+                    <div>
+                        <h4 class="font-bold text-slate-800 text-lg">Digital Health Transformation</h4>
+                        <p class="text-[12px] text-slate-400 uppercase tracking-widest">Section 06</p>
+                    </div>
+                    <span class="index-number">06</span>
+                </div>
+
+                <!-- 07 -->
+                <div class="toc-item">
+                    <div class="item-dot"></div>
+                    <div>
+                        <h4 class="font-bold text-slate-800 text-lg">Access Challenges & Solutions</h4>
+                        <p class="text-[12px] text-slate-400 uppercase tracking-widest">Section 07</p>
+                    </div>
+                    <span class="index-number">07</span>
+                </div>
+
+                <!-- 08 -->
+                <div class="toc-item">
+                    <div class="item-dot"></div>
+                    <div>
+                        <h4 class="font-bold text-slate-800 text-lg">Health Literacy & Education</h4>
+                        <p class="text-[12px] text-slate-400 uppercase tracking-widest">Section 08</p>
+                    </div>
+                    <span class="index-number">08</span>
+                </div>
+
+                <!-- 09 -->
+                <div class="toc-item">
+                    <div class="item-dot"></div>
+                    <div>
+                        <h4 class="font-bold text-slate-800 text-lg">Resource Allocation Analysis</h4>
+                        <p class="text-[12px] text-slate-400 uppercase tracking-widest">Section 09</p>
+                    </div>
+                    <span class="index-number">09</span>
+                </div>
+
+                <!-- 10 -->
+                <div class="toc-item">
+                    <div class="item-dot"></div>
+                    <div>
+                        <h4 class="font-bold text-slate-800 text-lg">Future Research Core</h4>
+                        <p class="text-[12px] text-slate-400 uppercase tracking-widest">Section 10</p>
+                    </div>
+                    <span class="index-number">10</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 装饰底部 -->
+        <div class="absolute bottom-12 left-24 opacity-20">
+            <p class="text-xs font-bold tracking-[0.2em] text-slate-400 uppercase">Annual Medical Symposium 2025</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

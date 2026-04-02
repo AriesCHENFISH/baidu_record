@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sounds of the Ocean - Research Archive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { oceanDeep: '#081033', electricCyan: '#00E5FF' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Playfair Display', 'serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        #page_container { width: 1280px; height: 720px; position: relative; background: #081033; color: #FFFFFF; overflow: hidden; display: flex; flex-direction: column; margin: 0 auto; }
+        .text-outline { -webkit-text-stroke: 1px rgba(0, 229, 255, 0.4); color: transparent; }
+        .img-mask-slant { clip-path: polygon(0 0, 100% 0, 88% 100%, 0% 100%); }
+        .vertical-text { writing-mode: vertical-rl; transform: rotate(180deg); }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <!-- Header: Logo & Meta -->
+        <header class="relative z-20 px-20 pt-12 flex items-center justify-between">
+            <div class="flex items-center gap-5">
+                <div class="w-12 h-12 border-2 border-electricCyan flex flex-col items-center justify-center gap-1">
+                    <div class="w-6 h-0.5 bg-white"></div>
+                    <div class="w-4 h-0.5 bg-electricCyan"></div>
+                    <div class="w-6 h-0.5 bg-white"></div>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-black tracking-widest uppercase leading-none">Abyssal</h2>
+                    <span class="text-[9px] tracking-[0.5em] text-electricCyan uppercase font-bold">Research Archive</span>
+                </div>
+            </div>
+            <div class="text-[9px] tracking-[0.2em] text-white/40 uppercase text-right flex items-center gap-8">
+                <div><span class="block text-white font-bold">SIGNAL: STABLE</span><span>Acoustic Sync</span></div>
+                <div class="w-px h-8 bg-white/20"></div>
+                <div><span class="block text-white font-bold">VOL: 042dB</span><span>Frequency Range</span></div>
+            </div>
+        </header>
+
+        <main class="flex-1 px-20 pt-10 z-10">
+            <div class="flex gap-16 items-start">
+                <!-- Title Section -->
+                <div class="w-1/3 pt-12">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-8 h-[1px] bg-electricCyan"></div>
+                        <span class="text-[10px] tracking-[0.4em] text-electricCyan font-bold uppercase">Acoustic Analysis</span>
+                    </div>
+                    <h1 class="text-7xl font-serif italic leading-none">
+                        Sounds <br>
+                        <span class="font-sans not-italic font-black block text-8xl text-outline mt-2 uppercase">Of Ocean</span>
+                    </h1>
+                </div>
+
+                <!-- Image Section -->
+                <div class="flex-1 relative h-[320px]">
+                    <div class="absolute -top-10 -right-10 text-[180px] font-black text-white/[0.02] pointer-events-none">AUDIO</div>
+                    <div class="w-full h-full overflow-hidden img-mask-slant border border-white/10 relative">
+                        <img src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?q=80&w=1280" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-oceanDeep/20"></div>
+                    </div>
+                    <!-- Waveform Decor -->
+                    <div class="absolute -bottom-6 right-10 flex gap-1 items-end h-12">
+                        <div class="w-1 bg-electricCyan h-4"></div>
+                        <div class="w-1 bg-electricCyan h-8"></div>
+                        <div class="w-1 bg-electricCyan h-12"></div>
+                        <div class="w-1 bg-electricCyan h-6"></div>
+                        <div class="w-1 bg-electricCyan h-10"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Content -->
+            <div class="mt-16 grid grid-cols-2 gap-20 max-w-5xl">
+                <div class="relative border-l border-white/20 pl-8">
+                    <p class="text-gray-400 text-sm leading-relaxed font-light">
+                        The acoustic environment of the deep ocean is a complex matrix of biological signals and seismic whispers. Sound travels 4.5 times faster in water than in air, creating a high-fidelity data stream of the abyss.
+                    </p>
+                </div>
+                <div class="relative border-l border-white/20 pl-8">
+                    <p class="text-gray-400 text-sm leading-relaxed font-light">
+                        Our hydrophone arrays at 142.2°E have captured unprecedented low-frequency resonance patterns. These "ocean sounds" are not mere noise, but a sophisticated communication network of the hadal zone.
+                    </p>
+                    <div class="mt-6 flex items-center gap-4 text-electricCyan">
+                        <span class="text-[10px] font-black uppercase tracking-[0.3em]">Learn more archive</span>
+                        <i class="fa-solid fa-arrow-right-long"></i>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Decorative sidebar text -->
+        <div class="absolute right-10 bottom-24 vertical-text text-[9px] tracking-[0.8em] text-white/20 uppercase font-black">
+            Audio Catalog // 001-A
+        </div>
+    </div>
+</body>
+</html>

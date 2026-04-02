@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Growth Refactored - Fradel and Spies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#1A1A1A',
+                        acidLime: '#D2E649',
+                        greyText: '#9A9A9A',
+                        whiteText: '#EFEFEF',
+                        gridLine: '#333333'
+                    },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="flex items-center justify-center min-h-screen">
+
+    <div class="relative w-[1280px] h-[720px] bg-darkBg overflow-hidden font-sans shadow-2xl">
+        
+        <div class="absolute top-12 left-16 flex items-center gap-4 z-20">
+            <div class="text-acidLime text-4xl"><i class="fa-solid fa-shapes"></i></div>
+            <div class="flex flex-col justify-center">
+                <h6 class="text-whiteText font-bold text-xl leading-tight tracking-widest uppercase m-0">FRADEL</h6>
+                <h6 class="text-acidLime font-bold text-xl leading-tight tracking-widest uppercase m-0">AND SPIES</h6>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-12 h-full pt-32 pb-16 px-16 gap-12 items-center">
+            
+            <div class="col-span-5 flex flex-col justify-center h-full border-r border-gridLine pr-10">
+                <div class="mb-10">
+                    <div class="w-16 h-1 bg-acidLime mb-6"></div>
+                    <h1 class="text-whiteText text-6xl font-black uppercase leading-none mb-4">
+                        User<br>Trajectory
+                    </h1>
+                    <p class="text-greyText text-base font-light leading-relaxed">
+                        We are observing a robust upward trend. The comparative analysis highlights significant year-over-year acceleration.
+                    </p>
+                </div>
+
+                <div class="space-y-8">
+                    <div class="flex items-center justify-between border-b border-gridLine pb-2">
+                        <span class="text-whiteText text-sm font-bold uppercase tracking-wider">Total Users</span>
+                        <span class="text-acidLime text-2xl font-mono font-bold">145,200</span>
+                    </div>
+                    <div class="flex items-center justify-between border-b border-gridLine pb-2">
+                        <span class="text-whiteText text-sm font-bold uppercase tracking-wider">Retention</span>
+                        <span class="text-whiteText text-2xl font-mono font-bold">88.4%</span>
+                    </div>
+                    <div class="flex items-center justify-between border-b border-gridLine pb-2">
+                        <span class="text-whiteText text-sm font-bold uppercase tracking-wider">Avg Session</span>
+                        <span class="text-whiteText text-2xl font-mono font-bold">14m 20s</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-span-7 flex flex-col h-full justify-center">
+                
+                <div class="flex justify-between items-end mb-6">
+                    <h3 class="text-whiteText text-lg font-bold uppercase tracking-widest flex items-center gap-2">
+                        <i class="fa-solid fa-chart-line text-acidLime"></i> Monthly Active Users
+                    </h3>
+                    <div class="flex gap-4">
+                        <div class="flex items-center gap-2">
+                            <div class="w-6 h-0.5 bg-acidLime"></div>
+                            <span class="text-whiteText text-xs uppercase tracking-wider">2024</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-6 h-0.5 border-t border-dashed border-greyText"></div>
+                            <span class="text-greyText text-xs uppercase tracking-wider">2023</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative w-full h-[320px] border border-gridLine bg-[#222]/50 p-4 mb-8">
+                    <div id="lineChart" class="w-full h-full"></div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="bg-[#222] p-4 border-l-2 border-acidLime">
+                        <p class="text-greyText text-xs uppercase tracking-widest mb-1">Peak Traffic</p>
+                        <p class="text-whiteText text-sm">Highest activity recorded during weekend evenings.</p>
+                    </div>
+                    <div class="bg-[#222] p-4 border-l-2 border-greyText">
+                        <p class="text-greyText text-xs uppercase tracking-widest mb-1">Forecast</p>
+                        <p class="text-whiteText text-sm">Projected to hit 200k milestone by Q4.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="absolute bottom-8 right-16">
+            <p class="text-xs text-gridLine font-mono tracking-widest">10 / DATA</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var chartDom = document.getElementById('lineChart');
+            var myChart = echarts.init(chartDom);
+            var option;
+
+            option = {
+                backgroundColor: 'transparent',
+                grid: { 
+                    top: '10%', 
+                    right: '2%', 
+                    bottom: '10%', 
+                    left: '5%', 
+                    containLabel: true 
+                },
+                tooltip: {
+                    trigger: 'axis',
+                    backgroundColor: '#1A1A1A',
+                    borderColor: '#D2E649',
+                    textStyle: { color: '#EFEFEF', fontFamily: 'Noto Sans SC' },
+                    axisPointer: { lineStyle: { color: '#D2E649', type: 'dashed' } }
+                },
+                xAxis: {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL'],
+                    axisLine: { lineStyle: { color: '#333' } },
+                    axisLabel: { 
+                        color: '#9A9A9A', 
+                        fontFamily: 'Noto Sans SC',
+                        fontSize: 11,
+                        margin: 15
+                    },
+                    axisTick: { show: false }
+                },
+                yAxis: {
+                    type: 'value',
+                    splitLine: { lineStyle: { color: '#333', type: 'dashed' } },
+                    axisLabel: { 
+                        color: '#9A9A9A', 
+                        fontFamily: 'Noto Sans SC',
+                        fontSize: 11
+                    }
+                },
+                series: [
+                    // Series 1: Previous Year (Grey Dashed)
+                    {
+                        name: '2023',
+                        data: [45, 52, 48, 60, 65, 58, 70],
+                        type: 'line',
+                        smooth: true,
+                        symbol: 'none',
+                        lineStyle: {
+                            color: '#555555',
+                            width: 2,
+                            type: 'dashed'
+                        }
+                    },
+                    // Series 2: Current Year (Acid Lime Solid)
+                    {
+                        name: '2024',
+                        data: [65, 75, 72, 95, 110, 135, 145],
+                        type: 'line',
+                        smooth: true,
+                        symbol: 'circle',
+                        symbolSize: 8,
+                        itemStyle: {
+                            color: '#1A1A1A',
+                            borderColor: '#D2E649',
+                            borderWidth: 2
+                        },
+                        lineStyle: {
+                            color: '#D2E649',
+                            width: 3
+                        }
+                    }
+                ]
+            };
+
+            option && myChart.setOption(option);
+            window.addEventListener('resize', () => myChart.resize());
+        });
+    </script>
+</body>
+</html>

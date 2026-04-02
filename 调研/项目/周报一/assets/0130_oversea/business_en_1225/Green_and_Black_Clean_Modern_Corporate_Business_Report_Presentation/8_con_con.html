@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Plans Presentation Slide</title>
+
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <!-- Google Fonts (via Baidu Mirror as requested) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- Custom Font Configuration for Tailwind to use the imported font -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#111113',
+                        primaryWhite: '#FFFFFF',
+                        accentGreen: '#8DAF53',
+                        secondaryGray: '#E0E0E0'
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container Styles */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #111113;
+            overflow: hidden; /* Prevent scrollbars */
+            font-family: 'Noto Sans SC', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Utility helper for text justification */
+        .text-justify-custom {
+            text-align: justify;
+            text-justify: inter-word;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Container -->
+    <div id="page_container">
+        
+        <!-- Header / Navigation Section -->
+        <!-- Flex container for top navigation bar with Logo and Menu links -->
+        <div class="absolute top-0 left-0 w-full flex justify-between items-center px-16 py-10 z-20">
+            <!-- Logo Area -->
+            <div class="text-primaryWhite font-bold text-xl tracking-widest uppercase">
+                BORCELLE
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="flex items-center gap-12">
+                <ul class="flex gap-10 list-none">
+                    <li><a href="#" class="text-gray-300 text-sm font-medium hover:text-white transition-colors no-underline">Home</a></li>
+                    <li><a href="#" class="text-gray-300 text-sm font-medium hover:text-white transition-colors no-underline">About</a></li>
+                    <li><a href="#" class="text-gray-300 text-sm font-medium hover:text-white transition-colors no-underline">Contact</a></li>
+                </ul>
+                <!-- Hamburger Menu Icon -->
+                <div class="text-white text-2xl cursor-pointer">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Grid -->
+        <!-- Two-column grid layout: Left for typography, Right for imagery -->
+        <div class="grid grid-cols-12 h-full w-full pl-16 pr-0 pt-20 pb-0">
+            
+            <!-- Left Column: Typography & Content (Span 5 columns) -->
+            <div class="col-span-5 flex flex-col justify-center pr-8 z-10">
+                <!-- Main Title -->
+                <h1 class="text-primaryWhite text-8xl font-bold leading-[0.9] tracking-tight mb-10 uppercase">
+                    Future<br>Plans
+                </h1>
+
+                <!-- Body Text -->
+                <!-- Using semantic <p> with margin-bottom for spacing instead of <br> -->
+                <p class="text-gray-400 text-sm leading-7 text-justify-custom mb-4 font-light opacity-90">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <p class="text-gray-400 text-sm leading-7 text-justify-custom font-light opacity-90">
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.
+                </p>
+            </div>
+
+            <!-- Right Column: Visual Imagery (Span 7 columns) -->
+            <div class="col-span-7 relative h-full flex items-center justify-end">
+                <!-- Image Container with Rounded Corners -->
+                <!-- Positioning matches the design: large rounded card on the right side -->
+                <div class="relative w-[95%] h-[75%] bg-gray-800 rounded-tl-[40px] rounded-bl-[40px] overflow-hidden shadow-2xl mr-0">
+                    <!-- Overlay gradient for subtle depth -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10 pointer-events-none"></div>
+                    
+                    <!-- Main Feature Image: Green Leaf with Water Droplets -->
+                    <img src="https://images.unsplash.com/photo-1518531933037-9a6470071591?q=80&w=1280&auto=format&fit=crop" 
+                         alt="Close up of green leaf texture with water droplets" 
+                         class="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-700 ease-out">
+                    <!-- 750*540 -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+        <!-- Contains the website URL and the decorative accent block -->
+        <div class="absolute bottom-0 right-0 flex items-end">
+
+            <!-- Decorative Green Accent Block -->
+            <!-- A solid color block anchored to the bottom right corner -->
+            <div class="w-24 h-32 bg-[#8DAF53] shadow-lg relative z-10">
+                <!-- Optional: Subtle internal highlight for texture -->
+                <div class="absolute top-0 left-0 w-full h-1 bg-white/20"></div>
+            </div>
+        </div>
+
+        <!-- Decorative Background Element (Subtle) -->
+        <!-- Adds very subtle depth to the dark background without being distracting -->
+        <div class="absolute top-[-10%] left-[-5%] w-[500px] h-[500px] rounded-full bg-white opacity-[0.02] blur-3xl pointer-events-none z-0"></div>
+
+    </div>
+
+</body>
+</html>

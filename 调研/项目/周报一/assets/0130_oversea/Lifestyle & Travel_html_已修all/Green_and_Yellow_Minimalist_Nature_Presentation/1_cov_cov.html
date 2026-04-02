@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature - Cinematic Keynote Enhanced</title>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #15291E;
+            overflow: hidden;
+        }
+
+        .serif-display {
+            font-family: 'Georgia', serif;
+        }
+
+        /* 字母悬浮效果 */
+        .title-glow {
+            text-shadow: 0 0 30px rgba(248, 242, 114, 0.3);
+            letter-spacing: -0.05em;
+        }
+
+        /* 电影质感噪点 */
+        .grain {
+            position: absolute;
+            inset: 0;
+            background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+            opacity: 0.15;
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        /* 装饰线 */
+        .deco-line {
+            width: 1px;
+            height: 80px;
+            background: linear-gradient(to bottom, #F8F272, transparent);
+            opacity: 0.6;
+        }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepGreen: '#15291E',
+                        lemonYellow: '#F8F272',
+                        paleGreen: '#D9E3CC',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div id="page_container" class="group">
+        <div class="absolute inset-0 z-0">
+            <img 
+                src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1280&auto=format&fit=crop" 
+                class="w-full h-full object-cover brightness-[0.85] contrast-[1.1] transition-transform duration-[10s] group-hover:scale-110"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-deepGreen/80 via-transparent to-deepGreen/40"></div>
+            <div class="grain"></div>
+        </div>
+
+        <div class="relative z-10 w-full h-full flex flex-col justify-between py-16 px-20">
+            
+            <header class="flex justify-between items-center text-lemonYellow/90">
+                <div class="flex flex-col">
+                    <span class="text-[10px] tracking-[0.5em] uppercase font-bold opacity-60">Volume 01</span>
+                    <p class="text-sm tracking-widest font-medium uppercase mt-1">The Beauty of Nature</p>
+                </div>
+                
+                <div class="flex flex-col items-center">
+                    <div class="deco-line mb-2"></div>
+                    <p class="text-xs tracking-[0.3em] uppercase opacity-80 italic">Quietness</p>
+                </div>
+
+                <div class="text-right flex flex-col items-end">
+                    <span class="text-[10px] tracking-[0.5em] uppercase font-bold opacity-60 italic">Est. 2026</span>
+                    <p class="text-sm tracking-widest font-medium uppercase mt-1">Wonder Never Ends</p>
+                </div>
+            </header>
+
+            <main class="flex-grow flex flex-col items-center justify-center">
+                <div class="relative">
+                    <h2 class="absolute -top-16 left-1/2 -translate-x-1/2 text-[140px] serif-display text-white/5 uppercase tracking-[0.2em] pointer-events-none">
+                        WILDLIFE
+                    </h2>
+                    
+                    <h1 class="serif-display text-[260px] leading-none text-lemonYellow font-bold title-glow italic">
+                        Nature
+                    </h1>
+                    
+                    <div class="flex items-center gap-4 mt-[-20px] justify-center">
+                        <div class="h-[1px] w-20 bg-lemonYellow/40"></div>
+                        <p class="text-lemonYellow/80 tracking-[0.8em] text-xs uppercase font-light">The Eternal Cycle</p>
+                        <div class="h-[1px] w-20 bg-lemonYellow/40"></div>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="flex justify-between items-end border-t border-lemonYellow/20 pt-8">
+                <div class="flex flex-col gap-1">
+                    <p class="text-paleGreen/40 text-[9px] uppercase tracking-widest">Foundation</p>
+                    <p class="text-paleGreen text-sm tracking-tighter uppercase font-medium">The roots of our life</p>
+                </div>
+                
+                <div class="flex flex-col items-center gap-1">
+                    <div class="w-2 h-2 rounded-full border border-lemonYellow rotate-45 mb-1"></div>
+                    <p class="text-lemonYellow text-xs tracking-[0.4em] uppercase font-bold">Earth Archive</p>
+                </div>
+
+                <div class="flex flex-col items-end gap-1">
+                    <p class="text-paleGreen/40 text-[9px] uppercase tracking-widest">Origin</p>
+                    <p class="text-paleGreen text-sm tracking-tighter uppercase font-medium">Grows in the wild</p>
+                </div>
+            </footer>
+
+        </div>
+
+        <div class="absolute inset-0 pointer-events-none shadow-[inset_0_0_150px_rgba(21,41,30,0.6)] z-20"></div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baseball Game Rules - Keithston and Partners</title>
+    <!-- Google Fonts: Inter & Noto Sans SC (as requested) -->
+    <link href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#000000',
+                        secondary: '#F5F5F5',
+                        darkOverlay: '#1C0F0A',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans SC', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* CSS Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container Specifics */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FFFFFF;
+            overflow: hidden;
+            box-shadow: none; /* Explicitly requested no outer shadow in code logic, though useful for preview */
+        }
+
+        /* Utility helper for line clamping if needed */
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div id="page_container" class="grid grid-cols-12 h-full font-sans">
+
+        <!-- LEFT COLUMN: White Background (Brand, Title, Image, Intro) - Spans 5 columns -->
+        <div class="col-span-5 bg-white h-full flex flex-col justify-between p-12 relative z-10 border-r border-gray-100">
+            
+            <!-- 1. Brand Header -->
+            <div class="w-full">
+                <p class="text-xs font-bold tracking-[0.2em] uppercase text-gray-500 mb-2">
+                    Keithston and Partners
+                </p>
+            </div>
+
+            <!-- 2. Main Title Typography -->
+            <div class="mt-4 mb-6">
+                <h1 class="text-6xl font-black text-primary leading-[0.9] tracking-tight uppercase">
+                    Fundamental<br>
+                    Baseball<br>
+                    Game Rules
+                </h1>
+            </div>
+
+            <!-- 3. Featured Image (Rounded Card Style) -->
+            <div class="w-full h-64 relative rounded-[2rem] overflow-hidden shadow-2xl mb-6 group">
+                <!-- Using a high-quality Unsplash image of a baseball runner/field -->
+                <img src="https://images.unsplash.com/photo-1516731415730-1854123b326e?q=80&w=1280&auto=format&fit=crop" 
+                     alt="Baseball player running bases" 
+                     class="w-full h-full object-cover transform scale-105 group-hover:scale-100 transition-transform duration-700">
+                <!-- 500*300 -->
+                
+                <!-- Subtle inner gradient for depth -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
+            </div>
+
+            <!-- 4. Introduction Text -->
+            <div class="mt-auto">
+                <p class="text-sm text-gray-600 leading-relaxed font-normal border-l-2 border-black pl-4">
+                    Baseball rules define pitch counts, inning structures, scoring methods, defensive positioning, and player conduct to ensure fair consistent competition standards across all professional levels.
+                </p>
+            </div>
+        </div>
+
+        <!-- RIGHT COLUMN: Dark Background (Overlay + List) - Spans 7 columns -->
+        <div class="col-span-7 h-full relative bg-[#1C0F0A] overflow-hidden">
+            
+            <!-- Background Image with Overlay -->
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1508345228704-935cc84bf5e2?q=80&w=1280&auto=format&fit=crop" 
+                     alt="Pitcher silhouette in stadium" 
+                     class="w-full h-full object-cover opacity-40 mix-blend-luminosity">
+                <!-- 800*720 -->
+                
+                <!-- Dark Overlay to ensure text readability -->
+                <div class="absolute inset-0 bg-[#1C0F0A]/80"></div>
+                
+                <!-- Decorative gradient from left to blend with white column -->
+                <div class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#1C0F0A] to-transparent"></div>
+            </div>
+
+            <!-- Content Wrapper -->
+            <div class="relative z-10 h-full flex flex-col p-12 pl-16">
+
+                <!-- Header: Hamburger Menu -->
+                <div class="flex justify-end mb-8">
+                    <div class="cursor-pointer text-white hover:text-gray-300 transition-colors">
+                        <i class="fa-solid fa-bars text-3xl"></i>
+                    </div>
+                </div>
+
+                <!-- Vertical List Container -->
+                <div class="flex flex-col justify-center h-full gap-8">
+
+                    <!-- List Item 01 -->
+                    <div class="flex items-start gap-6 group">
+                        <!-- Number Circle -->
+                        <div class="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center shrink-0 group-hover:border-white group-hover:bg-white group-hover:text-black transition-all duration-300">
+                            <span class="font-mono font-bold text-sm text-white group-hover:text-black">01</span>
+                        </div>
+                        <!-- Text Content -->
+                        <div class="flex flex-col">
+                            <h3 class="text-white text-xl font-bold mb-2 tracking-wide">Professional Leagues</h3>
+                            <p class="text-white/70 text-sm leading-relaxed max-w-md font-light">
+                                Pitchers deliver balls from the mound aiming to achieve strikes within the strike zone while maintaining precise control.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- List Item 02 -->
+                    <div class="flex items-start gap-6 group">
+                        <div class="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center shrink-0 group-hover:border-white group-hover:bg-white group-hover:text-black transition-all duration-300">
+                            <span class="font-mono font-bold text-sm text-white group-hover:text-black">02</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <h3 class="text-white text-xl font-bold mb-2 tracking-wide">Batting</h3>
+                            <p class="text-white/70 text-sm leading-relaxed max-w-md font-light">
+                                Batters attempt to hit pitches advancing runners and achieving base hits for scoring opportunities.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- List Item 03 -->
+                    <div class="flex items-start gap-6 group">
+                        <div class="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center shrink-0 group-hover:border-white group-hover:bg-white group-hover:text-black transition-all duration-300">
+                            <span class="font-mono font-bold text-sm text-white group-hover:text-black">03</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <h3 class="text-white text-xl font-bold mb-2 tracking-wide">Fielding</h3>
+                            <p class="text-white/70 text-sm leading-relaxed max-w-md font-light">
+                                Defensive players occupy strategic positions to catch batted balls and record pivotal defensive outs with great precision.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- List Item 04 -->
+                    <div class="flex items-start gap-6 group">
+                        <div class="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center shrink-0 group-hover:border-white group-hover:bg-white group-hover:text-black transition-all duration-300">
+                            <span class="font-mono font-bold text-sm text-white group-hover:text-black">04</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <h3 class="text-white text-xl font-bold mb-2 tracking-wide">Scoring</h3>
+                            <p class="text-white/70 text-sm leading-relaxed max-w-md font-light">
+                                Runs score when batters, fueled by fierce determination, advance to home plate after successful hits or base running.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

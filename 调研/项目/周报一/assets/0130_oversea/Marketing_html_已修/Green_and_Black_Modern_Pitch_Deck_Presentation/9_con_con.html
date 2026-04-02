@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - Fradel and Spies</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#1A1A1A',
+                        acidLime: '#D2E649',
+                        greyText: '#9A9A9A',
+                        whiteText: '#EFEFEF',
+                        gridLine: '#333333'
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .img-grayscale {
+            filter: grayscale(100%);
+            transition: all 0.5s ease;
+        }
+        /* Keep image interactive if desired, or remove hover to make it static too. 
+           Keeping it for subtle life, but frame is now static. */
+        .group:hover .img-grayscale {
+            filter: grayscale(0%);
+        }
+        
+        /* Geometric Box Decoration - Modified to be Static & Yellow */
+        .geo-box {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #D2E649; /* Direct Yellow */
+            top: 20px; /* Fixed Offset Position */
+            left: 20px;
+            z-index: 0;
+            /* Removed transition and hover state */
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container" class="relative w-[1280px] h-[720px] bg-darkBg mx-auto overflow-hidden font-sans">
+        
+        <div class="absolute top-12 left-16 flex items-center gap-4 z-20">
+            <div class="text-acidLime text-4xl">
+                <i class="fa-solid fa-shapes"></i>
+            </div>
+            <div class="flex flex-col justify-center">
+                <h6 class="text-whiteText font-bold text-gl leading-tight tracking-widest uppercase m-0">FRADEL</h6>
+                <h6 class="text-acidLime font-bold text-gl leading-tight tracking-widest uppercase m-0">AND SPIES</h6>
+            </div>
+        </div>
+
+        <div class="w-full h-full flex items-end pb-20 px-16">
+            
+            <div class="w-5/12 flex flex-col justify-center h-full pt-20 pr-12">
+                <div class="w-16 h-16 border-l-4 border-t-4 border-acidLime mb-8"></div>
+
+                <h1 class="text-whiteText text-[100px] font-bold tracking-tighter leading-[0.85] mb-8 uppercase">
+                    Our<br>
+                    <span class="text-acidLime">Team</span>
+                </h1>
+
+                <div class="border-l border-white/20 pl-6">
+                    <p class="text-greyText text-lg font-light leading-relaxed">
+                        Our team consists of diverse individuals united by a common goal to create and develop a successful venture. We combine creativity with technical expertise.
+                    </p>
+                </div>
+            </div>
+
+            <div class="w-7/12 flex gap-8 items-end justify-end pb-4">
+                
+                <div class="relative group w-[300px]">
+                    <div class="geo-box"></div>
+                    
+                    <div class="relative z-10 w-full aspect-[3/4] bg-gridLine overflow-hidden mb-6">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop" 
+                             alt="Mariana Napolitani" 
+                             class="w-full h-full object-cover img-grayscale">
+                    </div>
+                    
+                    <div class="relative z-10 pl-2">
+                        <h3 class="text-whiteText font-bold text-xl uppercase tracking-wide">
+                            Mariana Napolitani
+                        </h3>
+                        <p class="text-greyText text-sm font-mono mt-1 uppercase tracking-wider">
+                            Chief Executive Officer
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative group w-[300px] mt-[-60px]"> <div class="geo-box"></div>
+
+                    <div class="relative z-10 w-full aspect-[3/4] bg-gridLine overflow-hidden mb-6">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&auto=format&fit=crop" 
+                             alt="Teddy Yu" 
+                             class="w-full h-full object-cover img-grayscale">
+                    </div>
+
+                    <div class="relative z-10 pl-2">
+                        <h3 class="text-whiteText font-bold text-xl uppercase tracking-wide">
+                            Teddy Yu
+                        </h3>
+                        <p class="text-greyText text-sm font-mono mt-1 uppercase tracking-wider">
+                            Product Designer
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="absolute bottom-8 right-16">
+            <p class="text-xs text-gridLine font-mono tracking-widest">05 / TEAM</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marine Food Web Presentation</title>
+
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative; overflow: hidden;
+            background: linear-gradient(160deg, #1F4E79, #2D6496, #0f2638);
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        .glass-box {
+            background: rgba(26, 59, 92, 0.5); backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-left: 4px solid #8DE4E0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        /* Decorative Rocks Masking */
+        .rock-mask {
+            mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg"><path d="M0,100 Q50,20 100,80 T200,100 Z" fill="black"/></svg>');
+            -webkit-mask-image: radial-gradient(circle at bottom, black 50%, transparent 80%);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <div class="absolute top-[-100px] left-[20%] w-[600px] h-[400px] bg-[#8DE4E0] rounded-full blur-[120px] opacity-10 pointer-events-none"></div>
+
+        <header class="relative z-20 flex items-center px-16 pt-12">
+            <div class="flex items-center gap-5 group cursor-default">
+                <div class="relative w-12 h-12 flex items-center justify-center rounded-xl bg-gradient-to-br from-[#8DE4E0] to-[#4FB3AF] text-[#1F4E79] shadow-[0_0_25px_rgba(141,228,224,0.4)] border border-white/20 transition-transform duration-500 group-hover:scale-105">
+                    <i class="fa-solid fa-water text-2xl drop-shadow-sm"></i>
+                </div>
+                <div class="flex flex-col justify-center">
+                    <h6 class="text-2xl font-bold tracking-wide text-white leading-none">
+                        Hanover <span class="font-light text-[#8DE4E0] opacity-80">&</span> Tyke
+                    </h6>
+                    <div class="w-8 h-[3px] bg-[#8DE4E0] mt-2 rounded-full opacity-60 group-hover:w-full transition-all duration-500 ease-out"></div>
+                </div>
+            </div>
+        </header>
+
+        <main class="relative z-10 grid grid-cols-12 gap-12 px-16 mt-10 h-full">
+            
+            <div class="col-span-5 flex flex-col pt-10">
+                <div class="flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-fish-fins text-[#8DE4E0]"></i>
+                    <span class="text-[#8DE4E0] uppercase tracking-widest text-sm font-bold">Ecosystems</span>
+                </div>
+                
+                <h1 class="text-6xl font-bold text-white mb-8 leading-tight drop-shadow-lg">
+                    Marine <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#8DE4E0] to-white">Food Web</span>
+                </h1>
+                
+                <div class="glass-box p-8 rounded-r-2xl rounded-bl-2xl">
+                    <p class="text-[#D0E1F0] text-lg leading-relaxed font-light">
+                        The marine food web is complex, ranging from microscopic phytoplankton to massive whales. Understanding these trophic levels is essential for conservation efforts.
+                    </p>
+                    <div class="mt-6 flex gap-4">
+                        <div class="text-center">
+                            <span class="block text-2xl font-bold text-white">4+</span>
+                            <span class="text-xs text-[#8DE4E0] uppercase">Trophic Levels</span>
+                        </div>
+                        <div class="w-[1px] bg-white/20 h-10"></div>
+                        <div class="text-center">
+                            <span class="block text-2xl font-bold text-white">90%</span>
+                            <span class="text-xs text-[#8DE4E0] uppercase">Energy Loss</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-span-7 relative h-[500px]">
+                <div id="funnelChart" class="w-full h-full"></div>
+            </div>
+        </main>
+
+        <div class="absolute bottom-0 left-0 w-[400px] h-[200px] z-0 opacity-80 mix-blend-hard-light">
+             <img src="https://images.unsplash.com/photo-1596324683525-4762b7244926?q=80&w=1000&auto=format&fit=crop" 
+                  class="w-full h-full object-cover" 
+                  style="mask-image: radial-gradient(circle at bottom left, black 50%, transparent 80%); -webkit-mask-image: radial-gradient(circle at bottom left, black 50%, transparent 80%);">
+        </div>
+        <div class="absolute bottom-0 right-0 w-[600px] h-[250px] z-0 opacity-60 mix-blend-overlay">
+             <img src="https://images.unsplash.com/photo-1546500840-ae38253aba9b?q=80&w=1000&auto=format&fit=crop" 
+                  class="w-full h-full object-cover"
+                  style="mask-image: radial-gradient(circle at bottom right, black 50%, transparent 80%); -webkit-mask-image: radial-gradient(circle at bottom right, black 50%, transparent 80%);">
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var chartDom = document.getElementById('funnelChart');
+            var myChart = echarts.init(chartDom);
+            var option;
+
+            option = {
+                // Customized Palette to match the Blue/Cyan/Dark Blue Theme
+                color: ['#8DE4E0', '#7BC0D6', '#66A5C7', '#4A7699', '#325C80', '#1F4266'],
+                tooltip: {
+                    trigger: 'item',
+                    backgroundColor: 'rgba(26, 59, 92, 0.9)',
+                    borderColor: '#8DE4E0',
+                    textStyle: { color: '#fff' }
+                },
+                series: [
+                    {
+                        name: 'Trophic Levels',
+                        type: 'funnel',
+                        left: '10%',
+                        top: 60,
+                        bottom: 60,
+                        width: '70%',
+                        min: 0,
+                        max: 100,
+                        minSize: '0%',
+                        maxSize: '100%',
+                        sort: 'ascending', // Pyramid shape typically better for food chain (Producers at bottom) but Funnel (descending) implies volume. Let's stick to standard funnel visual.
+                        gap: 2,
+                        label: {
+                            show: true,
+                            position: 'right',
+                            formatter: '{b}',
+                            color: '#FFFFFF',
+                            fontSize: 14,
+                            fontFamily: '"Noto Sans SC", sans-serif',
+                            fontWeight: 'bold'
+                        },
+                        labelLine: {
+                            length: 20,
+                            lineStyle: { width: 1, type: 'solid', color: '#8DE4E0' }
+                        },
+                        itemStyle: {
+                            borderColor: 'rgba(255,255,255,0.2)',
+                            borderWidth: 1,
+                            shadowBlur: 20,
+                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                        },
+                        data: [
+                            { value: 100, name: 'Producers' },
+                            { value: 80, name: 'Primary Consumers' },
+                            { value: 60, name: 'Secondary Consumers' },
+                            { value: 40, name: 'Tertiary Consumers' },
+                            { value: 20, name: 'Apex Predators' }
+                        ]
+                    },
+                    // Left Side Percentages (Visual Hack)
+                    {
+                        name: 'Energy',
+                        type: 'funnel',
+                        left: '10%',
+                        top: 60,
+                        bottom: 60,
+                        width: '70%',
+                        min: 0,
+                        max: 100,
+                        sort: 'ascending',
+                        gap: 2,
+                        label: {
+                            show: true,
+                            position: 'left',
+                            formatter: '{c} kcal',
+                            color: '#D0E1F0',
+                            fontSize: 12
+                        },
+                        labelLine: {
+                            show: true,
+                            length: 10,
+                            lineStyle: { color: 'rgba(255,255,255,0.3)' }
+                        },
+                        itemStyle: { opacity: 0, borderWidth: 0 },
+                        data: [
+                            { value: 100, name: 'Producers' },
+                            { value: 80, name: 'Primary Consumers' },
+                            { value: 60, name: 'Secondary Consumers' },
+                            { value: 40, name: 'Tertiary Consumers' },
+                            { value: 20, name: 'Apex Predators' }
+                        ]
+                    }
+                ]
+            };
+
+            myChart.setOption(option);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health - Typography Style</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+        #page_container { width: 1280px; height: 720px; background-color: #121212; position: relative; margin: 0 auto; overflow: hidden; color: #F5F5F5; }
+        .font-serif-italic { font-family: 'Georgia', serif; font-style: italic; }
+        .bg-primary-gradient { background: linear-gradient(135deg, #B63914 0%, #D65A2C 100%); }
+        .hospital-logo-box { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+        
+        /* 背景垂直水印 */
+        .bg-text-vertical { position: absolute; font-size: 180px; font-weight: 900; color: rgba(214, 90, 44, 0.04); line-height: 0.8; z-index: 0; writing-mode: vertical-rl; right: 20px; top: 0; pointer-events: none; }
+        
+        .glass-panel { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(20px); border-top: 2px solid #B63914; }
+        .quote-box { border-left: 4px solid #D65A2C; background: rgba(214, 90, 44, 0.05); }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <!-- 背景装饰 -->
+        <div class="bg-text-vertical uppercase">Balance</div>
+        <div class="absolute top-[20%] right-[30%] w-[500px] h-[500px] bg-[#B63914] opacity-[0.05] blur-[150px] rounded-full"></div>
+
+        <!-- 统一左上角 LOGO -->
+        <div class="absolute top-12 left-16 z-50">
+            <div class="flex items-center gap-4">
+                <div class="hospital-logo-box bg-primary-gradient"><i class="fa-solid fa-plus text-white text-lg"></i></div>
+                <span class="text-xl font-bold tracking-widest uppercase">Borcelle Hospital</span>
+            </div>
+        </div>
+
+        <div class="flex h-full w-full px-16">
+            <!-- 左侧：标题与引言 (6/12) -->
+            <div class="w-6/12 h-full flex flex-col justify-center pr-12 z-10">
+                <h1 class="text-[80px] leading-[0.85] tracking-tighter">
+                    <span class="font-serif-italic text-[#D65A2C] block mb-2">Mental</span>
+                    <span class="font-bold">WELLNESS</span>
+                </h1>
+                <div class="quote-box mt-12 p-8 transition-all hover:bg-white/5">
+                    <p class="text-xl font-light italic opacity-90 leading-relaxed">
+                        "True health is not merely the absence of disease, but the presence of mental harmony and emotional resilience."
+                    </p>
+                </div>
+            </div>
+
+            <!-- 右侧：功能模块 (6/12) -->
+            <div class="w-6/12 h-full flex flex-col justify-center gap-6 z-10">
+                <div class="glass-panel p-8 translate-x-12 hover:translate-x-6 transition-transform">
+                    <h3 class="text-[#D65A2C] font-bold tracking-widest uppercase text-xs mb-3">01. Psychological Support</h3>
+                    <p class="text-sm opacity-50 leading-relaxed">Providing a safe, confidential environment for individuals to explore emotional challenges with clinical experts.</p>
+                </div>
+                <div class="glass-panel p-8 translate-x-4 hover:translate-x-0 transition-transform">
+                    <h3 class="text-[#D65A2C] font-bold tracking-widest uppercase text-xs mb-3">02. Stress Modulation</h3>
+                    <p class="text-sm opacity-50 leading-relaxed">Advanced mindfulness and cognitive strategies to manage daily stressors and prevent burnout.</p>
+                </div>
+                <div class="glass-panel p-8 translate-x-12 hover:translate-x-6 transition-transform">
+                    <h3 class="text-[#D65A2C] font-bold tracking-widest uppercase text-xs mb-3">03. Community Resilience</h3>
+                    <p class="text-sm opacity-50 leading-relaxed">Group-based interventions fostering social connection and peer-to-peer emotional infrastructure.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部状态栏 -->
+        <div class="absolute bottom-12 left-16 right-16 flex justify-between items-center opacity-30 text-[10px] font-bold tracking-[0.5em] uppercase">
+            <div class="flex items-center gap-6">
+                <span>Protocol v7.1</span>
+                <div class="w-8 h-[1px] bg-white"></div>
+                <span>Holistic Integration</span>
+            </div>
+            <span>Mental Health Initiative 2024</span>
+        </div>
+    </div>
+</body>
+</html>

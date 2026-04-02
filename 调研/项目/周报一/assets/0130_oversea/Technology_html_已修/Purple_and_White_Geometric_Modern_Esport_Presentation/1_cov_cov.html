@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esports Presentation Professional Cover</title>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            margin: 0 auto;
+            background-color: #0A0E29;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* 3D Cyberpunk Grid Background */
+        .bg-grid {
+            background-image: 
+                linear-gradient(rgba(157, 78, 221, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(157, 78, 221, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+            perspective: 500px;
+            transform: rotateX(45deg);
+            position: absolute;
+            bottom: -20%;
+            left: -10%;
+            width: 120%;
+            height: 80%;
+            z-index: 1;
+        }
+
+        /* Title Gradient & Layered Shadows */
+        .title-gradient {
+            background: linear-gradient(to bottom, #FFFFFF 0%, #D375FF 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            filter: drop-shadow(0 0 15px rgba(157, 78, 221, 0.6));
+        }
+
+        .cyber-shadow-heavy {
+            text-shadow: 4px 4px 0px #9D4EDD, 8px 8px 0px #240046;
+        }
+
+        /* Glassmorphism Presenter Card */
+        .glass-card {
+            background: rgba(36, 0, 70, 0.6);
+            backdrop-filter: blur(12px);
+            border-left: 4px solid #9D4EDD;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            transform: skewX(-12deg);
+        }
+
+        .un-skew {
+            transform: skewX(12deg);
+        }
+
+        /* Animated Scan Line */
+        .scan-line {
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #9D4EDD, transparent);
+            position: absolute;
+            top: 0;
+            opacity: 0.3;
+            animation: scan 4s linear infinite;
+        }
+
+        @keyframes scan {
+            0% { top: 0; }
+            100% { top: 100%; }
+        }
+
+        .shape-triangle {
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <div class="bg-grid"></div>
+        <div class="scan-line"></div>
+        
+        <div class="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-[#9D4EDD] rounded-full opacity-10 blur-[120px] z-0"></div>
+
+        <div class="absolute bottom-[-20px] left-[-20px] w-64 h-64 glass-card opacity-20 z-10"></div>
+        <div class="absolute top-[10%] right-[15%] w-12 h-12 shape-triangle bg-[#FF006E] opacity-60 transform rotate-[135deg] z-10"></div>
+
+        <div class="relative z-20 w-full h-full flex flex-col items-center justify-center p-12">
+            
+            <div class="flex flex-col items-center transform -translate-y-8">
+                <span class="text-[#FF006E] font-black tracking-[0.5em] text-sm uppercase mb-4 opacity-90">Exclusive Esports Analysis</span>
+                <h1 class="text-[160px] leading-none font-black italic tracking-tighter uppercase title-gradient cyber-shadow-heavy select-none">
+                    ESPORT
+                </h1>
+                
+                <div class="flex items-center gap-8 mt-4">
+                    <div class="h-[3px] w-32 bg-gradient-to-r from-transparent to-[#9D4EDD]"></div>
+                    <h3 class="text-white text-2xl italic tracking-[0.4em] font-light uppercase">
+                        In-Depth Industry Report
+                    </h3>
+                    <div class="h-[3px] w-32 bg-gradient-to-l from-transparent to-[#9D4EDD]"></div>
+                </div>
+            </div>
+
+            <div class="absolute bottom-20 flex justify-between items-end w-full px-16">
+                
+                <div class="flex gap-4 items-start max-w-sm">
+                    <div class="w-[4px] h-16 bg-[#FF006E] rounded-full shadow-[0_0_15px_#FF006E]"></div>
+                    <p class="text-gray-400 text-sm leading-relaxed font-light">
+                        Exploring market dynamics, core technological advancements, and strategic forecasts for the global gaming ecosystem.
+                    </p>
+                </div>
+
+                <div class="glass-card px-10 py-6 flex flex-col gap-2 min-w-[350px] shadow-2xl">
+                    <div class="un-skew">
+                        <div class="flex items-center gap-3 mb-1">
+                            <span class="text-xs text-[#9D4EDD] font-bold uppercase tracking-widest">Presenter</span>
+                            <div class="h-[1px] flex-grow bg-white/20"></div>
+                        </div>
+                        <h4 class="text-white text-xl font-bold tracking-wider">Alex Sterling <span class="text-sm font-light text-gray-400 ml-2">Senior Analyst</span></h4>
+                        <p class="text-gray-400 text-sm italic mt-1 font-light tracking-wide">
+                            January 19, 2026 · Industry Research Center
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="absolute top-0 right-0 w-1 h-full bg-gradient-to-b from-[#9D4EDD] via-transparent to-[#FF006E] opacity-30"></div>
+    </div>
+
+</body>
+</html>

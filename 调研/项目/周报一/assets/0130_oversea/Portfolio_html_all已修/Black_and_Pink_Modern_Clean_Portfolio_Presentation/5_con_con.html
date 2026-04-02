@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Illustrations & Works - Portfolio</title>
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FDB8D9',
+                        dark: '#080808',
+                        accent: '#A68B60',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                        serif: ['"Times New Roman"', 'Times', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #080808;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            padding: 80px 100px; /* 增加边距使画面更开阔 */
+        }
+
+        /* 强制三张图尺寸完全一致 */
+        .img-uniform-box {
+            width: 100%;
+            height: 240px; 
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 2px;
+        }
+
+        .img-uniform-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .text-glow {
+            text-shadow: 0 0 20px rgba(253, 184, 217, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <header class="relative z-10 mb-16">
+            <div class="flex items-baseline gap-4">
+                <h1 class="text-white text-7xl font-black uppercase tracking-tighter opacity-90">
+                    Illustrations
+                </h1>
+                <div class="flex-grow h-[1px] bg-gradient-to-r from-primary/40 to-transparent translate-y-[-10px]"></div>
+            </div>
+            
+            <div class="flex items-center mt-2">
+                <span class="text-primary font-serif italic text-6xl tracking-wide">& Works</span>
+                <span class="ml-8 text-accent/60 text-xs tracking-[0.5em] font-light uppercase">Collection 2026</span>
+            </div>
+        </header>
+
+        <div class="grid grid-cols-3 gap-12 relative z-10">
+            
+            <div class="flex flex-col space-y-6">
+                <div class="img-uniform-box">
+                    <img src="https://images.unsplash.com/photo-1518998053901-5348d3969105?q=80&w=800" alt="Work 1">
+                </div>
+                <div class="border-l border-primary/40 pl-4">
+                    <p class="text-gray-400 text-gl leading-relaxed font-serif">
+                        Illustration is the space where I express <span class="text-white font-medium">emotion and detail</span>. It captures the unspoken nuances of a narrative.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex flex-col space-y-6">
+                <div class="img-uniform-box">
+                    <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=800" alt="Work 2">
+                </div>
+                <div class="text-center px-2">
+                    <p class="text-gray-300 text-gl leading-relaxed italic font-serif opacity-80">
+                        "Blending traditional sketching with digital techniques to bridge the gap between imagination and visual reality."
+                    </p>
+                    <div class="mt-4 flex justify-center gap-1">
+                        <div class="w-1 h-1 rounded-full bg-accent"></div>
+                        <div class="w-1 h-1 rounded-full bg-accent/40"></div>
+                        <div class="w-1 h-1 rounded-full bg-accent/10"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col space-y-6">
+                <div class="img-uniform-box">
+                    <img src="https://images.unsplash.com/photo-1594122230689-45899d9e6f69?q=80&w=800" alt="Work 3">
+                </div>
+                <div class="text-right border-r border-accent/40 pr-4">
+                    <p class="text-gray-400 text-gl leading-relaxed font-serif">
+                        Created for <span class="text-accent italic">editorial platforms</span> and brand identities, focusing on minimalism and conceptual depth.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="absolute -bottom-20 -left-20 w-[500px] h-[500px] bg-primary/5 blur-[100px] rounded-full pointer-events-none"></div>
+    </div>
+
+</body>
+</html>

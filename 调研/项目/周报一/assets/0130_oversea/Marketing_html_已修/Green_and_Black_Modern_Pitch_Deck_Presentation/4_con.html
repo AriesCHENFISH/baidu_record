@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Opportunity Keynote</title>
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-dark': '#1A1A1A',
+                        'brand-lime': '#D2E649',
+                        'brand-gray': '#9A9A9A',
+                        'brand-white': '#EFEFEF',
+                        'grid-line': '#333333',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Global Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Container Definition */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto; /* Centered */
+            position: relative;
+            background-color: #1A1A1A; /* Brand Dark */
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+            display: flex;
+            flex-direction: column;
+            padding: 60px 80px; /* Internal Spacing */
+        }
+
+        /* Typography Utility Overrides for Visual Impact */
+        .title-gradient {
+            /* Fallback for text gradient if needed, though pure color is requested */
+            color: #D2E649;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <div class="absolute top-12 left-16 flex items-center gap-4 z-20">
+            <div class="text-brand-lime text-4xl">
+                <i class="fa-solid fa-shapes"></i>
+            </div>
+            <div class="flex flex-col justify-center">
+                <h6 class="text-brand-white font-bold text-gl leading-tight tracking-widest uppercase m-0">FRADEL</h6>
+                <h6 class="text-brand-lime font-bold text-gl leading-tight tracking-widest uppercase m-0">AND SPIES</h6>
+            </div>
+        </div>
+
+        <div class="flex-1 grid grid-cols-12 gap-12 items-start h-full pt-12">
+            
+            <div class="col-span-6 flex flex-col h-full relative">
+                
+                <h1 class="text-brand-lime text-[84px] font-bold leading-[0.85] tracking-tight mb-8 uppercase">
+                    Market<br>Opportunity
+                </h1>
+
+                <p class="text-brand-gray text-lg leading-relaxed mb-12 max-w-[90%]">
+                    The demand for accessible and affordable wellness solutions is expanding quickly as more people prioritize health, especially in urban environments.
+                </p>
+
+                <div class="w-24 h-2 bg-brand-lime mb-6"></div>
+
+                <div class="mt-auto">
+                    <h5 class="text-brand-white font-bold text-xl leading-snug uppercase">
+                        The global wellness market is valued at over <span class="text-brand-lime">$4.5 Trillion</span>, with digital wellness services growing by <span class="text-brand-lime">8%</span> annually.
+                    </h5>
+                </div>
+            </div>
+
+            <div class="col-span-6 flex flex-col justify-center items-center h-full pt-10">
+                <div id="chart-container" class="w-full h-[450px]"></div>
+                </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var chartDom = document.getElementById('chart-container');
+            var myChart = echarts.init(chartDom);
+            var option;
+
+            option = {
+                // Remove default background to blend with page
+                backgroundColor: 'transparent',
+                grid: {
+                    top: '10%',
+                    right: '5%',
+                    bottom: '10%',
+                    left: '10%',
+                    containLabel: true
+                },
+                xAxis: {
+                    type: 'category',
+                    data: ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'],
+                    axisLine: {
+                        show: true,
+                        lineStyle: {
+                            color: '#333333' // Subtle axis line
+                        }
+                    },
+                    axisTick: {
+                        show: false
+                    },
+                    axisLabel: {
+                        color: '#9A9A9A', // Secondary Text Color
+                        fontSize: 14,
+                        fontFamily: 'Noto Sans SC',
+                        margin: 20
+                    }
+                },
+                yAxis: {
+                    type: 'value',
+                    min: 0,
+                    max: 40,
+                    interval: 10,
+                    splitLine: {
+                        show: true,
+                        lineStyle: {
+                            color: '#333333', // Chart Grid Color
+                            type: 'solid',
+                            width: 1
+                        }
+                    },
+                    axisLabel: {
+                        color: '#9A9A9A', // Secondary Text Color
+                        fontSize: 14,
+                        fontFamily: 'Noto Sans SC'
+                    }
+                },
+                series: [
+                    {
+                        data: [18, 26, 23, 35, 36], // Data extracted from image
+                        type: 'line',
+                        smooth: false, // Straight lines as per reference
+                        symbol: 'circle',
+                        symbolSize: 8,
+                        lineStyle: {
+                            color: '#D2E649', // High-Vis Lime
+                            width: 3
+                        },
+                        itemStyle: {
+                            color: '#D2E649',
+                            borderColor: '#1A1A1A',
+                            borderWidth: 2
+                        },
+                        areaStyle: {
+                            // Optional: Adding a very subtle gradient fill for a more "modern" look
+                            // strictly following linear-gradient syntax logic provided in prompt
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                                {
+                                    offset: 0,
+                                    color: 'rgba(210, 230, 73, 0.1)' // Lime with opacity
+                                },
+                                {
+                                    offset: 1,
+                                    color: 'rgba(210, 230, 73, 0)'
+                                }
+                            ])
+                        }
+                    }
+                ]
+            };
+
+            option && myChart.setOption(option);
+        });
+    </script>
+
+</body>
+</html>

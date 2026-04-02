@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contents - Liceria & Co.</title>
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #2A4029;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* 旋转动画 */
+        @keyframes rotate-text {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-rotate {
+            animation: rotate-text 20s linear infinite;
+        }
+
+        /* 玻璃拟态卡片 */
+        .glass-card {
+            background-color: rgba(97, 115, 96, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            background-color: rgba(217, 70, 62, 0.15);
+            border-left: 4px solid #D9463E;
+            transform: translateX(10px);
+        }
+
+        /* 条纹装饰 */
+        .striped-bar {
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 4px,
+                rgba(140, 155, 138, 0.3) 4px,
+                rgba(140, 155, 138, 0.3) 8px
+            );
+        }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryBg: '#2A4029',
+                        contentBox: '#617360',
+                        textMain: '#FFFFFF',
+                        textBody: '#E0E6DF',
+                        lineColor: '#8C9B8A',
+                        accentRed: '#D9463E',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <!-- 1. 背景层 -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1529900748604-07564a03e7a6?q=80&w=2500&auto=format&fit=crop" 
+                 class="w-full h-full object-cover opacity-20 mix-blend-overlay">
+            <!-- 径向暗角 -->
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#1a2919_100%)] opacity-60"></div>
+        </div>
+
+        <!-- 2. 装饰几何线条 (Pitch HUD) -->
+        <div class="absolute inset-0 z-10 pointer-events-none">
+            <div class="absolute top-[50%] left-[-10%] w-[120%] h-[1px] bg-lineColor/20 rotate-[-5deg]"></div>
+            <div class="absolute top-[10%] right-[10%] w-[400px] h-[400px] border border-lineColor/10 rounded-full"></div>
+            <!-- 十字准星 -->
+            <div class="absolute bottom-20 left-20 w-10 h-10 border-l border-b border-accentRed/50"></div>
+        </div>
+
+        <!-- 3. [统一品牌Logo] Header Area -->
+        <div class="absolute top-10 left-12 z-30 flex items-start gap-4 transform scale-90">
+            <div class="relative w-24 h-24 flex items-center justify-center">
+                <svg class="absolute w-full h-full animate-rotate" viewBox="0 0 100 100">
+                    <defs>
+                        <path id="indexCirclePath" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" />
+                    </defs>
+                    <text fill="#FFFFFF" font-size="7.2" font-weight="600" letter-spacing="2.3" class="opacity-70 uppercase">
+                        <textPath xlink:href="#indexCirclePath">• LICERIA SPORTS & CO • PRESENTATION INDEX •</textPath>
+                    </text>
+                </svg>
+                <div class="w-12 h-12 bg-accentRed rounded-full border border-white/20 flex items-center justify-center shadow-lg">
+                    <i class="fa-solid fa-list-ul text-white text-lg"></i>
+                </div>
+            </div>
+            <div class="mt-4">
+                <h6 class="text-textMain text-lg font-bold tracking-[0.25em] leading-none uppercase">Liceria</h6>
+                <p class="text-lineColor text-[9px] tracking-[0.4em] font-light mt-1.5 uppercase">Strategic Contents Table</p>
+            </div>
+        </div>
+
+        <!-- 4. 主标题区 -->
+        <div class="absolute top-12 right-16 z-20 text-right">
+            <h1 class="text-textMain text-7xl font-black uppercase tracking-tighter italic opacity-90">
+                Contents
+            </h1>
+            <div class="flex items-center justify-end gap-3 mt-2">
+                <div class="h-[2px] w-12 bg-accentRed"></div>
+                <span class="text-textBody text-xs tracking-[0.5em] uppercase opacity-60">Agenda Roadmap</span>
+            </div>
+        </div>
+
+        <!-- 5. 目录列表 (8个标题) -->
+        <div class="relative z-20 w-full h-full flex items-center px-16 pt-24">
+            
+            <div class="grid grid-cols-2 gap-x-12 gap-y-4 w-full">
+                
+                <!-- 01 Introduction -->
+                <div class="glass-card flex items-center p-5 rounded-r-lg group cursor-pointer">
+                    <span class="text-accentRed font-black text-2xl w-12 tracking-tighter">01</span>
+                    <div class="h-8 w-[1px] bg-white/10 mx-4"></div>
+                    <h3 class="text-textMain text-xl font-bold tracking-wide uppercase group-hover:text-accentRed transition-colors">Introduction</h3>
+                </div>
+
+                <!-- 05 Famous Players -->
+                <div class="glass-card flex items-center p-5 rounded-r-lg group cursor-pointer">
+                    <span class="text-accentRed font-black text-2xl w-12 tracking-tighter">05</span>
+                    <div class="h-8 w-[1px] bg-white/10 mx-4"></div>
+                    <h3 class="text-textMain text-xl font-bold tracking-wide uppercase group-hover:text-accentRed transition-colors">Famous Players</h3>
+                </div>
+
+                <!-- 02 History -->
+                <div class="glass-card flex items-center p-5 rounded-r-lg group cursor-pointer">
+                    <span class="text-accentRed font-black text-2xl w-12 tracking-tighter">02</span>
+                    <div class="h-8 w-[1px] bg-white/10 mx-4"></div>
+                    <h3 class="text-textMain text-xl font-bold tracking-wide uppercase group-hover:text-accentRed transition-colors">History of Football</h3>
+                </div>
+
+                <!-- 06 Popularity -->
+                <div class="glass-card flex items-center p-5 rounded-r-lg group cursor-pointer">
+                    <span class="text-accentRed font-black text-2xl w-12 tracking-tighter">06</span>
+                    <div class="h-8 w-[1px] bg-white/10 mx-4"></div>
+                    <h3 class="text-textMain text-xl font-bold tracking-wide uppercase group-hover:text-accentRed transition-colors">Global Popularity</h3>
+                </div>
+
+                <!-- 03 Basic Rules -->
+                <div class="glass-card flex items-center p-5 rounded-r-lg group cursor-pointer">
+                    <span class="text-accentRed font-black text-2xl w-12 tracking-tighter">03</span>
+                    <div class="h-8 w-[1px] bg-white/10 mx-4"></div>
+                    <h3 class="text-textMain text-xl font-bold tracking-wide uppercase group-hover:text-accentRed transition-colors">Basic Rules</h3>
+                </div>
+
+                <!-- 07 Women's Football -->
+                <div class="glass-card flex items-center p-5 rounded-r-lg group cursor-pointer">
+                    <span class="text-accentRed font-black text-2xl w-12 tracking-tighter">07</span>
+                    <div class="h-8 w-[1px] bg-white/10 mx-4"></div>
+                    <h3 class="text-textMain text-xl font-bold tracking-wide uppercase group-hover:text-accentRed transition-colors">Women's Football</h3>
+                </div>
+
+                <!-- 04 Tactics -->
+                <div class="glass-card flex items-center p-5 rounded-r-lg group cursor-pointer">
+                    <span class="text-accentRed font-black text-2xl w-12 tracking-tighter">04</span>
+                    <div class="h-8 w-[1px] bg-white/10 mx-4"></div>
+                    <h3 class="text-textMain text-xl font-bold tracking-wide uppercase group-hover:text-accentRed transition-colors">Tactics & Formations</h3>
+                </div>
+
+                <!-- 08 The Future -->
+                <div class="glass-card flex items-center p-5 rounded-r-lg group cursor-pointer">
+                    <span class="text-accentRed font-black text-2xl w-12 tracking-tighter">08</span>
+                    <div class="h-8 w-[1px] bg-white/10 mx-4"></div>
+                    <h3 class="text-textMain text-xl font-bold tracking-wide uppercase group-hover:text-accentRed transition-colors">The Future of Football</h3>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- 6. 底部 HUD 数据栏 -->
+        <div class="absolute bottom-10 left-0 w-full px-12 flex justify-between items-end z-30">
+            
+            <div class="flex flex-col gap-2">
+                <div class="flex items-center gap-3">
+                    <div class="w-32 h-1.5 bg-white/10 rounded-full overflow-hidden">
+                        <div class="w-1/4 h-full bg-accentRed"></div>
+                    </div>
+                    <span class="text-lineColor text-[10px] tracking-[0.3em] uppercase">System Indexing...</span>
+                </div>
+                <p class="text-textBody/40 text-[9px] font-mono">DATA_STREAM_CONNECTED // SECTOR_8_TOTAL</p>
+            </div>
+
+            <div class="flex items-center gap-8">
+                <!-- 装饰线条 -->
+                <div class="flex gap-1">
+                    <div class="w-1 h-3 bg-accentRed"></div>
+                    <div class="w-1 h-3 bg-white/20"></div>
+                    <div class="w-1 h-3 bg-white/20"></div>
+                </div>
+                <!-- 页码标记 -->
+                <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center cursor-pointer group hover:bg-white transition-all">
+                    <i class="fa-solid fa-chevron-right text-textMain group-hover:text-primaryBg text-sm"></i>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 装饰背景大字 -->
+        <div class="absolute -bottom-10 right-10 text-white/5 text-[260px] font-black pointer-events-none italic select-none">
+            INDEX
+        </div>
+
+    </div>
+
+</body>
+</html>

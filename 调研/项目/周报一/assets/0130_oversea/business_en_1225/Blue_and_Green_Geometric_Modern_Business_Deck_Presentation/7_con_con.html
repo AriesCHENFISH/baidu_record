@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem and Solution - Business Deck</title>
+    
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts via Domestic Mirror (Noto Sans SC) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <!-- Tailwind Config for Custom Colors/Fonts -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#051532',      // Deep Midnight Blue
+                        accent: '#F2F2F2',       // Brand Accent White
+                        bodyText: '#E6E8EB',     // Off-white for text
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container Definition */
+        .page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #051532; /* Primary Background */
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Utility for geometric decoration */
+        .decoration-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0));
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div class="page_container flex">
+
+        <!-- Decorative Background Elements -->
+        <div class="decoration-circle" style="width: 600px; height: 600px; top: -100px; left: -100px;"></div>
+
+        <!-- Left Column: Content (approx 60%) -->
+        <div class="w-[60%] h-full flex flex-col justify-between p-16 relative z-10">
+            
+            <!-- Header: Meta Info -->
+            <header class="flex items-center space-x-4 border-b border-white/10 pb-6 w-fit">
+                <span class="text-accent font-bold tracking-widest text-sm uppercase">Business Deck</span>
+                <span class="text-accent/50 text-sm">|</span>
+                <span class="text-accent font-light tracking-widest text-sm">2025</span>
+            </header>
+
+            <!-- Main Content Area -->
+            <main class="flex-1 flex flex-col justify-center pr-12">
+                <!-- Decorative Icon for visual hierarchy -->
+                <div class="mb-6">
+                    <div class="w-12 h-1 bg-white mb-2 rounded-full"></div>
+                </div>
+
+                <!-- Big Title -->
+                <h1 class="text-white text-7xl font-bold leading-tight tracking-tight mb-8">
+                    Problem <br>
+                    <span class="text-white/90">and Solution</span>
+                </h1>
+
+                <!-- Body Text -->
+                <!-- Constraints: Readable width, high contrast, proper line-height -->
+                <div class="max-w-xl">
+                    <p class="text-bodyText text-xl font-light leading-relaxed">
+                        In this section, explain the problems your business solves. Provide clear recommendations and solutions to demonstrate your value.
+                    </p>
+                </div>
+
+                <!-- Subtle Interaction hint/decoration (No actual interaction) -->
+                <div class="mt-10 flex items-center space-x-3 text-white/40">
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                    <span class="text-xs uppercase tracking-widest">Key Insights</span>
+                </div>
+            </main>
+
+            <!-- Footer decorative element -->
+            <footer class="text-[#3B82F6] text-xs tracking-wider">
+                Strategic Overview &middot; Chapter 03
+            </footer>
+        </div>
+
+        <!-- Right Column: Visuals (approx 40%) -->
+        <!-- Design Choice: Floating Card effect with rounded corners to modernize the "split screen" -->
+        <div class="w-[40%] h-full relative pl-0 py-8 pr-8">
+            <div class="w-full h-full rounded-[40px] overflow-hidden relative shadow-2xl">
+                
+                <!-- Image Overlay for text readability/mood matching -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10"></div>
+                
+                <!-- Main Visual -->
+                <!-- Using a high-quality meeting/collaboration image to represent "Problem Solving" -->
+                <!-- The image combines the "Professional Individual" and "Meeting" context from the original slide -->
+                <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1632&auto=format&fit=crop" 
+                     alt="Business team discussing solutions" 
+                     class="w-full h-full object-cover">
+                <!-- 512*720 -->
+
+                <!-- Floating Badge (Aesthetic Touch) -->
+                <div class="absolute bottom-10 left-8 z-20">
+                    <div class="bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-2xl flex items-center gap-4">
+                        <div class="w-10 h-10 bg-[#3B82F6] rounded-full flex items-center justify-center text-primary">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <div>
+                            <span class="block text-white text-sm font-bold">Solution Found</span>
+                            <span class="block text-white/70 text-xs">High Efficiency</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

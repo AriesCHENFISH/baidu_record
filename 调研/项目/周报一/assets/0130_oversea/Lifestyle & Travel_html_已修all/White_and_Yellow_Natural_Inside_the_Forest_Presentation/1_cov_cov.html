@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inside the Forest - Enhanced Cover</title>
+
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgPrimary: '#0D110C',
+                        textPrimary: '#F2F2F2',
+                        accent: '#EAD97D',
+                        secondary: '#A6AFA3',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                        serif: ['"Playfair Display"', '"Times New Roman"', 'serif'],
+                    },
+                    backgroundImage: {
+                        'noise': "url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22 opacity=%220.05%22/%3E%3C/svg%3E')",
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative;
+            background-color: #0D110C; overflow: hidden;
+        }
+        .text-glow { text-shadow: 0 0 30px rgba(234, 217, 125, 0.4); }
+        .title-serif { font-family: 'Times New Roman', serif; }
+        
+        /* 新增：装饰性呼吸线条动画 */
+        @keyframes pulse-width {
+            0%, 100% { width: 80px; opacity: 0.5; }
+            50% { width: 120px; opacity: 1; }
+        }
+        .breathing-line {
+            animation: pulse-width 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?q=80&w=1280&auto=format&fit=crop" 
+                 alt="Deep Mossy Forest Background" class="w-full h-full object-cover grayscale-[20%]">
+        </div>
+
+        <div class="absolute inset-0 bg-gradient-to-b from-[#0D110C]/80 via-[#0D110C]/40 to-[#0D110C]/90 z-10"></div>
+        <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-radial-gradient from-accent/20 to-transparent blur-3xl z-10 pointer-events-none"></div>
+        <div class="absolute inset-0 bg-noise mix-blend-overlay opacity-30 z-20 pointer-events-none"></div>
+
+
+        <div class="relative z-30 w-full h-full flex flex-col justify-between p-16">
+
+            <header class="flex items-center gap-3 opacity-80">
+                <div class="text-accent text-lg"><i class="fa-solid fa-leaf"></i></div>
+                <h6 class="text-textPrimary text-xs font-medium tracking-[0.3em] uppercase">Giggling Platypus Co.</h6>
+            </header>
+
+            <main class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none select-none">
+                <p class="text-accent text-xs tracking-[0.4em] uppercase mb-4 opacity-80">An Immersive Journey</p>
+                
+                <div class="flex flex-row items-baseline gap-4">
+                    <h1 class="title-serif text-textPrimary text-7xl font-bold tracking-tight drop-shadow-2xl">
+                        Inside the
+                    </h1>
+                    <h1 class="title-serif italic text-accent text-9xl font-bold text-glow drop-shadow-2xl translate-y-2">
+                        Forest.
+                    </h1>
+                </div>
+                <div class="h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent mt-8 breathing-line"></div>
+            </main>
+
+            <footer class="flex items-center justify-end gap-5 mt-auto">
+                <div class="w-12 h-12 rounded-full bg-accent flex items-center justify-center shadow-[0_0_15px_rgba(234,217,125,0.5)] cursor-pointer hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-play text-bgPrimary ml-1 text-sm"></i>
+                </div>
+                <div class="text-left">
+                    <p class="text-textPrimary text-sm font-light tracking-wide leading-tight">Begin Exploration</p>
+                    <p class="text-secondary text-xs font-light tracking-wider leading-tight">Duration: 15 mins</p>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, height=720, initial-scale=1.0">
+    <title>Green House Facilities - Giggling Platypus Co.</title>
+    
+    <!-- Google Fonts: Noto Sans SC (Domestic Mirror) & Inter -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- Custom Configuration to match Design System -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgPrimary: '#151B22',      // Deep Blue/Black
+                        bgGlobal: '#6E777D',       // Global Backdrop
+                        textWhite: '#FFFFFF',      // Primary Text
+                        textGray: '#C9D1D9',       // Secondary Text
+                        bgTab: '#4C555C',          // Tab Background
+                        bgOverlay: '#0F151A',      // Shadow/Overlay
+                        accentGreen: '#4A6F52',    // Nature Green
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans SC', 'sans-serif'],
+                    },
+                    spacing: {
+                        '1280': '1280px',
+                        '720': '720px',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
+
+
+        /* Page Container - Strict Dimensions */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #6E777D; /* Global Backdrop */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Gradient Utilities for Tailwind limitation in strict mode */
+        .gradient-fade-bottom {
+            background: linear-gradient(180deg, transparent 0%, #151B22 90%, #151B22 100%);
+        }
+
+        /* Custom Tab Shapes using CSS Borders/Radius */
+        .tab-shape {
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* Clean edges */
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <!-- Main Slide Card -->
+        <!-- Using a slightly smaller card to show the global background context, creating depth -->
+        <div class="w-[96%] h-[92%] bg-bgPrimary rounded-[32px] shadow-2xl relative flex flex-col overflow-hidden">
+            
+            <!-- Top Navigation / Tabs Area -->
+            <!-- Positioned absolutely to sit on top of images like the reference -->
+            <div class="absolute top-0 right-[40px] z-20 flex flex-row items-end">
+                <!-- Tab 1: Brand -->
+                <div class="bg-bgTab/90 backdrop-blur-sm px-8 py-3 rounded-b-xl mr-2 border-t-[3px] border-accentGreen">
+                    <h4 class="text-textWhite font-semibold text-sm tracking-wide">
+                        <i class="fa-solid fa-leaf mr-2 text-accentGreen"></i>Giggling Platypus Co.
+                    </h4>
+                </div>
+                <!-- Tab 2: Current Section -->
+                <div class="bg-bgPrimary px-8 py-4 rounded-b-xl shadow-lg translate-y-[2px]">
+                    <h4 class="text-textGray font-medium text-sm tracking-wide">
+                        Facilities
+                    </h4>
+                </div>
+            </div>
+
+            <!-- Visual Section: Top Half -->
+            <div class="relative w-full h-[55%] flex flex-row">
+                <!-- Image 1: Greenhouse Interior -->
+                <div class="w-1/2 h-full relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?q=80&w=1000&auto=format&fit=crop" 
+                         alt="Greenhouse Aisle" 
+                         class="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-700 ease-out">
+                    <!-- 640*400 -->
+                </div>
+
+                <!-- Image 2: Lush Plants Detail -->
+                <div class="w-1/2 h-full relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?q=80&w=1000&auto=format&fit=crop" 
+                         alt="Tropical Plants" 
+                         class="w-full h-full object-cover opacity-90">
+                    <!-- 640*400 -->
+                </div>
+
+                <!-- Gradient Mask: Merges images into the dark background below -->
+                <div class="absolute bottom-0 left-0 w-full h-[60%] gradient-fade-bottom z-10"></div>
+            </div>
+
+            <!-- Content Section: Bottom Half -->
+            <!-- Flex container for content layout -->
+            <div class="relative w-full h-[45%] flex flex-row px-16 pt-4 pb-12 z-20">
+                
+                <!-- Left Column: Title -->
+                <div class="w-[45%] flex flex-col justify-start pr-8">
+                    <div class="w-12 h-1 bg-accentGreen mb-6 rounded-full"></div>
+                    <h1 class="text-textWhite text-[64px] font-bold leading-[1.1] tracking-tight">
+                        Green House<br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-textGray to-textWhite">Facilities</span>
+                    </h1>
+                </div>
+
+                <!-- Right Column: Text & Footer -->
+                <div class="w-[55%] flex flex-col justify-between pl-4 pt-4">
+                    
+                    <!-- Descriptive Paragraph -->
+                    <div class="flex flex-col gap-4">
+                        <p class="text-textGray text-lg leading-relaxed font-light">
+                            A presentation typically refers to the act of demonstrating or explaining something to an audience, often using visual aids such as slides, charts, graphs, or multimedia elements.
+                        </p>
+                        <p class="text-textGray text-lg leading-relaxed font-light">
+                            It can take various forms, including lectures, speeches, demonstrations, or discussions, and is commonly used in educational, professional, or business settings to convey information, persuade, or engage an audience effectively.
+                        </p>
+                    </div>
+
+                    <!-- Footer Navigation -->
+                    <div class="flex flex-row justify-end items-center mt-auto">
+                        <div class="group flex items-center gap-3 cursor-default">
+                            <span class="text-textWhite text-xl font-medium tracking-wide group-hover:text-accentGreen transition-colors duration-300">Next</span>
+                            <div class="w-10 h-10 rounded-full border border-textGray/30 flex items-center justify-center group-hover:bg-accentGreen group-hover:border-accentGreen transition-all duration-300">
+                                <i class="fa-solid fa-arrow-right text-textWhite text-sm"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+            <!-- Decorative Background Element (Subtle Geometry) -->
+            <div class="absolute bottom-[-100px] left-[-100px] w-[400px] h-[400px] rounded-full bg-accentGreen opacity-[0.03] blur-3xl pointer-events-none"></div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

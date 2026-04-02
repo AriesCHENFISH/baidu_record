@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Technology Introduction</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts via Baidu CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .font-sans { font-family: 'Noto Sans SC', sans-serif; }
+        ::-webkit-scrollbar { display: none; }
+
+        /* 霓虹发光文字 */
+        .neon-text {
+            text-shadow: 0 0 20px rgba(207, 255, 94, 0.4), 0 0 40px rgba(207, 255, 94, 0.1);
+        }
+
+        /* Logo 旋转动效 */
+        @keyframes slow-rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .logo-gear {
+            animation: slow-rotate 12s linear infinite;
+        }
+
+        /* 呼吸灯效果 */
+        .status-dot {
+            box-shadow: 0 0 8px #CFFF5E;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        /* 渐变边框 */
+        .glass-nav {
+            background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.03));
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Page Container -->
+    <div id="page_container" class="relative w-[1280px] h-[720px] mx-auto bg-[#050505] overflow-hidden font-sans text-white">
+        
+        <!-- Background Ambient Glow -->
+        <div class="absolute top-[-100px] left-[200px] w-[600px] h-[400px] rounded-full opacity-20 pointer-events-none" style="background: linear-gradient(120deg, #1a2e05, transparent);"></div>
+
+        <!-- HEADER SECTION -->
+        <header class="relative z-50 px-16 pt-10">
+            <nav class="flex justify-between items-center glass-nav rounded-2xl px-10 py-5">
+                
+                <!-- 1. Brand Logo Area -->
+                <div class="flex items-center gap-4 group cursor-pointer">
+                    <div class="relative w-10 h-10 flex items-center justify-center">
+                        <!-- Logo 装饰外圈 -->
+                        <div class="absolute inset-0 border border-[#CFFF5E]/40 rounded-full scale-110 group-hover:scale-125 transition-transform duration-500"></div>
+                        <!-- Logo 图标 -->
+                        <div class="text-[#CFFF5E] text-xl relative z-10 logo-gear">
+                            <i class="fa-solid fa-compass-drafting"></i>
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-xl font-black tracking-tighter leading-none italic uppercase">
+                            Arowwai<span class="text-[#CFFF5E]">.</span>
+                        </span>
+                        <span class="text-[9px] tracking-[0.4em] uppercase opacity-40 font-bold">Green Dynamics</span>
+                    </div>
+                </div>
+
+                <!-- 2. Single Navigation Trigger (合并后的唯一链接) -->
+                <div class="flex items-center gap-3 group cursor-pointer px-6 py-2 rounded-full hover:bg-white/5 transition-all">
+                    <!-- 动态修饰元素 -->
+                    <div class="flex gap-1">
+                        <div class="w-1 h-1 bg-[#CFFF5E] rounded-full group-hover:scale-150 transition-transform"></div>
+                        <div class="w-1 h-1 bg-[#CFFF5E]/50 rounded-full group-hover:scale-125 transition-transform delay-75"></div>
+                    </div>
+                    <span class="text-xs font-bold uppercase tracking-[0.4em] text-gray-200 group-hover:text-white transition-colors">
+                        Explore
+                    </span>
+                    <i class="fa-solid fa-plus text-[10px] text-[#CFFF5E] group-hover:rotate-90 transition-transform duration-300"></i>
+                </div>
+
+                <!-- 3. Action Area -->
+                <div class="flex items-center gap-10">
+                    <!-- System Status -->
+                    <div class="flex items-center gap-3">
+                        <div class="status-dot w-1.5 h-1.5 bg-[#CFFF5E] rounded-full"></div>
+                        <span class="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Node: Active</span>
+                    </div>
+                    
+                    <!-- Primary Button -->
+                    <button class="bg-[#CFFF5E] text-black px-8 py-2.5 rounded-full font-black text-[11px] uppercase tracking-widest hover:bg-white hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] transition-all">
+                        Connect
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <!-- MAIN CONTENT -->
+        <div class="relative z-10 grid grid-cols-12 gap-8 px-16 pt-8 h-[550px]">
+            
+            <!-- Left Column: Content -->
+            <div class="col-span-8 flex flex-col justify-between pb-10">
+                <div class="mt-4">
+                    <div class="flex items-center gap-4 mb-4">
+                        <span class="text-[11px] font-bold tracking-[0.5em] text-[#CFFF5E] uppercase bg-[#CFFF5E]/10 px-3 py-1 rounded">Industry 4.0</span>
+                    </div>
+                    <h2 class="text-[120px] leading-[0.8] font-black tracking-tighter text-[#E8FFB8] neon-text uppercase">
+                        Future<br/>Scope
+                    </h2>
+                </div>
+
+                <!-- Cards Wrapper -->
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="bg-[#CFFF5E] p-8 rounded-[40px] text-[#050505] shadow-2xl">
+                        <h3 class="text-2xl font-black mb-3 italic">Concept.</h3>
+                        <p class="text-[13px] leading-relaxed font-medium opacity-90">
+                            Green technology refers to innovations that aim to minimize environmental impact and promote global sustainability.
+                        </p>
+                    </div>
+
+                    <div class="bg-white/5 border border-white/10 p-8 rounded-[40px] backdrop-blur-sm relative overflow-hidden group">
+                        <div class="absolute -right-4 -top-4 w-24 h-24 bg-[#CFFF5E]/10 rounded-full blur-2xl group-hover:bg-[#CFFF5E]/20 transition-colors"></div>
+                        <h3 class="text-2xl font-black mb-3 italic">Vision.</h3>
+                        <p class="text-[13px] leading-relaxed text-gray-400">
+                            Ensuring a healthier planet for future generations by adopting eco-friendly solutions and renewable resources.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Visual -->
+            <div class="col-span-4 pb-10 pl-2">
+                <div class="relative w-full h-full rounded-[48px] overflow-hidden group border border-white/5">
+                    <img 
+                        src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1280&auto=format&fit=crop" 
+                        class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 grayscale-[50%] group-hover:grayscale-0"
+                    >
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+                    
+                    <!-- Image Label -->
+                    <div class="absolute bottom-8 left-8">
+                        <div class="w-10 h-1 bg-[#CFFF5E] mb-4"></div>
+                        <p class="text-sm font-bold tracking-widest uppercase">Solar Grid Alpha</p>
+                        <p class="text-[10px] text-gray-400 tracking-widest uppercase">Location: 35.6895° N</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

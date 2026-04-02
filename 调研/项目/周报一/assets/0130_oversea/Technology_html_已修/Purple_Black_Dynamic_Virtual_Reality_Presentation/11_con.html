@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Shodwe - Market Analytics</title>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        bgPrimary: '#050505',
+                        textPrimary: '#FFFFFF',
+                        textSecondary: '#B0B0B0',
+                        accentStart: '#4A3AFF',
+                        accentEnd: '#C471ED',
+                        highlight: '#BCA6F6',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #050505;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #4A3AFF, #C471ED);
+        }
+        
+        /* Fixed Gradient Title Utility */
+        .text-gradient {
+            background: linear-gradient(to right, #4A3AFF, #C471ED, #BCA6F6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        /* SVG Chart Animation/Style */
+        .pie-slice-1 { stroke: #4A3AFF; stroke-dasharray: 65 100; }
+        .pie-slice-2 { stroke: #C471ED; stroke-dasharray: 20 100; stroke-dashoffset: -65; }
+        .pie-slice-3 { stroke: #BCA6F6; stroke-dasharray: 15 100; stroke-dashoffset: -85; }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <header class="w-full h-24 px-12 flex justify-between items-center z-50 relative border-b border-white/5 bg-white/[0.02] backdrop-blur-sm">
+            <div class="flex items-center gap-4">
+                <div class="w-1.5 h-10 gradient-bg rounded-full"></div>
+                <div class="flex flex-col">
+                    <h4 class="text-white font-black tracking-[0.25em] text-lg uppercase leading-none">Studio Shodwe</h4>
+                    <span class="text-[10px] text-highlight font-medium tracking-[0.4em] uppercase mt-1 opacity-80">Global Market Insight</span>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-10">
+                <div class="flex gap-6 text-gray-400 text-base">
+                    <a href="#" class="hover:text-highlight transition-all duration-300 transform hover:-translate-y-1"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="hover:text-highlight transition-all duration-300 transform hover:-translate-y-1"><i class="fa-brands fa-behance"></i></a>
+                    <a href="#" class="hover:text-highlight transition-all duration-300 transform hover:-translate-y-1"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+                <div class="h-6 w-[1px] bg-white/10"></div>
+                <div class="relative group">
+                    <div class="absolute -inset-0.5 gradient-bg rounded-sm blur opacity-30 group-hover:opacity-100 transition duration-500"></div>
+                    <button class="relative px-8 py-3 bg-bgPrimary border border-white/10 rounded-sm flex items-center gap-3 group-hover:border-transparent transition-all duration-300">
+                        <span class="text-white text-xs font-bold tracking-widest uppercase">Full Report</span>
+                        <i class="fa-solid fa-file-contract text-[10px] text-highlight"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <div class="flex-1 grid grid-cols-12 px-16 items-center gap-16 relative z-10">
+            
+            <div class="col-span-5 flex justify-center relative">
+                <svg viewBox="0 0 42 42" class="w-80 h-80 transform -rotate-90 filter drop-shadow-[0_0_30px_rgba(74,58,255,0.2)]">
+                    <circle cx="21" cy="21" r="15.915" fill="transparent" stroke="rgba(255,255,255,0.05)" stroke-width="6"></circle>
+                    <circle cx="21" cy="21" r="15.915" fill="transparent" class="pie-slice-1" stroke-width="6" stroke-linecap="round"></circle>
+                    <circle cx="21" cy="21" r="15.915" fill="transparent" class="pie-slice-2" stroke-width="6" stroke-linecap="round"></circle>
+                    <circle cx="21" cy="21" r="15.915" fill="transparent" class="pie-slice-3" stroke-width="6" stroke-linecap="round"></circle>
+                </svg>
+                
+                <div class="absolute inset-0 flex flex-col items-center justify-center">
+                    <h2 class="text-white text-5xl font-black italic tracking-tighter">2025</h2>
+                    <p class="text-highlight text-[10px] font-bold tracking-[0.3em] uppercase mt-1">Market Forecast</p>
+                </div>
+
+                <div class="absolute inset-0 bg-accentStart/20 blur-[100px] -z-10 rounded-full"></div>
+            </div>
+
+            <div class="col-span-7 flex flex-col justify-center">
+                <div class="inline-flex items-center gap-3 mb-6">
+                    <span class="w-10 h-[2px] bg-highlight"></span>
+                    <h6 class="text-highlight text-xs font-bold uppercase tracking-[0.4em]">Strategic Analytics</h6>
+                </div>
+                
+                <h1 class="text-7xl font-black text-white leading-none mb-10 tracking-tighter uppercase italic">
+                    Market <br> <span class="text-gradient">Dominance</span>
+                </h1>
+                
+                <div class="space-y-10">
+                    <div class="flex items-start gap-6 group">
+                        <div class="w-1 h-14 bg-accentStart mt-1 group-hover:h-16 transition-all duration-300"></div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-4 mb-2">
+                                <h4 class="text-white text-2xl font-black italic">65%</h4>
+                                <span class="text-white/40 text-sm font-bold uppercase tracking-[0.2em]">Core Infrastructure</span>
+                            </div>
+                            <p class="text-textSecondary text-sm leading-relaxed max-w-lg opacity-80 group-hover:opacity-100 transition-opacity">
+                                Primary allocation towards maintaining low-latency global neural nodes and API stability for enterprise clients.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-6 group">
+                        <div class="w-1 h-14 bg-accentEnd mt-1 group-hover:h-16 transition-all duration-300"></div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-4 mb-2">
+                                <h4 class="text-white text-2xl font-black italic">20%</h4>
+                                <span class="text-white/40 text-sm font-bold uppercase tracking-[0.2em]">Future Research</span>
+                            </div>
+                            <p class="text-textSecondary text-sm leading-relaxed max-w-lg opacity-80 group-hover:opacity-100 transition-opacity">
+                                Dedicated resources for quantum haptics and advanced spatial optics research currently in stealth mode.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-6 group">
+                        <div class="w-1 h-14 bg-highlight mt-1 group-hover:h-16 transition-all duration-300"></div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-4 mb-2">
+                                <h4 class="text-white text-2xl font-black italic">15%</h4>
+                                <span class="text-white/40 text-sm font-bold uppercase tracking-[0.2em]">Global Expansion</span>
+                            </div>
+                            <p class="text-textSecondary text-sm leading-relaxed max-w-lg opacity-80 group-hover:opacity-100 transition-opacity">
+                                Strategic marketing and local partnership development across emerging digital markets in Europe and Asia.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-[-100px] left-[-5%] w-[500px] h-[500px] bg-accentStart rounded-full blur-[150px] opacity-[0.05] pointer-events-none"></div>
+    </div>
+
+</body>
+</html>

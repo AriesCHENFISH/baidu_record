@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear Energy - Premium Keynote Cover</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { brand: { yellow: '#FFEA4A', black: '#0A0A0A', accent: '#FF3D00' } },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'sans-serif'], mono: ['Courier New', 'monospace'] }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        #page_container { width: 1280px; height: 720px; position: relative; background-color: #FFEA4A; overflow: hidden; margin: 0 auto; font-family: "Noto Sans SC", sans-serif; }
+        .grid-bg { background-image: radial-gradient(rgba(0,0,0,0.2) 1px, transparent 0); background-size: 30px 30px; opacity: 0.3; }
+        
+        /* 装饰对角线条纹 */
+        #page_container::before, #page_container::after { content: ''; position: absolute; width: 40px; height: 40px; border: 2px solid rgba(0,0,0,0.2); z-index: 5; }
+        #page_container::before { top: 30px; left: 30px; border-right: 0; border-bottom: 0; }
+        #page_container::after { bottom: 30px; right: 30px; border-left: 0; border-top: 0; }
+
+        .outline-text { -webkit-text-stroke: 1.5px #0A0A0A; color: transparent; text-transform: uppercase; }
+        .vertical-huge { writing-mode: vertical-rl; transform: rotate(180deg); }
+        
+        /* 核心扫描效果 */
+        .img-scan::after { 
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px; 
+            background: rgba(255, 61, 0, 0.6); box-shadow: 0 0 15px #FF3D00; 
+            animation: scan 4s linear infinite; 
+        }
+        @keyframes scan { 0% { top: 0; } 100% { top: 100%; } }
+
+        .title-huge { font-size: 140px; line-height: 0.75; font-weight: 950; letter-spacing: -0.05em; text-transform: uppercase; font-style: italic; }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <!-- 基础装饰 -->
+        <div class="absolute inset-0 grid-bg"></div>
+        <div class="absolute left-10 top-0 h-full flex items-center">
+            <h2 class="vertical-huge text-[120px] font-black opacity-[0.04] leading-none tracking-tighter">PROJECT_ARCHIVE_2026</h2>
+        </div>
+
+        <div class="relative z-10 w-full h-full p-16 flex flex-col justify-between">
+            
+            <!-- 头部：品牌与状态 -->
+            <div class="flex justify-between items-end border-b-[3px] border-black pb-4">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-black flex items-center justify-center">
+                        <i class="fa-solid fa-earth-americas text-brand-yellow text-2xl"></i>
+                    </div>
+                    <div>
+                        <h6 class="text-sm font-black uppercase tracking-widest leading-none">Giggling Platypus Co.</h6>
+                        <p class="text-[9px] font-mono font-bold opacity-60 mt-1 uppercase tracking-tighter">Nuclear Infrastructure Division</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-6">
+                    <div class="text-right">
+                        <span class="block text-[10px] font-black opacity-40 uppercase">System Status</span>
+                        <div class="flex items-center gap-2">
+                             <span class="text-sm font-black text-brand-accent italic font-mono uppercase">Critical_Active</span>
+                             <span class="w-2 h-2 bg-brand-accent rounded-full animate-pulse"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 主内容：居中标题与配图 -->
+            <div class="flex-1 flex flex-col justify-center">
+                
+                <!-- 上标题 -->
+                <div class="flex justify-center mb-4">
+                    <h1 class="title-huge text-brand-black">Nuclear</h1>
+                </div>
+
+                <!-- 居中横向配图块 -->
+                <div class="relative w-full h-[200px] border-y-[3px] border-black group overflow-hidden bg-black">
+                    <div class="img-scan absolute inset-0">
+                        <img src="https://images.unsplash.com/photo-1569091791842-7cf964681971?q=80&w=2070&auto=format&fit=crop" 
+                             class="w-full h-full object-cover grayscale contrast-125 brightness-90 opacity-90 group-hover:scale-105 transition-all duration-[2000ms]"
+                             style="object-position: center 30%;">
+                    </div>
+                    
+                    <!-- 浮动标注 -->
+                    <div class="absolute bottom-4 left-6 z-20 bg-brand-yellow px-4 py-1 text-[10px] font-black uppercase tracking-widest border border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                        Fig 0.1: Reactor Core Thermal Visual
+                    </div>
+                    <div class="absolute top-4 right-6 z-20 font-mono text-[9px] text-brand-yellow font-bold bg-black/50 px-2 py-1">
+                        STREAM: 0xFD_224_ALPHA
+                    </div>
+                </div>
+
+                <!-- 下标题 -->
+                <div class="flex justify-center mt-4">
+                    <h1 class="title-huge outline-text">Energy</h1>
+                </div>
+
+            </div>
+
+            <!-- 底部：数据矩阵 -->
+            <div class="mt-8 flex justify-between items-start pt-8 border-t-[1px] border-black/20">
+                
+                <div class="w-1/3">
+                    <p class="text-[11px] font-bold leading-relaxed opacity-70 uppercase tracking-wide">
+                        Exploring the mechanics of atomic fission, safety protocols, and the role of high-density clean energy in a carbon-neutral global landscape.
+                    </p>
+                </div>
+
+                <div class="flex gap-16">
+                    <div>
+                        <span class="block text-[10px] font-black opacity-40 uppercase mb-1">Grid Efficiency</span>
+                        <span class="block text-4xl font-black italic">98.4%</span>
+                    </div>
+                    <div>
+                        <span class="block text-[10px] font-black opacity-40 uppercase mb-1">Carbon Output</span>
+                        <span class="block text-4xl font-black italic">0.00<span class="text-lg uppercase">g</span></span>
+                    </div>
+                </div>
+
+                <div class="text-right">
+                    <div class="mb-2">
+                        <span class="bg-black text-brand-yellow text-[9px] font-black px-2 py-1">ARCHIVE_ACCESS: GRANTED</span>
+                    </div>
+                    <p class="text-xs font-mono font-bold text-brand-black opacity-40">REF: NUC-2026-REPORT-X</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 装饰背景圆 -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-black opacity-5 rounded-full pointer-events-none"></div>
+    </div>
+
+</body>
+</html>

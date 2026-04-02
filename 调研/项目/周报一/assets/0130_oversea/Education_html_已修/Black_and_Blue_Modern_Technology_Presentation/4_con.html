@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is Web3 - Keynote Slide</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    
+    <style>
+        /* CSS Reset & Global Settings */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        /* Page Container */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background-color: #000000;
+            overflow: hidden;
+            margin: 0 auto;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Background Image & Overlay */
+        .bg-image-container {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+        
+        .bg-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Applying a slight blur to keep focus on content */
+            filter: blur(4px) brightness(0.8);
+            transform: scale(1.05); /* prevent blur edge issues */
+        }
+
+        /* Dark gradient overlay for better text contrast */
+        .bg-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, rgba(0,0,0,0.9) 20%, rgba(0,0,0,0.5) 100%);
+            z-index: 1;
+        }
+
+        /* --- NEW: Decorative Elements from "Why Web3 Matters" --- */
+        .bg-aurora {
+            position: absolute;
+            width: 1400px;
+            height: 1000px;
+            top: -300px;
+            left: -400px;
+            /* Primary Blue Gradient Mesh */
+            background: radial-gradient(circle at 50% 50%, #0011FF, #00008B, transparent 70%);
+            opacity: 0.5; /* Slightly adjusted to blend with bg image */
+            filter: blur(80px);
+            z-index: 2; /* Sit on top of the dark overlay */
+            pointer-events: none;
+        }
+
+        .bg-aurora-secondary {
+            position: absolute;
+            width: 800px;
+            height: 800px;
+            bottom: -200px;
+            left: 0px;
+            /* Secondary darker ambient light */
+            background: radial-gradient(circle, #00008B, transparent);
+            opacity: 0.4;
+            filter: blur(60px);
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        /* Glass Panel Style */
+        .glass-panel-large {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.02));
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 10; /* Ensure content is above aurora */
+        }
+
+        /* Typography Effects */
+        .text-glow-blue {
+            text-shadow: 0 0 30px rgba(0, 85, 255, 0.8);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <div class="bg-image-container">
+            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop alt="Web3 Blockchain Network" class="bg-image">
+        </div>
+        
+        <div class="bg-overlay"></div>
+
+        <div class="bg-aurora"></div>
+        <div class="bg-aurora-secondary"></div>
+
+        <div class="relative z-10 grid grid-cols-12 h-full w-full p-16">
+            
+            <div class="col-span-5 flex flex-col justify-center h-full relative z-20">
+                <div>
+                     <div class="w-16 h-2 bg-blue-600 mb-8 shadow-[0_0_15px_rgba(37,99,235,0.8)]"></div>
+                    <h2 class="text-white text-4xl font-light tracking-tight mb-2 opacity-80">Defining the Future</h2>
+                    <h1 class="text-white text-8xl font-bold tracking-tighter leading-none text-glow-blue">
+                        What is<br>
+                        Web3?
+                    </h1>
+                </div>
+            </div>
+
+            <div class="col-span-7 h-full flex items-center relative z-20">
+                
+                <div class="glass-panel-large w-full rounded-3xl p-12 flex flex-col gap-10">
+                    
+                    <div>
+                        <h3 class="text-blue-400 font-bold uppercase tracking-widest mb-4 flex items-center gap-3">
+                            <i class="fa-solid fa-circle-info"></i> The Concept
+                        </h3>
+                        <p class="text-white text-2xl font-light leading-relaxed">
+                            Web3 is the next iteration of the internet, built upon <b class="text-blue-300 font-bold">decentralized blockchains</b>. It shifts power from centralized platforms back to the users and creators.
+                        </p>
+                    </div>
+
+                    <div class="border-t border-white/10 pt-8">
+                        <h3 class="text-gray-400 font-bold uppercase tracking-widest mb-6">Key Characteristics</h3>
+                        <ul class="grid grid-cols-2 gap-y-6 gap-x-4">
+                            <li class="flex items-center gap-4 group">
+                                <div class="w-10 h-10 rounded-lg bg-blue-900/50 flex items-center justify-center text-blue-400 group-hover:bg-blue-600/80 group-hover:text-white transition-all">
+                                    <i class="fa-solid fa-network-wired"></i>
+                                </div>
+                                <span class="text-white text-xl font-medium">Decentralized</span>
+                            </li>
+                             <li class="flex items-center gap-4 group">
+                                <div class="w-10 h-10 rounded-lg bg-blue-900/50 flex items-center justify-center text-blue-400 group-hover:bg-blue-600/80 group-hover:text-white transition-all">
+                                    <i class="fa-solid fa-handshake-simple"></i>
+                                </div>
+                                <span class="text-white text-xl font-medium">Trustless</span>
+                            </li>
+                             <li class="flex items-center gap-4 group">
+                                <div class="w-10 h-10 rounded-lg bg-blue-900/50 flex items-center justify-center text-blue-400 group-hover:bg-blue-600/80 group-hover:text-white transition-all">
+                                    <i class="fa-solid fa-fingerprint"></i>
+                                </div>
+                                <span class="text-white text-xl font-medium">Self-Sovereign Identity</span>
+                            </li>
+                             <li class="flex items-center gap-4 group">
+                                <div class="w-10 h-10 rounded-lg bg-blue-900/50 flex items-center justify-center text-blue-400 group-hover:bg-blue-600/80 group-hover:text-white transition-all">
+                                    <i class="fa-brands fa-ethereum"></i>
+                                </div>
+                                <span class="text-white text-xl font-medium">Native Payments</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

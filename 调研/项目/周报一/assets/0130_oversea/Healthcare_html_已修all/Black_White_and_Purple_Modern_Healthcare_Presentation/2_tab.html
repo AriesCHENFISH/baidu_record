@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentation Agenda</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', 'Noto Sans SC', sans-serif; }
+        #page_container { width: 1280px; height: 720px; background-color: #F8F9FB; position: relative; overflow: hidden; margin: 0 auto; padding: 60px 100px; display: flex; flex-direction: column; }
+        .text-gradient { background: linear-gradient(135deg, #6236FF 0%, #B621FE 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .blob { position: absolute; filter: blur(100px); z-index: 0; border-radius: 50%; }
+        
+        /* 目录项样式 */
+        .agenda-item {
+            position: relative;
+            padding: 30px;
+            background: white;
+            border-radius: 30px;
+            border: 1px solid rgba(0,0,0,0.03);
+            transition: all 0.3s;
+        }
+        .agenda-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(98,54,255,0.08);
+            border-color: #6236FF;
+        }
+        .agenda-number {
+            font-size: 60px;
+            font-weight: 900;
+            color: #F0F0FF;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <!-- 背景层 -->
+        <div class="blob bg-purple-100 w-[500px] h-[500px] -top-40 -left-20 opacity-50"></div>
+
+        <header class="relative z-10 mb-12">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="h-[3px] w-12 bg-purple-600"></div>
+                <span class="text-purple-600 font-bold uppercase tracking-[0.3em] text-xs">Navigation</span>
+            </div>
+            <h1 class="text-[72px] font-black text-gray-900 leading-tight">
+                Table of <span class="text-gradient">Contents</span>
+            </h1>
+        </header>
+
+        <!-- 3x3 目录矩阵 -->
+        <main class="grid grid-cols-3 gap-6 relative z-10">
+            <div class="agenda-item">
+                <span class="agenda-number">01</span>
+                <h3 class="text-xl font-bold text-gray-900 relative z-10">Our Mission</h3>
+                <p class="text-xs text-purple-600 font-bold uppercase mt-2 relative z-10">Vision & Values</p>
+            </div>
+            <div class="agenda-item">
+                <span class="agenda-number">02</span>
+                <h3 class="text-xl font-bold text-gray-900 relative z-10">Prevention Priority</h3>
+                <p class="text-xs text-purple-600 font-bold uppercase mt-2 relative z-10">Early Intervention</p>
+            </div>
+            <div class="agenda-item">
+                <span class="agenda-number">03</span>
+                <h3 class="text-xl font-bold text-gray-900 relative z-10">Essential Services</h3>
+                <p class="text-xs text-purple-600 font-bold uppercase mt-2 relative z-10">Clinical Specialties</p>
+            </div>
+            <div class="agenda-item">
+                <span class="agenda-number">04</span>
+                <h3 class="text-xl font-bold text-gray-900 relative z-10">Health Professionals</h3>
+                <p class="text-xs text-purple-600 font-bold uppercase mt-2 relative z-10">Elite Medical Team</p>
+            </div>
+            <div class="agenda-item">
+                <span class="agenda-number">05</span>
+                <h3 class="text-xl font-bold text-gray-900 relative z-10">Patient Journey</h3>
+                <p class="text-xs text-purple-600 font-bold uppercase mt-2 relative z-10">Care Process</p>
+            </div>
+            <div class="agenda-item">
+                <span class="agenda-number">06</span>
+                <h3 class="text-xl font-bold text-gray-900 relative z-10">Water & Sanitation</h3>
+                <p class="text-xs text-purple-600 font-bold uppercase mt-2 relative z-10">Global Standards</p>
+            </div>
+            <div class="agenda-item">
+                <span class="agenda-number">07</span>
+                <h3 class="text-xl font-bold text-gray-900 relative z-10">Digital Innovation</h3>
+                <p class="text-xs text-purple-600 font-bold uppercase mt-2 relative z-10">Smart Healthcare</p>
+            </div>
+            <div class="agenda-item">
+                <span class="agenda-number">08</span>
+                <h3 class="text-xl font-bold text-gray-900 relative z-10">Global Reach</h3>
+                <p class="text-xs text-purple-600 font-bold uppercase mt-2 relative z-10">Impact & Scale</p>
+            </div>
+            <div class="agenda-item">
+                <span class="agenda-number">09</span>
+                <h3 class="text-xl font-bold text-gray-900 relative z-10">Future Outlook</h3>
+                <p class="text-xs text-purple-600 font-bold uppercase mt-2 relative z-10">Strategy 2025</p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

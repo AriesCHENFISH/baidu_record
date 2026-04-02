@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borcelle Hospital Presentation - Cover</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%3B900%26display%3Dswap.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: '#EBFA5D', pureBlack: '#000000' },
+                    fontFamily: { sans: ['Noto Sans SC', 'Inter', 'sans-serif'] },
+                    boxShadow: { 'hard': '12px 12px 0px 0px #000000', 'hard-sm': '6px 6px 0px 0px #000000' }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px;
+            background-color: #EBFA5D;
+            position: relative; overflow: hidden; margin: 0 auto;
+        }
+        .text-outline { color: transparent; -webkit-text-stroke: 3px #000; }
+        .bg-dots {
+            background-image: radial-gradient(#000 1.5px, transparent 1.5px);
+            background-size: 30px 30px; opacity: 0.08;
+        }
+        .arch-frame {
+            border-top-left-radius: 500px; border-top-right-radius: 500px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container" class="p-12 flex flex-col justify-between">
+        <div class="absolute inset-0 bg-dots pointer-events-none"></div>
+
+        <header class="flex justify-between items-center relative z-20">
+            <div class="flex items-center gap-3 bg-white border-[3px] border-pureBlack rounded-full py-2 px-6 shadow-hard-sm">
+                <div class="w-8 h-8 bg-pureBlack flex items-center justify-center rounded-full">
+                    <i class="fa-solid fa-heart-pulse text-primary text-sm"></i>
+                </div>
+                <div class="flex flex-col leading-none">
+                    <span class="text-[10px] font-bold uppercase text-gray-500">Hospital</span>
+                    <span class="text-lg font-black text-pureBlack uppercase">Borcelle</span>
+                </div>
+            </div>
+            <div class="font-mono text-sm font-bold border-[3px] border-pureBlack px-3 py-1 bg-pureBlack text-primary shadow-hard-sm uppercase">KEYNOTE 2026</div>
+        </header>
+
+        <main class="grid grid-cols-12 gap-8 items-center flex-grow relative z-10">
+            
+            <div class="col-span-7 flex flex-col justify-center">
+                <div class="transform -rotate-1">
+                    <h1 class="text-8xl font-black uppercase leading-[0.85] tracking-tighter">
+                        <span class="text-outline block">Medical</span>
+                        <span class="text-pureBlack block">Healthcare</span>
+                        <span class="text-outline block">Presentation</span>
+                    </h1>
+                </div>
+                
+                <div class="flex items-center gap-4 mt-8">
+                    <div class="h-2 w-20 bg-pureBlack"></div>
+                    <p class="text-2xl font-black uppercase italic tracking-tighter">The Foundation of Society</p>
+                </div>
+
+                <div class="mt-16 grid grid-cols-2 gap-8 border-t-[3px] border-black pt-6 max-w-lg">
+                    <div>
+                        <span class="text-[10px] font-bold uppercase text-gray-600 block mb-1">Web Platform</span>
+                        <span class="font-bold underline decoration-2">www.borcellehospital.com</span>
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-bold uppercase text-gray-600 block mb-1">Direct Contact</span>
+                        <span class="font-bold underline decoration-2">hello@reallygreatsite.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-span-5 relative h-[500px]">
+                <div class="absolute inset-0 bg-white border-[4px] border-pureBlack arch-frame shadow-hard overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea86b48e?q=80&w=1000&auto=format&fit=crop" 
+                         alt="Doctor" 
+                         class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105">
+                </div>
+
+                <div class="absolute -top-6 -left-12 bg-primary border-[4px] border-pureBlack p-5 rounded-full shadow-hard-sm w-36 h-36 flex flex-col items-center justify-center transform -rotate-12 z-20">
+                    <span class="text-5xl font-black leading-none">80</span>
+                    <span class="text-[10px] font-bold uppercase tracking-widest border-t border-black mt-1">Est. Years</span>
+                </div>
+
+                <div class="absolute -bottom-4 -right-8 w-52 h-36 bg-white border-[4px] border-pureBlack rounded-2xl shadow-hard p-2 z-20 overflow-hidden">
+                     <div id="miniChart" class="w-full h-full"></div>
+                </div>
+            </div>
+        </main>
+
+        <div class="absolute bottom-0 left-0 w-full h-3 bg-pureBlack"></div>
+    </div>
+
+    <script>
+        var chartDom = document.getElementById('miniChart');
+        var myChart = echarts.init(chartDom);
+        var option = {
+            grid: { top: '15%', bottom: '15%', left: '10%', right: '10%' },
+            xAxis: { type: 'category', data: ['A', 'B', 'C', 'D', 'E'], show: false },
+            yAxis: { type: 'value', show: false },
+            series: [{
+                data: [150, 230, 224, 218, 135],
+                type: 'bar',
+                itemStyle: { color: '#000', borderRadius: [2, 2, 0, 0] },
+                barWidth: '45%'
+            }, {
+                data: [150, 230, 224, 218, 135],
+                type: 'line',
+                smooth: true,
+                showSymbol: false,
+                lineStyle: { color: '#EBFA5D', width: 3 }
+            }]
+        };
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

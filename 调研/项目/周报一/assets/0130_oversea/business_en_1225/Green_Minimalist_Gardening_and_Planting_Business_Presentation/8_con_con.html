@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Table - Premium Design</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- Google Fonts: Noto Sans SC (Specified in requirements) & Inter for English numerals/headings -->
+    <link href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+
+    <style>
+        /* CSS Reset & Global Standards */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 
+         * Page Container Logic
+         * Width: 1280px, Height: 720px
+         * Centered, Relative Positioning
+         */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background-color: #6E777D;
+            margin: 0 auto;
+            overflow: hidden;
+            box-shadow: none; /* Explicitly requested no shadow on outer frame */
+        }
+
+        /* Custom Scrollbar hide just in case */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Utilities for Design System Gradients */
+        .bg-gradient-green {
+            background: linear-gradient(135deg, #4A6F52, #2E4633);
+        }
+        
+        /* Specific Tab Shape Styling */
+        .tab-shape {
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            clip-path: polygon(10% 0, 90% 0, 100% 100%, 0% 100%);
+        }
+
+        .tab-active {
+            background-color: #151B22; /* Matches Main Card */
+            z-index: 20;
+        }
+
+        .tab-inactive {
+            background-color: #4C555C;
+            z-index: 10;
+        }
+
+        /* Glassmorphism accent for numbers */
+        .number-accent {
+            background: linear-gradient(180deg, rgba(74, 111, 82, 0.2), rgba(74, 111, 82, 0));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main PPT Canvas -->
+    <div id="page_container">
+
+        <!-- Background Decorative Elements (CSS Shapes) -->
+        <!-- Subtle gradient orb for atmosphere -->
+        <div class="absolute top-[-100px] left-[-100px] w-[500px] h-[500px] rounded-full opacity-10 pointer-events-none" style="background: radial-gradient(circle, #4A6F52 0%, transparent 70%);"></div>
+
+        <!-- 
+           Main Content Wrapper 
+           Contains Tabs and the Main Card 
+        -->
+        <div class="absolute inset-0 flex flex-col items-center justify-center p-10">
+            
+            <!-- Tabs Navigation Area -->
+            <!-- Positioned relative to the card to sit on top -->
+            <div class="w-[1180px] flex justify-end items-end relative top-[1px] pr-8">
+                <!-- Tab 1: Inactive -->
+                <div class="tab-inactive tab-shape w-64 h-12 flex items-center justify-center mr-[-20px]">
+                    <p class="text-[#C9D1D9] text-sm font-medium tracking-wide">Giggling Platypus Co.</p>
+                </div>
+                <!-- Tab 2: Active -->
+                <div class="tab-active tab-shape w-64 h-14 flex items-center justify-center shadow-lg relative">
+                    <p class="text-white text-base font-bold tracking-wide">Pricing Table</p>
+                    <!-- Green Indicator Line -->
+                    <div class="absolute top-0 w-full h-[2px] bg-[#4A6F52]"></div>
+                </div>
+            </div>
+
+            <!-- Main Card Body -->
+            <!-- Background: #151B22, Rounded, Shadow -->
+            <div class="w-[1180px] h-[600px] bg-[#151B22] rounded-3xl rounded-tr-none shadow-2xl relative z-20 flex flex-col p-12 border-t-[1px] border-l-[1px] border-[#4A6F52]/20">
+                
+                <!-- Header Section -->
+                <div class="mb-10 border-b border-[#4C555C] pb-6 flex justify-between items-end">
+                    <div>
+                        <h1 class="text-5xl font-bold text-white tracking-tight mb-2">Pricing Table</h1>
+                        <p class="text-[#C9D1D9] text-sm opacity-80">Choose the perfect plan for your presentation needs.</p>
+                    </div>
+                    <!-- Decorative Icon using FontAwesome -->
+                    <div class="text-[#4A6F52] text-4xl opacity-50">
+                        <i class="fa-solid fa-tags"></i>
+                    </div>
+                </div>
+
+                <!-- Content Grid: 3 Columns x 2 Rows -->
+                <ul class="grid grid-cols-3 gap-x-10 gap-y-12 h-full">
+                    
+                    <!-- Item 01 -->
+                    <li class="flex flex-row gap-5 group">
+                        <!-- Number column -->
+                        <div class="flex-shrink-0 w-16 text-right">
+                            <h2 class="text-6xl font-black text-[#4A6F52] opacity-40 group-hover:opacity-80 transition-opacity duration-300" style="font-family: 'Inter', sans-serif;">01</h2>
+                        </div>
+                        <!-- Content column -->
+                        <div class="flex flex-col border-l border-[#4C555C] pl-5 group-hover:border-[#4A6F52] transition-colors duration-300">
+                            <h3 class="text-3xl font-bold text-white mb-3 tracking-wide">$ 23.500,00</h3>
+                            <p class="text-[#C9D1D9] text-xs leading-relaxed font-light text-justify">
+                                A presentation typically refers to the act of demonstrating or explaining something to an audience, often using visual aids such as slides, charts, graphs, or multimedia elements.
+                            </p>
+                        </div>
+                    </li>
+
+                    <!-- Item 02 -->
+                    <li class="flex flex-row gap-5 group">
+                        <div class="flex-shrink-0 w-16 text-right">
+                            <h2 class="text-6xl font-black text-[#4A6F52] opacity-40 group-hover:opacity-80 transition-opacity duration-300" style="font-family: 'Inter', sans-serif;">02</h2>
+                        </div>
+                        <div class="flex flex-col border-l border-[#4C555C] pl-5 group-hover:border-[#4A6F52] transition-colors duration-300">
+                            <h3 class="text-3xl font-bold text-white mb-3 tracking-wide">$ 30.000,00</h3>
+                            <p class="text-[#C9D1D9] text-xs leading-relaxed font-light text-justify">
+                                A presentation typically refers to the act of demonstrating or explaining something to an audience, often using visual aids such as slides, charts, graphs, or multimedia elements.
+                            </p>
+                        </div>
+                    </li>
+
+                    <!-- Item 03 -->
+                    <li class="flex flex-row gap-5 group">
+                        <div class="flex-shrink-0 w-16 text-right">
+                            <h2 class="text-6xl font-black text-[#4A6F52] opacity-40 group-hover:opacity-80 transition-opacity duration-300" style="font-family: 'Inter', sans-serif;">03</h2>
+                        </div>
+                        <div class="flex flex-col border-l border-[#4C555C] pl-5 group-hover:border-[#4A6F52] transition-colors duration-300">
+                            <h3 class="text-3xl font-bold text-white mb-3 tracking-wide">$ 30.000,00</h3>
+                            <p class="text-[#C9D1D9] text-xs leading-relaxed font-light text-justify">
+                                A presentation typically refers to the act of demonstrating or explaining something to an audience, often using visual aids such as slides, charts, graphs, or multimedia elements.
+                            </p>
+                        </div>
+                    </li>
+
+                    <!-- Item 04 -->
+                    <li class="flex flex-row gap-5 group">
+                        <div class="flex-shrink-0 w-16 text-right">
+                            <h2 class="text-6xl font-black text-[#4A6F52] opacity-40 group-hover:opacity-80 transition-opacity duration-300" style="font-family: 'Inter', sans-serif;">04</h2>
+                        </div>
+                        <div class="flex flex-col border-l border-[#4C555C] pl-5 group-hover:border-[#4A6F52] transition-colors duration-300">
+                            <h3 class="text-3xl font-bold text-white mb-3 tracking-wide">$ 47.500,00</h3>
+                            <p class="text-[#C9D1D9] text-xs leading-relaxed font-light text-justify">
+                                A presentation typically refers to the act of demonstrating or explaining something to an audience, often using visual aids such as slides, charts, graphs, or multimedia elements.
+                            </p>
+                        </div>
+                    </li>
+
+                    <!-- Item 05 -->
+                    <li class="flex flex-row gap-5 group">
+                        <div class="flex-shrink-0 w-16 text-right">
+                            <h2 class="text-6xl font-black text-[#4A6F52] opacity-40 group-hover:opacity-80 transition-opacity duration-300" style="font-family: 'Inter', sans-serif;">05</h2>
+                        </div>
+                        <div class="flex flex-col border-l border-[#4C555C] pl-5 group-hover:border-[#4A6F52] transition-colors duration-300">
+                            <h3 class="text-3xl font-bold text-white mb-3 tracking-wide">$ 55.000,00</h3>
+                            <p class="text-[#C9D1D9] text-xs leading-relaxed font-light text-justify">
+                                A presentation typically refers to the act of demonstrating or explaining something to an audience, often using visual aids such as slides, charts, graphs, or multimedia elements.
+                            </p>
+                        </div>
+                    </li>
+
+                    <!-- Item 06 -->
+                    <li class="flex flex-row gap-5 group">
+                        <div class="flex-shrink-0 w-16 text-right">
+                            <h2 class="text-6xl font-black text-[#4A6F52] opacity-40 group-hover:opacity-80 transition-opacity duration-300" style="font-family: 'Inter', sans-serif;">06</h2>
+                        </div>
+                        <div class="flex flex-col border-l border-[#4C555C] pl-5 group-hover:border-[#4A6F52] transition-colors duration-300">
+                            <h3 class="text-3xl font-bold text-white mb-3 tracking-wide">$ 70.000,00</h3>
+                            <p class="text-[#C9D1D9] text-xs leading-relaxed font-light text-justify">
+                                A presentation typically refers to the act of demonstrating or explaining something to an audience, often using visual aids such as slides, charts, graphs, or multimedia elements.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- Footer Navigation -->
+                <div class="absolute bottom-10 right-12 flex items-center gap-2 group cursor-pointer">
+                    <p class="text-white text-lg font-medium group-hover:text-[#4A6F52] transition-colors">Next</p>
+                    <i class="fa-solid fa-arrow-right text-white group-hover:text-[#4A6F52] transition-colors transform group-hover:translate-x-1 duration-300"></i>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

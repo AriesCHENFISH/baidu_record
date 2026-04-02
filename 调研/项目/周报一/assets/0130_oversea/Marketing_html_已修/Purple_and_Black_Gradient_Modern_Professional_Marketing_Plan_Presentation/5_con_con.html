@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule & Deadlines</title>
+    <!-- Import Google Fonts: Inter for UI, Noto Sans SC for compatibility -->
+    <link href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <style>
+        /* CSS Reset & Basic Setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', 'Noto Sans SC', sans-serif;
+        }
+
+        /* 
+         * Background and container constraints 
+         * Strictly 1280x720, centered, no body styling allowed 
+         */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #050505; /* Deep Black Background */
+            overflow: hidden;
+        }
+
+        /* Gradient Utilities */
+        .text-gradient {
+            background: linear-gradient(135deg, #A962E3, #C98BF2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .bg-primary-gradient {
+            background: linear-gradient(135deg, #A962E3, #C98BF2);
+        }
+
+        /* Glassmorphism / Glow Effects */
+        .glow-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.4;
+            z-index: 0;
+        }
+
+        /* Gradient Border Logic for Circles */
+        .gradient-border-circle {
+            position: relative;
+            background: linear-gradient(135deg, #A962E3, #C98BF2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .gradient-border-circle::before {
+            content: "";
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            right: 3px;
+            bottom: 3px;
+            background: #050505; /* Match container bg */
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .circle-content {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <!-- 
+            Background Decoration Elements 
+            Purpose: Create depth and atmosphere without cluttering
+        -->
+        <div class="glow-orb" style="width: 500px; height: 500px; top: -150px; right: -100px; background: #5e2a84;"></div>
+        <div class="glow-orb" style="width: 400px; height: 400px; bottom: -100px; left: -100px; background: #2a1b3d;"></div>
+
+        <!-- 
+            Main Header Section 
+            Alignment: Centered top
+        -->
+        <div class="relative z-10 w-full text-center pt-16 mb-12">
+            <h1 class="text-5xl font-bold text-white mb-4 tracking-tight">
+                Schedule <span class="text-gradient">&</span> Deadlines
+            </h1>
+            <div class="flex justify-center">
+                <p class="text-[#BCA8C8] text-lg max-w-2xl font-light leading-relaxed">
+                    Lay out the timeline for the marketing activities and initiatives that will make the campaign successful.
+                </p>
+            </div>
+        </div>
+
+        <!-- 
+            Timeline Section 
+            Layout: Flexbox for horizontal distribution
+        -->
+        <div class="relative z-10 w-full px-16 mt-8">
+            
+            <!-- Connecting Line (Background) -->
+            <div class="absolute top-[80px] left-[15%] right-[15%] h-[2px] bg-primary-gradient opacity-50 z-0"></div>
+
+            <div class="flex justify-between items-start w-full relative z-10">
+                
+                <!-- Node 01: January -->
+                <div class="flex flex-col items-center w-1/4 group">
+                    <!-- Circle -->
+                    <div class="gradient-border-circle w-40 h-40 shadow-[0_0_30px_rgba(169,98,227,0.2)] transition-transform duration-300 transform group-hover:scale-105">
+                        <div class="circle-content flex flex-col items-center justify-center">
+                            <span class="text-white font-medium tracking-widest text-lg">JANUARY</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Step Indicator -->
+                    <div class="mt-8 mb-2 flex flex-col items-center">
+                        <span class="text-3xl font-bold text-white opacity-90">01</span>
+                        <div class="w-8 h-1 bg-primary-gradient mt-2 rounded-full"></div>
+                    </div>
+
+                    <!-- Description -->
+                    <div class="text-center px-4 mt-2">
+                        <p class="text-[#BCA8C8] text-gl font-light leading-relaxed">
+                            Conduct market <br> research.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Node 02: March -->
+                <div class="flex flex-col items-center w-1/4 group">
+                    <!-- Circle -->
+                    <div class="gradient-border-circle w-40 h-40 shadow-[0_0_30px_rgba(169,98,227,0.2)] transition-transform duration-300 transform group-hover:scale-105">
+                        <div class="circle-content flex flex-col items-center justify-center">
+                            <span class="text-white font-medium tracking-widest text-lg">MARCH</span>
+                        </div>
+                    </div>
+
+                    <!-- Step Indicator -->
+                    <div class="mt-8 mb-2 flex flex-col items-center">
+                        <span class="text-3xl font-bold text-white opacity-90">02</span>
+                        <div class="w-8 h-1 bg-primary-gradient mt-2 rounded-full"></div>
+                    </div>
+
+                    <!-- Description -->
+                    <div class="text-center px-2 mt-2">
+                        <p class="text-[#BCA8C8] text-gl font-light leading-relaxed">
+                            Finalize public relations <br> and media plan.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Node 03: May -->
+                <div class="flex flex-col items-center w-1/4 group">
+                    <!-- Circle -->
+                    <div class="gradient-border-circle w-40 h-40 shadow-[0_0_30px_rgba(169,98,227,0.2)] transition-transform duration-300 transform group-hover:scale-105">
+                        <div class="circle-content flex flex-col items-center justify-center">
+                            <span class="text-white font-medium tracking-widest text-lg">MAY</span>
+                        </div>
+                    </div>
+
+                    <!-- Step Indicator -->
+                    <div class="mt-8 mb-2 flex flex-col items-center">
+                        <span class="text-3xl font-bold text-white opacity-90">03</span>
+                        <div class="w-8 h-1 bg-primary-gradient mt-2 rounded-full"></div>
+                    </div>
+
+                    <!-- Description -->
+                    <div class="text-center px-4 mt-2">
+                        <p class="text-[#BCA8C8] text-gl font-light leading-relaxed">
+                            Hold sales <br> promotions.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Node 04: July -->
+                <div class="flex flex-col items-center w-1/4 group">
+                    <!-- Circle -->
+                    <div class="gradient-border-circle w-40 h-40 shadow-[0_0_30px_rgba(169,98,227,0.2)] transition-transform duration-300 transform group-hover:scale-105">
+                        <div class="circle-content flex flex-col items-center justify-center">
+                            <span class="text-white font-medium tracking-widest text-lg">JULY</span>
+                        </div>
+                    </div>
+
+                    <!-- Step Indicator -->
+                    <div class="mt-8 mb-2 flex flex-col items-center">
+                        <span class="text-3xl font-bold text-white opacity-90">04</span>
+                        <div class="w-8 h-1 bg-primary-gradient mt-2 rounded-full"></div>
+                    </div>
+
+                    <!-- Description -->
+                    <div class="text-center px-2 mt-2">
+                        <p class="text-[#BCA8C8] text-gl font-light leading-relaxed">
+                            Write another activity, <br> deadline or milestone here.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        <!-- Subtle Footer Decoration to balance weight -->
+        <div class="absolute bottom-6 w-full text-center opacity-30">
+            <i class="fa-solid fa-angle-down text-white animate-bounce"></i>
+        </div>
+    </div>
+
+</body>
+</html>

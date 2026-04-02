@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Vision Keynote</title>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts Mirror -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1B3A3E',
+                        secondaryBg: '#2F4F52',
+                        accent: '#B23A26',
+                        decorative: '#E8E2D2',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                        serif: ['"Times New Roman"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #1B3A3E;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* 电影感胶片颗粒纹理 */
+        #page_container::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+            opacity: 0.05;
+            pointer-events: none;
+            z-index: 50;
+        }
+
+        .glass-card {
+            background: rgba(47, 79, 82, 0.4);
+            backdrop-filter: blur(10px);
+            border-left: 2px solid #B23A26;
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            background: rgba(47, 79, 82, 0.6);
+            transform: translateX(10px);
+        }
+
+        .title-underline {
+            width: 0;
+            height: 2px;
+            background: #B23A26;
+            transition: width 1s ease-out;
+        }
+
+        /* 模拟纵深感 */
+        .image-mask {
+            clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <!-- 背景装饰 -->
+        <div class="absolute top-[-10%] left-[-5%] w-[40%] h-[70%] bg-secondaryBg opacity-20 rounded-full blur-[120px]"></div>
+
+        <div class="relative z-10 grid grid-cols-12 h-full">
+            
+            <!-- 左侧内容区 (7列) -->
+            <div class="col-span-7 flex flex-col justify-between pl-20 pr-10 py-16">
+                
+                <!-- 标题部分 -->
+                <div class="group">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-[1px] bg-accent"></div>
+                        <span class="text-accent tracking-[0.4em] text-xs uppercase font-bold">The Horizon</span>
+                    </div>
+                    <h1 class="text-7xl text-white font-bold leading-tight">
+                        <span class="font-serif italic text-decorative font-light">Future</span> Vision
+                    </h1>
+                </div>
+
+                <!-- 核心内容网格 -->
+                <div class="grid grid-cols-2 gap-6 mt-12">
+                    
+                    <!-- Item 1: Goals -->
+                    <div class="glass-card p-6 rounded-r-xl">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i class="fa-solid fa-compass text-decorative text-sm opacity-50"></i>
+                            <h3 class="text-decorative font-bold tracking-wider">GOALS</h3>
+                        </div>
+                        <p class="text-white/80 text-sm leading-relaxed font-light">
+                            Expand strategic markets and optimize product offerings through precision research.
+                        </p>
+                    </div>
+
+                    <!-- Item 2: Innovation -->
+                    <div class="glass-card p-6 rounded-r-xl">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i class="fa-solid fa-microchip text-decorative text-sm opacity-50"></i>
+                            <h3 class="text-decorative font-bold tracking-wider">INNOVATION</h3>
+                        </div>
+                        <p class="text-white/80 text-sm leading-relaxed font-light">
+                            Fostering a culture of creative disruption to meet the evolving needs of the modern era.
+                        </p>
+                    </div>
+
+                    <!-- Item 3: Opportunities -->
+                    <div class="glass-card p-6 rounded-r-xl">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i class="fa-solid fa-chart-line text-decorative text-sm opacity-50"></i>
+                            <h3 class="text-decorative font-bold tracking-wider">OPPORTUNITIES</h3>
+                        </div>
+                        <p class="text-white/80 text-sm leading-relaxed font-light">
+                            Leveraging advanced technology and sustainability to redefine customer experiences.
+                        </p>
+                    </div>
+
+                    <!-- Item 4: Diversification -->
+                    <div class="glass-card p-6 rounded-r-xl">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i class="fa-solid fa-cubes text-decorative text-sm opacity-50"></i>
+                            <h3 class="text-decorative font-bold tracking-wider">DIVERSIFICATION</h3>
+                        </div>
+                        <p class="text-white/80 text-sm leading-relaxed font-light">
+                            Developing a versatile portfolio that adapts to shifting market preferences globally.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- 底部品牌条 - 已移除页码 -->
+                <div class="mt-16 flex items-center justify-between border-t border-white/10 pt-8">
+                    <div class="flex items-center gap-4">
+                        <p class="text-white font-bold text-lg tracking-tighter">Fradel & Spies</p>
+                        <div class="w-1 h-1 bg-accent rounded-full"></div>
+                        <p class="text-decorative/50 text-xs tracking-widest uppercase">www.reallygreatsite.com</p>
+                    </div>
+                    
+                    <!-- 原页码位替换为关键词 -->
+                    <div class="bg-accent px-6 py-2 rounded-full shadow-lg">
+                        <span class="text-white text-xs font-bold tracking-[0.2em] uppercase">Strategy</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 右侧视觉区 (5列) -->
+            <div class="col-span-5 h-full relative">
+                <div class="w-full h-full relative image-mask overflow-hidden">
+                    <!-- 渐变压暗 -->
+                    <div class="absolute inset-0 bg-gradient-to-l from-transparent via-primary/20 to-primary z-10"></div>
+                    
+                    <!-- 背景图 -->
+                    <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=1280&auto=format&fit=crop" 
+                         alt="Vintage Vision" 
+                         class="w-full h-full object-cover grayscale-[30%] contrast-125">
+                    
+                    <!-- 装饰框 -->
+                    <div class="absolute inset-12 border border-decorative/20 z-20 pointer-events-none"></div>
+                    
+                    <!-- 漂浮装饰文本 -->
+                    <div class="absolute bottom-20 left-[-20px] z-30 transform -rotate-90 origin-left">
+                        <p class="text-white/20 text-4xl font-serif tracking-[0.3em] whitespace-nowrap uppercase">
+                            Visualizing Tomorrow
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 装饰线条 -->
+        <div class="absolute top-0 right-0 w-1/3 h-[2px] bg-gradient-to-r from-transparent to-accent/50"></div>
+        <div class="absolute bottom-20 right-0 w-12 h-[1px] bg-decorative/30"></div>
+    </div>
+
+</body>
+</html>

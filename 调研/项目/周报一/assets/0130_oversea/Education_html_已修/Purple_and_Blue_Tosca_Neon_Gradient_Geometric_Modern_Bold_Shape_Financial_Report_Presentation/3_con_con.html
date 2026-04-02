@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Financial Highlights</title>
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDeep: '#050510',
+                        navBg: '#1F1D36',
+                        primaryMint: '#D0F4DE',
+                        softCyan: '#8DE4E6',
+                        mutedBlue: '#5DAFCC',
+                        steelBlue: '#4E86B3',
+                        textGray: '#B0B0B8',
+                        glowPurple: '#2D2B55'
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .dot-pattern {
+            background-image: radial-gradient(#5DAFCC 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.3;
+        }
+        .glass-card {
+            background: rgba(31, 29, 54, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(141, 228, 230, 0.1);
+        }
+        ::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body>
+
+    <div id="page_container" class="w-[1280px] h-[720px] mx-auto relative bg-bgDeep overflow-hidden font-sans text-textGray">
+
+        <div class="absolute top-[-100px] left-[-100px] w-[600px] h-[600px] bg-glowPurple rounded-full blur-[120px] opacity-40 pointer-events-none"></div>
+        <div class="absolute bottom-[-100px] right-[-100px] w-[500px] h-[500px] bg-mutedBlue rounded-full blur-[100px] opacity-20 pointer-events-none"></div>
+        <div class="absolute top-24 left-10 w-24 h-48 dot-pattern z-0"></div>
+        <div class="absolute bottom-10 right-10 w-24 h-48 dot-pattern z-0"></div>
+
+        <header class="relative z-20 w-full pt-16 px-16 flex justify-start items-center">
+            <div class="flex items-center">
+                <div class="w-[4px] h-12 bg-gradient-to-b from-softCyan to-steelBlue rounded-full mr-8 shadow-[0_0_15px_rgba(141,228,230,0.4)]"></div>
+                
+                <div class="flex flex-col">
+                    <h2 class="text-5xl font-black tracking-[0.35em] text-white leading-none">OVERVIEW</h2>
+                    <p class="text-[11px] text-mutedBlue tracking-[0.5em] font-medium uppercase mt-3 opacity-80">
+                        Corporate Strategic Report
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <main class="relative z-10 w-full h-[calc(720px-120px)] px-16 pb-8 grid grid-cols-12 gap-8 items-center">
+            
+            <div class="col-span-5 h-full flex flex-col justify-center items-center relative">
+                <div id="financialChart" class="w-[500px] h-[500px]"></div>
+                <div class="absolute w-[380px] h-[380px] border border-white/5 rounded-full pointer-events-none"></div>
+            </div>
+
+            <div class="col-span-7 flex flex-col justify-center pl-8 gap-10">
+                <div>
+                    <h1 class="text-6xl font-bold text-primaryMint leading-tight mb-2 tracking-tight">
+                        Key Financial <br>
+                        <span class="text-softCyan">Highlights</span>
+                    </h1>
+                    <div class="w-20 h-1 bg-mutedBlue rounded-full mt-4"></div>
+                </div>
+
+                <div class="flex flex-col gap-6 w-full max-w-[650px]">
+                    <div class="glass-card rounded-2xl p-6 flex items-start gap-6 group hover:border-softCyan/30 transition-all duration-500">
+                        <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-navBg to-bgDeep border border-white/10 flex items-center justify-center shrink-0 shadow-inner">
+                            <i class="fa-solid fa-sack-dollar text-2xl text-softCyan"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-semibold text-white mb-2 group-hover:text-primaryMint transition-colors">Revenue growth</h2>
+                            <p class="text-sm leading-relaxed text-textGray">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card rounded-2xl p-6 flex items-start gap-6 group hover:border-softCyan/30 transition-all duration-500">
+                        <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-navBg to-bgDeep border border-white/10 flex items-center justify-center shrink-0 shadow-inner">
+                            <i class="fa-solid fa-tags text-2xl text-primaryMint"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-semibold text-white mb-2 group-hover:text-primaryMint transition-colors">Cost reduction</h2>
+                            <p class="text-sm leading-relaxed text-textGray">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const chartDom = document.getElementById('financialChart');
+        const myChart = echarts.init(chartDom);
+        const option = {
+            tooltip: {
+                trigger: 'item',
+                backgroundColor: '#1F1D36',
+                borderColor: '#4E86B3',
+                textStyle: { color: '#fff' }
+            },
+            series: [
+                {
+                    name: 'Financial Data',
+                    type: 'pie',
+                    radius: ['40%', '60%'],
+                    avoidLabelOverlap: false,
+                    itemStyle: {
+                        borderRadius: 10,
+                        borderColor: '#050510',
+                        borderWidth: 5
+                    },
+                    label: {
+                        show: true,
+                        position: 'outside',
+                        formatter: '{b}\n{d}%',
+                        color: '#B0B0B8',
+                        fontSize: 14,
+                        fontFamily: 'Noto Sans SC',
+                        lineHeight: 20
+                    },
+                    labelLine: {
+                        show: true,
+                        smooth: 0.2,
+                        length: 20,
+                        length2: 30,
+                        lineStyle: { width: 2 }
+                    },
+                    data: [
+                        { value: 62.5, name: 'Item 1', itemStyle: { color: '#D0F4DE' }, label: { color: '#D0F4DE', fontWeight: 'bold' } },
+                        { value: 25, name: 'Item 2', itemStyle: { color: '#8DE4E6' }, label: { color: '#8DE4E6' } },
+                        { value: 12.5, name: 'Item 3', itemStyle: { color: '#4E86B3' }, label: { color: '#4E86B3' } }
+                    ]
+                }
+            ]
+        };
+        myChart.setOption(option);
+        window.addEventListener('resize', () => { myChart.resize(); });
+    </script>
+</body>
+</html>

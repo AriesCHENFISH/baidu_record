@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Proposal - The Statistic</title>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts Mirror (Baidu) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- ECharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgBlack: '#000000',
+                        textWhite: '#FFFFFF',
+                        accentRed: '#8B1C1C',
+                        softGray: '#DCDCDC',
+                        highlightBrown: '#8B4513',
+                        chartGold: '#D4AF37' 
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'Inter', 'Roboto', 'sans-serif'],
+                    },
+                    spacing: {
+                        '1280': '1280px',
+                        '720': '720px',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* Page Container - Strict 1280x720 */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #000000;
+            overflow: hidden;
+        }
+
+        /* Vertical Text Utility */
+        .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            transform: rotate(180deg);
+        }
+
+        /* Gradient Overlay */
+        .gradient-overlay {
+            background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.95) 100%);
+        }
+        
+        /* Text Stroke Effect for 'THE' */
+        .text-stroke-red {
+            -webkit-text-stroke: 2px #8B1C1C;
+            color: transparent;
+        }
+        
+        /* Filled Red Text */
+        .text-fill-red {
+            color: #8B1C1C;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div id="page_container">
+
+        <!-- Background Image Layer -->
+        <div class="absolute inset-0 z-0 opacity-60">
+            <!-- Using a theater seats/auditorium image to match the original vibe -->
+            <img src="https://images.unsplash.com/photo-1517604931442-710c8ef5ad25?q=80&w=1280&auto=format&fit=crop" 
+                 alt="Dark Theater Background" 
+                 class="w-full h-full object-cover">
+            <!-- 1280*720 -->
+        </div>
+
+        <!-- Gradient Overlay to ensure text readability -->
+        <div class="absolute inset-0 z-10 gradient-overlay"></div>
+
+        <!-- Content Grid Layer -->
+        <div class="relative z-20 w-full h-full grid grid-cols-12 gap-4 p-12">
+            
+            <!-- Column 1: Vertical Sidebar / Proposal Label -->
+            <div class="col-span-1 flex flex-col justify-start items-center pt-10">
+                <div class="border border-softGray rounded-full py-8 px-2 flex items-center justify-center h-64 opacity-80">
+                    <p class="vertical-text text-textWhite font-medium tracking-widest text-xs uppercase">
+                        Business Proposal
+                    </p>
+                </div>
+            </div>
+
+            <!-- Columns 2-12: Main Content Area -->
+            <div class="col-span-11 flex flex-col justify-between h-full">
+                
+                <!-- Top Section: ECharts Graph -->
+                <!-- Reduced height slightly to allow title at bottom to breathe -->
+                <div class="w-full h-3/5 pt-4">
+                    <div id="statistics-chart" class="w-full h-full"></div>
+                </div>
+
+                <!-- Bottom Section: Title and Description -->
+                <div class="flex flex-row items-end justify-between pb-4">
+                    
+                    <!-- Left: Huge Typography Title -->
+                    <div class="flex flex-col leading-none">
+                        <!-- 'THE' styled with the accent color -->
+                        <h2 class="text-6xl font-black text-fill-red tracking-tighter mb-[-10px] uppercase font-sans" style="text-shadow: 2px 2px 0px rgba(255,255,255,0.1);">
+                            The
+                        </h2>
+                        <!-- 'STATISTIC' in massive white block letters -->
+                        <h1 class="text-9xl font-black text-textWhite tracking-tight uppercase scale-y-110 origin-bottom-left">
+                            Statistic
+                        </h1>
+                    </div>
+
+                    <!-- Right: Description Paragraph -->
+                    <div class="w-1/3 mb-4">
+                        <div class="border-l-4 border-accentRed pl-6">
+                            <p class="text-softGray text-sm leading-relaxed font-light">
+                                A business proposal is a detailed document that outlines a company's plan to offer its products or services to potential clients or partners.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Script to render ECharts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var chartDom = document.getElementById('statistics-chart');
+            var myChart = echarts.init(chartDom);
+            var option;
+
+            option = {
+                backgroundColor: 'transparent',
+                // Legend at top center
+                legend: {
+                    top: '5%',
+                    textStyle: {
+                        color: '#DCDCDC',
+                        fontSize: 12
+                    },
+                    data: [
+                        { name: 'Seri 1', icon: 'circle' }, 
+                        { name: 'Seri 2', icon: 'circle' }, 
+                        { name: 'Seri 3', icon: 'circle' }
+                    ]
+                },
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    top: '15%',
+                    containLabel: true
+                },
+                xAxis: {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'],
+                    axisLine: {
+                        lineStyle: {
+                            color: '#555'
+                        }
+                    },
+                    axisLabel: {
+                        color: '#DCDCDC',
+                        fontSize: 12,
+                        margin: 15
+                    }
+                },
+                yAxis: {
+                    type: 'value',
+                    min: 0,
+                    max: 50,
+                    splitLine: {
+                        lineStyle: {
+                            color: 'rgba(255,255,255,0.1)',
+                            type: 'dashed'
+                        }
+                    },
+                    axisLabel: {
+                        color: '#DCDCDC'
+                    }
+                },
+                series: [
+                    {
+                        name: 'Seri 1',
+                        // Highlight Brown/Gold color
+                        type: 'line',
+                        data: [0, 12, 38, 30, 32],
+                        smooth: false,
+                        symbol: 'circle',
+                        symbolSize: 6,
+                        itemStyle: {
+                            color: '#D4AF37' // Gold/Brownish
+                        },
+                        lineStyle: {
+                            width: 2
+                        }
+                    },
+                    {
+                        name: 'Seri 2',
+                        // Accent Red color
+                        type: 'line',
+                        data: [12, 4, 20, 15, 50],
+                        smooth: false,
+                        symbol: 'circle',
+                        symbolSize: 6,
+                        itemStyle: {
+                            color: '#8B1C1C' // Dark Red
+                        },
+                        lineStyle: {
+                            width: 2
+                        }
+                    },
+                    {
+                        name: 'Seri 3',
+                        // Primary White
+                        type: 'line',
+                        data: [18, 30, 25, 40, 42],
+                        smooth: false,
+                        symbol: 'circle',
+                        symbolSize: 6,
+                        itemStyle: {
+                            color: '#FFFFFF' // White
+                        },
+                        lineStyle: {
+                            width: 2
+                        }
+                    }
+                ]
+            };
+
+            option && myChart.setOption(option);
+
+            // Handle resize if window changes (though container is fixed, this is good practice)
+            window.addEventListener('resize', function() {
+                myChart.resize();
+            });
+        });
+    </script>
+</body>
+</html>

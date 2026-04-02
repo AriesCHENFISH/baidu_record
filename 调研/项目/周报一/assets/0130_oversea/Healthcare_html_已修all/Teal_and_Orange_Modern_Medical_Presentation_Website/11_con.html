@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balanced Diet Pie Chart - Fauget</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        .font-main { font-family: 'Noto Sans SC', sans-serif; }
+        
+        /* CSS Pie Chart (Donut Style) */
+        .pie-chart {
+            width: 380px;
+            height: 380px;
+            border-radius: 50%;
+            position: relative;
+            /* Gradient Segments: 
+               - 50% Accent (Fruits)
+               - 25% Dark (Grains)
+               - 20% Gray (Protein)
+               - 5% Light (Oils) 
+            */
+            background: conic-gradient(
+                #71B7C5 0% 50%,   /* Accent */
+                #2D3236 50% 75%,  /* Primary Dark */
+                #94A3B8 75% 95%,  /* Neutral Gray */
+                #E2E8F0 95% 100%  /* Light Gray */
+            );
+            box-shadow: 0 20px 50px -10px rgba(113, 183, 197, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* The "Hole" of the donut */
+        .pie-chart::after {
+            content: "";
+            position: absolute;
+            width: 60%;
+            height: 60%;
+            background-color: white;
+            border-radius: 50%;
+            box-shadow: inset 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        /* Center Content Overlay */
+        .chart-center-content {
+            position: absolute;
+            z-index: 10;
+            text-align: center;
+        }
+
+        /* Legend Item Style */
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            border-radius: 8px;
+            transition: background 0.2s;
+        }
+        .legend-item:hover {
+            background: rgba(255,255,255,0.8);
+        }
+    </style>
+</head>
+<body class="bg-[#F3F5F7] font-main text-[#2D3236]">
+
+    <!-- Container 1280x720 -->
+    <div id="page_container" class="relative w-[1280px] h-[720px] mx-auto overflow-hidden p-12 flex flex-col">
+        
+        <!-- Header -->
+        <header class="flex justify-between items-start mb-10 border-b border-gray-200 pb-4">
+            <div>
+                <div class="flex items-center gap-2 mb-2">
+                    <i class="fa-solid fa-apple-whole text-[#71B7C5] text-xl"></i>
+                    <span class="text-sm font-bold text-gray-500 uppercase tracking-widest">Nutrition & Health</span>
+                </div>
+                <h1 class="text-5xl font-extrabold text-[#2D3236]">
+                    Balanced Diet for <span class="text-[#71B7C5]">Immunity</span>
+                </h1>
+            </div>
+            <!-- Date/Ref -->
+            <div class="text-right opacity-50">
+                <p class="text-sm font-bold">Ref: USDA / WHO</p>
+                <p class="text-sm">Daily Plate Composition</p>
+            </div>
+        </header>
+
+        <!-- Main Content Grid -->
+        <div class="grid grid-cols-12 gap-12 h-full">
+            
+            <!-- Left Column: Text & Context (5 Cols) -->
+            <div class="col-span-5 flex flex-col justify-center">
+                
+                <p class="text-base text-gray-600 leading-7 mb-8 text-justify">
+                    A strong immune system relies on a steady supply of nutrients. Experts recommend dividing your daily food intake into these proportions to ensure your body has the fuel to fight off infections and maintain hygiene from the inside out.
+                </p>
+
+                <!-- Key Takeaways Box -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border-l-4 border-[#71B7C5] mb-6">
+                    <h3 class="text-lg font-bold text-[#2D3236] mb-3">Why this balance?</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-[#71B7C5] mt-1 text-sm"></i>
+                            <span class="text-sm text-gray-600 leading-snug">
+                                <strong>Fruits & Veg:</strong> Provide essential vitamins (C, A, E) and antioxidants.
+                            </span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-[#71B7C5] mt-1 text-sm"></i>
+                            <span class="text-sm text-gray-600 leading-snug">
+                                <strong>Protein:</strong> Builds and repairs tissue and fights viral/bacterial infections.
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right Column: Pie Chart & Legend (7 Cols) -->
+            <div class="col-span-7 flex items-center justify-between pl-8">
+                
+                <!-- The Chart -->
+                <div class="pie-chart shadow-2xl">
+                    <div class="chart-center-content">
+                        <span class="block text-4xl font-extrabold text-[#2D3236]">100%</span>
+                        <span class="block text-sm font-bold text-gray-400 uppercase tracking-wider mt-1">Daily Intake</span>
+                    </div>
+                </div>
+
+                <!-- The Legend (Data) -->
+                <div class="flex flex-col gap-2 w-64">
+                    <h4 class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-2 pl-3">Plate Breakdown</h4>
+                    
+                    <!-- Item 1 -->
+                    <div class="legend-item">
+                        <div class="w-4 h-4 rounded-full bg-[#71B7C5] shadow-sm"></div>
+                        <div>
+                            <span class="block text-2xl font-bold text-[#2D3236]">50%</span>
+                            <span class="text-sm text-gray-600">Fruits & Vegetables</span>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="legend-item">
+                        <div class="w-4 h-4 rounded-full bg-[#2D3236] shadow-sm"></div>
+                        <div>
+                            <span class="block text-2xl font-bold text-[#2D3236]">25%</span>
+                            <span class="text-sm text-gray-600">Whole Grains</span>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="legend-item">
+                        <div class="w-4 h-4 rounded-full bg-[#94A3B8] shadow-sm"></div>
+                        <div>
+                            <span class="block text-2xl font-bold text-[#2D3236]">20%</span>
+                            <span class="text-sm text-gray-600">Lean Protein</span>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="legend-item">
+                        <div class="w-4 h-4 rounded-full bg-[#E2E8F0] shadow-sm"></div>
+                        <div>
+                            <span class="block text-2xl font-bold text-[#2D3236]">5%</span>
+                            <span class="text-sm text-gray-600">Healthy Fats/Oils</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Logo -->
+        <div class="absolute bottom-8 right-8 text-[#2D3236] opacity-10 font-bold text-xl tracking-widest">
+            FAUGET.
+        </div>
+
+    </div>
+
+</body>
+</html>

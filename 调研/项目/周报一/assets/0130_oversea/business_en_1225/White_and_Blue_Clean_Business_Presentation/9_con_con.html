@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating a Collaborative Work Environment</title>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- Google Fonts (Domestic Mirror) -->
+    <link href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2D3A7C',
+                        accent: '#F5AD41',
+                        secondary: '#F0F0F0',
+                        deco: '#E8E8E8',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'Inter', 'sans-serif'],
+                    },
+                    spacing: {
+                        '128': '32rem',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Basics */
+        html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans SC', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Page Container - Strict Constraints */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FFFFFF;
+            overflow: hidden; /* Ensure decorations don't spill */
+        }
+
+        /* Utility for circle decoration */
+        .circle-decoration {
+            position: absolute;
+            border-radius: 50%;
+            border: 1px solid #E8E8E8;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Custom scrollbar hide just in case */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <!-- Background Decorations (Geometric Lines) -->
+        <!-- Large outer circle -->
+        <div class="circle-decoration" style="width: 1000px; height: 1000px; right: -200px; top: -150px; border-width: 2px; opacity: 0.6;"></div>
+        <!-- Inner circle -->
+        <div class="circle-decoration" style="width: 800px; height: 800px; right: -100px; top: -50px; border-width: 1px; opacity: 0.4;"></div>
+        
+        <!-- Main Layout Grid -->
+        <div class="grid grid-cols-12 h-full w-full relative z-10">
+            
+            <!-- Left Column: Title & Text -->
+            <div class="col-span-7 pl-20 pr-12 flex flex-col justify-center h-full">
+                
+                <!-- Decorative Top Bar (Orange) -->
+                <div class="w-24 h-4 bg-accent rounded-full mb-10"></div>
+                
+                <!-- Main Headline -->
+                <h1 class="text-[76px] font-bold text-primary leading-[1.05] tracking-tight mb-12">
+                    Creating a<br>
+                    Collaborative<br>
+                    Work<br>
+                </h1>
+
+                <!-- Left Description Text -->
+                <div class="pr-10">
+                    <p class="text-gray-500 text-gl leading-relaxed text-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper orci sapien, vel volutpat diam euismod lobortis. Praesent auctor massa sed nisl auctor dictum. Mauris ut tempus risus. Donec iaculis tincidunt odio vel dapibus. 
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Column: Image, Text, Button -->
+            <div class="col-span-5 pr-16 pl-4 flex flex-col justify-center h-full pt-8">
+                
+                <!-- Image Card Component -->
+                <!-- Using a blue container to simulate the style of the original but cleaner -->
+                <div class="w-full bg-primary rounded-[40px] p-4 pb-0 mb-8 shadow-2xl relative overflow-hidden group">
+                    <!-- Image Wrapper -->
+                    <div class="relative w-full h-[300px] rounded-t-[30px] rounded-b-[10px] overflow-hidden bg-gray-200">
+                        <img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?q=80&w=1000&auto=format&fit=crop" 
+                             alt="Business Collaboration" 
+                             class="w-full h-full object-cover">
+                        <!-- 420*300 -->
+                    </div>
+                    <!-- Decorative bottom strip inside the card -->
+                    <div class="h-4 w-full"></div>
+                </div>
+
+                <!-- Right Description Text -->
+                <div class="mb-10 pl-2">
+                    <p class="text-gray-500 text-sm leading-relaxed text-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper orci sapien, vel volutpat diam euismod lobortis. Praesent auctor massa sed nisl auctor dictum. Mauris ut tempus risus. Donec iaculis tincidunt odio vel dapibus. 
+                    </p>
+                </div>
+
+                <!-- Call to Action Button Area -->
+                <div class="flex justify-end">
+                    <!-- Button Container -->
+                    <div class="bg-primary rounded-full p-1 pl-8 pr-2 flex items-center shadow-lg cursor-default transition-transform hover:scale-105">
+                        <span class="text-white font-semibold text-xl tracking-wide mr-6">Business</span>
+                        <!-- Icon Circle -->
+                        <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center">
+                            <i class="fa-solid fa-chevron-right text-white text-sm"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer/Deco Element (Optional subtle branding touch) -->
+        <div class="absolute bottom-6 left-20">
+             <!-- A very subtle page indicator or decorative dot -->
+            <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+        </div>
+
+    </div>
+
+</body>
+</html>

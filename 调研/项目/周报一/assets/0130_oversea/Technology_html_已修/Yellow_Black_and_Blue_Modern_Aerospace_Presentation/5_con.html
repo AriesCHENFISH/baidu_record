@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astronautics Keynote</title>
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#080808',
+                        accent: '#FCE67E',
+                        textMain: '#EDEDED',
+                        subtle: '#333333',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'Inter', 'sans-serif'],
+                        mono: ['Courier New', 'monospace'],
+                    },
+                    backgroundImage: {
+                        'metal-gradient': 'linear-gradient(135deg, #FCE67E 0%, #FFFBEB 50%, #D4AF37 100%)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px;
+            background-color: #080808;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 440px 1fr;
+        }
+        .text-glow { text-shadow: 0 0 20px rgba(252, 230, 126, 0.3); }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(4px);
+        }
+        .halftone-accent {
+            background-image: radial-gradient(#FCE67E 1.5px, transparent 1.5px);
+            background-size: 6px 6px;
+        }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        
+        <!-- LEFT: Hero Visual -->
+        <div class="relative h-full border-r border-[#222]">
+            <img src="https://images.unsplash.com/photo-1541873676-a18131494184?q=80&w=800&auto=format&fit=crop" 
+                 alt="Astronaut" 
+                 class="w-full h-full object-cover filter contrast-125 brightness-90">
+            
+            <!-- Technical Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-bgDark via-transparent to-transparent opacity-80"></div>
+            <div class="absolute bottom-10 left-10">
+                <div class="flex items-center gap-2 mb-2">
+                    <div class="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
+                    <span class="text-accent font-mono text-sm tracking-widest uppercase">EVA Status: Active</span>
+                </div>
+                <h2 class="text-white text-3xl font-bold leading-tight">Human Spaceflight <br> Systems</h2>
+            </div>
+        </div>
+
+        <!-- RIGHT: Content Area -->
+        <div class="flex flex-col p-12 relative">
+            
+            <!-- Decorative BG -->
+            <div class="absolute top-0 right-0 w-64 h-64 bg-accent opacity-5 rounded-full blur-[100px] pointer-events-none"></div>
+
+            <!-- Header -->
+            <header class="mb-10">
+                <h1 class="text-7xl font-black italic uppercase tracking-tighter text-transparent bg-clip-text bg-metal-gradient text-glow mb-4">
+                    Astronautics
+                </h1>
+                <div class="flex items-start justify-between border-t border-[#333] pt-6">
+                    <p class="text-textMain opacity-70 text-sm leading-relaxed max-w-lg">
+                        Astronautics covers the design, construction, and operation of spacecraft and satellites, enabling both robotic and human exploration of the cosmos.
+                    </p>
+                    <div class="flex flex-col items-end">
+                        <span class="text-accent font-mono text-xl font-bold">01</span>
+                        <span class="text-[#444] text-[10px] uppercase tracking-widest">Chapter</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Grid Content -->
+            <div class="grid grid-cols-3 gap-6">
+                
+                <!-- Card 1 -->
+                <div class="glass-card p-4 rounded-lg flex flex-col group hover:bg-[#111] transition-colors duration-300">
+                    <div class="h-32 w-full overflow-hidden rounded mb-4 border border-[#333]">
+                        <img src="https://images.unsplash.com/photo-1517976487492-5750f3195933?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">Spacecraft Design</h3>
+                    <p class="text-gray-400 text-sm leading-5">Thermal protection and structural integrity for reentry.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass-card p-4 rounded-lg flex flex-col group hover:bg-[#111] transition-colors duration-300">
+                    <div class="h-32 w-full overflow-hidden rounded mb-4 border border-[#333]">
+                        <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">Satellite Ops</h3>
+                    <p class="text-gray-400 text-sm leading-5">Global communication and earth observation grids.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass-card p-4 rounded-lg flex flex-col group hover:bg-[#111] transition-colors duration-300">
+                    <div class="h-32 w-full overflow-hidden rounded mb-4 border border-[#333]">
+                        <img src="https://images.unsplash.com/photo-1454789548728-85d2696cfbaf?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">Orbital Mech</h3>
+                    <p class="text-gray-400 text-sm leading-5">Trajectory calculations and propulsion maneuvers.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 3. BRANDING / LOGO (Unified New Design) -->
+        <div class="absolute bottom-12 right-12 z-20">
+             <!-- Decorative Halftone under logo -->
+             <div class="absolute -bottom-8 -right-8 w-40 h-24 halftone-accent opacity-10 pointer-events-none"></div>
+
+             <div class="flex items-center group">
+                <!-- Icon: Thruster/Target Style -->
+                <div class="relative w-10 h-10 mr-4 flex items-center justify-center">
+                    <div class="absolute inset-0 border border-gray-600 rounded-full"></div>
+                    <div class="absolute inset-0 border border-dashed border-accent rounded-full animate-[spin_12s_linear_infinite] opacity-60"></div>
+                    <div class="w-4 h-4 bg-accent transform rotate-45 shadow-[0_0_15px_rgba(252,230,126,0.6)]"></div>
+                </div>
+
+                <!-- Text Hierarchy -->
+                <div class="flex flex-col justify-center">
+                    <span class="text-2xl font-black text-white leading-none tracking-widest uppercase font-sans">
+                        Salford
+                    </span>
+                    <div class="flex items-center w-full mt-1">
+                        <span class="text-[9px] text-accent font-bold tracking-[0.2em] uppercase mr-2">& Company</span>
+                        <div class="h-[1px] flex-grow bg-[#444]"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

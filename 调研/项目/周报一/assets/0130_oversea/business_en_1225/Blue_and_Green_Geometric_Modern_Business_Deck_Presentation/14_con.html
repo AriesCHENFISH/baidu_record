@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Overview - Unified Style</title>
+
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryBg: '#051532',
+                        textMain: '#FFFFFF',
+                        textBody: '#E6E8EB',
+                        accentBlue: '#3B82F6',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative;
+            background-color: #051532; overflow: hidden; display: flex;
+        }
+        .tracking-tight-custom { letter-spacing: -0.04em; }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+
+        <div class="w-[40%] h-full relative border-r border-white/5">
+            <div class="absolute inset-0 bg-black/20 z-10"></div>
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop" 
+                 alt="Data Analysis" 
+                 class="w-full h-full object-cover grayscale opacity-80 mix-blend-overlay">
+
+            <div class="absolute bottom-12 right-0 z-20">
+                <div class="bg-white pl-8 pr-12 py-6 shadow-xl rounded-l-md">
+                    <p class="text-[#051532] text-4xl font-bold leading-none">08</p>
+                    <p class="text-gray-400 text-xs font-bold uppercase mt-2 tracking-wider">Chapter</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-[60%] h-full flex flex-col justify-between p-16 pl-20 relative z-10">
+            
+            <header class="flex items-center space-x-4 border-b border-white/10 pb-6 w-fit">
+                <span class="text-textBody font-bold tracking-widest text-sm uppercase">Business Deck</span>
+                <span class="text-white/20 text-sm">|</span>
+                <span class="text-textBody font-light tracking-widest text-sm">2025</span>
+            </header>
+
+            <main class="flex-1 flex flex-col justify-start pt-12 pr-12">
+                
+                <div class="w-12 h-1 bg-accentBlue rounded-full mb-6"></div>
+
+                <div class="flex justify-between items-end mb-8">
+                    <h1 class="text-textMain text-5xl font-bold leading-none tracking-tight-custom">
+                        Data Overview<span class="text-accentBlue">.</span>
+                    </h1>
+                    <div class="text-right">
+                        <div class="text-accentBlue text-2xl font-bold">+128%</div>
+                        <div class="text-textBody text-xs opacity-50 uppercase tracking-wider">YOY Growth</div>
+                    </div>
+                </div>
+
+                <div class="w-full h-[320px] bg-white/5 rounded-lg border border-white/10 p-4 relative backdrop-blur-sm">
+                    <div id="mainChart" class="w-full h-full"></div>
+                </div>
+                
+                <p class="mt-6 text-textBody text-xs opacity-60 font-light leading-relaxed max-w-lg">
+                    * The data illustrates significant upward trends in user acquisition across Q3 and Q4, driven by the new pricing strategy implementation.
+                </p>
+
+            </main>
+
+            <footer class="flex items-center gap-2 text-white/30 text-xs tracking-wider pt-4">
+                <i class="fa-solid fa-layer-group"></i>
+                <span>Studio Shodwe &middot; Strategic Overview</span>
+            </footer>
+
+            <div class="absolute top-[-100px] right-[-100px] w-[500px] h-[500px] rounded-full border border-white/5 opacity-50 pointer-events-none"></div>
+
+        </div>
+
+    </div>
+
+    <script>
+        var chartDom = document.getElementById('mainChart');
+        var myChart = echarts.init(chartDom);
+        var option;
+
+        option = {
+            // Transparent background to blend with page
+            backgroundColor: 'transparent',
+            grid: {
+                top: '15%',
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: { type: 'shadow' }
+            },
+            xAxis: {
+                type: 'category',
+                data: ['Q1', 'Q2', 'Q3', 'Q4'],
+                axisLine: { lineStyle: { color: 'rgba(255,255,255,0.2)' } },
+                axisLabel: { color: '#E6E8EB', fontFamily: 'Noto Sans SC' },
+                axisTick: { show: false }
+            },
+            yAxis: {
+                type: 'value',
+                splitLine: { 
+                    lineStyle: { color: 'rgba(255,255,255,0.05)', type: 'dashed' } 
+                },
+                axisLabel: { color: '#E6E8EB' }
+            },
+            series: [
+                {
+                    name: 'Revenue',
+                    type: 'bar',
+                    barWidth: '30%',
+                    itemStyle: {
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                            { offset: 0, color: '#3B82F6' },
+                            { offset: 1, color: 'rgba(59, 130, 246, 0.1)' }
+                        ]),
+                        borderRadius: [4, 4, 0, 0]
+                    },
+                    data: [120, 200, 150, 280]
+                },
+                {
+                    name: 'Target',
+                    type: 'line',
+                    smooth: true,
+                    symbol: 'circle',
+                    symbolSize: 8,
+                    itemStyle: {
+                        color: '#FFFFFF',
+                        borderColor: '#3B82F6',
+                        borderWidth: 2
+                    },
+                    lineStyle: {
+                        color: '#FFFFFF',
+                        width: 2,
+                        type: 'dashed'
+                    },
+                    data: [100, 180, 220, 300]
+                }
+            ]
+        };
+
+        option && myChart.setOption(option);
+    </script>
+
+</body>
+</html>

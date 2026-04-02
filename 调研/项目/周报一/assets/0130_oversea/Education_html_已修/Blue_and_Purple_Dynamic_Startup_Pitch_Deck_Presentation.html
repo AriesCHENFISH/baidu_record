@@ -1,0 +1,3257 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Responsive Merged HTML
+  </title>
+  <style>
+   body {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .page-wrapper {
+                width: 100%;
+                margin: 15px 0;
+                position: relative;
+            }
+            .page-title {
+                background: #f5f5f5;
+                padding: 5px 10px;
+                border-radius: 3px 3px 0 0;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+            }
+            .responsive-iframe {
+                border: none;
+                width: 100%;
+                display: block;
+            }
+  </style>
+ </head>
+ <body>
+  <!-- 内容将在这里插入 -->
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 1
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Startup Pitch Deck - Professional Keynote Refined&lt;/title&gt;
+    
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        neon: '#8C7AE6',
+                        accent: '#B33CE0',
+                        deepBlue: '#1B3F9B',
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #050505; /* Deep rich black */
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* 1. 背景网格纹理 - 增加科技感 */
+        .bg-grid {
+            position: absolute;
+            inset: 0;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: 0;
+            mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+        }
+
+        /* 2. 呼吸动画光晕 */
+        .glow-sphere {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            z-index: 0;
+            opacity: 0.4;
+            animation: breathe 8s infinite ease-in-out alternate;
+        }
+
+        @keyframes breathe {
+            0% { transform: scale(1); opacity: 0.3; }
+            100% { transform: scale(1.1); opacity: 0.5; }
+        }
+
+        /* 3. 高级镂空文字效果 */
+        .text-outline {
+            color: transparent;
+            -webkit-text-stroke: 2px rgba(255, 255, 255, 0.2);
+            position: relative;
+        }
+        
+        /* 4. 主标题渐变 */
+        .title-gradient {
+            background: linear-gradient(135deg, #FFFFFF 0%, #E0E7FF 50%, #8C7AE6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 30px rgba(140, 122, 230, 0.3));
+        }
+
+        /* 5. 玻璃拟态卡片升级 */
+        .glass-box {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* 卡片顶部的亮光线条 */
+        .glass-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+        }
+
+        /* 6. 装饰性角落标记 (HUD corners) */
+        .corner-mark {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-color: rgba(255, 255, 255, 0.15);
+            border-style: solid;
+            z-index: 10;
+        }
+        .tl { top: 40px; left: 40px; border-width: 2px 0 0 2px; }
+        .tr { top: 40px; right: 40px; border-width: 2px 2px 0 0; }
+        .bl { bottom: 40px; left: 40px; border-width: 0 0 2px 2px; }
+        .br { bottom: 40px; right: 40px; border-width: 0 2px 2px 0; }
+
+        /* 底部渐变线条 */
+        .bottom-accent {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #8C7AE6, #B33CE0, transparent);
+            box-shadow: 0 -2px 10px rgba(140, 122, 230, 0.5);
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;div class=&quot;bg-grid&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;glow-sphere&quot; style=&quot;width: 700px; height: 700px; background: #1B3F9B; top: -300px; left: -200px; animation-delay: 0s;&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;glow-sphere&quot; style=&quot;width: 600px; height: 600px; background: #B33CE0; bottom: -250px; right: -150px; opacity: 0.15; animation-delay: 2s;&quot;&gt;&lt;/div&gt;
+        
+        &lt;div class=&quot;corner-mark tl&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;corner-mark tr&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;corner-mark bl&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;corner-mark br&quot;&gt;&lt;/div&gt;
+
+        &lt;header class=&quot;relative z-10 w-full px-20 pt-14 flex justify-between items-start&quot;&gt;
+            &lt;div class=&quot;flex flex-col gap-1&quot;&gt;
+                &lt;div class=&quot;flex items-center gap-3&quot;&gt;
+                    &lt;div class=&quot;w-2 h-8 bg-gradient-to-b from-neon to-deepBlue rounded-full&quot;&gt;&lt;/div&gt;
+                    &lt;span class=&quot;text-white font-bold text-lg tracking-widest uppercase&quot;&gt;Ingoude&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;span class=&quot;text-white/30 text-[10px] tracking-[0.3em] pl-5 uppercase&quot;&gt;Future Vision Co.&lt;/span&gt;
+            &lt;/div&gt;
+            
+            &lt;div class=&quot;text-right&quot;&gt;
+                &lt;span class=&quot;text-neon font-mono text-xs opacity-70&quot;&gt;2025 / Q1 REPORT&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;main class=&quot;relative z-20 flex-1 flex flex-col items-center justify-center text-center mt-[-40px]&quot;&gt;
+            
+            &lt;div class=&quot;mb-6 px-4 py-1 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm&quot;&gt;
+                &lt;p class=&quot;text-neon text-[10px] tracking-[4px] uppercase font-bold&quot;&gt;Confidential Strategy&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;relative&quot;&gt;
+                &lt;h1 class=&quot;text-[110px] font-black leading-[0.85] tracking-tighter text-outline select-none opacity-50&quot;&gt;
+                    STARTUP
+                &lt;/h1&gt;
+                &lt;h2 class=&quot;text-[110px] font-black leading-[0.9] tracking-tighter title-gradient relative z-10 mt-[-10px]&quot;&gt;
+                    PITCH DECK
+                &lt;/h2&gt;
+                
+                &lt;div class=&quot;absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] border border-neon/20 rounded-[50%] -rotate-6 pointer-events-none&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;mt-16 glass-box px-10 py-5 flex items-center gap-8 transform transition-transform hover:scale-105 duration-500&quot;&gt;
+                &lt;div class=&quot;w-12 h-12 rounded-full bg-gradient-to-tr from-neon to-white p-[2px]&quot;&gt;
+                    &lt;div class=&quot;w-full h-full rounded-full bg-black flex items-center justify-center&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-user text-white/50 text-sm&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                
+                &lt;div class=&quot;flex flex-col text-left&quot;&gt;
+                    &lt;span class=&quot;text-white text-xl font-bold tracking-wide uppercase&quot;&gt;Neil Tran&lt;/span&gt;
+                    &lt;span class=&quot;text-neon text-xs font-medium tracking-wider&quot;&gt;Chief Technology Officer&lt;/span&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;w-px h-8 bg-white/10&quot;&gt;&lt;/div&gt;
+
+                &lt;div class=&quot;text-white/40 text-xs font-light text-right leading-tight&quot;&gt;
+                    &lt;div&gt;Product Launch&lt;/div&gt;
+                    &lt;div&gt;Keynote Session&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/main&gt;
+
+        &lt;footer class=&quot;relative z-10 px-20 pb-12 w-full&quot;&gt;
+            &lt;div class=&quot;flex justify-between items-end border-t border-white/5 pt-6&quot;&gt;
+                
+                &lt;div class=&quot;flex gap-10&quot;&gt;
+                    &lt;div class=&quot;group flex items-center gap-3 cursor-pointer&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-globe text-neon opacity-70 group-hover:opacity-100 transition-opacity&quot;&gt;&lt;/i&gt;
+                        &lt;span class=&quot;text-white/40 text-xs tracking-wider group-hover:text-white/80 transition-colors&quot;&gt;www.reallygreatsite.com&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;group flex items-center gap-3 cursor-pointer&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-envelope text-neon opacity-70 group-hover:opacity-100 transition-opacity&quot;&gt;&lt;/i&gt;
+                        &lt;span class=&quot;text-white/40 text-xs tracking-wider group-hover:text-white/80 transition-colors&quot;&gt;hello@reallygreatsite.com&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;flex items-center gap-2&quot;&gt;
+                    &lt;span class=&quot;text-white/20 text-[10px] font-mono&quot;&gt;SLIDE 01&lt;/span&gt;
+                    &lt;div class=&quot;w-16 h-[2px] bg-white/10 overflow-hidden rounded-full&quot;&gt;
+                        &lt;div class=&quot;w-1/3 h-full bg-neon&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;span class=&quot;text-white/20 text-[10px] font-mono&quot;&gt;15&lt;/span&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/footer&gt;
+
+        &lt;div class=&quot;bottom-accent&quot;&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 2
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Today's Agenda - Strategic Keynote&lt;/title&gt;
+    
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;!-- Custom Font --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryStart: '#8C7AE6',
+                        primaryEnd: '#1B3F9B',
+                        neon: '#B33CE0',
+                        darkBg: '#1A1B2E',
+                        bodyText: '#D1D5DB',
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px;
+            background-color: #000000;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #FFFFFF 30%, #8C7AE6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .number-gradient {
+            background: linear-gradient(180deg, #FFFFFF 0%, #8C7AE6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* 背景光晕 */
+        .glow-effect {
+            position: absolute;
+            width: 800px; height: 400px;
+            background: radial-gradient(circle, rgba(140, 122, 230, 0.15) 0%, rgba(27, 63, 155, 0.05) 50%, transparent 70%);
+            filter: blur(80px);
+            z-index: 0;
+        }
+
+        .item-border { border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+        
+        .vertical-divider {
+            width: 1px; height: 100%;
+            background: linear-gradient(180deg, transparent, rgba(140, 122, 230, 0.3), transparent);
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;!-- 装饰背景 --&gt;
+        &lt;div class=&quot;glow-effect&quot; style=&quot;bottom: -100px; left: -100px;&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;glow-effect&quot; style=&quot;top: -100px; right: -100px; opacity: 0.6;&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;absolute top-12 left-16 z-20&quot;&gt;
+            &lt;p class=&quot;text-sm tracking-[0.3em] text-white/30 uppercase font-medium&quot;&gt;Strategic Roadmap 2026&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 主内容网格 --&gt;
+        &lt;div class=&quot;relative z-10 w-full h-full grid grid-cols-12 gap-8 px-16 pt-32 pb-12&quot;&gt;
+
+            &lt;!-- 左侧：标题区域 (4 Columns) --&gt;
+            &lt;div class=&quot;col-span-4 flex flex-col justify-center h-full pb-20&quot;&gt;
+                &lt;!-- 
+                    修改点：使用 border-l-4 竖线 
+                    pl-11 (44px) 比原本的 pl-6 (24px) 增加了 20px 的间距
+                --&gt;
+                &lt;div class=&quot;border-l-4 border-neon pl-11&quot;&gt;
+                    &lt;h1 class=&quot;text-6xl font-black text-white leading-tight tracking-tight mb-8&quot;&gt;
+                        TODAY'S&lt;br&gt;
+                        &lt;span class=&quot;text-gradient&quot;&gt;AGENDA&lt;/span&gt;
+                    &lt;/h1&gt;
+                    
+                    &lt;p class=&quot;text-bodyText text-lg leading-relaxed font-light pr-8&quot;&gt;
+                        A comprehensive overview of our strategic roadmap, financial models, and market positioning.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- 右侧：列表项 (8 Columns) --&gt;
+            &lt;div class=&quot;col-span-8 h-full flex items-center&quot;&gt;
+                &lt;div class=&quot;w-full grid grid-cols-2 gap-x-16 h-auto relative&quot;&gt;
+                    
+                    &lt;!-- 中间装饰线 --&gt;
+                    &lt;div class=&quot;absolute left-1/2 top-0 bottom-0 vertical-divider -translate-x-1/2&quot;&gt;&lt;/div&gt;
+
+                    &lt;!-- 第一列 (01-05) --&gt;
+                    &lt;div class=&quot;flex flex-col justify-between h-[480px] pr-8&quot;&gt;
+                        &lt;div class=&quot;flex items-center item-border pb-4&quot;&gt;
+                            &lt;h2 class=&quot;text-4xl font-bold number-gradient w-16&quot;&gt;01&lt;/h2&gt;
+                            &lt;div class=&quot;ml-4&quot;&gt;
+                                &lt;h3 class=&quot;text-white text-xl font-medium&quot;&gt;Introduction&lt;/h3&gt;
+                                &lt;p class=&quot;text-[10px] text-gray-500 uppercase tracking-widest mt-1&quot;&gt;Overview&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;flex items-center item-border pb-4&quot;&gt;
+                            &lt;h2 class=&quot;text-4xl font-bold number-gradient w-16&quot;&gt;02&lt;/h2&gt;
+                            &lt;div class=&quot;ml-4&quot;&gt;
+                                &lt;h3 class=&quot;text-white text-xl font-medium&quot;&gt;Problem Statement&lt;/h3&gt;
+                                &lt;p class=&quot;text-[10px] text-gray-500 uppercase tracking-widest mt-1&quot;&gt;Analysis&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;flex items-center item-border pb-4&quot;&gt;
+                            &lt;h2 class=&quot;text-4xl font-bold number-gradient w-16&quot;&gt;03&lt;/h2&gt;
+                            &lt;div class=&quot;ml-4&quot;&gt;
+                                &lt;h3 class=&quot;text-white text-xl font-medium&quot;&gt;Innovative Solutions&lt;/h3&gt;
+                                &lt;p class=&quot;text-[10px] text-gray-500 uppercase tracking-widest mt-1&quot;&gt;Product&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;flex items-center item-border pb-4&quot;&gt;
+                            &lt;h2 class=&quot;text-4xl font-bold number-gradient w-16&quot;&gt;04&lt;/h2&gt;
+                            &lt;div class=&quot;ml-4&quot;&gt;
+                                &lt;h3 class=&quot;text-white text-xl font-medium&quot;&gt;Our Services&lt;/h3&gt;
+                                &lt;p class=&quot;text-[10px] text-gray-500 uppercase tracking-widest mt-1&quot;&gt;Offerings&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;flex items-center pb-4&quot;&gt;
+                            &lt;h2 class=&quot;text-4xl font-bold number-gradient w-16&quot;&gt;05&lt;/h2&gt;
+                            &lt;div class=&quot;ml-4&quot;&gt;
+                                &lt;h3 class=&quot;text-white text-xl font-medium&quot;&gt;Size of Market&lt;/h3&gt;
+                                &lt;p class=&quot;text-[10px] text-gray-500 uppercase tracking-widest mt-1&quot;&gt;Addressable&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- 第二列 (06-10) --&gt;
+                    &lt;div class=&quot;flex flex-col justify-between h-[480px] pl-8&quot;&gt;
+                        &lt;div class=&quot;flex items-center item-border pb-4&quot;&gt;
+                            &lt;h2 class=&quot;text-4xl font-bold number-gradient w-16&quot;&gt;06&lt;/h2&gt;
+                            &lt;div class=&quot;ml-4&quot;&gt;
+                                &lt;h3 class=&quot;text-white text-xl font-medium&quot;&gt;Competitive Advantages&lt;/h3&gt;
+                                &lt;p class=&quot;text-[10px] text-gray-500 uppercase tracking-widest mt-1&quot;&gt;Strategy&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;flex items-center item-border pb-4&quot;&gt;
+                            &lt;h2 class=&quot;text-4xl font-bold number-gradient w-16&quot;&gt;07&lt;/h2&gt;
+                            &lt;div class=&quot;ml-4&quot;&gt;
+                                &lt;h3 class=&quot;text-white text-xl font-medium&quot;&gt;Traction&lt;/h3&gt;
+                                &lt;p class=&quot;text-[10px] text-gray-500 uppercase tracking-widest mt-1&quot;&gt;Growth Metrics&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;flex items-center item-border pb-4&quot;&gt;
+                            &lt;h2 class=&quot;text-4xl font-bold number-gradient w-16&quot;&gt;08&lt;/h2&gt;
+                            &lt;div class=&quot;ml-4&quot;&gt;
+                                &lt;h3 class=&quot;text-white text-xl font-medium&quot;&gt;Revenue Model&lt;/h3&gt;
+                                &lt;p class=&quot;text-[10px] text-gray-500 uppercase tracking-widest mt-1&quot;&gt;Financials&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;flex items-center item-border pb-4&quot;&gt;
+                            &lt;h2 class=&quot;text-4xl font-bold number-gradient w-16&quot;&gt;09&lt;/h2&gt;
+                            &lt;div class=&quot;ml-4&quot;&gt;
+                                &lt;h3 class=&quot;text-white text-xl font-medium&quot;&gt;Accomplishments&lt;/h3&gt;
+                                &lt;p class=&quot;text-[10px] text-gray-500 uppercase tracking-widest mt-1&quot;&gt;Milestones&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;flex items-center pb-4&quot;&gt;
+                            &lt;h2 class=&quot;text-4xl font-bold number-gradient w-16&quot;&gt;10&lt;/h2&gt;
+                            &lt;div class=&quot;ml-4&quot;&gt;
+                                &lt;h3 class=&quot;text-white text-xl font-medium&quot;&gt;Use of Funds&lt;/h3&gt;
+                                &lt;p class=&quot;text-[10px] text-gray-500 uppercase tracking-widest mt-1&quot;&gt;Allocation&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 底部装饰条 --&gt;
+        &lt;div class=&quot;absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-neon via-primaryEnd to-transparent opacity-50&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 3
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Introduction - Strategic Design&lt;/title&gt;
+    &lt;!-- Tailwind CSS CDN --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;!-- FontAwesome CDN --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;!-- Google Fonts CDN (Specific Source) --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        /* CSS Reset &amp; Global Standards */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* 
+         * Page Container Logic 
+         * Fixed 1280x720 dimensions
+         * Centered
+         */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #000000;
+            overflow: hidden;
+        }
+
+        /* Custom Scrollbar hide just in case */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        
+        /* Utility for text-shadow to improve readability on gradients */
+        .text-shadow {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+    &lt;/style&gt;
+    
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            purple: '#8C7AE6',
+                            blue: '#1B3F9B',
+                            dark: '#1A1B2E',
+                            neon: '#B33CE0'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans SC', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;!-- 
+            Decorative Background Elements 
+            Simulating the blue swirl/glow from the top right corner 
+        --&gt;
+        &lt;div class=&quot;absolute -top-32 -right-32 w-[600px] h-[600px] rounded-full opacity-60 blur-[80px] pointer-events-none&quot;
+             style=&quot;background: radial-gradient(circle, rgba(27, 63, 155, 0.8) 0%, rgba(140, 122, 230, 0.2) 60%, transparent 100%);&quot;&gt;
+        &lt;/div&gt;
+        
+        &lt;!-- Subtle accent on bottom left --&gt;
+        &lt;div class=&quot;absolute -bottom-20 -left-20 w-[400px] h-[400px] rounded-full opacity-20 blur-[60px] pointer-events-none&quot;
+             style=&quot;background: radial-gradient(circle, rgba(179, 60, 224, 0.5) 0%, transparent 70%);&quot;&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Main Layout Wrapper with Padding --&gt;
+        &lt;div class=&quot;relative w-full h-full p-12 flex flex-col justify-between z-10&quot;&gt;
+            
+            &lt;!-- Header Section --&gt;
+            &lt;header class=&quot;mb-6&quot;&gt;
+                &lt;h1 class=&quot;text-white text-7xl font-bold tracking-tighter uppercase drop-shadow-lg&quot;&gt;
+                    Introduction
+                &lt;/h1&gt;
+                &lt;!-- Decorative line under title --&gt;
+                &lt;div class=&quot;w-24 h-1.5 bg-gradient-to-r from-brand-purple to-brand-blue mt-4 rounded-full&quot;&gt;&lt;/div&gt;
+            &lt;/header&gt;
+
+            &lt;!-- Main Content Grid --&gt;
+            &lt;div class=&quot;flex-1 grid grid-cols-12 gap-8 items-end pb-8&quot;&gt;
+                
+                &lt;!-- Left Column: Primary Image (Laptop Mockup) --&gt;
+                &lt;div class=&quot;col-span-4 h-full relative group&quot;&gt;
+                    &lt;!-- Image Container with Hover/Depth Effect --&gt;
+                    &lt;div class=&quot;w-full h-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl relative&quot;&gt;
+                         &lt;!-- Background shape to simulate the purple backdrop in original --&gt;
+                        &lt;div class=&quot;absolute inset-0 bg-brand-purple/20 mix-blend-overlay z-10&quot;&gt;&lt;/div&gt;
+                        
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1531297461136-8208b501155b?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80&quot; 
+                             alt=&quot;Design Future Laptop Mockup&quot; 
+                             class=&quot;w-full h-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-105&quot;&gt;
+                        &lt;!-- 400*500 --&gt;
+                        
+                        &lt;!-- Overlay Text mimicking the laptop screen content --&gt;
+                        &lt;div class=&quot;absolute bottom-8 left-6 right-6 z-20&quot;&gt;
+                            &lt;div class=&quot;bg-black/60 backdrop-blur-md p-4 rounded-lg border border-white/10&quot;&gt;
+                                &lt;h3 class=&quot;text-white font-bold text-lg leading-tight mb-1&quot;&gt;DESIGN YOUR FUTURE&lt;/h3&gt;
+                                &lt;p class=&quot;text-gray-400 text-xs uppercase tracking-widest&quot;&gt;With Us&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Right Column: Content Blocks --&gt;
+                &lt;div class=&quot;col-span-8 flex flex-col justify-end h-full gap-6&quot;&gt;
+                    
+                    &lt;!-- Top Block: Gradient Text Card (Primary Message) --&gt;
+                    &lt;!-- Replaced the solid color with the requested gradient style --&gt;
+                    &lt;div class=&quot;w-full p-10 rounded-2xl shadow-2xl border border-white/10 relative overflow-hidden&quot;
+                         style=&quot;background: linear-gradient(135deg, rgba(27, 63, 155, 0.9) 0%, rgba(140, 122, 230, 0.85) 100%);&quot;&gt;
+                        
+                        &lt;!-- Glassmorphism shine effect --&gt;
+                        &lt;div class=&quot;absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-white/10 to-transparent pointer-events-none&quot;&gt;&lt;/div&gt;
+                        
+                        &lt;!-- Decorative icon --&gt;
+                        &lt;div class=&quot;absolute top-6 right-8 text-white/10 text-6xl&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-quote-right&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+
+                        &lt;p class=&quot;text-white text-lg leading-relaxed font-light text-shadow pr-8&quot;&gt;
+                            We're your dedicated partners in propelling startups toward success. With a blend of expertise and innovation, we offer comprehensive solutions tailored to meet the specific needs of each venture we work with. From strategic guidance to brand development and digital marketing, we're committed to empowering startups to thrive in competitive markets.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Bottom Block: Secondary Image + Text --&gt;
+                    &lt;div class=&quot;grid grid-cols-12 gap-6 items-center&quot;&gt;
+                        
+                        &lt;!-- Secondary Small Image --&gt;
+                        &lt;div class=&quot;col-span-4 h-32 relative&quot;&gt;
+                             &lt;div class=&quot;w-full h-full rounded-xl overflow-hidden border border-white/10 shadow-lg&quot;&gt;
+                                &lt;img src=&quot;https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=80&quot; 
+                                     alt=&quot;Cyberpunk Laptop Glow&quot; 
+                                     class=&quot;w-full h-full object-cover&quot;&gt;
+                                &lt;!-- 280*128 --&gt;
+                             &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;!-- Secondary Text Description --&gt;
+                        &lt;div class=&quot;col-span-8 pl-2&quot;&gt;
+                             &lt;div class=&quot;border-l-2 border-brand-purple pl-6&quot;&gt;
+                                &lt;p class=&quot;text-gray-300 text-base leading-relaxed&quot;&gt;
+                                    Our collaborative approach ensures that we're not just service providers but invested advocates for your growth. Let us be the catalyst for your startup's journey, guiding you towards achieving your goals and beyond.
+                                &lt;/p&gt;
+                             &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Footer Section --&gt;
+            &lt;footer class=&quot;absolute bottom-10 right-12 z-20&quot;&gt;
+                &lt;p class=&quot;text-white font-medium text-lg tracking-wide italic opacity-80&quot;&gt;
+                    Ingoude Company
+                &lt;/p&gt;
+            &lt;/footer&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 4
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Problem Statement - High End Keynote&lt;/title&gt;
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;!-- Google Fonts (Domestic Mirror) --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        /* CSS Reset &amp; Basics */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* Page Container */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #000000;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+            color: #FFFFFF;
+        }
+
+        /* Decorative Glow Effects (Simulating the Neon Swooshes) */
+        .glow-shape-1 {
+            position: absolute;
+            width: 800px;
+            height: 300px;
+            border-radius: 50%;
+            background: linear-gradient(90deg, #B33CE0, #1B3F9B);
+            filter: blur(80px);
+            opacity: 0.4;
+            bottom: -100px;
+            left: -200px;
+            transform: rotate(-20deg);
+            z-index: 1;
+        }
+
+        .glow-shape-2 {
+            position: absolute;
+            width: 600px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(90deg, #1B3F9B, #8C7AE6);
+            filter: blur(90px);
+            opacity: 0.3;
+            top: -80px;
+            right: -100px;
+            z-index: 1;
+        }
+
+        /* Thin line decoration to mimic the swoosh stroke */
+        .line-decoration {
+            position: absolute;
+            width: 1400px;
+            height: 400px;
+            border: 2px solid rgba(179, 60, 224, 0.3);
+            border-radius: 50%;
+            bottom: -200px;
+            left: -100px;
+            transform: rotate(-15deg);
+            box-shadow: 0 0 20px rgba(179, 60, 224, 0.4);
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        /* Custom Gradients for Cards based on Design System */
+        .card-gradient-1 {
+            background: linear-gradient(160deg, #8C7AE6 0%, #1B3F9B 100%);
+        }
+        
+        .card-gradient-2 {
+            background: linear-gradient(160deg, #384c9c 0%, #1A1B2E 100%);
+        }
+
+        .card-gradient-3 {
+            background: linear-gradient(160deg, #2a2c4e 0%, #0d0e18 100%);
+        }
+
+        /* Glassmorphism Borders */
+        .glass-border {
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Typography spacing */
+        p {
+            line-height: 1.6;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;!-- Main PPT Container --&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;!-- Ambient Background Layers --&gt;
+        &lt;div class=&quot;glow-shape-1&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;glow-shape-2&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;line-decoration&quot;&gt;&lt;/div&gt;
+
+        &lt;!-- Content Grid --&gt;
+        &lt;div class=&quot;relative z-10 grid grid-cols-12 h-full w-full&quot;&gt;
+            
+            &lt;!-- Left Column: Title Area (Span 4) --&gt;
+            &lt;div class=&quot;col-span-4 flex flex-col justify-center pl-16 pr-8&quot;&gt;
+                &lt;!-- Decorative small tag --&gt;
+                &lt;div class=&quot;mb-6 flex items-center gap-2&quot;&gt;
+                    &lt;div class=&quot;w-8 h-1 bg-[#8C7AE6] rounded-full&quot;&gt;&lt;/div&gt;
+                    &lt;span class=&quot;text-[#8C7AE6] font-bold tracking-widest text-sm uppercase&quot;&gt;Analysis&lt;/span&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Main Title --&gt;
+                &lt;h1 class=&quot;text-7xl font-extrabold leading-tight tracking-tight text-white mb-6&quot; style=&quot;text-shadow: 0 4px 12px rgba(0,0,0,0.5);&quot;&gt;
+                    PROBLEM&lt;br&gt;
+                    &lt;span class=&quot;text-transparent bg-clip-text bg-gradient-to-r from-white to-[#D1D5DB]&quot;&gt;STATEMENT&lt;/span&gt;
+                &lt;/h1&gt;
+
+                &lt;!-- Optional Subtitle/Context --&gt;
+                &lt;p class=&quot;text-[#D1D5DB] text-lg font-light pr-4&quot;&gt;
+                    Identifying key challenges in the current market landscape to unlock strategic growth opportunities.
+                &lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Right Column: Cards Area (Span 8) --&gt;
+            &lt;div class=&quot;col-span-8 flex items-center justify-center pr-16 pl-4&quot;&gt;
+                &lt;div class=&quot;grid grid-cols-3 gap-6 w-full h-[520px]&quot;&gt;
+                    
+                    &lt;!-- Card 01: High Contrast / Primary Gradient --&gt;
+                    &lt;div class=&quot;card-gradient-1 rounded-2xl p-8 flex flex-col items-center text-center glass-border relative overflow-hidden group&quot;&gt;
+                        &lt;!-- Subtle inner glow --&gt;
+                        &lt;div class=&quot;absolute top-0 left-0 w-full h-1 bg-white/20&quot;&gt;&lt;/div&gt;
+                        
+                        &lt;!-- Number --&gt;
+                        &lt;div class=&quot;mb-6 mt-4&quot;&gt;
+                            &lt;h2 class=&quot;text-6xl font-bold text-white tracking-tighter&quot; style=&quot;text-shadow: 0 2px 10px rgba(0,0,0,0.3);&quot;&gt;01&lt;/h2&gt;
+                        &lt;/div&gt;
+                        
+                        &lt;!-- Icon (Visual Enhancement) --&gt;
+                        &lt;div class=&quot;mb-4 text-white/80&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-fingerprint text-2xl&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+
+                        &lt;!-- Title --&gt;
+                        &lt;h3 class=&quot;text-lg font-bold uppercase tracking-wide text-white mb-6 border-b border-white/20 pb-4 w-full&quot;&gt;
+                            Lack of Brand&lt;br&gt;Differentiation
+                        &lt;/h3&gt;
+
+                        &lt;!-- Text --&gt;
+                        &lt;p class=&quot;text-sm text-white/90 font-light leading-relaxed&quot;&gt;
+                            Startups often find it hard to make their brand unique in a crowded market. Without a clear way to stand out, they struggle to catch the eye of potential customers and lose out to bigger competitors.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Card 02: Mid Tone --&gt;
+                    &lt;div class=&quot;card-gradient-2 rounded-2xl p-8 flex flex-col items-center text-center glass-border relative overflow-hidden&quot;&gt;
+                        &lt;!-- Number --&gt;
+                        &lt;div class=&quot;mb-6 mt-4&quot;&gt;
+                            &lt;h2 class=&quot;text-6xl font-bold text-white tracking-tighter opacity-90&quot;&gt;02&lt;/h2&gt;
+                        &lt;/div&gt;
+
+                        &lt;!-- Icon --&gt;
+                        &lt;div class=&quot;mb-4 text-[#8C7AE6]&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-bullhorn text-2xl&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+
+                        &lt;!-- Title --&gt;
+                        &lt;h3 class=&quot;text-lg font-bold uppercase tracking-wide text-white mb-6 border-b border-white/10 pb-4 w-full&quot;&gt;
+                            Inconsistent Brand&lt;br&gt;Messaging
+                        &lt;/h3&gt;
+
+                        &lt;!-- Text --&gt;
+                        &lt;p class=&quot;text-sm text-[#D1D5DB] font-light leading-relaxed&quot;&gt;
+                            Inconsistency in brand messaging across various marketing channels confuses potential customers and dilutes brand perception. Startups often face challenges in maintaining a cohesive message.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Card 03: Dark Tone --&gt;
+                    &lt;div class=&quot;card-gradient-3 rounded-2xl p-8 flex flex-col items-center text-center glass-border relative overflow-hidden&quot;&gt;
+                        &lt;!-- Number --&gt;
+                        &lt;div class=&quot;mb-6 mt-4&quot;&gt;
+                            &lt;h2 class=&quot;text-6xl font-bold text-white tracking-tighter opacity-80&quot;&gt;03&lt;/h2&gt;
+                        &lt;/div&gt;
+
+                        &lt;!-- Icon --&gt;
+                        &lt;div class=&quot;mb-4 text-[#1B3F9B]&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-chart-line text-2xl&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+
+                        &lt;!-- Title --&gt;
+                        &lt;h3 class=&quot;text-lg font-bold uppercase tracking-wide text-white mb-6 border-b border-white/10 pb-4 w-full&quot;&gt;
+                            Keeping Up With&lt;br&gt;Trends
+                        &lt;/h3&gt;
+
+                        &lt;!-- Text --&gt;
+                        &lt;p class=&quot;text-sm text-[#D1D5DB] font-light leading-relaxed&quot;&gt;
+                            The market changes fast, and startups need to keep up. But without a big team or resources, it's tough to stay on top of the latest trends and adapt their marketing strategies accordingly.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 5
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Innovative Solutions Keynote - No Image&lt;/title&gt;
+    
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        /* CSS Reset &amp; Global Settings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container - Strict Dimensions */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #050505; /* Deep black-gray */
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+            
+            /* CSS-only Background Design: Grid + Ambient Glow */
+            background-image: 
+                /* Subtle Grid Lines */
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                /* Purple Glow Top Right */
+                radial-gradient(circle at 80% 0%, rgba(140, 122, 230, 0.15) 0%, transparent 50%),
+                /* Blue Glow Bottom Left */
+                radial-gradient(circle at 20% 100%, rgba(27, 63, 155, 0.15) 0%, transparent 50%);
+            background-size: 40px 40px, 40px 40px, 100% 100%, 100% 100%;
+        }
+
+        /* Custom Utilities */
+        .card-gradient-border {
+            /* Simulating a gradient border using a parent wrapper background */
+            background: linear-gradient(135deg, #8C7AE6, #1B3F9B);
+            padding: 1px; /* Border width */
+            border-radius: 16px;
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .icon-glow {
+            box-shadow: 0 0 25px rgba(140, 122, 230, 0.3);
+        }
+
+        /* Decorative Circle (CSS Shape) */
+        .deco-circle {
+            position: absolute;
+            border-radius: 50%;
+            border: 1px solid rgba(140, 122, 230, 0.1);
+            z-index: 0;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;div class=&quot;deco-circle&quot; style=&quot;width: 600px; height: 600px; top: -200px; right: -100px; border-color: rgba(140, 122, 230, 0.05);&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;deco-circle&quot; style=&quot;width: 400px; height: 400px; top: -100px; right: 0px; border-color: rgba(27, 63, 155, 0.08);&quot;&gt;&lt;/div&gt;
+
+        &lt;div style=&quot;position: relative; z-index: 10; height: 100%; display: flex; flex-direction: column; justify-content: center; padding: 60px 80px;&quot;&gt;
+            
+            &lt;div style=&quot;margin-bottom: 50px; width: 70%;&quot;&gt;
+                &lt;h1 style=&quot;font-size: 64px; line-height: 1.1; font-weight: 800; color: #FFFFFF; letter-spacing: -1px; text-transform: uppercase;&quot;&gt;
+                    Our Innovative &lt;br&gt;
+                    &lt;span style=&quot;color: #8C7AE6; text-shadow: 0 0 30px rgba(140,122,230,0.4);&quot;&gt;Solutions&lt;/span&gt;
+                &lt;/h1&gt;
+                &lt;div style=&quot;width: 100px; height: 6px; background: linear-gradient(90deg, #8C7AE6, #B33CE0); margin-top: 24px; border-radius: 3px;&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div style=&quot;display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; align-items: stretch;&quot;&gt;
+
+                &lt;div class=&quot;card-gradient-border&quot;&gt;
+                    &lt;div style=&quot;background-color: #0F1016; height: 100%; width: 100%; border-radius: 15px; padding: 45px 30px 35px 30px; position: relative; display: flex; flex-direction: column;&quot;&gt;
+                        
+                        &lt;div class=&quot;icon-glow&quot; style=&quot;position: absolute; top: -30px; left: 50%; transform: translateX(-50%); width: 64px; height: 64px; background: linear-gradient(135deg, #FFFFFF, #E0E7FF); border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 4px solid #0F1016;&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-certificate&quot; style=&quot;font-size: 24px; color: #1B3F9B;&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+
+                        &lt;h3 style=&quot;font-size: 18px; font-weight: 700; color: #FFFFFF; text-align: center; margin-top: 15px; margin-bottom: 20px; letter-spacing: 0.5px; text-transform: uppercase;&quot;&gt;
+                            Unique Selling Point
+                        &lt;/h3&gt;
+                        
+                        &lt;div style=&quot;flex-grow: 1;&quot;&gt;
+                            &lt;p style=&quot;font-size: 14px; line-height: 1.6; color: #9CA3AF; text-align: center;&quot;&gt;
+                                Define what makes the brand special. Analyze competitors and target audience to craft a distinct market position.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;card-gradient-border&quot;&gt;
+                    &lt;div style=&quot;background-color: #0F1016; height: 100%; width: 100%; border-radius: 15px; padding: 45px 30px 35px 30px; position: relative; display: flex; flex-direction: column;&quot;&gt;
+                        
+                        &lt;div class=&quot;icon-glow&quot; style=&quot;position: absolute; top: -30px; left: 50%; transform: translateX(-50%); width: 64px; height: 64px; background: linear-gradient(135deg, #FFFFFF, #E0E7FF); border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 4px solid #0F1016;&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-hand-holding-heart&quot; style=&quot;font-size: 24px; color: #1B3F9B;&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+
+                        &lt;h3 style=&quot;font-size: 18px; font-weight: 700; color: #FFFFFF; text-align: center; margin-top: 15px; margin-bottom: 20px; letter-spacing: 0.5px; text-transform: uppercase;&quot;&gt;
+                            Brand Messaging
+                        &lt;/h3&gt;
+                        
+                        &lt;div style=&quot;flex-grow: 1;&quot;&gt;
+                            &lt;p style=&quot;font-size: 14px; line-height: 1.6; color: #9CA3AF; text-align: center;&quot;&gt;
+                                Establish clear guidelines for communication. Ensure consistency across all marketing channels and internal teams.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;card-gradient-border&quot;&gt;
+                    &lt;div style=&quot;background-color: #0F1016; height: 100%; width: 100%; border-radius: 15px; padding: 45px 30px 35px 30px; position: relative; display: flex; flex-direction: column;&quot;&gt;
+                        
+                        &lt;div class=&quot;icon-glow&quot; style=&quot;position: absolute; top: -30px; left: 50%; transform: translateX(-50%); width: 64px; height: 64px; background: linear-gradient(135deg, #FFFFFF, #E0E7FF); border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 4px solid #0F1016;&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-bullseye&quot; style=&quot;font-size: 24px; color: #1B3F9B;&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+
+                        &lt;h3 style=&quot;font-size: 18px; font-weight: 700; color: #FFFFFF; text-align: center; margin-top: 15px; margin-bottom: 20px; letter-spacing: 0.5px; text-transform: uppercase;&quot;&gt;
+                            Agile Marketing
+                        &lt;/h3&gt;
+                        
+                        &lt;div style=&quot;flex-grow: 1;&quot;&gt;
+                            &lt;p style=&quot;font-size: 14px; line-height: 1.6; color: #9CA3AF; text-align: center;&quot;&gt;
+                                Adapt quickly to market shifts. Utilize real-time data analysis to pivot strategies and maintain effectiveness.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;div style=&quot;position: absolute; bottom: 30px; right: 40px; display: flex; align-items: center; gap: 10px;&quot;&gt;
+            &lt;div style=&quot;height: 1px; width: 40px; background-color: #8C7AE6;&quot;&gt;&lt;/div&gt;
+            &lt;div style=&quot;color: #8C7AE6; font-size: 12px; font-weight: 700; letter-spacing: 2px;&quot;&gt;
+                STRATEGY // 2025
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 6
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Discover Our Services - Premium Keynote&lt;/title&gt;
+    
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;!-- Google Fonts --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&amp;family=Oswald:wght@500;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+
+    &lt;!-- Custom Config --&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            black: '#000000',
+                            dark: '#1A1B2E',
+                            primaryStart: '#8C7AE6',
+                            primaryEnd: '#1B3F9B',
+                            accent: '#B33CE0',
+                            textMain: '#FFFFFF',
+                            textBody: '#D1D5DB'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans SC', 'sans-serif'],
+                        display: ['Oswald', 'sans-serif']
+                    },
+                    spacing: {
+                        '1280': '1280px',
+                        '720': '720px'
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        /* CSS Reset &amp; Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+
+        /* Page Container */
+        .page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #000000;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 480px 1fr; /* Left Image Area | Right Content Area */
+        }
+
+        /* Decorative Background Swirls */
+        .glow-effect {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(140, 122, 230, 0.15) 0%, rgba(27, 63, 155, 0.05) 50%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(60px);
+            z-index: 0;
+        }
+
+        .top-right-accent {
+            position: absolute;
+            top: -200px;
+            right: -100px;
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle at center, rgba(179, 60, 224, 0.2), transparent 60%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* Gradient Text */
+        .text-gradient {
+            background: linear-gradient(90deg, #FFFFFF 0%, #8C7AE6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Glass Card Effect for Image Backing */
+        .image-card {
+            background: linear-gradient(135deg, #8C7AE6 0%, #1B3F9B 100%);
+            border-radius: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Service Grid Separators */
+        .separator-v {
+            position: absolute;
+            top: 10%;
+            bottom: 10%;
+            left: 50%;
+            width: 1px;
+            background: linear-gradient(to bottom, transparent, #8C7AE6, transparent);
+            opacity: 0.3;
+        }
+        
+        .separator-h {
+            position: absolute;
+            left: 5%;
+            right: 5%;
+            top: 50%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #8C7AE6, transparent);
+            opacity: 0.3;
+        }
+
+        .icon-glow {
+            box-shadow: 0 0 15px rgba(140, 122, 230, 0.4);
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div class=&quot;page_container&quot;&gt;
+        &lt;!-- Background Decorations --&gt;
+        &lt;div class=&quot;glow-effect&quot; style=&quot;bottom: -100px; left: -100px;&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;top-right-accent&quot;&gt;&lt;/div&gt;
+        
+        &lt;!-- Decorative Neon Ring (Simulating the top right swirl in source) --&gt;
+        &lt;div style=&quot;position: absolute; top: -150px; right: -150px; width: 400px; height: 400px; border-radius: 50%; border: 2px solid rgba(140,122,230,0.3); box-shadow: 0 0 40px rgba(179,60,224,0.3); z-index: 1;&quot;&gt;&lt;/div&gt;
+        &lt;div style=&quot;position: absolute; top: -120px; right: -120px; width: 340px; height: 340px; border-radius: 50%; border: 1px solid rgba(179,60,224,0.4); opacity: 0.6; z-index: 1;&quot;&gt;&lt;/div&gt;
+
+
+        &lt;!-- LEFT SECTION: HERO IMAGE --&gt;
+        &lt;div class=&quot;relative z-10 flex items-center justify-center h-full pl-16 pr-8&quot;&gt;
+            &lt;!-- Image Backdrop Card --&gt;
+            &lt;div class=&quot;image-card w-full h-[520px] shadow-2xl flex items-end justify-center relative group&quot;&gt;
+                &lt;!-- Inner decorative gradient overlay --&gt;
+                &lt;div class=&quot;absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10&quot;&gt;&lt;/div&gt;
+                
+                &lt;!-- Main Character Image --&gt;
+                &lt;img 
+                    src=&quot;https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&amp;w=1000&amp;auto=format&amp;fit=crop&quot; 
+                    alt=&quot;Professional Consultant&quot; 
+                    class=&quot;absolute bottom-0 w-[110%] max-w-none h-auto object-cover object-top z-0 transition-transform duration-700 group-hover:scale-105&quot;
+                    style=&quot;mask-image: linear-gradient(to bottom, black 80%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);&quot;
+                &gt;
+                &lt;!-- 400*520 --&gt;
+
+                &lt;!-- Optional Floating Badge --&gt;
+                &lt;div class=&quot;absolute bottom-8 left-8 z-20 bg-brand-dark/90 backdrop-blur-md px-6 py-3 rounded-lg border border-brand-primaryStart/30&quot;&gt;
+                     &lt;p class=&quot;text-brand-textMain font-semibold text-sm tracking-widest uppercase&quot;&gt;Expert Team&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- RIGHT SECTION: CONTENT --&gt;
+        &lt;div class=&quot;relative z-10 flex flex-col justify-center pr-20 pl-4 h-full&quot;&gt;
+            
+            &lt;!-- Header Section --&gt;
+            &lt;div class=&quot;mb-12&quot;&gt;
+                &lt;h1 class=&quot;font-display text-7xl font-bold uppercase leading-tight tracking-wide text-white mb-2&quot;&gt;
+                    Discover Our &lt;br/&gt;
+                    &lt;span class=&quot;text-gradient&quot;&gt;Services&lt;/span&gt;
+                &lt;/h1&gt;
+                &lt;div class=&quot;w-24 h-1.5 bg-gradient-to-r from-brand-accent to-brand-primaryStart rounded-full mt-4&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Services Grid --&gt;
+            &lt;div class=&quot;relative w-full&quot;&gt;
+                
+                &lt;!-- Artistic Separators --&gt;
+                &lt;div class=&quot;separator-v&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;separator-h&quot;&gt;&lt;/div&gt;
+
+                &lt;div class=&quot;grid grid-cols-2 grid-rows-2 gap-x-12 gap-y-10&quot;&gt;
+                    
+                    &lt;!-- Item 1: Brand Building --&gt;
+                    &lt;div class=&quot;flex flex-col items-center text-center p-4&quot;&gt;
+                        &lt;div class=&quot;mb-4 relative&quot;&gt;
+                            &lt;div class=&quot;w-12 h-12 rounded-full bg-gradient-to-br from-brand-primaryStart to-brand-primaryEnd flex items-center justify-center icon-glow&quot;&gt;
+                                &lt;i class=&quot;fa-solid fa-gem text-white text-lg&quot;&gt;&lt;/i&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;h3 class=&quot;text-brand-textMain text-xl font-bold uppercase tracking-wider mb-3&quot;&gt;Brand Building&lt;/h3&gt;
+                        &lt;p class=&quot;text-brand-textBody text-sm leading-relaxed font-light opacity-90&quot;&gt;
+                            We create a strong brand identity, including logos and design elements, to help startups stand out and gain trust.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Item 2: Digital Marketing --&gt;
+                    &lt;div class=&quot;flex flex-col items-center text-center p-4&quot;&gt;
+                        &lt;div class=&quot;mb-4 relative&quot;&gt;
+                            &lt;div class=&quot;w-12 h-12 rounded-full bg-gradient-to-br from-brand-primaryStart to-brand-primaryEnd flex items-center justify-center icon-glow&quot;&gt;
+                                &lt;i class=&quot;fa-solid fa-bullhorn text-white text-lg&quot;&gt;&lt;/i&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;h3 class=&quot;text-brand-textMain text-xl font-bold uppercase tracking-wider mb-3&quot;&gt;Digital Marketing&lt;/h3&gt;
+                        &lt;p class=&quot;text-brand-textBody text-sm leading-relaxed font-light opacity-90&quot;&gt;
+                            We create a strong brand identity, including logos and design elements, to help startups stand out and gain trust.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Item 3: Marketing Analytics --&gt;
+                    &lt;div class=&quot;flex flex-col items-center text-center p-4&quot;&gt;
+                        &lt;div class=&quot;mb-4 relative&quot;&gt;
+                            &lt;div class=&quot;w-12 h-12 rounded-full bg-gradient-to-br from-brand-primaryStart to-brand-primaryEnd flex items-center justify-center icon-glow&quot;&gt;
+                                &lt;i class=&quot;fa-solid fa-chart-pie text-white text-lg&quot;&gt;&lt;/i&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;h3 class=&quot;text-brand-textMain text-xl font-bold uppercase tracking-wider mb-3&quot;&gt;Marketing Analytics&lt;/h3&gt;
+                        &lt;p class=&quot;text-brand-textBody text-sm leading-relaxed font-light opacity-90&quot;&gt;
+                            We provide insights and reports on marketing performance to help startups make informed decisions.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Item 4: PR Support --&gt;
+                    &lt;div class=&quot;flex flex-col items-center text-center p-4&quot;&gt;
+                        &lt;div class=&quot;mb-4 relative&quot;&gt;
+                            &lt;div class=&quot;w-12 h-12 rounded-full bg-gradient-to-br from-brand-primaryStart to-brand-primaryEnd flex items-center justify-center icon-glow&quot;&gt;
+                                &lt;i class=&quot;fa-solid fa-handshake text-white text-lg&quot;&gt;&lt;/i&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;h3 class=&quot;text-brand-textMain text-xl font-bold uppercase tracking-wider mb-3&quot;&gt;PR Support&lt;/h3&gt;
+                        &lt;p class=&quot;text-brand-textBody text-sm leading-relaxed font-light opacity-90&quot;&gt;
+                            We help startups get media coverage and build relationships with relevant journalists and influencers.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 7
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Market Size Analysis&lt;/title&gt;
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;!-- ECharts --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js&quot;&gt;&lt;/script&gt;
+    &lt;!-- Custom Google Font --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        /* CSS Reset &amp; Basic Setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+
+        /* Page Container - Strict 1280x720 */
+        .page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #000000;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Custom Gradients based on Config */
+        .bg-gradient-primary {
+            background: linear-gradient(90deg, #8C7AE6, #1B3F9B);
+        }
+
+        .bg-gradient-card {
+            background: linear-gradient(135deg, rgba(26, 27, 46, 0.9), rgba(27, 63, 155, 0.2));
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(140, 122, 230, 0.2);
+        }
+        
+        .bg-gradient-bar-1 { background: linear-gradient(180deg, #D1D5DB, #8C7AE6); }
+        .bg-gradient-bar-2 { background: linear-gradient(180deg, #8C7AE6, #1B3F9B); }
+        .bg-gradient-bar-3 { background: linear-gradient(180deg, #B33CE0, #1A1B2E); }
+
+        /* Text Styles */
+        h1 {
+            color: #FFFFFF;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+        
+        p {
+            color: #D1D5DB;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        /* Decorative Glows */
+        .glow-blob {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background-color: #B33CE0;
+            filter: blur(120px);
+            opacity: 0.15;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Layout Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 550px 1fr;
+            gap: 60px;
+            width: 1160px; /* 1280 - 60px padding on sides */
+            height: 600px; /* Vertical padding buffer */
+            z-index: 10;
+        }
+
+        /* Metric Card Styling */
+        .metric-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 24px;
+            padding: 20px 24px;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Pseudo-element for subtle shine on cards */
+        .metric-row::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, #8C7AE6, #B33CE0);
+        }
+
+        /* Chart Container */
+        .chart-wrapper {
+            width: 100%;
+            height: 100%;
+            background: #1A1B2E;
+            border-radius: 20px;
+            padding: 30px;
+            position: relative;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        #marketChart {
+            width: 100%;
+            height: 100%;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div class=&quot;page_container&quot;&gt;
+        &lt;!-- Decorative Background Elements --&gt;
+        &lt;div class=&quot;glow-blob&quot; style=&quot;top: -200px; left: -200px; background-color: #1B3F9B;&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;glow-blob&quot; style=&quot;bottom: -200px; right: -200px; background-color: #B33CE0;&quot;&gt;&lt;/div&gt;
+
+        &lt;!-- Main Content Grid --&gt;
+        &lt;div class=&quot;content-grid&quot;&gt;
+            
+            &lt;!-- Left Column: Text &amp; Metrics --&gt;
+            &lt;div style=&quot;display: flex; flex-direction: column; justify-content: center;&quot;&gt;
+                &lt;!-- Header --&gt;
+                &lt;div style=&quot;margin-bottom: 30px;&quot;&gt;
+                    &lt;h1 style=&quot;font-size: 56px; line-height: 1.1; margin-bottom: 10px; text-transform: uppercase;&quot;&gt;
+                        Size of &lt;span style=&quot;color: #8C7AE6;&quot;&gt;Market&lt;/span&gt;
+                    &lt;/h1&gt;
+                    &lt;div style=&quot;width: 80px; height: 4px; background: linear-gradient(90deg, #B33CE0, transparent); border-radius: 2px;&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Paragraph Text --&gt;
+                &lt;div style=&quot;margin-bottom: 40px;&quot;&gt;
+                    &lt;p style=&quot;font-size: 15px; text-align: justify; color: #D1D5DB;&quot;&gt;
+                        Understanding the market size is important for us. In the US, there are about 32 million small businesses. We're aiming at industries like technology, e-commerce, and professional services, which are about 30% of all small businesses. That means we're looking at around 9.6 million potential customers. Our goal is to get about 5% of them, which would be roughly 480,000 businesses. This helps us know who to target and plan our growth strategy.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Metrics Section --&gt;
+                &lt;div style=&quot;display: flex; flex-direction: column;&quot;&gt;
+                    
+                    &lt;!-- Metric 1: TAM --&gt;
+                    &lt;div class=&quot;metric-row bg-gradient-card&quot;&gt;
+                        &lt;div style=&quot;display: flex; flex-direction: column;&quot;&gt;
+                            &lt;span style=&quot;font-size: 12px; color: #8C7AE6; font-weight: 700; letter-spacing: 1px; margin-bottom: 4px;&quot;&gt;TAM&lt;/span&gt;
+                            &lt;span style=&quot;font-size: 14px; color: #D1D5DB; font-weight: 500;&quot;&gt;TOTAL ADDRESSABLE MARKET&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;span style=&quot;font-size: 28px; color: #FFFFFF; font-weight: 700;&quot;&gt;32 MILLION&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Metric 2: SAM --&gt;
+                    &lt;div class=&quot;metric-row bg-gradient-card&quot;&gt;
+                        &lt;div style=&quot;display: flex; flex-direction: column;&quot;&gt;
+                            &lt;span style=&quot;font-size: 12px; color: #B33CE0; font-weight: 700; letter-spacing: 1px; margin-bottom: 4px;&quot;&gt;SAM&lt;/span&gt;
+                            &lt;span style=&quot;font-size: 14px; color: #D1D5DB; font-weight: 500;&quot;&gt;SERVICEABLE ADDRESSABLE MARKET&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;span style=&quot;font-size: 28px; color: #FFFFFF; font-weight: 700;&quot;&gt;9.6 MILLION&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Metric 3: SOM --&gt;
+                    &lt;div class=&quot;metric-row bg-gradient-card&quot; style=&quot;margin-bottom: 0;&quot;&gt;
+                        &lt;div style=&quot;display: flex; flex-direction: column;&quot;&gt;
+                            &lt;span style=&quot;font-size: 12px; color: #ffffff; opacity: 0.8; font-weight: 700; letter-spacing: 1px; margin-bottom: 4px;&quot;&gt;SOM&lt;/span&gt;
+                            &lt;span style=&quot;font-size: 14px; color: #D1D5DB; font-weight: 500;&quot;&gt;SERVICEABLE OBTAINABLE MARKET&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;span style=&quot;font-size: 28px; color: #FFFFFF; font-weight: 700;&quot;&gt;480,000&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Right Column: Chart --&gt;
+            &lt;div style=&quot;display: flex; align-items: center; justify-content: center;&quot;&gt;
+                &lt;div class=&quot;chart-wrapper&quot;&gt;
+                    &lt;!-- Decorative Title inside chart area --&gt;
+                    &lt;div style=&quot;position: absolute; top: 30px; left: 30px; z-index: 20;&quot;&gt;
+                        &lt;div style=&quot;display: flex; align-items: center; gap: 10px;&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-chart-simple&quot; style=&quot;color: #8C7AE6;&quot;&gt;&lt;/i&gt;
+                            &lt;span style=&quot;color: #FFFFFF; font-weight: 600; font-size: 16px;&quot;&gt;Growth Projection&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div id=&quot;marketChart&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- ECharts Configuration --&gt;
+    &lt;script&gt;
+        document.addEventListener('DOMContentLoaded', function () {
+            var chartDom = document.getElementById('marketChart');
+            var myChart = echarts.init(chartDom);
+            var option;
+
+            // Gradient Definitions for Chart
+            var gradient1 = new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                { offset: 0, color: '#D1D5DB' }, // Light Grey/White
+                { offset: 1, color: '#8C7AE6' }  // Purple Fade
+            ]);
+
+            var gradient2 = new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                { offset: 0, color: '#8C7AE6' }, // Purple
+                { offset: 1, color: '#1B3F9B' }  // Deep Blue
+            ]);
+
+            var gradient3 = new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                { offset: 0, color: '#B33CE0' }, // Neon accent
+                { offset: 1, color: '#5b2c96' }  // Darker Purple
+            ]);
+
+            option = {
+                // Remove default background to let CSS handle it
+                backgroundColor: 'transparent',
+                grid: {
+                    left: '10%',
+                    right: '10%',
+                    bottom: '15%',
+                    top: '25%',
+                    containLabel: true
+                },
+                legend: {
+                    data: ['Item 1', 'Item 2', 'Item 3'],
+                    textStyle: {
+                        color: '#D1D5DB',
+                        fontSize: 12
+                    },
+                    top: '8%',
+                    right: '5%',
+                    itemGap: 20
+                },
+                xAxis: {
+                    type: 'category',
+                    data: ['Item 1', 'Item 2', 'Item 3'],
+                    axisLine: {
+                        lineStyle: {
+                            color: 'rgba(255,255,255,0.1)'
+                        }
+                    },
+                    axisLabel: {
+                        color: '#D1D5DB',
+                        fontSize: 14,
+                        margin: 15
+                    },
+                    axisTick: {
+                        show: false
+                    }
+                },
+                yAxis: {
+                    type: 'value',
+                    splitLine: {
+                        lineStyle: {
+                            color: 'rgba(255,255,255,0.05)',
+                            type: 'dashed'
+                        }
+                    },
+                    axisLabel: {
+                        color: '#D1D5DB',
+                        fontSize: 12
+                    }
+                },
+                series: [
+                    {
+                        name: 'Item 1',
+                        type: 'bar',
+                        data: [
+                            { value: 8, itemStyle: { color: gradient1, borderRadius: [6, 6, 0, 0] } },
+                            null,
+                            null
+                        ],
+                        barWidth: '60%'
+                    },
+                    {
+                        name: 'Item 2',
+                        type: 'bar',
+                        data: [
+                            null,
+                            { value: 12, itemStyle: { color: gradient2, borderRadius: [6, 6, 0, 0] } },
+                            null
+                        ],
+                        barWidth: '60%'
+                    },
+                    {
+                        name: 'Item 3',
+                        type: 'bar',
+                        data: [
+                            null,
+                            null,
+                            { value: 16, itemStyle: { color: gradient3, borderRadius: [6, 6, 0, 0] } }
+                        ],
+                        barWidth: '60%'
+                    }
+                ],
+                // Add a subtle animation
+                animationDuration: 1500,
+                animationEasing: 'cubicOut'
+            };
+
+            // To mimic the stacked visual layout without stacking the data in one column,
+            // we use a custom approach where each series has data only for its specific index position.
+            // However, strictly following the image where bars are side-by-side but labeled differently.
+            // Simplified approach: Single series with multiple colors.
+            
+            var simpleOption = {
+                backgroundColor: 'transparent',
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: { type: 'shadow' }
+                },
+                legend: {
+                    data: ['Item 1', 'Item 2', 'Item 3'],
+                    textStyle: { color: '#D1D5DB' },
+                    right: 20,
+                    top: 20
+                },
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    containLabel: true
+                },
+                xAxis: [
+                    {
+                        type: 'category',
+                        data: ['Item 1', 'Item 2', 'Item 3'],
+                        axisTick: { alignWithLabel: true },
+                        axisLine: { lineStyle: { color: 'rgba(255,255,255,0.2)' } },
+                        axisLabel: { color: '#D1D5DB', fontSize: 14, margin: 15 }
+                    }
+                ],
+                yAxis: [
+                    {
+                        type: 'value',
+                        splitLine: { lineStyle: { color: 'rgba(255,255,255,0.05)' } },
+                        axisLabel: { color: '#8C7AE6' }
+                    }
+                ],
+                series: [
+                    {
+                        name: 'Value',
+                        type: 'bar',
+                        barWidth: '50%',
+                        data: [
+                            {
+                                value: 8,
+                                name: 'Item 1',
+                                itemStyle: {
+                                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                                        { offset: 0, color: '#C7D2FE' },
+                                        { offset: 1, color: '#818CF8' }
+                                    ]),
+                                    borderRadius: [8, 8, 0, 0]
+                                }
+                            },
+                            {
+                                value: 12,
+                                name: 'Item 2',
+                                itemStyle: {
+                                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                                        { offset: 0, color: '#818CF8' },
+                                        { offset: 1, color: '#1B3F9B' }
+                                    ]),
+                                    borderRadius: [8, 8, 0, 0]
+                                }
+                            },
+                            {
+                                value: 16,
+                                name: 'Item 3',
+                                itemStyle: {
+                                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                                        { offset: 0, color: '#C084FC' }, // Light Purple
+                                        { offset: 1, color: '#6B21A8' }  // Dark Purple
+                                    ]),
+                                    borderRadius: [8, 8, 0, 0]
+                                }
+                            }
+                        ]
+                    }
+                ]
+            };
+
+            myChart.setOption(simpleOption);
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 8
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Strategic Performance - Data Analytics&lt;/title&gt;
+    
+    &lt;!-- Google Fonts: Noto Sans SC &amp; Inter --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+
+    &lt;!-- ECharts CDN --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBlack: '#000000',
+                        primaryStart: '#8C7AE6',
+                        primaryEnd: '#1B3F9B',
+                        darkBg: '#1A1B2E',
+                        neon: '#B33CE0',
+                        bodyText: '#D1D5DB'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans SC', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #000000;
+            overflow: hidden;
+            font-family: 'Inter', 'Noto Sans SC', sans-serif;
+        }
+
+        /* 延续团队页的霓虹装饰 */
+        .neon-glow {
+            position: absolute;
+            top: -100px;
+            left: -100px;
+            width: 800px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(27, 63, 155, 0.25) 0%, rgba(140, 122, 230, 0.15) 30%, rgba(0,0,0,0) 70%);
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: 1;
+        }
+
+        .neon-line {
+            position: absolute;
+            bottom: 50px;
+            left: -100px;
+            width: 800px;
+            height: 300px;
+            border-top: 1px solid rgba(179, 60, 224, 0.3);
+            border-radius: 100%;
+            transform: rotate(5deg);
+            z-index: 1;
+        }
+
+        /* 玻璃拟态数据卡片 */
+        .data-card {
+            background: linear-gradient(135deg, rgba(26, 27, 46, 0.8) 0%, rgba(16, 37, 90, 0.4) 100%);
+            border: 1px solid rgba(140, 122, 230, 0.2);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+        }
+
+        .metric-highlight {
+            background: linear-gradient(to right, #ffffff, #8C7AE6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+
+        /* 侧边点阵装饰 */
+        .dot-grid {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            display: grid;
+            grid-template-columns: repeat(5, 4px);
+            gap: 12px;
+            opacity: 0.3;
+        }
+        .dot { width: 4px; height: 4px; background: white; border-radius: 50%; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;!-- 背景环境 --&gt;
+        &lt;div class=&quot;neon-glow&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;neon-line&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;dot-grid&quot;&gt;
+            &lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;relative z-10 flex flex-col h-full px-16 py-12&quot;&gt;
+            
+            &lt;!-- 头部标题：延续团队页风格 --&gt;
+            &lt;header class=&quot;mb-10 flex justify-between items-end&quot;&gt;
+                &lt;div class=&quot;border-l-4 border-neon pl-6&quot;&gt;
+                    &lt;h1 class=&quot;text-5xl font-black text-white tracking-tight uppercase&quot;&gt;
+                        Strategic Growth &lt;span class=&quot;text-primaryStart&quot;&gt;&amp;&lt;/span&gt; Performance
+                    &lt;/h1&gt;
+                    &lt;p class=&quot;text-lg text-bodyText font-light mt-2 tracking-wide uppercase&quot;&gt;
+                        Fiscal Year 2025 Market Expansion Analysis
+                    &lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;text-right&quot;&gt;
+                    &lt;span class=&quot;text-xs text-white/40 tracking-[0.3em] uppercase&quot;&gt;Confidential Report&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/header&gt;
+
+            &lt;!-- 主内容区：左图右表布局 --&gt;
+            &lt;main class=&quot;grid grid-cols-12 gap-8 flex-grow&quot;&gt;
+                
+                &lt;!-- 左侧：大型图表卡片 (占 8 列) --&gt;
+                &lt;div class=&quot;col-span-8 flex flex-col&quot;&gt;
+                    &lt;div class=&quot;data-card rounded-3xl p-8 h-full flex flex-col&quot;&gt;
+                        &lt;div class=&quot;flex justify-between items-center mb-6&quot;&gt;
+                            &lt;h3 class=&quot;text-white font-bold text-xl flex items-center gap-3&quot;&gt;
+                                &lt;i class=&quot;fa-solid fa-chart-area text-neon&quot;&gt;&lt;/i&gt;
+                                Revenue Stream by Region
+                            &lt;/h3&gt;
+                            &lt;div class=&quot;flex gap-4 text-xs text-bodyText&quot;&gt;
+                                &lt;span class=&quot;flex items-center gap-1&quot;&gt;&lt;i class=&quot;fa-solid fa-circle text-[#8C7AE6]&quot;&gt;&lt;/i&gt; Domestic&lt;/span&gt;
+                                &lt;span class=&quot;flex items-center gap-1&quot;&gt;&lt;i class=&quot;fa-solid fa-circle text-[#B33CE0]&quot;&gt;&lt;/i&gt; International&lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- 图表容器 --&gt;
+                        &lt;div id=&quot;growthChart&quot; class=&quot;w-full flex-grow&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 右侧：KPI 磁贴 &amp; 描述 (占 4 列) --&gt;
+                &lt;div class=&quot;col-span-4 flex flex-col gap-6&quot;&gt;
+                    
+                    &lt;!-- KPI 1 --&gt;
+                    &lt;div class=&quot;data-card rounded-2xl p-6 flex flex-col justify-between&quot;&gt;
+                        &lt;p class=&quot;text-gray-400 text-sm font-medium mb-1&quot;&gt;Total Market Share&lt;/p&gt;
+                        &lt;div class=&quot;flex items-baseline gap-2&quot;&gt;
+                            &lt;span class=&quot;metric-highlight text-5xl&quot;&gt;38.4%&lt;/span&gt;
+                            &lt;span class=&quot;text-green-400 text-sm font-bold&quot;&gt;&lt;i class=&quot;fa-solid fa-caret-up&quot;&gt;&lt;/i&gt; 12%&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;w-full bg-white/10 h-1 mt-4 rounded-full overflow-hidden&quot;&gt;
+                            &lt;div class=&quot;bg-neon h-full w-[38%] shadow-[0_0_10px_#B33CE0]&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- KPI 2 --&gt;
+                    &lt;div class=&quot;data-card rounded-2xl p-6 flex flex-col justify-between&quot;&gt;
+                        &lt;p class=&quot;text-gray-400 text-sm font-medium mb-1&quot;&gt;Customer Retention&lt;/p&gt;
+                        &lt;div class=&quot;flex items-baseline gap-2&quot;&gt;
+                            &lt;span class=&quot;metric-highlight text-5xl&quot;&gt;92.8%&lt;/span&gt;
+                            &lt;span class=&quot;text-green-400 text-sm font-bold&quot;&gt;&lt;i class=&quot;fa-solid fa-caret-up&quot;&gt;&lt;/i&gt; 4.2%&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- 战略总结文本 --&gt;
+                    &lt;div class=&quot;flex-grow bg-white/5 border border-white/10 rounded-2xl p-6 mt-2&quot;&gt;
+                        &lt;h4 class=&quot;text-primaryStart font-bold uppercase text-xs tracking-widest mb-3&quot;&gt;Executive Summary&lt;/h4&gt;
+                        &lt;p class=&quot;text-bodyText text-sm leading-relaxed&quot;&gt;
+                            Our strategic expansion into Asian markets has yielded a 25% increase in quarterly revenue.
+                        &lt;/p&gt;
+                        &lt;ul class=&quot;mt-4 space-y-2&quot;&gt;
+                            &lt;li class=&quot;flex items-center gap-2 text-xs text-gray-300&quot;&gt;
+                                &lt;i class=&quot;fa-solid fa-check text-neon&quot;&gt;&lt;/i&gt; Scaled production in Tier-1 regions
+                            &lt;/li&gt;
+                            &lt;li class=&quot;flex items-center gap-2 text-xs text-gray-300&quot;&gt;
+                                &lt;i class=&quot;fa-solid fa-check text-neon&quot;&gt;&lt;/i&gt; Partnership with global logistics
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            &lt;/main&gt;
+
+            &lt;!-- 底部：延续团队页页脚 --&gt;
+            &lt;footer class=&quot;mt-10 border-t border-white/10 pt-6&quot;&gt;
+                &lt;div class=&quot;flex justify-between items-center text-bodyText/60 text-[10px] tracking-[0.2em] uppercase&quot;&gt;
+                    &lt;div class=&quot;flex gap-12&quot;&gt;
+                        &lt;span&gt;Project: Horizon 2026&lt;/span&gt;
+                        &lt;span&gt;Department: Strategy &amp; Finance&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;flex items-center gap-2&quot;&gt;
+                        &lt;div class=&quot;w-2 h-2 rounded-full bg-neon animate-pulse&quot;&gt;&lt;/div&gt;
+                        Live Data Synchronization Active
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/footer&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- ECharts 初始化 --&gt;
+    &lt;script&gt;
+        document.addEventListener('DOMContentLoaded', function() {
+            const chartDom = document.getElementById('growthChart');
+            const myChart = echarts.init(chartDom);
+            
+            const option = {
+                backgroundColor: 'transparent',
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: { type: 'shadow' },
+                    backgroundColor: 'rgba(26, 27, 46, 0.9)',
+                    borderColor: '#8C7AE6',
+                    textStyle: { color: '#fff' }
+                },
+                grid: {
+                    top: '10%',
+                    left: '3%',
+                    right: '4%',
+                    bottom: '5%',
+                    containLabel: true
+                },
+                xAxis: {
+                    type: 'category',
+                    data: ['Q1', 'Q2', 'Q3', 'Q4', 'Q1-25'],
+                    axisLine: { lineStyle: { color: 'rgba(255,255,255,0.2)' } },
+                    axisLabel: { color: '#888', fontSize: 11 }
+                },
+                yAxis: {
+                    type: 'value',
+                    splitLine: { lineStyle: { color: 'rgba(255,255,255,0.05)' } },
+                    axisLine: { show: false },
+                    axisLabel: { color: '#888', fontSize: 11 }
+                },
+                series: [
+                    {
+                        name: 'Domestic',
+                        type: 'bar',
+                        barWidth: '20%',
+                        itemStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                                { offset: 0, color: '#8C7AE6' },
+                                { offset: 1, color: '#1B3F9B' }
+                            ]),
+                            borderRadius: [4, 4, 0, 0]
+                        },
+                        data: [320, 450, 410, 580, 620]
+                    },
+                    {
+                        name: 'International',
+                        type: 'bar',
+                        barWidth: '20%',
+                        itemStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                                { offset: 0, color: '#B33CE0' },
+                                { offset: 1, color: '#8C7AE6' }
+                            ]),
+                            borderRadius: [4, 4, 0, 0]
+                        },
+                        data: [150, 230, 310, 420, 510]
+                    },
+                    {
+                        name: 'Trend',
+                        type: 'line',
+                        smooth: true,
+                        showSymbol: false,
+                        lineStyle: { width: 3, color: '#fff', shadowBlur: 10, shadowColor: 'rgba(255,255,255,0.5)' },
+                        data: [235, 340, 360, 500, 565]
+                    }
+                ]
+            };
+
+            myChart.setOption(option);
+
+            window.addEventListener('resize', () =&gt; {
+                myChart.resize();
+            });
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 9
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Key Competitive Advantages&lt;/title&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        /* CSS Reset &amp; Global Structure */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Main Page Container - 1280x720 Fixed */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background-color: #000000;
+            margin: 0 auto;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Decorative Background Glows */
+        .glow-orb-1 {
+            position: absolute;
+            top: -100px;
+            left: -100px;
+            width: 600px;
+            height: 600px;
+            background: linear-gradient(135deg, #1B3F9B, #8C7AE6);
+            filter: blur(120px);
+            opacity: 0.4;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .glow-orb-2 {
+            position: absolute;
+            bottom: -150px;
+            right: -50px;
+            width: 500px;
+            height: 500px;
+            background: linear-gradient(135deg, #B33CE0, #1B3F9B);
+            filter: blur(100px);
+            opacity: 0.3;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .curve-line {
+            position: absolute;
+            top: 50px;
+            left: -50px;
+            width: 800px;
+            height: 600px;
+            border-radius: 50%;
+            border-top: 2px solid rgba(140, 122, 230, 0.3);
+            border-right: 2px solid rgba(179, 60, 224, 0.3);
+            transform: rotate(-20deg);
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        /* Content Layout */
+        .content-wrapper {
+            position: relative;
+            z-index: 10;
+            height: 100%;
+            padding: 60px 80px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Typography */
+        .main-title {
+            color: #FFFFFF;
+            font-size: 56px;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+
+        /* Cards Container - Staggered Grid */
+        .cards-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            height: 100%;
+            margin-top: 20px;
+            gap: 24px;
+        }
+
+        /* Individual Card Styling */
+        .card {
+            flex: 1;
+            background: linear-gradient(180deg, #1A1B2E 0%, rgba(26, 27, 46, 0.6) 100%);
+            border-radius: 16px;
+            position: relative;
+            /* Gradient Border Effect */
+            border: 1px solid rgba(140, 122, 230, 0.3);
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.6);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.3s ease;
+            
+            /* FIX: Increased top padding to 60px.
+               This pushes the text down so it doesn't overlap with the absolute positioned icon.
+            */
+            padding: 60px 24px 30px 24px;
+        }
+
+        /* Top Highlight Bar for Cards */
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #8C7AE6, #B33CE0);
+            border-radius: 16px 16px 0 0;
+        }
+
+        /* Staggering Logic (The Staircase Effect) */
+        .card-1 { margin-top: 180px; }
+        .card-2 { margin-top: 120px; }
+        .card-3 { margin-top: 60px; }
+        .card-4 { margin-top: 0px; }
+
+        /* Icon Wrapper */
+        .icon-circle {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, #1B3F9B, #8C7AE6);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            /* FIX: Changed to Absolute Positioning.
+               It now sits exactly on the top border (-32px is half of height 64px)
+               and is centered horizontally.
+            */
+            position: absolute;
+            top: -32px;
+            left: 50%;
+            transform: translateX(-50%);
+            
+            border: 4px solid #000000; /* Cutout effect matches bg */
+            box-shadow: 0 4px 15px rgba(140, 122, 230, 0.4);
+            z-index: 20;
+        }
+
+        .icon-circle i {
+            font-size: 28px;
+            color: #FFFFFF;
+        }
+
+        /* Card Text */
+        .card-title {
+            color: #FFFFFF;
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+            min-height: 44px; /* Align text baselines */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-text {
+            color: #D1D5DB;
+            font-size: 13px;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+        
+        /* Specific accent per card */
+        .card-1 .icon-circle { background: linear-gradient(135deg, #4A5568, #8C7AE6); }
+        .card-2 .icon-circle { background: linear-gradient(135deg, #1B3F9B, #8C7AE6); }
+        .card-3 .icon-circle { background: linear-gradient(135deg, #8C7AE6, #B33CE0); }
+        .card-4 .icon-circle { background: linear-gradient(135deg, #B33CE0, #E91E63); }
+
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;glow-orb-1&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;glow-orb-2&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;curve-line&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;content-wrapper&quot;&gt;
+            
+            &lt;header&gt;
+                &lt;h1 class=&quot;main-title&quot;&gt;
+                    Key Competitive&lt;br&gt;Advantages
+                &lt;/h1&gt;
+            &lt;/header&gt;
+
+            &lt;section class=&quot;cards-container&quot;&gt;
+                
+                &lt;div class=&quot;card card-1&quot;&gt;
+                    &lt;div class=&quot;icon-circle&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-users&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;h3 class=&quot;card-title&quot;&gt;Expert Team&lt;/h3&gt;
+                    &lt;p class=&quot;card-text&quot;&gt;
+                        Our skilled team brings specialized knowledge and experience to provide top-notch solutions tailored to our clients' needs.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;card card-2&quot;&gt;
+                    &lt;div class=&quot;icon-circle&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-microchip&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;h3 class=&quot;card-title&quot;&gt;Cutting-Edge Technology&lt;/h3&gt;
+                    &lt;p class=&quot;card-text&quot;&gt;
+                        We use the latest tools and technology to stay ahead, ensuring efficient and effective services for every project.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;card card-3&quot;&gt;
+                    &lt;div class=&quot;icon-circle&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-bullseye&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;h3 class=&quot;card-title&quot;&gt;Customer Focus&lt;/h3&gt;
+                    &lt;p class=&quot;card-text&quot;&gt;
+                        We prioritize building strong relationships and understanding our clients' needs, leading to long-term partnerships based on trust.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;card card-4&quot;&gt;
+                    &lt;div class=&quot;icon-circle&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-trophy&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;h3 class=&quot;card-title&quot;&gt;Proven Success&lt;/h3&gt;
+                    &lt;p class=&quot;card-text&quot;&gt;
+                        With a track record of successful projects, we've earned a reputation for reliability and excellence, setting us apart from the competition.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+            &lt;/section&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 10
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Traction - High End Keynote Slide&lt;/title&gt;
+
+    &lt;!-- Tailwind CSS (CDN) --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;!-- FontAwesome (CDN) --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;!-- ECharts (CDN) --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js&quot;&gt;&lt;/script&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #050508;
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* 背景装饰 */
+        .glow-purple {
+            position: absolute; width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(140, 122, 230, 0.08) 0%, rgba(0,0,0,0) 70%);
+            top: -200px; right: -100px; pointer-events: none;
+        }
+        
+        /* 核心修改：右侧数据卡片样式 */
+        .metric-card {
+            position: relative;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 24px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* 左侧装饰线条 */
+        .metric-card::before {
+            content: &quot;&quot;;
+            position: absolute;
+            left: 0;
+            top: 20%;
+            height: 60%;
+            width: 4px;
+            background: linear-gradient(to bottom, #8C7AE6, #1B3F9B);
+            border-radius: 0 4px 4px 0;
+            box-shadow: 0 0 15px rgba(140, 122, 230, 0.6);
+        }
+
+        /* 数字渐变 */
+        .metric-value {
+            background: linear-gradient(180deg, #ffffff 0%, #a5a5a5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: 'Orbitron', sans-serif; /* 如果有科技字体更好 */
+            font-weight: 800;
+        }
+
+        .chart-card {
+            background: linear-gradient(135deg, rgba(26, 27, 46, 0.4) 0%, rgba(13, 14, 27, 0.6) 100%);
+            border: 1px solid rgba(140, 122, 230, 0.15);
+            border-radius: 24px;
+        }
+
+        .label-text {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .desc-text {
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.2;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;glow-purple&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;relative z-10 flex flex-col h-full px-20 py-16&quot;&gt;
+            
+            &lt;!-- Header Section --&gt;
+            &lt;div class=&quot;mb-12&quot;&gt;
+                &lt;h1 class=&quot;text-6xl font-black text-white tracking-tighter mb-4&quot;&gt;TRACTION&lt;/h1&gt;
+                &lt;div class=&quot;w-20 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mb-6&quot;&gt;&lt;/div&gt;
+                &lt;p class=&quot;text-gray-400 text-lg leading-relaxed max-w-2xl font-light&quot;&gt;
+                    Snapshot of key success metrics demonstrating consistent market growth and customer excellence.
+                &lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;flex flex-row flex-1 gap-12 items-stretch&quot;&gt;
+                
+                &lt;!-- Left: Chart Area --&gt;
+                &lt;div class=&quot;w-[60%] flex flex-col&quot;&gt;
+                    &lt;div class=&quot;chart-card flex-1 p-8 shadow-2xl relative&quot;&gt;
+                        &lt;div id=&quot;tractionChart&quot; style=&quot;width: 100%; height: 100%;&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Right: Beautified Metric Cards --&gt;
+                &lt;div class=&quot;w-[40%] flex flex-col justify-between py-2&quot;&gt;
+                    
+                    &lt;!-- Item 1 --&gt;
+                    &lt;div class=&quot;metric-card&quot;&gt;
+                        &lt;div class=&quot;flex flex-col flex-1&quot;&gt;
+                            &lt;span class=&quot;label-text&quot;&gt;Performance&lt;/span&gt;
+                            &lt;span class=&quot;desc-text&quot;&gt;Annual revenue growth&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;metric-value text-5xl ml-4&quot;&gt;20%&lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Item 2 --&gt;
+                    &lt;div class=&quot;metric-card&quot;&gt;
+                        &lt;div class=&quot;flex flex-col flex-1&quot;&gt;
+                            &lt;span class=&quot;label-text&quot;&gt;Experience&lt;/span&gt;
+                            &lt;span class=&quot;desc-text&quot;&gt;Customer satisfaction&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;metric-value text-5xl ml-4&quot;&gt;90%&lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Item 3 --&gt;
+                    &lt;div class=&quot;metric-card&quot;&gt;
+                        &lt;div class=&quot;flex flex-col flex-1&quot;&gt;
+                            &lt;span class=&quot;label-text&quot;&gt;Position&lt;/span&gt;
+                            &lt;span class=&quot;desc-text&quot;&gt;Market share segments&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;metric-value text-5xl ml-4&quot;&gt;15%&lt;/div&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script&gt;
+        document.addEventListener('DOMContentLoaded', function () {
+            var myChart = echarts.init(document.getElementById('tractionChart'));
+            var option = {
+                backgroundColor: 'transparent',
+                color: ['#8C7AE6', '#1B3F9B', '#FFFFFF'],
+                tooltip: { trigger: 'axis', backgroundColor: '#1A1B2E', textStyle: {color: '#fff'} },
+                grid: { left: '2%', right: '5%', bottom: '5%', top: '15%', containLabel: true },
+                xAxis: {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: ['Q1', 'Q2', 'Q3', 'Q4', 'Next'],
+                    axisLine: { lineStyle: { color: 'rgba(255,255,255,0.1)' } },
+                    axisLabel: { color: '#888' }
+                },
+                yAxis: {
+                    type: 'value',
+                    splitLine: { lineStyle: { color: 'rgba(255,255,255,0.05)' } },
+                    axisLabel: { color: '#888' }
+                },
+                series: [
+                    { name: 'S1', type: 'line', smooth: true, data: [10, 25, 20, 45, 50], lineStyle: { width: 4 } },
+                    { name: 'S2', type: 'line', smooth: true, data: [20, 15, 40, 35, 60], lineStyle: { width: 4 } }
+                ]
+            };
+            myChart.setOption(option);
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 11
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc='&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Revenue Model Presentation&lt;/title&gt;
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"&gt;&lt;/script&gt;
+    &lt;!-- Google Fonts: Noto Sans SC &amp; Inter --&gt;
+    &lt;link href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css" rel="stylesheet"&gt;
+    &lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"&gt;
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css"&gt;
+    
+    &lt;style&gt;
+        /* CSS Reset &amp; Global Settings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Fixed 1280x720 Container */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #000000;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        /* Decorative Gradients (simulating the neon waves) */
+        .neon-glow-left {
+            position: absolute;
+            top: -100px;
+            left: -100px;
+            width: 600px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(179, 60, 224, 0.25) 0%, rgba(0,0,0,0) 70%);
+            filter: blur(40px);
+            z-index: 1;
+        }
+
+        .neon-glow-right {
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 600px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(140, 122, 230, 0.25) 0%, rgba(0,0,0,0) 70%);
+            filter: blur(40px);
+            z-index: 1;
+        }
+
+        /* Custom Scrollbar hide */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Card Styles */
+        .pricing-card {
+            background: #1A1B2E;
+            border: 1px solid rgba(140, 122, 230, 0.2);
+            transition: all 0.3s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Center Card Emphasis */
+        .pricing-card.featured {
+            background: #1A1B2E;
+            border: 1px solid rgba(140, 122, 230, 0.6);
+            box-shadow: 0 0 30px rgba(27, 63, 155, 0.2);
+            z-index: 10;
+        }
+
+        /* Horizontal Divider */
+        .divider-line {
+            height: 1px;
+            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%);
+            margin: 16px 0;
+            width: 100%;
+        }
+
+        /* Gradient Button Background */
+        .gradient-btn {
+            background: linear-gradient(90deg, #8C7AE6, #1B3F9B);
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;!-- Main Container --&gt;
+    &lt;div id="page_container"&gt;
+        
+        &lt;!-- Background Decorations --&gt;
+        &lt;div class="neon-glow-left"&gt;&lt;/div&gt;
+        &lt;div class="neon-glow-right"&gt;&lt;/div&gt;
+
+        &lt;!-- Header Section --&gt;
+        &lt;header class="relative z-10 w-full pt-10 pb-6 text-center"&gt;
+            &lt;h1 class="text-5xl font-bold text-white tracking-wide uppercase drop-shadow-lg"&gt;
+                Revenue Model
+            &lt;/h1&gt;
+            &lt;div class="w-24 h-1 bg-gradient-to-r from-[#8C7AE6] to-[#1B3F9B] mx-auto mt-4 rounded-full"&gt;&lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;!-- Main Grid Content --&gt;
+        &lt;div class="relative z-10 grid grid-cols-3 gap-8 px-16 h-[580px] items-center"&gt;
+
+            &lt;!-- Card 01: Basic Plan --&gt;
+            &lt;div class="pricing-card rounded-2xl p-6 h-[500px]"&gt;
+                &lt;div class="text-center mb-4"&gt;
+                    &lt;h2 class="text-xl font-bold text-[#8C7AE6] tracking-widest uppercase mb-1"&gt;Basic Plan&lt;/h2&gt;
+                    &lt;div class="h-0.5 w-12 bg-gray-600 mx-auto rounded"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Features --&gt;
+                &lt;div class="flex-1 overflow-hidden flex flex-col justify-start"&gt;
+                    &lt;div class="mb-2"&gt;
+                        &lt;h3 class="text-white text-sm font-semibold mb-2 uppercase opacity-80"&gt;Features:&lt;/h3&gt;
+                        &lt;ul class="space-y-1.5 pl-1"&gt;
+                            &lt;li class="flex items-start gap-3"&gt;
+                                &lt;i class="fa-solid fa-circle-check text-[#8C7AE6] text-xs mt-1"&gt;&lt;/i&gt;
+                                &lt;span class="text-[#D1D5DB] text-sm leading-snug"&gt;More features&lt;/span&gt;
+                            &lt;/li&gt;
+                            &lt;li class="flex items-start gap-3"&gt;
+                                &lt;i class="fa-solid fa-circle-check text-[#8C7AE6] text-xs mt-1"&gt;&lt;/i&gt;
+                                &lt;span class="text-[#D1D5DB] text-sm leading-snug"&gt;Standard support&lt;/span&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class="divider-line"&gt;&lt;/div&gt;
+
+                    &lt;!-- Usage Limits --&gt;
+                    &lt;div class="mb-2"&gt;
+                        &lt;h3 class="text-white text-sm font-semibold mb-2 uppercase opacity-80"&gt;Usage Limits:&lt;/h3&gt;
+                        &lt;ul class="space-y-1.5 pl-1"&gt;
+                            &lt;li class="flex items-start gap-3"&gt;
+                                &lt;i class="fa-solid fa-chart-pie text-gray-500 text-xs mt-1"&gt;&lt;/i&gt;
+                                &lt;span class="text-[#D1D5DB] text-sm leading-snug"&gt;Limited usage&lt;/span&gt;
+                            &lt;/li&gt;
+                            &lt;li class="flex items-start gap-3"&gt;
+                                &lt;i class="fa-solid fa-hard-drive text-gray-500 text-xs mt-1"&gt;&lt;/i&gt;
+                                &lt;span class="text-[#D1D5DB] text-sm leading-snug"&gt;Limited storage&lt;/span&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class="divider-line"&gt;&lt;/div&gt;
+
+                    &lt;!-- Additional Services --&gt;
+                    &lt;div&gt;
+                        &lt;h3 class="text-white text-sm font-semibold mb-2 uppercase opacity-80"&gt;Additional Services:&lt;/h3&gt;
+                        &lt;p class="text-[#D1D5DB] text-sm leading-snug pl-1"&gt;
+                            &lt;i class="fa-solid fa-xmark text-gray-500 mr-2 text-xs"&gt;&lt;/i&gt;
+                            No additional services included
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Pricing Footer --&gt;
+                &lt;div class="mt-auto pt-4 text-center"&gt;
+                    &lt;p class="text-xs text-gray-400 mb-2 uppercase tracking-wide"&gt;Pricing&lt;/p&gt;
+                    &lt;div class="gradient-btn rounded-lg py-3 w-full shadow-lg"&gt;
+                        &lt;span class="text-white font-bold text-xl"&gt;135$ / MONTH&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Card 02: Standard Plan (Featured) --&gt;
+            &lt;div class="pricing-card featured rounded-2xl p-6 h-[540px] transform -translate-y-2"&gt;
+                &lt;!-- Highlight Badge --&gt;
+                &lt;div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-[#8C7AE6] px-3 py-1 rounded-full shadow-lg"&gt;
+                    &lt;span class="text-[10px] font-bold text-white uppercase tracking-wider"&gt;Most Popular&lt;/span&gt;
+                &lt;/div&gt;
+
+                &lt;div class="text-center mb-6 mt-2"&gt;
+                    &lt;h2 class="text-2xl font-bold text-white tracking-widest uppercase mb-1"&gt;Standard Plan&lt;/h2&gt;
+                    &lt;div class="h-0.5 w-16 bg-gradient-to-r from-[#8C7AE6] to-[#1B3F9B] mx-auto rounded"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Features --&gt;
+                &lt;div class="flex-1 overflow-hidden flex flex-col justify-start"&gt;
+                    &lt;div class="mb-3"&gt;
+                        &lt;h3 class="text-white text-sm font-semibold mb-2 uppercase opacity-90"&gt;Features:&lt;/h3&gt;
+                        &lt;ul class="space-y-2 pl-1"&gt;
+                            &lt;li class="flex items-start gap-3"&gt;
+                                &lt;i class="fa-solid fa-check text-[#B33CE0] text-sm mt-0.5"&gt;&lt;/i&gt;
+                                &lt;span class="text-gray-200 text-sm leading-snug"&gt;More features&lt;/span&gt;
+                            &lt;/li&gt;
+                            &lt;li class="flex items-start gap-3"&gt;
+                                &lt;i class="fa-solid fa-check text-[#B33CE0] text-sm mt-0.5"&gt;&lt;/i&gt;
+                                &lt;span class="text-gray-200 text-sm leading-snug"&gt;Standard support&lt;/span&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class="divider-line"&gt;&lt;/div&gt;
+
+                    &lt;!-- Usage Limits --&gt;
+                    &lt;div class="mb-3"&gt;
+                        &lt;h3 class="text-white text-sm font-semibold mb-2 uppercase opacity-90"&gt;Usage Limits:&lt;/h3&gt;
+                        &lt;ul class="space-y-2 pl-1"&gt;
+                            &lt;li class="flex items-start gap-3"&gt;
+                                &lt;i class="fa-solid fa-arrow-up-right-dots text-[#8C7AE6] text-sm mt-0.5"&gt;&lt;/i&gt;
+                                &lt;span class="text-gray-200 text-sm leading-snug"&gt;Increased usage&lt;/span&gt;
+                            &lt;/li&gt;
+                            &lt;li class="flex items-start gap-3"&gt;
+                                &lt;i class="fa-solid fa-database text-[#8C7AE6] text-sm mt-0.5"&gt;&lt;/i&gt;
+                                &lt;span class="text-gray-200 text-sm leading-snug"&gt;More storage&lt;/span&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class="divider-line"&gt;&lt;/div&gt;
+
+                    &lt;!-- Additional Services --&gt;
+                    &lt;div&gt;
+                        &lt;h3 class="text-white text-sm font-semibold mb-2 uppercase opacity-90"&gt;Additional Services:&lt;/h3&gt;
+                        &lt;p class="text-gray-200 text-sm leading-snug pl-1 flex items-start gap-3"&gt;
+                            &lt;i class="fa-solid fa-plus text-[#8C7AE6] mt-1 text-xs"&gt;&lt;/i&gt;
+                            Optional add-ons available for purchase
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Pricing Footer --&gt;
+                &lt;div class="mt-auto pt-4 text-center"&gt;
+                    &lt;p class="text-xs text-gray-400 mb-2 uppercase tracking-wide"&gt;Pricing&lt;/p&gt;
+                    &lt;div class="gradient-btn rounded-lg py-4 w-full shadow-lg border border-white/10"&gt;
+                        &lt;span class="text-white font-bold text-2xl"&gt;175$ / MONTH&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Card 03: Premium Plan --&gt;
+            &lt;div class="pricing-card rounded-2xl p-6 h-[500px]"&gt;
+                &lt;div class="text-center mb-4"&gt;
+                    &lt;h2 class="text-xl font-bold text-[#8C7AE6] tracking-widest uppercase mb-1"&gt;Premium Plan&lt;/h2&gt;
+                    &lt;div class="h-0.5 w-12 bg-gray-600 mx-auto rounded"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Features --&gt;
+                &lt;div class="flex-1 overflow-hidden flex flex-col justify-start"&gt;
+                    &lt;div class="mb-2"&gt;
+                        &lt;h3 class="text-white text-sm font-semibold mb-2 uppercase opacity-80"&gt;Features:&lt;/h3&gt;
+                        &lt;ul class="space-y-1.5 pl-1"&gt;
+                            &lt;li class="flex items-start gap-3"&gt;
+                                &lt;i class="fa-solid fa-star text-[#1B3F9B] text-xs mt-1"&gt;&lt;/i&gt;
+                                &lt;span class="text-[#D1D5DB] text-sm leading-snug"&gt;Full features&lt;/span&gt;
+                            &lt;/li&gt;
+                            &lt;li class="flex items-start gap-3"&gt;
+                                &lt;i class="fa-solid fa-star text-[#1B3F9B] text-xs mt-1"&gt;&lt;/i&gt;
+                                &lt;span class="text-[#D1D5DB] text-sm leading-snug"&gt;Priority support&lt;/span&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class="divider-line"&gt;&lt;/div&gt;
+
+                    &lt;!-- Usage Limits --&gt;
+                    &lt;div class="mb-2"&gt;
+                        &lt;h3 class="text-white text-sm font-semibold mb-2 uppercase opacity-80"&gt;Usage Limits:&lt;/h3&gt;
+                        &lt;ul class="space-y-1.5 pl-1"&gt;
+                            &lt;li class="flex items-start gap-3"&gt;
+                                &lt;i class="fa-solid fa-infinity text-[#8C7AE6] text-xs mt-1"&gt;&lt;/i&gt;
+                                &lt;span class="text-[#D1D5DB] text-sm leading-snug"&gt;Unlimited usage&lt;/span&gt;
+                            &lt;/li&gt;
+                            &lt;li class="flex items-start gap-3"&gt;
+                                &lt;i class="fa-solid fa-infinity text-[#8C7AE6] text-xs mt-1"&gt;&lt;/i&gt;
+                                &lt;span class="text-[#D1D5DB] text-sm leading-snug"&gt;Unlimited storage&lt;/span&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class="divider-line"&gt;&lt;/div&gt;
+
+                    &lt;!-- Additional Services --&gt;
+                    &lt;div&gt;
+                        &lt;h3 class="text-white text-sm font-semibold mb-2 uppercase opacity-80"&gt;Additional Services:&lt;/h3&gt;
+                        &lt;p class="text-[#D1D5DB] text-sm leading-snug pl-1 flex items-start gap-2"&gt;
+                            &lt;i class="fa-solid fa-headset text-[#8C7AE6] mt-1 text-xs"&gt;&lt;/i&gt;
+                            Premium support and consulting included
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Pricing Footer --&gt;
+                &lt;div class="mt-auto pt-4 text-center"&gt;
+                    &lt;p class="text-xs text-gray-400 mb-2 uppercase tracking-wide"&gt;Pricing&lt;/p&gt;
+                    &lt;div class="gradient-btn rounded-lg py-3 w-full shadow-lg"&gt;
+                        &lt;span class="text-white font-bold text-xl"&gt;220$ / MONTH&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;'>
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 12
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc='&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Accomplishments Timeline&lt;/title&gt;
+    &lt;!-- Tailwind CSS CDN --&gt;
+    &lt;script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"&gt;&lt;/script&gt;
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css"&gt;
+    &lt;!-- Google Fonts --&gt;
+    &lt;link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css"&gt;
+
+    &lt;style&gt;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #000000;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 玻璃拟态卡片 */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            background: rgba(140, 122, 230, 0.1);
+            border-color: rgba(140, 122, 230, 0.4);
+            transform: translateY(-10px);
+        }
+
+        /* 文字渐变 */
+        .text-gradient {
+            background: linear-gradient(to bottom right, #FFFFFF 30%, #8C7AE6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* 背景装饰光晕 */
+        .glow {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(120px);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* 时间轴连接线 */
+        .timeline-line {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(140, 122, 230, 0.3), transparent);
+            z-index: 0;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id="page_container"&gt;
+        &lt;!-- 背景光晕 --&gt;
+        &lt;div class="glow" style="width: 500px; height: 500px; background: rgba(140, 122, 230, 0.15); top: -100px; right: -100px;"&gt;&lt;/div&gt;
+        &lt;div class="glow" style="width: 400px; height: 400px; background: rgba(27, 63, 155, 0.2); bottom: -100px; left: -100px;"&gt;&lt;/div&gt;
+
+        &lt;!-- 顶部标题区域 --&gt;
+        &lt;div class="relative z-10 px-16 pt-16 pb-12"&gt;
+            &lt;div class="flex items-end justify-between border-b border-white/10 pb-6"&gt;
+                &lt;div&gt;
+                    &lt;h1 class="text-7xl font-black tracking-tighter text-white uppercase m-0 leading-none"&gt;
+                        Accomplishments
+                    &lt;/h1&gt;
+                    &lt;p class="text-purple-400 font-light tracking-[0.5em] uppercase text-sm mt-4 ml-1"&gt;
+                        Timeline &amp; Milestones 2021 — 2026
+                    &lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class="text-right"&gt;
+                    &lt;span class="text-white/30 text-xs tracking-widest uppercase"&gt;Growth Report&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 主内容区域：横向时间轴布局 --&gt;
+        &lt;div class="relative z-10 flex-1 px-16 flex items-center"&gt;
+            
+            &lt;!-- 时间轴底线装饰 --&gt;
+            &lt;div class="timeline-line"&gt;&lt;/div&gt;
+
+            &lt;div class="grid grid-cols-4 gap-6 w-full relative z-20"&gt;
+                
+                &lt;!-- 2021 --&gt;
+                &lt;div class="glass-card p-8 flex flex-col h-[320px]"&gt;
+                    &lt;div class="flex justify-between items-start mb-6"&gt;
+                        &lt;span class="text-4xl font-bold text-white italic"&gt;2021&lt;/span&gt;
+                        &lt;div class="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center border border-purple-500/30"&gt;
+                            &lt;i class="fa-solid fa-rocket text-purple-400"&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;h4 class="text-white font-bold mb-3 text-lg"&gt;Product Launch&lt;/h4&gt;
+                    &lt;p class="text-gray-400 text-sm leading-relaxed font-light"&gt;
+                        Successfully launched our core product, securing early adopter feedback and establishing initial market presence.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 2023 --&gt;
+                &lt;div class="glass-card p-8 flex flex-col h-[320px]"&gt;
+                    &lt;div class="flex justify-between items-start mb-6"&gt;
+                        &lt;span class="text-4xl font-bold text-white italic"&gt;2023&lt;/span&gt;
+                        &lt;div class="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center border border-blue-500/30"&gt;
+                            &lt;i class="fa-solid fa-chart-line text-blue-400"&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;h4 class="text-white font-bold mb-3 text-lg"&gt;Market Expansion&lt;/h4&gt;
+                    &lt;p class="text-gray-400 text-sm leading-relaxed font-light"&gt;
+                        Expanded operations into three new regions while maintaining high customer satisfaction and operational efficiency.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 2025 --&gt;
+                &lt;div class="glass-card p-8 flex flex-col h-[320px]"&gt;
+                    &lt;div class="flex justify-between items-start mb-6"&gt;
+                        &lt;span class="text-4xl font-bold text-white italic"&gt;2025&lt;/span&gt;
+                        &lt;div class="w-10 h-10 rounded-full bg-pink-500/20 flex items-center justify-center border border-pink-500/30"&gt;
+                            &lt;i class="fa-solid fa-shield-halved text-pink-400"&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;h4 class="text-white font-bold mb-3 text-lg"&gt;Strategic Pivot&lt;/h4&gt;
+                    &lt;p class="text-gray-400 text-sm leading-relaxed font-light"&gt;
+                        Secured series-B funding and formed strategic partnerships with Fortune 500 companies to refine our service ecosystem.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;!-- PRESENT --&gt;
+                &lt;div class="glass-card p-8 flex flex-col h-[320px] border-purple-500/50 bg-gradient-to-br from-purple-900/20 to-transparent"&gt;
+                    &lt;div class="flex justify-between items-start mb-6"&gt;
+                        &lt;span class="text-4xl font-extrabold text-gradient"&gt;PRESENT&lt;/span&gt;
+                        &lt;div class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-[0_0_15px_rgba(255,255,255,0.3)]"&gt;
+                            &lt;i class="fa-solid fa-flag text-black text-sm"&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;h4 class="text-white font-bold mb-3 text-lg"&gt;Market Leadership&lt;/h4&gt;
+                    &lt;p class="text-white/80 text-sm leading-relaxed font-normal"&gt;
+                        Achieved sustained profitability and recognized as an industry leader in innovation and brand reputation.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 底部装饰信息 --&gt;
+        &lt;div class="relative z-10 px-16 py-8 flex justify-between items-center opacity-40"&gt;
+            &lt;div class="text-[10px] text-white tracking-[0.3em] uppercase"&gt;Confidential &amp; Internal Use Only&lt;/div&gt;
+            &lt;div class="w-12 h-[1px] bg-white/30"&gt;&lt;/div&gt;
+            &lt;div class="text-[10px] text-white tracking-[0.3em] uppercase"&gt;Page 04 / 12&lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;'>
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 13
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Meet The Team - Executive Summary&lt;/title&gt;
+    
+    &lt;!-- Google Fonts: Noto Sans SC (Domestic Mirror as requested) &amp; Inter for English --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+    
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+
+    &lt;!-- Custom Config for Specific Colors --&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBlack: '#000000',
+                        primaryStart: '#8C7AE6',
+                        primaryEnd: '#1B3F9B',
+                        darkBg: '#1A1B2E',
+                        neon: '#B33CE0',
+                        bodyText: '#D1D5DB'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans SC', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        /* CSS Reset &amp; Basic Setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container - Strict Dimensions */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #000000;
+            overflow: hidden;
+        }
+
+        /* Decorative Neon Gradient (Simulating the top-right wave) */
+        .neon-glow {
+            position: absolute;
+            top: -150px;
+            right: -100px;
+            width: 700px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(179, 60, 224, 0.4) 0%, rgba(27, 63, 155, 0.2) 40%, rgba(0,0,0,0) 70%);
+            border-radius: 50%;
+            filter: blur(60px);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* Decorative Line (Simulating the flow) */
+        .neon-line {
+            position: absolute;
+            top: 50px;
+            right: 0;
+            width: 600px;
+            height: 200px;
+            border-bottom: 2px solid rgba(140, 122, 230, 0.3);
+            border-radius: 100%;
+            transform: rotate(-15deg);
+            box-shadow: 0 0 15px rgba(140, 122, 230, 0.5);
+            z-index: 1;
+        }
+
+        /* Glassmorphism Card Style */
+        .team-card {
+            background: linear-gradient(135deg, #1A1B2E 0%, #10255a 100%);
+            border: 1px solid rgba(140, 122, 230, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        /* Image Masking */
+        .img-mask {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+        }
+
+        .img-mask img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;!-- Main Container --&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;!-- Ambient Background Effects --&gt;
+        &lt;div class=&quot;neon-glow&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;neon-line&quot;&gt;&lt;/div&gt;
+
+        &lt;!-- Layout Container --&gt;
+        &lt;div class=&quot;relative z-10 flex flex-col justify-between h-full px-16 py-12&quot;&gt;
+            
+            &lt;!-- Header Section --&gt;
+            &lt;header class=&quot;mb-8&quot;&gt;
+                &lt;div class=&quot;border-l-4 border-primaryStart pl-6&quot;&gt;
+                    &lt;h1 class=&quot;text-6xl font-black text-white tracking-wide uppercase drop-shadow-md&quot;&gt;
+                        Meet The Team
+                    &lt;/h1&gt;
+                    &lt;div class=&quot;mt-4 max-w-2xl&quot;&gt;
+                        &lt;p class=&quot;text-xl text-bodyText font-light&quot;&gt;
+                            Thank you for your time! Reach out to us for questions.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/header&gt;
+
+            &lt;!-- Team Grid Section --&gt;
+            &lt;main class=&quot;grid grid-cols-2 gap-x-12 gap-y-8 flex-grow&quot;&gt;
+                
+                &lt;!-- Card 01 --&gt;
+                &lt;div class=&quot;team-card rounded-2xl p-5 flex items-center gap-6&quot;&gt;
+                    &lt;div class=&quot;img-mask w-32 h-32 flex-shrink-0 border border-gray-600&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=400&amp;q=80&quot; alt=&quot;Dani Martinez&quot;&gt;
+                        &lt;!-- 128*128 --&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;flex flex-col justify-center&quot;&gt;
+                        &lt;div class=&quot;flex items-center gap-2 mb-1&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-user-tie text-primaryStart text-xs&quot;&gt;&lt;/i&gt;
+                            &lt;h2 class=&quot;text-2xl font-bold text-white tracking-tight&quot;&gt;DANI MARTINEZ&lt;/h2&gt;
+                        &lt;/div&gt;
+                        &lt;p class=&quot;text-primaryStart italic font-medium tracking-wide&quot;&gt;Chief Executive Officer&lt;/p&gt;
+                        &lt;div class=&quot;w-12 h-0.5 bg-gray-600 mt-3 rounded-full&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Card 02 --&gt;
+                &lt;div class=&quot;team-card rounded-2xl p-5 flex items-center gap-6&quot;&gt;
+                    &lt;div class=&quot;img-mask w-32 h-32 flex-shrink-0 border border-gray-600&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=400&amp;q=80&quot; alt=&quot;Harper Russo&quot;&gt;
+                        &lt;!-- 128*128 --&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;flex flex-col justify-center&quot;&gt;
+                        &lt;div class=&quot;flex items-center gap-2 mb-1&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-user-tie text-primaryStart text-xs&quot;&gt;&lt;/i&gt;
+                            &lt;h2 class=&quot;text-2xl font-bold text-white tracking-tight&quot;&gt;HARPER RUSSO&lt;/h2&gt;
+                        &lt;/div&gt;
+                        &lt;p class=&quot;text-primaryStart italic font-medium tracking-wide&quot;&gt;Chief Executive Officer&lt;/p&gt;
+                        &lt;div class=&quot;w-12 h-0.5 bg-gray-600 mt-3 rounded-full&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Card 03 --&gt;
+                &lt;div class=&quot;team-card rounded-2xl p-5 flex items-center gap-6&quot;&gt;
+                    &lt;div class=&quot;img-mask w-32 h-32 flex-shrink-0 border border-gray-600&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=400&amp;q=80&quot; alt=&quot;Morgan Maxwell&quot;&gt;
+                        &lt;!-- 128*128 --&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;flex flex-col justify-center&quot;&gt;
+                        &lt;div class=&quot;flex items-center gap-2 mb-1&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-user-tie text-primaryStart text-xs&quot;&gt;&lt;/i&gt;
+                            &lt;h2 class=&quot;text-2xl font-bold text-white tracking-tight&quot;&gt;MORGAN MAXWELL&lt;/h2&gt;
+                        &lt;/div&gt;
+                        &lt;p class=&quot;text-primaryStart italic font-medium tracking-wide&quot;&gt;Chief Executive Officer&lt;/p&gt;
+                        &lt;div class=&quot;w-12 h-0.5 bg-gray-600 mt-3 rounded-full&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Card 04 --&gt;
+                &lt;div class=&quot;team-card rounded-2xl p-5 flex items-center gap-6&quot;&gt;
+                    &lt;div class=&quot;img-mask w-32 h-32 flex-shrink-0 border border-gray-600&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1480429370139-e0132c086e2a?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=400&amp;q=80&quot; alt=&quot;Neil Tran&quot;&gt;
+                        &lt;!-- 128*128 --&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;flex flex-col justify-center&quot;&gt;
+                        &lt;div class=&quot;flex items-center gap-2 mb-1&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-briefcase text-primaryStart text-xs&quot;&gt;&lt;/i&gt;
+                            &lt;h2 class=&quot;text-2xl font-bold text-white tracking-tight&quot;&gt;NEIL TRAN&lt;/h2&gt;
+                        &lt;/div&gt;
+                        &lt;p class=&quot;text-gray-300 italic font-medium tracking-wide&quot;&gt;Director&lt;/p&gt;
+                        &lt;div class=&quot;w-12 h-0.5 bg-gray-600 mt-3 rounded-full&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/main&gt;
+
+            &lt;!-- Footer Section --&gt;
+            &lt;footer class=&quot;mt-8 border-t border-gray-800 pt-6&quot;&gt;
+                &lt;div class=&quot;flex justify-between items-center text-bodyText text-sm font-light tracking-wider&quot;&gt;
+                    
+                    &lt;!-- Website --&gt;
+                    &lt;div class=&quot;flex items-center gap-3&quot;&gt;
+                        &lt;div class=&quot;w-8 h-8 rounded-full bg-darkBg flex items-center justify-center text-primaryStart border border-gray-700&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-envelope&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;p&gt;www.reallygreatsite.com&lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Email --&gt;
+                    &lt;div class=&quot;flex items-center gap-3&quot;&gt;
+                        &lt;div class=&quot;w-8 h-8 rounded-full bg-darkBg flex items-center justify-center text-primaryStart border border-gray-700&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-globe&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;p&gt;hello@reallygreatsite.com&lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Phone --&gt;
+                    &lt;div class=&quot;flex items-center gap-3&quot;&gt;
+                        &lt;div class=&quot;w-8 h-8 rounded-full bg-darkBg flex items-center justify-center text-primaryStart border border-gray-700&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-phone&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;p&gt;+123-456-7890&lt;/p&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            &lt;/footer&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <script>
+   // 自动调整iframe高度
+    function resizeIframes() {
+        document.querySelectorAll('.responsive-iframe').forEach(iframe => {
+            try {
+                const doc = iframe.contentDocument || iframe.contentWindow.document;
+                const height = Math.max(
+                    doc.body.scrollHeight,
+                    doc.documentElement.scrollHeight,
+                    doc.body.offsetHeight,
+                    doc.documentElement.offsetHeight,
+                    doc.body.clientHeight,
+                    doc.documentElement.clientHeight
+                );
+                iframe.style.height = height + 'px';
+            } catch (e) {
+                console.log('无法调整iframe高度:', e);
+            }
+        });
+    }
+    
+    // 初始调整
+    window.addEventListener('load', resizeIframes);
+    
+    // 内容加载后调整
+    document.querySelectorAll('.responsive-iframe').forEach(iframe => {
+        iframe.addEventListener('load', function() {
+            resizeIframes();
+            // 对动态内容进行定期检查
+            setInterval(resizeIframes, 1000);
+        });
+    });
+  </script>
+ </body>
+</html>

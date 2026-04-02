@@ -1,0 +1,1505 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Responsive Merged HTML
+  </title>
+  <style>
+   body {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .page-wrapper {
+                width: 100%;
+                margin: 15px 0;
+                position: relative;
+            }
+            .page-title {
+                background: #f5f5f5;
+                padding: 5px 10px;
+                border-radius: 3px 3px 0 0;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+            }
+            .responsive-iframe {
+                border: none;
+                width: 100%;
+                display: block;
+            }
+  </style>
+ </head>
+ <body>
+  <!-- 内容将在这里插入 -->
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 1
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Creative Portfolio - Cover Slide&lt;/title&gt;
+    
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;!-- Google Fonts --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700;800&amp;family=Inter:wght@300;400;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+
+    &lt;!-- Tailwind Config --&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#050505',
+                        primaryText: '#FDF6E3',
+                        secondaryText: '#9A9A9A',
+                        accent: '#D65DB1',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #050505;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* 背景装饰文字 */
+        .bg-watermark {
+            position: absolute;
+            font-size: 320px;
+            font-weight: 900;
+            color: #D65DB1;
+            opacity: 0.02;
+            z-index: 0;
+            white-space: nowrap;
+            pointer-events: none;
+            letter-spacing: -0.05em;
+        }
+
+        /* 动画效果 */
+        .fade-in-up {
+            animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .float {
+            animation: float 8s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(-15deg); }
+            50% { transform: translateY(-20px) rotate(-10deg); }
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;!-- 背景水印 --&gt;
+        &lt;div class=&quot;bg-watermark font-display top-[15%] -left-20&quot;&gt;CONCEPT&lt;/div&gt;
+        &lt;div class=&quot;bg-watermark font-display bottom-[15%] -right-20&quot;&gt;DESIGN&lt;/div&gt;
+
+        &lt;!-- 背景装饰：涂鸦 --&gt;
+        &lt;div class=&quot;absolute top-[15%] right-[10%] z-0 pointer-events-none opacity-30 float&quot;&gt;
+            &lt;svg width=&quot;500&quot; height=&quot;400&quot; viewBox=&quot;0 0 400 300&quot; fill=&quot;none&quot;&gt;
+                &lt;path d=&quot;M50 250C50 250 20 150 100 120C180 90 200 150 150 200C100 250 50 100 150 50C250 0 350 50 350 150&quot; 
+                      stroke=&quot;#D65DB1&quot; stroke-width=&quot;12&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 顶部关键词设计块 (填补空旷感) --&gt;
+        &lt;div class=&quot;absolute top-12 left-0 w-full px-20 flex justify-between items-start z-20&quot;&gt;
+            &lt;!-- 左侧关键词：Innovation --&gt;
+            &lt;div class=&quot;flex flex-col fade-in-up&quot; style=&quot;animation-delay: 0.2s;&quot;&gt;
+                &lt;div class=&quot;flex items-center gap-3 mb-2&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-circle-notch text-accent text-[8px]&quot;&gt;&lt;/i&gt;
+                    &lt;h4 class=&quot;text-primaryText font-display font-bold text-xl tracking-[0.2em] uppercase&quot;&gt;Innovation&lt;/h4&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;h-[1px] w-full bg-gradient-to-r from-accent to-transparent&quot;&gt;&lt;/div&gt;
+                &lt;p class=&quot;text-secondaryText text-[10px] mt-2 uppercase tracking-widest opacity-60&quot;&gt;Future-proof digital solutions&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;!-- 右侧关键词：Strategy --&gt;
+            &lt;div class=&quot;flex flex-col items-end fade-in-up&quot; style=&quot;animation-delay: 0.3s;&quot;&gt;
+                &lt;div class=&quot;flex items-center gap-3 mb-2&quot;&gt;
+                    &lt;h4 class=&quot;text-primaryText font-display font-bold text-xl tracking-[0.2em] uppercase&quot;&gt;Strategy&lt;/h4&gt;
+                    &lt;i class=&quot;fa-solid fa-circle-notch text-accent text-[8px]&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;h-[1px] w-full bg-gradient-to-l from-accent to-transparent&quot;&gt;&lt;/div&gt;
+                &lt;p class=&quot;text-secondaryText text-[10px] mt-2 uppercase tracking-widest opacity-60&quot;&gt;User-centric design methodology&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 装饰星号 --&gt;
+        &lt;div class=&quot;absolute top-[28%] left-[18%] text-accent text-5xl animate-pulse z-0 opacity-40&quot;&gt;
+            &lt;i class=&quot;fa-solid fa-asterisk&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 主标题区：居中 --&gt;
+        &lt;div class=&quot;relative z-10 text-center flex flex-col items-center fade-in-up&quot; style=&quot;animation-delay: 0.1s;&quot;&gt;
+            &lt;p class=&quot;text-accent font-display font-bold text-sm tracking-[0.8em] uppercase mb-8&quot;&gt;Creative Selection / 2027&lt;/p&gt;
+
+            &lt;div class=&quot;relative&quot;&gt;
+                &lt;!-- Creative --&gt;
+                &lt;h1 class=&quot;font-display font-black text-[155px] text-primaryText leading-[0.8] tracking-tighter uppercase italic&quot;&gt;
+                    Creative
+                &lt;/h1&gt;
+                
+                &lt;!-- Portfolio --&gt;
+                &lt;div class=&quot;flex items-center mt-2&quot;&gt;
+                    &lt;div class=&quot;h-[2px] w-20 bg-accent/40 mr-8&quot;&gt;&lt;/div&gt;
+                    &lt;h1 class=&quot;font-display font-black text-[155px] text-primaryText leading-[0.8] tracking-tighter uppercase&quot;&gt;
+                        Portfolio
+                    &lt;/h1&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 标志性粉色斜杠 --&gt;
+                &lt;div class=&quot;absolute -right-20 top-1/2 -translate-y-1/2 font-display font-light text-[240px] text-accent opacity-80 select-none&quot;&gt;/&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 汇报人信息区 --&gt;
+        &lt;div class=&quot;absolute bottom-16 w-full px-20 z-10 fade-in-up&quot; style=&quot;animation-delay: 0.5s;&quot;&gt;
+            &lt;div class=&quot;grid grid-cols-12 items-end pt-10 border-t border-white/10&quot;&gt;
+                
+                &lt;!-- 汇报人姓名 --&gt;
+                &lt;div class=&quot;col-span-4&quot;&gt;
+                    &lt;div class=&quot;flex flex-col&quot;&gt;
+                        &lt;span class=&quot;text-accent font-display font-bold text-xs tracking-[0.3em] uppercase mb-3&quot;&gt;Presented by&lt;/span&gt;
+                        &lt;h3 class=&quot;text-primaryText text-4xl font-display font-bold&quot;&gt;Neil Tran&lt;/h3&gt;
+                        &lt;p class=&quot;text-secondaryText text-sm mt-2 font-light tracking-widest italic opacity-60&quot;&gt;Senior Visual Designer &amp; Art Director&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 中间技能标签 --&gt;
+                &lt;div class=&quot;col-span-4 flex justify-center&quot;&gt;
+                    &lt;div class=&quot;flex flex-col border-l border-white/10 pl-10&quot;&gt;
+                        &lt;span class=&quot;text-secondaryText text-[10px] tracking-[0.3em] uppercase mb-4 opacity-50&quot;&gt;Core Expertise&lt;/span&gt;
+                        &lt;div class=&quot;flex flex-wrap gap-2&quot;&gt;
+                            &lt;span class=&quot;px-3 py-1 bg-white/5 rounded-full text-primaryText text-[9px] font-bold uppercase tracking-widest border border-white/10&quot;&gt;Interface Design&lt;/span&gt;
+                            &lt;span class=&quot;px-3 py-1 bg-white/5 rounded-full text-primaryText text-[9px] font-bold uppercase tracking-widest border border-white/10&quot;&gt;Motion&lt;/span&gt;
+                            &lt;span class=&quot;px-3 py-1 bg-white/5 rounded-full text-primaryText text-[9px] font-bold uppercase tracking-widest border border-white/10&quot;&gt;Brand&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 右侧联系 --&gt;
+                &lt;div class=&quot;col-span-4 text-right&quot;&gt;
+                    &lt;div class=&quot;flex flex-col items-end&quot;&gt;
+                        &lt;div class=&quot;flex gap-3 mb-6&quot;&gt;
+                            &lt;div class=&quot;w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-secondaryText hover:text-accent hover:border-accent transition-all cursor-pointer text-xs&quot;&gt;&lt;i class=&quot;fa-brands fa-dribbble&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                            &lt;div class=&quot;w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-secondaryText hover:text-accent hover:border-accent transition-all cursor-pointer text-xs&quot;&gt;&lt;i class=&quot;fa-brands fa-behance&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                            &lt;div class=&quot;w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-secondaryText hover:text-accent hover:border-accent transition-all cursor-pointer text-xs&quot;&gt;&lt;i class=&quot;fa-solid fa-link&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;p class=&quot;text-primaryText text-sm font-light tracking-widest underline decoration-accent/40 underline-offset-4 mb-1&quot;&gt;hello@reallygreatsite.com&lt;/p&gt;
+                        &lt;p class=&quot;text-secondaryText text-[10px] tracking-widest opacity-40 uppercase&quot;&gt;Design. Create. Inspire.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 2
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Table of Contents - Portfolio&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&amp;family=Space+Grotesk:wght@400;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { bgDark: '#050505', primaryText: '#FDF6E3', secondaryText: '#9A9A9A', accent: '#D65DB1', footerAccent: '#FEF3D5' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'] }
+                }
+            }
+        }
+    &lt;/script&gt;
+    &lt;style&gt;
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #050505; overflow: hidden; display: flex; flex-direction: column; justify-content: center; }
+        .fade-in-up { animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        
+        /* 目录项悬停动画 */
+        .index-item { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; }
+        .index-item:hover h3 { transform: translateX(10px); color: #D65DB1; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;!-- 统一背景涂鸦：镜像位置 --&gt;
+        &lt;div class=&quot;absolute top-[80px] left-1/2 -translate-x-1/2 z-0 pointer-events-none opacity-40&quot;&gt;
+            &lt;svg width=&quot;600&quot; height=&quot;200&quot; viewBox=&quot;0 0 400 150&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M10 50C100 130 300 10 390 100&quot; stroke=&quot;#D65DB1&quot; stroke-width=&quot;12&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+
+        &lt;main class=&quot;w-full px-20 z-10 fade-in-up&quot;&gt;
+            &lt;!-- 统一居中标题 --&gt;
+            &lt;div class=&quot;text-center mb-12&quot;&gt;
+                &lt;h1 class=&quot;font-display font-bold text-7xl text-primaryText leading-none tracking-tighter uppercase inline-block relative&quot;&gt;
+                    Contents &lt;span class=&quot;text-accent&quot;&gt;/&lt;/span&gt; Index
+                &lt;/h1&gt;
+                &lt;div class=&quot;w-32 h-1 bg-accent mx-auto mt-8&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- 目录网格：3x3 结构 --&gt;
+            &lt;div class=&quot;grid grid-cols-3 gap-x-12 gap-y-10 mb-12&quot;&gt;
+                &lt;!-- 01 --&gt;
+                &lt;div class=&quot;index-item group border-l border-gray-800 pl-6 py-2 hover:border-accent&quot;&gt;
+                    &lt;span class=&quot;font-display text-accent text-sm font-bold tracking-[0.3em] uppercase block mb-2 opacity-50&quot;&gt;01&lt;/span&gt;
+                    &lt;h3 class=&quot;font-display text-primaryText text-2xl font-bold uppercase transition-all duration-300&quot;&gt;Introduction&lt;/h3&gt;
+                &lt;/div&gt;
+                &lt;!-- 02 --&gt;
+                &lt;div class=&quot;index-item group border-l border-gray-800 pl-6 py-2 hover:border-accent&quot;&gt;
+                    &lt;span class=&quot;font-display text-accent text-sm font-bold tracking-[0.3em] uppercase block mb-2 opacity-50&quot;&gt;02&lt;/span&gt;
+                    &lt;h3 class=&quot;font-display text-primaryText text-2xl font-bold uppercase transition-all duration-300&quot;&gt;Design Philosophy&lt;/h3&gt;
+                &lt;/div&gt;
+                &lt;!-- 03 --&gt;
+                &lt;div class=&quot;index-item group border-l border-gray-800 pl-6 py-2 hover:border-accent&quot;&gt;
+                    &lt;span class=&quot;font-display text-accent text-sm font-bold tracking-[0.3em] uppercase block mb-2 opacity-50&quot;&gt;03&lt;/span&gt;
+                    &lt;h3 class=&quot;font-display text-primaryText text-2xl font-bold uppercase transition-all duration-300&quot;&gt;Design Process&lt;/h3&gt;
+                &lt;/div&gt;
+                &lt;!-- 04 --&gt;
+                &lt;div class=&quot;index-item group border-l border-gray-800 pl-6 py-2 hover:border-accent&quot;&gt;
+                    &lt;span class=&quot;font-display text-accent text-sm font-bold tracking-[0.3em] uppercase block mb-2 opacity-50&quot;&gt;04&lt;/span&gt;
+                    &lt;h3 class=&quot;font-display text-primaryText text-2xl font-bold uppercase transition-all duration-300&quot;&gt;Featured Projects&lt;/h3&gt;
+                &lt;/div&gt;
+                &lt;!-- 05 --&gt;
+                &lt;div class=&quot;index-item group border-l border-gray-800 pl-6 py-2 hover:border-accent&quot;&gt;
+                    &lt;span class=&quot;font-display text-accent text-sm font-bold tracking-[0.3em] uppercase block mb-2 opacity-50&quot;&gt;05&lt;/span&gt;
+                    &lt;h3 class=&quot;font-display text-primaryText text-2xl font-bold uppercase transition-all duration-300&quot;&gt;Case Studies&lt;/h3&gt;
+                &lt;/div&gt;
+                &lt;!-- 06 --&gt;
+                &lt;div class=&quot;index-item group border-l border-gray-800 pl-6 py-2 hover:border-accent&quot;&gt;
+                    &lt;span class=&quot;font-display text-accent text-sm font-bold tracking-[0.3em] uppercase block mb-2 opacity-50&quot;&gt;06&lt;/span&gt;
+                    &lt;h3 class=&quot;font-display text-primaryText text-2xl font-bold uppercase transition-all duration-300&quot;&gt;Vision &amp; Approach&lt;/h3&gt;
+                &lt;/div&gt;
+                &lt;!-- 07 --&gt;
+                &lt;div class=&quot;index-item group border-l border-gray-800 pl-6 py-2 hover:border-accent&quot;&gt;
+                    &lt;span class=&quot;font-display text-accent text-sm font-bold tracking-[0.3em] uppercase block mb-2 opacity-50&quot;&gt;07&lt;/span&gt;
+                    &lt;h3 class=&quot;font-display text-primaryText text-2xl font-bold uppercase transition-all duration-300&quot;&gt;Core Services&lt;/h3&gt;
+                &lt;/div&gt;
+                &lt;!-- 08 --&gt;
+                &lt;div class=&quot;index-item group border-l border-gray-800 pl-6 py-2 hover:border-accent&quot;&gt;
+                    &lt;span class=&quot;font-display text-accent text-sm font-bold tracking-[0.3em] uppercase block mb-2 opacity-50&quot;&gt;08&lt;/span&gt;
+                    &lt;h3 class=&quot;font-display text-primaryText text-2xl font-bold uppercase transition-all duration-300&quot;&gt;Testimonials&lt;/h3&gt;
+                &lt;/div&gt;
+                &lt;!-- 09 --&gt;
+                &lt;div class=&quot;index-item group border-l border-gray-800 pl-6 py-2 hover:border-accent&quot;&gt;
+                    &lt;span class=&quot;font-display text-accent text-sm font-bold tracking-[0.3em] uppercase block mb-2 opacity-50&quot;&gt;09&lt;/span&gt;
+                    &lt;h3 class=&quot;font-display text-primaryText text-2xl font-bold uppercase transition-all duration-300&quot;&gt;Contact Handoff&lt;/h3&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- 底部页码/装饰 --&gt;
+            &lt;div class=&quot;flex justify-between items-center max-w-full border-t border-gray-800 pt-8 opacity-60&quot;&gt;
+                &lt;span class=&quot;text-secondaryText text-xs tracking-widest uppercase&quot;&gt;Portfolio Edition 2027&lt;/span&gt;
+                &lt;span class=&quot;text-accent font-display font-bold&quot;&gt;IX — 01&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/main&gt;
+
+        &lt;!-- 装饰星号 --&gt;
+        &lt;div class=&quot;absolute bottom-[80px] right-[10%] text-accent text-5xl opacity-40 animate-pulse&quot;&gt;
+            &lt;i class=&quot;fa-solid fa-asterisk&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 底部装饰短线 --&gt;
+        &lt;div class=&quot;absolute bottom-12 left-1/2 -translate-x-1/2 w-48 h-[2px] bg-footerAccent opacity-20&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;```">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 3
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Vision &amp; Approach - Portfolio&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&amp;family=Space+Grotesk:wght@400;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { bgDark: '#050505', primaryText: '#FDF6E3', secondaryText: '#9A9A9A', accent: '#D65DB1', footerAccent: '#FEF3D5' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'] }
+                }
+            }
+        }
+    &lt;/script&gt;
+    &lt;style&gt;
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #050505; overflow: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        .fade-in-up { animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;!-- 背景装饰 --&gt;
+        &lt;div class=&quot;absolute top-[80px] left-1/2 -translate-x-1/2 z-0 pointer-events-none opacity-40&quot;&gt;
+            &lt;svg width=&quot;600&quot; height=&quot;200&quot; viewBox=&quot;0 0 400 150&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M50 100C100 20 300 150 350 50&quot; stroke=&quot;#D65DB1&quot; stroke-width=&quot;10&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+
+        &lt;main class=&quot;w-full px-24 z-10 fade-in-up flex flex-col items-center&quot;&gt;
+            &lt;!-- 统一居中标题 --&gt;
+            &lt;div class=&quot;text-center mb-10&quot;&gt;
+                &lt;h1 class=&quot;font-display font-bold text-7xl text-primaryText leading-none tracking-tighter uppercase inline-block relative&quot;&gt;
+                    Vision &lt;span class=&quot;text-accent&quot;&gt;/&lt;/span&gt; Creative Approach
+                &lt;/h1&gt;
+                &lt;div class=&quot;w-24 h-1 bg-accent mx-auto mt-6&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- 内容区：图片在上，文字在下分栏 --&gt;
+            &lt;div class=&quot;w-full max-w-5xl&quot;&gt;
+                &lt;!-- 单张大图：横向宽幅 --&gt;
+                &lt;div class=&quot;group relative w-full h-[280px] rounded-[32px] overflow-hidden border border-gray-800 shadow-2xl mb-10&quot;&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&amp;w=1200&amp;auto=format&amp;fit=crop&quot; 
+                         alt=&quot;Vision&quot; 
+                         class=&quot;w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000&quot;&gt;
+                    &lt;div class=&quot;absolute inset-0 bg-gradient-to-t from-black/40 to-transparent&quot;&gt;&lt;/div&gt;
+                    &lt;!-- 装饰星号 --&gt;
+                    &lt;div class=&quot;absolute top-6 right-6 text-accent text-4xl animate-pulse&quot;&gt;&lt;i class=&quot;fa-solid fa-asterisk&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 文本设计：左右双栏 --&gt;
+                &lt;div class=&quot;grid grid-cols-2 gap-16&quot;&gt;
+                    &lt;div class=&quot;border-l-2 border-accent pl-6&quot;&gt;
+                        &lt;p class=&quot;text-primaryText font-display text-2xl leading-snug font-light italic&quot;&gt;
+                            &quot;Transforming abstract concepts into tangible digital experiences.&quot;
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div&gt;
+                        &lt;p class=&quot;text-secondaryText text-sm leading-relaxed font-light text-justify&quot;&gt;
+                            Our philosophy embraces the chaos of creativity while maintaining the precision of engineering. Every pixel serves a purpose, bridging the gap between human emotion and digital interfaces to craft stories that resonate.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/main&gt;
+
+        &lt;div class=&quot;absolute bottom-12 left-1/2 -translate-x-1/2 w-48 h-[1px] bg-accent/30&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 4
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Core Skills - Portfolio&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&amp;family=Space+Grotesk:wght@400;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { bgDark: '#050505', primaryText: '#FDF6E3', secondaryText: '#9A9A9A', accent: '#D65DB1' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'] }
+                }
+            }
+        }
+    &lt;/script&gt;
+    &lt;style&gt;
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #050505; overflow: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        .skill-box { transition: all 0.4s ease; border-top: 1px solid rgba(154, 154, 154, 0.15); }
+        .skill-box:hover { border-top-color: #D65DB1; background: rgba(214, 93, 177, 0.03); }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;!-- 背景装饰 --&gt;
+        &lt;div class=&quot;absolute top-[80px] left-1/2 -translate-x-1/2 z-0 pointer-events-none opacity-40&quot;&gt;
+            &lt;svg width=&quot;600&quot; height=&quot;200&quot; viewBox=&quot;0 0 400 150&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M10 50C100 130 300 10 390 100&quot; stroke=&quot;#D65DB1&quot; stroke-width=&quot;12&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+
+        &lt;main class=&quot;w-full px-20 z-10 flex flex-col items-center&quot;&gt;
+            &lt;!-- 统一居中标题 --&gt;
+            &lt;div class=&quot;text-center mb-12&quot;&gt;
+                &lt;h1 class=&quot;font-display font-bold text-7xl text-primaryText leading-none tracking-tighter uppercase inline-block relative&quot;&gt;
+                    Core Skills &lt;span class=&quot;text-accent&quot;&gt;/&lt;/span&gt; Services
+                &lt;/h1&gt;
+                &lt;div class=&quot;w-24 h-1 bg-accent mx-auto mt-6&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- 服务网格：3列 2行 (高度更紧凑，绝不溢出) --&gt;
+            &lt;div class=&quot;grid grid-cols-3 gap-x-10 gap-y-8 w-full&quot;&gt;
+                &lt;!-- 01 --&gt;
+                &lt;div class=&quot;skill-box p-6&quot;&gt;
+                    &lt;span class=&quot;text-accent font-display font-bold text-xs tracking-widest uppercase&quot;&gt;01 / Concept&lt;/span&gt;
+                    &lt;h3 class=&quot;text-primaryText font-display text-2xl font-bold mt-3 uppercase leading-tight&quot;&gt;Graphic Design&lt;/h3&gt;
+                    &lt;p class=&quot;text-secondaryText text-sm mt-4 leading-relaxed opacity-70&quot;&gt;Our philosophy embraces the chaos of creativity while maintaining the precision of engineering.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;!-- 02 --&gt;
+                &lt;div class=&quot;skill-box p-6&quot;&gt;
+                    &lt;span class=&quot;text-accent font-display font-bold text-xs tracking-widest uppercase&quot;&gt;02 / Digital&lt;/span&gt;
+                    &lt;h3 class=&quot;text-primaryText font-display text-2xl font-bold mt-3 uppercase leading-tight&quot;&gt;Web / UI &amp; UX&lt;/h3&gt;
+                    &lt;p class=&quot;text-secondaryText text-sm mt-4 leading-relaxed opacity-70&quot;&gt;Our philosophy embraces the chaos of creativity while maintaining the precision of engineering.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;!-- 03 --&gt;
+                &lt;div class=&quot;skill-box p-6&quot;&gt;
+                    &lt;span class=&quot;text-accent font-display font-bold text-xs tracking-widest uppercase&quot;&gt;03 / Visual&lt;/span&gt;
+                    &lt;h3 class=&quot;text-primaryText font-display text-2xl font-bold mt-3 uppercase leading-tight&quot;&gt;Photo / Video&lt;/h3&gt;
+                    &lt;p class=&quot;text-secondaryText text-sm mt-4 leading-relaxed opacity-70&quot;&gt;Our philosophy embraces the chaos of creativity while maintaining the precision of engineering.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;!-- 04 --&gt;
+                &lt;div class=&quot;skill-box p-6&quot;&gt;
+                    &lt;span class=&quot;text-accent font-display font-bold text-xs tracking-widest uppercase&quot;&gt;04 / Strategy&lt;/span&gt;
+                    &lt;h3 class=&quot;text-primaryText font-display text-2xl font-bold mt-3 uppercase leading-tight&quot;&gt;Branding &amp; Identity&lt;/h3&gt;
+                    &lt;p class=&quot;text-secondaryText text-sm mt-4 leading-relaxed opacity-70&quot;&gt;Our philosophy embraces the chaos of creativity while maintaining the precision of engineering.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;!-- 05 --&gt;
+                &lt;div class=&quot;skill-box p-6&quot;&gt;
+                    &lt;span class=&quot;text-accent font-display font-bold text-xs tracking-widest uppercase&quot;&gt;05 / Growth&lt;/span&gt;
+                    &lt;h3 class=&quot;text-primaryText font-display text-2xl font-bold mt-3 uppercase leading-tight&quot;&gt;Content Marketing&lt;/h3&gt;
+                    &lt;p class=&quot;text-secondaryText text-sm mt-4 leading-relaxed opacity-70&quot;&gt;Our philosophy embraces the chaos of creativity while maintaining the precision of engineering.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;!-- 06 --&gt;
+                &lt;div class=&quot;skill-box p-6&quot;&gt;
+                    &lt;span class=&quot;text-accent font-display font-bold text-xs tracking-widest uppercase&quot;&gt;06 / Utility&lt;/span&gt;
+                    &lt;h3 class=&quot;text-primaryText font-display text-2xl font-bold mt-3 uppercase leading-tight&quot;&gt;Product Design&lt;/h3&gt;
+                    &lt;p class=&quot;text-secondaryText text-sm mt-4 leading-relaxed opacity-70&quot;&gt;Our philosophy embraces the chaos of creativity while maintaining the precision of engineering.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/main&gt;
+
+        &lt;!-- 背景微弱文字 --&gt;
+        &lt;div class=&quot;absolute bottom-10 text-accent/20 font-display text-xs tracking-[1em] uppercase&quot;&gt;Structural Thinking&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 5
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Design Philosophy &amp; Process&lt;/title&gt;
+    
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;!-- Google Fonts --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&amp;family=Space+Grotesk:wght@400;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+
+    &lt;!-- Tailwind Config --&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#050505',
+                        primaryText: '#FDF6E3',
+                        secondaryText: '#9A9A9A',
+                        accent: '#D65DB1',
+                        footerAccent: '#FEF3D5',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #050505;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* 垂直居中 */
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;!-- 背景装饰 (SVG) - 居中背景 --&gt;
+        &lt;div class=&quot;absolute top-[80px] left-1/2 -translate-x-1/2 z-0 pointer-events-none opacity-40&quot;&gt;
+            &lt;svg width=&quot;600&quot; height=&quot;200&quot; viewBox=&quot;0 0 400 150&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M50 100C100 20 300 150 350 50&quot; 
+                      stroke=&quot;#D65DB1&quot; stroke-width=&quot;10&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 装饰星号 --&gt;
+        &lt;div class=&quot;absolute top-[100px] right-[15%] text-accent text-6xl animate-pulse z-0 opacity-60&quot;&gt;
+            &lt;i class=&quot;fa-solid fa-asterisk rotate-12&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 主内容区 --&gt;
+        &lt;main class=&quot;w-full px-12 z-10 flex flex-col items-center&quot;&gt;
+            
+            &lt;!-- 居中标题 --&gt;
+            &lt;div class=&quot;mb-20 text-center&quot;&gt;
+                &lt;h1 class=&quot;font-display font-bold text-7xl text-primaryText leading-[1.1] tracking-tight uppercase&quot;&gt;
+                    Design Philosophy &lt;span class=&quot;text-accent&quot;&gt;/&lt;/span&gt; Process
+                &lt;/h1&gt;
+                &lt;div class=&quot;w-24 h-1 bg-accent mx-auto mt-6&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- 时间轴视觉 --&gt;
+            &lt;div class=&quot;relative w-full h-[380px] grid grid-cols-5 gap-6 items-center&quot;&gt;
+                
+                &lt;!-- 中心基准线 --&gt;
+                &lt;div class=&quot;absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-gray-600 to-transparent z-0&quot;&gt;&lt;/div&gt;
+
+                &lt;!-- Step 1: Research &amp; Discovery --&gt;
+                &lt;div class=&quot;flex flex-col h-full relative z-10 group text-center&quot;&gt;
+                    &lt;div class=&quot;h-1/2 flex items-end pb-6 justify-center&quot;&gt;
+                         &lt;div class=&quot;w-[200px] h-[140px] bg-gray-900 rounded-lg overflow-hidden border border-gray-800 opacity-80 group-hover:opacity-100 transition-opacity&quot;&gt;
+                            &lt;img src=&quot;https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&amp;fit=crop&amp;w=400&amp;q=80&quot; alt=&quot;Research&quot; class=&quot;w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500&quot;&gt;
+                         &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;!-- Axis Dot --&gt;
+                    &lt;div class=&quot;absolute top-[calc(50%-4px)] left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-accent shadow-[0_0_8px_#D65DB1]&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;h-1/2 pt-6 px-2&quot;&gt;
+                        &lt;h3 class=&quot;font-display text-lg text-primaryText uppercase font-bold mb-2&quot;&gt;Research &amp; Discovery&lt;/h3&gt;
+                        &lt;p class=&quot;text-secondaryText text-sm leading-relaxed opacity-80 line-clamp-3&quot;&gt;
+                            Deep diving into user needs and market trends to establish a solid foundation for the project strategy.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Step 2: Concept Development --&gt;
+                &lt;div class=&quot;flex flex-col h-full relative z-10 group text-center&quot;&gt;
+                    &lt;div class=&quot;h-1/2 pt-6 px-2 order-1 flex flex-col justify-end pb-6&quot;&gt;
+                        &lt;h3 class=&quot;font-display text-lg text-primaryText uppercase font-bold mb-2&quot;&gt;Concept Development&lt;/h3&gt;
+                        &lt;p class=&quot;text-secondaryText text-sm leading-relaxed opacity-80 line-clamp-3&quot;&gt;
+                            Synthesizing research into visual directions and core concepts that align with brand values.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;absolute top-[calc(50%-4px)] left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-secondaryText group-hover:bg-accent transition-colors&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;h-1/2 pt-6 justify-center flex order-2&quot;&gt;
+                        &lt;div class=&quot;w-[200px] h-[140px] bg-gray-900 rounded-lg overflow-hidden border border-gray-800 opacity-80 group-hover:opacity-100 transition-opacity&quot;&gt;
+                            &lt;img src=&quot;https://images.unsplash.com/photo-1626785774573-4b799314346d?auto=format&amp;fit=crop&amp;w=400&amp;q=80&quot; alt=&quot;Concept Sketches&quot; class=&quot;w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500&quot;&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Step 3: Design Execution --&gt;
+                &lt;div class=&quot;flex flex-col h-full relative z-10 group text-center&quot;&gt;
+                    &lt;div class=&quot;h-1/2 flex items-end pb-6 justify-center&quot;&gt;
+                        &lt;div class=&quot;w-[200px] h-[140px] bg-gray-900 rounded-lg overflow-hidden border border-gray-800 opacity-80 group-hover:opacity-100 transition-opacity&quot;&gt;
+                             &lt;img src=&quot;https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&amp;fit=crop&amp;w=400&amp;q=80&quot; alt=&quot;Design Execution&quot; class=&quot;w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500&quot;&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;absolute top-[calc(50%-4px)] left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-secondaryText group-hover:bg-accent transition-colors&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;h-1/2 pt-6 px-2&quot;&gt;
+                        &lt;h3 class=&quot;font-display text-lg text-primaryText uppercase font-bold mb-2&quot;&gt;Design Execution&lt;/h3&gt;
+                        &lt;p class=&quot;text-secondaryText text-sm leading-relaxed opacity-80 line-clamp-3&quot;&gt;
+                            Transforming concepts into high-fidelity designs, focusing on pixel-perfect details and systems.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Step 4: Feedback &amp; Iteration --&gt;
+                &lt;div class=&quot;flex flex-col h-full relative z-10 group text-center&quot;&gt;
+                    &lt;div class=&quot;h-1/2 pt-6 px-2 order-1 flex flex-col justify-end pb-6&quot;&gt;
+                        &lt;h3 class=&quot;font-display text-lg text-primaryText uppercase font-bold mb-2&quot;&gt;Feedback &amp; Iteration&lt;/h3&gt;
+                        &lt;p class=&quot;text-secondaryText text-sm leading-relaxed opacity-80 line-clamp-3&quot;&gt;
+                            Refining the product through rigorous testing cycles and stakeholder feedback loops.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;absolute top-[calc(50%-4px)] left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-secondaryText group-hover:bg-accent transition-colors&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;h-1/2 pt-6 justify-center flex order-2&quot;&gt;
+                         &lt;div class=&quot;w-[200px] h-[140px] bg-gray-900 rounded-lg overflow-hidden border border-gray-800 opacity-80 group-hover:opacity-100 transition-opacity&quot;&gt;
+                            &lt;img src=&quot;https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&amp;fit=crop&amp;w=400&amp;q=80&quot; alt=&quot;Team Feedback&quot; class=&quot;w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500&quot;&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                
+                &lt;!-- Step 5: Final Delivery --&gt;
+                &lt;div class=&quot;flex flex-col h-full relative z-10 group text-center&quot;&gt;
+                    &lt;div class=&quot;h-1/2 flex items-end pb-6 justify-center&quot;&gt;
+                         &lt;div class=&quot;w-[200px] h-[140px] bg-gray-900 rounded-lg overflow-hidden border border-gray-800 opacity-80 group-hover:opacity-100 transition-opacity&quot;&gt;
+                            &lt;img src=&quot;https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&amp;fit=crop&amp;w=400&amp;q=80&quot; alt=&quot;Final Delivery&quot; class=&quot;w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500&quot;&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;absolute top-[calc(50%-4px)] left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-secondaryText group-hover:bg-accent transition-colors&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;h-1/2 pt-6 px-2&quot;&gt;
+                        &lt;h3 class=&quot;font-display text-lg text-primaryText uppercase font-bold mb-2&quot;&gt;Final Delivery&lt;/h3&gt;
+                        &lt;p class=&quot;text-secondaryText text-sm leading-relaxed opacity-80 line-clamp-3&quot;&gt;
+                            Preparing assets for development handoff and ensuring design integrity in production.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/main&gt;
+
+        &lt;!-- 底部微弱装饰线 (保留原有的 footerAccent 概念，但以极简线条呈现) --&gt;
+        &lt;div class=&quot;absolute bottom-10 left-1/2 -translate-x-1/2 w-1/3 h-[2px] bg-footerAccent opacity-20&quot;&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 6
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Featured Projects - Portfolio&lt;/title&gt;
+    
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;!-- Google Fonts --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&amp;family=Space+Grotesk:wght@400;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+
+    &lt;!-- Tailwind Config --&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#050505',
+                        primaryText: '#FDF6E3',
+                        secondaryText: '#9A9A9A',
+                        accent: '#D65DB1',
+                        footerAccent: '#FEF3D5',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #050505;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .line-clamp-custom {
+            display: -webkit-box;
+            -webkit-line-clamp: 6;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* 统一的入场动画 */
+        .fade-in-up {
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;!-- 背景装饰 (与Philosophy页统一) --&gt;
+        &lt;div class=&quot;absolute top-[60px] left-1/2 -translate-x-1/2 z-0 pointer-events-none opacity-40&quot;&gt;
+            &lt;svg width=&quot;600&quot; height=&quot;220&quot; viewBox=&quot;0 0 400 150&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M20 120C100 40 300 180 380 60&quot; 
+                      stroke=&quot;#D65DB1&quot; stroke-width=&quot;12&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 装饰星号 (与Philosophy页统一) --&gt;
+        &lt;div class=&quot;absolute top-[100px] left-[18%] text-accent text-5xl animate-pulse z-0 opacity-60&quot;&gt;
+            &lt;i class=&quot;fa-solid fa-asterisk rotate-12&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 主内容区 --&gt;
+        &lt;main class=&quot;w-full px-20 z-10 fade-in-up&quot;&gt;
+            
+            &lt;!-- 居中标题设计 --&gt;
+            &lt;div class=&quot;text-center mb-16&quot;&gt;
+                &lt;h1 class=&quot;font-display font-bold text-8xl text-primaryText leading-none tracking-tighter uppercase inline-block relative&quot;&gt;
+                    Featured &lt;span class=&quot;text-accent&quot;&gt;/&lt;/span&gt; Projects
+                &lt;/h1&gt;
+                &lt;div class=&quot;w-32 h-1 bg-accent mx-auto mt-8&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- 内容栅格：左中右结构 --&gt;
+            &lt;div class=&quot;grid grid-cols-12 gap-12 items-center&quot;&gt;
+                
+                &lt;!-- 左侧：图片1 (大图) --&gt;
+                &lt;div class=&quot;col-span-4 group&quot;&gt;
+                    &lt;div class=&quot;w-full h-[360px] bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 transition-all duration-500 group-hover:border-accent/50 group-hover:translate-y-[-5px] shadow-2xl&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1586717791821-3f44a5638d48?auto=format&amp;fit=crop&amp;w=600&amp;q=80&quot; 
+                             alt=&quot;Main Project&quot; 
+                             class=&quot;w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 中间：文本描述内容 --&gt;
+                &lt;div class=&quot;col-span-4 flex flex-col items-center text-center&quot;&gt;
+                    &lt;h2 class=&quot;font-display text-accent text-2xl font-bold tracking-[0.2em] mb-6 uppercase italic&quot;&gt;
+                        Project 1#
+                    &lt;/h2&gt;
+                    &lt;div class=&quot;relative px-4&quot;&gt;
+                        &lt;!-- 装饰引号 --&gt;
+                        &lt;i class=&quot;fa-solid fa-quote-left absolute -top-4 -left-2 text-gray-800 text-3xl&quot;&gt;&lt;/i&gt;
+                        &lt;p class=&quot;text-secondaryText text-sm leading-relaxed font-light line-clamp-custom&quot;&gt;
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget finibus ligula. Quisque tristique, diam a ornare fringilla, dui nisl condimentum ligula, at ultricies nulla tellus at sem. Curabitur et augue pellentesque tortor imperdiet consectetur ac nec felis. Aliquam erat volutpat. Ut ac nunc et neque sagittis maximus posuere sit amet sapien. Donec venenatis nibh lectus.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 右侧：图片2 (小图/细节图) --&gt;
+                &lt;div class=&quot;col-span-4 group&quot;&gt;
+                    &lt;div class=&quot;w-full h-[360px] bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 transition-all duration-500 group-hover:border-accent/50 group-hover:translate-y-[-5px] shadow-2xl&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1542744094-24638eff58bb?auto=format&amp;fit=crop&amp;w=600&amp;q=80&quot; 
+                             alt=&quot;Project Detail&quot; 
+                             class=&quot;w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/main&gt;
+
+        &lt;!-- 极简底部装饰线条 (Philosophy页同款) --&gt;
+        &lt;div class=&quot;absolute bottom-12 left-1/2 -translate-x-1/2 w-48 h-[2px] bg-footerAccent opacity-20&quot;&gt;&lt;/div&gt;
+        
+        &lt;!-- 背景角落微弱文字 --&gt;
+        &lt;div class=&quot;absolute bottom-12 left-20 opacity-20&quot;&gt;
+            &lt;span class=&quot;text-secondaryText text-[10px] tracking-[0.8em] uppercase font-light&quot;&gt;Case Study Selection&lt;/span&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 7
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Project 2# - Portfolio&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&amp;family=Space+Grotesk:wght@400;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { bgDark: '#050505', primaryText: '#FDF6E3', secondaryText: '#9A9A9A', accent: '#D65DB1' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'] }
+                }
+            }
+        }
+    &lt;/script&gt;
+    &lt;style&gt;
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #050505; overflow: hidden; display: flex; align-items: center; }
+        .text-outline { -webkit-text-stroke: 1px rgba(214, 93, 177, 0.4); color: transparent; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot; class=&quot;px-20&quot;&gt;
+        &lt;!-- 装饰涂鸦 --&gt;
+        &lt;div class=&quot;absolute top-[40px] left-[10%] opacity-30 rotate-12&quot;&gt;
+            &lt;svg width=&quot;400&quot; height=&quot;300&quot; viewBox=&quot;0 0 400 300&quot; fill=&quot;none&quot;&gt;&lt;path d=&quot;M50 250C50 250 20 150 100 120C180 90 200 150 150 200C100 250 50 100 150 50C250 0 350 50 350 150&quot; stroke=&quot;#D65DB1&quot; stroke-width=&quot;10&quot; stroke-linecap=&quot;round&quot;/&gt;&lt;/svg&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;grid grid-cols-12 gap-12 w-full items-center z-10&quot;&gt;
+            &lt;!-- 左侧文字区：利用大号空心字填补空间 --&gt;
+            &lt;div class=&quot;col-span-5 relative&quot;&gt;
+                &lt;div class=&quot;absolute -top-20 -left-10 font-display text-[180px] font-bold text-outline opacity-20 select-none&quot;&gt;02&lt;/div&gt;
+                &lt;h1 class=&quot;font-display font-bold text-7xl text-primaryText uppercase leading-[0.9] mb-4&quot;&gt;
+                    Featured&lt;br&gt;&lt;span class=&quot;text-accent&quot;&gt;/&lt;/span&gt; Projects
+                &lt;/h1&gt;
+                &lt;h2 class=&quot;font-display text-accent text-2xl tracking-[0.3em] font-bold uppercase mb-8&quot;&gt;Project 2#&lt;/h2&gt;
+                &lt;div class=&quot;w-16 h-1 bg-accent mb-8&quot;&gt;&lt;/div&gt;
+                &lt;p class=&quot;text-secondaryText text-sm leading-relaxed font-light text-justify&quot;&gt;
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget finibus ligula. Quisque tristique, diam a ornare fringilla, dui nisl condimentum ligula, at ultricies nulla tellus at sem. Curabitur et augue pellentesque tortor imperdiet consectetur ac nec felis. Aliquam erat volutpat. Ut ac nunc et neque sagittis maximus posuere sit amet sapien. Donec venenatis nibh lectus, et mollis orci aliquam ac.
+                &lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;!-- 右侧图片区：层叠设计 --&gt;
+            &lt;div class=&quot;col-span-7 relative h-[500px]&quot;&gt;
+                &lt;!-- 主图 --&gt;
+                &lt;div class=&quot;absolute top-0 right-0 w-[80%] h-[400px] rounded-3xl overflow-hidden border border-gray-800 shadow-2xl z-10 group&quot;&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1481487484168-9b930d55208d?q=80&amp;w=800&amp;auto=format&amp;fit=crop&quot; class=&quot;w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700&quot;&gt;
+                &lt;/div&gt;
+                &lt;!-- 浮动小图 --&gt;
+                &lt;div class=&quot;absolute bottom-0 left-0 w-[50%] h-[260px] rounded-3xl overflow-hidden border-[10px] border-bgDark shadow-2xl z-20 group&quot;&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1545235617-9465d2a55698?q=80&amp;w=600&amp;auto=format&amp;fit=crop&quot; class=&quot;w-full h-full object-cover&quot;&gt;
+                    &lt;div class=&quot;absolute inset-0 bg-accent/10 group-hover:bg-transparent transition-colors&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- 装饰星号 --&gt;
+                &lt;div class=&quot;absolute top-10 right-10 text-accent text-4xl animate-pulse z-30&quot;&gt;&lt;i class=&quot;fa-solid fa-asterisk&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;!-- 底部极简线条 --&gt;
+        &lt;div class=&quot;absolute bottom-12 left-20 w-32 h-[1px] bg-accent opacity-50&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 8
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Project 3# - Portfolio&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&amp;family=Space+Grotesk:wght@400;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { bgDark: '#050505', primaryText: '#FDF6E3', secondaryText: '#9A9A9A', accent: '#D65DB1' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'] }
+                }
+            }
+        }
+    &lt;/script&gt;
+    &lt;style&gt;
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #050505; overflow: hidden; display: flex; }
+        .vertical-text { writing-mode: vertical-rl; transform: rotate(180deg); }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;!-- 背景巨大的斜杠装饰 --&gt;
+        &lt;div class=&quot;absolute inset-0 flex items-center justify-center opacity-[0.03] pointer-events-none&quot;&gt;
+            &lt;div class=&quot;font-display font-bold text-[800px] text-accent&quot;&gt;/&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 左半部分：双图排列 --&gt;
+        &lt;div class=&quot;w-1/2 h-full p-12 flex flex-col gap-6 justify-center&quot;&gt;
+            &lt;div class=&quot;w-full h-[300px] rounded-br-[80px] rounded-tl-[80px] overflow-hidden border border-gray-800 group&quot;&gt;
+                &lt;img src=&quot;https://images.unsplash.com/photo-1512428559087-560fa5ce7d5b?q=80&amp;w=800&amp;auto=format&amp;fit=crop&quot; class=&quot;w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;w-full h-[300px] rounded-bl-[80px] rounded-tr-[80px] overflow-hidden border border-gray-800 group&quot;&gt;
+                &lt;img src=&quot;https://images.unsplash.com/photo-1556656793-02715d8dd660?q=80&amp;w=600&amp;auto=format&amp;fit=crop&quot; class=&quot;w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700&quot;&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 右半部分：文字信息流 --&gt;
+        &lt;div class=&quot;w-1/2 h-full flex flex-col justify-center px-16 relative&quot;&gt;
+            &lt;!-- 装饰元素 --&gt;
+            &lt;div class=&quot;absolute top-20 right-20 text-accent text-6xl opacity-20&quot;&gt;&lt;i class=&quot;fa-solid fa-asterisk&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+            
+            &lt;div class=&quot;mb-12&quot;&gt;
+                &lt;h1 class=&quot;font-display font-bold text-8xl text-primaryText uppercase leading-none tracking-tighter mb-4&quot;&gt;
+                    Featured&lt;br&gt;Projects
+                &lt;/h1&gt;
+                &lt;div class=&quot;flex items-center gap-4&quot;&gt;
+                    &lt;span class=&quot;font-display text-accent text-4xl font-bold italic&quot;&gt;03&lt;/span&gt;
+                    &lt;div class=&quot;h-[2px] flex-1 bg-gradient-to-r from-accent to-transparent&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;space-y-6&quot;&gt;
+                &lt;h2 class=&quot;font-display text-primaryText text-2xl font-light tracking-[0.1em] uppercase&quot;&gt;Project 3#&lt;/h2&gt;
+                &lt;p class=&quot;text-secondaryText text-sm leading-relaxed font-light text-justify pr-10 border-r-2 border-accent/20&quot;&gt;
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget finibus ligula. Quisque tristique, diam a ornare fringilla, dui nisl condimentum ligula, at ultricies nulla tellus at sem. Curabitur et augue pellentesque tortor imperdiet consectetur ac nec felis. Aliquam erat volutpat. Ut ac nunc et neque sagittis maximus posuere sit amet sapien. Donec venenatis nibh lectus, et mollis orci aliquam ac.
+                &lt;/p&gt;
+                &lt;div class=&quot;flex gap-4&quot;&gt;
+                    &lt;span class=&quot;text-[10px] text-accent border border-accent/30 px-3 py-1 rounded-full uppercase tracking-widest&quot;&gt;Branding&lt;/span&gt;
+                    &lt;span class=&quot;text-[10px] text-accent border border-accent/30 px-3 py-1 rounded-full uppercase tracking-widest&quot;&gt;Digital Design&lt;/span&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 9
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Case Studies - Portfolio&lt;/title&gt;
+    
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&amp;family=Space+Grotesk:wght@400;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#050505',
+                        primaryText: '#FDF6E3',
+                        secondaryText: '#9A9A9A',
+                        accent: '#D65DB1',
+                        footerAccent: '#FEF3D5',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #050505;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .img-hover {
+            filter: grayscale(100%);
+            transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .group:hover .img-hover {
+            filter: grayscale(0%);
+            transform: scale(1.03);
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;div class=&quot;absolute top-[40px] left-1/2 -translate-x-1/2 z-0 pointer-events-none opacity-30&quot;&gt;
+            &lt;svg width=&quot;600&quot; height=&quot;150&quot; viewBox=&quot;0 0 400 150&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M50 100C100 20 300 150 350 50&quot; stroke=&quot;#D65DB1&quot; stroke-width=&quot;8&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+
+        &lt;main class=&quot;w-full px-20 z-10 fade-in-up&quot;&gt;
+            
+            &lt;div class=&quot;text-center mb-12&quot;&gt;
+                &lt;h1 class=&quot;font-display font-bold text-7xl text-primaryText leading-none tracking-tighter uppercase inline-block relative&quot;&gt;
+                    Case &lt;span class=&quot;text-accent&quot;&gt;/&lt;/span&gt; Studies
+                &lt;/h1&gt;
+                &lt;div class=&quot;w-24 h-1 bg-accent mx-auto mt-6&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;grid grid-cols-12 gap-16 items-center&quot;&gt;
+                
+                &lt;div class=&quot;col-span-5 flex flex-col gap-10&quot;&gt;
+                    
+                    &lt;div class=&quot;group&quot;&gt;
+                        &lt;h2 class=&quot;text-primaryText text-lg font-display font-bold uppercase tracking-widest mb-3 border-l-2 border-accent pl-4&quot;&gt;
+                            The Client’s Challenge
+                        &lt;/h2&gt;
+                        &lt;div class=&quot;flex items-start gap-4&quot;&gt;
+                            &lt;p class=&quot;text-secondaryText text-sm leading-relaxed font-light text-justify&quot;&gt;
+                                We identified that the user interface lacked intuitive navigation, causing a 40% drop-off rate at checkout. The visual language was inconsistent with the brand's premium positioning.
+                            &lt;/p&gt;
+                            &lt;i class=&quot;fa-solid fa-arrow-right-long text-accent text-lg mt-1 opacity-50&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;group&quot;&gt;
+                        &lt;h2 class=&quot;text-primaryText text-lg font-display font-bold uppercase tracking-widest mb-3 border-l-2 border-accent pl-4&quot;&gt;
+                            Results or Impact
+                        &lt;/h2&gt;
+                        &lt;div class=&quot;flex items-start gap-4 flex-row-reverse&quot;&gt;
+                            &lt;p class=&quot;text-secondaryText text-sm leading-relaxed font-light text-justify&quot;&gt;
+                                Post-launch analytics revealed a 150% increase in user retention and a 35% boost in conversion rates. The new design system reduced development time for future features by half.
+                            &lt;/p&gt;
+                            &lt;i class=&quot;fa-solid fa-arrow-left-long text-accent text-lg mt-1 opacity-50&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+
+                &lt;div class=&quot;col-span-7 flex flex-col relative&quot;&gt;
+                    
+                    &lt;div class=&quot;flex justify-between items-center mb-4&quot;&gt;
+                        &lt;div class=&quot;w-16 h-[1px] bg-accent/30&quot;&gt;&lt;/div&gt;
+                        &lt;h2 class=&quot;text-primaryText text-sm font-display font-bold uppercase tracking-[0.2em]&quot;&gt;
+                            Creative Solution
+                        &lt;/h2&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;absolute -top-6 -right-4 text-accent text-4xl animate-pulse z-20&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-asterisk&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;flex flex-col gap-4 h-[400px]&quot;&gt;
+                        &lt;div class=&quot;flex-1 relative rounded-xl overflow-hidden border border-white/10 shadow-xl group&quot;&gt;
+                            &lt;img src=&quot;https://images.unsplash.com/photo-1593640408182-31c70c8268f5?q=80&amp;w=800&amp;auto=format&amp;fit=crop&quot; 
+                                 alt=&quot;Solution 1&quot; 
+                                 class=&quot;w-full h-full object-cover img-hover&quot;&gt;
+                            &lt;div class=&quot;absolute bottom-3 left-4 bg-black/50 backdrop-blur-sm px-3 py-1 rounded text-[10px] text-white uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity&quot;&gt;
+                                Interface Design
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        
+                        &lt;div class=&quot;flex-1 relative rounded-xl overflow-hidden border border-white/10 shadow-xl group&quot;&gt;
+                            &lt;img src=&quot;https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&amp;w=800&amp;auto=format&amp;fit=crop&quot; 
+                                 alt=&quot;Solution 2&quot; 
+                                 class=&quot;w-full h-full object-cover img-hover&quot;&gt;
+                            &lt;div class=&quot;absolute bottom-3 left-4 bg-black/50 backdrop-blur-sm px-3 py-1 rounded text-[10px] text-white uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity&quot;&gt;
+                                User Experience
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/main&gt;
+
+        &lt;div class=&quot;absolute bottom-10 left-1/2 -translate-x-1/2 w-32 h-[1px] bg-footerAccent opacity-20&quot;&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 10
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Achievements - Portfolio&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&amp;family=Space+Grotesk:wght@400;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { bgDark: '#050505', primaryText: '#FDF6E3', secondaryText: '#9A9A9A', accent: '#D65DB1', footerAccent: '#FEF3D5' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'] }
+                }
+            }
+        }
+    &lt;/script&gt;
+    &lt;style&gt;
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #050505; overflow: hidden; display: flex; flex-direction: column; justify-content: center; }
+        .fade-in-up { animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;!-- 统一背景装饰：镜像涂鸦 --&gt;
+        &lt;div class=&quot;absolute top-[60px] left-1/2 -translate-x-1/2 z-0 pointer-events-none opacity-40&quot;&gt;
+            &lt;svg width=&quot;600&quot; height=&quot;200&quot; viewBox=&quot;0 0 400 150&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M10 50C100 130 300 10 390 100&quot; stroke=&quot;#D65DB1&quot; stroke-width=&quot;12&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+
+        &lt;main class=&quot;w-full px-20 z-10 fade-in-up&quot;&gt;
+            &lt;!-- 统一居中标题 --&gt;
+            &lt;div class=&quot;text-center mb-16&quot;&gt;
+                &lt;h1 class=&quot;font-display font-bold text-7xl text-primaryText leading-none tracking-tighter uppercase inline-block relative&quot;&gt;
+                    Achievements &lt;span class=&quot;text-accent&quot;&gt;/&lt;/span&gt; Testimonials
+                &lt;/h1&gt;
+                &lt;div class=&quot;w-32 h-1 bg-accent mx-auto mt-8&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;grid grid-cols-12 gap-16 items-start&quot;&gt;
+                &lt;!-- 左侧：客户评价 (5列) --&gt;
+                &lt;div class=&quot;col-span-5 space-y-10&quot;&gt;
+                    &lt;h2 class=&quot;text-secondaryText font-display text-2xl font-light tracking-wide italic&quot;&gt;Client Testimonials&lt;/h2&gt;
+                    &lt;div class=&quot;space-y-8&quot;&gt;
+                        &lt;div class=&quot;relative pl-8 border-l-2 border-accent&quot;&gt;
+                            &lt;p class=&quot;text-primaryText text-lg font-light italic leading-relaxed mb-3&quot;&gt;&quot;Neil's design sense transformed our brand – truly visionary work!&quot;&lt;/p&gt;
+                            &lt;p class=&quot;text-accent text-xs uppercase tracking-widest font-bold&quot;&gt;— Creative Director, Studio shodwe.&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;relative pl-8 border-l-2 border-accent&quot;&gt;
+                            &lt;p class=&quot;text-primaryText text-lg font-light italic leading-relaxed mb-3&quot;&gt;&quot;Exceptional design skills and professionalism. Delivered beyond expectations.&quot;&lt;/p&gt;
+                            &lt;p class=&quot;text-accent text-xs uppercase tracking-widest font-bold&quot;&gt;— Samira Hadid, CEO of Borcelle&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 右侧：职业亮点 (7列) --&gt;
+                &lt;div class=&quot;col-span-7 bg-white/5 p-10 rounded-3xl border border-white/10 relative&quot;&gt;
+                    &lt;div class=&quot;absolute -top-6 -right-6 text-accent text-5xl animate-spin-slow&quot; style=&quot;animation: spin 12s linear infinite;&quot;&gt;&lt;i class=&quot;fa-solid fa-asterisk&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                    &lt;h2 class=&quot;text-secondaryText font-display text-2xl font-light mb-8 tracking-wide&quot;&gt;Professional Highlights&lt;/h2&gt;
+                    &lt;ul class=&quot;space-y-5&quot;&gt;
+                        &lt;li class=&quot;flex items-start gap-4 group&quot;&gt;
+                            &lt;div class=&quot;mt-2 w-2 h-2 bg-accent rounded-full shadow-[0_0_10px_#D65DB1]&quot;&gt;&lt;/div&gt;
+                            &lt;p class=&quot;text-secondaryText text-base leading-relaxed group-hover:text-primaryText transition-colors&quot;&gt;Completed 50+ successful projects across 10+ industries.&lt;/p&gt;
+                        &lt;/li&gt;
+                        &lt;li class=&quot;flex items-start gap-4 group&quot;&gt;
+                            &lt;div class=&quot;mt-2 w-2 h-2 bg-accent rounded-full shadow-[0_0_10px_#D65DB1]&quot;&gt;&lt;/div&gt;
+                            &lt;p class=&quot;text-secondaryText text-base leading-relaxed group-hover:text-primaryText transition-colors&quot;&gt;Collaborated with international clients from the U.S., Europe, and Asia.&lt;/p&gt;
+                        &lt;/li&gt;
+                        &lt;li class=&quot;flex items-start gap-4 group&quot;&gt;
+                            &lt;div class=&quot;mt-2 w-2 h-2 bg-accent rounded-full shadow-[0_0_10px_#D65DB1]&quot;&gt;&lt;/div&gt;
+                            &lt;p class=&quot;text-secondaryText text-base leading-relaxed group-hover:text-primaryText transition-colors&quot;&gt;Increased engagement by &lt;span class=&quot;text-primaryText font-bold&quot;&gt;65%&lt;/span&gt; through strategic solutions.&lt;/p&gt;
+                        &lt;/li&gt;
+                        &lt;li class=&quot;flex items-start gap-4 group&quot;&gt;
+                            &lt;div class=&quot;mt-2 w-2 h-2 bg-accent rounded-full shadow-[0_0_10px_#D65DB1]&quot;&gt;&lt;/div&gt;
+                            &lt;p class=&quot;text-secondaryText text-base leading-relaxed group-hover:text-primaryText transition-colors&quot;&gt;Designed branding for 5+ startups successfully launched in under 6 months.&lt;/p&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/main&gt;
+
+        &lt;!-- 极简底部装饰 --&gt;
+        &lt;div class=&quot;absolute bottom-12 left-1/2 -translate-x-1/2 w-48 h-[2px] bg-footerAccent opacity-20&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 11
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Clients &amp; Collaborations - Portfolio&lt;/title&gt;
+    
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;!-- Google Fonts --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&amp;family=Space+Grotesk:wght@400;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+
+    &lt;!-- Tailwind Config --&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#050505',
+                        primaryText: '#FDF6E3',
+                        secondaryText: '#9A9A9A',
+                        accent: '#D65DB1',
+                        footerAccent: '#FEF3D5',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #050505;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* 垂直居中核心内容 */
+        }
+
+        /* 统一的入场动画 */
+        .fade-in-up {
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* 统一的图片交互：灰度转彩色 */
+        .img-hover-effect {
+            filter: grayscale(100%);
+            transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .group:hover .img-hover-effect {
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;!-- 背景装饰 (全套统一的粉色涂鸦) --&gt;
+        &lt;div class=&quot;absolute top-[60px] left-1/2 -translate-x-1/2 z-0 pointer-events-none opacity-30&quot;&gt;
+            &lt;svg width=&quot;600&quot; height=&quot;200&quot; viewBox=&quot;0 0 400 150&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M50 100C100 20 300 150 350 50&quot; stroke=&quot;#D65DB1&quot; stroke-width=&quot;10&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 装饰星号 --&gt;
+        &lt;div class=&quot;absolute top-[120px] right-[10%] text-accent text-5xl animate-pulse z-0 opacity-60&quot;&gt;
+            &lt;i class=&quot;fa-solid fa-asterisk&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 主内容区 --&gt;
+        &lt;main class=&quot;w-full px-16 z-10 fade-in-up flex flex-col items-center&quot;&gt;
+            
+            &lt;!-- 1. 统一风格的居中主标题 --&gt;
+            &lt;div class=&quot;text-center mb-10&quot;&gt;
+                &lt;h1 class=&quot;font-display font-bold text-7xl text-primaryText leading-none tracking-tighter uppercase inline-block relative&quot;&gt;
+                    Clients &lt;span class=&quot;text-accent&quot;&gt;/&lt;/span&gt; Collaborations
+                &lt;/h1&gt;
+                &lt;div class=&quot;w-24 h-1 bg-accent mx-auto mt-6&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- 2. 介绍文案 (保持原始文字与宽度) --&gt;
+            &lt;div class=&quot;max-w-4xl text-center mb-12&quot;&gt;
+                &lt;p class=&quot;text-secondaryText text-lg font-light leading-relaxed tracking-wide italic&quot;&gt;
+                    Collaboration lies at the heart of every project we take on. We’ve worked closely with forward-thinking brands and inspiring individuals who share our passion for design and innovation.
+                &lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;!-- 3. 核心内容区：保留原始的左右布局 (Grid 布局) --&gt;
+            &lt;div class=&quot;w-full flex gap-10 items-start h-[260px]&quot;&gt;
+                
+                &lt;!-- 左侧：保留原始的 4 张图片网格 --&gt;
+                &lt;div class=&quot;flex-1 h-full grid grid-cols-4 gap-4&quot;&gt;
+                    
+                    &lt;div class=&quot;h-full bg-gray-900 rounded-xl overflow-hidden relative group border border-gray-800 shadow-xl&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1555421689-491a97ff2040?q=80&amp;w=400&amp;auto=format&amp;fit=crop&quot; class=&quot;w-full h-full object-cover img-hover-effect&quot;&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;h-full bg-gray-900 rounded-xl overflow-hidden relative group border border-gray-800 shadow-xl&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&amp;w=400&amp;auto=format&amp;fit=crop&quot; class=&quot;w-full h-full object-cover img-hover-effect&quot;&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;h-full bg-gray-900 rounded-xl overflow-hidden relative group border border-gray-800 shadow-xl&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1542744094-24638eff58bb?q=80&amp;w=400&amp;auto=format&amp;fit=crop&quot; class=&quot;w-full h-full object-cover img-hover-effect&quot;&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;h-full bg-gray-900 rounded-xl overflow-hidden relative group border border-gray-800 shadow-xl&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?q=80&amp;w=400&amp;auto=format&amp;fit=crop&quot; class=&quot;w-full h-full object-cover img-hover-effect&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 右侧：保留原始的合作项目列表 --&gt;
+                &lt;div class=&quot;w-[380px] flex flex-col justify-center h-full pl-8 border-l border-white/10&quot;&gt;
+                    &lt;h2 class=&quot;text-primaryText font-display text-xl font-bold mb-5 tracking-widest uppercase&quot;&gt;
+                        Featured &lt;span class=&quot;text-accent italic&quot;&gt;Collaborations:&lt;/span&gt;
+                    &lt;/h2&gt;
+                    
+                    &lt;ul class=&quot;space-y-4&quot;&gt;
+                        &lt;li class=&quot;text-secondaryText text-sm font-light flex items-start gap-3 group&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-circle-notch text-accent text-[8px] mt-1.5 group-hover:rotate-90 transition-transform&quot;&gt;&lt;/i&gt;
+                            &lt;span&gt;Brand identity design for &lt;strong class=&quot;text-primaryText&quot;&gt;Borcelle&lt;/strong&gt;&lt;/span&gt;
+                        &lt;/li&gt;
+                        &lt;li class=&quot;text-secondaryText text-sm font-light flex items-start gap-3 group&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-circle-notch text-accent text-[8px] mt-1.5 group-hover:rotate-90 transition-transform&quot;&gt;&lt;/i&gt;
+                            &lt;span&gt;UX/UI redesign for &lt;strong class=&quot;text-primaryText&quot;&gt;Studio Shodwe&lt;/strong&gt;&lt;/span&gt;
+                        &lt;/li&gt;
+                        &lt;li class=&quot;text-secondaryText text-sm font-light flex items-start gap-3 group&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-circle-notch text-accent text-[8px] mt-1.5 group-hover:rotate-90 transition-transform&quot;&gt;&lt;/i&gt;
+                            &lt;span&gt;Photography campaign for &lt;strong class=&quot;text-primaryText&quot;&gt;Salford &amp; Co.&lt;/strong&gt;&lt;/span&gt;
+                        &lt;/li&gt;
+                        &lt;li class=&quot;text-secondaryText text-sm font-light flex items-start gap-3 group&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-circle-notch text-accent text-[8px] mt-1.5 group-hover:rotate-90 transition-transform&quot;&gt;&lt;/i&gt;
+                            &lt;span&gt;Marketing visuals for &lt;strong class=&quot;text-primaryText&quot;&gt;Larana, Inc.&lt;/strong&gt;&lt;/span&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/main&gt;
+
+        &lt;!-- 底部装饰线 (全套统一) --&gt;
+        &lt;div class=&quot;absolute bottom-12 left-1/2 -translate-x-1/2 w-48 h-[2px] bg-footerAccent opacity-20&quot;&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <script>
+   // 自动调整iframe高度
+    function resizeIframes() {
+        document.querySelectorAll('.responsive-iframe').forEach(iframe => {
+            try {
+                const doc = iframe.contentDocument || iframe.contentWindow.document;
+                const height = Math.max(
+                    doc.body.scrollHeight,
+                    doc.documentElement.scrollHeight,
+                    doc.body.offsetHeight,
+                    doc.documentElement.offsetHeight,
+                    doc.body.clientHeight,
+                    doc.documentElement.clientHeight
+                );
+                iframe.style.height = height + 'px';
+            } catch (e) {
+                console.log('无法调整iframe高度:', e);
+            }
+        });
+    }
+    
+    // 初始调整
+    window.addEventListener('load', resizeIframes);
+    
+    // 内容加载后调整
+    document.querySelectorAll('.responsive-iframe').forEach(iframe => {
+        iframe.addEventListener('load', function() {
+            resizeIframes();
+            // 对动态内容进行定期检查
+            setInterval(resizeIframes, 1000);
+        });
+    });
+  </script>
+ </body>
+</html>

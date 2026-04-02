@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clients & Collaborations - Portfolio</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#050505',
+                        primaryText: '#FDF6E3',
+                        secondaryText: '#9A9A9A',
+                        accent: '#D65DB1',
+                        footerAccent: '#FEF3D5',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #050505;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* 垂直居中核心内容 */
+        }
+
+        /* 统一的入场动画 */
+        .fade-in-up {
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* 统一的图片交互：灰度转彩色 */
+        .img-hover-effect {
+            filter: grayscale(100%);
+            transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .group:hover .img-hover-effect {
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <!-- 背景装饰 (全套统一的粉色涂鸦) -->
+        <div class="absolute top-[60px] left-1/2 -translate-x-1/2 z-0 pointer-events-none opacity-30">
+            <svg width="600" height="200" viewBox="0 0 400 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50 100C100 20 300 150 350 50" stroke="#D65DB1" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+
+        <!-- 装饰星号 -->
+        <div class="absolute top-[120px] right-[10%] text-accent text-5xl animate-pulse z-0 opacity-60">
+            <i class="fa-solid fa-asterisk"></i>
+        </div>
+
+        <!-- 主内容区 -->
+        <main class="w-full px-16 z-10 fade-in-up flex flex-col items-center">
+            
+            <!-- 1. 统一风格的居中主标题 -->
+            <div class="text-center mb-10">
+                <h1 class="font-display font-bold text-7xl text-primaryText leading-none tracking-tighter uppercase inline-block relative">
+                    Clients <span class="text-accent">/</span> Collaborations
+                </h1>
+                <div class="w-24 h-1 bg-accent mx-auto mt-6"></div>
+            </div>
+
+            <!-- 2. 介绍文案 (保持原始文字与宽度) -->
+            <div class="max-w-4xl text-center mb-12">
+                <p class="text-secondaryText text-lg font-light leading-relaxed tracking-wide italic">
+                    Collaboration lies at the heart of every project we take on. We’ve worked closely with forward-thinking brands and inspiring individuals who share our passion for design and innovation.
+                </p>
+            </div>
+
+            <!-- 3. 核心内容区：保留原始的左右布局 (Grid 布局) -->
+            <div class="w-full flex gap-10 items-start h-[260px]">
+                
+                <!-- 左侧：保留原始的 4 张图片网格 -->
+                <div class="flex-1 h-full grid grid-cols-4 gap-4">
+                    
+                    <div class="h-full bg-gray-900 rounded-xl overflow-hidden relative group border border-gray-800 shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover img-hover-effect">
+                    </div>
+
+                    <div class="h-full bg-gray-900 rounded-xl overflow-hidden relative group border border-gray-800 shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover img-hover-effect">
+                    </div>
+
+                    <div class="h-full bg-gray-900 rounded-xl overflow-hidden relative group border border-gray-800 shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1542744094-24638eff58bb?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover img-hover-effect">
+                    </div>
+
+                    <div class="h-full bg-gray-900 rounded-xl overflow-hidden relative group border border-gray-800 shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover img-hover-effect">
+                    </div>
+                </div>
+
+                <!-- 右侧：保留原始的合作项目列表 -->
+                <div class="w-[380px] flex flex-col justify-center h-full pl-8 border-l border-white/10">
+                    <h2 class="text-primaryText font-display text-xl font-bold mb-5 tracking-widest uppercase">
+                        Featured <span class="text-accent italic">Collaborations:</span>
+                    </h2>
+                    
+                    <ul class="space-y-4">
+                        <li class="text-secondaryText text-sm font-light flex items-start gap-3 group">
+                            <i class="fa-solid fa-circle-notch text-accent text-[8px] mt-1.5 group-hover:rotate-90 transition-transform"></i>
+                            <span>Brand identity design for <strong class="text-primaryText">Borcelle</strong></span>
+                        </li>
+                        <li class="text-secondaryText text-sm font-light flex items-start gap-3 group">
+                            <i class="fa-solid fa-circle-notch text-accent text-[8px] mt-1.5 group-hover:rotate-90 transition-transform"></i>
+                            <span>UX/UI redesign for <strong class="text-primaryText">Studio Shodwe</strong></span>
+                        </li>
+                        <li class="text-secondaryText text-sm font-light flex items-start gap-3 group">
+                            <i class="fa-solid fa-circle-notch text-accent text-[8px] mt-1.5 group-hover:rotate-90 transition-transform"></i>
+                            <span>Photography campaign for <strong class="text-primaryText">Salford & Co.</strong></span>
+                        </li>
+                        <li class="text-secondaryText text-sm font-light flex items-start gap-3 group">
+                            <i class="fa-solid fa-circle-notch text-accent text-[8px] mt-1.5 group-hover:rotate-90 transition-transform"></i>
+                            <span>Marketing visuals for <strong class="text-primaryText">Larana, Inc.</strong></span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- 底部装饰线 (全套统一) -->
+        <div class="absolute bottom-12 left-1/2 -translate-x-1/2 w-48 h-[2px] bg-footerAccent opacity-20"></div>
+
+    </div>
+
+</body>
+</html>

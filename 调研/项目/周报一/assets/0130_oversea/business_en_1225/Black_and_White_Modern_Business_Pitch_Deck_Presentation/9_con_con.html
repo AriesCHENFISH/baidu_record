@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Dark Dashboard Slide</title>
+
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Added unified colors to support standard header
+                        secondary: '#B0B0B0',
+                        accent: '#9D8C9D',
+                        
+                        // Existing brand colors kept for content compatibility
+                        brand: {
+                            dark: '#121212',
+                            light: '#FFFFFF',
+                            gray: '#B0B0B0',
+                            accent: '#9D8C9D',
+                            accentLight: '#Cebbd9' 
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Global CSS Reset & Requirements */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container Definition */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #121212;
+            font-family: 'Noto Sans SC', sans-serif;
+            overflow: hidden;
+        }
+
+        /* Utility Classes for Glassmorphism */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Utility for Text Gradients */
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(135deg, #FFFFFF, #B0B0B0);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" 
+                 alt="Modern Architecture Background" 
+                 class="w-full h-full object-cover filter grayscale opacity-40">
+            <div class="absolute inset-0 bg-[#121212] opacity-85"></div>
+        </div>
+
+        <header class="absolute top-0 left-0 w-full px-12 py-8 flex justify-between items-center z-20">
+            <div class="flex items-center gap-3">
+                <i class="fa-solid fa-layer-group text-accent text-xl"></i> <h6 class="text-white text-sm font-bold tracking-wide">Fauget.Company</h6>
+            </div>
+            
+            <div class="absolute left-1/2 transform -translate-x-1/2">
+                <p class="text-secondary text-xs font-medium tracking-widest uppercase">
+                    Presented by : <span class="text-white">Aaron Loeb</span>
+                </p>
+            </div>
+
+            <div>
+                <p class="text-secondary text-xs font-light tracking-wide">www.reallygreatsite.com</p>
+            </div>
+        </header>
+
+        <main class="relative z-10 grid grid-cols-12 gap-10 px-16 pt-24 h-[660px]">
+            
+            <div class="col-span-7 flex flex-col justify-between pb-12">
+                
+                <div class="mb-4 text-brand-gray opacity-50">
+                     <i class="fa-solid fa-arrow-down-long transform rotate-[-45deg] text-5xl"></i>
+                </div>
+
+                <div class="flex gap-8 mb-8">
+                    <div class="glass-panel rounded-3xl p-8 flex-1 flex flex-col justify-center items-center text-center h-48">
+                        <h3 class="text-6xl font-bold text-brand-accentLight mb-4 tracking-tighter">70K</h3>
+                        <p class="text-brand-gray text-xs leading-relaxed">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                    </div>
+
+                    <div class="glass-panel rounded-3xl p-8 flex-1 flex flex-col justify-center items-center text-center h-48">
+                        <h3 class="text-6xl font-bold text-brand-accentLight mb-4 tracking-tighter">55%</h3>
+                        <p class="text-brand-gray text-xs leading-relaxed">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative mt-auto">
+                    <div class="absolute -top-12 right-0 flex gap-1">
+                        <div class="w-3 h-3 bg-brand-accent opacity-50"></div>
+                        <div class="w-3 h-3 bg-brand-accent opacity-20"></div>
+                        <div class="w-3 h-3 bg-brand-accent opacity-80"></div>
+                    </div>
+
+                    <h1 class="text-7xl font-bold text-white leading-[0.9] tracking-tight mb-6 uppercase">
+                        Our <br> Performance
+                    </h1>
+                    
+                    <p class="text-brand-gray text-sm leading-relaxed max-w-xl border-l-2 border-brand-accent pl-4">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl eu sem tristique, sit amet convallis ex aliquam. Maecenas varius lectus hendrerit augue blandit.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-span-5 pb-12 pl-4">
+                <div class="glass-panel w-full h-full rounded-3xl p-6 relative">
+                    <div class="absolute top-6 right-6 flex items-center gap-4 text-xs">
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-white"></span>
+                            <span class="text-white">Seri 1</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-[#9D8C9D]"></span>
+                            <span class="text-white">Seri 2</span>
+                        </div>
+                    </div>
+
+                    <div id="chart-container" class="w-full h-full"></div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var chartDom = document.getElementById('chart-container');
+            var myChart = echarts.init(chartDom);
+            var option;
+
+            option = {
+                // Remove default background to let glassmorphism show
+                backgroundColor: 'transparent',
+                grid: {
+                    top: '20%',
+                    left: '10%',
+                    right: '5%',
+                    bottom: '10%',
+                    containLabel: true
+                },
+                xAxis: {
+                    type: 'category',
+                    data: ['Item 1', 'Item 2'],
+                    axisLine: {
+                        lineStyle: {
+                            color: 'rgba(255,255,255,0.3)'
+                        }
+                    },
+                    axisLabel: {
+                        color: '#FFFFFF',
+                        fontSize: 14,
+                        margin: 20
+                    },
+                    axisTick: {
+                        show: false
+                    }
+                },
+                yAxis: {
+                    type: 'value',
+                    splitLine: {
+                        lineStyle: {
+                            color: 'rgba(255,255,255,0.1)',
+                            type: 'dashed'
+                        }
+                    },
+                    axisLabel: {
+                        color: '#B0B0B0'
+                    }
+                },
+                series: [
+                    {
+                        name: 'Seri 1',
+                        type: 'bar',
+                        data: [8, 12],
+                        barWidth: '35%',
+                        itemStyle: {
+                            color: '#FFFFFF',
+                            borderRadius: [4, 4, 0, 0]
+                        }
+                    },
+                    {
+                        name: 'Seri 2',
+                        type: 'bar',
+                        data: [6, 10],
+                        barWidth: '35%',
+                        barGap: '20%', // Gap between bars in same category
+                        itemStyle: {
+                            color: '#9D8C9D',
+                            borderRadius: [4, 4, 0, 0]
+                        }
+                    }
+                ],
+                // Disable animation for requirements
+                animation: false 
+            };
+
+            myChart.setOption(option);
+        });
+    </script>
+</body>
+</html>

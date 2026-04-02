@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esports in Education - Larana</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Noto Sans SC', sans-serif; }
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative;
+            background-color: #040508; overflow: hidden; color: #ffffff;
+        }
+
+        .top-nav-line {
+            position: absolute; top: 40px; left: 60px; right: 60px; height: 1px;
+            background: linear-gradient(90deg, transparent 0%, rgba(102, 106, 246, 0.3) 20%, rgba(102, 106, 246, 0.3) 80%, transparent 100%);
+            z-index: 20;
+        }
+        .logo-center {
+            position: absolute; top: 25px; left: 50%; transform: translateX(-50%); z-index: 30;
+            display: flex; flex-direction: column; align-items: center;
+        }
+        .logo-dot { width: 4px; height: 4px; background: #666AF6; border-radius: 50%; box-shadow: 0 0 10px #666AF6; margin-bottom: 8px; }
+        .text-outline { -webkit-text-stroke: 1px rgba(255,255,255,0.3); -webkit-text-fill-color: transparent; }
+
+        /* 教育卡片悬停效果 */
+        .edu-item {
+            border-bottom: 1px solid rgba(102, 106, 246, 0.1);
+            transition: all 0.3s ease;
+        }
+        .edu-item:hover { border-bottom-color: #666AF6; background: rgba(102, 106, 246, 0.05); }
+
+        /* 标签设计 */
+        .tab-btn {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .tab-btn.active { background: #666AF6; border-color: #666AF6; box-shadow: 0 5px 15px rgba(102, 106, 246, 0.4); }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <div class="absolute inset-0 bg-[radial-gradient(rgba(102,106,246,0.05)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+        
+        <div class="top-nav-line"></div>
+        <div class="logo-center">
+            <div class="logo-dot"></div>
+            <h1 class="text-xl font-black tracking-[6px] text-white">LARANA</h1>
+            <p class="text-[9px] tracking-[4px] text-[#666AF6] uppercase">Academy & Growth</p>
+        </div>
+
+        <main class="relative z-10 px-20 pt-36 flex flex-col h-full">
+            <div class="flex gap-20 items-center">
+                <div class="w-5/12">
+                    <span class="text-[#666AF6] text-xs font-bold tracking-[4px] uppercase block mb-2">Academic Integration</span>
+                    <h2 class="text-7xl font-black leading-tight mb-8">
+                        EDU <br>
+                        <span class="text-outline">SYSTEM</span>
+                    </h2>
+                    <div class="relative w-full h-[240px] rounded-xl overflow-hidden border border-white/10">
+                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=800" class="w-full h-full object-cover opacity-80">
+                        <div class="absolute inset-0 bg-gradient-to-r from-[#040508] to-transparent"></div>
+                    </div>
+                </div>
+
+                <div class="w-7/12 flex flex-col gap-6">
+                    <div class="edu-item p-6">
+                        <div class="flex items-center gap-4 mb-3">
+                            <span class="text-[#666AF6] font-mono text-sm tracking-tighter">01 //</span>
+                            <h3 class="text-xl font-bold tracking-wide">Scholarship Programs</h3>
+                        </div>
+                        <p class="text-gray-400 text-sm leading-relaxed font-light pl-10">
+                            Institutions are attracting top-tier talent by integrating digital sports into their athletic curricula, bridging the gap between academics and the future.
+                        </p>
+                    </div>
+
+                    <div class="edu-item p-6">
+                        <div class="flex items-center gap-4 mb-3">
+                            <span class="text-[#666AF6] font-mono text-sm tracking-tighter">02 //</span>
+                            <h3 class="text-xl font-bold tracking-wide">Collegiate Leagues</h3>
+                        </div>
+                        <p class="text-gray-400 text-sm leading-relaxed font-light pl-10">
+                            Standardizing rules and managing seasonal tournaments to create pathways for students to pursue careers in broadcasting and team management.
+                        </p>
+                    </div>
+
+                    <div class="mt-4 flex items-center gap-4 pl-6">
+                        <span class="text-[10px] text-gray-500 font-bold tracking-[2px] mr-2 uppercase">Core Benefits:</span>
+                        <div class="flex gap-3">
+                            <div class="tab-btn active px-6 py-2 rounded-full text-[10px] font-black tracking-widest uppercase cursor-pointer">Strategy</div>
+                            <div class="tab-btn px-6 py-2 rounded-full text-[10px] font-black tracking-widest uppercase cursor-pointer text-gray-500 hover:text-white">Teamwork</div>
+                            <div class="tab-btn px-6 py-2 rounded-full text-[10px] font-black tracking-widest uppercase cursor-pointer text-gray-500 hover:text-white">Leadership</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="absolute bottom-10 left-20 right-20 flex justify-between items-center z-20">
+            <div class="flex items-center gap-4">
+                <div class="text-[10px] text-gray-600 font-bold tracking-[2px]">PAGE 03 // ACADEMY</div>
+                <div class="w-12 h-[1px] bg-gray-800"></div>
+                <div class="text-[9px] text-[#666AF6] font-mono tracking-tighter uppercase select-none">Auth: Encrypted System Access</div>
+            </div>
+            <div class="flex gap-4">
+                <button class="w-12 h-12 flex items-center justify-center border border-white/10 rounded-full hover:bg-white/5 transition-all"><i class="fa-solid fa-chevron-left text-xs"></i></button>
+                <button class="px-10 py-3 bg-[#666AF6] text-xs font-black tracking-widest rounded-full shadow-[0_8px_20px_rgba(102,106,246,0.3)]">SUBMIT ACCESS</button>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

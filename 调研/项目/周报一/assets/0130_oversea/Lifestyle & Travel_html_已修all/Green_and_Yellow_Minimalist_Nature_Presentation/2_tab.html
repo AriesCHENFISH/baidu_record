@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table of Contents - Two Column Layout</title>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        /* --- 1. 核心布局配置 --- */
+        #page_container {
+            width: 1280px; height: 720px;
+            margin: 0 auto; position: relative;
+            background-color: #15291E;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr; 
+            grid-template-rows: 64px 1fr;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* --- 2. 文本内容注入 (全部封装于此) --- */
+        /* 顶部信息 */
+        .top-bar-content::before {
+            content: "SYSTEM DIRECTORY —";
+            color: #F8F272; font-weight: 700; font-size: 14px; letter-spacing: 0.2em;
+        }
+        .top-bar-content::after {
+            content: "DATA VERSION: 2026.1";
+            color: #D9E3CC; font-weight: 300; font-size: 10px; letter-spacing: 0.2em; margin-left: auto;
+        }
+
+        /* 标题部分 */
+        .main-title::before {
+            content: "Contents";
+            color: #F8F272; font-family: 'Times New Roman', serif; font-size: 110px; font-weight: 700;
+        }
+        .sub-title::before {
+            content: "STRATEGIC ECO-ANALYSIS";
+            display: block; color: #8FB55F; font-size: 16px; font-weight: 700; letter-spacing: 0.4em; margin-bottom: 0.5rem;
+        }
+
+        /* 目录标题注入 (使用 ::after 避免与圆点冲突) */
+        .item-01::after { content: "01. Introduction to Biodiversity"; }
+        .item-02::after { content: "02. The Forest Ecosystem"; }
+        .item-03::after { content: "03. Key Species & Their Roles"; }
+        .item-04::after { content: "04. Impact of Climate Change"; }
+        .item-05::after { content: "05. Human Intervention"; }
+        .item-06::after { content: "06. Conservation Strategies"; }
+        .item-07::after { content: "07. Restoration Projects"; }
+        .item-08::after { content: "08. Sustainable Practices"; }
+        .item-09::after { content: "09. Future Outlook"; }
+        .item-10::after { content: "10. Global Call to Action"; }
+
+        /* 右下角操作标签 */
+        .action-label::before { 
+            content: "ENTER"; 
+            color: #15291E; font-weight: 900; font-size: 42px; letter-spacing: -0.02em;
+        }
+
+        /* --- 3. 样式与装饰 --- */
+        .clip-polygon { clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%); }
+        
+        /* 两列文本框样式 */
+        .toc-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(143, 181, 95, 0.1);
+            padding: 2.5rem;
+            border-radius: 4px;
+        }
+
+        .toc-row {
+            padding-left: 1.5rem;
+            position: relative;
+            color: #D9E3CC;
+            font-size: 1.1rem;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        /* 列表小圆点 */
+        .toc-row::before {
+            content: "";
+            position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+            width: 6px; height: 6px; border-radius: 50%; background-color: #F8F272;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+
+        <div class="border-b border-[#8FB55F]/20 flex items-center px-12 z-50 bg-[#15291E]">
+            <i class="fa-solid fa-list-ul text-[#8FB55F] text-sm mr-4"></i>
+            <div class="top-bar-content flex-grow flex justify-between items-center"></div>
+        </div>
+
+        <div class="relative flex flex-col items-center justify-center px-24">
+            
+            <div class="w-full text-left mb-16">
+                <div class="sub-title"></div>
+                <div class="main-title"></div>
+                <div class="h-1 w-32 bg-[#F8F272] mt-4"></div>
+            </div>
+            
+            <div class="w-full toc-box">
+                <div class="grid grid-cols-2 gap-x-20">
+                    <div>
+                        <p class="toc-row item-01"></p>
+                        <p class="toc-row item-02"></p>
+                        <p class="toc-row item-03"></p>
+                        <p class="toc-row item-04"></p>
+                        <p class="toc-row item-05"></p>
+                    </div>
+                    <div>
+                        <p class="toc-row item-06"></p>
+                        <p class="toc-row item-07"></p>
+                        <p class="toc-row item-08"></p>
+                        <p class="toc-row item-09"></p>
+                        <p class="toc-row item-10"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full mt-12 opacity-30 text-[10px] tracking-[0.6em] uppercase">
+                Botanical Research Foundation // Confidential 
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 right-0 w-[350px] h-[140px] bg-[#F8F272] z-10 clip-polygon flex items-center justify-end pr-16 action-label"></div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lead Through Service - Keynote</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css" rel="stylesheet">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+
+    <style>
+        /* CSS Reset & Global Config */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* Main Page Container */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            margin: 0 auto;
+            background-color: #F5F5F5; /* Global Background */
+            overflow: hidden;
+        }
+
+        /* Typography Utilities */
+        h1, h2, h3, h4, h5, h6 {
+            color: #222222; /* Primary Text */
+            line-height: 1.2;
+        }
+
+        p {
+            color: #4A4A4A; /* Body Text */
+            line-height: 1.6;
+        }
+
+        .soft-shadow {
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Grid Layout Helpers */
+        .layout-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+            height: 100%;
+            /* Increased top padding to 80px to compensate for removed header */
+            padding: 80px 60px 40px;
+        }
+
+        /* Custom Scrollbar hide */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <div class="layout-grid" style="position: relative; z-index: 10;">
+            
+            <div style="grid-column: span 5; display: flex; flex-direction: column; justify-content: center; padding-right: 20px;">
+                
+                <h1 style="font-size: 64px; font-weight: 700; margin-bottom: 40px; letter-spacing: -1.5px;">
+                    Lead <br>
+                    <span style="color: #E85D36;">Through</span> <br>
+                    Service
+                </h1>
+
+                <div style="margin-bottom: 24px; display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 8px; height: 8px; background: #E85D36; border-radius: 50%;"></div>
+                    <h3 style="font-size: 18px; font-weight: 600; color: #222222;">Match your words with action</h3>
+                </div>
+
+                <div style="position: relative; padding-left: 20px; border-left: 2px solid #E85D36;">
+                    <p style="font-size: 15px; text-align: justify; color: #4A4A4A; margin-bottom: 0;">
+                        The heart of leadership is service. Great leaders put the needs of others ahead of their own. They lead not to gain power, but to create value and positive change. Servant leadership is rooted in empathy, generosity, and responsibility. It focuses on the well-being, success, and growth of others. This mindset builds teams that are strong, loyal, and motivated. Leadership becomes most effective when it is an act of giving, not taking.
+                    </p>
+                </div>
+                
+                <div style="margin-top: 40px;">
+                     <i class="fa-solid fa-globe" style="font-size: 32px; color: #E85D36; opacity: 0.2;"></i>
+                </div>
+
+                <div style="margin-top: auto; width: 100px; height: 4px; background: #222222; border-radius: 2px;"></div>
+            </div>
+
+            <div style="grid-column: span 7; display: flex; flex-direction: column; gap: 30px; padding-left: 20px;">
+                
+                <div class="soft-shadow" style="width: 100%; height: 320px; background: #FFFFFF; border-radius: 24px; overflow: hidden; position: relative;">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1740&auto=format&fit=crop" 
+                         alt="Customer Service Representative" 
+                         style="width: 100%; height: 100%; object-fit: cover; object-position: center 20%;">
+                    <div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 100%);"></div>
+                </div>
+
+                <div class="soft-shadow" style="flex: 1; background: #FFFFFF; border-radius: 24px; padding: 20px 30px; display: flex; flex-direction: column;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                         <h4 style="font-size: 16px; font-weight: 600; color: #4A4A4A;">Performance Metrics</h4>
+                         <div style="display: flex; gap: 16px; font-size: 12px;">
+                             <div style="display: flex; align-items: center; gap: 6px;">
+                                 <div style="width: 10px; height: 10px; border-radius: 50%; background-color: #4A4A4A;"></div>
+                                 <span style="color: #666;">Series 1</span>
+                             </div>
+                             <div style="display: flex; align-items: center; gap: 6px;">
+                                 <div style="width: 10px; height: 10px; border-radius: 50%; background-color: #E85D36;"></div>
+                                 <span style="color: #666;">Series 2</span>
+                             </div>
+                         </div>
+                    </div>
+                    
+                    <div id="chart-container" style="width: 100%; height: 100%; min-height: 180px;"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var chartDom = document.getElementById('chart-container');
+            var myChart = echarts.init(chartDom);
+            var option;
+
+            option = {
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    top: '10%',
+                    containLabel: true
+                },
+                xAxis: {
+                    type: 'value',
+                    splitLine: {
+                        lineStyle: {
+                            type: 'dashed',
+                            color: '#EEEEEE'
+                        }
+                    },
+                    axisLabel: {
+                        color: '#999',
+                        fontFamily: 'Noto Sans SC'
+                    }
+                },
+                yAxis: {
+                    type: 'category',
+                    data: ['Item 1', 'Item 2', 'Item 3'],
+                    axisLine: { show: false },
+                    axisTick: { show: false },
+                    inverse: true,
+                    axisLabel: {
+                        color: '#4A4A4A',
+                        fontWeight: 500,
+                        fontSize: 14,
+                        fontFamily: 'Noto Sans SC',
+                        margin: 16
+                    }
+                },
+                series: [
+                    {
+                        name: 'Series 1',
+                        type: 'bar',
+                        data: [3, 8, 16],
+                        itemStyle: {
+                            color: '#4A4A4A',
+                            borderRadius: [0, 4, 4, 0]
+                        },
+                        barGap: '20%',
+                        barCategoryGap: '40%'
+                    },
+                    {
+                        name: 'Series 2',
+                        type: 'bar',
+                        data: [6, 14, 18],
+                        itemStyle: {
+                            color: '#E85D36',
+                            borderRadius: [0, 4, 4, 0]
+                        }
+                    }
+                ],
+                animation: false
+            };
+
+            myChart.setOption(option);
+        });
+    </script>
+</body>
+</html>

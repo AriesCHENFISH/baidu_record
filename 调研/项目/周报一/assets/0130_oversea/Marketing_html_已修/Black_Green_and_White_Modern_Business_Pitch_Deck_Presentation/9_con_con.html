@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Performance - Business Keynote</title>
+    
+    <!-- Google Fonts: Noto Sans SC as requested -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- ECharts -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgMain: '#E5E5E5',
+                        textPrimary: '#000000',
+                        textSecondary: '#333333',
+                        accent: '#6FE6AA', // Mint
+                        accentLight: '#D6E8C7', // Light Yellow-Green
+                        stroke: '#666666',
+                        chartBlack: '#000000',
+                        chartMint: '#6FE6AA',
+                        chartWhite: '#FFFFFF'
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Basics */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Specific Page Container Styles */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #E5E5E5;
+            overflow: hidden;
+        }
+
+        /* Typography Utilities */
+        h1, h2, h3, h4, h5, h6 {
+            margin: 0;
+            font-weight: 700;
+        }
+        
+        p {
+            margin: 0;
+        }
+
+        /* Custom Decorative Shapes */
+        .shape-circle {
+            border-radius: 50%;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <!-- Header Section: Abstract Graphics & Title -->
+        <!-- Using Flexbox to organize top content -->
+        <div class="relative w-full h-[280px] flex items-end pb-8 px-16">
+            
+            <!-- Abstract Geometric Decoration (Top Left) -->
+            <!-- Positioned absolutely to replicate the overlapping artistic composition -->
+            <div class="absolute top-[-50px] left-[-40px] w-[350px] h-[350px] z-0">
+                <!-- Top Left: Outline Grey -->
+                <div class="shape-circle w-40 h-40 border border-[#666666] top-0 left-0 bg-transparent"></div>
+                <!-- Top Right: Solid Mint -->
+                <div class="shape-circle w-40 h-40 bg-accent top-0 left-36 shadow-sm"></div>
+                <!-- Bottom Left: Solid Accent Light (Lime/Yellowish) -->
+                <div class="shape-circle w-40 h-40 bg-accentLight top-36 left-0 shadow-sm"></div>
+                <!-- Bottom Right: Outline Grey -->
+                <div class="shape-circle w-40 h-40 border border-[#666666] top-36 left-36 bg-[#E5E5E5] z-10"></div>
+            </div>
+
+            <!-- Title -->
+            <!-- High contrast, large typography, pushed right to clear shapes -->
+            <div class="ml-[320px] z-10">
+                <h1 class="text-textPrimary text-[6rem] leading-[0.9] tracking-tight">
+                    Our <br>
+                    Performance
+                </h1>
+            </div>
+        </div>
+
+        <!-- Main Content Card -->
+        <!-- Large container with rounded corners and border -->
+        <div class="absolute bottom-8 left-12 right-12 h-[400px] border border-[#666666] rounded-[4rem] flex overflow-hidden bg-transparent">
+            
+            <!-- Left Side: Chart Visualization -->
+            <!-- Occupies 45% of the card width -->
+            <div class="w-[45%] h-full relative p-8 border-r border-[#666666] flex flex-col">
+                
+                <!-- Custom Legend -->
+                <!-- Manually built for better layout control than ECharts default -->
+                <div class="flex items-center justify-center gap-6 mb-2">
+                    <div class="flex items-center gap-2">
+                        <div class="w-3 h-3 rounded-full bg-chartBlack"></div>
+                        <span class="text-sm font-medium text-textSecondary">Seri 1</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-3 h-3 rounded-full bg-chartMint"></div>
+                        <span class="text-sm font-medium text-textSecondary">Seri 2</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-3 h-3 rounded-full bg-white border border-gray-300"></div>
+                        <span class="text-sm font-medium text-textSecondary">Seri 3</span>
+                    </div>
+                </div>
+
+                <!-- ECharts Container -->
+                <div id="barChart" class="w-full flex-grow"></div>
+            </div>
+
+            <!-- Right Side: Key Statistics Grid -->
+            <!-- 2x2 Grid Layout -->
+            <div class="w-[55%] grid grid-cols-2 grid-rows-2">
+                
+                <!-- Stat 1 (Top Left) -->
+                <div class="flex flex-col justify-center px-10 border-r border-b border-[#666666]">
+                    <h2 class="text-[4rem] leading-none text-textPrimary tracking-tight">60%</h2>
+                    <p class="text-textSecondary text-sm mt-2 leading-relaxed opacity-80">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                </div>
+
+                <!-- Stat 2 (Top Right) -->
+                <div class="flex flex-col justify-center px-10 border-b border-[#666666]">
+                    <h2 class="text-[4rem] leading-none text-textPrimary tracking-tight">60%</h2>
+                    <p class="text-textSecondary text-sm mt-2 leading-relaxed opacity-80">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                </div>
+
+                <!-- Stat 3 (Bottom Left) -->
+                <div class="flex flex-col justify-center px-10 border-r border-[#666666]">
+                    <h2 class="text-[4rem] leading-none text-textPrimary tracking-tight">60%</h2>
+                    <p class="text-textSecondary text-sm mt-2 leading-relaxed opacity-80">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                </div>
+
+                <!-- Stat 4 (Bottom Right) -->
+                <div class="flex flex-col justify-center px-10">
+                    <h2 class="text-[4rem] leading-none text-textPrimary tracking-tight">60%</h2>
+                    <p class="text-textSecondary text-sm mt-2 leading-relaxed opacity-80">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // ECharts Configuration
+        var chartDom = document.getElementById('barChart');
+        var myChart = echarts.init(chartDom);
+        var option;
+
+        option = {
+            // Disable default tooltip for cleaner look, or customize it
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: { type: 'shadow' }
+            },
+            grid: {
+                left: '5%',
+                right: '5%',
+                bottom: '10%',
+                top: '10%',
+                containLabel: true
+            },
+            xAxis: {
+                type: 'category',
+                data: ['Item 1', 'Item 2', 'Item 3', 'Item 4'],
+                axisLine: { show: false }, // Hide bottom line
+                axisTick: { show: false }, // Hide ticks
+                axisLabel: {
+                    color: '#333333',
+                    fontSize: 14,
+                    fontFamily: 'Noto Sans SC',
+                    margin: 15
+                }
+            },
+            yAxis: {
+                type: 'value',
+                max: 50,
+                interval: 10,
+                splitLine: {
+                    show: true,
+                    lineStyle: {
+                        type: 'solid',
+                        color: '#D1D5DB' // Light gray for grid lines
+                    }
+                },
+                axisLabel: {
+                    color: '#666666',
+                    fontFamily: 'Noto Sans SC'
+                }
+            },
+            series: [
+                {
+                    name: 'Seri 1',
+                    type: 'bar',
+                    stack: 'total',
+                    barWidth: '60%',
+                    data: [8, 12, 16, 20],
+                    itemStyle: { color: '#000000' }
+                },
+                {
+                    name: 'Seri 2',
+                    type: 'bar',
+                    stack: 'total',
+                    data: [8, 10, 10, 24],
+                    itemStyle: { color: '#6FE6AA' } // Mint
+                },
+                {
+                    name: 'Seri 3',
+                    type: 'bar',
+                    stack: 'total',
+                    data: [4, 8, 10, 6],
+                    itemStyle: { 
+                        color: '#FFFFFF',
+                        borderColor: '#E5E5E5', // Subtle border for white bars
+                        borderWidth: 1
+                    },
+                    // Add border radius to top bar
+                    itemStyle: {
+                        color: '#FFFFFF'
+                    }
+                }
+            ]
+        };
+
+        option && myChart.setOption(option);
+        
+        // Ensure chart resizes if container changes (though strictly fixed here)
+        window.addEventListener('resize', function() {
+            myChart.resize();
+        });
+    </script>
+</body>
+</html>

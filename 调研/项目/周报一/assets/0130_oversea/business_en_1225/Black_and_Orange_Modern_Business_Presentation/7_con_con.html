@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Shodwe - Why Work With Us</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts (Domestic CDN as requested) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- Custom Config for Tailwind to match Design System -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#D95325', // Primary Orange
+                        dark: '#1A1A1A',    // Text Black
+                        light: '#F5F5F5',   // Soft White for backgrounds if needed
+                        grey: '#808080',    // Secondary Grey
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'], // Using the requested font
+                    },
+                    spacing: {
+                        '128': '32rem',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Basics */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container Definition */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FFFFFF;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+            /* No outer shadow as requested */
+        }
+
+        /* Custom Typography Utilities to match the "Condensed" look of the reference without external font files */
+        .title-condensed {
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            line-height: 0.85;
+            transform: scaleX(0.9); /* Visual trick to simulate condensed font */
+            transform-origin: left;
+            width: 110%; /* Compensate for scale */
+        }
+
+        /* Image Grayscale Filter */
+        .img-grayscale {
+            filter: grayscale(100%) contrast(110%);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div id="page_container">
+        
+        <!-- Grid Layout: 5 Columns for Image, 7 Columns for Content -->
+        <div class="grid grid-cols-12 h-full">
+
+            <!-- LEFT COLUMN: Visuals (Image & Graphics) -->
+            <!-- Using col-span-5 (approx 41% width) to match the visual weight in the reference -->
+            <div class="col-span-5 bg-black relative h-full flex items-center justify-center overflow-hidden">
+                
+                <!-- Inner Container for Image to create the "Frame" effect -->
+                <!-- The reference shows a black border around the image -->
+                <div class="relative w-[85%] h-[85%] bg-white overflow-hidden">
+                    <!-- Main Image: Minimalist Chair -->
+                    <img src="https://images.unsplash.com/photo-1506898667547-42e22a46e125?q=80&w=1000&auto=format&fit=crop" 
+                         alt="Minimalist Chair Design" 
+                         class="w-full h-full object-cover img-grayscale hover:scale-105 transition-transform duration-700">
+                    <!-- 450*612 -->
+                </div>
+
+                <!-- Decorative Element: Abstract Graphic (Top Right of Image) -->
+                <!-- Recreating the black geometric shape overlay -->
+                <div class="absolute top-[12%] right-[10%] flex flex-col items-end gap-1 z-10">
+                    <div class="w-16 h-12 bg-black"></div>
+                    <div class="w-8 h-8 bg-black/80 -mt-4 mr-4"></div>
+                </div>
+
+                <!-- Decorative Element: Page Number (Bottom Left) -->
+                <!-- "05" Box -->
+                <div class="absolute bottom-[7.5%] left-0 z-20 flex">
+                    <div class="bg-primary w-24 h-24 flex items-center justify-center">
+                        <h2 class="text-white text-6xl font-bold font-sans">05</h2>
+                    </div>
+                    <!-- Small decorative tab next to number -->
+                    <div class="h-12 w-8 bg-primary mt-12 opacity-80"></div>
+                </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN: Content -->
+            <div class="col-span-7 bg-white p-16 flex flex-col justify-between relative">
+                
+                <!-- Top Header Section -->
+                <div class="flex justify-between items-center w-full mb-8">
+                    <h4 class="text-primary text-lg font-medium tracking-wide">Why Choose Us</h4>
+                    <h4 class="text-primary text-lg font-bold">Studio Shodwe</h4>
+                </div>
+
+                <!-- Main Title Section -->
+                <!-- Large, Industrial, Bold Typography -->
+                <div class="flex-grow flex flex-col justify-start mt-4">
+                    <div class="relative">
+                        <h1 class="text-[88px] text-primary title-condensed">
+                            WHY WORK
+                        </h1>
+                        <h1 class="text-[88px] text-primary title-condensed">
+                            WITH US
+                        </h1>
+                    </div>
+                </div>
+
+                <!-- Content/Quote Section -->
+                <div class="mt-auto">
+                    
+                    <!-- Quote Block with Stylized Brackets -->
+                    <div class="flex items-start gap-6 mb-8">
+                        
+                        <!-- Quote Text -->
+                        <div class="flex flex-col gap-3 pt-2">
+                            <h3 class="text-primary text-3xl font-bold leading-tight">
+                                Working with Studio Shodwe was a turning point for our brand.
+                            </h3>
+                            <p class="text-dark font-bold text-sm mt-1">
+                                Juliana Silva — Content Creator
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Divider Line -->
+                    <div class="w-full h-[2px] bg-dark mb-6"></div>
+
+                    <!-- Footer Description -->
+                    <div class="w-full">
+                        <p class="text-dark text-base leading-relaxed max-w-2xl">
+                            At Studio Shodwe, we deliver comprehensive marketing solutions that move the needle. From ideation to execution, we build campaigns that resonate and drive measurable results for forward-thinking companies.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Background Subtle Decoration (Optional, keeps it clean) -->
+                <!-- Using a very subtle grey geometric hint in the corner for balance -->
+                <div class="absolute top-0 right-0 w-32 h-32 bg-gray-50 rounded-bl-full -z-10"></div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

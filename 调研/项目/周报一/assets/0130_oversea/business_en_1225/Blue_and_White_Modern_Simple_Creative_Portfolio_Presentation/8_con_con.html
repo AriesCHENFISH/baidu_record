@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistic Presentation Slide</title>
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts (Domestic CDN) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <!-- ECharts -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+
+    <style>
+        /* CSS Reset & Global Settings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Font Configuration */
+        body, #page_container {
+            font-family: 'Noto Sans SC', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Page Container - Strict 1280x720 */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #20457C; /* Primary Color */
+            overflow: hidden;
+        }
+
+        /* Decorative Elements */
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Chart Container adjustments */
+        #chart_panel {
+            background-color: #FFFFFF;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+    
+    <!-- Tailwind Configuration for Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#20457C',
+                        secondary: '#3A5A6D',
+                        accent: '#5A7A90',
+                        light: '#FFFFFF',
+                        chart1: '#5470C6',
+                        chart2: '#91CC75',
+                        chart3: '#FAC858'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div id="page_container" class="flex flex-col">
+
+        <!-- Decorative Background Circle -->
+        <div class="absolute -right-20 -bottom-40 w-[600px] h-[600px] rounded-full bg-white opacity-[0.03] pointer-events-none"></div>
+        <div class="absolute right-40 top-20 w-[200px] h-[200px] rounded-full bg-white opacity-[0.02] pointer-events-none"></div>
+
+        <!-- Layout Grid -->
+        <div class="flex h-full w-full">
+            
+            <!-- Left Side: Chart Card (White Area) -->
+            <!-- Using relative positioning to replicate the inset look -->
+            <div class="w-[45%] h-full relative z-10 pl-16 py-12 flex flex-col justify-center">
+                
+                <!-- Page Number Tag (Floating visually connected to the white theme) -->
+                <div class="absolute top-0 left-0 bg-white w-24 h-24 flex items-center justify-center z-20 shadow-lg">
+                    <h2 class="text-4xl font-bold text-[#20457C]">07</h2>
+                </div>
+
+                <!-- The White Chart Card -->
+                <div id="chart_panel" class="w-full h-[540px] rounded-2xl p-6 relative flex flex-col justify-between">
+                    <!-- Chart Title / Legend Area placeholder (handled by Echarts) -->
+                    <div id="main_chart" class="w-full h-full"></div>
+                </div>
+            </div>
+
+            <!-- Right Side: Content (Dark Blue Area) -->
+            <div class="w-[55%] h-full pl-16 pr-20 py-16 flex flex-col justify-center text-white relative z-10">
+                
+                <!-- Header Info -->
+                <div class="flex justify-between items-center mb-16 border-b border-white/20 pb-4">
+                    <h3 class="text-sm font-medium tracking-[0.2em] uppercase opacity-80">Graphic Designer</h3>
+                    <span class="text-sm font-medium tracking-widest opacity-80">2027</span>
+                </div>
+
+                <!-- Main Title -->
+                <div class="mb-10">
+                    <h1 class="text-8xl font-bold tracking-tight leading-none drop-shadow-lg">
+                        Statistic
+                    </h1>
+                </div>
+
+                <!-- Text Content -->
+                <div class="space-y-6">
+                    <div class="flex">
+                        <!-- Vertical Accent Line -->
+                        <div class="w-[2px] bg-[#5A7A90] mr-6 shrink-0 h-auto self-stretch"></div>
+                        <p class="text-sm leading-relaxed text-gray-200 font-light text-justify">
+                            Presentations are communication tools that can be used as demonstration lectures, speeches, reports, and more. It is mostly presented before an audience. It serves a variety of purposes, making presentations powerful tools for convincing and teaching.
+                        </p>
+                    </div>
+                    
+                    <div class="flex">
+                        <!-- Invisible placeholder to align text -->
+                        <div class="w-[2px] mr-6 shrink-0"></div>
+                        <p class="text-sm leading-relaxed text-gray-300 font-light text-justify opacity-80">
+                            Presentations are communication tools that can be used as demonstration lectures, speeches, reports, and more. It is mostly presented before an audience. It serves a variety of purposes, making presentations powerful tools for convincing and teaching.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Decorative Icon/Element at bottom right -->
+                <div class="absolute bottom-12 right-12 opacity-20">
+                    <i class="fa-solid fa-chart-line text-6xl"></i>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ECharts Configuration -->
+    <script type="text/javascript">
+        // Initialize chart
+        var chartDom = document.getElementById('main_chart');
+        var myChart = echarts.init(chartDom);
+        var option;
+
+        // Color Palette derived from design system & image context
+        // Blue (Series 1), Light Blue (Series 2), Slate (Series 3)
+        const colors = ['#20457C', '#5A7A90', '#8AB6D6'];
+
+        option = {
+            backgroundColor: 'transparent',
+            // Legend
+            legend: {
+                data: ['Series 1', 'Series 2', 'Series 3'],
+                top: '5%',
+                icon: 'rect',
+                itemWidth: 16,
+                itemHeight: 16,
+                textStyle: {
+                    color: '#3A5A6D',
+                    fontSize: 14,
+                    fontFamily: 'Noto Sans SC'
+                }
+            },
+            // Grid
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                top: '15%',
+                containLabel: true
+            },
+            // Tooltip
+            tooltip: {
+                trigger: 'axis'
+            },
+            // X-Axis
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'],
+                axisLine: {
+                    lineStyle: {
+                        color: '#E0E6ED'
+                    }
+                },
+                axisLabel: {
+                    color: '#20457C', // Dark blue text
+                    fontSize: 14,
+                    margin: 15,
+                    fontFamily: 'Noto Sans SC'
+                },
+                axisTick: {
+                    show: false
+                }
+            },
+            // Y-Axis
+            yAxis: {
+                type: 'value',
+                min: 0,
+                max: 50,
+                interval: 10,
+                splitLine: {
+                    lineStyle: {
+                        color: '#F0F4F8',
+                        type: 'solid'
+                    }
+                },
+                axisLabel: {
+                    color: '#3A5A6D',
+                    fontSize: 14,
+                    fontFamily: 'Noto Sans SC'
+                }
+            },
+            // Data Series
+            series: [
+                {
+                    name: 'Series 1',
+                    type: 'line',
+                    smooth: false, // Straight lines as per original image
+                    symbol: 'circle',
+                    symbolSize: 8,
+                    data: [18, 30, 25, 40, 42], // Estimated from image
+                    itemStyle: {
+                        color: colors[0]
+                    },
+                    lineStyle: {
+                        width: 3
+                    }
+                },
+                {
+                    name: 'Series 2',
+                    type: 'line',
+                    smooth: false,
+                    symbol: 'circle',
+                    symbolSize: 8,
+                    data: [12, 4, 20, 15, 50], // Estimated (The fluctuating one)
+                    itemStyle: {
+                        color: colors[1]
+                    },
+                    lineStyle: {
+                        width: 3
+                    }
+                },
+                {
+                    name: 'Series 3',
+                    type: 'line',
+                    smooth: false,
+                    symbol: 'circle',
+                    symbolSize: 8,
+                    data: [0, 12, 38, 30, 32], // Estimated
+                    itemStyle: {
+                        color: colors[2]
+                    },
+                    lineStyle: {
+                        width: 3
+                    }
+                }
+            ]
+        };
+
+        option && myChart.setOption(option);
+
+        // Make chart responsive just in case
+        window.addEventListener('resize', function() {
+            myChart.resize();
+        });
+    </script>
+</body>
+</html>

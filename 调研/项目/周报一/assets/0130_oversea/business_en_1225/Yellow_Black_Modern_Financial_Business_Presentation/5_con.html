@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Business Keynote</title>
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Fonts (Required CDN) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- Tailwind Configuration for Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgMain: '#0F0F0F',
+                        textPrimary: '#FFFFFF',
+                        textSecondary: '#D1D1D1',
+                        textMuted: '#4A4A4A',
+                        accent: '#C4D658',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Global Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container - Strict 1280x720 Layout */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #0F0F0F;
+            overflow: hidden; /* Ensure no scrollbars within the slide */
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Decorative Concentric Circles (CSS Implementation of the swirl) */
+        .decoration-circle {
+            position: absolute;
+            border-radius: 50%;
+            border: 1px solid #C4D658;
+            opacity: 0.6;
+            pointer-events: none;
+            z-index: 1; /* Behind the main image */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div id="page_container">
+        
+        <!-- Navbar -->
+        <nav class="absolute top-0 left-0 w-full px-16 py-10 flex justify-between items-center z-50">
+            <!-- Left Navigation Links -->
+            <ul class="flex gap-10 items-center">
+                <li class="flex items-center gap-2 text-textPrimary font-semibold text-lg cursor-pointer">
+                    <i class="fas fa-caret-right text-accent text-sm"></i>
+                    <span>Home</span>
+                </li>
+                <li class="text-textMuted font-medium text-lg cursor-pointer hover:text-textSecondary transition-colors">
+                    <span>About</span>
+                </li>
+                <li class="text-textMuted font-medium text-lg cursor-pointer hover:text-textSecondary transition-colors">
+                    <span>Contact</span>
+                </li>
+            </ul>
+
+            <!-- Right Burger Menu -->
+            <div class="text-white text-2xl cursor-pointer">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+
+        <!-- Decorative Background Swirls (Bottom Left) -->
+        <!-- Simulating the green wireframe art using pure CSS borders -->
+        <div class="absolute bottom-[-250px] left-[-150px] w-[600px] h-[600px] z-0 pointer-events-none">
+            <div class="decoration-circle w-[600px] h-[600px] left-0 top-0 border-opacity-20"></div>
+            <div class="decoration-circle w-[540px] h-[540px] left-[30px] top-[30px] border-opacity-30"></div>
+            <div class="decoration-circle w-[480px] h-[480px] left-[60px] top-[60px] border-opacity-40"></div>
+            <div class="decoration-circle w-[420px] h-[420px] left-[90px] top-[90px] border-opacity-50"></div>
+            <div class="decoration-circle w-[360px] h-[360px] left-[120px] top-[120px] border-opacity-60"></div>
+            <div class="decoration-circle w-[300px] h-[300px] left-[150px] top-[150px] border-opacity-70"></div>
+            <div class="decoration-circle w-[240px] h-[240px] left-[180px] top-[180px] border-opacity-80"></div>
+        </div>
+
+        <!-- Main Content Grid -->
+        <div class="relative z-10 w-full h-full grid grid-cols-12 gap-12 px-16 pt-32 pb-12">
+            
+            <!-- Left Column: Hero Image -->
+            <div class="col-span-4 flex flex-col justify-end relative h-full">
+                <div class="relative w-full h-[520px] rounded-[32px] overflow-hidden shadow-2xl bg-gray-800">
+                     <!-- Image logic: Business women with tablet -->
+                    <img 
+                        src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                        alt="Business professionals looking at tablet" 
+                        class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-500"
+                    >
+                    <!-- 380*520 -->
+                    
+                    <!-- Subtle overlay gradient for depth -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                </div>
+            </div>
+
+            <!-- Right Column: Content -->
+            <div class="col-span-8 flex flex-col pt-4">
+                
+                <!-- Main Title -->
+                <div class="mb-14">
+                    <h1 class="text-6xl font-bold text-textPrimary leading-tight tracking-tight">
+                        Revenue Models In Financial
+                    </h1>
+                </div>
+
+                <!-- Numbered Points Row -->
+                <div class="flex gap-16 mb-16">
+                    <!-- Point 01 -->
+                    <div class="flex gap-5 items-start max-w-[320px]">
+                        <span class="text-4xl font-bold text-[#C4D658]">01</span>
+                        <p class="text-textSecondary text-lg leading-relaxed mt-2">
+                            Customer segmentation helps tailor services
+                        </p>
+                    </div>
+
+                    <!-- Point 02 -->
+                    <div class="flex gap-5 items-start max-w-[320px]">
+                        <span class="text-4xl font-bold text-[#C4D658]">02</span>
+                        <p class="text-textSecondary text-lg leading-relaxed mt-2">
+                            Digital transformation involves new technologies
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Bottom Section: Image + Text -->
+                <div class="flex gap-10 items-center">
+                    <!-- Secondary Image -->
+                    <div class="w-[280px] h-[180px] rounded-[24px] overflow-hidden flex-shrink-0 shadow-lg border border-gray-800">
+                        <!-- Image logic: Small office meeting scene -->
+                        <img 
+                            src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                            alt="Financial analysis meeting" 
+                            class="w-full h-full object-cover"
+                        >
+                        <!-- 280*180 -->
+                    </div>
+
+                    <!-- Text Block -->
+                    <div class="flex flex-col justify-center max-w-[420px]">
+                        <h3 class="text-2xl font-bold text-white mb-3">Interest Income</h3>
+                        <p class="text-textSecondary text-base leading-relaxed opacity-90">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a vulputate dui. Ut dui elit, viverra nec ante maximus, ornare dapibus nisi. Maecenas ut purus.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+</html>

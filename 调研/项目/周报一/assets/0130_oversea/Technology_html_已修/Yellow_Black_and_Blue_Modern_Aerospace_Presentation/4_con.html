@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inside Earth's Atmosphere - Premium Keynote</title>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#080808',
+                        accent: '#FCE67E',
+                        textMain: '#EDEDED',
+                        subtle: '#333333',
+                        brandIcon: '#FFF3B0',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'Inter', 'Roboto', 'sans-serif'],
+                        mono: ['"Courier New"', 'monospace'],
+                    },
+                    spacing: {
+                        '1280': '1280px',
+                        '720': '720px',
+                    },
+                    backgroundImage: {
+                        'metal-gradient': 'linear-gradient(135deg, #FCE67E 0%, #FFFBEB 50%, #D4AF37 100%)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Global Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        ::-webkit-scrollbar { display: none; }
+
+        /* Page Container */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #080808;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 420px 1fr; /* Same grid ratio as previous slide */
+        }
+
+        /* Halftone Patterns */
+        .halftone-pattern {
+            background-image: radial-gradient(#333333 1.5px, transparent 1.5px);
+            background-size: 8px 8px;
+            opacity: 0.6;
+        }
+        .halftone-accent {
+            background-image: radial-gradient(#FCE67E 1.5px, transparent 1.5px);
+            background-size: 6px 6px;
+            opacity: 0.4;
+        }
+
+        /* Text Effects */
+        .text-glow {
+            text-shadow: 0 0 20px rgba(252, 230, 126, 0.4);
+        }
+        .tech-line-gradient {
+            background: linear-gradient(90deg, #FCE67E 0%, rgba(252, 230, 126, 0) 100%);
+        }
+
+        /* Glassmorphism for Image Card */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <!-- LEFT PANEL: Visual Anchor (Main Image) -->
+        <div class="relative h-full w-full bg-gray-900 border-r border-[#333]">
+            <!-- Image 1: Earth View (The most impactful vertical image) -->
+            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=600&auto=format&fit=crop" 
+                 alt="Earth View from Space" 
+                 class="w-full h-full object-cover filter contrast-110 brightness-90">
+            
+            <!-- Overlay Gradient -->
+            <div class="absolute inset-0 bg-gradient-to-t from-[#080808] via-transparent to-transparent opacity-60"></div>
+            
+            <!-- Technical Overlay Details -->
+            <div class="absolute top-8 left-8">
+                 <div class="w-2 h-2 bg-accent rounded-full animate-pulse mb-2"></div>
+                 <p class="text-xs text-textMain tracking-[0.2em] font-mono uppercase opacity-70">Alt: 100km</p>
+                 <p class="text-xs text-textMain tracking-[0.2em] font-mono uppercase opacity-70">Lat: 34.5°N</p>
+            </div>
+            
+            <div class="absolute bottom-8 left-8">
+                <div class="w-12 h-1 bg-accent mb-2"></div>
+                <p class="text-xs text-textMain tracking-[0.2em] uppercase opacity-70">Atmospheric Layer 01</p>
+            </div>
+        </div>
+
+        <!-- RIGHT PANEL: Content -->
+        <div class="relative h-full flex flex-col p-12 pl-16">
+            
+            <!-- Decoration -->
+            <div class="absolute top-0 right-0 w-32 h-32 halftone-pattern pointer-events-none"></div>
+
+            <!-- 1. HEADER (Unified Style) -->
+            <header class="mb-12 relative z-10">
+                <!-- Top Label -->
+                <div class="flex items-center mb-1 space-x-2">
+                    <i class="fa-solid fa-plane-up text-accent text-xs"></i>
+                    <span class="text-sm font-mono text-gray-400 tracking-[0.4em] uppercase">Aeronautics</span>
+                </div>
+                
+                <!-- Main Title -->
+                <h1 class="leading-none">
+                    <span class="block text-4xl font-light text-white tracking-[0.1em] mb-1 opacity-90">Inside Earth's</span>
+                    <span class="block text-7xl font-black italic tracking-tighter text-transparent bg-clip-text bg-metal-gradient text-glow transform -translate-x-1">
+                        ATMOSPHERE
+                    </span>
+                </h1>
+
+                <!-- Decorative Line System -->
+                <div class="w-full mt-6 relative flex items-center">
+                    <div class="h-[2px] w-32 tech-line-gradient"></div>
+                    <div class="h-[1px] w-full bg-[#222]"></div>
+                    <div class="absolute right-0 top-[-4px] text-[10px] text-[#444] font-mono">SECT-B // FLIGHT</div>
+                </div>
+            </header>
+
+            <!-- 2. MAIN CONTENT AREA -->
+            <div class="flex flex-row gap-12 h-full relative z-10">
+                
+                <!-- Left Column: Text & Context -->
+                <div class="flex-1 flex flex-col pt-2">
+                    <h2 class="text-2xl text-white font-bold mb-6 leading-tight">
+                        The science of <br>
+                        <span class="text-accent">atmospheric flight.</span>
+                    </h2>
+                    
+                    <div class="border-l-2 border-[#333] pl-6 mb-8">
+                        <p class="text-sm text-textMain opacity-70 leading-7 text-justify font-light">
+                            Aeronautics focuses on the study, design, and operation of aircraft that navigate within Earth's atmosphere. It involves aerodynamic principles, propulsion systems, and the integration of advanced navigation.
+                        </p>
+                    </div>
+
+                    <!-- Action Button (Styled) -->
+                    <div class="mt-auto mb-12 group cursor-pointer w-max">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 border border-accent rounded-full flex items-center justify-center group-hover:bg-accent group-hover:text-black text-accent transition-all duration-300 shadow-[0_0_10px_rgba(252,230,126,0.1)]">
+                                <i class="fa-solid fa-arrow-right text-lg"></i>
+                            </div>
+                            <span class="text-xs font-bold tracking-widest text-textMain uppercase group-hover:text-accent transition-colors">Explore Dynamics</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Visual Card (Image 2) -->
+                <div class="w-[280px] flex flex-col relative">
+                    <!-- Image Card -->
+                    <div class="relative w-full h-[240px] glass-panel p-2 mb-4 group">
+                        <div class="w-full h-full overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1534088568595-a066f410bcda?q=80&w=800&auto=format&fit=crop" 
+                                 alt="Storm Clouds" 
+                                 class="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 ease-out">
+                            <!-- Overlay Text on Image -->
+                            <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+                                <p class="text-[10px] text-accent font-mono uppercase tracking-wider">Met. Conditions</p>
+                            </div>
+                        </div>
+                        <!-- Corner Accents -->
+                        <div class="absolute top-0 left-0 w-2 h-2 border-t border-l border-accent opacity-50"></div>
+                        <div class="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-accent opacity-50"></div>
+                    </div>
+
+                    <!-- Additional Data Points (Decorative) -->
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between border-b border-[#222] pb-2">
+                            <span class="text-xs text-gray-500 font-mono">Drag Coeff.</span>
+                            <span class="text-xs text-white font-mono">0.24 Cd</span>
+                        </div>
+                        <div class="flex items-center justify-between border-b border-[#222] pb-2">
+                            <span class="text-xs text-gray-500 font-mono">Pressure</span>
+                            <span class="text-xs text-white font-mono">101.3 kPa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. BRANDING / LOGO (Unified New Design) -->
+            <div class="absolute bottom-12 right-12 z-20">
+                 <!-- Decorative Halftone under logo -->
+                 <div class="absolute -bottom-8 -right-8 w-40 h-24 halftone-accent opacity-10 pointer-events-none"></div>
+
+                 <div class="flex items-center group">
+                    <!-- Icon: Thruster/Target Style -->
+                    <div class="relative w-10 h-10 mr-4 flex items-center justify-center">
+                        <div class="absolute inset-0 border border-gray-600 rounded-full"></div>
+                        <div class="absolute inset-0 border border-dashed border-accent rounded-full animate-[spin_12s_linear_infinite] opacity-60"></div>
+                        <div class="w-4 h-4 bg-accent transform rotate-45 shadow-[0_0_15px_rgba(252,230,126,0.6)]"></div>
+                    </div>
+
+                    <!-- Text Hierarchy -->
+                    <div class="flex flex-col justify-center">
+                        <span class="text-2xl font-black text-white leading-none tracking-widest uppercase font-sans">
+                            Salford
+                        </span>
+                        <div class="flex items-center w-full mt-1">
+                            <span class="text-[9px] text-accent font-bold tracking-[0.2em] uppercase mr-2">& Company</span>
+                            <div class="h-[1px] flex-grow bg-[#444]"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vertical Separator Line (Visual) -->
+            <div class="absolute top-[160px] bottom-12 left-[55%] w-[1px] bg-gradient-to-b from-[#333] via-[#222] to-transparent pointer-events-none opacity-50 hidden lg:block"></div>
+
+        </div>
+    </div>
+
+</body>
+</html>

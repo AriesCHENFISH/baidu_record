@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Pop Portfolio Slide</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px; background-color: #111111;
+            position: relative; margin: 0 auto; overflow: hidden;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+        }
+        .font-retro { font-family: 'Shrikhand', cursive; }
+        .arch-shape { border-top-left-radius: 50% 150px; border-top-right-radius: 50% 150px; }
+    </style>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { 
+            retroWhite: '#F0F0F0', retroPink: '#F3A8C3', retroOrange: '#F28C33', retroBlue: '#3556BC', retroGreen: '#4E9445', 
+        }}}}
+    </script>
+</head>
+<body>
+
+    <div id="page_container" class="flex flex-col p-12">
+        
+        <header class="flex justify-between items-end w-full mb-8 z-40">
+            <div class="flex items-center gap-0">
+                <div class="bg-[#3556BC] border-2 border-retroWhite px-4 py-1 transform rotate-1 shadow-[4px_4px_0px_#F28C33]">
+                    <h6 class="text-retroWhite text-sm font-black uppercase tracking-tighter">Freelance Portfolio</h6>
+                </div>
+                <div class="ml-4 border-2 border-retroWhite rounded-full px-3 py-0.5">
+                    <h6 class="text-retroWhite text-xs font-bold tracking-[0.2em]">2023</h6>
+                </div>
+            </div>
+
+            <div class="relative">
+                <div class="absolute -top-2 -right-2 text-retroOrange text-xl"><i class="fa-solid fa-star"></i></div>
+                <div class="flex flex-col items-end">
+                    <span class="text-retroWhite text-5xl font-retro leading-none relative z-10">02</span>
+                    <div class="w-full h-2 bg-retroPink mt-1 shadow-[2px_2px_0px_#3556BC]"></div>
+                </div>
+            </div>
+        </header>
+
+        <main class="grid grid-cols-3 gap-8 h-full items-end pb-8 z-10 relative">
+            <div class="h-[90%] border-2 border-retroWhite flex flex-col p-8 group hover:translate-y-[-5px] transition-transform">
+                <h2 class="font-retro text-5xl text-retroWhite mt-6 mb-8">Package #1</h2>
+                <p class="text-retroWhite text-base leading-relaxed opacity-90 text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius augue non ante lacinia, vel bibendum velit ornare.</p>
+            </div>
+
+            <div class="h-full w-full relative">
+                <div class="absolute inset-0 bg-retroPink arch-shape shadow-lg flex flex-col items-center justify-end pb-8 pt-20 px-6">
+                    <div class="w-full h-[92%] border-2 border-retroWhite flex flex-col justify-center p-6 relative">
+                        <h2 class="font-retro text-5xl text-black mb-6 text-center">Package #2</h2>
+                        <p class="text-black text-base leading-relaxed font-medium text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius augue non ante lacinia, vel bibendum velit ornare.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-[90%] border-2 border-retroWhite flex flex-col p-8 group hover:translate-y-[-5px] transition-transform">
+                <h2 class="font-retro text-5xl text-retroWhite mt-6 mb-8">Package #3</h2>
+                <p class="text-retroWhite text-base leading-relaxed opacity-90 text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius augue non ante lacinia, vel bibendum velit ornare.</p>
+            </div>
+        </main>
+
+        <div class="absolute top-[120px] left-[380px] z-20 transform -rotate-12">
+            <i class="fa-solid fa-star text-7xl text-retroWhite absolute top-1 left-1"></i>
+            <i class="fa-solid fa-star text-7xl text-retroOrange relative"></i>
+        </div>
+        <div class="absolute bottom-[-40px] left-[-40px] z-20">
+            <i class="fa-solid fa-certificate text-[180px] text-retroBlue transform rotate-12"></i>
+        </div>
+        <div class="absolute bottom-[-30px] right-[-30px] z-20 flex justify-center items-center w-40 h-40">
+            <i class="fa-solid fa-shapes text-[160px] text-retroGreen absolute transform rotate-45"></i>
+            <div class="relative z-10 w-16 h-16 rounded-full bg-retroPink border-4 border-retroWhite flex items-center justify-center">
+                <div class="w-6 h-6 rounded-full bg-retroWhite opacity-80"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

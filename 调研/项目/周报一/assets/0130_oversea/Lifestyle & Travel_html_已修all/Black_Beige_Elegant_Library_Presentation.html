@@ -1,0 +1,1550 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Responsive Merged HTML
+  </title>
+  <style>
+   body {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .page-wrapper {
+                width: 100%;
+                margin: 15px 0;
+                position: relative;
+            }
+            .page-title {
+                background: #f5f5f5;
+                padding: 5px 10px;
+                border-radius: 3px 3px 0 0;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+            }
+            .responsive-iframe {
+                border: none;
+                width: 100%;
+                display: block;
+            }
+  </style>
+ </head>
+ <body>
+  <!-- 内容将在这里插入 -->
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 1
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Ingoude Library - Typography Edition&lt;/title&gt;
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;!-- Google Fonts --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        theme: {
+                            bg: '#0a0a0a',           // Deep Black
+                            text: '#E6E1D3',         // Ivory
+                            accent: '#D6C8B5',       // Khaki/Beige
+                            dim: '#333333',          // Dark Grey lines
+                            gold: '#967D54'          // Gold text
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'],
+                        serif: ['&quot;Times New Roman&quot;', 'Times', 'serif'],
+                        display: ['&quot;Arial Black&quot;', 'Impact', 'sans-serif'] // For heavy impact
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+    &lt;style&gt;
+        /* Global Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #0a0a0a;
+            overflow: hidden;
+            font-family: &quot;Noto Sans SC&quot;, sans-serif;
+            /* Subtle Grid Background */
+            background-image: 
+                linear-gradient(#1a1a1a 1px, transparent 1px),
+                linear-gradient(90deg, #1a1a1a 1px, transparent 1px);
+            background-size: 160px 160px;
+        }
+
+        /* Artistic Typography */
+        .big-serif {
+            font-family: 'Times New Roman', serif;
+            letter-spacing: -0.05em;
+            line-height: 0.8;
+        }
+
+        /* Hollow Text Effect */
+        .stroke-text {
+            -webkit-text-stroke: 1px #333;
+            color: transparent;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;!-- ================= Layout Grid Lines ================= --&gt;
+        &lt;!-- These lines create the structure without needing images --&gt;
+        &lt;div class=&quot;absolute top-0 left-32 w-px h-full bg-theme-dim z-0&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute top-0 right-32 w-px h-full bg-theme-dim z-0&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute top-24 left-0 w-full h-px bg-theme-dim z-0&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute bottom-24 left-0 w-full h-px bg-theme-dim z-0&quot;&gt;&lt;/div&gt;
+
+        &lt;!-- ================= Header / Nav ================= --&gt;
+        &lt;nav class=&quot;absolute top-0 left-0 w-full h-24 px-12 flex justify-between items-center z-50&quot;&gt;
+            &lt;div class=&quot;flex items-center gap-4&quot;&gt;
+                &lt;div class=&quot;w-2 h-2 bg-theme-accent&quot;&gt;&lt;/div&gt;
+                &lt;h2 class=&quot;text-sm font-bold tracking-[0.3em] text-theme-text uppercase&quot;&gt;Ingoude.&lt;/h2&gt;
+            &lt;/div&gt;
+            
+            &lt;div class=&quot;flex gap-12&quot;&gt;
+                &lt;span class=&quot;text-[10px] text-gray-500 uppercase tracking-widest cursor-pointer hover:text-theme-accent&quot;&gt;Index&lt;/span&gt;
+                &lt;span class=&quot;text-[10px] text-gray-500 uppercase tracking-widest cursor-pointer hover:text-theme-accent&quot;&gt;Search&lt;/span&gt;
+                &lt;span class=&quot;text-[10px] text-gray-500 uppercase tracking-widest cursor-pointer hover:text-theme-accent&quot;&gt;Menu&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/nav&gt;
+
+        &lt;!-- ================= Main Typography Center ================= --&gt;
+        &lt;div class=&quot;absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full text-center z-20&quot;&gt;
+            
+            &lt;!-- Background Decorative Text (Hollow) --&gt;
+            &lt;h1 class=&quot;stroke-text font-display text-[200px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-20 select-none whitespace-nowrap&quot;&gt;
+                PUBLIC ARCHIVE
+            &lt;/h1&gt;
+
+            &lt;!-- Main Title (Solid) --&gt;
+            &lt;div class=&quot;relative mix-blend-difference&quot;&gt;
+                &lt;p class=&quot;text-theme-accent text-xs tracking-[0.8em] uppercase mb-4 pl-2&quot;&gt;The Collection&lt;/p&gt;
+                &lt;h1 class=&quot;big-serif text-[160px] text-theme-text font-bold italic&quot;&gt;
+                    LIBRARY
+                &lt;/h1&gt;
+                
+                &lt;!-- The &quot;Red Seal&quot; equivalent (Beige Square) --&gt;
+                &lt;div class=&quot;absolute -top-10 left-[62%] w-20 h-20 bg-theme-accent rounded-full flex items-center justify-center animate-spin-slow&quot; style=&quot;animation-duration: 10s;&quot;&gt;
+                     &lt;i class=&quot;fa-solid fa-star text-black text-xl&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+
+        &lt;!-- ================= Information Columns (Replacing Long Text) ================= --&gt;
+        &lt;!-- Short, punchy data points situated on the bottom grid line --&gt;
+        &lt;div class=&quot;absolute bottom-0 left-0 w-full h-24 flex items-center z-40&quot;&gt;
+            
+            &lt;!-- Col 1 --&gt;
+            &lt;div class=&quot;w-32 h-full border-r border-theme-dim flex items-center justify-center bg-black&quot;&gt;
+                &lt;span class=&quot;text-theme-gold text-lg font-serif italic&quot;&gt;01&lt;/span&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Col 2: Keywords --&gt;
+            &lt;div class=&quot;pl-12 flex gap-16&quot;&gt;
+                &lt;div&gt;
+                    &lt;h4 class=&quot;text-gray-500 text-[10px] uppercase tracking-widest mb-1&quot;&gt;Status&lt;/h4&gt;
+                    &lt;p class=&quot;text-theme-text text-sm font-medium&quot;&gt;Open 24/7&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;h4 class=&quot;text-gray-500 text-[10px] uppercase tracking-widest mb-1&quot;&gt;Location&lt;/h4&gt;
+                    &lt;p class=&quot;text-theme-text text-sm font-medium&quot;&gt;Zone A, L-12&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;h4 class=&quot;text-gray-500 text-[10px] uppercase tracking-widest mb-1&quot;&gt;Volume&lt;/h4&gt;
+                    &lt;p class=&quot;text-theme-text text-sm font-medium&quot;&gt;50,000+&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Col 3: CTA (Right aligned) --&gt;
+            &lt;div class=&quot;ml-auto w-64 h-full bg-theme-accent flex items-center justify-center cursor-pointer hover:bg-white transition-colors group&quot;&gt;
+                &lt;span class=&quot;text-black font-bold tracking-widest uppercase text-sm mr-2&quot;&gt;Enter Now&lt;/span&gt;
+                &lt;i class=&quot;fa-solid fa-arrow-right text-black group-hover:translate-x-1 transition-transform&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+
+        &lt;!-- ================= Floating Elements ================= --&gt;
+        
+        &lt;!-- Left Vertical Label --&gt;
+        &lt;div class=&quot;absolute top-1/2 left-8 transform -translate-y-1/2 -rotate-90 origin-center&quot;&gt;
+            &lt;p class=&quot;text-[10px] text-gray-600 tracking-[0.5em] uppercase&quot;&gt;Est. 2026 • Premium Studio&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Right Vertical Label --&gt;
+        &lt;div class=&quot;absolute top-1/2 right-8 transform -translate-y-1/2 rotate-90 origin-center&quot;&gt;
+             &lt;p class=&quot;text-[10px] text-gray-600 tracking-[0.5em] uppercase&quot;&gt;Silence Required&lt;/p&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 2
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Table of Contents - Ingoude Company&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        /* 全局设置 */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans SC', sans-serif; }
+        
+        /* 固定容器 1280x720 */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #000000;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* 字体与颜色工具类 */
+        .font-serif-display { font-family: 'Georgia', 'Times New Roman', serif; }
+        .text-primary { color: #E6E1D3; } /* 米白/象牙色 */
+        .text-accent { color: #967D54; }  /* 深金色/古铜色 */
+        .border-accent { border-color: #D6C8B5; } /* 浅米色边框 */
+
+        /* Logo 装饰小点 */
+        .logo-dot { width: 4px; height: 4px; background-color: #D6C8B5; border-radius: 50%; display: inline-block; margin-bottom: 2px; }
+
+        /* 目录项样式 */
+        .toc-item {
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(214, 200, 181, 0.2); /* 细微的底部分割线 */
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        /* 悬停效果：线条变亮，文字轻微偏移 */
+        .toc-item:hover {
+            border-bottom-color: rgba(214, 200, 181, 0.6);
+            transform: translateX(4px);
+        }
+        .toc-item:hover .toc-title {
+            color: #FFFFFF;
+        }
+
+        /* 序号样式 */
+        .toc-number {
+            font-family: 'Georgia', serif;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #967D54;
+            line-height: 1;
+            margin-right: 1.5rem;
+            opacity: 0.8;
+        }
+        
+        /* 标题样式 */
+        .toc-title {
+            font-size: 1.125rem; /* text-lg */
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #E6E1D3;
+            transition: color 0.3s ease;
+        }
+        
+        /* 页码指示器样式 (可选) */
+        .page-indicator {
+            font-size: 0.875rem;
+            color: #BCA98E;
+            opacity: 0.5;
+            letter-spacing: 0.05em;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;div class=&quot;absolute top-12 left-16 z-50 flex flex-col&quot;&gt;
+            &lt;div class=&quot;flex items-center gap-2&quot;&gt;
+                &lt;span class=&quot;logo-dot&quot;&gt;&lt;/span&gt;
+                &lt;span class=&quot;text-[#D6C8B5] text-[10px] tracking-[0.5em] uppercase font-bold&quot;&gt;Premium Studio&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;h1 class=&quot;text-primary text-3xl font-bold tracking-tighter uppercase leading-none mt-1&quot;&gt;
+                INGOUDE&lt;span class=&quot;text-[#D6C8B5]&quot;&gt;.&lt;/span&gt;
+            &lt;/h1&gt;
+            &lt;div class=&quot;w-12 h-[1px] bg-[#D6C8B5] mt-2 opacity-50&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;h-full w-full px-24 pt-36 pb-12 flex flex-col&quot;&gt;
+            
+            &lt;h2 class=&quot;font-serif-display text-primary text-6xl mb-16 tracking-tight&quot;&gt;Table of Contents&lt;/h2&gt;
+
+            &lt;div class=&quot;grid grid-cols-2 gap-x-24 gap-y-10 flex-1 align-start&quot;&gt;
+                
+                &lt;div class=&quot;space-y-10&quot;&gt;
+                    &lt;div class=&quot;toc-item flex items-end justify-between&quot;&gt;
+                        &lt;div class=&quot;flex items-end&quot;&gt;
+                            &lt;span class=&quot;toc-number&quot;&gt;01&lt;/span&gt;
+                            &lt;h3 class=&quot;toc-title&quot;&gt;Brand Philosophy&lt;/h3&gt;
+                        &lt;/div&gt;
+                        &lt;span class=&quot;page-indicator&quot;&gt;Pg. 04&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;toc-item flex items-end justify-between&quot;&gt;
+                        &lt;div class=&quot;flex items-end&quot;&gt;
+                            &lt;span class=&quot;toc-number&quot;&gt;02&lt;/span&gt;
+                            &lt;h3 class=&quot;toc-title&quot;&gt;Our Vision &amp; Mission&lt;/h3&gt;
+                        &lt;/div&gt;
+                        &lt;span class=&quot;page-indicator&quot;&gt;Pg. 08&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;toc-item flex items-end justify-between&quot;&gt;
+                        &lt;div class=&quot;flex items-end&quot;&gt;
+                            &lt;span class=&quot;toc-number&quot;&gt;03&lt;/span&gt;
+                            &lt;h3 class=&quot;toc-title&quot;&gt;Executive Team&lt;/h3&gt;
+                        &lt;/div&gt;
+                        &lt;span class=&quot;page-indicator&quot;&gt;Pg. 12&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;toc-item flex items-end justify-between&quot;&gt;
+                        &lt;div class=&quot;flex items-end&quot;&gt;
+                            &lt;span class=&quot;toc-number&quot;&gt;04&lt;/span&gt;
+                            &lt;h3 class=&quot;toc-title&quot;&gt;Global Services&lt;/h3&gt;
+                        &lt;/div&gt;
+                        &lt;span class=&quot;page-indicator&quot;&gt;Pg. 18&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;space-y-10&quot;&gt;
+                    &lt;div class=&quot;toc-item flex items-end justify-between&quot;&gt;
+                        &lt;div class=&quot;flex items-end&quot;&gt;
+                            &lt;span class=&quot;toc-number&quot;&gt;05&lt;/span&gt;
+                            &lt;h3 class=&quot;toc-title&quot;&gt;Featured Projects&lt;/h3&gt;
+                        &lt;/div&gt;
+                        &lt;span class=&quot;page-indicator&quot;&gt;Pg. 24&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;toc-item flex items-end justify-between&quot;&gt;
+                        &lt;div class=&quot;flex items-end&quot;&gt;
+                            &lt;span class=&quot;toc-number&quot;&gt;06&lt;/span&gt;
+                            &lt;h3 class=&quot;toc-title&quot;&gt;Digital Archive&lt;/h3&gt;
+                        &lt;/div&gt;
+                        &lt;span class=&quot;page-indicator&quot;&gt;Pg. 32&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;toc-item flex items-end justify-between&quot;&gt;
+                        &lt;div class=&quot;flex items-end&quot;&gt;
+                            &lt;span class=&quot;toc-number&quot;&gt;07&lt;/span&gt;
+                            &lt;h3 class=&quot;toc-title&quot;&gt;Future Roadmap&lt;/h3&gt;
+                        &lt;/div&gt;
+                        &lt;span class=&quot;page-indicator&quot;&gt;Pg. 40&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;toc-item flex items-end justify-between&quot;&gt;
+                        &lt;div class=&quot;flex items-end&quot;&gt;
+                            &lt;span class=&quot;toc-number&quot;&gt;08&lt;/span&gt;
+                            &lt;h3 class=&quot;toc-title&quot;&gt;Contact &amp; Locations&lt;/h3&gt;
+                        &lt;/div&gt;
+                        &lt;span class=&quot;page-indicator&quot;&gt;Pg. 44&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#D6C8B5] rounded-full blur-[180px] opacity-10 pointer-events-none&quot;&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 3
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Ingoude Company - Our Service&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        /* CSS Reset &amp; Reconstruction */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Main Page Container - Fixed 1280x720 */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background-color: #000000;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        .font-serif-display {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        /* 装饰性 Logo 元素 */
+        .logo-dot {
+            width: 4px;
+            height: 4px;
+            background-color: #D6C8B5;
+            border-radius: 50%;
+            display: inline-block;
+            margin-bottom: 2px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;div class=&quot;absolute top-12 left-16 z-50 flex flex-col&quot;&gt;
+            &lt;div class=&quot;flex items-center gap-2&quot;&gt;
+                &lt;span class=&quot;logo-dot&quot;&gt;&lt;/span&gt;
+                &lt;span class=&quot;text-[#D6C8B5] text-[10px] tracking-[0.5em] uppercase font-bold&quot;&gt;Premium Studio&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;h1 class=&quot;text-[#E6E1D3] text-3xl font-bold tracking-tighter uppercase leading-none mt-1&quot;&gt;
+                INGOUDE&lt;span class=&quot;text-[#D6C8B5]&quot;&gt;.&lt;/span&gt;
+            &lt;/h1&gt;
+            &lt;div class=&quot;w-12 h-[1px] bg-[#D6C8B5] mt-2 opacity-50&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;grid grid-cols-12 h-full w-full&quot;&gt;
+            
+            &lt;div class=&quot;col-span-5 flex flex-col justify-center&quot; style=&quot;padding-left: 64px; padding-right: 40px; padding-top: 60px;&quot;&gt;
+                
+                &lt;h2 class=&quot;font-serif-display text-[#E6E1D3] text-8xl mb-14 tracking-tight&quot;&gt;
+                    Our Service
+                &lt;/h2&gt;
+
+                &lt;div class=&quot;flex flex-col mb-12&quot;&gt;
+                    &lt;div class=&quot;flex items-center mb-4&quot;&gt;
+                        &lt;div class=&quot;bg-[#D6C8B5] rounded-full flex justify-center items-center&quot; style=&quot;width: 44px; height: 26px; margin-right: 16px;&quot;&gt;
+                            &lt;span class=&quot;text-[#000000] text-xs font-bold&quot;&gt;01.&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;h3 class=&quot;text-[#FFFFFF] text-2xl font-light tracking-wide&quot;&gt;Strategic Planning&lt;/h3&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-[#BCA98E] text-sm leading-relaxed opacity-90&quot; style=&quot;max-width: 440px;&quot;&gt;
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;flex flex-col&quot;&gt;
+                    &lt;div class=&quot;flex items-center mb-4&quot;&gt;
+                        &lt;div class=&quot;bg-[#D6C8B5] rounded-full flex justify-center items-center&quot; style=&quot;width: 44px; height: 26px; margin-right: 16px;&quot;&gt;
+                            &lt;span class=&quot;text-[#000000] text-xs font-bold&quot;&gt;02.&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;h3 class=&quot;text-[#FFFFFF] text-2xl font-light tracking-wide&quot;&gt;Creative Direction&lt;/h3&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-[#BCA98E] text-sm leading-relaxed opacity-90&quot; style=&quot;max-width: 440px;&quot;&gt;
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+
+            &lt;div class=&quot;col-span-7 relative h-full&quot;&gt;
+                &lt;div class=&quot;absolute right-0 bottom-0 bg-[#D6C8B5]&quot; style=&quot;width: 92%; height: 82%; border-top-left-radius: 80px;&quot;&gt;&lt;/div&gt;
+
+                &lt;div class=&quot;absolute right-0 top-0 flex justify-end items-center h-full w-full&quot; style=&quot;padding-right: 60px;&quot;&gt;
+                    &lt;div class=&quot;overflow-hidden shadow-2xl relative&quot; style=&quot;width: 600px; height: 520px; border-radius: 12px;&quot;&gt;
+                        &lt;img 
+                            src=&quot;https://images.unsplash.com/photo-1507842217121-9e863067ae26?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1200&amp;q=80&quot; 
+                            class=&quot;object-cover w-full h-full opacity-95 hover:scale-105 transition-transform duration-1000&quot;
+                            alt=&quot;Library Space&quot;
+                        &gt;
+                        &lt;div class=&quot;absolute inset-0&quot; style=&quot;background: linear-gradient(to top, rgba(0,0,0,0.3), transparent);&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;absolute bg-[#967D54] shadow-lg&quot; style=&quot;width: 10px; height: 180px; right: 100px; bottom: 120px; border-radius: 10px; z-index: 20;&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute bottom-10 left-16&quot;&gt;
+            &lt;span class=&quot;text-[#BCA98E] text-[10px] tracking-[0.3em] uppercase opacity-40&quot;&gt;Section 03 / Services Overview&lt;/span&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 4
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Ingoude Company - Project Presentation&lt;/title&gt;
+    
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        /* CSS Reset &amp; Global Config */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* Custom Serif for Headlines */
+        .font-serif-display {
+            font-family: 'Georgia', 'Times New Roman', serif;
+        }
+
+        /* Page Container Definition */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background-color: #000000;
+        }
+
+        /* Decorative Logo Element */
+        .logo-dot {
+            width: 4px;
+            height: 4px;
+            background-color: #D6C8B5;
+            border-radius: 50%;
+            display: inline-block;
+            margin-bottom: 2px;
+        }
+    &lt;/style&gt;
+    
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#E6E1D3',      // Ivory
+                        secondary: '#FFFFFF',    // White
+                        cardBg: '#D6C8B5',       // Khaki/Beige
+                        cardTitle: '#967D54',    // Gold/Brown
+                        cardBody: '#BCA98E',     // Light Brown
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;div class=&quot;absolute top-12 right-16 z-50 flex flex-col items-end&quot;&gt;
+            &lt;div class=&quot;flex items-center gap-2&quot;&gt;
+                &lt;span class=&quot;text-[#D6C8B5] text-[10px] tracking-[0.5em] uppercase font-bold&quot;&gt;Premium Studio&lt;/span&gt;
+                &lt;span class=&quot;logo-dot&quot;&gt;&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;h1 class=&quot;text-[#E6E1D3] text-3xl font-bold tracking-tighter uppercase leading-none mt-1&quot;&gt;
+                INGOUDE&lt;span class=&quot;text-[#D6C8B5]&quot;&gt;.&lt;/span&gt;
+            &lt;/h1&gt;
+            &lt;div class=&quot;w-12 h-[1px] bg-[#D6C8B5] mt-2 opacity-50&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;grid grid-cols-12 h-full w-full&quot;&gt;
+            
+            &lt;div class=&quot;col-span-5 relative h-full&quot;&gt;
+                
+                &lt;div class=&quot;absolute -top-10 -left-16 w-[500px] h-[500px] rounded-full overflow-hidden border-4 border-black z-10 shadow-2xl&quot;&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1568667256549-094345857637?q=80&amp;w=1000&amp;auto=format&amp;fit=crop&quot; 
+                         alt=&quot;Library Interior&quot; 
+                         class=&quot;w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-500&quot;&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;absolute bottom-[-80px] -left-10 w-[420px] h-[420px] rounded-full overflow-hidden border-4 border-black z-0 opacity-80&quot;&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&amp;w=1000&amp;auto=format&amp;fit=crop&quot; 
+                         alt=&quot;Dark Bookshelves&quot; 
+                         class=&quot;w-full h-full object-cover grayscale-[30%]&quot;&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;absolute top-[380px] left-[220px] w-[280px] h-[280px] rounded-full overflow-hidden border-[8px] border-black z-20 shadow-[0_20px_50px_rgba(0,0,0,0.5)]&quot;&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&amp;w=800&amp;auto=format&amp;fit=crop&quot; 
+                         alt=&quot;Book Detail&quot; 
+                         class=&quot;w-full h-full object-cover&quot;&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;col-span-7 flex flex-col justify-center pl-4 pr-16 pt-20 relative&quot;&gt;
+                
+                &lt;h1 class=&quot;font-serif-display text-[92px] leading-tight text-primary mb-12 ml-12 drop-shadow-md&quot;&gt;
+                    Our Project
+                &lt;/h1&gt;
+
+                &lt;div class=&quot;flex flex-col gap-8 w-full&quot;&gt;
+                    
+                    &lt;div class=&quot;w-[560px] bg-cardBg rounded-[40px] p-8 pl-10 shadow-lg relative ml-12 hover:translate-x-2 transition-transform duration-300 border-l-8 border-cardTitle&quot;&gt;
+                        &lt;h3 class=&quot;text-cardTitle text-2xl font-bold mb-3 tracking-wide uppercase&quot;&gt;
+                            Modern Archive
+                        &lt;/h3&gt;
+                        &lt;p class=&quot;text-cardBody text-sm leading-relaxed font-medium pr-4 text-justify&quot;&gt;
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;w-[560px] bg-cardBg rounded-[40px] p-8 pl-10 shadow-lg relative ml-36 hover:translate-x-2 transition-transform duration-300 border-l-8 border-cardTitle&quot;&gt;
+                        &lt;h3 class=&quot;text-cardTitle text-2xl font-bold mb-3 tracking-wide uppercase&quot;&gt;
+                            Digital Library
+                        &lt;/h3&gt;
+                        &lt;p class=&quot;text-cardBody text-sm leading-relaxed font-medium pr-4 text-justify&quot;&gt;
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute bottom-10 right-16&quot;&gt;
+            &lt;span class=&quot;text-[#D6C8B5] text-[10px] tracking-[0.4em] uppercase opacity-40&quot;&gt;Portfolio Edition / 2026&lt;/span&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 5
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Ingoude Company - Our Vision&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #000000;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        .font-serif-display { font-family: 'Georgia', serif; }
+        .logo-dot { width: 4px; height: 4px; background-color: #D6C8B5; border-radius: 50%; display: inline-block; margin-bottom: 2px; }
+        
+        /* 图片容器，确保不溢出到文字区 */
+        .image-bounds {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;absolute top-12 left-16 z-50 flex flex-col&quot;&gt;
+            &lt;div class=&quot;flex items-center gap-2&quot;&gt;
+                &lt;span class=&quot;logo-dot&quot;&gt;&lt;/span&gt;
+                &lt;span class=&quot;text-[#D6C8B5] text-[10px] tracking-[0.5em] uppercase font-bold&quot;&gt;Premium Studio&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;h1 class=&quot;text-[#E6E1D3] text-3xl font-bold tracking-tighter uppercase leading-none mt-1&quot;&gt;
+                INGOUDE&lt;span class=&quot;text-[#D6C8B5]&quot;&gt;.&lt;/span&gt;
+            &lt;/h1&gt;
+            &lt;div class=&quot;w-12 h-[1px] bg-[#D6C8B5] mt-2 opacity-50&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;grid grid-cols-12 h-full&quot;&gt;
+            &lt;div class=&quot;col-span-5 flex flex-col justify-center pl-16 pr-12 pt-16&quot;&gt;
+                &lt;h2 class=&quot;font-serif-display text-[#E6E1D3] text-8xl mb-12 tracking-tight&quot;&gt;
+                    Our Vision
+                &lt;/h2&gt;
+                &lt;div class=&quot;space-y-10&quot;&gt;
+                    &lt;div class=&quot;border-l-2 border-[#D6C8B5]/30 pl-6&quot;&gt;
+                        &lt;h3 class=&quot;text-white text-2xl font-medium mb-3&quot;&gt;Strategic Insight&lt;/h3&gt;
+                        &lt;p class=&quot;text-[#BCA98E] text-sm leading-relaxed text-justify&quot;&gt;
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;border-l-2 border-[#D6C8B5]/30 pl-6&quot;&gt;
+                        &lt;h3 class=&quot;text-white text-2xl font-medium mb-3&quot;&gt;Global Innovation&lt;/h3&gt;
+                        &lt;p class=&quot;text-[#BCA98E] text-sm leading-relaxed text-justify&quot;&gt;
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;col-span-7 image-bounds&quot;&gt;
+                &lt;div class=&quot;absolute inset-0 bg-[#D6C8B5]&quot; style=&quot;clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);&quot;&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&amp;w=1280&amp;auto=format&amp;fit=crop&quot; 
+                         class=&quot;w-full h-full object-cover opacity-90&quot; alt=&quot;Visionary Architecture&quot;&gt;
+                    &lt;div class=&quot;absolute inset-0 bg-black/20&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;absolute top-1/2 left-[10%] w-24 h-[1px] bg-white opacity-40&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 6
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Ingoude Company - Our Mission&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #000000;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        .font-serif-display { font-family: 'Georgia', serif; }
+        
+        /* Logo 装饰圆点 */
+        .logo-dot {
+            width: 4px; height: 4px;
+            background-color: #D6C8B5;
+            border-radius: 50%;
+            display: inline-block;
+            margin-bottom: 2px;
+        }
+
+        /* 文本框定制设计 */
+        .mission-box {
+            background: rgba(255, 255, 255, 0.03); /* 极细微的背景 */
+            border: 1px solid rgba(214, 200, 181, 0.15); /* 基于卡片色的半透明边框 */
+            border-radius: 24px;
+            padding: 32px 40px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .mission-box:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(214, 200, 181, 0.4);
+            transform: translateY(-5px);
+        }
+
+        /* 装饰背景光 */
+        .bg-glow {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(150, 125, 84, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;bg-glow top-0 right-0&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;absolute top-12 left-16 z-50 flex flex-col&quot;&gt;
+            &lt;div class=&quot;flex items-center gap-2&quot;&gt;
+                &lt;span class=&quot;logo-dot&quot;&gt;&lt;/span&gt;
+                &lt;span class=&quot;text-[#D6C8B5] text-[10px] tracking-[0.5em] uppercase font-bold&quot;&gt;Premium Studio&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;h1 class=&quot;text-[#E6E1D3] text-3xl font-bold tracking-tighter uppercase leading-none mt-1&quot;&gt;
+                INGOUDE&lt;span class=&quot;text-[#D6C8B5]&quot;&gt;.&lt;/span&gt;
+            &lt;/h1&gt;
+            &lt;div class=&quot;w-12 h-[1px] bg-[#D6C8B5] mt-2 opacity-50&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;grid grid-cols-12 h-full&quot;&gt;
+            &lt;div class=&quot;col-span-6 relative&quot;&gt;
+                &lt;div class=&quot;absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full border-[10px] border-[#111111] overflow-hidden shadow-2xl&quot;&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1507842217121-9e93c8aaf27f?q=80&amp;w=1200&amp;auto=format&amp;fit=crop&quot; 
+                         class=&quot;w-full h-full object-cover scale-105&quot; alt=&quot;Mission Vision&quot;&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;absolute top-1/4 left-10 w-px h-1/2 bg-gradient-to-b from-transparent via-[#D6C8B5]/20 to-transparent&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;col-span-6 flex flex-col justify-center pr-24 pl-8 pt-12 relative&quot;&gt;
+                &lt;div class=&quot;mb-14&quot;&gt;
+                    &lt;h2 class=&quot;font-serif-display text-[#E6E1D3] text-7xl mb-4 tracking-tight leading-none&quot;&gt;Our Mission&lt;/h2&gt;
+                    &lt;div class=&quot;w-20 h-1 bg-[#D6C8B5]&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                
+                &lt;div class=&quot;space-y-8&quot;&gt;
+                    &lt;div class=&quot;mission-box flex gap-8 items-start&quot;&gt;
+                        &lt;div class=&quot;flex-shrink-0&quot;&gt;
+                            &lt;span class=&quot;text-[#967D54] font-serif italic text-3xl&quot;&gt;01.&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;h4 class=&quot;text-white text-lg font-bold mb-2 tracking-wide uppercase&quot;&gt;Heritage Preserving&lt;/h4&gt;
+                            &lt;p class=&quot;text-[#E6E1D3]/70 text-base leading-relaxed font-light&quot;&gt;
+                                We are committed to the preservation of human heritage through precise archival methodologies and cutting-edge restoration.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;mission-box flex gap-8 items-start&quot;&gt;
+                        &lt;div class=&quot;flex-shrink-0&quot;&gt;
+                            &lt;span class=&quot;text-[#967D54] font-serif italic text-3xl&quot;&gt;02.&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;h4 class=&quot;text-white text-lg font-bold mb-2 tracking-wide uppercase&quot;&gt;Global Accessibility&lt;/h4&gt;
+                            &lt;p class=&quot;text-[#E6E1D3]/70 text-base leading-relaxed font-light&quot;&gt;
+                                Breaking down barriers to access by creating a seamless digital bridge for researchers and scholars worldwide.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute bottom-10 left-16 text-[#BCA98E] text-[10px] tracking-[0.4em] uppercase opacity-40&quot;&gt;
+            Mission Directive / Section 02
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 7
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Ingoude - About&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .font-serif-display { font-family: 'Georgia', 'Times New Roman', serif; }
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; overflow: hidden; background-color: #000000; }
+        .logo-dot { width: 4px; height: 4px; background-color: #D6C8B5; border-radius: 50%; display: inline-block; margin-bottom: 2px; }
+    &lt;/style&gt;
+    
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#E6E1D3', secondary: '#FFFFFF', cardBg: '#D6C8B5', cardTitle: '#967D54', cardBody: '#BCA98E',
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;!-- LOGO (Strictly form reference) --&gt;
+        &lt;div class=&quot;absolute top-12 right-16 z-50 flex flex-col items-end&quot;&gt;
+            &lt;div class=&quot;flex items-center gap-2&quot;&gt;
+                &lt;span class=&quot;text-[#D6C8B5] text-[10px] tracking-[0.5em] uppercase font-bold&quot;&gt;Premium Studio&lt;/span&gt;
+                &lt;span class=&quot;logo-dot&quot;&gt;&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;h1 class=&quot;text-[#E6E1D3] text-3xl font-bold tracking-tighter uppercase leading-none mt-1&quot;&gt;
+                INGOUDE&lt;span class=&quot;text-[#D6C8B5]&quot;&gt;.&lt;/span&gt;
+            &lt;/h1&gt;
+            &lt;div class=&quot;w-12 h-[1px] bg-[#D6C8B5] mt-2 opacity-50&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;grid grid-cols-12 h-full w-full px-16 py-16&quot;&gt;
+            
+            &lt;!-- Left: Text Content Area --&gt;
+            &lt;div class=&quot;col-span-6 flex flex-col justify-center relative z-20&quot;&gt;
+                &lt;h1 class=&quot;font-serif-display text-[80px] leading-none text-primary mb-10 drop-shadow-md&quot;&gt;
+                    About&lt;br&gt;The Studio
+                &lt;/h1&gt;
+
+                &lt;!-- Text Box 1: Main Intro --&gt;
+                &lt;div class=&quot;w-[520px] bg-cardBg rounded-[30px] p-8 shadow-xl border-l-8 border-cardTitle relative z-10&quot;&gt;
+                    &lt;h3 class=&quot;text-cardTitle text-xl font-bold mb-2 uppercase tracking-wide&quot;&gt;Our Philosophy&lt;/h3&gt;
+                    &lt;p class=&quot;text-[#5c4d35] text-sm leading-6 font-medium text-justify&quot;&gt;
+                        Founded in 2010, Ingoude has established itself as a beacon of minimalist luxury. We believe that space is not merely a container for objects, but a stage for human interaction. Our designs prioritize the longevity of materials and the purity of form.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Text Box 2: Stats (Overlapping) --&gt;
+                &lt;div class=&quot;w-[480px] bg-[#2a2a2a] rounded-[30px] p-8 shadow-2xl border-l-8 border-primary ml-12 -mt-6 relative z-20&quot;&gt;
+                    &lt;div class=&quot;flex justify-between items-center text-primary&quot;&gt;
+                        &lt;div&gt;
+                            &lt;span class=&quot;block text-3xl font-serif-display font-bold&quot;&gt;15+&lt;/span&gt;
+                            &lt;span class=&quot;text-xs uppercase tracking-widest opacity-60&quot;&gt;Years&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;h-8 w-[1px] bg-white/20&quot;&gt;&lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;span class=&quot;block text-3xl font-serif-display font-bold&quot;&gt;120&lt;/span&gt;
+                            &lt;span class=&quot;text-xs uppercase tracking-widest opacity-60&quot;&gt;Projects&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;h-8 w-[1px] bg-white/20&quot;&gt;&lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;span class=&quot;block text-3xl font-serif-display font-bold&quot;&gt;NY&lt;/span&gt;
+                            &lt;span class=&quot;text-xs uppercase tracking-widest opacity-60&quot;&gt;Based&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Right: Visual Area (Circular Masks) --&gt;
+            &lt;div class=&quot;col-span-6 relative h-full&quot;&gt;
+                &lt;!-- Large Circle --&gt;
+                &lt;div class=&quot;absolute top-10 right-0 w-[450px] h-[450px] rounded-full overflow-hidden border-[6px] border-black z-10 shadow-2xl&quot;&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&amp;w=1000&amp;auto=format&amp;fit=crop&quot; class=&quot;w-full h-full object-cover&quot;&gt;
+                &lt;/div&gt;
+                &lt;!-- Small Circle --&gt;
+                &lt;div class=&quot;absolute bottom-20 right-[350px] w-[280px] h-[280px] rounded-full overflow-hidden border-[6px] border-black z-20&quot;&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&amp;w=800&amp;auto=format&amp;fit=crop&quot; class=&quot;w-full h-full object-cover grayscale-[20%]&quot;&gt;
+                &lt;/div&gt;
+                &lt;!-- Decoration --&gt;
+                &lt;div class=&quot;absolute bottom-40 right-10 text-cardTitle/20 text-[200px] font-serif-display leading-none z-0 select-none&quot;&gt;
+                    01
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 8
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Meet Our Team - Ingoude Company&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #000000;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        .font-serif { font-family: 'Georgia', serif; }
+        .logo-dot { width: 4px; height: 4px; background-color: #D6C8B5; border-radius: 50%; display: inline-block; margin-bottom: 2px; }
+        .stadium-shape { border-radius: 9999px; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;absolute top-12 left-16 z-50 flex flex-col&quot;&gt;
+            &lt;div class=&quot;flex items-center gap-2&quot;&gt;
+                &lt;span class=&quot;logo-dot&quot;&gt;&lt;/span&gt;
+                &lt;span class=&quot;text-[#D6C8B5] text-[10px] tracking-[0.5em] uppercase font-bold&quot;&gt;Premium Studio&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;h1 class=&quot;text-[#E6E1D3] text-3xl font-bold tracking-tighter uppercase leading-none mt-1&quot;&gt;
+                INGOUDE&lt;span class=&quot;text-[#D6C8B5]&quot;&gt;.&lt;/span&gt;
+            &lt;/h1&gt;
+            &lt;div class=&quot;w-12 h-[1px] bg-[#D6C8B5] mt-2 opacity-50&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;grid grid-cols-12 h-full w-full pt-32&quot;&gt;
+            &lt;div class=&quot;col-span-5 relative h-full&quot;&gt;
+                &lt;div class=&quot;absolute top-0 left-10 w-[340px] h-[180px] stadium-shape overflow-hidden border-2 border-[#1a1a1a]&quot;&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&amp;w=600&amp;auto=format&amp;fit=crop&quot; class=&quot;w-full h-full object-cover opacity-80&quot;&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;absolute top-[160px] left-[180px] w-[340px] h-[180px] stadium-shape overflow-hidden border-2 border-[#1a1a1a] z-10 shadow-2xl&quot;&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&amp;w=600&amp;auto=format&amp;fit=crop&quot; class=&quot;w-full h-full object-cover&quot;&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;absolute top-[320px] left-10 w-[340px] h-[180px] stadium-shape overflow-hidden border-2 border-[#1a1a1a]&quot;&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&amp;w=600&amp;auto=format&amp;fit=crop&quot; class=&quot;w-full h-full object-cover opacity-80&quot;&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;col-span-7 flex flex-col justify-center pr-20 pl-8&quot;&gt;
+                &lt;h1 class=&quot;font-serif text-7xl text-[#E6E1D3] mb-14 tracking-tight&quot;&gt;Meet Our Team&lt;/h1&gt;
+                
+                &lt;div class=&quot;flex flex-col gap-12&quot;&gt;
+                    &lt;div class=&quot;border-l border-[#D6C8B5]/30 pl-8&quot;&gt;
+                        &lt;h2 class=&quot;text-white font-bold text-lg tracking-widest uppercase mb-2&quot;&gt;Jacqueline Thompson&lt;/h2&gt;
+                        &lt;p class=&quot;text-[#BCA98E] text-sm leading-relaxed max-w-xl&quot;&gt;
+                            Creative lead with a passion for archival aesthetics and modern minimalist design. Senior curator specializing in digital library innovations and user experience research.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;border-l border-[#D6C8B5]/30 pl-8&quot;&gt;
+                        &lt;h2 class=&quot;text-white font-bold text-lg tracking-widest uppercase mb-2&quot;&gt;Mariana Napolitani&lt;/h2&gt;
+                        &lt;p class=&quot;text-[#BCA98E] text-sm leading-relaxed max-w-xl&quot;&gt;
+                            Strategic director focused on global brand narratives and cultural heritage preservation.Senior curator specializing in digital library innovations and user experience research.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;border-l border-[#D6C8B5]/30 pl-8&quot;&gt;
+                        &lt;h2 class=&quot;text-white font-bold text-lg tracking-widest uppercase mb-2&quot;&gt;Rachelle Beaudry&lt;/h2&gt;
+                        &lt;p class=&quot;text-[#BCA98E] text-sm leading-relaxed max-w-xl&quot;&gt;
+                            Senior curator specializing in digital library innovations and user experience research.Senior curator specializing in digital library innovations and user experience research.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 9
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Portfolio - Ingoude Company&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #000000;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        .logo-dot { width: 4px; height: 4px; background-color: #D6C8B5; border-radius: 50%; display: inline-block; margin-bottom: 2px; }
+        .font-serif-display { font-family: 'Georgia', serif; }
+        
+        /* 下方文本设计框 */
+        .info-box {
+            background: rgba(214, 200, 181, 0.05);
+            border-top: 1px solid rgba(214, 200, 181, 0.2);
+            padding: 24px;
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+        .info-box:hover {
+            background: rgba(214, 200, 181, 0.1);
+            border-top-color: #D6C8B5;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;absolute top-12 left-16 z-50 flex flex-col&quot;&gt;
+            &lt;div class=&quot;flex items-center gap-2&quot;&gt;
+                &lt;span class=&quot;logo-dot&quot;&gt;&lt;/span&gt;
+                &lt;span class=&quot;text-[#D6C8B5] text-[10px] tracking-[0.5em] uppercase font-bold&quot;&gt;Premium Studio&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;h1 class=&quot;text-[#E6E1D3] text-3xl font-bold tracking-tighter uppercase leading-none mt-1&quot;&gt;
+                INGOUDE&lt;span class=&quot;text-[#D6C8B5]&quot;&gt;.&lt;/span&gt;
+            &lt;/h1&gt;
+            &lt;div class=&quot;w-12 h-[1px] bg-[#D6C8B5] mt-2 opacity-50&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;flex flex-col h-full px-16 pt-32 pb-12&quot;&gt;
+            
+            &lt;div class=&quot;grid grid-cols-12 gap-8 h-[360px] mb-12&quot;&gt;
+                &lt;div class=&quot;col-span-5 flex flex-col justify-center&quot;&gt;
+                    &lt;h2 class=&quot;font-serif-display text-[#E6E1D3] text-8xl mb-6 tracking-tight&quot;&gt;Portfolio&lt;/h2&gt;
+                    &lt;p class=&quot;text-[#BCA98E] text-sm leading-relaxed text-justify opacity-80&quot;&gt;
+                        A curated collection of digital archives and spatial designs that redefine how we interact with historical knowledge.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;col-span-7 relative flex items-center justify-end&quot;&gt;
+                    &lt;div class=&quot;bg-[#D6C8B5] absolute bottom-0 right-0 w-[95%] h-[90%] rounded-bl-[4rem] opacity-20&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;relative w-[95%] h-[90%] right-4 bottom-4 overflow-hidden rounded-xl&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1507842217343-583bb7260b66?q=80&amp;w=1200&amp;auto=format&amp;fit=crop&quot; class=&quot;w-full h-full object-cover&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;grid grid-cols-3 gap-8 flex-1&quot;&gt;
+                &lt;div class=&quot;info-box&quot;&gt;
+                    &lt;span class=&quot;text-[#967D54] text-xs font-bold tracking-[0.3em] uppercase&quot;&gt;Phase 01&lt;/span&gt;
+                    &lt;h3 class=&quot;text-white text-xl font-bold mt-4 mb-3&quot;&gt;Conceptualization&lt;/h3&gt;
+                    &lt;p class=&quot;text-[#BCA98E] text-xs leading-relaxed&quot;&gt;
+                        Deep dive into historical context and brand heritage to establish a solid visual foundation.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;info-box&quot;&gt;
+                    &lt;span class=&quot;text-[#967D54] text-xs font-bold tracking-[0.3em] uppercase&quot;&gt;Phase 02&lt;/span&gt;
+                    &lt;h3 class=&quot;text-white text-xl font-bold mt-4 mb-3&quot;&gt;Digital Archiving&lt;/h3&gt;
+                    &lt;p class=&quot;text-[#BCA98E] text-xs leading-relaxed&quot;&gt;
+                        Transforming physical assets into immersive digital experiences with cutting-edge technology.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;info-box&quot;&gt;
+                    &lt;span class=&quot;text-[#967D54] text-xs font-bold tracking-[0.3em] uppercase&quot;&gt;Phase 03&lt;/span&gt;
+                    &lt;h3 class=&quot;text-white text-xl font-bold mt-4 mb-3&quot;&gt;Spatial Integration&lt;/h3&gt;
+                    &lt;p class=&quot;text-[#BCA98E] text-xs leading-relaxed&quot;&gt;
+                        Merging digital narratives with physical spaces to create a cohesive sensory journey.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 10
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Ingoude - Services&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .font-serif-display { font-family: 'Georgia', 'Times New Roman', serif; }
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; overflow: hidden; background-color: #000000; }
+        .logo-dot { width: 4px; height: 4px; background-color: #D6C8B5; border-radius: 50%; display: inline-block; margin-bottom: 2px; }
+    &lt;/style&gt;
+    
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#E6E1D3', secondary: '#FFFFFF', cardBg: '#D6C8B5', cardTitle: '#967D54', cardBody: '#BCA98E',
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;!-- LOGO --&gt;
+        &lt;div class=&quot;absolute top-12 right-16 z-50 flex flex-col items-end&quot;&gt;
+            &lt;div class=&quot;flex items-center gap-2&quot;&gt;
+                &lt;span class=&quot;text-[#D6C8B5] text-[10px] tracking-[0.5em] uppercase font-bold&quot;&gt;Premium Studio&lt;/span&gt;
+                &lt;span class=&quot;logo-dot&quot;&gt;&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;h1 class=&quot;text-[#E6E1D3] text-3xl font-bold tracking-tighter uppercase leading-none mt-1&quot;&gt;
+                INGOUDE&lt;span class=&quot;text-[#D6C8B5]&quot;&gt;.&lt;/span&gt;
+            &lt;/h1&gt;
+            &lt;div class=&quot;w-12 h-[1px] bg-[#D6C8B5] mt-2 opacity-50&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Main Content --&gt;
+        &lt;div class=&quot;w-full h-full px-16 pt-24 pb-12 flex flex-col&quot;&gt;
+            
+            &lt;!-- Header Section --&gt;
+            &lt;div class=&quot;flex items-end mb-12 relative z-10&quot;&gt;
+                &lt;h1 class=&quot;font-serif-display text-[72px] leading-none text-primary mr-8&quot;&gt;
+                    Services
+                &lt;/h1&gt;
+                &lt;p class=&quot;text-cardBg text-sm uppercase tracking-[0.3em] mb-4 pb-2 border-b border-cardTitle&quot;&gt;
+                    Comprehensive Design Solutions
+                &lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Cards Grid: 3 Text Boxes --&gt;
+            &lt;div class=&quot;grid grid-cols-3 gap-8 h-[400px]&quot;&gt;
+                
+                &lt;!-- Card 1 --&gt;
+                &lt;div class=&quot;bg-cardBg rounded-[40px] p-8 flex flex-col justify-between hover:-translate-y-2 transition-transform duration-300 border-t-8 border-cardTitle shadow-[0_10px_30px_rgba(214,200,181,0.1)]&quot;&gt;
+                    &lt;div&gt;
+                        &lt;div class=&quot;w-12 h-12 rounded-full bg-[#5c4d35] flex items-center justify-center mb-6 text-primary text-xl&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-pen-ruler&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;h3 class=&quot;text-[#3a3020] text-2xl font-bold mb-3 font-serif-display&quot;&gt;Architecture&lt;/h3&gt;
+                        &lt;p class=&quot;text-[#5c4d35] text-xs leading-relaxed font-semibold text-justify&quot;&gt;
+                            From conceptual sketching to BIM modeling, we handle the entire architectural lifecycle. We focus on structural integrity mixed with aesthetic timelessness.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;ul class=&quot;mt-4 space-y-2&quot;&gt;
+                        &lt;li class=&quot;flex items-center text-[#3a3020] text-xs font-bold uppercase tracking-wider&quot;&gt;
+                            &lt;span class=&quot;w-1.5 h-1.5 bg-cardTitle rounded-full mr-2&quot;&gt;&lt;/span&gt; Residential
+                        &lt;/li&gt;
+                        &lt;li class=&quot;flex items-center text-[#3a3020] text-xs font-bold uppercase tracking-wider&quot;&gt;
+                            &lt;span class=&quot;w-1.5 h-1.5 bg-cardTitle rounded-full mr-2&quot;&gt;&lt;/span&gt; Commercial
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Card 2 --&gt;
+                &lt;div class=&quot;bg-cardBg rounded-[40px] p-8 flex flex-col justify-between hover:-translate-y-2 transition-transform duration-300 border-t-8 border-cardTitle shadow-[0_10px_30px_rgba(214,200,181,0.1)]&quot;&gt;
+                    &lt;div&gt;
+                        &lt;div class=&quot;w-12 h-12 rounded-full bg-[#5c4d35] flex items-center justify-center mb-6 text-primary text-xl&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-couch&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;h3 class=&quot;text-[#3a3020] text-2xl font-bold mb-3 font-serif-display&quot;&gt;Interior&lt;/h3&gt;
+                        &lt;p class=&quot;text-[#5c4d35] text-xs leading-relaxed font-semibold text-justify&quot;&gt;
+                            We curate environments that elevate the human spirit. Our interior services include bespoke furniture selection, lighting design, and material sourcing.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;ul class=&quot;mt-4 space-y-2&quot;&gt;
+                        &lt;li class=&quot;flex items-center text-[#3a3020] text-xs font-bold uppercase tracking-wider&quot;&gt;
+                            &lt;span class=&quot;w-1.5 h-1.5 bg-cardTitle rounded-full mr-2&quot;&gt;&lt;/span&gt; Styling
+                        &lt;/li&gt;
+                        &lt;li class=&quot;flex items-center text-[#3a3020] text-xs font-bold uppercase tracking-wider&quot;&gt;
+                            &lt;span class=&quot;w-1.5 h-1.5 bg-cardTitle rounded-full mr-2&quot;&gt;&lt;/span&gt; Renovation
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Card 3 --&gt;
+                &lt;div class=&quot;bg-cardBg rounded-[40px] p-8 flex flex-col justify-between hover:-translate-y-2 transition-transform duration-300 border-t-8 border-cardTitle shadow-[0_10px_30px_rgba(214,200,181,0.1)]&quot;&gt;
+                    &lt;div&gt;
+                        &lt;div class=&quot;w-12 h-12 rounded-full bg-[#5c4d35] flex items-center justify-center mb-6 text-primary text-xl&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-city&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;h3 class=&quot;text-[#3a3020] text-2xl font-bold mb-3 font-serif-display&quot;&gt;Planning&lt;/h3&gt;
+                        &lt;p class=&quot;text-[#5c4d35] text-xs leading-relaxed font-semibold text-justify&quot;&gt;
+                            Urban planning and landscape architecture are integral to our practice. We consider the surrounding environment to create sustainable ecosystems.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;ul class=&quot;mt-4 space-y-2&quot;&gt;
+                        &lt;li class=&quot;flex items-center text-[#3a3020] text-xs font-bold uppercase tracking-wider&quot;&gt;
+                            &lt;span class=&quot;w-1.5 h-1.5 bg-cardTitle rounded-full mr-2&quot;&gt;&lt;/span&gt; Landscape
+                        &lt;/li&gt;
+                        &lt;li class=&quot;flex items-center text-[#3a3020] text-xs font-bold uppercase tracking-wider&quot;&gt;
+                            &lt;span class=&quot;w-1.5 h-1.5 bg-cardTitle rounded-full mr-2&quot;&gt;&lt;/span&gt; Urban
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Background Element --&gt;
+        &lt;div class=&quot;absolute -bottom-20 -left-20 w-[400px] h-[400px] rounded-full border border-white/5 z-0 pointer-events-none&quot;&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 11
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Ingoude - Expertise&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .font-serif-display { font-family: 'Georgia', 'Times New Roman', serif; }
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; overflow: hidden; background-color: #000000; }
+        .logo-dot { width: 4px; height: 4px; background-color: #D6C8B5; border-radius: 50%; display: inline-block; margin-bottom: 2px; }
+    &lt;/style&gt;
+    
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#E6E1D3', secondary: '#FFFFFF', cardBg: '#D6C8B5', cardTitle: '#967D54', cardBody: '#BCA98E',
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;!-- LOGO --&gt;
+        &lt;div class=&quot;absolute top-12 right-16 z-50 flex flex-col items-end&quot;&gt;
+            &lt;div class=&quot;flex items-center gap-2&quot;&gt;
+                &lt;span class=&quot;text-[#D6C8B5] text-[10px] tracking-[0.5em] uppercase font-bold&quot;&gt;Premium Studio&lt;/span&gt;
+                &lt;span class=&quot;logo-dot&quot;&gt;&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;h1 class=&quot;text-[#E6E1D3] text-3xl font-bold tracking-tighter uppercase leading-none mt-1&quot;&gt;
+                INGOUDE&lt;span class=&quot;text-[#D6C8B5]&quot;&gt;.&lt;/span&gt;
+            &lt;/h1&gt;
+            &lt;div class=&quot;w-12 h-[1px] bg-[#D6C8B5] mt-2 opacity-50&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;grid grid-cols-12 h-full w-full&quot;&gt;
+            
+            &lt;!-- Left: Typography &amp; Image Composition --&gt;
+            &lt;div class=&quot;col-span-4 pl-16 pt-24 relative&quot;&gt;
+                &lt;p class=&quot;text-cardTitle text-xs font-bold tracking-[0.4em] uppercase mb-6&quot;&gt;Workflow&lt;/p&gt;
+                &lt;h1 class=&quot;font-serif-display text-[64px] leading-[1.1] text-primary mb-12&quot;&gt;
+                    Process&lt;br&gt;&amp; Detail
+                &lt;/h1&gt;
+                
+                &lt;!-- Circular Image Element (Matching Reference Style) --&gt;
+                &lt;div class=&quot;w-[350px] h-[350px] rounded-full overflow-hidden border-[8px] border-black shadow-2xl relative z-20&quot;&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&amp;w=800&amp;auto=format&amp;fit=crop&quot; class=&quot;w-full h-full object-cover&quot;&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Right: Content Boxes --&gt;
+            &lt;div class=&quot;col-span-8 pt-32 pr-20 flex flex-col gap-8 relative z-10 pl-10&quot;&gt;
+                
+                &lt;!-- Large Content Box (Khaki Background) --&gt;
+                &lt;div class=&quot;w-full bg-cardBg rounded-[40px] p-10 flex gap-8 border-l-[12px] border-cardTitle shadow-lg&quot;&gt;
+                    &lt;div class=&quot;w-1/3 border-r border-[#5c4d35]/20 pr-4&quot;&gt;
+                        &lt;h3 class=&quot;text-[#3a3020] text-2xl font-serif-display font-bold mb-2&quot;&gt;Analysis&lt;/h3&gt;
+                        &lt;p class=&quot;text-[#5c4d35] text-xs font-bold uppercase tracking-widest&quot;&gt;Phase 01&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;w-2/3&quot;&gt;
+                        &lt;p class=&quot;text-[#5c4d35] text-sm leading-6 font-medium text-justify&quot;&gt;
+                             Before a single line is drawn, we conduct a deep analysis of site conditions, historical context, and client needs. This research-driven approach ensures that our solutions are grounded in reality while aiming for the extraordinary.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Secondary Content Box (Dark/Outline Style) --&gt;
+                &lt;!-- Designed to look like a blueprint or technical spec box --&gt;
+                &lt;div class=&quot;w-full bg-[#1a1a1a] rounded-[40px] p-10 flex gap-8 border border-white/10 ml-8&quot;&gt;
+                     &lt;div class=&quot;w-1/3 border-r border-white/10 pr-4&quot;&gt;
+                        &lt;h3 class=&quot;text-primary text-2xl font-serif-display font-bold mb-2&quot;&gt;Execution&lt;/h3&gt;
+                        &lt;p class=&quot;text-cardTitle text-xs font-bold uppercase tracking-widest&quot;&gt;Phase 02&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;w-2/3 text-gray-400 text-sm leading-6 font-light text-justify&quot;&gt;
+                        &lt;p&gt;
+                             Precision is paramount. We utilize advanced prototyping and material sampling to verify every detail. Our team coordinates closely with master craftsmen to ensure the final build matches the vision.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;!-- Bottom Decor --&gt;
+        &lt;div class=&quot;absolute bottom-10 left-16&quot;&gt;
+             &lt;span class=&quot;text-[#D6C8B5] text-[10px] tracking-[0.4em] uppercase opacity-40&quot;&gt;System Ver. 2.0&lt;/span&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 12
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Ingoude Company - Vision&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .font-serif-display { font-family: 'Georgia', 'Times New Roman', serif; }
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; overflow: hidden; background-color: #000000; }
+        .logo-dot { width: 4px; height: 4px; background-color: #D6C8B5; border-radius: 50%; display: inline-block; margin-bottom: 2px; }
+    &lt;/style&gt;
+    
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#E6E1D3', secondary: '#FFFFFF', cardBg: '#D6C8B5', cardTitle: '#967D54', cardBody: '#BCA98E',
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;!-- LOGO AREA (UNCHANGED) --&gt;
+        &lt;div class=&quot;absolute top-12 right-16 z-50 flex flex-col items-end&quot;&gt;
+            &lt;div class=&quot;flex items-center gap-2&quot;&gt;
+                &lt;span class=&quot;text-[#D6C8B5] text-[10px] tracking-[0.5em] uppercase font-bold&quot;&gt;Premium Studio&lt;/span&gt;
+                &lt;span class=&quot;logo-dot&quot;&gt;&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;h1 class=&quot;text-[#E6E1D3] text-3xl font-bold tracking-tighter uppercase leading-none mt-1&quot;&gt;
+                INGOUDE&lt;span class=&quot;text-[#D6C8B5]&quot;&gt;.&lt;/span&gt;
+            &lt;/h1&gt;
+            &lt;div class=&quot;w-12 h-[1px] bg-[#D6C8B5] mt-2 opacity-50&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Upper Half: Content &amp; Typography --&gt;
+        &lt;div class=&quot;w-full h-[55%] pl-16 pt-20 flex relative z-10&quot;&gt;
+            &lt;div class=&quot;w-1/2&quot;&gt;
+                &lt;p class=&quot;text-cardTitle text-xs font-bold tracking-[0.4em] uppercase mb-4&quot;&gt;Our Vision&lt;/p&gt;
+                &lt;h1 class=&quot;font-serif-display text-6xl text-primary leading-tight&quot;&gt;
+                    Timeless Space,&lt;br&gt;
+                    &lt;span class=&quot;text-cardBody italic&quot;&gt;Modern Living.&lt;/span&gt;
+                &lt;/h1&gt;
+            &lt;/div&gt;
+            
+            &lt;!-- Floating Contact Card (Overlapping the image below) --&gt;
+            &lt;div class=&quot;absolute right-[150px] top-[140px] w-[400px] bg-[#1a1a1a] border border-white/10 p-10 shadow-2xl z-20&quot;&gt;
+                &lt;h3 class=&quot;text-primary text-xl font-serif-display mb-6&quot;&gt;Start a Project&lt;/h3&gt;
+                &lt;div class=&quot;flex flex-col gap-4&quot;&gt;
+                    &lt;div class=&quot;flex items-center gap-4 text-gray-400 text-sm&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-location-dot text-cardTitle w-5&quot;&gt;&lt;/i&gt;
+                        &lt;span&gt;123 Design Avenue, New York, NY&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;flex items-center gap-4 text-gray-400 text-sm&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-envelope text-cardTitle w-5&quot;&gt;&lt;/i&gt;
+                        &lt;span&gt;hello@ingoude.com&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;flex items-center gap-4 text-gray-400 text-sm&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-phone text-cardTitle w-5&quot;&gt;&lt;/i&gt;
+                        &lt;span&gt;+1 (555) 019-2834&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;mt-8 pt-6 border-t border-white/10 flex justify-between items-center&quot;&gt;
+                    &lt;span class=&quot;text-xs text-gray-500 uppercase tracking-widest&quot;&gt;Connect&lt;/span&gt;
+                    &lt;div class=&quot;flex gap-4 text-primary&quot;&gt;
+                        &lt;i class=&quot;fa-brands fa-instagram hover:text-cardBg cursor-pointer&quot;&gt;&lt;/i&gt;
+                        &lt;i class=&quot;fa-brands fa-twitter hover:text-cardBg cursor-pointer&quot;&gt;&lt;/i&gt;
+                        &lt;i class=&quot;fa-brands fa-linkedin-in hover:text-cardBg cursor-pointer&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Lower Half: Cinematic Image Strip --&gt;
+        &lt;div class=&quot;absolute bottom-0 left-0 w-full h-[45%] z-0&quot;&gt;
+            &lt;!-- Gradient Overlay for smooth transition --&gt;
+            &lt;div class=&quot;absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-black to-transparent z-10&quot;&gt;&lt;/div&gt;
+            
+            &lt;img src=&quot;https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&amp;w=1200&amp;auto=format&amp;fit=crop&quot; 
+                 alt=&quot;Modern Office Wide&quot; 
+                 class=&quot;w-full h-full object-cover grayscale-[50%] brightness-75&quot;&gt;
+            
+            &lt;!-- Footer Info overlay on image --&gt;
+            &lt;div class=&quot;absolute bottom-10 left-16 z-20&quot;&gt;
+                &lt;p class=&quot;text-white/60 text-[10px] tracking-widest uppercase&quot;&gt;
+                    &amp;copy; 2026 Ingoude Company. All Rights Reserved.
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <script>
+   // 自动调整iframe高度
+    function resizeIframes() {
+        document.querySelectorAll('.responsive-iframe').forEach(iframe => {
+            try {
+                const doc = iframe.contentDocument || iframe.contentWindow.document;
+                const height = Math.max(
+                    doc.body.scrollHeight,
+                    doc.documentElement.scrollHeight,
+                    doc.body.offsetHeight,
+                    doc.documentElement.offsetHeight,
+                    doc.body.clientHeight,
+                    doc.documentElement.clientHeight
+                );
+                iframe.style.height = height + 'px';
+            } catch (e) {
+                console.log('无法调整iframe高度:', e);
+            }
+        });
+    }
+    
+    // 初始调整
+    window.addEventListener('load', resizeIframes);
+    
+    // 内容加载后调整
+    document.querySelectorAll('.responsive-iframe').forEach(iframe => {
+        iframe.addEventListener('load', function() {
+            resizeIframes();
+            // 对动态内容进行定期检查
+            setInterval(resizeIframes, 1000);
+        });
+    });
+  </script>
+ </body>
+</html>

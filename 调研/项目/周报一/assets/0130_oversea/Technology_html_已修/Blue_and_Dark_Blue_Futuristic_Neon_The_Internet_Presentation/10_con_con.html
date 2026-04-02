@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenges Facing The Internet - Tech Keynote</title>
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        ::-webkit-scrollbar { display: none; }
+        
+        .main-container {
+            width: 1280px; height: 720px; background-color: #040E26;
+            margin: 0 auto; position: relative; overflow: hidden;
+            font-family: "Noto Sans SC", sans-serif; color: #E0E6ED;
+        }
+
+        .title-gradient {
+            background: linear-gradient(180deg, #FFFFFF 0%, #AEEFFF 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+
+        .logo-ring { animation: spin 10s linear infinite; }
+        @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+        .clip-octagon {
+            clip-path: polygon(15% 0, 85% 0, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0 85%, 0 15%);
+        }
+
+        /* 引导线动画 */
+        .scan-line {
+            width: 100%; height: 1px;
+            background: linear-gradient(90deg, transparent, #5CC2D0, transparent);
+            position: absolute; left: 0;
+            animation: scan 4s ease-in-out infinite;
+        }
+        @keyframes scan { 0%, 100% { top: 10%; opacity: 0; } 50% { top: 90%; opacity: 1; } }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="absolute inset-0 opacity-10" style="background-image: linear-gradient(#1C2B4A 1px, transparent 1px), linear-gradient(90deg, #1C2B4A 1px, transparent 1px); background-size: 50px 50px;"></div>
+        
+        <div class="relative w-full h-full p-16 flex flex-col z-10">
+            <header class="w-full flex justify-between items-start mb-8">
+                <div class="flex flex-col">
+                    <h1 class="text-7xl font-black italic uppercase leading-none tracking-tighter title-gradient">
+                        INTERNET<br>CHALLENGES
+                    </h1>
+                    <div class="flex items-center gap-4 mt-4">
+                        <div class="h-1.5 w-32 bg-[#5CC2D0] shadow-[0_0_15px_#5CC2D0]"></div>
+                        <span class="text-[10px] font-mono text-[#5CC2D0]/60 tracking-[0.4em]">ANALYSIS_REPORT_2026</span>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <div class="relative w-16 h-16 flex items-center justify-center">
+                        <div class="logo-ring absolute inset-0 border border-dashed border-[#5CC2D0]/40 rounded-full"></div>
+                        <div class="w-10 h-10 bg-[#040E26] border border-[#5CC2D0] flex items-center justify-center rounded">
+                            <i class="fa-solid fa-cube text-[#5CC2D0] text-xl"></i>
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-white font-black tracking-widest text-base uppercase">GIGGLING PLATYPUS</span>
+                        <span class="text-[#5CC2D0] font-bold text-[10px] uppercase tracking-[0.3em] opacity-80 border-t border-[#5CC2D0]/30 pt-1">Tech Industries</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="flex-1 grid grid-cols-12 gap-10 overflow-hidden">
+                
+                <div class="col-span-8 flex flex-col gap-8 py-4 border-l border-[#1C2B4A] pl-10 relative">
+                    <div class="scan-line"></div>
+                    
+                    <div class="grid grid-cols-3 gap-8">
+                        <div class="space-y-4">
+                            <h3 class="text-[#AEEFFF] font-bold text-lg uppercase flex items-center gap-2">
+                                <i class="fas fa-network-wired text-[#5CC2D0] text-sm"></i> Divide
+                            </h3>
+                            <p class="text-xs leading-relaxed opacity-70 text-justify">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.  Tempus leo eu aenean sed diam urna tempor.
+                            </p>
+                        </div>
+                        <div class="space-y-4 border-l border-[#1C2B4A] pl-8">
+                            <h3 class="text-[#AEEFFF] font-bold text-lg uppercase flex items-center gap-2">
+                                <i class="fas fa-user-shield text-[#5CC2D0] text-sm"></i> Privacy
+                            </h3>
+                            <p class="text-xs leading-relaxed opacity-70 text-justify">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.  Tempus leo eu aenean sed diam urna tempor.
+                            </p>
+                        </div>
+                        <div class="space-y-4 border-l border-[#1C2B4A] pl-8">
+                            <h3 class="text-[#AEEFFF] font-bold text-lg uppercase flex items-center gap-2">
+                                <i class="fas fa-balance-scale text-[#5CC2D0] text-sm"></i> Regulation
+                            </h3>
+                            <p class="text-xs leading-relaxed opacity-70 text-justify">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.  Tempus leo eu aenean sed diam urna tempor.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex-1 bg-[#0A1633]/40 border border-[#1C2B4A] rounded-xl p-6 flex flex-col relative overflow-hidden">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-[10px] font-mono text-[#5CC2D0]">METRIC_VISUALIZATION: ACCESS_GAP</span>
+                            <div class="flex gap-1">
+                                <div class="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                                <div class="w-1.5 h-1.5 bg-[#1C2B4A] rounded-full"></div>
+                            </div>
+                        </div>
+                        <div id="barChart" class="w-full h-full"></div>
+                    </div>
+                </div>
+
+                <div class="col-span-4 flex flex-col gap-6">
+                    <div class="w-full h-72 clip-octagon bg-[#1C2B4A]/50 p-1 relative group">
+                        <div class="w-full h-full bg-[#040E26] clip-octagon overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1622979135225-d2ba269fb1bd?q=80&w=800" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-1000">
+                        </div>
+                        <div class="absolute inset-0 border border-dashed border-[#5CC2D0]/20 clip-octagon animate-[spin_20s_linear_infinite]"></div>
+                    </div>
+                    
+                    <div class="mt-auto space-y-4">
+                        <div class="bg-[#0A1633] p-4 border-l-2 border-[#5CC2D0] rounded">
+                            <div class="text-[10px] font-mono text-[#5CC2D0]/60 mb-1">SYSTEM_STATUS</div>
+                            <div class="text-xs font-bold tracking-widest">ENCRYPTION: VERIFIED</div>
+                        </div>
+                        <p class="text-[10px] opacity-40 font-mono text-right uppercase">Data node: 0xff-00912<br>Timeframe: Q1-Q4 2026</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var chartDom = document.getElementById('barChart');
+            var myChart = echarts.init(chartDom, 'dark');
+            
+            var option = {
+                backgroundColor: 'transparent',
+                grid: { top: '15%', left: '5%', right: '5%', bottom: '15%', containLabel: true },
+                xAxis: {
+                    type: 'category',
+                    data: ['Global', 'Urban', 'Rural', 'Latency', 'Uptime'],
+                    axisLine: { lineStyle: { color: '#1C2B4A' } },
+                    axisLabel: { color: '#ADD8E6', fontSize: 10, fontWeight: 'bold' }
+                },
+                yAxis: {
+                    type: 'value',
+                    splitLine: { lineStyle: { color: '#1C2B4A', type: 'dashed' } },
+                    axisLabel: { show: false }
+                },
+                series: [{
+                    data: [120, 210, 150, 80, 240],
+                    type: 'bar',
+                    barWidth: '35%',
+                    label: {
+                        show: true,
+                        position: 'top',
+                        color: '#5CC2D0',
+                        fontSize: 10,
+                        fontWeight: 'bold',
+                        formatter: '{c}%'
+                    },
+                    itemStyle: {
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                            { offset: 0, color: '#5CC2D0' },
+                            { offset: 1, color: 'rgba(92, 194, 208, 0.1)' }
+                        ]),
+                        borderRadius: [4, 4, 0, 0]
+                    },
+                    emphasis: {
+                        itemStyle: { color: '#AEEFFF' }
+                    }
+                }]
+            };
+
+            myChart.setOption(option);
+            window.addEventListener('resize', function() { myChart.resize(); });
+        });
+    </script>
+</body>
+</html>

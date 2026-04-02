@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Larana Company - Market Insights</title>
+    
+    <!-- Import FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Import Google Fonts (Domestic CDN) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBlack: '#050505',
+                        softPink: '#F5C2D4',
+                        ambientPurple: '#1A1520',
+                        lightSilver: '#D1D1D1',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'Inter', 'sans-serif'],
+                    },
+                    spacing: {
+                        '720': '720px',
+                        '1280': '1280px',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Internal CSS for Reset and Specific Constraints -->
+    <style>
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container Definition */
+        .page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background-color: #050505;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Custom Utility for Glassmorphism */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .glass-card-heavy {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            border-left: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Container -->
+    <div class="page_container">
+
+        <!-- Background Decor: Ambient Lighting -->
+        <div class="absolute top-[-200px] right-[-100px] w-[800px] h-[800px] rounded-full opacity-30" 
+             style="background: radial-gradient(circle, #2d2436 0%, transparent 70%); pointer-events: none;"></div>
+        
+        <div class="absolute bottom-[-300px] left-[-100px] w-[1000px] h-[1000px] rounded-full opacity-20" 
+             style="background: radial-gradient(circle, #1A1520 0%, transparent 70%); pointer-events: none;"></div>
+
+        <!-- Header Section (Strictly Modified to Match Style) -->
+        <div class="relative w-full h-[80px] flex justify-between items-center px-12 pt-8 z-20">
+            
+            <!-- Logo Area -->
+            <div class="flex items-center gap-3">
+                <div class="text-softPink text-xl">
+                    <i class="fa-solid fa-shapes"></i>
+                </div>
+                <h4 class="text-white text-lg font-medium tracking-wide">Larana Company</h4>
+            </div>
+
+            <!-- Top Right Capsule Navigation -->
+            <div class="flex items-center rounded-full glass-panel pl-1 pr-6 py-1 gap-6">
+                <!-- Pink Highlight Pill -->
+                <div class="bg-softPink rounded-full px-6 py-2">
+                    <h5 class="text-deepBlack text-sm font-bold tracking-tight">Pitch Deck Business Presentation</h5>
+                </div>
+                <!-- Date -->
+                <h6 class="text-lightSilver text-sm font-light tracking-widest">August 2025</h6>
+            </div>
+        </div>
+
+        <!-- Main Content Grid (Original Layout Preserved) -->
+        <div class="relative w-full h-full grid grid-cols-12 gap-8 px-12 pt-16 pb-12 items-center z-10">
+
+            <!-- Left Column: Imagery & Data (Spans 5 cols) -->
+            <div class="col-span-5 relative h-[500px]">
+                
+                <!-- Main Image -->
+                <div class="absolute top-0 left-0 w-[420px] h-[380px] rounded-[32px] overflow-hidden shadow-2xl border border-white/10 z-10">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop" 
+                         alt="Business Analysis" 
+                         class="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-700">
+                </div>
+
+                <!-- Floating Stats Card (Glassmorphism) -->
+                <div class="absolute bottom-4 right-0 w-[300px] h-[220px] glass-card-heavy rounded-[24px] p-8 flex flex-col justify-center z-20">
+                    <h2 class="text-white text-7xl font-bold tracking-tighter mb-2">60<span class="text-4xl align-top ml-1">%</span></h2>
+                    <p class="text-white font-medium text-lg leading-tight">
+                        of buyers prioritize <br/> authentic content.
+                    </p>
+                </div>
+
+                <!-- Decorative Background Blob behind images -->
+                <div class="absolute top-20 right-10 w-64 h-64 bg-softPink opacity-5 rounded-full blur-3xl -z-0"></div>
+            </div>
+
+            <!-- Center Column: Visual Connector (Spans 2 cols) -->
+            <div class="col-span-2 flex justify-center items-center h-[500px] relative">
+                <!-- Floating Icon Box -->
+                <div class="w-24 h-24 bg-softPink rounded-3xl flex items-center justify-center shadow-[0_0_50px_rgba(245,194,212,0.3)] z-30 transform -rotate-6">
+                    <i class="fa-solid fa-star text-4xl text-deepBlack"></i>
+                </div>
+                
+                <!-- Connecting Line (Visual Aid) -->
+                 <div class="absolute w-[1px] h-full bg-gradient-to-b from-transparent via-white/10 to-transparent left-1/2 -z-10"></div>
+            </div>
+
+            <!-- Right Column: Typography (Spans 5 cols) -->
+            <div class="col-span-5 flex flex-col justify-between h-[420px] py-4 pl-4">
+                
+                <!-- Headline -->
+                <div class="flex flex-col">
+                    <h1 class="text-white text-[90px] font-light leading-[0.9] tracking-tight mb-2">
+                        Market <br/>
+                        <span class="font-bold">Insights</span>
+                    </h1>
+                </div>
+
+                <!-- Description Text -->
+                <div class="flex flex-col gap-6 pl-6 border-l border-white/20 ml-2">
+                    <p class="text-lightSilver text-base leading-relaxed font-light opacity-90">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl eu sem tristique, sit amet convallis ex aliquam. Maecenas varius lectus hendrerit augue blandit, ut posuere erat aliquam.
+                    </p>
+                    <p class="text-lightSilver text-base leading-relaxed font-light opacity-90">
+                        Praesent auctor tellus eget nisl blandit, at varius purus elementum. Suspendisse potenti.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operational Highlights - Salford & Co</title>
+    
+    <!-- 1. FontAwesome Icons -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- 2. Tailwind CSS (CDN) -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- 3. Google Fonts via Baidu CDN (Required) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- Tailwind Config for Brand Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            primary: '#D97036', // Orange
+                            bg: '#F9F9FB',      // Page Background
+                            neutral: '#EBEBEB', // Card Background
+                            text: '#000000',    // Headings
+                            body: '#333333',    // Body text
+                            deco: '#E8C9BC'     // Lines
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Global Layout */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container Styles */
+        .page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #F9F9FB; /* Global Background */
+            overflow: hidden; /* Ensure content fits */
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Decorative Background Shapes */
+        .deco-circle {
+            position: absolute;
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        /* Abstract Line Art (Bottom Left) */
+        .wave-lines {
+            position: absolute;
+            bottom: -50px;
+            left: -50px;
+            width: 300px;
+            height: 300px;
+            border: 1px solid #E8C9BC;
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            opacity: 0.5;
+            animation: none; /* No animation allowed */
+        }
+        .wave-lines::before {
+            content: '';
+            position: absolute;
+            top: 20px; left: 20px; right: 20px; bottom: 20px;
+            border: 1px solid #E8C9BC;
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div class="page_container">
+
+        <!-- Decorative Elements (Z-Index 0) -->
+        <div class="wave-lines"></div>
+        <div class="deco-circle" style="top: -100px; right: -50px; width: 300px; height: 300px; background: radial-gradient(circle, #E8C9BC 0%, transparent 70%); opacity: 0.2;"></div>
+
+        <!-- Header Section -->
+        <header class="relative z-10 flex justify-between items-center px-12 pt-10">
+            <!-- Logo Area -->
+            <div class="flex items-center gap-4">
+                <!-- Logo Icon -->
+                <div class="w-10 h-10 bg-brand-primary rounded flex items-center justify-center shadow-md">
+                    <i class="fa-solid fa-lightbulb text-white text-lg"></i>
+                </div>
+                <!-- Company Name -->
+                <h2 class="text-xl font-bold text-brand-text tracking-wide">Salford & Co</h2>
+            </div>
+            <!-- Page Number -->
+            <div class="text-brand-body text-lg font-medium opacity-60">
+                07/12
+            </div>
+        </header>
+
+        <!-- Main Content Grid -->
+        <main class="relative z-10 grid grid-cols-12 gap-8 px-12 h-full content-center" style="height: calc(720px - 80px);">
+            
+            <!-- Left Column: Title & Intro (Span 4) -->
+            <div class="col-span-4 flex flex-col justify-center pr-4">
+                <h1 class="text-6xl font-bold text-brand-text leading-tight mb-8">
+                    Operational <br>
+                    <span class="text-brand-primary">Highlights</span>
+                </h1>
+                
+                <div class="w-16 h-1 bg-brand-primary mb-8 rounded-full"></div>
+
+                <p class="text-brand-body text-lg leading-relaxed">
+                    Our operational capabilities underwent substantial enhancements in 2024, with an emphasis on scalability and efficiency.
+                </p>
+            </div>
+
+            <!-- Center Column: The Visual Anchor / Timeline (Span 2) -->
+            <div class="col-span-2 flex justify-center items-center h-full pb-10">
+                <!-- The Orange Pill -->
+                <div class="w-24 bg-brand-primary rounded-full shadow-2xl flex flex-col justify-between items-center py-12 h-[480px]">
+                    
+                    <!-- Icon 1: Truck -->
+                    <div class="flex flex-col items-center">
+                        <i class="fa-solid fa-truck-fast text-white text-3xl mb-2"></i>
+                    </div>
+
+                    <!-- Divider Line -->
+                    <div class="w-[1px] h-12 bg-white opacity-30"></div>
+
+                    <!-- Icon 2: Warehouse -->
+                    <div class="flex flex-col items-center">
+                        <i class="fa-solid fa-warehouse text-white text-3xl mb-2"></i>
+                    </div>
+
+                    <!-- Divider Line -->
+                    <div class="w-[1px] h-12 bg-white opacity-30"></div>
+
+                    <!-- Icon 3: Tech -->
+                    <div class="flex flex-col items-center">
+                        <i class="fa-solid fa-microchip text-white text-3xl mb-2"></i>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Right Column: Details List (Span 6) -->
+            <div class="col-span-6 flex flex-col justify-between h-[480px] py-2">
+                
+                <!-- Item 1: Fleet -->
+                <div class="flex flex-col justify-center h-1/3 pl-4">
+                    <div class="bg-brand-neutral p-6 rounded-xl border-l-4 border-brand-primary h-[90%] flex flex-col justify-center shadow-sm">
+                        <h3 class="text-xl font-bold text-brand-text mb-2">Fleet Modernization</h3>
+                        <p class="text-brand-body text-sm leading-relaxed">
+                            Invested $50 million in the upgrade of our vehicle fleet to improve delivery pace and reduce fuel consumption.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 2: Warehouse -->
+                <div class="flex flex-col justify-center h-1/3 pl-4">
+                    <div class="bg-brand-neutral p-6 rounded-xl border-l-4 border-brand-primary h-[90%] flex flex-col justify-center shadow-sm">
+                        <h3 class="text-xl font-bold text-brand-text mb-2">Warehouse Automation</h3>
+                        <p class="text-brand-body text-sm leading-relaxed">
+                            Implemented automated sorting and packing systems in our primary centers, resulting in a 25% increase in throughput.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 3: Digital -->
+                <div class="flex flex-col justify-center h-1/3 pl-4">
+                    <div class="bg-brand-neutral p-6 rounded-xl border-l-4 border-brand-primary h-[90%] flex flex-col justify-center shadow-sm">
+                        <h3 class="text-xl font-bold text-brand-text mb-2">Digital Transformation</h3>
+                        <p class="text-brand-body text-sm leading-relaxed">
+                            Implemented a customer portal that provides real-time tracking capabilities, allowing clients to monitor shipments with improved visibility.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>

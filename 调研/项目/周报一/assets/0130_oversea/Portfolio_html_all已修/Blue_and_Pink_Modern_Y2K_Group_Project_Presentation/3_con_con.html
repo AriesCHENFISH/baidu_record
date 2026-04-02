@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Members - Premium Y2K</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --y2k-pink: #E685B5; --y2k-blue: #5E7CB3; --y2k-yellow: #F2E96B; --y2k-dark: #1B2A59; }
+        body { font-family: 'Space+Grotesk', sans-serif; }
+        .font-sync { font-family: 'Syncopate', sans-serif; }
+        .bg-grid-pattern { background-size: 50px 50px; background-image: linear-gradient(to right, rgba(255, 255, 255, 0.15) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 1px, transparent 1px); }
+        .paper-overlay { background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"); opacity: 0.05; pointer-events: none; }
+        .shadow-y2k { box-shadow: 8px 8px 0px var(--y2k-dark); }
+        .shadow-y2k-pink { box-shadow: 8px 8px 0px var(--y2k-pink); }
+        .glass-card { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(10px); border: 2px solid rgba(255, 255, 255, 0.5); }
+        @keyframes float { 0% { transform: translateY(0px) rotate(var(--tw-rotate)); } 50% { transform: translateY(-10px) rotate(var(--tw-rotate)); } 100% { transform: translateY(0px) rotate(var(--tw-rotate)); } }
+        .animate-float { animation: float 3s ease-in-out infinite; }
+    </style>
+</head>
+<body>
+    <div id="page_container" class="relative overflow-hidden mx-auto" style="width: 1280px; height: 720px;">
+        <div class="absolute top-0 left-0 w-full h-1/2 bg-[#5E7CB3] z-0"></div>
+        <div class="absolute bottom-0 left-0 w-full h-1/2 bg-[#E685B5] bg-grid-pattern z-0"></div>
+        <div class="absolute inset-0 paper-overlay z-10"></div>
+
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[52%] w-[92%] h-[80%] glass-card rounded-2xl shadow-y2k z-20 flex flex-col p-10 border-4 border-white">
+            <div class="flex justify-between items-end mb-8">
+                <div class="bg-[#1B2A59] px-10 py-4 transform -rotate-1 shadow-y2k-pink">
+                    <h1 class="text-white text-5xl font-sync font-bold tracking-tighter">PHASE_04 <span class="text-[#F2E96B]">TEAM</span></h1>
+                </div>
+                <div class="text-[#1B2A59] font-bold">Total Members: 04</div>
+            </div>
+
+            <div class="flex flex-row gap-8 flex-1">
+                <div class="flex-1 grid grid-cols-2 gap-4">
+                    <div class="bg-white p-4 border-2 border-[#1B2A59] flex items-center gap-4 shadow-y2k">
+                        <div class="w-16 h-16 bg-[#E685B5] border-2 border-[#1B2A59] flex items-center justify-center text-white text-3xl">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-[#1B2A59]">Alex_Chen</h3>
+                            <p class="text-sm opacity-60">Lead Architect</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 border-2 border-[#1B2A59] flex items-center gap-4 shadow-y2k">
+                        <div class="w-16 h-16 bg-[#5E7CB3] border-2 border-[#1B2A59] flex items-center justify-center text-white text-3xl">
+                            <i class="fa-solid fa-ghost"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-[#1B2A59]">Sarah_J</h3>
+                            <p class="text-sm opacity-60">Visual Designer</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 border-2 border-[#1B2A59] flex items-center gap-4 shadow-y2k">
+                        <div class="w-16 h-16 bg-[#F2E96B] border-2 border-[#1B2A59] flex items-center justify-center text-[#1B2A59] text-3xl">
+                            <i class="fa-solid fa-user-astronaut"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-[#1B2A59]">Mike_R</h3>
+                            <p class="text-sm opacity-60">Backend Eng.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 border-2 border-[#1B2A59] flex items-center gap-4 shadow-y2k">
+                        <div class="w-16 h-16 bg-[#1B2A59] border-2 border-[#1B2A59] flex items-center justify-center text-white text-3xl">
+                            <i class="fa-solid fa-gamepad"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-[#1B2A59]">Kenji_T</h3>
+                            <p class="text-sm opacity-60">Interaction Dev</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-[400px] bg-[#1B2A59] rounded-xl p-6 flex flex-col items-center justify-center relative shadow-y2k-pink">
+                    <div class="text-[#F2E96B] font-mono text-xs mb-4 uppercase tracking-widest animate-pulse underline">Network_Sync_Status</div>
+                    <div class="relative w-48 h-48 border-2 border-[#5E7CB3] rounded-full flex items-center justify-center">
+                        <div class="absolute inset-0 border border-dashed border-white/20 rounded-full animate-spin" style="animation-duration: 10s;"></div>
+                        <div class="w-32 h-32 bg-[#E685B5]/20 rounded-full border border-[#E685B5] flex items-center justify-center">
+                            <i class="fa-solid fa-users-rays text-white text-5xl"></i>
+                        </div>
+                        <div class="absolute top-0 bg-[#F2E96B] w-2 h-2 rounded-full shadow-[0_0_10px_#F2E96B]"></div>
+                    </div>
+                    <div class="mt-6 w-full space-y-2">
+                        <div class="flex justify-between text-[10px] text-white/60 font-mono italic"><span>COLLABORATION_INDEX</span><span>9.8/10</span></div>
+                        <div class="w-full h-1 bg-white/20"><div class="h-full bg-[#F2E96B]" style="width: 98%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 w-[90%] z-30">
+            <div class="bg-[#1B2A59] h-16 rounded-xl flex items-center justify-between px-8 shadow-y2k border-2 border-white/30">
+                <div class="flex items-center space-x-4">
+                    <div class="flex space-x-1"><div class="w-3 h-3 bg-[#E685B5] rounded-full"></div><div class="w-3 h-3 bg-[#F2E96B] rounded-full"></div><div class="w-3 h-3 bg-[#5E7CB3] rounded-full"></div></div>
+                    <span class="text-white/60 font-mono text-xs uppercase tracking-[0.3em]">Directory: root/project_v1</span>
+                </div>
+                <h4 class="text-white font-bold text-lg tracking-widest uppercase italic">NEXT: PROJECT_TIMELINE <i class="fa-solid fa-chevron-right ml-2 animate-pulse"></i></h4>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

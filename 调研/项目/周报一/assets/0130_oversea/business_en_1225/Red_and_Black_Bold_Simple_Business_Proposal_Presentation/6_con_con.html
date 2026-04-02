@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Proposal - Cinematic Keynote</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts (Baidu CDN per requirement) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- Custom Theme Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            black: '#000000',
+                            white: '#FFFFFF',
+                            red: '#8B1C1C',     /* Accent Color */
+                            gray: '#DCDCDC',    /* Secondary Color */
+                            brown: '#8B4513',   /* Highlight Color */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                        display: ['Impact', 'Arial Black', 'sans-serif'] // Fallback for massive titles
+                    },
+                    spacing: {
+                        '1280': '1280px',
+                        '720': '720px',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Structure Rules */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* Page Container */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #000000;
+            overflow: hidden;
+        }
+
+        /* Custom Utilities */
+        .text-stroke-red {
+            -webkit-text-stroke: 2px #8B1C1C;
+            color: transparent;
+        }
+        
+        .text-stroke-white {
+            -webkit-text-stroke: 1px rgba(255,255,255,0.3);
+            color: transparent;
+        }
+
+        /* Gradient Overlay Utility */
+        .bg-overlay-gradient {
+            background: linear-gradient(90deg, #000000 0%, #000000 40%, rgba(0,0,0,0.4) 100%);
+        }
+
+        .card-backdrop {
+            background: rgba(20, 20, 20, 0.8);
+            border: 1px solid rgba(220, 220, 220, 0.2); /* Secondary Color with opacity */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div id="page_container">
+        
+        <!-- Background Image Layer -->
+        <div class="absolute inset-0 z-0">
+            <!-- Utilizing a moody red cinema seat background to match the "Experiences" vibe -->
+            <img src="https://images.unsplash.com/photo-1517604931442-710c8ef5ad25?q=80&w=2560&auto=format&fit=crop" 
+                 class="w-full h-full object-cover opacity-60" 
+                 alt="Cinema Seats Background">
+            <!-- 1280*720 -->
+        </div>
+
+        <!-- Gradient Overlay for Readability -->
+        <div class="absolute inset-0 z-10 bg-overlay-gradient"></div>
+
+        <!-- Content Grid -->
+        <div class="relative z-20 w-full h-full grid grid-cols-12 gap-8 p-16 items-center">
+            
+            <!-- Left Column: Information Cards (Span 5 cols) -->
+            <div class="col-span-5 flex flex-col gap-5 h-full justify-center">
+                
+                <!-- Card 1 -->
+                <div class="card-backdrop rounded-lg p-5 border-l-4 border-l-brand-red shadow-lg transform transition-transform">
+                    <div class="flex items-start gap-4">
+                        <div class="text-brand-red mt-1">
+                            <i class="fas fa-file-signature text-xl"></i>
+                        </div>
+                        <p class="text-brand-gray text-sm leading-relaxed font-light">
+                            A business proposal is a detailed document that outlines a company's plan to offer its products or services to potential clients or partners.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card-backdrop rounded-lg p-5 border-l-4 border-l-brand-brown shadow-lg">
+                    <div class="flex items-start gap-4">
+                        <div class="text-brand-brown mt-1">
+                            <i class="fas fa-bullseye text-xl"></i>
+                        </div>
+                        <p class="text-brand-gray text-sm leading-relaxed font-light">
+                            A business proposal is a detailed document that outlines a company's plan to offer its products or services to potential clients or partners.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card-backdrop rounded-lg p-5 border-l-4 border-l-brand-red shadow-lg">
+                    <div class="flex items-start gap-4">
+                        <div class="text-brand-red mt-1">
+                            <i class="fas fa-handshake text-xl"></i>
+                        </div>
+                        <p class="text-brand-gray text-sm leading-relaxed font-light">
+                            A business proposal is a detailed document that outlines a company's plan to offer its products or services to potential clients or partners.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="card-backdrop rounded-lg p-5 border-l-4 border-l-brand-brown shadow-lg">
+                    <div class="flex items-start gap-4">
+                        <div class="text-brand-brown mt-1">
+                            <i class="fas fa-chart-line text-xl"></i>
+                        </div>
+                        <p class="text-brand-gray text-sm leading-relaxed font-light">
+                            A business proposal is a detailed document that outlines a company's plan to offer its products or services to potential clients or partners.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Divider / Vertical Text Column (Span 1 col) -->
+            <div class="col-span-1 h-full flex flex-col items-center justify-center relative">
+                <!-- Vertical Line Top -->
+                <div class="w-px h-32 bg-brand-gray opacity-30 mb-4"></div>
+                
+                <!-- Rotated Text Container -->
+                <div class="transform -rotate-90 whitespace-nowrap">
+                    <div class="border border-brand-red rounded-full px-6 py-2 bg-black bg-opacity-50 backdrop-blur-sm">
+                        <p class="text-brand-white text-xs tracking-[0.2em] font-bold uppercase">
+                            Business Proposal
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Vertical Line Bottom -->
+                <div class="w-px h-32 bg-brand-gray opacity-30 mt-4"></div>
+            </div>
+
+            <!-- Right Column: Massive Title (Span 6 cols) -->
+            <div class="col-span-6 flex flex-col justify-center items-end text-right h-full">
+                
+                <!-- "OUR" - Outlined/Stroke Style -->
+                <div class="mb-[-20px] relative z-10">
+                    <h2 class="text-[120px] font-black leading-none italic uppercase text-stroke-red font-display tracking-tighter">
+                        OUR
+                    </h2>
+                </div>
+
+                <!-- "EXPERIENCES" - Solid White, Split for Impact -->
+                <div class="relative z-0">
+                    <h1 class="text-[140px] font-black text-brand-white leading-[0.85] uppercase tracking-tighter drop-shadow-2xl font-display">
+                        EXPERI<br>ENCES
+                    </h1>
+                </div>
+
+                <!-- Decorative Element -->
+                <div class="mt-8 flex items-center gap-4">
+                    <div class="h-1 w-24 bg-brand-red"></div>
+                    <p class="text-brand-gray text-lg tracking-widest font-light uppercase">
+                        Studio Showcase
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Decorative Corner Accent (Bottom Left) -->
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-brand-red opacity-10 rounded-tr-full blur-3xl pointer-events-none"></div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - Luxury Perfume Collection</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts CDN (Domestic Mirror) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        /* CSS Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* Page Container Configuration */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #F3F3F3; /* Global Background Color */
+            overflow: hidden;
+        }
+
+        /* Custom Scrollbar hide just in case content slightly overflows in edit mode */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Utility for vertical text */
+        .vertical-text {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+        }
+
+        /* Soft Gradient Background Shape */
+        .bg-shape {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: 0;
+        }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4A3520',
+                        bgLight: '#F3F3F3',
+                        cardBg: '#FFFFFF',
+                        textBody: '#5C5248',
+                        accentStart: '#8B6D51',
+                        accentEnd: '#B09276',
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(74, 53, 32, 0.08)',
+                        'card': '0 4px 20px rgba(0, 0, 0, 0.03)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <!-- Decorative Background Elements (Lighting effects) -->
+        <!-- Top Left Light Source -->
+        <div class="bg-shape w-[600px] h-[600px] bg-white opacity-60 -top-[200px] -left-[200px]"></div>
+        <!-- Bottom Right Subtle Earth Tone -->
+        <div class="bg-shape w-[500px] h-[500px] bg-[#E5E0DB] opacity-50 -bottom-[150px] -right-[100px]"></div>
+
+        <!-- Main Grid Layout -->
+        <div class="relative z-10 grid grid-cols-12 h-full w-full">
+            
+            <!-- Left Column: Title Area (approx 15%) -->
+            <div class="col-span-2 flex flex-col justify-center items-center h-full relative">
+                <!-- Vertical Title -->
+                <h1 class="vertical-text text-primary text-[80px] font-bold tracking-wider opacity-90 leading-none select-none">
+                    Our Products
+                </h1>
+                <!-- Decorative Line -->
+                <div class="absolute right-0 top-1/2 transform -translate-y-1/2 w-[1px] h-[60%] bg-gradient-to-b from-transparent via-[#4A3520] to-transparent opacity-20"></div>
+            </div>
+
+            <!-- Right Column: Content Cards (approx 85%) -->
+            <div class="col-span-10 flex flex-col justify-center px-12 gap-6 h-full">
+
+                <!-- Card 1: Men's Perfume -->
+                <div class="bg-cardBg rounded-[24px] p-5 flex items-center gap-8 shadow-card border border-white/50 relative overflow-hidden group">
+                    <!-- Accent Bar -->
+                    <div class="absolute left-0 top-6 bottom-6 w-1 bg-primary rounded-r-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    
+                    <!-- Image Area -->
+                    <div class="w-[140px] h-[140px] flex-shrink-0 relative rounded-2xl overflow-hidden shadow-inner bg-[#F0EFED]">
+                        <img src="https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?q=80&w=300&auto=format&fit=crop" 
+                             alt="Black Perfume Bottle" 
+                             class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500">
+                        <!-- 140*140 -->
+                    </div>
+
+                    <!-- Text Area -->
+                    <div class="flex-1 pr-4">
+                        <div class="flex items-center gap-3 mb-2">
+                            <h2 class="text-primary text-2xl font-bold tracking-tight">Men's Perfume</h2>
+                            <span class="text-xs font-semibold text-white bg-[#4A3520] px-2 py-0.5 rounded-full uppercase tracking-widest opacity-80">Classic</span>
+                        </div>
+                        <p class="text-textBody text-sm leading-6 font-normal text-justify">
+                            Indulge in the timeless charm of our Men's Perfume Collection, where strength meets sophistication. Each fragrance is meticulously crafted to embody the essence of masculinity, offering a symphony of invigorating notes that captivate the senses.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Women's Perfume -->
+                <div class="bg-cardBg rounded-[24px] p-5 flex items-center gap-8 shadow-card border border-white/50 relative overflow-hidden group">
+                     <!-- Accent Bar -->
+                     <div class="absolute left-0 top-6 bottom-6 w-1 bg-gradient-to-b from-[#8B6D51] to-[#B09276] rounded-r-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                    <!-- Image Area -->
+                    <div class="w-[140px] h-[140px] flex-shrink-0 relative rounded-2xl overflow-hidden shadow-inner bg-[#F0EFED]">
+                        <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=300&auto=format&fit=crop" 
+                             alt="Amber Perfume Bottle" 
+                             class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500">
+                        <!-- 140*140 -->
+                    </div>
+
+                    <!-- Text Area -->
+                    <div class="flex-1 pr-4">
+                        <div class="flex items-center gap-3 mb-2">
+                            <h2 class="text-primary text-2xl font-bold tracking-tight">Women's Perfume</h2>
+                            <span class="text-xs font-semibold text-white bg-gradient-to-r from-[#8B6D51] to-[#B09276] px-2 py-0.5 rounded-full uppercase tracking-widest">Elegant</span>
+                        </div>
+                        <p class="text-textBody text-sm leading-6 font-normal text-justify">
+                            Elevate your senses with our Women's Perfume Collection, a celebration of femininity and grace. Immerse yourself in a world of captivating aromas that reflect the multifaceted nature of women.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Unisex Perfume -->
+                <div class="bg-cardBg rounded-[24px] p-5 flex items-center gap-8 shadow-card border border-white/50 relative overflow-hidden group">
+                     <!-- Accent Bar -->
+                     <div class="absolute left-0 top-6 bottom-6 w-1 bg-[#A0A0A0] rounded-r-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                    <!-- Image Area -->
+                    <div class="w-[140px] h-[140px] flex-shrink-0 relative rounded-2xl overflow-hidden shadow-inner bg-[#F0EFED]">
+                        <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=300&auto=format&fit=crop" 
+                             alt="Clear Glass Perfume Bottle" 
+                             class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500">
+                        <!-- 140*140 -->
+                    </div>
+
+                    <!-- Text Area -->
+                    <div class="flex-1 pr-4">
+                        <div class="flex items-center gap-3 mb-2">
+                            <h2 class="text-primary text-2xl font-bold tracking-tight">Unisex Perfume</h2>
+                             <span class="text-xs font-semibold text-[#5C5248] border border-[#5C5248] px-2 py-0.5 rounded-full uppercase tracking-widest opacity-60">Shared</span>
+                        </div>
+                        <p class="text-textBody text-sm leading-6 font-normal text-justify">
+                            Discover the perfect harmony of scents in our Unisex Perfume Collection, where boundaries dissolve, and fragrance becomes a shared experience. Blurring the lines between traditional gender norms, our unisex perfumes offer a diverse range of captivating aromas that appeal to all.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Decorative Footer/Corner Element (Replacing the rock texture with a cleaner geometric hint of nature) -->
+        <div class="absolute bottom-0 right-0 w-[300px] h-[200px] overflow-hidden pointer-events-none rounded-tl-[100px]">
+             <!-- Using a gradient to simulate the 'rock' or natural texture in a modern abstract way -->
+            <div class="w-full h-full bg-gradient-to-br from-transparent to-[#D8D0C5] opacity-40"></div>
+        </div>
+
+    </div>
+
+</body>
+</html>

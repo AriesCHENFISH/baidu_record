@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech N' Bold - Text Layout</title>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        charcoal: '#111111',
+                        surface: '#1A1A1A',
+                        limeAcid: '#DFFF5E',
+                        silver: '#E0E0E0',
+                        dim: '#666666'
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                        mono: ['monospace'], // Added for technical details
+                    },
+                    spacing: {
+                        '18': '4.5rem',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Global Settings */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        /* Page Container */
+        .page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #111111;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Utilities */
+        .text-outline {
+            -webkit-text-stroke: 1px #DFFF5E; /* Lime stroke */
+            color: transparent;
+        }
+        
+        .acid-border {
+            border: 1px solid #DFFF5E;
+        }
+
+        /* Decorative Grid Background */
+        .texture-grid {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: 
+                linear-gradient(rgba(223, 255, 94, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(223, 255, 94, 0.05) 1px, transparent 1px);
+            background-size: 60px 60px;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Custom Scrollbar for text boxes if needed (hidden here) */
+        ::-webkit-scrollbar { width: 0px; }
+    </style>
+</head>
+<body>
+
+    <div class="page_container flex flex-col">
+        
+        <div class="texture-grid"></div>
+
+        <header class="relative z-20 flex justify-between items-start px-12 pt-10 mb-8">
+            <div class="flex gap-4">
+                <div class="acid-border rounded-full px-5 py-1.5 flex items-center gap-2 bg-charcoal">
+                    <i class="fa-solid fa-cube text-limeAcid text-sm"></i>
+                    <p class="text-silver text-sm font-bold tracking-widest uppercase">Overview</p>
+                </div>
+                <div class="acid-border rounded-full px-5 py-1.5 flex items-center bg-charcoal">
+                    <p class="text-silver text-sm font-bold tracking-widest uppercase">Project Alpha</p>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-limeAcid font-bold text-2xl tracking-tighter">2024</h3>
+            </div>
+        </header>
+
+        <main class="relative z-10 grid grid-cols-12 gap-8 px-12 h-full pb-12">
+            
+            <div class="col-span-5 flex flex-col justify-between h-full">
+                
+                <div class="mb-6">
+                    <h1 class="text-white font-black text-7xl uppercase leading-[0.85] tracking-tight mb-2">
+                        Tech N'<br>
+                        <span class="text-limeAcid">Bold Styles</span>
+                    </h1>
+                    <div class="w-16 h-2 bg-limeAcid mt-4"></div>
+                </div>
+
+                <div class="relative flex-grow border border-limeAcid p-6 bg-charcoal/80 flex flex-col justify-center group">
+                    <div class="absolute -top-1 -left-1 w-3 h-3 border-t-2 border-l-2 border-limeAcid"></div>
+                    <div class="absolute -bottom-1 -right-1 w-3 h-3 border-b-2 border-r-2 border-limeAcid"></div>
+                    
+                    <span class="font-mono text-limeAcid text-sm mb-3 block">/// 01. CORE CONCEPT</span>
+                    
+                    <h3 class="text-white font-bold text-2xl mb-4 leading-tight">
+                        Redefining the <br>Visual Language.
+                    </h3>
+                    
+                    <p class="text-silver text-sm leading-relaxed opacity-90">
+                        The acid graphics aesthetic prioritizes high contrast, experimental typography, and a rejection of traditional grid rigidity. This section explores how we integrate these chaotic elements into functional UI.
+                    </p>
+                    
+                    <div class="mt-6 flex justify-end">
+                         <i class="fa-solid fa-arrow-right-long text-limeAcid text-xl"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-span-7 h-full pl-4 pb-8">
+                
+                <div class="w-full h-full bg-surface relative p-10 flex flex-col">
+                    
+                    <div class="w-full flex justify-between items-center border-b border-dim pb-4 mb-6">
+                        <span class="font-mono text-dim text-sm tracking-widest">SYSTEM_ANALYSIS_V2.0</span>
+                        <div class="flex gap-1">
+                            <div class="w-2 h-2 rounded-full bg-dim"></div>
+                            <div class="w-2 h-2 rounded-full bg-dim"></div>
+                            <div class="w-2 h-2 rounded-full bg-limeAcid animate-pulse"></div>
+                        </div>
+                    </div>
+
+                    <div class="flex-grow overflow-hidden">
+                        <h4 class="text-white font-bold text-xl mb-6 flex items-center gap-3">
+                            <i class="fa-solid fa-list-check text-limeAcid text-sm"></i>
+                            Implementation Strategy
+                        </h4>
+
+                        <ul class="space-y-6">
+                            <li class="flex items-start gap-4">
+                                <span class="text-limeAcid font-mono font-bold mt-1">01</span>
+                                <div>
+                                    <h5 class="text-white font-bold text-sm uppercase mb-1">Grid Systems</h5>
+                                    <p class="text-gray-400 text-sm leading-relaxed">
+                                        While the aesthetic feels chaotic, the underlying structure relies on a strict 12-column grid to ensure readability across devices.
+                                    </p>
+                                </div>
+                            </li>
+                            
+                            <li class="flex items-start gap-4">
+                                <span class="text-limeAcid font-mono font-bold mt-1">02</span>
+                                <div>
+                                    <h5 class="text-white font-bold text-sm uppercase mb-1">Typography Hierarchy</h5>
+                                    <p class="text-gray-400 text-sm leading-relaxed">
+                                        Utilizing Noto Sans SC with variable weights ranging from 300 to 900. Heavy contrast between headings and body text is mandatory.
+                                    </p>
+                                </div>
+                            </li>
+
+                            <li class="flex items-start gap-4">
+                                <span class="text-limeAcid font-mono font-bold mt-1">03</span>
+                                <div>
+                                    <h5 class="text-white font-bold text-sm uppercase mb-1">Color Calibration</h5>
+                                    <p class="text-gray-400 text-sm leading-relaxed">
+                                        Primary Lime (#DFFF5E) used strictly for navigation and emphasis. Charcoal (#111111) serves as the infinite canvas.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-auto pt-6 border-t border-dim flex justify-between items-center font-mono text-[10px] text-gray-500">
+                        <span>DATA_ID: 884-XJ</span>
+                        <span>READ_ONLY_MODE</span>
+                    </div>
+
+                </div>
+            </div>
+
+        </main>
+
+
+    </div>
+
+</body>
+</html>

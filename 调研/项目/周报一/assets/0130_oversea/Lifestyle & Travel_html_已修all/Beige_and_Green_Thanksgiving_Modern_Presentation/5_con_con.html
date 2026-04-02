@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03 - Thanksgiving Parade</title>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- Google Fonts (Domestic Mirror as requested) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        /* CSS Reset & Global Settings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Font Family Definition */
+        .font-sans {
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Page Container - Strict Dimensions */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #6B722C; /* Primary Color */
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Custom Scrollbar hide just in case */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Utility for Grid Layout text columns */
+        .text-column-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem; /* 48px gap */
+            height: 100%;
+        }
+
+        /* Gradient overlay for depth (Subtle linear gradient as permitted) */
+        .bg-gradient-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #6B722C 0%, #5D3A1A 100%);
+            opacity: 0.4;
+            z-index: 0;
+        }
+        
+        /* Decorative Circle */
+        .decorative-circle {
+            position: absolute;
+            z-index: 10;
+            border-radius: 50%;
+            box-shadow: -20px 20px 60px rgba(0,0,0,0.25);
+        }
+
+        /* Typography Utilities */
+        h1, h2, h3, p, span {
+            color: #F2F2F2;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Container -->
+    <div id="page_container">
+        
+        <!-- Background Gradient Overlay for depth -->
+        <div class="bg-gradient-overlay"></div>
+
+        <!-- Decorative Background Element: Large faint number -->
+        <div class="absolute top-[-50px] left-[-20px] text-[300px] font-bold text-[#F2F2F2] opacity-5 select-none z-0 leading-none">
+            03
+        </div>
+
+        <!-- Main Layout Grid: Left Content (65%) | Right Visual (35%) -->
+        <div class="relative z-20 w-full h-full flex flex-row">
+            
+            <!-- Left Content Area -->
+            <div class="w-[68%] h-full flex flex-col justify-between pl-16 pr-8 py-16">
+                
+                <!-- Header Section -->
+                <div class="flex flex-col gap-6">
+                    <!-- Title -->
+                    <div class="flex items-center gap-4">
+                        <span class="text-[#EAD3B6] text-xl font-bold tracking-widest uppercase border-b-2 border-[#EAD3B6] pb-1">Chapter 03</span>
+                    </div>
+                    
+                    <h1 class="text-6xl font-light tracking-tight text-[#F2F2F2]">
+                        Thanksgiving <b class="font-bold">parade</b>
+                    </h1>
+
+                    <!-- Quote Block -->
+                    <div class="mt-4 relative">
+                        <i class="fa-solid fa-quote-left text-4xl text-[#899052] absolute -top-4 -left-8 opacity-50"></i>
+                        <h2 class="text-4xl italic font-light text-[#EAD3B6] leading-snug">
+                            “A unique and spectacular parade”
+                        </h2>
+                    </div>
+                </div>
+
+                <!-- Text Columns Section -->
+                <div class="flex flex-row w-full gap-8 border-t border-[#899052] pt-8 mt-4">
+                    
+                    <!-- Column 1 -->
+                    <div class="flex-1">
+                        <p class="text-[15px] text-[#F2F2F2] leading-7 font-light text-justify opacity-90">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        </p>
+                    </div>
+
+                    <!-- Vertical Divider (Visual only) -->
+                    <div class="w-[1px] bg-[#899052] h-auto opacity-60"></div>
+
+                    <!-- Column 2 -->
+                    <div class="flex-1">
+                        <p class="text-[15px] text-[#F2F2F2] leading-7 font-light text-justify opacity-90">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- Right Visual Area -->
+            <div class="w-[32%] h-full relative">
+                <!-- Circular Image Container overlapping the edge -->
+                <!-- Dimensions: Width 580px, Height 580px to create a large arc -->
+                <div class="decorative-circle absolute top-1/2 right-[-140px] transform -translate-y-1/2 w-[580px] h-[580px] bg-[#EAD3B6] border-[12px] border-[#899052] overflow-hidden flex items-center justify-center">
+                    
+                    <!-- Image Wrapper to ensure object-fit -->
+                    <div class="w-full h-full relative">
+                        <!-- Unsplash Image: Thanksgiving/Harvest Theme -->
+                        <img src="https://images.unsplash.com/photo-1510007823908-724d9c492160?q=80&w=1000&auto=format&fit=crop" 
+                             alt="Thanksgiving harvest table with pumpkin and pastries" 
+                             class="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-700 ease-in-out">
+                        <!-- 580*580 -->
+                        
+                        <!-- Inner Shadow Overlay for blending -->
+                        <div class="absolute inset-0 shadow-[inset_0_0_60px_rgba(107,114,44,0.4)] pointer-events-none"></div>
+                    </div>
+
+                </div>
+
+                <!-- Decorative Accent Dot -->
+                <div class="absolute bottom-12 left-12 w-16 h-16 rounded-full bg-[#5D3A1A] flex items-center justify-center shadow-lg z-30">
+                    <i class="fa-solid fa-utensils text-[#EAD3B6] text-xl"></i>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

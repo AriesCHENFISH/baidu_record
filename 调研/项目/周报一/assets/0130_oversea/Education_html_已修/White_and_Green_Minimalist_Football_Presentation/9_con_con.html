@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's Football Keynote - Liceria & Co.</title>
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #2A4029;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* 旋转动画 */
+        @keyframes rotate-text {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-rotate {
+            animation: rotate-text 20s linear infinite;
+        }
+
+        .bg-overlay { mix-blend-mode: overlay; }
+        ::-webkit-scrollbar { display: none; }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryBg: '#2A4029',
+                        contentBox: '#617360',
+                        textMain: '#FFFFFF',
+                        textBody: '#E0E6DF',
+                        lineColor: '#8C9B8A',
+                        accentRed: '#D9463E',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div id="page_container" class="shadow-2xl">
+        
+        <!-- 1. 背景层 -->
+        <div class="absolute inset-0 z-0 opacity-30">
+            <img src="https://images.unsplash.com/photo-1589487391730-58f20eb2c308?q=80&w=2074&auto=format&fit=crop" class="w-full h-full object-cover grayscale mix-blend-multiply">
+        </div>
+
+        <!-- 2. 装饰动态线条 -->
+        <div class="absolute top-[-20%] left-[-10%] w-[150%] border-t border-lineColor transform rotate-[32deg] z-0 opacity-40"></div>
+
+        <!-- 3. 内容包装器 (12列栅格布局) -->
+        <div class="relative z-10 grid grid-cols-12 h-full w-full p-16 gap-8">
+
+            <!-- [统一Logo] 顶部区域 (绝对定位以便不干扰栅格) -->
+            <div class="absolute top-12 left-16 z-30 flex items-start gap-4 transform scale-90 -translate-x-2">
+                <div class="relative w-24 h-24 flex items-center justify-center">
+                    <svg class="absolute w-full h-full animate-rotate" viewBox="0 0 100 100">
+                        <defs>
+                            <path id="womenLogoPath" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" />
+                        </defs>
+                        <text fill="#FFFFFF" font-size="7.2" font-weight="500" letter-spacing="2.3" class="opacity-70 uppercase">
+                            <textPath xlink:href="#womenLogoPath">• LICERIA SPORTS & CO • WOMEN'S PRIDE •</textPath>
+                        </text>
+                    </svg>
+                    <div class="w-12 h-12 bg-accentRed rounded-full border border-white/20 flex items-center justify-center shadow-lg backdrop-blur-sm">
+                        <i class="fa-solid fa-shield-heart text-white text-lg"></i>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <h6 class="text-textMain text-lg font-bold tracking-[0.25em] leading-none uppercase">Liceria</h6>
+                    <p class="text-lineColor text-[9px] tracking-[0.4em] font-light mt-1.5 uppercase">Inclusive Sports Management</p>
+                </div>
+            </div>
+
+            <!-- 左列 (Cols 1-4): 历史发展 -->
+            <div class="col-span-4 flex flex-col justify-end pb-4">
+                <!-- 进度装饰条 -->
+                <div class="mb-12 w-36 h-2 bg-white/10 rounded-full overflow-hidden flex">
+                    <div class="h-full w-[80%] bg-lineColor opacity-50"></div>
+                    <div class="h-full w-[20%] bg-accentRed"></div>
+                </div>
+
+                <h3 class="text-textMain text-3xl font-bold leading-tight mb-6 tracking-wide">
+                    A Brief History of<br>Women's Football
+                </h3>
+
+                <p class="text-textBody text-sm leading-relaxed opacity-80 text-justify border-l-2 border-lineColor/30 pl-4">
+                    From the earliest recorded matches to the global phenomenon it is today, women's football has fought for every inch of the pitch. Despite historical bans, the spirit of the game persevered, leading to the professional leagues we celebrate today.
+                </p>
+            </div>
+
+            <!-- 中列 (Cols 5-8): 中心视觉主体 -->
+            <div class="col-span-4 flex flex-col items-center relative">
+                <!-- 圆形主体图片 -->
+                <div class="absolute top-24 w-[400px] h-[400px] rounded-full border border-lineColor/40 p-2 flex items-center justify-center bg-primaryBg/50 backdrop-blur-sm shadow-2xl">
+                    <div class="w-full h-full rounded-full overflow-hidden border-4 border-contentBox">
+                        <img src="https://images.unsplash.com/photo-1517466787929-bc90951d64b8?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- 底部辅助文字 -->
+                <div class="mt-auto pb-4 w-full">
+                    <p class="text-textBody text-sm leading-relaxed opacity-80 text-justify">
+                        The modern era has seen an explosion in popularity, with record-breaking attendance at World Cups. Investment in grassroots programs ensures that the next generation will have unprecedented opportunities.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 右列 (Cols 9-12): 主标题与介绍 -->
+            <div class="col-span-4 flex flex-col pt-4">
+                <div class="text-right">
+                    <h1 class="text-textMain text-[80px] font-bold leading-[0.85] tracking-tighter mb-4 uppercase">
+                        WOMEN'S<br>FOOTBALL
+                    </h1>
+                    <h2 class="text-lineColor text-xl font-medium tracking-wide mb-10 italic uppercase">
+                        Breaking Barriers &<br>Gaining Recognition
+                    </h2>
+                </div>
+
+                <!-- 重点引言块 -->
+                <div class="bg-contentBox/30 p-8 rounded-tr-[40px] rounded-bl-[40px] backdrop-blur-sm mb-auto border-r-4 border-accentRed text-right shadow-xl">
+                    <p class="text-textMain text-sm leading-relaxed">
+                        Football is more than just a game; it is a movement. We explore the tactical evolution and the cultural impact of women's football across the globe, highlighting key milestones.
+                    </p>
+                </div>
+
+                <!-- 下一页导航按钮 -->
+                <div class="mt-auto flex justify-end items-center gap-6 pb-4">
+                    <div class="flex flex-col items-end">
+                        <span class="text-lineColor text-[10px] tracking-[0.3em] uppercase mb-1">Explore More</span>
+                        <div class="w-16 h-1 bg-white/20"><div class="w-1/3 h-full bg-accentRed"></div></div>
+                    </div>
+                    <div class="w-16 h-16 rounded-full border-2 border-white hover:bg-accentRed hover:border-accentRed transition-all flex items-center justify-center cursor-pointer group shadow-lg">
+                        <i class="fa-solid fa-arrow-right text-2xl text-white group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部装饰版权 -->
+        <div class="absolute bottom-6 left-16 z-20 flex items-center gap-3 opacity-40">
+            <span class="text-lineColor text-[10px] tracking-[0.5em] uppercase font-bold">Liceria & Co. © 2026 Archive</span>
+        </div>
+
+    </div>
+
+</body>
+</html>

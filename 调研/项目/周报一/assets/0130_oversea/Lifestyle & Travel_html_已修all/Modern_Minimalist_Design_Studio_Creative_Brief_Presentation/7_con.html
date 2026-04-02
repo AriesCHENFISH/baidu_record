@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, height=720, initial-scale=1.0">
+    <title>Timeline & Launch - New Layout</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#D94530',      // 烈焰红
+                        bgCream: '#F2F2F0',      // 柔和骨白
+                        bgDeep: '#3E1515',       // 幽暗红褐
+                        accentOrange: '#FF6B52', // 珊瑚橘
+                        highlight: '#B8B8D1',    // 迷幻淡紫
+                        textDark: '#1A1A1A',     // 炭黑
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .page_container {
+            width: 1280px; height: 720px;
+            margin: 0 auto; position: relative;
+            background-color: #F2F2F0;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        /* 装饰性斜切背景 */
+        .skew-bg {
+            position: absolute;
+            top: 0; left: 0; width: 40%; height: 100%;
+            background-color: #3E1515;
+            clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page_container flex">
+        <div class="skew-bg"></div>
+
+        <div class="relative z-10 w-[35%] h-full flex items-center justify-center pl-10">
+            <div class="relative w-[320px] h-[520px] group">
+                <div class="absolute -top-4 -left-4 w-full h-full border-2 border-accentOrange/30 z-0"></div>
+                <div class="relative z-10 w-full h-full overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=1287&auto=format&fit=crop" 
+                         alt="Abstract Motion" 
+                         class="w-full h-full object-cover grayscale-[0.2] contrast-125 group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent mix-blend-multiply"></div>
+                </div>
+                <div class="absolute -right-8 top-12 transform rotate-90 origin-left">
+                    <span class="text-xs font-bold tracking-[0.5em] text-white/50 uppercase whitespace-nowrap">Execution Phase &bull; 2026</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative z-10 w-[65%] h-full p-20 flex flex-col">
+            
+            <div class="mb-16">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-16 h-[2px] bg-primary"></div>
+                    <span class="text-primary font-bold tracking-widest text-sm uppercase">Roadmap Strategy</span>
+                </div>
+                <h1 class="text-7xl font-black text-primary tracking-tighter uppercase leading-none">
+                    Timeline <span class="text-textDark">& Launch</span>
+                </h1>
+            </div>
+
+            <div class="grid grid-cols-2 gap-x-12 gap-y-16">
+                <div class="relative pt-6">
+                    <span class="absolute -top-4 left-0 text-5xl font-black text-primary/10 select-none">01</span>
+                    <h3 class="text-primary font-bold text-lg mb-2 uppercase tracking-wide">Phase One: Launch</h3>
+                    <p class="text-textDark/70 text-sm leading-relaxed border-t border-primary/20 pt-4">
+                        Comprehensive social media rollout across TikTok and Instagram with Tier-1 influencer partnerships.
+                    </p>
+                </div>
+
+                <div class="relative pt-6 mt-8"> <span class="absolute -top-4 left-0 text-5xl font-black text-primary/10 select-none">02</span>
+                    <h3 class="text-primary font-bold text-lg mb-2 uppercase tracking-wide">Phase Two: Optimization</h3>
+                    <p class="text-textDark/70 text-sm leading-relaxed border-t border-primary/20 pt-4">
+                        Real-time data tracking and creative A/B testing to refine audience targeting and ad spend.
+                    </p>
+                </div>
+
+                <div class="relative pt-6 col-span-2 max-w-[400px]">
+                    <span class="absolute -top-4 left-0 text-5xl font-black text-primary/10 select-none">03</span>
+                    <h3 class="text-primary font-bold text-lg mb-2 uppercase tracking-wide">Phase Three: Scaling</h3>
+                    <p class="text-textDark/70 text-sm leading-relaxed border-t border-primary/20 pt-4">
+                        Expansion of successful content formats into global markets with localized influencer support.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-auto flex items-end justify-between border-t border-primary/10 pt-8">
+                <div class="max-w-[200px]">
+                    <p class="text-[10px] font-bold text-primary uppercase tracking-[0.2em] mb-1">Status Report</p>
+                </div>
+                
+                <div class="flex items-baseline gap-2">
+                    <span class="text-gray-300 text-sm font-bold">PAGE</span>
+                    <h2 class="text-8xl font-black text-primary leading-none opacity-90">(05)</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute right-[-5%] top-[-5%] text-[24rem] font-black text-primary/5 select-none pointer-events-none uppercase">
+            Start
+        </div>
+    </div>
+
+</body>
+</html>

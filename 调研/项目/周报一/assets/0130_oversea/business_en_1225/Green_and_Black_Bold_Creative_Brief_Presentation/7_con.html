@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Photography Presentation</title>
+
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <!-- Google Fonts (Domestic Mirror as requested) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#111111',
+                        textPrimary: '#FFFFFF',
+                        textSecondary: '#E0E0E0',
+                        accent: '#DFFF5E',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container - Strict Requirements */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #111111;
+            overflow: hidden; /* Ensure content doesn't spill */
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Custom Utility for decorative gradient */
+        .glow-effect {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(223, 255, 94, 0.15) 0%, rgba(17, 17, 17, 0) 70%);
+            top: -200px;
+            right: -200px;
+            z-index: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div id="page_container">
+        
+        <!-- Decorative Background Glow -->
+        <div class="glow-effect"></div>
+
+        <!-- 1. Header / Navigation Area -->
+        <!-- Flexbox for alignment of tags and year -->
+        <header class="relative z-10 flex justify-between items-start px-12 pt-12 pb-8">
+            
+            <!-- Left: Tags/Breadcrumbs -->
+            <div class="flex gap-4">
+                <!-- Tag 1: The Brand -->
+                <div class="flex items-center gap-2 border border-accent rounded-full px-5 py-2 group cursor-pointer transition-colors duration-300">
+                    <i class="fa-solid fa-arrow-up-right text-accent text-sm"></i>
+                    <span class="text-textSecondary text-sm font-medium tracking-wide">The Brand</span>
+                </div>
+
+                <!-- Tag 2: Paucek and Lage -->
+                <div class="flex items-center border border-accent rounded-full px-5 py-2">
+                    <span class="text-textSecondary text-sm font-medium tracking-wide">Paucek and Lage</span>
+                </div>
+            </div>
+
+            <!-- Right: Year Indicator -->
+            <div class="text-right">
+                <span class="text-accent text-2xl font-bold tracking-widest">2024</span>
+            </div>
+        </header>
+
+        <!-- 2. Main Content Grid -->
+        <main class="relative z-10 px-12 grid grid-cols-12 gap-8 items-end mb-8">
+            
+            <!-- Left Column: Narrative Text -->
+            <div class="col-span-5 pb-2">
+                <div class="w-full h-px bg-accent mb-6 opacity-30"></div> <!-- Decorative separator -->
+                <p class="text-textSecondary text-sm leading-7 font-light text-justify">
+                    Presentations are communication tools that can be used as demonstrations, lectures, speeches, reports, and more. It is mostly presented before an audience to convey information effectively.
+                </p>
+            </div>
+
+            <!-- Spacer -->
+            <div class="col-span-1"></div>
+
+            <!-- Right Column: Big Title -->
+            <div class="col-span-6 text-right">
+                <h1 class="text-textPrimary text-7xl font-bold leading-[0.9] tracking-tighter uppercase">
+                    Product<br>
+                    <span class="text-accent">Photography</span>.
+                </h1>
+            </div>
+        </main>
+
+        <!-- 3. Visual Section -->
+        <!-- Large image area with rounded corners to modernize the look -->
+        <section class="relative z-10 px-12 h-[380px]">
+            <div class="w-full h-full relative rounded-3xl overflow-hidden border border-[#333]">
+                
+                <!-- Main Image: Replacing the lime background photo with a high-end studio shot -->
+                <!-- The image depicts a creative team reviewing work, matching the original context -->
+                <img src="https://images.unsplash.com/photo-1542038784424-48ed38e6d760?q=80&w=2000&auto=format&fit=crop" 
+                     alt="Creative team working on product photography" 
+                     class="w-full h-full object-cover opacity-90 filter brightness-90 contrast-110">
+                <!-- 1184*380 -->
+
+                <!-- Floating Badge/Interaction Element (Recreating the arrow circle from original) -->
+                <div class="absolute top-6 left-6 w-16 h-16 bg-accent rounded-full flex items-center justify-center shadow-lg z-20">
+                    <i class="fa-solid fa-arrow-up text-bgDark text-3xl transform rotate-45"></i>
+                </div>
+
+                <!-- Image Caption Overlay -->
+                <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/80 to-transparent">
+                    <div class="flex justify-between items-end">
+                        <div>
+                            <span class="text-white text-xs font-mono uppercase tracking-widest opacity-80">Campaign Shoot</span>
+                            <div class="text-white font-medium text-lg mt-1">Studio Session / 01</div>
+                        </div>
+                        <!-- Tech decoration -->
+                        <div class="flex gap-2">
+                            <i class="fa-solid fa-circle text-[8px] text-accent animate-pulse"></i>
+                            <i class="fa-solid fa-circle text-[8px] text-gray-500"></i>
+                            <i class="fa-solid fa-circle text-[8px] text-gray-500"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>

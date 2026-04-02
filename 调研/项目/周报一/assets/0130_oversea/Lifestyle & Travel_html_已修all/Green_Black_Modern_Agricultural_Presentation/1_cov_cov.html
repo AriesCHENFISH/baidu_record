@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wardiere Inc. - Cover Page</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative;
+            background-color: #111111; overflow: hidden; font-family: 'Noto Sans SC', sans-serif;
+        }
+        @keyframes pulse-soft { 0%, 100% { opacity: 0.15; transform: scale(1); } 50% { opacity: 0.3; transform: scale(1.1); } }
+        .logo-glow { animation: pulse-soft 4s infinite ease-in-out; }
+        
+        /* 图片遮罩效果 */
+        .img-clip-path {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%);
+        }
+    </style>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: '#98D86E', bgDark: '#111111', textLight: '#D1D5DB', textDark: '#0A0A0A' },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="page_container">
+        <!-- 头部设计：完全同步第一张图 -->
+        <header class="absolute top-0 left-0 w-full px-14 py-10 flex justify-between items-center z-20">
+            <div class="group cursor-pointer">
+                <div class="flex items-center gap-4 border border-primary/30 rounded-full px-6 py-3 bg-bgDark/40 backdrop-blur-md">
+                    <div class="flex flex-col gap-1.5"><span class="w-6 h-[2px] bg-primary"></span><span class="w-4 h-[2px] bg-primary"></span></div>
+                    <span class="text-white text-xs font-bold tracking-[0.2em] uppercase opacity-80">Explore Menu</span>
+                </div>
+            </div>
+            <div class="relative group cursor-default">
+                <div class="absolute inset-0 bg-primary rounded-full blur-2xl logo-glow"></div>
+                <div class="relative flex items-center gap-4 bg-bgDark/60 backdrop-blur-sm border-b border-primary/50 px-5 py-2">
+                    <div class="w-10 h-10 bg-primary rounded-br-2xl flex items-center justify-center">
+                        <i class="fa-solid fa-seedling text-textDark text-lg"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <h2 class="text-white font-black text-xl tracking-tight leading-none">WARDIERE <span class="text-primary">INC.</span></h2>
+                        <span class="text-[9px] text-primary tracking-[0.4em] font-light uppercase mt-1 opacity-70">Smart Agriculture</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- 主体内容 -->
+        <main class="w-full h-full flex px-14 items-center z-10 relative">
+            
+            <!-- 左侧标题与信息区 -->
+            <div class="w-7/12 pt-16">
+                <div class="inline-block px-4 py-1 border border-primary/50 mb-6">
+                    <span class="text-primary text-xs font-bold tracking-[0.4em] uppercase">Executive Summary</span>
+                </div>
+                
+                <h1 class="text-[100px] font-black text-primary leading-[0.9] mb-12 tracking-tighter uppercase italic drop-shadow-lg">
+                    SMART<br>
+                    <span class="text-white">FARMING</span>
+                </h1>
+
+                <!-- 汇报信息 -->
+                <div class="flex gap-16 mt-16 border-l-2 border-primary/30 pl-8">
+                    <div class="space-y-6">
+                        <div>
+                            <p class="text-[10px] text-primary/60 uppercase tracking-widest font-bold mb-1">Speaker</p>
+                            <p class="text-white text-lg font-medium tracking-wide">Jonathan Patterson</p>
+                        </div>
+                        <div>
+                            <p class="text-[10px] text-primary/60 uppercase tracking-widest font-bold mb-1">Department</p>
+                            <p class="text-white text-lg font-medium tracking-wide">Innovation Division</p>
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <div>
+                            <p class="text-[10px] text-primary/60 uppercase tracking-widest font-bold mb-1">Date</p>
+                            <p class="text-white text-lg font-medium tracking-wide">October 24, 2024</p>
+                        </div>
+                        <div>
+                            <p class="text-[10px] text-primary/60 uppercase tracking-widest font-bold mb-1">Project Code</p>
+                            <p class="text-white text-lg font-medium tracking-wide">WD-2024-AGRI</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右侧配图设计：现代几何错位布局 -->
+            <div class="w-5/12 relative h-full flex items-center justify-center">
+                <!-- 底部装饰色块 -->
+                <div class="absolute top-[25%] right-[10%] w-[320px] h-[450px] border border-primary/20 -rotate-3"></div>
+                
+                <!-- 主图：垂直长图 -->
+                <div class="relative w-[300px] h-[430px] z-20 shadow-[20px_20px_60px_rgba(0,0,0,0.5)]">
+                    <img src="https://images.unsplash.com/photo-1625246333195-58197bd47d26?q=80&w=600&auto=format&fit=crop" 
+                         class="w-full h-full object-cover img-clip-path" alt="Agriculture Tech">
+                    <!-- 图片上的小装饰线 -->
+                    <div class="absolute top-4 right-4 w-12 h-12 border-t-2 border-r-2 border-primary"></div>
+                </div>
+
+                <!-- 副图：小型方形，压在主图左下角 -->
+                <div class="absolute -left-10 bottom-[20%] w-[220px] h-[160px] z-30 shadow-2xl border-4 border-bgDark">
+                    <img src="https://images.unsplash.com/photo-1595245863588-4c6e9433469a?q=80&w=400&auto=format&fit=crop" 
+                         class="w-full h-full object-cover" alt="Research">
+                    <div class="absolute inset-0 bg-primary/10"></div>
+                </div>
+
+                <!-- 浮动文字装饰 -->
+                <div class="absolute top-[20%] -right-4 flex flex-col items-end z-10">
+                    <span class="text-[60px] font-black text-white/5 leading-none select-none">2024</span>
+                    <span class="text-primary text-[10px] tracking-[0.5em] uppercase font-black -mt-2">Core Tech</span>
+                </div>
+            </div>
+        </main>
+
+        <!-- 顶部和底部渐变发光 -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-primary rounded-full blur-[180px] opacity-10 pointer-events-none z-0"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Performance Dashboard</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgPrimary: '#1A1A1A',
+                        textPrimary: '#FFFFFF',
+                        borderPrimary: '#D0D0D0',
+                        accentWhite: '#F2F2F2',
+                        secondaryGrey: '#555555',
+                        textGrey: '#E0E0E0',
+                        darkText: '#1A1A1A'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        #page_container { 
+            width: 1280px; 
+            height: 720px; 
+            background-color: #1A1A1A; 
+            color: #FFFFFF; 
+            overflow: hidden; 
+            position: relative; 
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <div class="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-secondaryGrey opacity-10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="grid grid-cols-12 gap-12 px-16 pt-24 h-full pb-12">
+            
+            <div class="col-span-7 flex flex-col h-full">
+                <div class="grid grid-cols-2 gap-8 mb-10">
+                    <div class="border border-borderPrimary rounded-3xl p-8 flex flex-col justify-between h-[240px] relative overflow-hidden">
+                        <h2 class="text-6xl font-bold tracking-tighter">57%</h2>
+                        <p class="text-textGrey text-sm leading-relaxed mt-4">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl eu sem tristique, sit amet convallis ex aliquam. 
+                        </p>
+                    </div>
+                    <div class="bg-white rounded-3xl p-8 flex flex-col justify-between h-[240px] text-darkText shadow-lg">
+                        <h2 class="text-6xl font-bold tracking-tighter">80K</h2>
+                        <p class="text-gray-600 text-sm leading-relaxed mt-4">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl eu sem tristique, sit amet convallis ex aliquam. 
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-auto mb-4">
+                    <h1 class="text-7xl font-semibold tracking-tight mb-6 leading-none">Our Performance</h1>
+                    <p class="text-textGrey text-base leading-7 max-w-[95%] font-light">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl eu sem tristique, sit amet convallis ex aliquam. Maecenas varius lectus hendrerit augue blandit, ut posuere erat aliquam. Praesent auctor tellus eget nisl blandit, at varius purus elementum.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-span-5 h-full pb-8 flex items-center">
+                <div class="w-full h-[520px] border border-borderPrimary rounded-3xl p-6 relative bg-white/5 backdrop-blur-sm">
+                    <div id="performanceChart" class="w-full h-full"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const chartDom = document.getElementById('performanceChart');
+            const myChart = echarts.init(chartDom);
+            const option = {
+                backgroundColor: 'transparent',
+                tooltip: { 
+                    trigger: 'axis', 
+                    axisPointer: { type: 'shadow' }, 
+                    backgroundColor: 'rgba(26, 26, 26, 0.9)', 
+                    borderColor: '#D0D0D0', 
+                    textStyle: { color: '#fff' } 
+                },
+                legend: { 
+                    data: ['Seri 1', 'Seri 2'], 
+                    right: '5%', 
+                    top: '5%', 
+                    textStyle: { color: '#E0E0E0' }, 
+                    icon: 'circle' 
+                },
+                grid: { 
+                    left: '5%', 
+                    right: '5%', 
+                    bottom: '10%', 
+                    top: '20%', 
+                    containLabel: true 
+                },
+                xAxis: { 
+                    type: 'category', 
+                    data: ['Item 1', 'Item 2'], 
+                    axisLine: { lineStyle: { color: '#555' } }, 
+                    axisLabel: { color: '#E0E0E0' } 
+                },
+                yAxis: { 
+                    type: 'value', 
+                    min: 0, 
+                    max: 12, 
+                    splitLine: { lineStyle: { color: '#333', type: 'dashed' } }, 
+                    axisLabel: { color: '#E0E0E0' } 
+                },
+                series: [
+                    { 
+                        name: 'Seri 1', 
+                        type: 'bar', 
+                        data: [3, 8], 
+                        barWidth: '35%', 
+                        itemStyle: { color: '#555', borderRadius: [4, 4, 0, 0] } 
+                    },
+                    { 
+                        name: 'Seri 2', 
+                        type: 'bar', 
+                        data: [6, 12], 
+                        barWidth: '35%', 
+                        barGap: '20%', 
+                        itemStyle: { color: '#FFFFFF', borderRadius: [4, 4, 0, 0] } 
+                    }
+                ],
+                animationDuration: 1500
+            };
+            myChart.setOption(option);
+
+            // Responsive chart
+            window.addEventListener('resize', () => myChart.resize());
+        });
+    </script>
+</body>
+</html>

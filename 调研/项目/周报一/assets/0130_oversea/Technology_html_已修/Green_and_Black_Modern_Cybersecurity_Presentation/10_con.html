@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Trend Analysis - Liceria Keynote</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts_5.5.0_min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: { black: '#000000', dark: '#0A0A0A', neon: '#B6FF5C', pale: '#E0F2C2', gray: '#A0A0A0', meta: '#666666' }
+                    },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'sans-serif'], mono: ['"Courier New"', 'monospace'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; background-color: #000; position: relative; margin: 0 auto; overflow: hidden; }
+        .text-neon-glow { text-shadow: 0 0 10px rgba(182, 255, 92, 0.4); }
+        .chart-container { height: 400px; width: 100%; }
+    </style>
+</head>
+<body>
+    <div id="page_container" class="flex flex-col">
+        <div class="absolute top-0 left-0 w-full px-12 py-8 flex justify-between items-center z-20">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 relative flex items-center justify-center bg-cyber-dark border border-cyber-neon/30 rounded-lg overflow-hidden shadow-[0_0_15px_rgba(182,255,92,0.15)]">
+                    <div class="absolute inset-0 bg-cyber-neon/5"></div>
+                    <i class="fa-brands fa-hive text-cyber-neon text-xl drop-shadow-[0_0_5px_rgba(182,255,92,0.8)]"></i>
+                </div>
+                <div class="flex flex-col justify-center">
+                    <h6 class="text-white font-bold tracking-widest text-base leading-none mb-1">LICERIA<span class="text-cyber-neon">.</span></h6>
+                    <span class="text-cyber-meta text-[10px] font-mono tracking-[0.2em] uppercase leading-none">Secure Systems</span>
+                </div>
+            </div>
+            <h6 class="text-cyber-meta font-mono text-sm tracking-widest">05.07.2025</h6>
+        </div>
+
+        <main class="grid grid-cols-12 gap-8 px-12 pt-32 pb-12 h-full relative z-10">
+            <div class="col-span-8 flex flex-col justify-center">
+                <h2 class="text-cyber-neon text-3xl font-bold uppercase tracking-wide mb-6 text-neon-glow">Security Incident Trends</h2>
+                <div class="bg-cyber-dark border border-white/10 rounded-xl p-6 shadow-2xl relative">
+                    <div class="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-cyber-neon/30 rounded-tl-xl"></div>
+                    <div id="bar-chart" class="chart-container"></div>
+                </div>
+            </div>
+
+            <div class="col-span-4 flex flex-col justify-center gap-8 pl-4">
+                <div>
+                    <h3 class="text-cyber-pale text-xl font-semibold mb-3 border-l-4 border-cyber-neon pl-4 uppercase tracking-widest">Key Data</h3>
+                    <p class="text-cyber-gray text-sm leading-relaxed">Phishing remains the primary vector. Our analytics show a 24% increase in credential harvesting attempts targeted at mid-level management.</p>
+                </div>
+                <div class="h-[1px] w-full bg-gradient-to-r from-white/10 to-transparent"></div>
+                <div>
+                    <h3 class="text-cyber-pale text-xl font-semibold mb-3 border-l-4 border-white/20 pl-4 uppercase tracking-widest">Action Required</h3>
+                    <ul class="text-cyber-gray text-sm leading-relaxed space-y-3">
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-cyber-neon mt-1"></i> Deploy advanced email filtering solutions.</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-cyber-neon mt-1"></i> Conduct quarterly security audits.</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-cyber-neon mt-1"></i> Implement Zero-Trust architecture.</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        window.onload = function() {
+            var chartDom = document.getElementById('bar-chart');
+            var myChart = echarts.init(chartDom, 'dark');
+            var option = {
+                backgroundColor: 'transparent',
+                tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
+                grid: { left: '3%', right: '4%', bottom: '3%', top: '10%', containLabel: true },
+                xAxis: {
+                    type: 'category',
+                    data: ['Phishing', 'Malware', 'DDoS', 'Ransomware', 'Insider', 'Web'],
+                    axisLabel: { color: '#A0A0A0', fontSize: 12 },
+                    axisLine: { lineStyle: { color: '#333' } }
+                },
+                yAxis: {
+                    type: 'value',
+                    axisLabel: { color: '#A0A0A0', fontSize: 12 },
+                    splitLine: { lineStyle: { color: '#1A1A1A' } },
+                    axisLine: { show: false }
+                },
+                series: [{
+                    name: 'Incidents',
+                    type: 'bar',
+                    data: [120, 80, 50, 40, 35, 25],
+                    itemStyle: {
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                            { offset: 0, color: '#B6FF5C' },
+                            { offset: 1, color: '#1A1A1A' }
+                        ]),
+                        borderRadius: [4, 4, 0, 0]
+                    },
+                    barWidth: '40%'
+                }]
+            };
+            myChart.setOption(option);
+            window.addEventListener('resize', myChart.resize);
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emerging Tech - Badge Style</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative;
+            background-color: #050A14; font-family: 'Noto Sans SC', sans-serif; overflow: hidden; color: #E0E0E0;
+        }
+        .bg-grid {
+            position: absolute; inset: 0;
+            background-image: linear-gradient(rgba(19, 38, 57, 0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(19, 38, 57, 0.4) 1px, transparent 1px);
+            background-size: 50px 50px; z-index: 0; mask-image: radial-gradient(circle at 50% 50%, black, transparent 90%);
+        }
+        .timeline-header {
+            letter-spacing: 0.8em; text-indent: 0.8em;
+            background: linear-gradient(to bottom, #D4C9E8 0%, #8A7FB1 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800;
+        }
+
+        /* 核心 Badge 风格定义 */
+        .badge-ict {
+            background: linear-gradient(90deg, #4A1E9E, #2D5BFF);
+            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .tech-card-new {
+            background: rgba(13, 25, 48, 0.4);
+            border: 1px solid rgba(74, 30, 158, 0.2);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .tech-card-new:hover {
+            border-color: #2D5BFF;
+            background: rgba(13, 25, 48, 0.7);
+        }
+        
+        .side-bar { width: 4px; background: linear-gradient(to bottom, #2D5BFF, #4A1E9E); }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <div class="bg-grid"></div>
+
+        <div class="relative z-10 w-full h-full px-20 py-12 flex flex-col">
+            
+            <div class="flex flex-col items-center mb-16">
+                <div class="flex items-center space-x-4 mb-2">
+                    <div class="w-8 h-[1px] bg-blue-500 opacity-50"></div>
+                    <span class="text-[10px] text-blue-400 tracking-[0.3em] uppercase opacity-70">Technological Evolution</span>
+                    <div class="w-8 h-[1px] bg-blue-500 opacity-50"></div>
+                </div>
+                <h2 class="timeline-header text-2xl">TIMELINE</h2>
+            </div>
+
+            <div class="grid grid-cols-12 gap-12 flex-1 items-center">
+                
+                <div class="col-span-8 space-y-12">
+                    <h1 class="text-7xl font-bold text-white mb-16 drop-shadow-2xl">Emerging<br><span class="text-blue-500">Technologies</span></h1>
+                    
+                    <div class="grid grid-cols-2 gap-10">
+                        
+                        <div class="tech-card-new rounded-xl p-8 pt-12">
+                            <div class="badge-ict py-2 px-8 absolute -top-5 left-6">
+                                <span class="text-white font-bold text-xs tracking-widest uppercase">Blockchain</span>
+                            </div>
+                            <div class="flex flex-col space-y-4">
+                                <p class="text-[10px] text-blue-400 font-mono tracking-[0.3em] uppercase">Core Data Protocol</p>
+                                <p class="text-gray-300 text-sm leading-relaxed text-justify italic">
+                                    A decentralized, distributed ledger technology that ensures transparency and security across complex digital networks without central authority.
+                                </p>
+                                <div class="pt-4 flex justify-end">
+                                    <i class="fas fa-link text-blue-900/40 text-2xl"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tech-card-new rounded-xl p-8 pt-12">
+                            <div class="badge-ict py-2 px-8 absolute -top-5 left-6" style="background: linear-gradient(90deg, #6366f1, #a855f7);">
+                                <span class="text-white font-bold text-xs tracking-widest uppercase">AR / VR Systems</span>
+                            </div>
+                            <div class="flex flex-col space-y-4">
+                                <p class="text-[10px] text-blue-400 font-mono tracking-[0.3em] uppercase">Interaction Layer</p>
+                                <p class="text-gray-300 text-sm leading-relaxed text-justify italic">
+                                    Advanced simulation technologies that blend the physical and digital worlds, redefining human sensory experience and spatial interaction.
+                                </p>
+                                <div class="pt-4 flex justify-end">
+                                    <i class="fas fa-vr-cardboard text-blue-900/40 text-2xl"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-span-4 flex flex-col justify-end h-full pb-12">
+                    <div class="flex space-x-6">
+                        <div class="side-bar rounded-full"></div>
+                        <div class="space-y-8">
+                            <div class="space-y-4">
+                                <p class="text-gray-200 text-lg leading-relaxed font-light">
+                                    These technologies represent the next frontier of global innovation.
+                                </p>
+                                <p class="text-gray-500 text-sm leading-relaxed text-justify">
+                                    Redefining the relationship between data integrity and human perception, shaping a future built on trust and immersion.
+                                </p>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4 pt-4">
+                                <i class="fa-solid fa-microchip text-3xl text-blue-500/40"></i>
+                                <div class="h-[1px] flex-1 bg-blue-900/20"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-auto flex justify-between items-center opacity-30 text-[9px] font-mono tracking-widest">
+                <div class="flex items-center space-x-4">
+                    <span class="animate-pulse">●</span>
+                    <span>FUTURE_SYNC: ONLINE</span>
+                </div>
+                <span>EMERGING_CORE // 06</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

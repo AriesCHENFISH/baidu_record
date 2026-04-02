@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keitston Medical - Market Opportunity</title>
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        midnight: '#121C38',
+                        medical: '#CFE1F3',
+                        slate: '#4A5568',
+                        pale: '#F0F4F8',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FFFFFF;
+            overflow: hidden;
+        }
+
+        /* 统一 Logo 样式 */
+        .brand-text-main {
+            font-size: 24px;
+            font-weight: 900;
+            letter-spacing: 0.15em;
+            color: #121C38;
+            line-height: 1;
+            text-transform: uppercase;
+        }
+        .brand-text-sub {
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 0.45em;
+            color: #3B82F6;
+            margin-top: 4px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <div style="position: absolute; top: 60px; left: 80px; z-index: 20;">
+            <div class="flex flex-col">
+                <div class="brand-text-main">Keitston</div>
+                <div class="brand-text-sub">Medical Group</div>
+            </div>
+        </div>
+
+        <main class="w-full h-full flex pt-32 px-20 pb-12 gap-12">
+            
+            <div class="w-5/12 flex flex-col justify-center">
+                
+                <div class="mb-10">
+                    <h1 class="text-7xl font-black tracking-tighter text-[#121C38] leading-[1.1]">
+                        Market<br>Opportunity.
+                    </h1>
+                </div>
+
+                <div class="grid grid-cols-2 gap-x-8 gap-y-10">
+                    <div>
+                        <h3 class="flex items-center gap-2 text-midnight font-bold text-xl mb-3">
+                            <i class="fa-solid fa-circle text-[8px] text-[#3B82F6]"></i>
+                            Healthcare spending
+                        </h3>
+                        <p class="text-slate text-sm leading-relaxed opacity-90 text-justify">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae elit sed est vel mattis nisi arcu mauris diam.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="flex items-center gap-2 text-midnight font-bold text-xl mb-3">
+                            <i class="fa-solid fa-circle text-[8px] text-[#3B82F6]"></i>
+                            Geriatric population
+                        </h3>
+                        <p class="text-slate text-sm leading-relaxed opacity-90 text-justify">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae elit sed est vel mattis nisi arcu mauris diam.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="flex items-center gap-2 text-midnight font-bold text-xl mb-3">
+                            <i class="fa-solid fa-circle text-[8px] text-[#3B82F6]"></i>
+                            Hybrid support
+                        </h3>
+                        <p class="text-slate text-sm leading-relaxed opacity-90 text-justify">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae elit sed est vel mattis nisi arcu mauris diam.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="flex items-center gap-2 text-midnight font-bold text-xl mb-3">
+                            <i class="fa-solid fa-circle text-[8px] text-[#3B82F6]"></i>
+                            Local service
+                        </h3>
+                        <p class="text-slate text-sm leading-relaxed opacity-90 text-justify">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae elit sed est vel mattis nisi arcu mauris diam.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-7/12 relative flex items-center justify-end">
+                <div class="w-full h-[500px] bg-[#F0F7FF] rounded-[40px] relative p-8">
+                    <div class="absolute -left-6 top-10 w-16 h-16 bg-[#121C38] rounded-2xl flex items-center justify-center shadow-xl z-10">
+                        <i class="fa-solid fa-chart-line text-white text-2xl"></i>
+                    </div>
+                    <div id="mainChart" class="w-full h-full"></div>
+                </div>
+            </div>
+
+        </main>
+        
+        <div class="absolute bottom-6 right-8 text-slate text-xs opacity-50 font-bold tracking-widest">
+            STRATEGIC REPORT • 2026
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('mainChart'));
+
+        var option = {
+            backgroundColor: 'transparent',
+            grid: {
+                top: '15%',
+                left: '5%',
+                right: '5%',
+                bottom: '10%',
+                containLabel: true
+            },
+            legend: {
+                data: ['Series 1', 'Series 2', 'Series 3'],
+                top: '5%',
+                right: '5%',
+                icon: 'circle',
+                textStyle: { color: '#121C38', fontWeight: 500 }
+            },
+            tooltip: { trigger: 'axis' },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: ['2022', '2023', '2024', '2025', '2026'],
+                axisLine: { show: false },
+                axisTick: { show: false },
+                axisLabel: { color: '#121C38', fontSize: 12 }
+            },
+            yAxis: {
+                type: 'value',
+                splitLine: { lineStyle: { color: 'rgba(18, 28, 56, 0.05)' } },
+                axisLabel: { color: '#121C38' }
+            },
+            series: [
+                {
+                    name: 'Series 1',
+                    type: 'line',
+                    smooth: true,
+                    lineStyle: { width: 4, color: '#FBD38D' },
+                    itemStyle: { color: '#FBD38D' },
+                    data: [10, 25, 38, 30, 45]
+                },
+                {
+                    name: 'Series 2',
+                    type: 'line',
+                    smooth: true,
+                    lineStyle: { width: 4, color: '#3B82F6' },
+                    itemStyle: { color: '#3B82F6' },
+                    data: [15, 30, 20, 45, 50]
+                },
+                {
+                    name: 'Series 3',
+                    type: 'line',
+                    smooth: true,
+                    lineStyle: { width: 4, color: '#121C38' },
+                    itemStyle: { color: '#121C38' },
+                    data: [20, 15, 35, 25, 42]
+                }
+            ]
+        };
+
+        myChart.setOption(option);
+        window.addEventListener('resize', function() { myChart.resize(); });
+    </script>
+</body>
+</html>

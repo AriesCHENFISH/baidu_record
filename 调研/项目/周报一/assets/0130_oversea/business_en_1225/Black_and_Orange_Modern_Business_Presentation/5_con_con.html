@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Insights - Studio Shodwe</title>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts (Baidu CDN as requested) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#D95325', // Primary Orange
+                        dark: '#1A1A1A',    // Text Black
+                        grey: '#808080',    // Secondary Grey
+                        light: '#F5F5F5',   // Light bg accent
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- CSS Reset & Custom Styles -->
+    <style>
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container - Strict 1280x720 */
+        .page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FFFFFF;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Custom Utilities for Typography */
+        .heading-tight {
+            line-height: 0.85;
+            letter-spacing: -0.02em;
+        }
+
+        /* Image grayscale filter class */
+        .img-grayscale {
+            filter: grayscale(100%);
+        }
+        
+        /* Specific layout adjustments */
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 380px 340px 1fr; /* Precise column widths */
+            gap: 40px;
+            height: 100%;
+            padding: 0 60px 50px 60px; /* Top padding handled by header spacing */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page_container">
+        
+        <!-- Header Section -->
+        <div class="w-full flex justify-between items-center px-[60px] pt-[40px] mb-[30px]">
+            <!-- Top Left -->
+            <div>
+                <p class="text-[#D95325] text-lg font-medium">Market Insights</p>
+            </div>
+            
+            <!-- Top Middle -->
+            <div>
+                <h6 class="text-dark font-bold text-xl tracking-wide uppercase">Studio Shodwe</h6>
+            </div>
+
+            <!-- Top Right: Page Number Design -->
+            <div class="flex items-start">
+                <!-- Small deco rect -->
+                <div class="w-4 h-8 bg-[#D95325] mr-2 mt-2"></div>
+                <!-- Number Box -->
+                <div class="bg-[#D95325] text-white px-3 py-1">
+                    <h2 class="text-4xl font-bold font-mono">03</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Grid -->
+        <div class="grid-layout">
+            
+            <!-- Column 1: Left Image (Architectural BW) -->
+            <div class="relative h-full flex flex-col justify-between">
+                <!-- Image Wrapper -->
+                <div class="w-full h-[540px] relative overflow-hidden bg-gray-100">
+                    <img src="https://images.unsplash.com/photo-1486744616870-763919e910bd?q=80&w=800&auto=format&fit=crop" 
+                         class="w-full h-full object-cover img-grayscale" 
+                         alt="Architectural detail">
+                    <!-- 380*540 -->
+                    
+                    <!-- Decorative Overlay Box (Orange block at bottom right of image) -->
+                    <div class="absolute bottom-0 right-0 w-[80px] h-[100px] bg-[#D95325]">
+                         <!-- Aesthetic visual anchor (small dark rectangle inside) -->
+                         <div class="w-[40px] h-[10px] bg-[#1A1A1A] mt-[20px] ml-[20px]"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 2: Middle Content (Abstract Orange Image + Text) -->
+            <div class="flex flex-col h-full">
+                <!-- Top Image (Orange Cubes) -->
+                <div class="w-full h-[340px] mb-6 overflow-hidden bg-orange-50">
+                    <img src="https://images.unsplash.com/photo-1597075687490-8f673c6c17f6?q=80&w=800&auto=format&fit=crop" 
+                         class="w-full h-full object-cover" 
+                         alt="Abstract Orange Geometric Shapes">
+                    <!-- 340*340 -->
+                </div>
+
+                <!-- Divider Line -->
+                <div class="w-full h-[2px] bg-dark mb-6"></div>
+
+                <!-- Text Block -->
+                <div class="flex items-start gap-3">
+                    <!-- Bracket Icon substitute -->
+                    <div class="text-[#D95325] font-bold text-xl mt-[-4px]">[ ]</div>
+                    
+                    <div>
+                        <p class="text-dark text-sm leading-relaxed font-normal text-justify">
+                            In today's fast-paced digital world, we stay ahead by combining creativity with market intelligence. We analyze trends, monitor consumer behavior, and translate insights into action.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 3: Right Content (Headline + List) -->
+            <div class="flex flex-col justify-between h-full pb-[10px]">
+                
+                <!-- Main Headline -->
+                <div class="mt-[-10px]"> <!-- Negative margin to align top with images visual weight -->
+                    <h1 class="text-[#D95325] text-[72px] font-bold uppercase heading-tight text-left">
+                        MARKET<br>
+                        INSIGHTS<br>
+                        AND<br>
+                        OUR RESPONSE<br>
+                    </h1>
+                </div>
+
+                <!-- Bottom Insight Section -->
+                <div class="mb-8">
+                    <h4 class="text-[#D95325] text-2xl font-bold uppercase mb-4 tracking-wide">Insight</h4>
+                    
+                    <div class="flex items-start gap-3">
+                        <!-- Bracket Icon substitute -->
+                        <div class="text-[#D95325] font-bold text-lg mt-[-2px]">[ ]</div>
+                        
+                        <!-- List -->
+                        <ul class="list-none">
+                            <li class="mb-2">
+                                <p class="text-dark text-base font-medium">Agile strategies tailored to your market</p>
+                            </li>
+                            <li class="mb-2">
+                                <p class="text-dark text-base font-medium">Data-informed decision making</p>
+                            </li>
+                            <li>
+                                <p class="text-dark text-base font-medium">Forward-thinking creative solutions</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

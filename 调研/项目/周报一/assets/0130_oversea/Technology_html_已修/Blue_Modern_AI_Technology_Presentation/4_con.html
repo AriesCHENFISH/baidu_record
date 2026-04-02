@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natural Language Processing - AI Keynote</title>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS Reset & Global Standards */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container - Strict Dimensions */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #192A45; 
+            overflow: hidden;
+            font-family: 'Inter', 'Noto Sans SC', sans-serif;
+            color: #FFFFFF;
+        }
+
+        /* 背景纹理 */
+        .bg-pattern {
+            position: absolute; inset: 0; opacity: 0.05; pointer-events: none;
+            background-image: linear-gradient(90deg, #5AD0F9 1px, transparent 1px), linear-gradient(#5AD0F9 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        /* Fonts */
+        .font-tech { font-family: 'Orbitron', sans-serif; }
+
+        /* HUD Corners for the text box */
+        .text-box-frame {
+            position: relative;
+            background: rgba(43, 65, 98, 0.2);
+            border: 1px solid rgba(90, 208, 249, 0.2);
+            backdrop-filter: blur(4px);
+            padding: 30px;
+        }
+
+        .corner {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border-style: solid;
+            border-color: #5AD0F9;
+        }
+        .corner-tl { top: -2px; left: -2px; border-width: 2px 0 0 2px; }
+        .corner-tr { top: -2px; right: -2px; border-width: 2px 2px 0 0; }
+        .corner-bl { bottom: -2px; left: -2px; border-width: 0 0 2px 2px; }
+        .corner-br { bottom: -2px; right: -2px; border-width: 0 2px 2px 0; }
+
+        .side-accent {
+            position: absolute;
+            left: -1px;
+            top: 20%;
+            height: 60%;
+            width: 3px;
+            background: #5AD0F9;
+            box-shadow: 0 0 10px #5AD0F9;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container" class="bg-[linear-gradient(135deg,#192A45_0%,#0F1A2E_100%)]">
+        
+        <div class="bg-pattern"></div>
+        
+        <div class="relative z-10 w-full h-full flex flex-col p-12">
+            
+            <div class="flex items-center gap-5 mb-8">
+                <div class="relative w-14 h-14 flex items-center justify-center">
+                    <div class="absolute inset-0 bg-gradient-to-br from-[#5AD0F9]/30 via-transparent to-[#5AD0F9]/10 rounded-lg border border-[#5AD0F9]/40 shadow-[0_0_20px_rgba(90,208,249,0.3)] rotate-[25deg]"></div>
+                    <div class="relative z-10 w-11 h-11 border-2 border-[#5AD0F9] flex items-center justify-center rounded-md bg-[#192A45] shadow-[inset_0_0_15px_rgba(90,208,249,0.4)]">
+                        <i class="fa-solid fa-microchip text-[#5AD0F9] text-2xl drop-shadow-[0_0_8px_#5AD0F9]"></i>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-[#5AD0F9] font-bold tracking-[0.35em] text-lg font-tech leading-tight drop-shadow-[0_0_8px_rgba(90,208,249,0.8)]">STUDIO</span>
+                    <span class="text-[#E0E0E0] font-light tracking-[0.4em] text-xs opacity-70 pl-0.5 uppercase">Shodwe</span>
+                </div>
+            </div>
+
+            <div class="flex flex-grow items-center">
+                <div class="w-[45%] h-full flex items-center justify-center">
+                    <div class="relative w-[340px] h-[460px] group">
+                        <div class="absolute -inset-4 border border-[#3FA0D6] opacity-20 rounded-lg"></div>
+                        <div class="absolute -inset-2 border-l border-r border-[#5AD0F9] opacity-40 rounded-lg"></div>
+                        
+                        <div class="w-full h-full rounded-lg overflow-hidden border border-[#2B4162] relative z-10 shadow-[0_0_30px_rgba(90,208,249,0.1)]">
+                            <div class="absolute inset-0 bg-[#5AD0F9] opacity-10 mix-blend-overlay z-20"></div>
+                            <img src="https://images.unsplash.com/photo-1546776310-eef45dd6d63c?q=80&w=800&auto=format&fit=crop" 
+                                 class="w-full h-full object-cover transform scale-105 group-hover:scale-100 transition-transform duration-1000">
+                        </div>
+                        
+                        <div class="absolute -bottom-6 -right-4 text-[#5AD0F9] opacity-50 text-xs font-mono tracking-widest">
+                            <i class="fa-solid fa-code-branch"></i> DATA_SEQ.04
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-[55%] flex flex-col justify-center pl-10">
+                    <div class="mb-10">
+                        <h1 class="text-[#5AD0F9] text-6xl font-bold uppercase tracking-tight font-tech leading-none mb-2 drop-shadow-[0_0_10px_rgba(90,208,249,0.4)]">Natural</h1>
+                        <h1 class="text-white text-6xl font-bold uppercase tracking-tight font-tech leading-none">Language</h1>
+                    </div>
+
+                    <div class="text-box-frame max-w-[580px]">
+                        <div class="corner corner-tl"></div>
+                        <div class="corner corner-tr"></div>
+                        <div class="corner corner-bl"></div>
+                        <div class="corner corner-br"></div>
+                        <div class="side-accent"></div>
+
+                        <div class="space-y-5">
+                            <p class="text-[#E0E0E0] text-sm leading-relaxed font-light opacity-90 text-justify">
+                                Natural Language Processing (NLP) is a branch of artificial intelligence that helps computers understand, interpret and manipulate human language. It bridges the gap between human communication and computer understanding.
+                            </p>
+                            <p class="text-[#E0E0E0] text-sm leading-relaxed font-light opacity-90 text-justify">
+                                Using advanced machine learning models, our systems can now process vast amounts of textual data to extract sentiment, perform translations, and generate human-like responses with unprecedented accuracy.
+                            </p>
+                            <div class="pt-2 flex items-center gap-3">
+                                <span class="w-8 h-[1px] bg-[#5AD0F9]/50"></span>
+                                <span class="text-[10px] font-mono text-[#5AD0F9] uppercase tracking-[0.3em]">AI Synthesis Ready</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Portfolio - Minimalist Cover</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .font-sans { font-family: 'Noto Sans SC', sans-serif; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .script-gold { font-family: 'Great Vibes', cursive; color: #C5A059; }
+        
+        /* 纯色背景渐变，模拟高级丝绸质感 */
+        .bg-burgundy-premium {
+            background: radial-gradient(circle at center, #3a1212 0%, #2D0A0A 100%);
+        }
+
+        /* 极简金色边框装饰 */
+        .cover-frame {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            right: 40px;
+            bottom: 40px;
+            border: 1px solid rgba(197, 160, 89, 0.2);
+            pointer-events: none;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        burgundy: '#2D0A0A',
+                        pureWhite: '#FFFFFF',
+                        gold: '#C5A059',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div id="page_container" class="relative w-[1280px] h-[720px] bg-burgundy-premium mx-auto overflow-hidden">
+        
+        <div class="cover-frame"></div>
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1px] h-32 bg-gradient-to-b from-gold to-transparent opacity-40"></div>
+        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[1px] h-32 bg-gradient-to-t from-gold to-transparent opacity-40"></div>
+
+        <div class="relative z-10 w-full h-full flex flex-col items-center justify-between py-24">
+            
+            <div class="text-center">
+                <p class="text-gold text-[12px] tracking-[0.8em] uppercase font-bold mb-4">Official Presentation</p>
+                <div class="w-16 h-[2px] bg-gold mx-auto"></div>
+            </div>
+
+            <div class="relative text-center">
+                <div class="absolute inset-0 flex items-center justify-center -z-10 opacity-5">
+                    <span class="font-serif text-[300px] text-gold uppercase font-bold tracking-widest">ART</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <h1 class="script-gold text-[160px] leading-none mb-[-60px] relative z-20">Creative</h1>
+                    <h2 class="font-serif text-[110px] text-pureWhite uppercase tracking-[-0.05em] font-bold leading-tight">
+                        Portfolio <span class="text-gold">2026</span>
+                    </h2>
+                    <div class="w-full max-w-2xl h-[1px] bg-gradient-to-r from-transparent via-gold/50 to-transparent mt-4"></div>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center gap-8">
+                <div class="flex items-center gap-12 text-pureWhite/90 font-serif italic text-xl">
+                    <div class="flex flex-col items-center">
+                        <span class="text-gold/60 text-[10px] uppercase tracking-widest not-italic mb-2">Presenter</span>
+                        <span class="tracking-widest">Rosa Maria Aguado</span>
+                    </div>
+                    <div class="w-[1px] h-10 bg-gold/30"></div>
+                    <div class="flex flex-col items-center">
+                        <span class="text-gold/60 text-[10px] uppercase tracking-widest not-italic mb-2">Department</span>
+                        <span class="tracking-widest">Visual Strategy Dept.</span>
+                    </div>
+                    <div class="w-[1px] h-10 bg-gold/30"></div>
+                    <div class="flex flex-col items-center">
+                        <span class="text-gold/60 text-[10px] uppercase tracking-widest not-italic mb-2">Date</span>
+                        <span class="tracking-widest">January 22, 2026</span>
+                    </div>
+                </div>
+
+                <div class="opacity-30 mt-4">
+                    <i class="fa-solid fa-shield-halved text-gold text-3xl"></i>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="absolute top-10 left-10 w-2 h-2 bg-gold/40 rounded-full"></div>
+        <div class="absolute top-10 right-10 w-2 h-2 bg-gold/40 rounded-full"></div>
+        <div class="absolute bottom-10 left-10 w-2 h-2 bg-gold/40 rounded-full"></div>
+        <div class="absolute bottom-10 right-10 w-2 h-2 bg-gold/40 rounded-full"></div>
+
+    </div>
+
+</body>
+</html>

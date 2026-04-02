@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High-End Pricing Table</title>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts via Baidu CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <style>
+        /* CSS Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* Page Container - Strict 1280x720 */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #040710; /* Deep Dark Background */
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Decorative Circuit Lines (CSS Shapes) */
+        .circuit-line {
+            position: absolute;
+            background-color: #4FB0C0;
+            border-radius: 2px;
+        }
+
+        .circuit-dot {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background-color: #4FB0C0;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #4FB0C0;
+        }
+
+        /* Custom Gradients adhering to strict syntax */
+        .gradient-bg-accent {
+            background: linear-gradient(to bottom, #2C6FCA, #4FB0C0);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(to right, #ffffff, #4FB0C0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Card Hover Effects (Subtle for high-end feel) */
+        .price-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        /* Typography adjustments */
+        h1, h2, h3, h4, h5, h6 {
+            letter-spacing: -0.02em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Container -->
+    <div id="page_container">
+
+        <!-- Decorative Background Elements (Circuit Board Style) -->
+        <!-- Top Left Decor -->
+        <div class="circuit-line" style="top: 40px; left: -20px; width: 100px; height: 2px;"></div>
+        <div class="circuit-line" style="top: 40px; left: 80px; width: 40px; height: 2px; transform: rotate(45deg); transform-origin: left;"></div>
+        <div class="circuit-line" style="top: 68px; left: 106px; width: 120px; height: 2px;"></div>
+        <div class="circuit-dot" style="top: 66px; left: 226px;"></div>
+
+        <div class="circuit-line" style="top: 80px; left: -20px; width: 80px; height: 2px;"></div>
+        <div class="circuit-line" style="top: 80px; left: 60px; width: 30px; height: 2px; transform: rotate(45deg); transform-origin: left;"></div>
+        <div class="circuit-line" style="top: 101px; left: 80px; width: 180px; height: 2px;"></div>
+        <div class="circuit-dot" style="top: 99px; left: 260px;"></div>
+
+        <div class="circuit-line" style="top: 120px; left: -20px; width: 140px; height: 2px;"></div>
+        <div class="circuit-dot" style="top: 118px; left: 120px;"></div>
+
+        <!-- Main Content Wrapper -->
+        <div class="w-full h-full flex flex-col items-center justify-center pt-8 px-12">
+            
+            <!-- Header Section -->
+            <div class="text-center mb-12 relative z-10">
+                <h1 class="text-6xl font-bold tracking-wider uppercase">
+                    <span class="text-white">Pricing</span> 
+                    <span class="text-[#4FB0C0]">Table</span>
+                </h1>
+                <!-- Subtle Underline Decoration -->
+                <div class="w-24 h-1 gradient-bg-accent mx-auto mt-4 rounded-full opacity-80"></div>
+            </div>
+
+            <!-- Cards Grid -->
+            <div class="grid grid-cols-4 gap-6 w-full max-w-[1100px] items-stretch">
+                
+                <!-- Card 1: Freelancer -->
+                <div class="price-card bg-[#1A1B1F] rounded-xl p-8 flex flex-col items-center text-center border border-white/5 shadow-lg relative group">
+                    <!-- Icon -->
+                    <div class="mb-6 text-[#4FB0C0] text-4xl">
+                        <i class="fa-solid fa-fingerprint"></i>
+                    </div>
+                    <!-- Title -->
+                    <h3 class="text-white text-lg font-bold uppercase mb-2">Freelancer</h3>
+                    <!-- Divider -->
+                    <div class="w-8 h-1 bg-[#4FB0C0] rounded-full mb-6"></div>
+                    <!-- Description -->
+                    <p class="text-[#B0B3B8] text-sm leading-relaxed mb-8 h-16 flex items-center justify-center">
+                        Affordable entry-level security solutions for essential protection.
+                    </p>
+                    <!-- Price Tag (Gradient Button Look) -->
+                    <div class="mt-auto w-full">
+                        <div class="gradient-bg-accent py-3 rounded-lg shadow-lg">
+                            <span class="text-white font-bold text-2xl">$49.50</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Retail -->
+                <div class="price-card bg-[#1A1B1F] rounded-xl p-8 flex flex-col items-center text-center border border-white/5 shadow-lg relative group">
+                    <!-- Icon -->
+                    <div class="mb-6 text-[#4FB0C0] text-4xl">
+                        <i class="fa-solid fa-desktop"></i>
+                    </div>
+                    <!-- Title -->
+                    <h3 class="text-white text-lg font-bold uppercase mb-2">Retail</h3>
+                    <!-- Divider -->
+                    <div class="w-8 h-1 bg-[#4FB0C0] rounded-full mb-6"></div>
+                    <!-- Description -->
+                    <p class="text-[#B0B3B8] text-sm leading-relaxed mb-8 h-16 flex items-center justify-center">
+                        Enhanced features for comprehensive threat defense.
+                    </p>
+                    <!-- Price Tag -->
+                    <div class="mt-auto w-full">
+                        <div class="gradient-bg-accent py-3 rounded-lg shadow-lg">
+                            <span class="text-white font-bold text-2xl">$21.99</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Business (Highlighted) -->
+                <!-- Note: This card uses the gradient as background, distinct style -->
+                <div class="price-card gradient-bg-accent rounded-xl p-8 flex flex-col items-center text-center shadow-2xl transform scale-105 z-10 border border-white/20">
+                    <!-- Icon -->
+                    <div class="mb-6 text-white text-4xl drop-shadow-md">
+                        <i class="fa-solid fa-cloud"></i>
+                    </div>
+                    <!-- Title -->
+                    <h3 class="text-white text-xl font-bold uppercase mb-2 tracking-wide">Business</h3>
+                    <!-- Divider -->
+                    <div class="w-8 h-1 bg-white rounded-full mb-6 opacity-80"></div>
+                    <!-- Description -->
+                    <p class="text-white text-sm leading-relaxed mb-8 h-16 flex items-center justify-center opacity-90 font-medium">
+                        Enhanced features and monitoring for comprehensive
+                    </p>
+                    <!-- Price Tag (Inverted Style: Dark Box) -->
+                    <div class="mt-auto w-full">
+                        <div class="bg-[#1A1B1F] py-4 rounded-lg shadow-inner border border-white/10">
+                            <span class="text-white font-bold text-3xl">$17.30</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Enterprise -->
+                <div class="price-card bg-[#1A1B1F] rounded-xl p-8 flex flex-col items-center text-center border border-white/5 shadow-lg relative group">
+                    <!-- Icon -->
+                    <div class="mb-6 text-[#4FB0C0] text-4xl">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <!-- Title -->
+                    <h3 class="text-white text-lg font-bold uppercase mb-2">Enterprise</h3>
+                    <!-- Divider -->
+                    <div class="w-8 h-1 bg-[#4FB0C0] rounded-full mb-6"></div>
+                    <!-- Description -->
+                    <p class="text-[#B0B3B8] text-sm leading-relaxed mb-8 h-16 flex items-center justify-center">
+                        Tailored security packages to meet specific organizational
+                    </p>
+                    <!-- Price Tag -->
+                    <div class="mt-auto w-full">
+                        <div class="gradient-bg-accent py-3 rounded-lg shadow-lg">
+                            <span class="text-white font-bold text-2xl">$84.65</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <!-- Bottom decorative fade to ensure depth -->
+            <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-[#040710] to-transparent pointer-events-none"></div>
+        </div>
+
+    </div>
+</body>
+</html>

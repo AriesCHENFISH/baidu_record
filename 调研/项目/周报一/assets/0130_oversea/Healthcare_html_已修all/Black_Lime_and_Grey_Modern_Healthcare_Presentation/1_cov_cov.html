@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Presentation Cover</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FFFFFF;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .bg-lime-accent { background-color: #D2F050; }
+        .text-lime-accent { color: #D2F050; }
+        
+        /* 装饰动画：微弱的脉冲感 */
+        .pulse-soft {
+            animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 0.1; transform: scale(1); }
+            50% { opacity: 0.15; transform: scale(1.05); }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <!-- 背景装饰：大型几何与圆环 -->
+        <div class="absolute top-[-100px] left-[-100px] w-[600px] h-[600px] bg-gray-50 rounded-full -z-10 pulse-soft"></div>
+        <div class="absolute bottom-[-150px] right-[-50px] w-[500px] h-[500px] bg-lime-accent opacity-10 rounded-full -z-10"></div>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-gray-100 rounded-full -z-20"></div>
+
+        <!-- 顶部装饰：品牌标识逻辑 -->
+        <div class="absolute top-16 flex flex-col items-center">
+            <div class="w-16 h-1.5 bg-lime-accent mb-4"></div>
+            <p class="text-xs font-black tracking-[0.4em] text-gray-400 uppercase">Premium Medical Report</p>
+        </div>
+
+        <!-- 主标题区 (居中设计) -->
+        <div class="text-center z-10">
+            <h1 class="text-[120px] font-black text-black uppercase leading-none tracking-tighter mb-10">
+                Healthcare<br>
+                Presentation
+            </h1>
+
+            <!-- 关键词设计 (关键词标签) -->
+            <div class="flex items-center justify-center gap-4 mb-16">
+                <div class="px-6 py-2 bg-black text-white rounded-full flex items-center gap-2">
+                    <i class="fa-solid fa-microscope text-lime-accent text-xs"></i>
+                    <span class="text-sm font-bold tracking-widest uppercase">Innovation</span>
+                </div>
+                <div class="px-6 py-2 bg-gray-100 text-black rounded-full flex items-center gap-2">
+                    <i class="fa-solid fa-heart-pulse text-lime-accent text-xs"></i>
+                    <span class="text-sm font-bold tracking-widest uppercase">Care</span>
+                </div>
+                <div class="px-6 py-2 bg-gray-100 text-black rounded-full flex items-center gap-2">
+                    <i class="fa-solid fa-shield-halved text-lime-accent text-xs"></i>
+                    <span class="text-sm font-bold tracking-widest uppercase">Safety</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部信息区 (左右分布) -->
+        <div class="absolute bottom-16 w-full px-20 flex justify-between items-end">
+            
+            <!-- 左侧：汇报人信息 -->
+            <div class="flex items-center gap-6">
+                <div class="w-16 h-16 rounded-2xl bg-gray-100 flex items-center justify-center text-3xl">
+                    <i class="fa-solid fa-user-doctor text-black"></i>
+                </div>
+                <div>
+                    <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Presented by</p>
+                    <p class="text-2xl font-black text-black uppercase">Dr. Alex Thompson</p>
+                </div>
+            </div>
+
+            <!-- 中间：页码装饰 -->
+            <div class="flex items-center gap-3">
+                <div class="w-2 h-2 bg-black rounded-full"></div>
+                <div class="w-8 h-1 bg-black rounded-full"></div>
+                <div class="w-2 h-2 bg-gray-200 rounded-full"></div>
+            </div>
+
+            <!-- 右侧：时间信息 -->
+            <div class="text-right">
+                <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Report Date</p>
+                <p class="text-2xl font-black text-black uppercase italic">JAN 26, 2025</p>
+            </div>
+        </div>
+
+        <!-- 边缘装饰线条 -->
+        <div class="absolute left-0 top-1/2 transform -translate-y-1/2 w-1.5 h-32 bg-lime-accent"></div>
+        <div class="absolute right-0 top-1/2 transform -translate-y-1/2 w-1.5 h-32 bg-black"></div>
+
+    </div>
+
+</body>
+</html>

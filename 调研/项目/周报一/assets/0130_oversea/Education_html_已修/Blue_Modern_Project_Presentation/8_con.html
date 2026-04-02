@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Identity Showcase - Slide 06</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background-color: #F0F0F0;
+            margin: 0 auto;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        .text-stroke-outline {
+            -webkit-text-stroke: 2px #333333;
+            color: transparent;
+        }
+
+        /* 模拟高级感的图片容器阴影 */
+        .image-card-shadow {
+            box-shadow: 40px 40px 80px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 扫光动画，增加动感 */
+        .shimmer {
+            position: relative;
+            overflow: hidden;
+        }
+        .shimmer::after {
+            content: "";
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: linear-gradient(45deg, transparent 45%, rgba(255,255,255,0.1) 50%, transparent 55%);
+            animation: shimmer-anim 6s infinite;
+        }
+        @keyframes shimmer-anim {
+            0% { transform: translate(-30%, -30%); }
+            100% { transform: translate(30%, 30%); }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container" class="text-[#222222]">
+
+        <!-- Decorative Background Glow -->
+        <div class="absolute top-[-20%] left-[-10%] w-[900px] h-[900px] rounded-full opacity-40 blur-[130px]" 
+             style="background: radial-gradient(circle, #7B8BFF 0%, transparent 70%); pointer-events: none;">
+        </div>
+
+        <!-- Decorative Big Number "06" (Back Layer) -->
+        <div class="absolute top-[-20px] left-[60px] z-0">
+            <h1 class="text-[420px] font-bold leading-none text-stroke-outline opacity-10 tracking-tighter">
+                06
+            </h1>
+        </div>
+
+        <!-- Main Layout Content -->
+        <div class="relative z-10 w-full h-full flex items-center px-20 pb-[70px]">
+            
+            <!-- LEFT: Design Showcase Image -->
+            <div class="w-[55%] relative">
+                <!-- Image Container with a sophisticated look -->
+                <div class="image-card-shadow rounded-sm bg-white p-4 rotate-[-1deg] shimmer">
+                    <div class="aspect-[4/3] bg-gray-200 overflow-hidden relative">
+                        <!-- 占位图使用了一张极简建筑/设计类图片 -->
+                        <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=1000" 
+                             alt="Design Showcase" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
+                        
+                        <!-- Image Overlay Label -->
+                        <div class="absolute bottom-6 left-6 bg-[#001AFF] text-white text-[10px] font-bold tracking-[0.3em] px-4 py-2 uppercase">
+                            Concept Preview v.01
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Secondary smaller image or detail -->
+                <div class="absolute -bottom-10 -right-10 w-[240px] h-[300px] image-card-shadow bg-white p-3 rotate-[3deg] z-20">
+                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=600" 
+                         alt="Color Palette" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- RIGHT: Title and Text -->
+            <div class="w-[45%] pl-20 flex flex-col justify-center">
+                <div class="mb-8">
+                    <div class="flex items-center gap-4 mb-4">
+                        <span class="w-12 h-[4px] bg-[#001AFF]"></span>
+                        <span class="text-sm font-bold tracking-[0.4em] text-[#001AFF] uppercase">Portfolio</span>
+                    </div>
+                    <h1 class="text-[96px] font-black leading-[0.85] tracking-tighter text-[#222222]">
+                        Visual<br>Identity
+                    </h1>
+                </div>
+
+                <div class="space-y-6 max-w-[400px]">
+                    <p class="text-[16px] text-gray-500 leading-relaxed font-light italic border-l-2 border-gray-200 pl-6">
+                        "Design is not just what it looks like and feels like. Design is how it works."
+                    </p>
+                    <p class="text-[14px] text-gray-600 leading-relaxed text-justify">
+                        Our visual identity system is built on the pillars of clarity, consistency, and cultural relevance. Every element is meticulously crafted to ensure the brand resonates across all digital and physical touchpoints.
+                    </p>
+                    
+                    <!-- Decorative specs/details -->
+                    <div class="grid grid-cols-2 gap-4 pt-4 border-t border-gray-200">
+                        <div>
+                            <span class="block text-[10px] uppercase tracking-widest text-gray-400">Typography</span>
+                            <span class="text-[13px] font-bold">Noto Sans SC / Inter</span>
+                        </div>
+                        <div>
+                            <span class="block text-[10px] uppercase tracking-widest text-gray-400">Core Color</span>
+                            <span class="text-[13px] font-bold">#001AFF (Electric Blue)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer Bar (Consistent with 03 style) -->
+        <div class="absolute bottom-0 left-0 w-full h-[70px] bg-[#001AFF] flex items-center justify-between px-16 z-30">
+            <div class="flex items-center">
+                <span class="text-white text-lg font-medium tracking-wide">Thynk Unlimited</span>
+            </div>
+            
+            <div class="flex items-center">
+                <span class="text-white/40 mx-4">/</span>
+                <span class="text-white text-lg font-light tracking-[0.2em] uppercase">Visual Excellence</span>
+                <span class="text-white/40 mx-4">/</span>
+            </div>
+
+            <div class="flex items-center">
+                <span class="text-white text-lg font-light tracking-wide italic">Slide 06</span>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

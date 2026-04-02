@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05 Conclusions - Smart Redesign</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+
+    <!-- Google Fonts (Domestic Mirror as requested) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- ECharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+
+    <style>
+        /* CSS Reset & Global Standards */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Font Family Configuration */
+        .font-sans {
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Custom Scrollbar hidden for presentation */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Specific EChart Container styling */
+        #chart-container {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Page Container -->
+    <div id="page_container" class="w-[1280px] h-[720px] bg-[#6B722C] relative mx-auto overflow-hidden font-sans text-[#F2F2F2]">
+
+        <!-- Decorative Background Element: Subtle Gradient Orb -->
+        <div class="absolute top-[-100px] right-[-100px] w-[500px] h-[500px] rounded-full opacity-20 pointer-events-none" 
+             style="background: radial-gradient(circle, #EAD3B6 0%, transparent 70%);">
+        </div>
+
+        <!-- Layout Grid: 12 Columns -->
+        <div class="grid grid-cols-12 h-full w-full relative z-10">
+
+            <!-- Left Content Area (Text) -->
+            <div class="col-span-4 h-full border-r border-[#899052] flex flex-col pt-16 pb-12 px-12 relative">
+                
+                <!-- Header Section -->
+                <div class="mb-12">
+                    <div class="flex items-baseline space-x-4 mb-2">
+                        <span class="text-[#899052] text-6xl font-light opacity-60">09</span>
+                    </div>
+                    <h1 class="text-5xl font-bold tracking-tight text-[#F2F2F2]">Conclusions</h1>
+                    <div class="h-1 w-20 bg-[#EAD3B6] mt-6 rounded-full"></div>
+                </div>
+
+                <!-- Text Content -->
+                <div class="flex-1 pr-4">
+                    <p class="text-gl leading-relaxed text-[#F2F2F2] opacity-90 text-justify font-light">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    <div class="h-8"></div> <!-- Spacer -->
+                    <p class="text-gl leading-relaxed text-[#F2F2F2] opacity-90 text-justify font-light">
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+                    </p>
+                </div>
+                
+                <!-- Footer/Decoration on Left -->
+                <div class="mt-auto flex items-center gap-3 opacity-60">
+                    <i class="fa-solid fa-chart-line text-[#EAD3B6]"></i>
+                    <span class="text-sm tracking-widest uppercase">Annual Analysis</span>
+                </div>
+            </div>
+
+            <!-- Right Content Area (Chart & Image) -->
+            <div class="col-span-8 h-full flex flex-col relative">
+                
+                <!-- Top Decorative Header Line (Visual Continuation) -->
+                <div class="h-24 border-b border-[#899052] w-full flex items-center justify-end px-12">
+                    <!-- Top Right Image Container -->
+                    <!-- Using absolute positioning to break the grid slightly for visual interest, mirroring the original layout but cleaner -->
+                    <div class="absolute top-[-40px] right-[60px] w-[280px] h-[280px] rounded-full border-[6px] border-[#6B722C] shadow-2xl overflow-hidden bg-[#EAD3B6] z-20">
+                        <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?q=80&w=600&auto=format&fit=crop" 
+                             alt="Roast Chicken Top View" 
+                             class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700">
+                        <!-- 280*280 -->
+                    </div>
+                </div>
+
+                <!-- Chart Area -->
+                <div class="flex-1 p-12 pt-20 relative">
+                    <!-- Chart Title overlay -->
+                    <div class="absolute top-8 left-12 z-10">
+                        <h2 class="text-xl font-medium text-[#EAD3B6] mb-1">Performance Correlation</h2>
+                        <p class="text-xs text-[#899052]">Scatter Data Distribution (0-30 Range)</p>
+                    </div>
+
+                    <!-- ECharts Container -->
+                    <div id="chart-container"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ECharts Initialization Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var chartDom = document.getElementById('chart-container');
+            var myChart = echarts.init(chartDom);
+            var option;
+
+            // Brand Colors
+            const colorPrimary = '#6B722C';
+            const colorText = '#F2F2F2';
+            const colorAccent = '#EAD3B6';
+            const colorDivider = '#899052';
+            const colorDecoration = '#5D3A1A';
+
+            // Data extraction from the original scatter plot image
+            // Estimated coordinates: (3, 15), (10, 18), (11, 20), (14, 40), (21, 155), (25, 240)
+            const data = [
+                [3, 15],
+                [10, 18],
+                [11, 22],
+                [14, 45],
+                [21, 155],
+                [25, 240]
+            ];
+
+            option = {
+                backgroundColor: 'transparent',
+                grid: {
+                    top: '15%',
+                    right: '10%',
+                    bottom: '10%',
+                    left: '10%',
+                    containLabel: false
+                },
+                tooltip: {
+                    trigger: 'item',
+                    backgroundColor: 'rgba(93, 58, 26, 0.9)', // Dark Brown
+                    borderColor: colorAccent,
+                    textStyle: {
+                        color: colorText
+                    },
+                    formatter: function (params) {
+                        return `Value: ${params.data[0]}, ${params.data[1]}`;
+                    }
+                },
+                xAxis: {
+                    type: 'value',
+                    min: 0,
+                    max: 30,
+                    interval: 10,
+                    splitLine: {
+                        show: true,
+                        lineStyle: {
+                            color: colorDivider,
+                            type: 'dashed',
+                            opacity: 0.3
+                        }
+                    },
+                    axisLine: {
+                        lineStyle: {
+                            color: colorDivider
+                        }
+                    },
+                    axisLabel: {
+                        color: colorText,
+                        fontFamily: 'Noto Sans SC',
+                        fontSize: 12
+                    },
+                    axisTick: {
+                        show: false
+                    }
+                },
+                yAxis: {
+                    type: 'value',
+                    min: 0,
+                    max: 250,
+                    interval: 50,
+                    splitLine: {
+                        show: true,
+                        lineStyle: {
+                            color: colorDivider,
+                            type: 'dashed',
+                            opacity: 0.3
+                        }
+                    },
+                    axisLine: {
+                        show: false
+                    },
+                    axisLabel: {
+                        color: colorText,
+                        fontFamily: 'Noto Sans SC',
+                        fontSize: 12
+                    }
+                },
+                series: [
+                    {
+                        type: 'scatter',
+                        symbolSize: 16,
+                        data: data,
+                        itemStyle: {
+                            color: colorAccent, // Beige dots
+                            borderColor: colorText,
+                            borderWidth: 2,
+                            shadowBlur: 10,
+                            shadowColor: 'rgba(0, 0, 0, 0.3)'
+                        },
+                        // Add a subtle ripple effect for visual flair
+                        emphasis: {
+                            scale: true,
+                            itemStyle: {
+                                color: '#fff',
+                                borderColor: colorAccent,
+                                borderWidth: 4
+                            }
+                        }
+                    }
+                ]
+            };
+
+            myChart.setOption(option);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinical Research - Warner & Spencer</title>
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0F3C6F',
+                        secondary: '#2D6CC0',
+                        accent: '#4A90E2',
+                        neutral: '#666666',
+                        texture: '#E8EFF7',
+                        border: '#8BB1D9',
+                    },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; overflow: hidden; background-color: #FFFFFF; }
+        .bg-gradient-primary { background: linear-gradient(135deg, #2D6CC0, #4A90E2); }
+        .card-shadow { box-shadow: 0 15px 40px -12px rgba(15, 60, 111, 0.12); }
+        /* 装饰背景：取代图片的几何斜切块 */
+        .bg-decoration { position: absolute; right: -10%; top: -10%; width: 50%; height: 120%; background-color: #F8FAFD; transform: rotate(5deg); z-index: 0; border-left: 2px solid #E8EFF7; }
+        .accent-line { width: 4px; height: 100%; background: linear-gradient(to bottom, #4A90E2, transparent); position: absolute; left: 0; top: 0; }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <!-- 几何装饰背景 -->
+        <div class="bg-decoration"></div>
+
+        <div class="w-full h-full flex flex-col p-12 relative z-10">
+            
+            <!-- Logo Area -->
+            <header class="flex flex-col mb-16">
+                <div class="flex items-baseline">
+                    <span class="text-primary font-black text-2xl tracking-[0.15em]">WARNER</span>
+                    <span class="text-accent font-light text-2xl mx-1">&</span>
+                    <span class="text-primary font-light text-2xl tracking-[0.15em]">SPENCER</span>
+                </div>
+                <div class="flex items-center gap-2 mt-1">
+                    <div class="h-[2px] w-8 bg-accent"></div>
+                    <span class="text-[10px] text-neutral font-bold tracking-[0.4em] uppercase">Pharmaceuticals</span>
+                </div>
+            </header>
+
+            <!-- Main Content Layout -->
+            <div class="grid grid-cols-12 gap-12 items-start">
+                
+                <!-- Left Section: Title & Narrative -->
+                <div class="col-span-5 flex flex-col pt-4">
+                    <div class="relative mb-10">
+                        <!-- 水印字母 R (Research) -->
+                        <span class="absolute -top-20 -left-10 text-[240px] font-black text-texture opacity-60 select-none z-[-1]">R</span>
+                        <h1 class="text-primary text-[60px] font-black leading-[0.9] tracking-tighter uppercase">
+                            CLINICAL <br>
+                            <span class="text-accent italic font-light">RESEARCH</span>
+                        </h1>
+                        <div class="h-2 w-24 bg-primary mt-10 rounded-full"></div>
+                    </div>
+                    
+                    <div class="relative pl-8">
+                        <div class="accent-line"></div>
+                        <p class="text-neutral text-lg leading-relaxed text-justify mb-6">
+                            Our commitment to clinical excellence is demonstrated through rigorous double-blind studies and multi-center trials across three continents.
+                        </p>
+                        <p class="text-neutral/80 text-sm leading-relaxed text-justify">
+                            Each phase of our pharmaceutical development is monitored by independent ethics committees, ensuring the highest standards of patient safety and data integrity in the industry.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Section: Feature Cards (纯文字布局美化) -->
+                <div class="col-span-7 grid grid-cols-2 gap-6">
+                    
+                    <!-- Card 1: Technical Milestone -->
+                    <div class="bg-white border border-border rounded-2xl p-8 card-shadow flex flex-col justify-between h-64">
+                        <div>
+                            <div class="text-secondary text-3xl mb-4"><i class="fa-solid fa-vial-circle-check"></i></div>
+                            <h3 class="text-primary text-xl font-bold mb-2">Phase III Trials</h3>
+                            <p class="text-neutral text-xs leading-relaxed">Comprehensive efficacy testing across diverse demographic groups with over 12,000 active participants.</p>
+                        </div>
+                        <div class="text-accent font-bold text-2xl">99.4% <span class="text-[10px] text-neutral font-normal tracking-widest uppercase ml-2">Accuracy Rate</span></div>
+                    </div>
+
+                    <!-- Card 2: Gradient QA Card -->
+                    <div class="bg-gradient-primary rounded-2xl p-8 card-shadow text-white flex flex-col justify-between h-64">
+                        <div>
+                            <div class="text-white/30 text-3xl mb-4"><i class="fa-solid fa-microscope"></i></div>
+                            <h3 class="text-white text-xl font-bold mb-2">Purity Analysis</h3>
+                            <p class="text-white/70 text-xs leading-relaxed">Utilizing High-Performance Liquid Chromatography (HPLC) to ensure zero cross-contamination.</p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="h-1 w-12 bg-white/40 rounded-full"></span>
+                            <span class="text-[10px] font-bold tracking-[0.2em] uppercase">ISO 9001 Certified</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Wide Card covering 2 columns -->
+                    <div class="col-span-2 bg-primary rounded-2xl p-8 card-shadow text-white flex items-center justify-between">
+                        <div class="flex items-center gap-8">
+                            <div class="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center text-accent text-3xl">
+                                <i class="fa-solid fa-file-shield"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold">Global Compliance Standards</h3>
+                                <p class="text-white/60 text-sm">Meeting and exceeding FDA, EMA, and NMPA regulatory requirements for safety.</p>
+                            </div>
+                        </div>
+                        <div class="border-l border-white/10 pl-8 hidden lg:block">
+                            <div class="text-xs text-white/40 mb-1 tracking-tighter uppercase">Last Review Date</div>
+                            <div class="text-lg font-light tracking-widest">Q4 2024</div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Detailed Protocol Card -->
+                    <div class="col-span-2 border border-border bg-white rounded-2xl p-6 flex items-center gap-6">
+                        <div class="flex -space-x-4">
+                            <div class="w-10 h-10 rounded-full bg-texture border-2 border-white flex items-center justify-center text-primary text-xs font-bold">QA</div>
+                            <div class="w-10 h-10 rounded-full bg-secondary border-2 border-white flex items-center justify-center text-white text-xs font-bold">QC</div>
+                            <div class="w-10 h-10 rounded-full bg-accent border-2 border-white flex items-center justify-center text-white text-xs font-bold">RD</div>
+                        </div>
+                        <p class="text-neutral text-xs italic">"Quality is not just a department, it's a fundamental principle of our clinical synthesis process."</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Footer Decorative Plus -->
+            <div class="absolute bottom-12 right-12">
+                <div class="w-16 h-16 rounded-full bg-gradient-primary flex items-center justify-center text-white text-3xl shadow-xl border-4 border-white">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

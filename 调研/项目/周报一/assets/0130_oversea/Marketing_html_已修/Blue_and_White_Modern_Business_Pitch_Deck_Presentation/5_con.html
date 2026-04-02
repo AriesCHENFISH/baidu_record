@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salford & Co. - The Problem We Solve</title>
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- Custom Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgPrimary: '#181818',
+                        cardBg: '#2D2D2D',
+                        brandBlue: '#3B71F3',
+                        textPrimary: '#FFFFFF',
+                        textSecondary: '#B3B3B3',
+                        iconDetail: '#5A8AF5'
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Structure */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Main Slide Container */
+        .page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #181818;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Decorative Background Elements */
+        .bg-gradient-orb {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.08;
+            pointer-events: none;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page_container">
+        <!-- Background Decor: Subtle gradient blob for depth -->
+        <div class="bg-gradient-orb" style="background: #3B71F3; top: -200px; left: -200px;"></div>
+        <div class="bg-gradient-orb" style="background: #3B71F3; bottom: -300px; right: -100px; opacity: 0.05;"></div>
+
+        <!-- 1. Unified Header Section (Matching the Cover Design) -->
+        <header class="relative z-10 w-full px-12 pt-10 flex justify-between items-center shrink-0">
+            <!-- Left: Company Branding -->
+            <div class="flex items-center gap-3">
+                <!-- Icon container -->
+                <div class="w-8 h-8 flex items-center justify-center rounded-full" style="background-color: rgba(59, 113, 243, 0.2);">
+                    <i class="fa-solid fa-sun text-[#3B71F3] text-sm"></i>
+                </div>
+                <h3 class="text-[#FFFFFF] text-lg font-bold tracking-wide">Salford & Co.</h3>
+            </div>
+
+            <!-- Right: Year and Action -->
+            <div class="flex items-center gap-4">
+                <!-- Year Pill -->
+                <div class="px-5 py-1.5 rounded-full border border-[#2D2D2D] bg-[#2D2D2D]">
+                    <span class="text-[#FFFFFF] text-sm font-semibold">2030</span>
+                </div>
+                <!-- Action Arrow -->
+                <div class="w-10 h-10 rounded-full bg-[#3B71F3] flex items-center justify-center shadow-lg">
+                    <i class="fa-solid fa-arrow-right text-white"></i>
+                </div>
+            </div>
+        </header>
+
+        <!-- 2. Main Content Grid -->
+        <main class="relative z-10 grid grid-cols-12 gap-10 px-12 flex-1 content-center">
+            
+            <!-- Left Column: Typography Headline -->
+            <div class="col-span-6 flex flex-col justify-center pr-8">
+                <div class="mb-6 flex items-center gap-2">
+                    <div class="w-8 h-[2px] bg-brandBlue"></div>
+                    <span class="text-brandBlue text-sm font-bold tracking-widest uppercase">Overview</span>
+                </div>
+                
+                <h1 class="text-textPrimary text-8xl font-bold leading-[0.95] tracking-tighter mb-6">
+                    The Problem <br>
+                    <span class="text-transparent bg-clip-text" style="background-image: linear-gradient(to right, #FFFFFF, #789ded);">We Solve</span>
+                </h1>
+                
+                <p class="text-textSecondary text-lg max-w-md mt-4 border-l-2 border-[#333] pl-4">
+                    Identifying the critical gaps in modern enterprise collaboration.
+                </p>
+            </div>
+
+            <!-- Right Column: Visual & Content Card -->
+            <div class="col-span-6 flex flex-col gap-6 justify-center">
+                
+                <!-- Image Container -->
+                <div class="w-full relative rounded-2xl overflow-hidden shadow-2xl h-[260px]">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop" 
+                         alt="Team collaboration" 
+                         class="w-full h-full object-cover opacity-90">
+                    
+                    <!-- Image Overlay Gradient -->
+                    <div class="absolute inset-0" style="background: linear-gradient(to top, #181818 0%, transparent 100%);"></div>
+                </div>
+
+                <!-- Content Card -->
+                <div class="bg-cardBg p-8 rounded-2xl border-l-4 border-brandBlue shadow-xl relative">
+                    <!-- Decorative Icon -->
+                    <div class="absolute top-8 right-8 text-[#333]">
+                        <i class="fa-solid fa-quote-right text-4xl"></i>
+                    </div>
+
+                    <h3 class="text-textPrimary text-xl font-bold mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-triangle-exclamation text-brandBlue text-sm"></i>
+                        Core Challenges
+                    </h3>
+                    
+                    <p class="text-textSecondary text-base leading-relaxed">
+                        Today’s businesses struggle with fragmented communication, inconsistent workflows, and lack of real-time collaboration tools. Teams often work in silos, which leads to inefficiencies.
+                    </p>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- 3. Footer Section (Modified) -->
+        <footer class="relative z-10 w-full px-12 pb-8 flex justify-end items-center shrink-0">
+            <!-- Left Side Link Removed -->
+
+            <!-- Right Side Page Number -->
+            <div class="flex items-center gap-4">
+                <span class="text-textSecondary text-xs uppercase tracking-widest">Page</span>
+                <span class="text-textPrimary font-bold text-xl">05</span>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Technologies - Future Tech Presentation</title>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts (Domestic Mirror) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgPrimary: '#211545',
+                        accentPurple: '#6D3BFE',
+                        cardFill: 'rgba(60, 44, 122, 0.85)',
+                        neonCyan: '#84D9FF',
+                        gradientBlue: '#4D6AFF',
+                        borderDeco: '#A5A6C4',
+                        textMain: '#FFFFFF',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'neon': '0 0 10px rgba(132, 217, 255, 0.6), 0 0 20px rgba(132, 217, 255, 0.3)',
+                        'card': '0 10px 30px rgba(0, 0, 0, 0.5)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Global Standards */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* Page Container - Fixed Size */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background-color: #211545;
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(109, 59, 254, 0.3) 0%, transparent 60%),
+                linear-gradient(180deg, rgba(33, 21, 69, 0) 0%, rgba(33, 21, 69, 1) 100%);
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        /* Utility specific to strict constraints */
+        .clip-slant-right {
+            clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+        }
+        
+        .clip-tech-card {
+            clip-path: polygon(
+                0 0, 
+                100% 0, 
+                100% calc(100% - 20px), 
+                calc(100% - 20px) 100%, 
+                20px 100%, 
+                0 calc(100% - 20px)
+            );
+        }
+
+        .text-glow {
+            text-shadow: 0 0 15px rgba(132, 217, 255, 0.5);
+        }
+
+        /* Grid Background pattern */
+        .grid-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(165, 166, 196, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(165, 166, 196, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <!-- Background Decorative Grid -->
+        <div class="grid-bg"></div>
+
+        <!-- Top Left Branding -->
+        <div class="absolute top-12 left-16 z-10">
+            <h6 class="text-borderDeco tracking-[0.2em] text-sm font-light uppercase opacity-80">Studio Shodwe</h6>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="relative w-full h-full flex flex-col pt-32 px-16 pb-12 z-10">
+            
+            <!-- Upper Section: Title and Feature Image -->
+            <div class="flex flex-row items-center h-[55%] w-full mb-8">
+                
+                <!-- Title Section -->
+                <div class="w-5/12 flex flex-col justify-center z-20">
+                    <h1 class="text-neonCyan text-7xl font-bold leading-none tracking-wide text-glow mb-4">
+                        KEY
+                    </h1>
+                    <h1 class="text-white text-6xl font-bold leading-none tracking-wider uppercase border-l-8 border-accentPurple pl-6">
+                        Technologies
+                    </h1>
+                </div>
+
+                <!-- Hero Image Section with Slant Cut -->
+                <div class="w-8/12 h-full absolute top-0 right-0 clip-slant-right overflow-hidden shadow-2xl">
+                    <!-- Overlay Gradient for text readability integration -->
+                    <div class="absolute inset-0 bg-gradient-to-r from-accentPurple/40 to-transparent z-10 mix-blend-multiply"></div>
+                    <div class="absolute inset-0 bg-gradient-to-l from-bgPrimary/20 to-bgPrimary/80 z-10"></div>
+                    
+                    <img src="https://images.unsplash.com/photo-1617802690992-15d93263d3a9?q=80&w=1000&auto=format&fit=crop" 
+                         alt="Woman using VR headset in futuristic lighting" 
+                         class="w-full h-full object-cover object-center transform scale-110">
+                    <!-- 900*450 -->
+                </div>
+            </div>
+
+            <!-- Lower Section: 3 Info Cards -->
+            <div class="h-[45%] w-full flex flex-row justify-between items-end gap-8">
+                
+                <!-- Card 1: VR -->
+                <div class="flex-1 h-full flex flex-col group">
+                    <!-- Header Tab -->
+                    <div class="flex items-center bg-gradient-to-r from-accentPurple to-[#502bbd] px-4 py-3 w-11/12 clip-path-polygon-[0_0,_100%_0,_95%_100%,_0%_100%] shadow-lg relative left-0 transition-all duration-300 group-hover:pl-6">
+                        <i class="fa-solid fa-angles-right text-neonCyan mr-3 text-lg"></i>
+                        <h3 class="text-white font-bold text-lg tracking-wider uppercase">Virtual Reality (VR)</h3>
+                    </div>
+                    
+                    <!-- Content Body -->
+                    <div class="flex-1 bg-cardFill border border-borderDeco/30 p-8 clip-tech-card shadow-card backdrop-blur-md mt-[-2px] hover:bg-[#46338f] transition-colors duration-300">
+                        <p class="text-gray-200 text-lg font-light leading-relaxed">
+                            Full digital immersion enabling users to experience simulated environments as if they were real.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Blockchain -->
+                <div class="flex-1 h-full flex flex-col group">
+                    <!-- Header Tab -->
+                    <div class="flex items-center bg-gradient-to-r from-accentPurple to-[#502bbd] px-4 py-3 w-11/12 clip-path-polygon-[0_0,_100%_0,_95%_100%,_0%_100%] shadow-lg relative left-0 transition-all duration-300 group-hover:pl-6">
+                        <i class="fa-solid fa-angles-right text-neonCyan mr-3 text-lg"></i>
+                        <h3 class="text-white font-bold text-lg tracking-wider uppercase">Blockchain</h3>
+                    </div>
+                    
+                    <!-- Content Body -->
+                    <div class="flex-1 bg-cardFill border border-borderDeco/30 p-8 clip-tech-card shadow-card backdrop-blur-md mt-[-2px] hover:bg-[#46338f] transition-colors duration-300">
+                        <p class="text-gray-200 text-lg font-light leading-relaxed">
+                            Decentralized ownership of digital assets, ensuring transparency, security, and immutability.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3: AI -->
+                <div class="flex-1 h-full flex flex-col group">
+                    <!-- Header Tab -->
+                    <div class="flex items-center bg-gradient-to-r from-accentPurple to-[#502bbd] px-4 py-3 w-11/12 clip-path-polygon-[0_0,_100%_0,_95%_100%,_0%_100%] shadow-lg relative left-0 transition-all duration-300 group-hover:pl-6">
+                        <i class="fa-solid fa-angles-right text-neonCyan mr-3 text-lg"></i>
+                        <h3 class="text-white font-bold text-lg tracking-wider uppercase">AI</h3>
+                    </div>
+                    
+                    <!-- Content Body -->
+                    <div class="flex-1 bg-cardFill border border-borderDeco/30 p-8 clip-tech-card shadow-card backdrop-blur-md mt-[-2px] hover:bg-[#46338f] transition-colors duration-300">
+                        <p class="text-gray-200 text-lg font-light leading-relaxed">
+                            Enhances interactions and content generation through intelligent automation and learning.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Decorative Floating Shapes (Cyberpunk Aesthetics) -->
+        <div class="absolute bottom-10 right-10 w-32 h-32 border-2 border-neonCyan/20 rounded-full z-0"></div>
+        <div class="absolute bottom-14 right-14 w-24 h-24 border border-accentPurple/30 rounded-full z-0"></div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Role of Individuals - Cybersecurity Keynote</title>
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        void: '#0A111F',      // Deep Void Blue
+                        neon: '#4FD1FF',      // Neon Electric Blue
+                        pale: '#A8C5E6',      // Tech Pale Blue
+                        navy: '#142238',      // Midnight Navy
+                        stroke: '#2B4F81',    // Border Stroke Blue
+                        terminal: '#4CAF50',  // Terminal Green
+                        alert: '#E65100',     // Alert Orange
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        cyber: ['Orbitron', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'neon-glow': '0 0 15px rgba(79, 209, 255, 0.4)',
+                        'box-glow': '0 0 30px rgba(20, 34, 56, 0.8)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #0A111F;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+            background-image: 
+                linear-gradient(rgba(43, 79, 129, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(43, 79, 129, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* 复制第一个页面的故障阴影效果 */
+        .cyber-glitch-text {
+            text-shadow: 2px 2px 0px rgba(43, 79, 129, 0.5);
+        }
+
+        .chamfered-box {
+            clip-path: polygon(
+                20px 0, 100% 0, 
+                100% calc(100% - 20px), calc(100% - 20px) 100%, 
+                0 100%, 0 20px
+            );
+        }
+
+        .chamfered-frame {
+            clip-path: polygon(
+                40px 0, 100% 0, 
+                100% calc(100% - 40px), calc(100% - 40px) 100%, 
+                0 100%, 0 40px
+            );
+        }
+
+        .cursor-blink {
+            display: inline-block;
+            width: 8px;
+            height: 1em;
+            background-color: #4FD1FF;
+            animation: blink 1s step-end infinite;
+            vertical-align: middle;
+            margin-left: 5px;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <div class="absolute top-8 right-8 flex gap-2">
+            <div class="w-2 h-2 bg-terminal rounded-full animate-pulse"></div>
+            <div class="w-16 h-2 bg-stroke opacity-50"></div>
+            <div class="w-2 h-2 bg-stroke"></div>
+        </div>
+
+        <div class="absolute top-8 left-8 text-stroke text-xs font-mono opacity-40">
+            <p>SYS.SEC.LEVEL_05 // INIT_PROTOCOL</p>
+        </div>
+
+        <div class="grid grid-cols-12 gap-8 h-full p-12 pt-16">
+
+            <div class="col-span-5 flex flex-col justify-center relative">
+                
+                <div class="mb-10 relative z-10">
+                    <h1 class="text-6xl leading-[0.9] font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-neon to-white uppercase cyber-glitch-text tracking-tight mb-4 drop-shadow-[0_0_10px_rgba(79,209,255,0.3)] font-cyber">
+                        Role of<br>Individuals
+                    </h1>
+                    <div class="h-1 w-32 bg-gradient-to-r from-neon to-transparent mt-2"></div>
+                </div>
+
+                <div class="relative w-full aspect-[4/3]">
+                    <div class="absolute -inset-2 border border-stroke opacity-50 chamfered-frame pointer-events-none"></div>
+                    <div class="absolute -inset-1 border border-neon opacity-20 chamfered-frame pointer-events-none"></div>
+
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 w-16 h-2 bg-neon shadow-neon-glow"></div>
+                    <div class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-16 h-2 bg-neon shadow-neon-glow"></div>
+
+                    <div class="w-full h-full bg-navy chamfered-frame overflow-hidden relative shadow-box-glow">
+                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=800&auto=format&fit=crop" 
+                             alt="Cybersecurity Team Analysis" 
+                             class="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-700">
+                        
+                        <div class="absolute inset-0 bg-gradient-to-t from-void via-transparent to-transparent opacity-80"></div>
+                        
+                        <div class="absolute bottom-6 left-6 text-white">
+                            <div class="flex items-center gap-2 mb-1">
+                                <i class="fa-solid fa-users-viewfinder text-neon text-sm"></i>
+                                <span class="font-mono text-xs text-neon tracking-widest">HUMAN_FACTOR_DETECTED</span>
+                            </div>
+                            <div class="h-[1px] w-full bg-stroke mb-2"></div>
+                            <p class="font-mono text-[10px] text-pale opacity-70">
+                                Analyzing behavioral patterns...<br>
+                                Threat level: MITIGATED
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-span-7 flex flex-col justify-center pl-8 pt-10">
+                
+                <div class="mb-10 border-l-4 border-terminal pl-6">
+                    <h2 class="text-white font-cyber text-2xl tracking-widest uppercase mb-2">
+                        How Individuals <br>
+                        <span class="text-pale">Strengthen Security</span>
+                    </h2>
+                    <p class="text-stroke font-mono text-sm">/// ACCESSING_TRAINING_MODULES_V2.0</p>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="chamfered-box bg-navy border border-stroke p-6 relative group transition-all duration-300 hover:border-neon hover:shadow-neon-glow hover:translate-x-2">
+                        <div class="absolute top-0 right-0 w-0 h-0 border-t-[20px] border-r-[20px] border-t-transparent border-r-neon opacity-50"></div>
+                        <div class="flex gap-5">
+                            <div class="mt-1">
+                                <div class="w-10 h-10 rounded-lg bg-void border border-stroke flex items-center justify-center text-neon">
+                                    <i class="fa-solid fa-fingerprint text-xl"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-neon font-bold mb-2 uppercase text-sm tracking-wide">Individual Habits & Access Control</h3>
+                                <p class="text-pale text-sm leading-relaxed opacity-90">
+                                    Individual habits greatly affect cybersecurity. Creating <span class="text-white font-semibold">unique, complex passwords</span> and verifying unknown links can stop threats before they begin. Everyone has the power to reduce risk.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chamfered-box bg-navy border border-stroke p-6 relative group transition-all duration-300 hover:border-neon hover:shadow-neon-glow hover:translate-x-2">
+                        <div class="absolute bottom-0 left-0 w-0 h-0 border-b-[20px] border-l-[20px] border-b-transparent border-l-terminal opacity-50"></div>
+                        <div class="flex gap-5">
+                            <div class="mt-1">
+                                <div class="w-10 h-10 rounded-lg bg-void border border-stroke flex items-center justify-center text-terminal">
+                                    <i class="fa-solid fa-shield-halved text-xl"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-terminal font-bold mb-2 uppercase text-sm tracking-wide">Proactive Defense Measures</h3>
+                                <p class="text-pale text-sm leading-relaxed opacity-90">
+                                    Learning basic safety—like avoiding suspicious attachments, <span class="text-white font-semibold">updating devices</span>, and enabling security settings—builds a safer digital environment for everyone connected.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 flex items-end justify-between">
+                    <div class="font-mono text-[10px] text-stroke leading-tight">
+                        STATUS: ACTIVE<br>
+                        NODE: 127.0.0.1<br>
+                        ENCRYPTION: AES-256
+                    </div>
+
+                    <div class="relative w-64 h-32 border border-stroke bg-black p-1">
+                        <div class="absolute -top-1 -left-1 w-3 h-3 border-t-2 border-l-2 border-neon"></div>
+                        <div class="absolute -top-1 -right-1 w-3 h-3 border-t-2 border-r-2 border-neon"></div>
+                        <div class="absolute -bottom-1 -left-1 w-3 h-3 border-b-2 border-l-2 border-neon"></div>
+                        <div class="absolute -bottom-1 -right-1 w-3 h-3 border-b-2 border-r-2 border-neon"></div>
+
+                        <div class="w-full h-full overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=400&auto=format&fit=crop" 
+                                 alt="Secure Workspace" 
+                                 class="w-full h-full object-cover grayscale opacity-60">
+                            <div class="absolute top-2 left-2 bg-alert text-white text-[8px] font-bold px-1 py-0.5 rounded-sm">
+                                LIVE FEED
+                            </div>
+                            <div class="absolute bottom-2 left-2 right-2">
+                                <div class="h-1 bg-gradient-to-r from-terminal to-transparent w-3/4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-transparent via-stroke to-transparent opacity-30"></div>
+        <div class="absolute bottom-4 right-8 font-mono text-xs text-stroke">
+            SECURE_CONNECTION <span class="cursor-blink"></span>
+        </div>
+
+    </div>
+
+</body>
+</html>

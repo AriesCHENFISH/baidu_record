@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marine Biodiversity - Refined</title>
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&family=Libre+Baskerville:ital@1&display=swap">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepOcean: '#020B26',
+                        accentBlue: '#4FBDF2',
+                        softGray: '#A0AEC0',
+                        coral: '#FF7F50'
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Libre Baskerville', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background: #020B26;
+            background: radial-gradient(circle at 80% 20%, #0A1E4D 0%, #020B26 100%);
+            overflow: hidden;
+            color: #FFFFFF;
+        }
+
+        /* 优化后的主标题：更小、更精致 */
+        .main-title {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 80px;
+            letter-spacing: -2px;
+            background: linear-gradient(180deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.1) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+        }
+
+        /* 装饰线条 */
+        .decorative-line {
+            width: 60px;
+            height: 2px;
+            background: #4FBDF2;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 15px;
+        }
+
+        /* 毛玻璃信息块 */
+        .info-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border-left: 3px solid #4FBDF2;
+            transition: all 0.3s ease;
+        }
+
+        /* 图片形状优化 */
+        .visual-frame {
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            box-shadow: 0 0 50px rgba(79, 189, 242, 0.15);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page_container">
+        <div class="absolute top-10 right-20 text-[180px] font-bold opacity-[0.02] pointer-events-none select-none">
+            OCEAN
+        </div>
+
+        <div class="relative z-10 w-full h-full p-20 flex flex-col justify-between">
+            
+            <div class="flex flex-col">
+                <div class="flex items-center mb-4">
+                    <span class="decorative-line"></span>
+                    <span class="text-accentBlue uppercase tracking-[0.3em] text-xs font-semibold">Discovery Series 2026</span>
+                </div>
+                <h1 class="main-title">Introduction</h1>
+            </div>
+
+            <div class="grid grid-cols-12 gap-16 items-center">
+                
+                <div class="col-span-5 space-y-10">
+                    <div class="relative">
+                        <span class="text-7xl font-extrabold text-white leading-none">70%</span>
+                        <div class="inline-block ml-4 align-top pt-2">
+                            <p class="text-accentBlue font-semibold text-lg leading-tight italic">Ocean<br>Covered</p>
+                        </div>
+                        <p class="mt-4 text-softGray leading-relaxed max-w-sm font-light">
+                            The vast expanse of our oceans represents the largest habitat on Earth, governing the very pulse of our planet's survival.
+                        </p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="info-card p-5 group hover:bg-white/5 cursor-default">
+                            <h3 class="text-white font-semibold text-sm uppercase tracking-widest mb-1 group-hover:text-accentBlue transition-colors">Climate Regulator</h3>
+                            <p class="text-xs text-softGray leading-normal">Oceans absorb over 90% of the excess heat trapped by greenhouse gases.</p>
+                        </div>
+                        
+                        <div class="info-card p-5 group hover:bg-white/5 cursor-default">
+                            <h3 class="text-white font-semibold text-sm uppercase tracking-widest mb-1 group-hover:text-accentBlue transition-colors">Species Diversity</h3>
+                            <p class="text-xs text-softGray leading-normal">Home to millions of unique species, many of which remain undiscovered in the deep sea.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-span-7 relative">
+                    <div class="absolute -top-6 -left-6 z-20 bg-white text-deepOcean px-4 py-2 text-[10px] font-black uppercase tracking-tighter">
+                        Marine Eco System
+                    </div>
+                    
+                    <div class="visual-frame w-full h-[400px] overflow-hidden border border-white/10">
+                        <img src="https://images.unsplash.com/photo-1546026423-cc4642628d2b?q=80&w=1200&auto=format&fit=crop" 
+                             class="w-full h-full object-cover opacity-90 scale-110" alt="Underwater">
+                    </div>
+
+                    <div class="absolute -bottom-10 right-10 flex gap-2">
+                        <div class="w-1.5 h-1.5 rounded-full bg-coral"></div>
+                        <div class="w-1.5 h-1.5 rounded-full bg-white/20"></div>
+                        <div class="w-1.5 h-1.5 rounded-full bg-white/20"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-between items-end border-t border-white/5 pt-6">
+                <div class="flex gap-8 text-[10px] text-softGray font-medium tracking-widest">
+                    <span>EXPLORE</span>
+                    <span>CONSERVE</span>
+                    <span>PROTECT</span>
+                </div>
+                <div class="text-right">
+                    <p class="text-[10px] text-softGray tracking-[0.2em] font-light">RESEARCH BY</p>
+                    <p class="text-sm font-semibold tracking-widest">SALFORD & CO. INSTITUTION</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

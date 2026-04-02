@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocean Conservation - Refined</title>
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;800&family=Libre+Baskerville:ital@1&display=swap">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepOcean: '#04143D',
+                        accentBlue: '#4FBDF2',
+                        bubbleBlue: '#6A80B5',
+                        coralOrange: '#E88523',
+                        textWhite: '#E0E6F8',
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Libre Baskerville', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        #page_container {
+            width: 1280px; height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background: radial-gradient(circle at 80% 20%, #0f2d6e 0%, #04143D 80%);
+            overflow: hidden;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* 统一的主标题样式 */
+        .main-title {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 76px;
+            background: linear-gradient(180deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.2) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+            letter-spacing: -2px;
+        }
+
+        .glass-card {
+            background: rgba(4, 20, 61, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(110, 169, 217, 0.25);
+            border-top: 1px solid rgba(110, 169, 217, 0.4);
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .glass-card:hover {
+            background: rgba(79, 189, 242, 0.1);
+            transform: translateY(-5px);
+            border-color: rgba(79, 189, 242, 0.5);
+        }
+
+        .image-pod {
+            border-radius: 40px 40px 0 40px;
+            overflow: hidden;
+            box-shadow: 20px 20px 0px rgba(79, 189, 242, 0.05);
+            position: relative;
+        }
+        
+        .bg-line {
+            position: absolute;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(79, 189, 242, 0.3), transparent);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <div class="bg-line top-[20%] left-0 w-full"></div>
+        <div class="bg-line bottom-[35%] left-0 w-full opacity-50"></div>
+        
+        <div class="absolute top-12 left-12 flex items-center gap-4 z-20">
+            <div class="w-10 h-10 rounded-full border border-accentBlue flex items-center justify-center">
+                <i class="fa-solid fa-water text-accentBlue"></i>
+            </div>
+            <span class="text-[10px] tracking-[0.3em] font-bold text-white uppercase opacity-80">Salford & Co. Conservation</span>
+        </div>
+
+        <div class="w-full h-full p-12 relative z-10 flex flex-col justify-between">
+            <div class="flex justify-between items-start mt-10">
+                <div class="w-[500px] mt-8">
+                    <div class="flex items-center mb-6">
+                        <span class="w-12 h-[2px] bg-accentBlue mr-4"></span>
+                        <span class="text-accentBlue uppercase tracking-[0.3em] text-xs font-semibold">Future Action</span>
+                    </div>
+                    <h1 class="main-title italic mb-6">Protect our oceans</h1>
+                    <p class="text-textWhite/80 text-sm leading-7 pr-10 border-l-2 border-coralOrange/50 pl-6">
+                        The ocean drives global systems that make the Earth habitable for humankind. Our rainwater, drinking water, weather, climate, and coastlines are all ultimately regulated by the sea.
+                    </p>
+                </div>
+
+                <div class="w-[580px] h-[320px] image-pod group">
+                    <img src="https://images.unsplash.com/photo-1484291470158-b8f8d608850d?q=80&w=800&auto=format&fit=crop" 
+                         class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700" 
+                         alt="Ocean Waves">
+                    <div class="absolute top-6 right-6 bg-deepOcean/80 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/10">
+                        <span class="text-accentBlue font-bold text-xs tracking-widest uppercase">Status: Critical</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full grid grid-cols-3 gap-6 mt-4">
+                <div class="glass-card p-6 flex flex-col justify-between h-[200px] relative overflow-hidden">
+                    <div class="absolute -right-4 -top-4 text-[80px] text-white/5 rotate-12">
+                        <i class="fa-solid fa-bottle-water"></i>
+                    </div>
+                    <div>
+                        <div class="text-coralOrange mb-3 text-xl"><i class="fa-solid fa-trash-can-arrow-up"></i></div>
+                        <h3 class="text-white font-bold text-lg mb-2 uppercase tracking-tighter">Plastic Pollution</h3>
+                        <p class="text-xs text-textWhite/70 leading-relaxed">
+                            8 million tons of plastic enter our oceans every year.
+                        </p>
+                    </div>
+                    <div class="w-full bg-white/10 h-1 rounded-full mt-4 overflow-hidden">
+                        <div class="bg-coralOrange w-[75%] h-full rounded-full"></div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 flex flex-col justify-between h-[200px] relative overflow-hidden">
+                    <div class="absolute -right-4 -top-4 text-[80px] text-white/5 rotate-12">
+                        <i class="fa-solid fa-temperature-arrow-up"></i>
+                    </div>
+                    <div>
+                        <div class="text-accentBlue mb-3 text-xl"><i class="fa-solid fa-icicles"></i></div>
+                        <h3 class="text-white font-bold text-lg mb-2 uppercase tracking-tighter">Climate Change</h3>
+                        <p class="text-xs text-textWhite/70 leading-relaxed">
+                            Absorbing 90% of excess heat, causing acidification.
+                        </p>
+                    </div>
+                    <div class="w-full bg-white/10 h-1 rounded-full mt-4 overflow-hidden">
+                        <div class="bg-accentBlue w-[60%] h-full rounded-full"></div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 flex flex-col justify-between h-[200px] relative overflow-hidden">
+                    <div class="absolute -right-4 -top-4 text-[80px] text-white/5 rotate-12">
+                        <i class="fa-solid fa-fish-fins"></i>
+                    </div>
+                    <div>
+                        <div class="text-bubbleBlue mb-3 text-xl"><i class="fa-solid fa-anchor"></i></div>
+                        <h3 class="text-white font-bold text-lg mb-2 uppercase tracking-tighter">Overfishing</h3>
+                        <p class="text-xs text-textWhite/70 leading-relaxed">
+                            34% of global fish stocks are overfished levels.
+                        </p>
+                    </div>
+                    <div class="w-full bg-white/10 h-1 rounded-full mt-4 overflow-hidden">
+                        <div class="bg-bubbleBlue w-[40%] h-full rounded-full"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

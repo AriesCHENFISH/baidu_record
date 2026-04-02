@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healing Environment - ECharts Edition</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FFFFFF;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 64px 80px; 
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #000000, #444444);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+
+        <header class="grid grid-cols-12 gap-12 items-end mb-10">
+            <div class="col-span-7">
+                <h1 class="text-7xl font-black tracking-tighter uppercase leading-[0.85]">
+                    Clean & Healing <br>
+                    Environment
+                </h1>
+            </div>
+
+            <div class="col-span-5 pb-2">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-12 h-1 bg-[#D2F050]"></div>
+                    <span class="text-sm font-black uppercase tracking-widest text-gray-400">Recovery Impact Analysis</span>
+                </div>
+                <p class="text-lg font-normal text-gray-700 leading-snug">
+                    Through advanced environmental control, we significantly shorten the recovery cycle. ECharts data visualization confirms a 40% faster healing rate in optimized therapeutic spaces.
+                </p>
+            </div>
+        </header>
+
+        <main class="grid grid-cols-12 gap-8 h-[380px]">
+            
+            <div class="col-span-8 bg-[#F9F9F9] rounded-[32px] border border-gray-100 p-8 relative overflow-hidden group">
+                <div class="absolute top-8 left-10 z-10">
+                    <h4 class="text-lg font-bold text-dark uppercase tracking-tight">Recovery Efficiency Trend</h4>
+                    <p class="text-[10px] text-gray-400 font-bold uppercase tracking-[0.2em]">Live Data Visualization / 2024</p>
+                </div>
+
+                <div id="recoveryChart" class="w-full h-full"></div>
+            </div>
+
+            <div class="col-span-4 h-full bg-[#D2F050] rounded-[32px] p-10 flex flex-col justify-between relative">
+                <div>
+                    <div class="w-14 h-14 bg-black rounded-2xl flex items-center justify-center mb-6 shadow-xl">
+                        <i class="fa-solid fa-chart-line text-[#D2F050] text-2xl"></i>
+                    </div>
+                    <h3 class="text-3xl font-black leading-none mb-4 uppercase">
+                        Evidence<br>Based.
+                    </h3>
+                    <div class="divider w-full h-[1px] bg-black opacity-10 mb-6"></div>
+                    <p class="text-lg font-bold leading-tight text-black/80">
+                        Our healing environments aren't just beautiful—they are clinically proven to drive results.
+                    </p>
+                </div>
+
+                <div class="mt-auto">
+                    <button class="w-full bg-black text-white rounded-2xl py-5 px-8 flex items-center justify-between group hover:bg-gray-900 transition-all">
+                        <span class="text-lg font-bold tracking-wide">Detailed Report</span>
+                        <div class="w-8 h-8 rounded-full bg-[#D2F050] flex items-center justify-center group-hover:translate-x-1 transition-transform">
+                            <i class="fa-solid fa-arrow-right text-black text-xs"></i>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="flex justify-between items-center text-[10px] font-black tracking-[0.4em] text-gray-300 uppercase">
+            <div class="flex gap-4 items-center">
+                <span class="text-black">Healthcare Metrics Unit</span>
+                <div class="w-8 h-[1px] bg-gray-200"></div>
+                <span>Chart ID: H-2024-EV</span>
+            </div>
+            <div class="flex gap-2">
+                <div class="w-2 h-2 rounded-full bg-[#D2F050]"></div>
+                <div class="w-2 h-2 rounded-full bg-gray-200"></div>
+                <div class="w-2 h-2 rounded-full bg-gray-200"></div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Initialize ECharts
+        const chartDom = document.getElementById('recoveryChart');
+        const myChart = echarts.init(chartDom);
+        
+        const option = {
+            backgroundColor: 'transparent',
+            tooltip: {
+                trigger: 'axis',
+                backgroundColor: '#000',
+                borderColor: '#000',
+                padding: 15,
+                textStyle: { color: '#fff', fontSize: 12, fontWeight: 'bold' },
+                axisPointer: { type: 'none' }
+            },
+            legend: {
+                right: '5%',
+                top: '5%',
+                icon: 'circle',
+                itemWidth: 8,
+                textStyle: { fontSize: 10, fontWeight: 'bold', color: '#999', padding: [0, 0, 0, 5] }
+            },
+            grid: {
+                left: '5%',
+                right: '5%',
+                bottom: '10%',
+                top: '30%',
+                containLabel: true
+            },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: ['Day 1', 'Day 3', 'Day 5', 'Day 7', 'Day 10', 'Day 14'],
+                axisLine: { show: true, lineStyle: { color: '#EEE' } },
+                axisTick: { show: false },
+                axisLabel: { color: '#BBB', fontSize: 10, fontWeight: '900', margin: 20 }
+            },
+            yAxis: {
+                type: 'value',
+                max: 100,
+                splitLine: { lineStyle: { type: 'dashed', color: '#EEE' } },
+                axisLabel: { 
+                    formatter: '{value}%', 
+                    color: '#BBB', 
+                    fontSize: 10, 
+                    fontWeight: '900' 
+                }
+            },
+            series: [
+                {
+                    name: 'Standard Environment',
+                    type: 'line',
+                    smooth: true,
+                    showSymbol: false,
+                    lineStyle: { width: 3, color: '#E5E7EB' },
+                    data: [10, 25, 40, 55, 70, 85]
+                },
+                {
+                    name: 'Healing Environment',
+                    type: 'line',
+                    smooth: true,
+                    showSymbol: true,
+                    symbolSize: 8,
+                    itemStyle: { color: '#000', borderColor: '#D2F050', borderWidth: 2 },
+                    lineStyle: { width: 6, color: '#000' },
+                    areaStyle: {
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                            { offset: 0, color: 'rgba(210, 240, 80, 0.4)' },
+                            { offset: 1, color: 'rgba(210, 240, 80, 0)' }
+                        ])
+                    },
+                    data: [15, 45, 75, 90, 98, 100],
+                    animationDelay: 500,
+                    animationDuration: 2000
+                }
+            ]
+        };
+
+        myChart.setOption(option);
+
+        // Responsive handling
+        window.addEventListener('resize', () => {
+            myChart.resize();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1936 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Responsive Merged HTML
+  </title>
+  <style>
+   body {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .page-wrapper {
+                width: 100%;
+                margin: 15px 0;
+                position: relative;
+            }
+            .page-title {
+                background: #f5f5f5;
+                padding: 5px 10px;
+                border-radius: 3px 3px 0 0;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+            }
+            .responsive-iframe {
+                border: none;
+                width: 100%;
+                display: block;
+            }
+  </style>
+ </head>
+ <body>
+  <!-- 内容将在这里插入 -->
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 1
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Studio Shodwe - Web3 Cover&lt;/title&gt;
+    
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;!-- Google Fonts --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto;
+            position: relative; background-color: #050505;
+            overflow: hidden; font-family: 'Noto Sans SC', sans-serif;
+            color: #FFFFFF;
+        }
+
+        /* 纯 CSS 绘制背景网格与光效 */
+        .bg-grid {
+            position: absolute; inset: 0;
+            background-image: 
+                linear-gradient(rgba(59, 130, 246, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(59, 130, 246, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            transform: perspective(500px) rotateX(60deg) translateY(-100px);
+            mask-image: linear-gradient(to bottom, transparent, black);
+            z-index: 1;
+        }
+
+        .glow-sphere {
+            position: absolute; width: 1000px; height: 1000px;
+            background: radial-gradient(circle, rgba(11, 19, 103, 0.4) 0%, transparent 70%);
+            z-index: 0; filter: blur(100px); pointer-events: none;
+        }
+
+        /* 汇报人信息卡片 */
+        .presenter-card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-left: 4px solid #3b82f6;
+            padding: 24px 32px;
+            width: 360px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .text-glow-blue {
+            text-shadow: 0 0 15px rgba(59, 130, 246, 0.6);
+        }
+
+        /* 装饰用扫描线 */
+        .scan-line {
+            position: absolute; left: 0; width: 100%; height: 1px;
+            background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+            opacity: 0.3;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot; class=&quot;flex flex-col justify-between px-20 py-16&quot;&gt;
+        
+        &lt;!-- 背景层 --&gt;
+        &lt;div class=&quot;bg-grid&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;glow-sphere&quot; style=&quot;top: -400px; right: -300px;&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;glow-sphere&quot; style=&quot;bottom: -500px; left: -200px; opacity: 0.6;&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;scan-line&quot; style=&quot;top: 25%;&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;scan-line&quot; style=&quot;bottom: 35%;&quot;&gt;&lt;/div&gt;
+
+        &lt;!-- 顶部元数据 --&gt;
+        &lt;div class=&quot;relative z-10 flex justify-between items-start&quot;&gt;
+            &lt;div class=&quot;flex items-center gap-4&quot;&gt;
+                &lt;div class=&quot;w-10 h-10 border-2 border-blue-500 rounded-full flex items-center justify-center&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-globe text-blue-500 text-sm&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;p class=&quot;text-white text-sm font-bold tracking-widest&quot;&gt;STUDIO SHODWE&lt;/p&gt;
+                    &lt;p class=&quot;text-blue-500/60 text-[10px] uppercase tracking-[0.4em]&quot;&gt;Future Labs&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;flex gap-10&quot;&gt;
+                &lt;div class=&quot;text-right&quot;&gt;
+                    &lt;p class=&quot;text-white/40 text-[10px] uppercase tracking-[0.3em]&quot;&gt;Project Ref&lt;/p&gt;
+                    &lt;p class=&quot;text-white text-xs font-mono font-bold&quot;&gt;2027_WEB3_KEYNOTE&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;w-[1px] h-8 bg-white/10&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;text-right&quot;&gt;
+                    &lt;p class=&quot;text-white/40 text-[10px] uppercase tracking-[0.3em]&quot;&gt;Release&lt;/p&gt;
+                    &lt;p class=&quot;text-white text-xs font-mono font-bold&quot;&gt;JAN.2026&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 主标题 (统一风格：右对齐、大写、渐变) --&gt;
+        &lt;div class=&quot;relative z-10 flex justify-end mt-12 mb-auto&quot;&gt;
+            &lt;div class=&quot;text-right&quot;&gt;
+                &lt;h1 class=&quot;text-white text-[80px] font-bold uppercase leading-[0.85] tracking-tighter drop-shadow-2xl&quot;&gt;
+                    Revolutionizing &lt;br&gt;
+                    &lt;span class=&quot;text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-400 to-gray-700&quot;&gt;Digital Experience&lt;/span&gt;
+                &lt;/h1&gt;
+                &lt;p class=&quot;text-blue-500/80 text-sm font-light tracking-[0.5em] uppercase mt-8 border-r-2 border-blue-500 pr-6&quot;&gt;
+                    Ownership, Transparency &amp; Innovation
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 底部区域：汇报人信息卡片 + 年份徽章 --&gt;
+        &lt;div class=&quot;relative z-10 flex items-end justify-between&quot;&gt;
+            
+            &lt;!-- 汇报人信息卡片 --&gt;
+            &lt;div class=&quot;presenter-card&quot;&gt;
+                &lt;h6 class=&quot;text-blue-500 text-[10px] font-bold uppercase tracking-[0.3em] mb-4&quot;&gt;Presented By&lt;/h6&gt;
+                &lt;p class=&quot;text-white text-3xl font-bold tracking-tight mb-1&quot;&gt;Dr. Aris Thorne&lt;/p&gt;
+                &lt;p class=&quot;text-white/40 text-xs uppercase tracking-widest&quot;&gt;Senior Web3 Ecosystem Architect&lt;/p&gt;
+                
+                &lt;div class=&quot;mt-8 pt-6 border-t border-white/5 flex items-center justify-between&quot;&gt;
+                    &lt;div class=&quot;flex items-center gap-3&quot;&gt;
+                        &lt;i class=&quot;fa-brands fa-ethereum text-white/30 text-sm&quot;&gt;&lt;/i&gt;
+                        &lt;span class=&quot;text-[9px] text-white/30 uppercase font-mono tracking-tighter&quot;&gt;auth_id: 0x8F...291A&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;i class=&quot;fa-solid fa-arrow-right-long text-blue-500 text-xs&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- 右侧装饰 --&gt;
+            &lt;div class=&quot;flex flex-col items-end gap-6&quot;&gt;
+                &lt;!-- 2027 徽章 --&gt;
+                &lt;div class=&quot;flex&quot;&gt;
+                    &lt;div class=&quot;border border-blue-500/30 rounded-l-full px-10 py-5 bg-blue-500/5 backdrop-blur-md&quot;&gt;
+                        &lt;span class=&quot;text-white text-lg font-medium tracking-[0.4em] uppercase&quot;&gt;The Future Index&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;bg-blue-600 px-8 py-5 rounded-r-full shadow-[0_0_30px_rgba(37,99,235,0.4)]&quot;&gt;
+                        &lt;span class=&quot;text-white text-2xl font-black tracking-widest&quot;&gt;2027&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- 底部辅助线 --&gt;
+                &lt;div class=&quot;w-64 h-[2px] bg-gradient-to-l from-blue-500 via-white/20 to-transparent&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+
+        &lt;!-- 底部装饰标语 --&gt;
+        &lt;div class=&quot;absolute bottom-6 left-1/2 -translate-x-1/2 opacity-20&quot;&gt;
+            &lt;p class=&quot;text-[8px] tracking-[1em] uppercase font-light&quot;&gt;Confidential Strategy Document • Studio Shodwe Ecosystem&lt;/p&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 2
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Strategic Index - 10 Titles&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;style&gt;
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #050505; overflow: hidden; font-family: 'Noto Sans SC', sans-serif; color: #FFFFFF; }
+        .grid-overlay { position: absolute; inset: 0; background-image: radial-gradient(#111 1px, transparent 1px); background-size: 30px 30px; opacity: 0.5; }
+        .toc-item { transition: all 0.3s ease; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .toc-item:hover { background: rgba(59, 130, 246, 0.05); border-color: rgba(59, 130, 246, 0.3); padding-left: 10px; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot; class=&quot;flex flex-col px-16 py-12&quot;&gt;
+        &lt;div class=&quot;grid-overlay&quot;&gt;&lt;/div&gt;
+        
+        &lt;!-- 右对齐标题 (参考样式) --&gt;
+        &lt;div class=&quot;flex justify-end mb-12 relative z-10 shrink-0&quot;&gt;
+            &lt;div class=&quot;text-right max-w-4xl border-r-4 border-blue-500 pr-8&quot;&gt;
+                &lt;h1 class=&quot;text-white text-5xl font-bold uppercase leading-[0.9] tracking-tighter drop-shadow-lg&quot;&gt;
+                    Strategic &lt;span class=&quot;text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500&quot;&gt;Roadmap&lt;/span&gt; &lt;br&gt;
+                    Index
+                &lt;/h1&gt;
+                &lt;p class=&quot;text-[10px] text-white/40 tracking-[0.4em] uppercase mt-4&quot;&gt;Comprehensive Ecosystem Overview 2027&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 10个目录项：2列5行布局 --&gt;
+        &lt;div class=&quot;relative z-10 grid grid-cols-2 gap-x-20 gap-y-2 flex-1 pt-4&quot;&gt;
+            &lt;!-- 左列 --&gt;
+            &lt;div class=&quot;flex flex-col space-y-2&quot;&gt;
+                &lt;div class=&quot;toc-item py-4 flex items-center justify-between group&quot;&gt;
+                    &lt;div class=&quot;flex items-center&quot;&gt;
+                        &lt;span class=&quot;text-blue-500 font-mono text-gl mr-6&quot;&gt;01.&lt;/span&gt;
+                        &lt;h4 class=&quot;text-white text-lg font-bold tracking-tight uppercase group-hover:text-blue-400&quot;&gt;Executive Summary&lt;/h4&gt;
+                    &lt;/div&gt;
+                    &lt;i class=&quot;fa-solid fa-chevron-right text-[10px] opacity-20 group-hover:opacity-100 transition-opacity&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;toc-item py-4 flex items-center justify-between group&quot;&gt;
+                    &lt;div class=&quot;flex items-center&quot;&gt;
+                        &lt;span class=&quot;text-blue-500 font-mono text-gl mr-6&quot;&gt;02.&lt;/span&gt;
+                        &lt;h4 class=&quot;text-white text-lg font-bold tracking-tight uppercase group-hover:text-blue-400&quot;&gt;Core Web3 Concept&lt;/h4&gt;
+                    &lt;/div&gt;
+                    &lt;i class=&quot;fa-solid fa-chevron-right text-[10px] opacity-20 group-hover:opacity-100 transition-opacity&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;toc-item py-4 flex items-center justify-between group&quot;&gt;
+                    &lt;div class=&quot;flex items-center&quot;&gt;
+                        &lt;span class=&quot;text-blue-500 font-mono text-gl mr-6&quot;&gt;03.&lt;/span&gt;
+                        &lt;h4 class=&quot;text-white text-lg font-bold tracking-tight uppercase group-hover:text-blue-400&quot;&gt;Security Audit Lifecycle&lt;/h4&gt;
+                    &lt;/div&gt;
+                    &lt;i class=&quot;fa-solid fa-chevron-right text-[10px] opacity-20 group-hover:opacity-100 transition-opacity&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;toc-item py-4 flex items-center justify-between group&quot;&gt;
+                    &lt;div class=&quot;flex items-center&quot;&gt;
+                        &lt;span class=&quot;text-blue-500 font-mono text-gl mr-6&quot;&gt;04.&lt;/span&gt;
+                        &lt;h4 class=&quot;text-white text-lg font-bold tracking-tight uppercase group-hover:text-blue-400&quot;&gt;Liquidity Core Engine&lt;/h4&gt;
+                    &lt;/div&gt;
+                    &lt;i class=&quot;fa-solid fa-chevron-right text-[10px] opacity-20 group-hover:opacity-100 transition-opacity&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;toc-item py-4 flex items-center justify-between group&quot;&gt;
+                    &lt;div class=&quot;flex items-center&quot;&gt;
+                        &lt;span class=&quot;text-blue-500 font-mono text-gl mr-6&quot;&gt;05.&lt;/span&gt;
+                        &lt;h4 class=&quot;text-white text-lg font-bold tracking-tight uppercase group-hover:text-blue-400&quot;&gt;Cross-Chain Hub&lt;/h4&gt;
+                    &lt;/div&gt;
+                    &lt;i class=&quot;fa-solid fa-chevron-right text-[10px] opacity-20 group-hover:opacity-100 transition-opacity&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- 右列 --&gt;
+            &lt;div class=&quot;flex flex-col space-y-2&quot;&gt;
+                &lt;div class=&quot;toc-item py-4 flex items-center justify-between group&quot;&gt;
+                    &lt;div class=&quot;flex items-center&quot;&gt;
+                        &lt;span class=&quot;text-blue-500 font-mono text-gl mr-6&quot;&gt;06.&lt;/span&gt;
+                        &lt;h4 class=&quot;text-white text-lg font-bold tracking-tight uppercase group-hover:text-blue-400&quot;&gt;Autonomous Governance&lt;/h4&gt;
+                    &lt;/div&gt;
+                    &lt;i class=&quot;fa-solid fa-chevron-right text-[10px] opacity-20 group-hover:opacity-100 transition-opacity&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;toc-item py-4 flex items-center justify-between group&quot;&gt;
+                    &lt;div class=&quot;flex items-center&quot;&gt;
+                        &lt;span class=&quot;text-blue-500 font-mono text-gl mr-6&quot;&gt;07.&lt;/span&gt;
+                        &lt;h4 class=&quot;text-white text-lg font-bold tracking-tight uppercase group-hover:text-blue-400&quot;&gt;Incentive Distribution&lt;/h4&gt;
+                    &lt;/div&gt;
+                    &lt;i class=&quot;fa-solid fa-chevron-right text-[10px] opacity-20 group-hover:opacity-100 transition-opacity&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;toc-item py-4 flex items-center justify-between group&quot;&gt;
+                    &lt;div class=&quot;flex items-center&quot;&gt;
+                        &lt;span class=&quot;text-blue-500 font-mono text-gl mr-6&quot;&gt;08.&lt;/span&gt;
+                        &lt;h4 class=&quot;text-white text-lg font-bold tracking-tight uppercase group-hover:text-blue-400&quot;&gt;Case Study Highlights&lt;/h4&gt;
+                    &lt;/div&gt;
+                    &lt;i class=&quot;fa-solid fa-chevron-right text-[10px] opacity-20 group-hover:opacity-100 transition-opacity&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;toc-item py-4 flex items-center justify-between group&quot;&gt;
+                    &lt;div class=&quot;flex items-center&quot;&gt;
+                        &lt;span class=&quot;text-blue-500 font-mono text-gl mr-6&quot;&gt;09.&lt;/span&gt;
+                        &lt;h4 class=&quot;text-white text-lg font-bold tracking-tight uppercase group-hover:text-blue-400&quot;&gt;Market Analytics&lt;/h4&gt;
+                    &lt;/div&gt;
+                    &lt;i class=&quot;fa-solid fa-chevron-right text-[10px] opacity-20 group-hover:opacity-100 transition-opacity&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;toc-item py-4 flex items-center justify-between group&quot;&gt;
+                    &lt;div class=&quot;flex items-center&quot;&gt;
+                        &lt;span class=&quot;text-blue-500 font-mono text-gl mr-6&quot;&gt;10.&lt;/span&gt;
+                        &lt;h4 class=&quot;text-white text-lg font-bold tracking-tight uppercase group-hover:text-blue-400&quot;&gt;Future Projections&lt;/h4&gt;
+                    &lt;/div&gt;
+                    &lt;i class=&quot;fa-solid fa-chevron-right text-[10px] opacity-20 group-hover:opacity-100 transition-opacity&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 底部修饰 --&gt;
+        &lt;div class=&quot;mt-auto flex justify-between items-end opacity-20 relative z-10&quot;&gt;
+            &lt;span class=&quot;text-[10px] tracking-widest uppercase&quot;&gt;System Index V4.2&lt;/span&gt;
+            &lt;div class=&quot;w-24 h-[1px] bg-white&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 3
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc='&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Web3 Definition&lt;/title&gt;
+    &lt;script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"&gt;&lt;/script&gt;
+    &lt;link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css"&gt;
+    &lt;link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css"&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #050505;
+            overflow: hidden;
+            color: #FFFFFF;
+        }
+
+        /* 辉光背景 - 调整位置以区分不同页面 */
+        .glow-effect-center {
+            position: absolute;
+            bottom: -50%;
+            left: 20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, #0B1367 0%, transparent 60%);
+            opacity: 0.7;
+            pointer-events: none;
+            z-index: 0;
+            filter: blur(80px);
+        }
+
+        .tech-card {
+            background-color: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(224, 224, 224, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .pill-tag {
+            border: 1px solid #E0E0E0;
+            padding: 4px 12px;
+            font-size: 0.75rem;
+            border-radius: 9999px;
+            display: inline-block;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            color: #CCCCCC;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="page_container"&gt;
+        &lt;div class="glow-effect-center"&gt;&lt;/div&gt;
+
+        &lt;header class="relative z-10 flex justify-between items-start px-16 pt-12 w-full mb-12"&gt;
+            &lt;div class="flex flex-col"&gt;
+                &lt;h6 class="text-[#CCCCCC] text-sm tracking-[0.2em] font-medium uppercase border-l-2 border-[#E0E0E0] pl-4"&gt;
+                    What is Web3?
+                &lt;/h6&gt;
+            &lt;/div&gt;
+            &lt;div class="flex gap-12"&gt;
+                &lt;h6 class="text-[#CCCCCC] text-sm tracking-[0.1em] font-medium uppercase"&gt;
+                    Unlock The Future With Web3
+                &lt;/h6&gt;
+                &lt;h6 class="text-white text-sm tracking-[0.1em] font-bold"&gt;
+                    2027
+                &lt;/h6&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;div class="relative z-10 px-16 grid grid-cols-12 gap-6 mb-12"&gt;
+            
+            &lt;div class="col-span-4"&gt;
+                &lt;div class="tech-card rounded-[2rem] p-10 h-80 flex flex-col justify-center items-center text-center group hover:bg-white/5 hover:-translate-y-2 transition-transform duration-300"&gt;
+                    &lt;div class="w-20 h-20 rounded-full border border-[#E0E0E0] flex items-center justify-center mb-6 bg-white/5 text-3xl text-white"&gt;
+                        &lt;i class="fa-solid fa-share-nodes"&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;h2 class="text-3xl font-light tracking-wide text-white mb-2"&gt;DECENTRALIZED&lt;/h2&gt;
+                    &lt;p class="text-[#CCCCCC] text-sm font-light mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"&gt;
+                        No single point of failure or control.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class="col-span-4"&gt;
+                &lt;div class="tech-card rounded-[2rem] p-10 h-80 flex flex-col justify-center items-center text-center group hover:bg-white/5 hover:-translate-y-2 transition-transform duration-300 bg-white/5 border-white/40"&gt;
+                    &lt;div class="w-20 h-20 rounded-full border border-white flex items-center justify-center mb-6 bg-white text-3xl text-[#050505]"&gt;
+                        &lt;i class="fa-solid fa-eye"&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;h2 class="text-3xl font-bold tracking-wide text-blue-400 mb-2"&gt;TRANSPARENT&lt;/h2&gt;
+                    &lt;p class="text-[#CCCCCC] text-sm font-light mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"&gt;
+                        Open ledger visible to everyone.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class="col-span-4"&gt;
+                &lt;div class="tech-card rounded-[2rem] p-10 h-80 flex flex-col justify-center items-center text-center group hover:bg-white/5 hover:-translate-y-2 transition-transform duration-300"&gt;
+                    &lt;div class="w-20 h-20 rounded-full border border-[#E0E0E0] flex items-center justify-center mb-6 bg-white/5 text-3xl text-white"&gt;
+                        &lt;i class="fa-solid fa-fingerprint"&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;h2 class="text-3xl font-light tracking-wide text-white mb-2"&gt;USER-OWNED&lt;/h2&gt;
+                    &lt;p class="text-[#CCCCCC] text-sm font-light mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"&gt;
+                        True ownership of digital assets.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;footer class="relative z-10 mx-16 pt-8 border-t border-[#E0E0E0] border-opacity-30 grid grid-cols-12 gap-8"&gt;
+            &lt;div class="col-span-6 pr-8 border-r border-[#E0E0E0] border-opacity-30"&gt;
+                &lt;h3 class="text-blue-400 text-gl font-bold uppercase tracking-widest mb-3"&gt;Definition&lt;/h3&gt;
+                &lt;p class="text-white text-xl font-light leading-relaxed"&gt;
+                    Web3 is the next evolution of the internet built on blockchain technology, shifting power from platforms to users.
+                &lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class="col-span-6 flex flex-col justify-center"&gt;
+                &lt;h3 class="text-blue-400 text-gl font-bold uppercase tracking-widest mb-4"&gt;Key Features&lt;/h3&gt;
+                &lt;div class="flex flex-wrap"&gt;
+                    &lt;span class="pill-tag"&gt;Smart Contracts&lt;/span&gt;
+                    &lt;span class="pill-tag"&gt;Token Economy&lt;/span&gt;
+                    &lt;span class="pill-tag"&gt;Digital Ownership&lt;/span&gt;
+                    &lt;span class="pill-tag"&gt;Trustless Systems&lt;/span&gt;
+                    &lt;span class="pill-tag"&gt;DeFi&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;'>
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 4
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Security Framework - P1&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;style&gt;
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #050505; overflow: hidden; font-family: 'Noto Sans SC', sans-serif; color: #FFFFFF; }
+        .ambient-glow { position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 0; background: radial-gradient(circle at 10% 10%, rgba(11,19,103,0.4) 0%, transparent 70%); pointer-events: none; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot; class=&quot;flex flex-col px-16 py-10&quot;&gt;
+        &lt;div class=&quot;ambient-glow&quot;&gt;&lt;/div&gt;
+        
+        &lt;!-- 标准化右对齐标题 --&gt;
+        &lt;div class=&quot;flex justify-end mb-10 relative z-10 shrink-0&quot;&gt;
+            &lt;div class=&quot;text-right max-w-4xl&quot;&gt;
+                &lt;h1 class=&quot;text-white text-5xl font-bold uppercase leading-[0.9] tracking-tighter drop-shadow-lg&quot;&gt;
+                    Advanced &lt;span class=&quot;text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500&quot;&gt;Security Audit&lt;/span&gt; &lt;br&gt;
+                    Infrastructure
+                &lt;/h1&gt;
+                &lt;p class=&quot;text-[10px] text-white/40 tracking-[0.4em] uppercase mt-4&quot;&gt;Zero-Knowledge Vulnerability Scanning&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 中间配图区 --&gt;
+        &lt;div class=&quot;relative z-10 w-full h-[280px] mb-12 rounded-2xl overflow-hidden border border-white/10 shadow-2xl&quot;&gt;
+            &lt;img src=&quot;https://images.unsplash.com/photo-1558494949-ef010cbdcc51?q=80&amp;w=2800&amp;auto=format&amp;fit=crop&quot; class=&quot;w-full h-full object-cover&quot;&gt;
+            &lt;div class=&quot;absolute inset-0 bg-gradient-to-b from-transparent to-black/60&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 底部 1x3 布局 --&gt;
+        &lt;div class=&quot;relative z-10 grid grid-cols-3 gap-12 mt-auto pb-6&quot;&gt;
+            &lt;div class=&quot;border-l border-white/20 pl-6 py-2&quot;&gt;
+                &lt;div class=&quot;flex items-center mb-3&quot;&gt;
+                    &lt;span class=&quot;text-2xl font-bold text-blue-400 mr-4&quot;&gt;01&lt;/span&gt;
+                    &lt;h3 class=&quot;text-white text-sm font-bold uppercase tracking-widest&quot;&gt;Formal Verification&lt;/h3&gt;
+                &lt;/div&gt;
+                &lt;p class=&quot;text-[#CCCCCC] text-sm font-light leading-relaxed opacity-70&quot;&gt;Mathematical proofs ensuring contract logic adheres to 100% of defined specifications.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;border-l border-white/20 pl-6 py-2&quot;&gt;
+                &lt;div class=&quot;flex items-center mb-3&quot;&gt;
+                    &lt;span class=&quot;text-2xl font-bold text-blue-400 mr-4&quot;&gt;02&lt;/span&gt;
+                    &lt;h3 class=&quot;text-white text-sm font-bold uppercase tracking-widest&quot;&gt;Static Analysis&lt;/h3&gt;
+                &lt;/div&gt;
+                &lt;p class=&quot;text-[#CCCCCC] text-sm font-light leading-relaxed opacity-70&quot;&gt;AI-powered pattern matching to identify reentrancy and overflow risks pre-deployment.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;border-l border-white/20 pl-6 py-2&quot;&gt;
+                &lt;div class=&quot;flex items-center mb-3&quot;&gt;
+                    &lt;span class=&quot;text-2xl font-bold text-blue-400 mr-4&quot;&gt;03&lt;/span&gt;
+                    &lt;h3 class=&quot;text-white text-sm font-bold uppercase tracking-widest&quot;&gt;Real-time Sentinel&lt;/h3&gt;
+                &lt;/div&gt;
+                &lt;p class=&quot;text-[#CCCCCC] text-sm font-light leading-relaxed opacity-70&quot;&gt;On-chain monitoring nodes that automatically pause protocols during suspicious activity.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 5
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;DeFi Architecture - Live Banner&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #050505;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+            color: #FFFFFF;
+        }
+        .ambient-glow {
+            position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 0;
+            background: linear-gradient(135deg, rgba(5,5,5,1) 30%, rgba(11,19,103,0.6) 100%); 
+            pointer-events: none;
+        }
+        .grid-bg {
+            background-image: linear-gradient(#333 1px, transparent 1px), linear-gradient(90deg, #333 1px, transparent 1px);
+            background-size: 80px 80px; opacity: 0.1;
+        }
+        /* 横幅图片容器 */
+        .banner-container {
+            width: 100%; height: 200px;
+            border-radius: 1rem;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot; class=&quot;flex flex-col&quot;&gt;
+        &lt;div class=&quot;ambient-glow&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute inset-0 z-0 grid-bg pointer-events-none&quot;&gt;&lt;/div&gt;
+
+        &lt;header class=&quot;w-full px-16 py-10 flex justify-between items-start z-20 shrink-0&quot;&gt;
+            &lt;div&gt;
+                &lt;p class=&quot;text-[#CCCCCC] text-xs tracking-[0.2em] font-medium uppercase opacity-80&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-layer-group mr-2&quot;&gt;&lt;/i&gt; Infrastructure Layer
+                &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;text-right&quot;&gt;
+                &lt;p class=&quot;text-[#CCCCCC] text-xs tracking-[0.2em] font-medium uppercase opacity-80 mb-1&quot;&gt;
+                    Decentralized Finance Stack
+                &lt;/p&gt;
+                &lt;p class=&quot;text-white text-sm font-bold tracking-widest&quot;&gt;2027&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;div class=&quot;relative z-10 flex flex-col flex-1 px-16 pb-12 w-full&quot;&gt;
+            
+            &lt;div class=&quot;flex justify-end mb-6 shrink-0&quot;&gt;
+                &lt;div class=&quot;text-right max-w-4xl&quot;&gt;
+                    &lt;h1 class=&quot;text-white text-5xl font-bold uppercase leading-[0.9] tracking-tighter drop-shadow-lg&quot;&gt;
+                        Next-Gen 
+                        &lt;span class=&quot;text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500&quot;&gt;DeFi Protocol&lt;/span&gt; &lt;br&gt;
+                        Architecture
+                    &lt;/h1&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;w-full h-[250px] mb-4 shrink-0&quot;&gt;
+                &lt;div class=&quot;banner-container&quot;&gt;
+                    &lt;!-- 移除了 group-hover 缩放，图片默认保持最佳显示 --&gt;
+                    &lt;img 
+                        src=&quot;https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&amp;w=2600&amp;auto=format&amp;fit=crop&quot; 
+                        alt=&quot;DeFi Architecture Banner&quot; 
+                        class=&quot;w-full h-full object-cover&quot;
+                    &gt;
+                    &lt;div class=&quot;absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10 mix-blend-overlay&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;absolute bottom-4 right-4 bg-black/60 px-3 py-1 rounded text-[10px] text-white/70 font-mono border border-white/10&quot;&gt;
+                        FIG 2.1: DATA FLOW
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;w-full mt-auto&quot;&gt;
+                
+                &lt;div class=&quot;w-full border-t border-[#E0E0E0] opacity-30 relative mb-6 flex items-center&quot;&gt;
+                    &lt;div class=&quot;absolute right-0 -top-[3px] w-[6px] h-[6px] bg-white rounded-full shadow-[0_0_10px_rgba(255,255,255,0.8)]&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;grid grid-cols-4 gap-8&quot;&gt;
+                    
+                    &lt;!-- 修改说明：移除了 hover:bg-white/5，直接应用 bg-white/5 --&gt;
+                    &lt;!-- 修改说明：移除了 group-hover:text-white，直接设置高亮颜色 --&gt;
+                    
+                    &lt;div class=&quot;border-l-2 border-blue-500 bg-white/5 pl-6 rounded-r-lg py-3&quot;&gt;
+                        &lt;div class=&quot;flex items-center mb-2&quot;&gt;
+                            &lt;span class=&quot;text-xl font-bold text-blue-400 mr-3&quot;&gt;01&lt;/span&gt;
+                            &lt;h3 class=&quot;text-white text-sm font-bold uppercase&quot;&gt;Liquidity Core&lt;/h3&gt;
+                        &lt;/div&gt;
+                        &lt;p class=&quot;text-gray-300 text-sm font-light leading-relaxed&quot;&gt;
+                            Automated Market Maker (AMM) logic with concentrated liquidity pools.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;border-l-2 border-blue-500 bg-white/5 pl-6 rounded-r-lg py-3&quot;&gt;
+                        &lt;div class=&quot;flex items-center mb-2&quot;&gt;
+                            &lt;span class=&quot;text-xl font-bold text-blue-400 mr-3&quot;&gt;02&lt;/span&gt;
+                            &lt;h3 class=&quot;text-white text-sm font-bold uppercase&quot;&gt;Yield Aggregator&lt;/h3&gt;
+                        &lt;/div&gt;
+                        &lt;p class=&quot;text-gray-300 text-sm font-light leading-relaxed&quot;&gt;
+                            Smart routing strategies to automatically maximize APY across chains.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;border-l-2 border-blue-500 bg-white/5 pl-6 rounded-r-lg py-3&quot;&gt;
+                        &lt;div class=&quot;flex items-center mb-2&quot;&gt;
+                            &lt;span class=&quot;text-xl font-bold text-blue-400 mr-3&quot;&gt;03&lt;/span&gt;
+                            &lt;h3 class=&quot;text-white text-sm font-bold uppercase&quot;&gt;Risk Engine&lt;/h3&gt;
+                        &lt;/div&gt;
+                        &lt;p class=&quot;text-gray-300 text-sm font-light leading-relaxed&quot;&gt;
+                            Real-time solvency checks and automated liquidation bot integration.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;border-l-2 border-blue-500 bg-white/5 pl-6 rounded-r-lg py-3&quot;&gt;
+                        &lt;div class=&quot;flex items-center mb-2&quot;&gt;
+                            &lt;span class=&quot;text-xl font-bold text-blue-400 mr-3&quot;&gt;04&lt;/span&gt;
+                            &lt;h3 class=&quot;text-white text-sm font-bold uppercase&quot;&gt;Governance&lt;/h3&gt;
+                        &lt;/div&gt;
+                        &lt;p class=&quot;text-gray-300 text-sm font-light leading-relaxed&quot;&gt;
+                            On-chain voting modules for protocol parameter adjustments.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute bottom-0 right-0 p-0 z-30&quot;&gt;
+            &lt;div class=&quot;bg-white w-20 h-20 flex items-center justify-center text-black&quot;&gt;
+                &lt;i class=&quot;fa-solid fa-arrow-up-right-from-square text-2xl&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 6
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc='&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Tech Powering The Future&lt;/title&gt;
+    &lt;!-- Import Google Fonts: Noto Sans SC as requested --&gt;
+    &lt;link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css"&gt;
+    &lt;!-- Import FontAwesome --&gt;
+    &lt;link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css"&gt;
+    &lt;!-- Import Tailwind CSS --&gt;
+    &lt;script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"&gt;&lt;/script&gt;
+    
+    &lt;style&gt;
+        /* CSS Reset &amp; Basic Setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* 
+         * Page Container Configuration 
+         * Strict dimensions: 1280px x 720px
+         * Background: #050505
+         */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background-color: #050505;
+            color: #FFFFFF;
+        }
+
+        /* 
+         * Gradient Background Effects
+         * Simulating the blue glow from the bottom corners using CSS gradients
+         * Color: #0B1367 to transparent/black
+         */
+        .glow-effect-left {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 600px;
+            height: 400px;
+            background: radial-gradient(circle at bottom left, #0B1367, transparent 70%);
+            opacity: 0.8;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .glow-effect-right {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 600px;
+            height: 400px;
+            background: radial-gradient(circle at bottom right, #0B1367, transparent 70%);
+            opacity: 0.8;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* 
+         * Typography &amp; Layout Utilities 
+         */
+        .text-secondary {
+            color: #CCCCCC;
+        }
+
+        .border-tech {
+            border: 1px solid #E0E0E0;
+        }
+
+        /* Card Styling for High-End aesthetic */
+        .tech-card {
+            background-color: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+            /* Box shadow for subtle depth */
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+        }
+        
+        /* Utility for text gradients or special highlights if needed */
+        .text-glow {
+            text-shadow: 0 0 10px rgba(255,255,255,0.3);
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;!-- Main Container --&gt;
+    &lt;div id="page_container"&gt;
+        &lt;!-- Decorative Background Layers --&gt;
+        &lt;div class="glow-effect-left"&gt;&lt;/div&gt;
+        &lt;div class="glow-effect-right"&gt;&lt;/div&gt;
+
+        &lt;!-- Header Section --&gt;
+        &lt;!-- Flexbox for distribution: Left Title - Right Context/Year --&gt;
+        &lt;header class="relative z-10 flex justify-between items-start px-16 pt-12 w-full"&gt;
+            &lt;div class="flex flex-col"&gt;
+                &lt;h6 class="text-[#CCCCCC] text-sm tracking-[0.2em] font-medium uppercase"&gt;
+                    Emerging Tech We Integrate
+                &lt;/h6&gt;
+            &lt;/div&gt;
+            &lt;div class="flex gap-12"&gt;
+                &lt;h6 class="text-[#CCCCCC] text-sm tracking-[0.1em] font-medium uppercase"&gt;
+                    Unlock The Future With Web3
+                &lt;/h6&gt;
+                &lt;h6 class="text-white text-sm tracking-[0.1em] font-bold"&gt;
+                    2027
+                &lt;/h6&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;!-- Main Content Grid --&gt;
+        &lt;!-- 12 Column Grid for precise alignment --&gt;
+        &lt;!-- Layout: Left Cards (3 cols) | Center Text (6 cols) | Right Cards (3 cols) --&gt;
+        &lt;div class="relative z-10 grid grid-cols-12 gap-8 px-16 h-full content-center pb-16" style="margin-top: -40px;"&gt;
+
+            &lt;!-- LEFT COLUMN: Cards --&gt;
+            &lt;div class="col-span-3 flex flex-col justify-center gap-8 h-full"&gt;
+                
+                &lt;!-- Card 1: AI --&gt;
+                &lt;div class="tech-card border-tech rounded-[2rem] p-8 h-48 flex flex-col justify-between group"&gt;
+                    &lt;div class="text-blue-400 text-2xl mb-2"&gt;
+                        &lt;i class="fa-solid fa-brain"&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div&gt;
+                        &lt;h3 class="text-white text-xl font-bold leading-tight mb-2"&gt;
+                            AI &amp; Machine Learning
+                        &lt;/h3&gt;
+                        &lt;p class="text-[#CCCCCC] text-sm font-light leading-relaxed"&gt;
+                            Smarter decision-making
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Card 2: AR/VR --&gt;
+                &lt;div class="tech-card border-tech rounded-[2rem] p-8 h-48 flex flex-col justify-between"&gt;
+                    &lt;div class="text-blue-400 text-2xl mb-2"&gt;
+                        &lt;i class="fa-solid fa-vr-cardboard"&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div&gt;
+                        &lt;h3 class="text-white text-xl font-bold leading-tight mb-2"&gt;
+                            AR/VR &amp; Metaverse
+                        &lt;/h3&gt;
+                        &lt;p class="text-[#CCCCCC] text-sm font-light leading-relaxed"&gt;
+                            Immersive digital experiences
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- CENTER COLUMN: Main Title --&gt;
+            &lt;div class="col-span-6 flex flex-col justify-center items-center text-center px-4"&gt;
+                &lt;!-- Main Headline --&gt;
+                &lt;h1 class="text-white text-7xl font-bold tracking-tight leading-[1.1] mb-6 text-glow"&gt;
+                    TECH &lt;br /&gt;
+                    POWERING &lt;br /&gt;
+                    THE FUTURE
+                &lt;/h1&gt;
+                
+                &lt;!-- Separator Line --&gt;
+                &lt;div class="w-24 h-[1px] bg-[#E0E0E0] mb-6 opacity-50"&gt;&lt;/div&gt;
+
+                &lt;!-- Subtitle --&gt;
+                &lt;p class="text-[#CCCCCC] text-xl font-light tracking-wide"&gt;
+                    Blockchain-powered &lt;br /&gt; security layers
+                &lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;!-- RIGHT COLUMN: Cards --&gt;
+            &lt;div class="col-span-3 flex flex-col justify-center gap-8 h-full"&gt;
+                
+                &lt;!-- Card 3: IoT --&gt;
+                &lt;div class="tech-card border-tech rounded-[2rem] p-8 h-48 flex flex-col justify-between"&gt;
+                    &lt;div class="text-blue-400 text-2xl mb-2"&gt;
+                        &lt;i class="fa-solid fa-network-wired"&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div&gt;
+                        &lt;h3 class="text-white text-xl font-bold leading-tight mb-2"&gt;
+                            IoT &amp; Edge Computing
+                        &lt;/h3&gt;
+                        &lt;p class="text-[#CCCCCC] text-sm font-light leading-relaxed"&gt;
+                            IoT &amp; Edge Computing
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Card 4: Cloud --&gt;
+                &lt;div class="tech-card border-tech rounded-[2rem] p-8 h-48 flex flex-col justify-between"&gt;
+                    &lt;div class="text-blue-400 text-2xl mb-2"&gt;
+                        &lt;i class="fa-solid fa-cloud-arrow-up"&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div&gt;
+                        &lt;h3 class="text-white text-xl font-bold leading-tight mb-2"&gt;
+                            Cloud &amp; DevOps
+                        &lt;/h3&gt;
+                        &lt;p class="text-[#CCCCCC] text-sm font-light leading-relaxed"&gt;
+                            Scalable infrastructure for growth
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+
+        &lt;!-- Decorative Footer/Logo Placeholder Area (Bottom Right) --&gt;
+        &lt;div class="absolute bottom-8 right-16 z-20"&gt;
+             &lt;!-- Abstract Logo Representation --&gt;
+             &lt;div class="flex items-center gap-2 opacity-50"&gt;
+                &lt;i class="fa-brands fa-hive text-xl text-white"&gt;&lt;/i&gt;
+             &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;'>
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 7
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Web3 Solutions Keynote - with Center Banner&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #050505;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+            color: #FFFFFF;
+        }
+        .ambient-glow {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0; left: 0; z-index: 0;
+            background: linear-gradient(135deg, rgba(5,5,5,1) 30%, rgba(11,19,103,0.6) 100%); 
+            pointer-events: none;
+        }
+        .grid-bg {
+            background-image: linear-gradient(#333 1px, transparent 1px), linear-gradient(90deg, #333 1px, transparent 1px);
+            background-size: 80px 80px;
+            opacity: 0.1;
+        }
+        /* Hide Scrollbar */
+        ::-webkit-scrollbar { display: none; }
+
+        /* Animation for the banner data flow */
+        @keyframes flow {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        .animate-flow {
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.4), transparent);
+            background-size: 200% 100%;
+            animation: flow 3s infinite linear;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot; class=&quot;flex flex-col&quot;&gt;
+        &lt;div class=&quot;ambient-glow&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute inset-0 z-0 grid-bg pointer-events-none&quot;&gt;&lt;/div&gt;
+
+        &lt;header class=&quot;w-full px-16 py-10 flex justify-between items-start z-20 shrink-0&quot;&gt;
+            &lt;div&gt;
+                &lt;p class=&quot;text-[#CCCCCC] text-xs tracking-[0.2em] font-medium uppercase opacity-80&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-cube mr-2&quot;&gt;&lt;/i&gt; Our Web3 Services
+                &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;text-right&quot;&gt;
+                &lt;p class=&quot;text-[#CCCCCC] text-xs tracking-[0.2em] font-medium uppercase opacity-80 mb-1&quot;&gt;
+                    Unlock The Future With Web3
+                &lt;/p&gt;
+                &lt;p class=&quot;text-white text-sm font-bold tracking-widest&quot;&gt;2027&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;div class=&quot;relative z-10 flex flex-col flex-1 px-16 pb-12 w-full justify-between&quot;&gt;
+            
+            &lt;div class=&quot;flex justify-end mb-4 shrink-0&quot;&gt;
+                &lt;div class=&quot;text-right max-w-4xl&quot;&gt;
+                    &lt;h1 class=&quot;text-white text-6xl font-bold uppercase leading-[0.9] tracking-tighter drop-shadow-lg&quot;&gt;
+                        End-to-End 
+                        &lt;span class=&quot;text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500&quot;&gt;Blockchain&lt;/span&gt; &lt;br&gt;
+                        &amp; Web3 Solutions
+                    &lt;/h1&gt;
+                    &lt;div class=&quot;w-32 h-1 bg-white ml-auto mt-6 opacity-50&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;w-full flex-1 flex items-center justify-center my-6&quot;&gt;
+                &lt;div class=&quot;w-[85%] h-32 relative rounded-2xl overflow-hidden border border-blue-500/20 bg-blue-950/20 backdrop-blur-md flex items-center justify-between px-16 shadow-[0_0_30px_rgba(11,19,103,0.3)]&quot;&gt;
+                    
+                    &lt;div class=&quot;absolute inset-0 animate-flow opacity-50 pointer-events-none&quot;&gt;&lt;/div&gt;
+
+                    &lt;div class=&quot;flex flex-col items-center z-10 relative group&quot;&gt;
+                        &lt;div class=&quot;w-12 h-12 rounded-full bg-blue-900/50 border border-blue-400/50 flex items-center justify-center mb-2 group-hover:border-white transition-colors&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-database text-blue-300&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;span class=&quot;text-[10px] uppercase tracking-widest text-blue-300/70&quot;&gt;Data Input&lt;/span&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;flex-1 h-[2px] bg-blue-500/20 mx-8 relative flex items-center justify-center&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-chevron-right text-blue-400/40 text-sm absolute left-1/4&quot;&gt;&lt;/i&gt;
+                        &lt;i class=&quot;fa-solid fa-chevron-right text-blue-400/40 text-sm absolute right-1/4&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;flex flex-col items-center z-10 relative&quot;&gt;
+                        &lt;div class=&quot;absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-blue-600/30 blur-2xl rounded-full pointer-events-none&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;w-16 h-16 rounded-full bg-blue-600/20 border-2 border-blue-400 flex items-center justify-center mb-2 shadow-[0_0_15px_rgba(59,130,246,0.5)]&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-link text-2xl text-white&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;span class=&quot;text-xs uppercase font-bold tracking-widest text-white drop-shadow&quot;&gt;Smart Chain Core&lt;/span&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;flex-1 h-[2px] bg-blue-500/20 mx-8 relative flex items-center justify-center&quot;&gt;
+                         &lt;i class=&quot;fa-solid fa-chevron-right text-blue-400/40 text-sm absolute left-1/4&quot;&gt;&lt;/i&gt;
+                        &lt;i class=&quot;fa-solid fa-chevron-right text-blue-400/40 text-sm absolute right-1/4&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;flex flex-col items-center z-10 relative group&quot;&gt;
+                         &lt;div class=&quot;w-12 h-12 rounded-full bg-blue-900/50 border border-blue-400/50 flex items-center justify-center mb-2 group-hover:border-white transition-colors&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-rocket text-blue-300&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                         &lt;span class=&quot;text-[10px] uppercase tracking-widest text-blue-300/70&quot;&gt;Value Output&lt;/span&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;w-full mt-auto shrink-0&quot;&gt;
+                
+                &lt;div class=&quot;w-full border-t border-[#E0E0E0] opacity-30 relative mb-8 flex items-center&quot;&gt;
+                    &lt;div class=&quot;absolute right-0 -top-[3px] w-[6px] h-[6px] bg-white rounded-full shadow-[0_0_10px_rgba(255,255,255,0.8)]&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;grid grid-cols-5 gap-6&quot;&gt;
+                    
+                    &lt;div class=&quot;group border-l border-white/10 pl-4 hover:bg-white/5 transition-colors duration-300 rounded-r-lg py-2&quot;&gt;
+                        &lt;div class=&quot;flex items-center mb-2&quot;&gt;
+                            &lt;span class=&quot;text-xl font-bold text-gray-600 group-hover:text-white mr-2&quot;&gt;01&lt;/span&gt;
+                            &lt;h3 class=&quot;text-white text-sm font-bold uppercase&quot;&gt;dApp Dev&lt;/h3&gt;
+                        &lt;/div&gt;
+                        &lt;p class=&quot;text-[#CCCCCC] text-sm font-light leading-relaxed opacity-80&quot;&gt;
+                            Custom decentralized apps built for scalability.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;group border-l border-white/10 pl-4 hover:bg-white/5 transition-colors duration-300 rounded-r-lg py-2&quot;&gt;
+                        &lt;div class=&quot;flex items-center mb-2&quot;&gt;
+                            &lt;span class=&quot;text-xl font-bold text-gray-600 group-hover:text-white mr-2&quot;&gt;02&lt;/span&gt;
+                            &lt;h3 class=&quot;text-white text-sm font-bold uppercase&quot;&gt;Smart Contracts&lt;/h3&gt;
+                        &lt;/div&gt;
+                        &lt;p class=&quot;text-[#CCCCCC] text-sm font-light leading-relaxed opacity-80&quot;&gt;
+                            Secure &amp; audited architecture ensuring trust.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;group border-l border-white/10 pl-4 hover:bg-white/5 transition-colors duration-300 rounded-r-lg py-2&quot;&gt;
+                        &lt;div class=&quot;flex items-center mb-2&quot;&gt;
+                            &lt;span class=&quot;text-xl font-bold text-gray-600 group-hover:text-white mr-2&quot;&gt;03&lt;/span&gt;
+                            &lt;h3 class=&quot;text-white text-sm font-bold uppercase&quot;&gt;Tokenomics&lt;/h3&gt;
+                        &lt;/div&gt;
+                        &lt;p class=&quot;text-[#CCCCCC] text-sm font-light leading-relaxed opacity-80&quot;&gt;
+                            Solutions for digital assets and economics.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;group border-l border-white/10 pl-4 hover:bg-white/5 transition-colors duration-300 rounded-r-lg py-2&quot;&gt;
+                        &lt;div class=&quot;flex items-center mb-2&quot;&gt;
+                            &lt;span class=&quot;text-xl font-bold text-gray-600 group-hover:text-white mr-2&quot;&gt;04&lt;/span&gt;
+                            &lt;h3 class=&quot;text-white text-sm font-bold uppercase&quot;&gt;DeFi Platforms&lt;/h3&gt;
+                        &lt;/div&gt;
+                        &lt;p class=&quot;text-[#CCCCCC] text-sm font-light leading-relaxed opacity-80&quot;&gt;
+                            Advanced Wallet Integration &amp; protocols.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;group border-l border-white/10 pl-4 hover:bg-white/5 transition-colors duration-300 rounded-r-lg py-2&quot;&gt;
+                        &lt;div class=&quot;flex items-center mb-2&quot;&gt;
+                            &lt;span class=&quot;text-xl font-bold text-gray-600 group-hover:text-white mr-2&quot;&gt;05&lt;/span&gt;
+                            &lt;h3 class=&quot;text-white text-sm font-bold uppercase&quot;&gt;DAO Infra&lt;/h3&gt;
+                        &lt;/div&gt;
+                        &lt;p class=&quot;text-[#CCCCCC] text-sm font-light leading-relaxed opacity-80&quot;&gt;
+                            Robust Governance Systems for orgs.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute bottom-0 right-0 p-0 z-30&quot;&gt;
+            &lt;div class=&quot;bg-white w-20 h-20 flex items-center justify-center text-black&quot;&gt;
+                &lt;i class=&quot;fa-solid fa-arrow-up-right-from-square text-2xl&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 8
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Case Study Highlights - Web3 Future&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px; position: relative;
+            background-color: #050505; overflow: hidden; margin: 0 auto;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* 蓝色系氛围增强 */
+        .ambient-blue {
+            position: absolute; width: 800px; height: 800px;
+            background: radial-gradient(circle, rgba(11, 19, 103, 0.5) 0%, rgba(5, 5, 5, 0) 70%);
+            z-index: 0; pointer-events: none; filter: blur(40px);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(59, 130, 246, 0.2); /* 蓝色半透明边框 */
+            backdrop-filter: blur(10px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(59, 130, 246, 0.6);
+            box-shadow: 0 0 30px rgba(11, 19, 103, 0.5);
+            background: rgba(59, 130, 246, 0.05);
+            transform: translateY(-5px);
+        }
+
+        /* 蓝色发光文字 */
+        .text-glow-blue {
+            color: #60A5FA;
+            text-shadow: 0 0 10px rgba(59, 130, 246, 0.8);
+        }
+
+        /* 底部装饰条 */
+        .blue-scan-line {
+            height: 2px; width: 100%;
+            background: linear-gradient(90deg, transparent, #3B82F6, transparent);
+            position: absolute; bottom: 0; left: 0;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot; class=&quot;flex flex-col px-16 py-12&quot;&gt;
+        &lt;!-- 背景光效 --&gt;
+        &lt;div class=&quot;ambient-blue&quot; style=&quot;top: -300px; right: -200px;&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;ambient-blue&quot; style=&quot;bottom: -400px; left: -200px; opacity: 0.6;&quot;&gt;&lt;/div&gt;
+
+        &lt;!-- 顶部元信息 --&gt;
+        &lt;header class=&quot;relative z-10 flex justify-between items-start mb-4&quot;&gt;
+            &lt;h5 class=&quot;text-white text-xs font-bold tracking-[0.3em] uppercase border-l-2 border-blue-600 pl-4&quot;&gt;Success Stories&lt;/h5&gt;
+            &lt;div class=&quot;text-right&quot;&gt;
+                &lt;h5 class=&quot;text-gray-500 text-sm font-medium tracking-[0.2em] uppercase&quot;&gt;Web3 Transformation Framework&lt;/h5&gt;
+                &lt;h5 class=&quot;text-white text-sm font-bold mt-1 uppercase&quot;&gt;2027_METRICS&lt;/h5&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;!-- 标题区 (严格对齐 P1 样式) --&gt;
+        &lt;div class=&quot;flex justify-end mb-10 relative z-10 shrink-0&quot;&gt;
+            &lt;div class=&quot;text-right max-w-4xl&quot;&gt;
+                &lt;h1 class=&quot;text-white text-6xl font-bold uppercase leading-[0.9] tracking-tighter drop-shadow-lg&quot;&gt;
+                    Case Study 
+                    Highlights 
+                &lt;/h1&gt;
+                &lt;p class=&quot;text-sm text-white tracking-[0.4em] uppercase mt-4&quot;&gt;Pioneering Decentralized Success Across Industries&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 案例卡片区 1x3 布局 --&gt;
+        &lt;div class=&quot;relative z-10 flex justify-between items-start w-full flex-1&quot;&gt;
+
+            &lt;!-- 卡片 1 --&gt;
+            &lt;div class=&quot;w-[350px] flex flex-col group&quot;&gt;
+                &lt;div class=&quot;flex justify-between items-center mb-3 px-2&quot;&gt;
+                    &lt;h6 class=&quot;text-gray-500 text-sm font-bold uppercase tracking-widest&quot;&gt;ECOMMERCE&lt;/h6&gt;
+                    &lt;span class=&quot;text-blue-500 text-sm font-mono&quot;&gt;01.REF&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;w-full h-[340px] rounded-2xl glass-card p-8 flex flex-col justify-between relative overflow-hidden&quot;&gt;
+                    &lt;div class=&quot;absolute -top-3 -right-3 w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center border-4 border-[#050505] z-20 shadow-lg shadow-blue-900/50&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-bolt-lightning text-white text-sm&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    
+                    &lt;div&gt;
+                        &lt;h2 class=&quot;text-white text-4xl font-bold tracking-tight mb-2&quot;&gt;Borcelle&lt;/h2&gt;
+                        &lt;div class=&quot;w-8 h-1 bg-blue-500 rounded-full&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;bg-blue-950/30 rounded-xl border border-blue-500/20 p-6 mt-auto&quot;&gt;
+                        &lt;p class=&quot;text-gray-400 text-sm leading-relaxed&quot;&gt;
+                            Acquired &lt;span class=&quot;text-glow-blue text-2xl font-bold block mt-1&quot;&gt;1M+ Users&lt;/span&gt; 
+                            within 6 months of launch.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;blue-scan-line&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- 卡片 2 (稍微错位增加设计感) --&gt;
+            &lt;div class=&quot;w-[350px] flex flex-col mt-8 group&quot;&gt;
+                &lt;div class=&quot;flex justify-between items-center mb-3 px-2&quot;&gt;
+                    &lt;h6 class=&quot;text-gray-500 text-sm font-bold uppercase tracking-widest&quot;&gt;FINTECH&lt;/h6&gt;
+                    &lt;span class=&quot;text-blue-500 text-sm font-mono&quot;&gt;02.REF&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;w-full h-[340px] rounded-2xl glass-card p-8 flex flex-col justify-between relative overflow-hidden&quot;&gt;
+                    &lt;div class=&quot;absolute -top-3 -right-3 w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center border-4 border-[#050505] z-20 shadow-lg shadow-blue-900/50&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-chart-line text-white text-sm&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+
+                    &lt;div&gt;
+                        &lt;h2 class=&quot;text-white text-4xl font-bold tracking-tight mb-2&quot;&gt;Liceria&lt;/h2&gt;
+                        &lt;div class=&quot;w-8 h-1 bg-blue-500 rounded-full&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;bg-blue-950/30 rounded-xl border border-blue-500/20 p-6 mt-auto&quot;&gt;
+                        &lt;p class=&quot;text-gray-400 text-sm leading-relaxed&quot;&gt;
+                            Raised &lt;span class=&quot;text-glow-blue text-2xl font-bold block mt-1&quot;&gt;$2.5M USD&lt;/span&gt; 
+                            via community-owned funding.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;blue-scan-line&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- 卡片 3 (稍微更错位) --&gt;
+            &lt;div class=&quot;w-[350px] flex flex-col mt-16 group&quot;&gt;
+                &lt;div class=&quot;flex justify-between items-center mb-3 px-2&quot;&gt;
+                    &lt;h6 class=&quot;text-gray-500 text-sm font-bold uppercase tracking-widest&quot;&gt;GAMING&lt;/h6&gt;
+                    &lt;span class=&quot;text-blue-500 text-sm font-mono&quot;&gt;03.REF&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;w-full h-[340px] rounded-2xl glass-card p-8 flex flex-col justify-between relative overflow-hidden&quot;&gt;
+                    &lt;div class=&quot;absolute -top-3 -right-3 w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center border-4 border-[#050505] z-20 shadow-lg shadow-blue-900/50&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-gamepad text-white text-sm&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+
+                    &lt;div&gt;
+                        &lt;h2 class=&quot;text-white text-4xl font-bold tracking-tight mb-2&quot;&gt;Larana&lt;/h2&gt;
+                        &lt;div class=&quot;w-8 h-1 bg-blue-500 rounded-full&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;bg-blue-950/30 rounded-xl border border-blue-500/20 p-6 mt-auto&quot;&gt;
+                        &lt;p class=&quot;text-gray-400 text-sm leading-relaxed&quot;&gt;
+                            Engagement increased &lt;span class=&quot;text-glow-blue text-2xl font-bold block mt-1&quot;&gt;400% Peak&lt;/span&gt; 
+                            through NFT incentives.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;blue-scan-line&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+
+        &lt;!-- 底部右下角图标 --&gt;
+        &lt;div class=&quot;absolute bottom-12 right-12 z-20&quot;&gt;
+            &lt;div class=&quot;w-14 h-14 bg-white hover:bg-blue-500 transition-colors duration-300 flex items-center justify-center cursor-pointer shadow-[0_0_20px_rgba(255,255,255,0.2)]&quot;&gt;
+                &lt;i class=&quot;fa-solid fa-arrow-right text-black text-xl -rotate-45&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 9
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Why Us - Refined&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #050505; color: #FFFFFF; font-family: 'Noto Sans SC', sans-serif; overflow: hidden; }
+        .tech-card { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.08); clip-path: polygon(0 0, 100% 0, 100% 85%, 90% 100%, 0 100%); transition: all 0.4s; }
+        .tech-card:hover { background: rgba(255, 255, 255, 0.05); border-color: rgba(255, 255, 255, 0.2); transform: translateY(-5px); }
+        .accent-dot { width: 4px; height: 4px; background: #3b82f6; border-radius: 50%; box-shadow: 0 0 10px #3b82f6; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot; class=&quot;flex flex-col px-16 py-12&quot;&gt;
+        &lt;!-- 装饰性网格背景 --&gt;
+        &lt;div class=&quot;absolute inset-0 opacity-10 pointer-events-none&quot; style=&quot;background-image: radial-gradient(rgba(255,255,255,0.2) 1px, transparent 1px); background-size: 40px 40px;&quot;&gt;&lt;/div&gt;
+
+        &lt;header class=&quot;relative z-10 flex justify-between items-center mb-10&quot;&gt;
+            &lt;h6 class=&quot;text-white/40 text-sm tracking-[0.3em] font-bold uppercase&quot;&gt;Competitive Edge&lt;/h6&gt;
+            &lt;span class=&quot;w-[100px] h-[1px] bg-white/20&quot;&gt;&lt;/span&gt;
+        &lt;/header&gt;
+
+        &lt;div class=&quot;relative z-10 flex justify-end mb-12&quot;&gt;
+            &lt;div class=&quot;text-right&quot;&gt;
+                &lt;h1 class=&quot;text-white text-6xl font-bold uppercase leading-[0.9] tracking-tighter&quot;&gt;
+                    Why &lt;span class=&quot;text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500&quot;&gt;Choose Us&lt;/span&gt;
+                &lt;/h1&gt;
+                &lt;p class=&quot;text-white/40 text-sm tracking-[0.3em] uppercase mt-4&quot;&gt;Your Trusted Web3 Strategy Partner&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;relative z-10 grid grid-cols-12 gap-8 flex-1&quot;&gt;
+            &lt;!-- Left Side Cards --&gt;
+            &lt;div class=&quot;col-span-7 grid grid-rows-2 gap-6&quot;&gt;
+                &lt;div class=&quot;tech-card p-8 flex flex-col justify-center&quot;&gt;
+                    &lt;div class=&quot;flex items-center mb-6 space-x-3&quot;&gt;
+                        &lt;div class=&quot;accent-dot&quot;&gt;&lt;/div&gt;
+                        &lt;h4 class=&quot;text-sm font-bold uppercase tracking-widest text-blue-500&quot;&gt;Core Expertise&lt;/h4&gt;
+                    &lt;/div&gt;
+                    &lt;ul class=&quot;space-y-6&quot;&gt;
+                        &lt;li class=&quot;flex items-center space-x-4&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-microchip text-white/60 text-sm&quot;&gt;&lt;/i&gt;
+                            &lt;p class=&quot;text-lg font-medium&quot;&gt;Expert &lt;span class=&quot;text-white/50&quot;&gt;Blockchain Developers &amp; Strategists&lt;/span&gt;&lt;/p&gt;
+                        &lt;/li&gt;
+                        &lt;li class=&quot;flex items-center space-x-4&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-shield-halved text-white/60 text-sm&quot;&gt;&lt;/i&gt;
+                            &lt;p class=&quot;text-lg font-medium&quot;&gt;Security-First &lt;span class=&quot;text-white/50&quot;&gt;Approach with End-to-End Support&lt;/span&gt;&lt;/p&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;tech-card p-8 flex flex-col justify-center&quot;&gt;
+                    &lt;div class=&quot;flex items-center mb-6 space-x-3&quot;&gt;
+                        &lt;div class=&quot;accent-dot&quot;&gt;&lt;/div&gt;
+                        &lt;h4 class=&quot;text-sm font-bold uppercase tracking-widest text-blue-500&quot;&gt;Market Presence&lt;/h4&gt;
+                    &lt;/div&gt;
+                    &lt;ul class=&quot;space-y-6&quot;&gt;
+                        &lt;li class=&quot;flex items-center space-x-4&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-earth-americas text-white/60 text-sm&quot;&gt;&lt;/i&gt;
+                            &lt;p class=&quot;text-lg font-medium&quot;&gt;Global &lt;span class=&quot;text-white/50&quot;&gt;Client Base with Trusted Results&lt;/span&gt;&lt;/p&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Right Side Highlight --&gt;
+            &lt;div class=&quot;col-span-5 h-full&quot;&gt;
+                &lt;div class=&quot;tech-card h-full p-8 bg-blue-500/5 border-blue-500/20&quot;&gt;
+                    &lt;div class=&quot;h-full flex flex-col justify-between&quot;&gt;
+                        &lt;div&gt;
+                            &lt;div class=&quot;flex items-center mb-10 space-x-3&quot;&gt;
+                                &lt;div class=&quot;accent-dot&quot;&gt;&lt;/div&gt;
+                                &lt;h4 class=&quot;text-sm font-bold uppercase tracking-widest text-blue-500&quot;&gt;Technical Vision&lt;/h4&gt;
+                            &lt;/div&gt;
+                            &lt;h3 class=&quot;text-4xl font-bold uppercase leading-tight mb-8&quot;&gt;Future-Ready &lt;br&gt; Tech Stacks&lt;/h3&gt;
+                            &lt;p class=&quot;text-white/40 leading-relaxed text-sm&quot;&gt;
+                                We specialize in scalable architectures that adapt to the rapidly evolving decentralized landscape of 2027 and beyond.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;border-t border-white/10 pt-8&quot;&gt;
+                            &lt;div class=&quot;flex justify-between items-end&quot;&gt;
+                                &lt;span class=&quot;text-sm text-white/30 uppercase tracking-[0.2em]&quot;&gt;Efficiency Rating: 99.9%&lt;/span&gt;
+                                &lt;i class=&quot;fa-solid fa-qrcode text-3xl opacity-20&quot;&gt;&lt;/i&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 10
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Governance Framework - Content Page&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;style&gt;
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #050505; overflow: hidden; font-family: 'Noto Sans SC', sans-serif; color: #FFFFFF; }
+        .ambient-glow { position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 0; background: radial-gradient(circle at 90% 10%, rgba(11,19,103,0.3) 0%, transparent 60%); pointer-events: none; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot; class=&quot;flex flex-col px-16 py-10&quot;&gt;
+        &lt;div class=&quot;ambient-glow&quot;&gt;&lt;/div&gt;
+        
+        &lt;!-- 右对齐标题 (参考样式) --&gt;
+        &lt;div class=&quot;flex justify-end mb-10 relative z-10 shrink-0&quot;&gt;
+            &lt;div class=&quot;text-right max-w-4xl&quot;&gt;
+                &lt;h1 class=&quot;text-white text-5xl font-bold uppercase leading-[0.9] tracking-tighter drop-shadow-lg&quot;&gt;
+                    Decentralized &lt;span class=&quot;text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500&quot;&gt;Autonomous&lt;/span&gt; &lt;br&gt;
+                    Systems
+                &lt;/h1&gt;
+                &lt;p class=&quot;text-[10px] text-blue-400 tracking-[0.4em] uppercase mt-4&quot;&gt;Transparent On-Chain Decision Making&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 中间配图区 --&gt;
+        &lt;div class=&quot;relative z-10 w-full h-[280px] mb-12 rounded-2xl overflow-hidden border border-white/10 shadow-2xl&quot;&gt;
+            &lt;img src=&quot;https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&amp;w=2832&amp;auto=format&amp;fit=crop&quot; class=&quot;w-full h-full object-cover&quot;&gt;
+            &lt;div class=&quot;absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 底部 1x3 布局 --&gt;
+        &lt;div class=&quot;relative z-10 grid grid-cols-3 gap-12 mt-auto pb-6&quot;&gt;
+            &lt;div class=&quot;border-l border-blue-500/30 pl-6 py-2 bg-white/5 rounded-r-xl&quot;&gt;
+                &lt;div class=&quot;flex items-center mb-3&quot;&gt;
+                    &lt;span class=&quot;text-2xl font-bold text-blue-400 mr-4&quot;&gt;01&lt;/span&gt;
+                    &lt;h3 class=&quot;text-white text-sm font-bold uppercase tracking-widest&quot;&gt;Voting Logic&lt;/h3&gt;
+                &lt;/div&gt;
+                &lt;p class=&quot;text-[#CCCCCC] text-sm font-light leading-relaxed opacity-70&quot;&gt;Implementation of quadratic voting and soul-bound token weight mechanisms.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;border-l border-blue-500/30 pl-6 py-2 bg-white/5 rounded-r-xl&quot;&gt;
+                &lt;div class=&quot;flex items-center mb-3&quot;&gt;
+                    &lt;span class=&quot;text-2xl font-bold text-blue-400 mr-4&quot;&gt;02&lt;/span&gt;
+                    &lt;h3 class=&quot;text-white text-sm font-bold uppercase tracking-widest&quot;&gt;Treasury Management&lt;/h3&gt;
+                &lt;/div&gt;
+                &lt;p class=&quot;text-[#CCCCCC] text-sm font-light leading-relaxed opacity-70&quot;&gt;Automated asset allocation via multi-sig smart contracts and dynamic risk modules.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;border-l border-blue-500/30 pl-6 py-2 bg-white/5 rounded-r-xl&quot;&gt;
+                &lt;div class=&quot;flex items-center mb-3&quot;&gt;
+                    &lt;span class=&quot;text-2xl font-bold text-blue-400 mr-4&quot;&gt;03&lt;/span&gt;
+                    &lt;h3 class=&quot;text-white text-sm font-bold uppercase tracking-widest&quot;&gt;Incentive Layer&lt;/h3&gt;
+                &lt;/div&gt;
+                &lt;p class=&quot;text-[#CCCCCC] text-sm font-light leading-relaxed opacity-70&quot;&gt;Game-theoretical rewards for active contributors and node maintainers.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 11
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Web3 Solutions - Refined &amp; Expanded&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #050505; color: #FFFFFF; font-family: 'Noto Sans SC', sans-serif; overflow: hidden; }
+        .ambient-glow { position: absolute; width: 600px; height: 600px; background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%); filter: blur(80px); }
+        
+        /* 增强后的行样式 */
+        .evolve-row { 
+            background: linear-gradient(90deg, rgba(255,255,255,0.01) 0%, rgba(255,255,255,0.03) 50%, rgba(255,255,255,0.01) 100%); 
+            border-bottom: 1px solid rgba(255,255,255,0.05); 
+            position: relative; 
+            overflow: hidden;
+        }
+        .evolve-row::after {
+            content: &quot;&quot;; position: absolute; bottom: 0; left: 0; width: 100%; height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.5), transparent);
+            transform: scaleX(0); transition: transform 0.5s ease;
+        }
+        .evolve-row:hover::after { transform: scaleX(1); }
+        .evolve-row:hover { background: rgba(255,255,255,0.04); }
+
+        /* 科技感网格背景 */
+        .grid-bg {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            position: absolute; inset: 0; pointer-events: none; opacity: 0.3;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot; class=&quot;flex flex-col px-16 py-12&quot;&gt;
+        &lt;!-- 背景装饰 --&gt;
+        &lt;div class=&quot;grid-bg&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;ambient-glow&quot; style=&quot;top: -200px; left: -100px;&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;ambient-glow&quot; style=&quot;bottom: -300px; right: -100px; background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);&quot;&gt;&lt;/div&gt;
+
+        &lt;!-- 顶部 Header --&gt;
+        &lt;header class=&quot;relative z-10 flex justify-between items-start mb-10&quot;&gt;
+            &lt;div class=&quot;flex flex-col&quot;&gt;
+                &lt;h6 class=&quot;text-blue-500 text-xs tracking-[0.3em] font-bold uppercase pl-4 border-l-2 border-blue-500 mb-2&quot;&gt;Digital Evolution&lt;/h6&gt;
+                &lt;div class=&quot;flex items-center space-x-2 pl-4 opacity-50&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-circle-nodes text-[10px]&quot;&gt;&lt;/i&gt;
+                    &lt;span class=&quot;text-[10px] tracking-widest uppercase&quot;&gt;Network v3.0&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;text-right&quot;&gt;
+                &lt;p class=&quot;text-white/60 text-xs tracking-[0.2em] font-medium uppercase&quot;&gt;Strategy Report&lt;/p&gt;
+                &lt;div class=&quot;flex items-center justify-end gap-2 mt-1&quot;&gt;
+                    &lt;span class=&quot;h-1 w-1 bg-green-500 rounded-full animate-pulse&quot;&gt;&lt;/span&gt;
+                    &lt;p class=&quot;text-white text-sm font-bold tracking-widest&quot;&gt;2027 PREVIEW&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;!-- 主标题区域 --&gt;
+        &lt;div class=&quot;relative z-10 flex justify-between items-end mb-12 shrink-0 border-b border-white/10 pb-8&quot;&gt;
+            &lt;div&gt;
+                &lt;h1 class=&quot;text-white text-6xl font-bold uppercase leading-[0.9] tracking-tighter&quot;&gt;
+                    Solving Key &lt;br&gt; Web2 Limitations&lt;/span&gt;
+                &lt;/h1&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;text-right w-64&quot;&gt;
+                &lt;p class=&quot;text-white/40 text-xs leading-relaxed&quot;&gt;
+                    Transitioning from centralized silos to decentralized ecosystems.
+                    &lt;span class=&quot;text-blue-400&quot;&gt;Restoring power to the user.&lt;/span&gt;
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 对比列表区域 --&gt;
+        &lt;div class=&quot;relative z-10 flex flex-col items-center w-full&quot;&gt;
+            &lt;!-- Header Row --&gt;
+            &lt;div class=&quot;w-full flex justify-between px-6 pb-2 text-[10px] text-white/30 uppercase tracking-widest border-b border-white/5 mb-2&quot;&gt;
+                &lt;span class=&quot;w-[10%]&quot;&gt;Index&lt;/span&gt;
+                &lt;span class=&quot;w-[30%]&quot;&gt;Legacy Problem&lt;/span&gt;
+                &lt;span class=&quot;w-[10%] text-center&quot;&gt;Shift&lt;/span&gt;
+                &lt;span class=&quot;w-[30%] text-right&quot;&gt;Web3 Solution&lt;/span&gt;
+                &lt;span class=&quot;w-[20%] text-right&quot;&gt;Tech Enabler&lt;/span&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Item 1 --&gt;
+            &lt;div class=&quot;evolve-row w-full flex items-center justify-between px-6 py-5 group cursor-default&quot;&gt;
+                &lt;div class=&quot;w-[10%] text-white/20 font-mono text-lg group-hover:text-blue-500/50 transition-colors&quot;&gt;01&lt;/div&gt;
+                &lt;div class=&quot;w-[30%]&quot;&gt;&lt;p class=&quot;text-white/50 text-sm font-medium tracking-widest uppercase group-hover:text-white/70 transition-colors&quot;&gt;Centralized Control&lt;/p&gt;&lt;/div&gt;
+                &lt;div class=&quot;w-[10%] flex justify-center&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-arrow-right-long text-blue-500/50 group-hover:text-blue-400 group-hover:scale-125 transition-all&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;w-[30%] text-right&quot;&gt;&lt;p class=&quot;text-white text-lg font-bold tracking-widest uppercase&quot;&gt;User Autonomy&lt;/p&gt;&lt;/div&gt;
+                &lt;div class=&quot;w-[20%] text-right pl-4&quot;&gt;
+                    &lt;span class=&quot;text-[10px] bg-white/5 border border-white/10 px-2 py-1 rounded text-blue-300/80&quot;&gt;DAO Governance&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Item 2 --&gt;
+            &lt;div class=&quot;evolve-row w-full flex items-center justify-between px-6 py-5 group cursor-default&quot;&gt;
+                &lt;div class=&quot;w-[10%] text-white/20 font-mono text-lg group-hover:text-blue-500/50 transition-colors&quot;&gt;02&lt;/div&gt;
+                &lt;div class=&quot;w-[30%]&quot;&gt;&lt;p class=&quot;text-white/50 text-sm font-medium tracking-widest uppercase group-hover:text-white/70 transition-colors&quot;&gt;Data Exploitation&lt;/p&gt;&lt;/div&gt;
+                &lt;div class=&quot;w-[10%] flex justify-center&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-arrow-right-long text-blue-500/50 group-hover:text-blue-400 group-hover:scale-125 transition-all&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;w-[30%] text-right&quot;&gt;&lt;p class=&quot;text-white text-lg font-bold tracking-widest uppercase&quot;&gt;Privacy &amp; Consent&lt;/p&gt;&lt;/div&gt;
+                &lt;div class=&quot;w-[20%] text-right pl-4&quot;&gt;
+                    &lt;span class=&quot;text-[10px] bg-white/5 border border-white/10 px-2 py-1 rounded text-blue-300/80&quot;&gt;Zero-Knowledge&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Item 3 --&gt;
+            &lt;div class=&quot;evolve-row w-full flex items-center justify-between px-6 py-5 group cursor-default&quot;&gt;
+                &lt;div class=&quot;w-[10%] text-white/20 font-mono text-lg group-hover:text-blue-500/50 transition-colors&quot;&gt;03&lt;/div&gt;
+                &lt;div class=&quot;w-[30%]&quot;&gt;&lt;p class=&quot;text-white/50 text-sm font-medium tracking-widest uppercase group-hover:text-white/70 transition-colors&quot;&gt;Limited Monetization&lt;/p&gt;&lt;/div&gt;
+                &lt;div class=&quot;w-[10%] flex justify-center&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-arrow-right-long text-blue-500/50 group-hover:text-blue-400 group-hover:scale-125 transition-all&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;w-[30%] text-right&quot;&gt;&lt;p class=&quot;text-white text-lg font-bold tracking-widest uppercase&quot;&gt;Creator Economy&lt;/p&gt;&lt;/div&gt;
+                &lt;div class=&quot;w-[20%] text-right pl-4&quot;&gt;
+                    &lt;span class=&quot;text-[10px] bg-white/5 border border-white/10 px-2 py-1 rounded text-blue-300/80&quot;&gt;NFT &amp; Royalty&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Item 4 --&gt;
+            &lt;div class=&quot;evolve-row w-full flex items-center justify-between px-6 py-5 group cursor-default&quot;&gt;
+                &lt;div class=&quot;w-[10%] text-white/20 font-mono text-lg group-hover:text-blue-500/50 transition-colors&quot;&gt;04&lt;/div&gt;
+                &lt;div class=&quot;w-[30%]&quot;&gt;&lt;p class=&quot;text-white/50 text-sm font-medium tracking-widest uppercase group-hover:text-white/70 transition-colors&quot;&gt;Security Concerns&lt;/p&gt;&lt;/div&gt;
+                &lt;div class=&quot;w-[10%] flex justify-center&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-arrow-right-long text-blue-500/50 group-hover:text-blue-400 group-hover:scale-125 transition-all&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;w-[30%] text-right&quot;&gt;&lt;p class=&quot;text-white text-lg font-bold tracking-widest uppercase&quot;&gt;Immutable Trust&lt;/p&gt;&lt;/div&gt;
+                &lt;div class=&quot;w-[20%] text-right pl-4&quot;&gt;
+                    &lt;span class=&quot;text-[10px] bg-white/5 border border-white/10 px-2 py-1 rounded text-blue-300/80&quot;&gt;Cryptography&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 底部新增的指标栏 --&gt;
+        &lt;div class=&quot;mt-auto grid grid-cols-4 gap-8 pt-8 border-t border-white/10&quot;&gt;
+            &lt;div&gt;
+                &lt;p class=&quot;text-[10px] text-white/30 uppercase tracking-widest mb-1&quot;&gt;Architecture&lt;/p&gt;
+                &lt;div class=&quot;text-white text-sm font-semibold flex items-center gap-2&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-layer-group text-blue-500&quot;&gt;&lt;/i&gt; Distributed
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;p class=&quot;text-[10px] text-white/30 uppercase tracking-widest mb-1&quot;&gt;Transparency&lt;/p&gt;
+                &lt;div class=&quot;text-white text-sm font-semibold flex items-center gap-2&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-eye text-blue-500&quot;&gt;&lt;/i&gt; 100% Auditable
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;p class=&quot;text-[10px] text-white/30 uppercase tracking-widest mb-1&quot;&gt;Uptime&lt;/p&gt;
+                &lt;div class=&quot;text-white text-sm font-semibold flex items-center gap-2&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-bolt text-blue-500&quot;&gt;&lt;/i&gt; No Downtime
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;flex justify-end items-end&quot;&gt;
+                &lt;div class=&quot;flex items-center gap-3&quot;&gt;
+                    &lt;p class=&quot;text-[10px] text-white/20 uppercase tracking-[0.5em]&quot;&gt;Status: Optimized&lt;/p&gt;
+                    &lt;div class=&quot;w-8 h-8 bg-white flex items-center justify-center hover:bg-blue-500 transition-colors cursor-pointer&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-arrow-right text-black text-xs&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 12
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;DeFi Security - Page 1&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #050505; overflow: hidden; font-family: 'Noto Sans SC', sans-serif; color: #FFFFFF; }
+        .ambient-glow { position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 0; background: radial-gradient(circle at 80% 20%, rgba(11,19,103,0.4) 0%, transparent 70%); pointer-events: none; }
+        .grid-bg { background-image: linear-gradient(#333 1px, transparent 1px), linear-gradient(90deg, #333 1px, transparent 1px); background-size: 60px 60px; opacity: 0.1; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot; class=&quot;flex flex-col&quot;&gt;
+        &lt;div class=&quot;ambient-glow&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute inset-0 z-0 grid-bg&quot;&gt;&lt;/div&gt;
+
+        &lt;!-- 顶部：标题与配图 --&gt;
+        &lt;div class=&quot;relative z-10 flex flex-1 px-16 pt-12&quot;&gt;
+            &lt;div class=&quot;w-1/2 flex flex-col justify-center pr-12&quot;&gt;
+                &lt;p class=&quot;text-[#CCCCCC] text-xs tracking-[0.2em] font-medium uppercase opacity-80 mb-4&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-shield-halved mr-2&quot;&gt;&lt;/i&gt; Security Layer
+                &lt;/p&gt;
+                &lt;h1 class=&quot;text-7xl font-bold uppercase leading-tight tracking-tighter mb-6&quot;&gt;
+                    Audit &lt;br&gt; Lifecycle&lt;/span&gt;
+                &lt;/h1&gt;
+                &lt;p class=&quot;text-white/60 text-lg font-light leading-relaxed&quot;&gt;
+                    Integrated security protocols ensuring zero-knowledge proof validation and automated vulnerability mitigation across the entire DeFi stack.
+                &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;w-1/2 py-8&quot;&gt;
+                &lt;div class=&quot;w-full h-full rounded-2xl border border-white/10 overflow-hidden shadow-2xl&quot;&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&amp;w=2670&amp;auto=format&amp;fit=crop&quot; class=&quot;w-full h-full object-cover grayscale-[0.2]&quot;&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 底部：1x3 文本框布局 --&gt;
+        &lt;div class=&quot;relative z-10 px-16 pb-16 pt-8&quot;&gt;
+            &lt;div class=&quot;grid grid-cols-3 gap-12 border-t border-white/10 pt-10&quot;&gt;
+                &lt;div class=&quot;border-l border-white/20 pl-6&quot;&gt;
+                    &lt;div class=&quot;flex items-center mb-3&quot;&gt;
+                        &lt;span class=&quot;text-xl font-bold text-blue-400 mr-3&quot;&gt;01&lt;/span&gt;
+                        &lt;h3 class=&quot;text-white text-sm font-bold uppercase&quot;&gt;Static Analysis&lt;/h3&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-[#CCCCCC] text-sm font-light leading-relaxed opacity-70&quot;&gt;
+                        Deep bytecode inspection using AI-powered pattern matching to detect logic flaws before deployment.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;border-l border-white/20 pl-6&quot;&gt;
+                    &lt;div class=&quot;flex items-center mb-3&quot;&gt;
+                        &lt;span class=&quot;text-xl font-bold text-blue-400 mr-3&quot;&gt;02&lt;/span&gt;
+                        &lt;h3 class=&quot;text-white text-sm font-bold uppercase&quot;&gt;Formal Verification&lt;/h3&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-[#CCCCCC] text-sm font-light leading-relaxed opacity-70&quot;&gt;
+                        Mathematical proofs providing 100% certainty that the protocol adheres to its intended specifications.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;border-l border-white/20 pl-6&quot;&gt;
+                    &lt;div class=&quot;flex items-center mb-3&quot;&gt;
+                        &lt;span class=&quot;text-xl font-bold text-blue-400 mr-3&quot;&gt;03&lt;/span&gt;
+                        &lt;h3 class=&quot;text-white text-sm font-bold uppercase&quot;&gt;Bug Bounty&lt;/h3&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-[#CCCCCC] text-sm font-light leading-relaxed opacity-70&quot;&gt;
+                        Global incentivized program for ethical hackers to continuously stress-test the live environment.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 13
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Network Analytics Dashboard&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #050505; color: #FFFFFF; font-family: 'Noto Sans SC', sans-serif; overflow: hidden; }
+        .ambient-glow { position: absolute; width: 600px; height: 600px; background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%); filter: blur(80px); }
+        
+        /* 表格/日志行样式 (从原模板继承) */
+        .log-row { 
+            background: linear-gradient(90deg, rgba(255,255,255,0.01) 0%, rgba(255,255,255,0.03) 50%, rgba(255,255,255,0.01) 100%); 
+            border-bottom: 1px solid rgba(255,255,255,0.05); 
+            position: relative; 
+            overflow: hidden;
+            transition: background-color 0.3s ease;
+        }
+        .log-row:hover { background: rgba(255,255,255,0.04); }
+
+        /* 科技感网格背景 (从原模板继承) */
+        .grid-bg {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            position: absolute; inset: 0; pointer-events: none; opacity: 0.3;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot; class=&quot;flex flex-col px-16 py-12&quot;&gt;
+        &lt;!-- 背景装饰 --&gt;
+        &lt;div class=&quot;grid-bg&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;ambient-glow&quot; style=&quot;top: -200px; left: -100px;&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;ambient-glow&quot; style=&quot;bottom: -300px; right: -100px; background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);&quot;&gt;&lt;/div&gt;
+
+        &lt;!-- 顶部 Header --&gt;
+        &lt;header class=&quot;relative z-10 flex justify-between items-start mb-10&quot;&gt;
+            &lt;div class=&quot;flex flex-col&quot;&gt;
+                &lt;h6 class=&quot;text-blue-500 text-xs tracking-[0.3em] font-bold uppercase pl-4 border-l-2 border-blue-500 mb-2&quot;&gt;Network Monitoring&lt;/h6&gt;
+                &lt;div class=&quot;flex items-center space-x-2 pl-4 opacity-50&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-satellite-dish text-[10px]&quot;&gt;&lt;/i&gt;
+                    &lt;span class=&quot;text-[10px] tracking-widest uppercase&quot;&gt;Live Telemetry Feed&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;text-right&quot;&gt;
+                &lt;p class=&quot;text-white/60 text-xs tracking-[0.2em] font-medium uppercase&quot;&gt;Data Stream&lt;/p&gt;
+                &lt;div class=&quot;flex items-center justify-end gap-2 mt-1&quot;&gt;
+                    &lt;span class=&quot;h-1 w-1 bg-green-500 rounded-full animate-pulse&quot;&gt;&lt;/span&gt;
+                    &lt;p class=&quot;text-white text-sm font-bold tracking-widest&quot;&gt;REAL-TIME&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;!-- 主标题区域 --&gt;
+        &lt;div class=&quot;relative z-10 flex justify-between items-end mb-8 shrink-0&quot;&gt;
+            &lt;div&gt;
+                &lt;h1 class=&quot;text-white text-6xl font-bold uppercase leading-[0.9] tracking-tighter&quot;&gt;
+                    System Analytics&lt;br&gt; &lt;span class=&quot;text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white&quot;&gt;Dashboard&lt;/span&gt;
+                &lt;/h1&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;text-right w-64&quot;&gt;
+                &lt;p class=&quot;text-white/40 text-xs leading-relaxed&quot;&gt;
+                    Aggregated metrics providing a comprehensive overview of network performance and health.
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 数据卡片区域 --&gt;
+        &lt;div class=&quot;relative z-10 grid grid-cols-4 gap-6 mb-8&quot;&gt;
+            &lt;!-- Card 1: Transaction Volume --&gt;
+            &lt;div class=&quot;bg-white/5 border border-white/10 rounded-lg p-5 flex flex-col justify-between h-40&quot;&gt;
+                &lt;div&gt;
+                    &lt;div class=&quot;flex justify-between items-center text-white/40&quot;&gt;
+                        &lt;span class=&quot;text-xs uppercase tracking-widest&quot;&gt;TXN Volume (24h)&lt;/span&gt;
+                        &lt;i class=&quot;fa-solid fa-exchange-alt&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-4xl font-mono font-bold text-blue-400 mt-2&quot;&gt;1.2M&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;text-green-400 text-xs flex items-center gap-1&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-arrow-trend-up&quot;&gt;&lt;/i&gt;
+                    &lt;span&gt;+5.8%&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!-- Card 2: Active Nodes --&gt;
+            &lt;div class=&quot;bg-white/5 border border-white/10 rounded-lg p-5 flex flex-col justify-between h-40&quot;&gt;
+                &lt;div&gt;
+                    &lt;div class=&quot;flex justify-between items-center text-white/40&quot;&gt;
+                        &lt;span class=&quot;text-xs uppercase tracking-widest&quot;&gt;Active Nodes&lt;/span&gt;
+                        &lt;i class=&quot;fa-solid fa-server&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-4xl font-mono font-bold text-blue-400 mt-2&quot;&gt;8,421&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;text-white/50 text-xs&quot;&gt;
+                    &lt;span&gt;Global Distribution&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!-- Card 3: Gas Price --&gt;
+            &lt;div class=&quot;bg-white/5 border border-white/10 rounded-lg p-5 flex flex-col justify-between h-40&quot;&gt;
+                &lt;div&gt;
+                    &lt;div class=&quot;flex justify-between items-center text-white/40&quot;&gt;
+                        &lt;span class=&quot;text-xs uppercase tracking-widest&quot;&gt;AVG Gas Price&lt;/span&gt;
+                        &lt;i class=&quot;fa-solid fa-fire&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-4xl font-mono font-bold text-blue-400 mt-2&quot;&gt;19.7&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;text-white/50 text-xs&quot;&gt;
+                    &lt;span&gt;GWEI (Standard)&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!-- Card 4: Block Latency --&gt;
+            &lt;div class=&quot;bg-white/5 border border-white/10 rounded-lg p-5 flex flex-col justify-between h-40&quot;&gt;
+                &lt;div&gt;
+                    &lt;div class=&quot;flex justify-between items-center text-white/40&quot;&gt;
+                        &lt;span class=&quot;text-xs uppercase tracking-widest&quot;&gt;Block Latency&lt;/span&gt;
+                        &lt;i class=&quot;fa-solid fa-stopwatch&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-4xl font-mono font-bold text-blue-400 mt-2&quot;&gt;214&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;text-white/50 text-xs&quot;&gt;
+                    &lt;span&gt;Milliseconds (ms)&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 实时日志区域 --&gt;
+        &lt;div class=&quot;relative z-10 flex flex-col items-center w-full&quot;&gt;
+            &lt;!-- Header Row --&gt;
+            &lt;div class=&quot;w-full flex justify-between px-6 pb-2 text-[10px] text-white/30 uppercase tracking-widest border-b border-white/5 mb-2&quot;&gt;
+                &lt;span class=&quot;w-[15%]&quot;&gt;Block #&lt;/span&gt;
+                &lt;span class=&quot;w-[45%]&quot;&gt;Validator Hash&lt;/span&gt;
+                &lt;span class=&quot;w-[20%] text-center&quot;&gt;Transactions&lt;/span&gt;
+                &lt;span class=&quot;w-[20%] text-right&quot;&gt;Timestamp&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;!-- Log Item 1 --&gt;
+            &lt;div class=&quot;log-row w-full flex items-center justify-between px-6 py-4 cursor-default&quot;&gt;
+                &lt;div class=&quot;w-[15%] font-mono text-blue-400&quot;&gt;8,331,092&lt;/div&gt;
+                &lt;div class=&quot;w-[45%] font-mono text-white/50 truncate&quot;&gt;0x5aE...4f3B&lt;/div&gt;
+                &lt;div class=&quot;w-[20%] text-center font-mono text-white/70&quot;&gt;152&lt;/div&gt;
+                &lt;div class=&quot;w-[20%] text-right font-mono text-white/40&quot;&gt;3 secs ago&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!-- Log Item 2 --&gt;
+            &lt;div class=&quot;log-row w-full flex items-center justify-between px-6 py-4 cursor-default&quot;&gt;
+                &lt;div class=&quot;w-[15%] font-mono text-blue-400&quot;&gt;8,331,091&lt;/div&gt;
+                &lt;div class=&quot;w-[45%] font-mono text-white/50 truncate&quot;&gt;0x2cD...9a8C&lt;/div&gt;
+                &lt;div class=&quot;w-[20%] text-center font-mono text-white/70&quot;&gt;210&lt;/div&gt;
+                &lt;div class=&quot;w-[20%] text-right font-mono text-white/40&quot;&gt;15 secs ago&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!-- Log Item 3 --&gt;
+            &lt;div class=&quot;log-row w-full flex items-center justify-between px-6 py-4 cursor-default&quot;&gt;
+                &lt;div class=&quot;w-[15%] font-mono text-blue-400&quot;&gt;8,331,090&lt;/div&gt;
+                &lt;div class=&quot;w-[45%] font-mono text-white/50 truncate&quot;&gt;0xF4b...1e7D&lt;/div&gt;
+                &lt;div class=&quot;w-[20%] text-center font-mono text-white/70&quot;&gt;98&lt;/div&gt;
+                &lt;div class=&quot;w-[20%] text-right font-mono text-white/40&quot;&gt;29 secs ago&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <script>
+   // 自动调整iframe高度
+    function resizeIframes() {
+        document.querySelectorAll('.responsive-iframe').forEach(iframe => {
+            try {
+                const doc = iframe.contentDocument || iframe.contentWindow.document;
+                const height = Math.max(
+                    doc.body.scrollHeight,
+                    doc.documentElement.scrollHeight,
+                    doc.body.offsetHeight,
+                    doc.documentElement.offsetHeight,
+                    doc.body.clientHeight,
+                    doc.documentElement.clientHeight
+                );
+                iframe.style.height = height + 'px';
+            } catch (e) {
+                console.log('无法调整iframe高度:', e);
+            }
+        });
+    }
+    
+    // 初始调整
+    window.addEventListener('load', resizeIframes);
+    
+    // 内容加载后调整
+    document.querySelectorAll('.responsive-iframe').forEach(iframe => {
+        iframe.addEventListener('load', function() {
+            resizeIframes();
+            // 对动态内容进行定期检查
+            setInterval(resizeIframes, 1000);
+        });
+    });
+  </script>
+ </body>
+</html>

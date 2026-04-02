@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audience Insights - Monthly Ad Performance Report</title>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bg: '#F2F2F2',
+                        card: '#FFFFFF',
+                        primary: '#000000',
+                        accent: '#5D3B95', // Deep Purple
+                        secondary: '#666666',
+                        icon: '#444444',
+                        divider: '#E0E0E0',
+                        // Chart Colors
+                        chart1: '#5D3B95', // Primary Purple
+                        chart2: '#F4D35E', // Yellow
+                        chart3: '#A6D98D', // Green
+                        chart4: '#9D72E8', // Lighter Purple
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans SC', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Global Reset & strict rules */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Container constraints */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background-color: #F2F2F2;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Subtle Background Decoration using CSS gradients */
+        .bg-decoration {
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(93, 59, 149, 0.05) 0%, rgba(242, 242, 242, 0) 70%);
+            border-radius: 50%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .bg-decoration-2 {
+            position: absolute;
+            bottom: -50px;
+            left: -50px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(244, 211, 94, 0.05) 0%, rgba(242, 242, 242, 0) 70%);
+            border-radius: 50%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Utility for card shadows */
+        .card-shadow {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <div class="bg-decoration"></div>
+        <div class="bg-decoration-2"></div>
+
+        <div class="relative z-10 flex flex-col h-full px-12 pt-16 pb-10">
+
+            <div class="flex justify-between items-end mb-8">
+                <div>
+                    <h1 class="text-6xl font-bold text-primary tracking-tight">Audience Insights</h1>
+                </div>
+                <div class="max-w-md text-right">
+                    <p class="text-secondary text-lg leading-snug">Demographic and behavioural insights from our targeted audience.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-3 gap-6 h-full pb-4">
+
+                <div class="flex flex-col gap-6 h-full">
+                    
+                    <div class="bg-card rounded-2xl p-6 card-shadow flex-1 flex flex-col">
+                        <h2 class="text-xl font-bold text-primary mb-4">Age Demographic</h2>
+                        <div class="flex items-center justify-between flex-1">
+                            <div id="chart-age" class="w-32 h-32"></div>
+                            
+                            <div class="flex flex-col gap-3 w-40">
+                                <div class="flex justify-between items-center">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-2 h-2 rounded-full bg-chart3"></div>
+                                        <p class="text-xs text-secondary bg-gray-100 px-2 py-0.5 rounded">Age 18-24</p>
+                                    </div>
+                                    <p class="font-bold text-primary">30%</p>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-2 h-2 rounded-full bg-chart2"></div>
+                                        <p class="text-xs text-secondary bg-gray-100 px-2 py-0.5 rounded">Age 25-34</p>
+                                    </div>
+                                    <p class="font-bold text-primary">40%</p>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-2 h-2 rounded-full bg-chart1"></div>
+                                        <p class="text-xs text-secondary bg-gray-100 px-2 py-0.5 rounded">Age 35-44</p>
+                                    </div>
+                                    <p class="font-bold text-primary">20%</p>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                                        <p class="text-xs text-secondary bg-gray-100 px-2 py-0.5 rounded">Age 45+</p>
+                                    </div>
+                                    <p class="font-bold text-primary">10%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-card rounded-2xl p-6 card-shadow flex-1 flex flex-col justify-between">
+                        <h2 class="text-xl font-bold text-primary mb-2">Gender Demographic</h2>
+                        <div class="flex items-center justify-between h-full">
+                            <div id="chart-gender" class="w-32 h-32"></div>
+                            
+                            <div class="flex flex-col gap-4 w-40">
+                                <div class="flex items-center justify-between border-b border-divider pb-2">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-3 h-3 rounded-full bg-chart1"></div>
+                                        <p class="text-sm text-secondary">Male</p>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <p class="text-2xl font-bold text-primary">45%</p>
+                                        <i class="fa-solid fa-user text-icon text-sm"></i>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-3 h-3 rounded-full bg-chart2"></div>
+                                        <p class="text-sm text-secondary">Female</p>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <p class="text-2xl font-bold text-primary">55%</p>
+                                        <i class="fa-solid fa-user text-icon text-sm"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-card rounded-2xl p-6 card-shadow flex flex-col h-full">
+                    <h2 class="text-xl font-bold text-primary mb-2">Location Demographic</h2>
+                    <p class="text-sm text-secondary mb-4">Distribution by city targeting</p>
+                    <div class="flex-1 flex items-center justify-center relative">
+                        <div id="chart-location" class="w-full h-full" style="min-height: 350px;"></div>
+                        
+                        <div class="absolute text-center pointer-events-none">
+                            <i class="fa-solid fa-map-location-dot text-gray-200 text-6xl opacity-20"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-6 h-full">
+                    
+                    <div class="bg-card rounded-2xl p-6 card-shadow flex-1 flex flex-col justify-center">
+                        <h2 class="text-xl font-bold text-primary mb-6">Top-Performing Segments</h2>
+                        
+                        <div class="flex items-center justify-between mb-4 text-secondary text-sm">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-user text-icon"></i>
+                                <p>Male (Age 25-34)</p>
+                            </div>
+                            <p>Highest CTR of</p>
+                        </div>
+
+                        <div class="flex items-baseline justify-between border-t border-divider pt-4">
+                            <h3 class="text-3xl font-bold text-primary">Technology</h3>
+                            <h3 class="text-5xl font-bold text-accent">7.5%</h3>
+                        </div>
+                    </div>
+
+                    <div class="bg-card rounded-2xl p-6 card-shadow flex-1 flex flex-col">
+                        <h2 class="text-xl font-bold text-primary mb-4">Behavioral Insights</h2>
+                        <div class="flex items-center justify-between flex-1">
+                            <div id="chart-behavior" class="w-28 h-28"></div>
+                            
+                            <div class="grid grid-cols-2 gap-x-4 gap-y-3 w-48">
+                                <div class="flex flex-col">
+                                    <p class="text-[10px] text-secondary bg-gray-100 px-2 py-0.5 rounded w-fit mb-1">Technology</p>
+                                    <p class="text-xl font-bold text-primary pl-1">30%</p>
+                                </div>
+                                <div class="flex flex-col">
+                                    <p class="text-[10px] text-secondary bg-yellow-50 px-2 py-0.5 rounded w-fit mb-1">Fashion</p>
+                                    <p class="text-xl font-bold text-primary pl-1">40%</p>
+                                </div>
+                                <div class="flex flex-col">
+                                    <p class="text-[10px] text-white bg-accent px-2 py-0.5 rounded w-fit mb-1">Travel</p>
+                                    <p class="text-xl font-bold text-primary pl-1">20%</p>
+                                </div>
+                                <div class="flex flex-col">
+                                    <p class="text-[10px] text-secondary bg-gray-100 px-2 py-0.5 rounded w-fit mb-1">Fitness</p>
+                                    <p class="text-xl font-bold text-primary pl-1">10%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Colors from config
+        const colorPalette = ['#5D3B95', '#F4D35E', '#A6D98D', '#9D72E8', '#D1D5DB']; 
+        // 1. Purple, 2. Yellow, 3. Green, 4. Light Purple, 5. Gray
+
+        // 1. Age Chart
+        const ageChart = echarts.init(document.getElementById('chart-age'));
+        ageChart.setOption({
+            color: ['#A6D98D', '#F4D35E', '#5D3B95', '#D1D5DB'], // Green, Yellow, Purple, Gray
+            series: [
+                {
+                    name: 'Age',
+                    type: 'pie',
+                    radius: ['60%', '90%'],
+                    avoidLabelOverlap: false,
+                    label: { show: false },
+                    labelLine: { show: false },
+                    data: [
+                        { value: 30, name: '18-24' },
+                        { value: 40, name: '25-34' },
+                        { value: 20, name: '35-44' },
+                        { value: 10, name: '45+' }
+                    ]
+                }
+            ]
+        });
+
+        // 2. Gender Chart
+        const genderChart = echarts.init(document.getElementById('chart-gender'));
+        genderChart.setOption({
+            color: ['#5D3B95', '#F4D35E'], // Purple (Male), Yellow (Female)
+            series: [
+                {
+                    name: 'Gender',
+                    type: 'pie',
+                    radius: ['60%', '90%'],
+                    avoidLabelOverlap: false,
+                    label: { show: false },
+                    labelLine: { show: false },
+                    data: [
+                        { value: 45, name: 'Male' },
+                        { value: 55, name: 'Female' }
+                    ]
+                }
+            ]
+        });
+
+        // 3. Location Chart (With Labels)
+        const locationChart = echarts.init(document.getElementById('chart-location'));
+        locationChart.setOption({
+            color: ['#D1D5DB', '#F4D35E', '#9D72E8', '#5D3B95'], // Gray(D), Yellow(C?), LightPurple, Purple
+            // Mapping colors to logic: City B(50%)=Greenish in orig, I'll use Yellow. City C(30%)=Purple. 
+            // Let's stick to the beautiful palette defined.
+            series: [
+                {
+                    name: 'Location',
+                    type: 'pie',
+                    radius: ['45%', '70%'],
+                    center: ['50%', '50%'],
+                    roseType: false,
+                    itemStyle: {
+                        borderRadius: 5,
+                        borderColor: '#fff',
+                        borderWidth: 2
+                    },
+                    label: {
+                        show: true,
+                        formatter: '{b}\n{d}%',
+                        color: '#000',
+                        fontSize: 14,
+                        fontWeight: 'bold',
+                        lineHeight: 18
+                    },
+                    labelLine: {
+                        show: true,
+                        length: 15,
+                        length2: 10,
+                        smooth: true
+                    },
+                    data: [
+                        { value: 5, name: 'City A', itemStyle: { color: '#E5E7EB' } }, // Gray
+                        { value: 50, name: 'City B', itemStyle: { color: '#A6D98D' } }, // Green (Main)
+                        { value: 30, name: 'City C', itemStyle: { color: '#5D3B95' } }, // Purple (Second)
+                        { value: 15, name: 'City D', itemStyle: { color: '#F4D35E' } }   // Yellow
+                    ]
+                }
+            ]
+        });
+
+        // 4. Behavioral Chart
+        const behaviorChart = echarts.init(document.getElementById('chart-behavior'));
+        behaviorChart.setOption({
+            color: ['#A6D98D', '#F4D35E', '#5D3B95', '#D1D5DB'],
+            series: [
+                {
+                    name: 'Behavior',
+                    type: 'pie',
+                    radius: ['60%', '90%'],
+                    avoidLabelOverlap: false,
+                    label: { show: false },
+                    labelLine: { show: false },
+                    data: [
+                        { value: 30, name: 'Technology' },
+                        { value: 40, name: 'Fashion' },
+                        { value: 20, name: 'Travel' },
+                        { value: 10, name: 'Fitness' }
+                    ]
+                }
+            ]
+        });
+
+        // Handle Resize (although container is fixed, good practice)
+        window.addEventListener('resize', () => {
+            ageChart.resize();
+            genderChart.resize();
+            locationChart.resize();
+            behaviorChart.resize();
+        });
+    </script>
+</body>
+</html>

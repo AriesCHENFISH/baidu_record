@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Environmental Challenges</title>
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #080808; overflow: hidden; font-family: 'Noto Sans SC', sans-serif; color: white; }
+        .neon-text { text-shadow: 0 0 25px rgba(212, 246, 94, 0.4); }
+        ::-webkit-scrollbar { display: none; }
+
+        /* 统一顶部组件样式 */
+        .glass-nav { background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02)); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.08); }
+        @keyframes slow-rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        .logo-gear { animation: slow-rotate 12s linear infinite; }
+        .status-dot { box-shadow: 0 0 8px #D4F65E; animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(1.2); } 100% { opacity: 1; transform: scale(1); } }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <!-- 容器内主要布局布局 -->
+        <div class="flex flex-col h-full px-14 pt-10 pb-12 justify-between relative z-10">
+
+            <!-- 1. 重构后的 Header Section -->
+            <header class="relative z-50">
+                <nav class="flex justify-between items-center glass-nav rounded-2xl px-10 py-5">
+                    <!-- Brand Area -->
+                    <div class="flex items-center gap-4 group cursor-pointer">
+                        <div class="relative w-9 h-9 flex items-center justify-center">
+                            <div class="absolute inset-0 border border-[#D4F65E]/40 rounded-full scale-110"></div>
+                            <div class="text-[#D4F65E] text-lg relative z-10 logo-gear"><i class="fa-solid fa-compass-drafting"></i></div>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-white text-lg font-black tracking-tighter leading-none italic uppercase">Arowwai<span class="text-[#D4F65E]">.</span></span>
+                            <span class="text-white text-[8px] tracking-[0.3em] uppercase opacity-40 font-bold">Industries</span>
+                        </div>
+                    </div>
+
+                    <!-- Explore Trigger -->
+                    <div class="flex items-center gap-3 group cursor-pointer px-6 py-2 rounded-full hover:bg-white/5 transition-all">
+                        <div class="flex gap-1">
+                            <div class="w-1.5 h-1.5 bg-[#D4F65E] rounded-full group-hover:scale-125 transition-transform"></div>
+                            <div class="w-1.5 h-1.5 bg-[#D4F65E]/40 rounded-full group-hover:scale-110 transition-transform"></div>
+                        </div>
+                        <span class="text-[11px] font-bold uppercase tracking-[0.4em] text-gray-200">Explore</span>
+                        <i class="fa-solid fa-plus text-[9px] text-[#D4F65E] group-hover:rotate-90 transition-transform"></i>
+                    </div>
+
+                    <!-- Action Area -->
+                    <div class="flex items-center gap-8">
+                        <div class="flex items-center gap-2">
+                            <div class="status-dot w-1.5 h-1.5 bg-[#D4F65E] rounded-full"></div>
+                            <span class="text-[9px] uppercase tracking-widest text-gray-500 font-bold">Node: Active</span>
+                        </div>
+                        <button class="bg-[#D4F65E] text-black px-8 py-2.5 rounded-full font-black text-[11px] uppercase tracking-widest hover:bg-white transition-all">Connect</button>
+                    </div>
+                </nav>
+            </header>
+
+            <!-- 2. Hero Section (保持原有逻辑) -->
+            <section class="grid grid-cols-12 gap-10 items-center mt-6">
+                <!-- Left: Hero Image -->
+                <div class="col-span-7 relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-[#D4F65E] to-[#080808] opacity-20 blur rounded-2xl"></div>
+                    <div class="relative overflow-hidden rounded-2xl border border-white/10 h-[280px] w-full bg-black/40">
+                        <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?q=80&w=1200&auto=format&fit=crop" 
+                             class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700">
+                        <!-- 覆盖图标 -->
+                        <div class="absolute top-0 left-0 w-full h-full p-6 flex flex-wrap content-between pointer-events-none">
+                             <div class="w-full flex justify-between opacity-80">
+                                 <i class="fa-solid fa-wind text-white/80 text-xl drop-shadow-md"></i>
+                                 <i class="fa-solid fa-cloud-rain text-white/80 text-xl drop-shadow-md"></i>
+                             </div>
+                             <div class="w-full flex justify-center items-center">
+                                 <i class="fa-solid fa-sun text-[#D4F65E] text-4xl animate-pulse"></i>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Main Title -->
+                <div class="col-span-5 flex flex-col justify-center">
+                    <h1 class="text-6xl font-bold leading-tight uppercase tracking-wide neon-text text-[#D4F65E]">
+                        Global <br>
+                        <span class="text-white">Environmental</span> <br>
+                        Challenges
+                    </h1>
+                </div>
+            </section>
+
+            <!-- 3. Cards Section (保持原有逻辑) -->
+            <section class="grid grid-cols-3 gap-8 items-stretch mb-4">
+                <!-- Card 1 -->
+                <div class="bg-[#D4F65E] p-8 rounded-3xl text-black flex flex-col gap-3 shadow-lg hover:-translate-y-1 transition-transform">
+                    <h2 class="text-xl font-bold mb-1">Climate Change</h2>
+                    <p class="text-xs leading-relaxed font-medium opacity-90 text-justify">
+                        The increasing levels of greenhouse gases in the atmosphere have led to global warming, resulting in extreme weather conditions, rising sea levels, and habitat loss.
+                    </p>
+                </div>
+                <!-- Card 2 -->
+                <div class="border border-white/20 p-8 rounded-3xl text-white flex flex-col gap-3 relative overflow-hidden backdrop-blur-sm bg-white/5">
+                    <h2 class="text-xl font-bold mb-1">Pollution</h2>
+                    <p class="text-xs leading-relaxed text-gray-300 text-justify">
+                        Air, water, and soil pollution caused by industrial activities, transportation, and waste disposal pose serious health risks to humans and ecosystems.
+                    </p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-[#D4F65E] p-8 rounded-3xl text-black flex flex-col gap-3 shadow-lg hover:-translate-y-1 transition-transform">
+                    <h2 class="text-xl font-bold mb-1">Resource Depletion</h2>
+                    <p class="text-xs leading-relaxed font-medium opacity-90 text-justify">
+                        The over-extraction of natural resources such as fossil fuels, minerals, and freshwater threatens biodiversity and long-term sustainability.
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Decorative Elements -->
+        <div class="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] rounded-full bg-[#D4F65E] opacity-[0.03] blur-[100px] pointer-events-none"></div>
+        <div class="absolute bottom-12 left-6 text-[#D4F65E] border border-[#D4F65E] rounded-full w-10 h-10 flex items-center justify-center opacity-80">
+            <i class="fa-solid fa-arrow-right transform -rotate-45"></i>
+        </div>
+    </div>
+
+</body>
+</html>

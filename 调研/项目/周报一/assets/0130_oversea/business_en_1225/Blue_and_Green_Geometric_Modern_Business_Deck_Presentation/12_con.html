@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analysis - Fixed Chart</title>
+
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryBg: '#051532',
+                        textMain: '#FFFFFF',
+                        textBody: '#E6E8EB',
+                        accentBlue: '#3B82F6',
+                        accentCyan: '#06b6d4',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative;
+            background-color: #051532; overflow: hidden; display: flex;
+        }
+
+        .tracking-tight-custom { letter-spacing: -0.04em; }
+
+        .kpi-panel {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+            border-left: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+
+        <div class="w-[65%] h-full flex flex-col p-12 relative z-10">
+            
+            <header class="flex items-center space-x-4 border-b border-white/10 pb-6 w-full mb-6">
+                <span class="text-textBody font-bold tracking-widest text-sm uppercase">Business Deck</span>
+                <span class="text-white/20 text-sm">|</span>
+                <span class="text-textBody font-light tracking-widest text-sm">2025</span>
+                <div class="flex-grow"></div>
+                <span class="text-accentBlue text-sm font-bold"><i class="fa-solid fa-chart-line mr-2"></i>Analysis</span>
+            </header>
+
+            <div class="mb-4">
+                <h1 class="text-textMain text-5xl font-bold leading-none tracking-tight-custom mb-2">
+                    Quarterly Report<span class="text-accentBlue">.</span>
+                </h1>
+                <p class="text-textBody text-sm opacity-60 font-light max-w-xl">
+                    Performance metrics breakdown. Visualizing revenue streams across key sectors.
+                </p>
+            </div>
+
+            <div class="w-full h-[420px] bg-white/5 rounded-xl border border-white/5 p-4 relative backdrop-blur-sm mt-4">
+                <div class="absolute inset-0 opacity-10 pointer-events-none" 
+                     style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 20px 20px;">
+                </div>
+                <div id="mainChart" class="w-full h-full relative z-20"></div>
+            </div>
+
+            <footer class="absolute bottom-6 left-12 flex items-center gap-2 text-white/30 text-xs tracking-wider">
+                <i class="fa-solid fa-database"></i>
+                <span>Data Source: Internal Analytics Engine v2.4</span>
+            </footer>
+
+            <div class="absolute bottom-[-150px] left-[-150px] w-[500px] h-[500px] bg-accentBlue/5 rounded-full blur-[100px] pointer-events-none z-0"></div>
+
+        </div>
+
+        <div class="w-[35%] h-full relative kpi-panel flex flex-col justify-between p-12 z-20">
+            
+            <div class="space-y-10 mt-4">
+                <div class="w-12 h-1 bg-accentBlue rounded-full"></div>
+                
+                <div>
+                    <p class="text-textBody text-xs font-bold uppercase tracking-widest opacity-50 mb-1">Total Revenue</p>
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-white text-6xl font-bold tracking-tighter">$4.2M</span>
+                        <span class="text-green-400 text-sm font-bold"><i class="fa-solid fa-arrow-up mr-1"></i>15%</span>
+                    </div>
+                </div>
+
+                <div>
+                    <p class="text-textBody text-xs font-bold uppercase tracking-widest opacity-50 mb-1">Active Users</p>
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-white text-5xl font-bold tracking-tighter">85.4K</span>
+                        <span class="text-accentBlue text-sm font-bold">+2.1K</span>
+                    </div>
+                </div>
+
+                <div>
+                    <p class="text-textBody text-xs font-bold uppercase tracking-widest opacity-50 mb-2">Satisfaction</p>
+                    <div class="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+                        <div class="h-full bg-gradient-to-r from-accentBlue to-accentCyan w-[92%]"></div>
+                    </div>
+                    <p class="text-right text-white text-sm mt-1 font-mono">92/100</p>
+                </div>
+            </div>
+
+            <div class="relative">
+                <div class="bg-accentBlue pr-8 pl-12 py-6 shadow-2xl rounded-l-md -mr-12 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-20 h-full bg-white/10 skew-x-12 transform origin-bottom"></div>
+                    <p class="text-white text-5xl font-bold leading-none">09</p>
+                    <p class="text-blue-200 text-xs font-bold uppercase mt-1 tracking-wider">Data Review</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        // Initialize ECharts
+        var chartDom = document.getElementById('mainChart');
+        var myChart = echarts.init(chartDom);
+        var option;
+
+        option = {
+            backgroundColor: 'transparent',
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'cross',
+                    label: {
+                        backgroundColor: '#6a7985'
+                    }
+                }
+            },
+            legend: {
+                data: ['Revenue', 'Profit', 'Growth'],
+                textStyle: { color: '#E6E8EB' },
+                top: 0
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                top: '12%',
+                containLabel: true
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+                    axisLine: { lineStyle: { color: 'rgba(255,255,255,0.2)' } },
+                    axisLabel: { color: '#E6E8EB', margin: 15 }
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value',
+                    splitLine: { 
+                        lineStyle: { color: 'rgba(255,255,255,0.05)', type: 'dashed' } 
+                    },
+                    axisLabel: { color: '#E6E8EB' }
+                }
+            ],
+            series: [
+                {
+                    name: 'Revenue',
+                    type: 'line',
+                    stack: 'Total',
+                    smooth: true,
+                    lineStyle: { width: 0 },
+                    showSymbol: false,
+                    areaStyle: {
+                        opacity: 0.8,
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                            { offset: 0, color: 'rgba(59, 130, 246, 0.6)' },
+                            { offset: 1, color: 'rgba(59, 130, 246, 0.0)' }
+                        ])
+                    },
+                    emphasis: { focus: 'series' },
+                    data: [120, 132, 101, 134, 90, 230, 210]
+                },
+                {
+                    name: 'Profit',
+                    type: 'line',
+                    stack: 'Total',
+                    smooth: true,
+                    lineStyle: { width: 0 },
+                    showSymbol: false,
+                    areaStyle: {
+                        opacity: 0.8,
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                            { offset: 0, color: 'rgba(6, 182, 212, 0.6)' },
+                            { offset: 1, color: 'rgba(6, 182, 212, 0.0)' }
+                        ])
+                    },
+                    emphasis: { focus: 'series' },
+                    data: [220, 182, 191, 234, 290, 330, 310]
+                },
+                {
+                    name: 'Growth',
+                    type: 'line',
+                    smooth: true,
+                    lineStyle: { color: '#FFFFFF', width: 3 },
+                    itemStyle: { 
+                        color: '#FFFFFF', 
+                        borderColor: '#3B82F6', 
+                        borderWidth: 2 
+                    },
+                    symbol: 'circle',
+                    symbolSize: 8,
+                    data: [150, 232, 201, 154, 190, 330, 410]
+                }
+            ]
+        };
+
+        if (option && typeof echarts !== 'undefined') {
+            myChart.setOption(option);
+        }
+        
+        window.addEventListener('resize', function() {
+            myChart.resize();
+        });
+    </script>
+
+</body>
+</html>

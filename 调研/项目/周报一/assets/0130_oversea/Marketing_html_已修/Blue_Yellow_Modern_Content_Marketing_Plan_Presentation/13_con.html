@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audience Demographics - Content Strategy</title>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.2/echarts.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0A33B3',      // Deep Blue
+                        secondary: '#2248C3',    // Lighter Blue
+                        accent: '#FCEE7D',       // Yellow
+                        neutral: '#FFFFFF',      // White
+                        decorative: '#F0F4FF',   // Pale Blue
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+    </style>
+</head>
+<body>
+
+    <div id="page_container" class="relative w-[1280px] h-[720px] mx-auto bg-neutral overflow-hidden p-12 grid grid-cols-12 gap-12">
+        
+        <div class="absolute top-10 right-10 text-primary opacity-90 text-4xl z-0"><i class="fa-solid fa-star"></i></div>
+        <div class="absolute bottom-12 left-12 text-primary opacity-90 text-4xl z-0"><i class="fa-solid fa-star"></i></div>
+
+        <div class="col-span-5 relative flex items-center justify-center z-10">
+            <div class="absolute w-[400px] h-[400px] bg-accent rounded-full opacity-20 blur-3xl -z-10"></div>
+            
+            <div id="audienceChart" class="w-full h-[500px]"></div>
+        </div>
+
+        <div class="col-span-7 flex flex-col justify-center pl-8 z-10">
+            
+            <div class="flex items-center gap-3 mb-8">
+                <div class="text-primary text-2xl">
+                    <i class="fa-solid fa-layer-group"></i>
+                </div>
+                <h2 class="text-xl font-bold text-primary tracking-wide">Borcelle</h2>
+            </div>
+
+            <h1 class="text-5xl font-extrabold text-primary tracking-tight mb-4">Audience Segmentation</h1>
+            <p class="text-gray-600 text-lg leading-relaxed mb-10">
+                A breakdown of our primary consumer base based on engagement levels and purchasing behavior.
+            </p>
+
+            <div class="flex flex-col gap-5">
+                
+                <div class="bg-primary rounded-[24px] p-5 flex items-center justify-between shadow-md group hover:-translate-x-2 transition-transform duration-300">
+                    <div class="flex items-center gap-5">
+                        <div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-accent text-2xl">
+                            <i class="fa-solid fa-crown"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-white text-xl font-bold">Brand Loyalists</h3>
+                            <p class="text-white text-sm opacity-80">Recurring customers & advocates</p>
+                        </div>
+                    </div>
+                    <div class="text-accent text-3xl font-black tracking-tighter">45%</div>
+                </div>
+
+                <div class="bg-secondary rounded-[24px] p-5 flex items-center justify-between shadow-md group hover:-translate-x-2 transition-transform duration-300">
+                    <div class="flex items-center gap-5">
+                        <div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-white text-2xl">
+                            <i class="fa-solid fa-user-plus"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-white text-xl font-bold">New Prospects</h3>
+                            <p class="text-white text-sm opacity-80">First-time visitors & leads</p>
+                        </div>
+                    </div>
+                    <div class="text-white text-3xl font-black tracking-tighter">35%</div>
+                </div>
+
+                <div class="bg-accent rounded-[24px] p-5 flex items-center justify-between shadow-md group hover:-translate-x-2 transition-transform duration-300">
+                    <div class="flex items-center gap-5">
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary text-2xl">
+                            <i class="fa-regular fa-eye"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-primary text-xl font-bold">Casual Browsers</h3>
+                            <p class="text-primary text-sm opacity-80">Low intent traffic</p>
+                        </div>
+                    </div>
+                    <div class="text-primary text-3xl font-black tracking-tighter">20%</div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var chartDom = document.getElementById('audienceChart');
+            var myChart = echarts.init(chartDom);
+            var option;
+
+            // Brand Colors
+            const colorPrimary = '#0A33B3';
+            const colorSecondary = '#2248C3';
+            const colorAccent = '#FCEE7D';
+
+            option = {
+                tooltip: {
+                    trigger: 'item',
+                    backgroundColor: 'rgba(255, 255, 255, 0.95)',
+                    textStyle: { color: '#0A33B3' },
+                    borderWidth: 0,
+                    padding: 12,
+                    formatter: '<b>{b}</b><br/>{c}%'
+                },
+                legend: {
+                    show: false // We are using custom cards on the right as legend
+                },
+                series: [
+                    {
+                        name: 'Audience',
+                        type: 'pie',
+                        radius: ['45%', '75%'], // Doughnut style
+                        avoidLabelOverlap: false,
+                        itemStyle: {
+                            borderRadius: 10,
+                            borderColor: '#fff',
+                            borderWidth: 5
+                        },
+                        label: {
+                            show: false,
+                            position: 'center'
+                        },
+                        emphasis: {
+                            label: {
+                                show: true,
+                                fontSize: 24,
+                                fontWeight: 'bold',
+                                color: colorPrimary,
+                                formatter: '{c}%'
+                            },
+                            scale: true,
+                            scaleSize: 10
+                        },
+                        labelLine: {
+                            show: false
+                        },
+                        data: [
+                            { value: 45, name: 'Brand Loyalists', itemStyle: { color: colorPrimary } },
+                            { value: 35, name: 'New Prospects', itemStyle: { color: colorSecondary } },
+                            { value: 20, name: 'Casual Browsers', itemStyle: { color: colorAccent } }
+                        ]
+                    }
+                ]
+            };
+
+            option && myChart.setOption(option);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet The Team - Executive Summary</title>
+    
+    <!-- Google Fonts: Noto Sans SC (Domestic Mirror as requested) & Inter for English -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <!-- Custom Config for Specific Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBlack: '#000000',
+                        primaryStart: '#8C7AE6',
+                        primaryEnd: '#1B3F9B',
+                        darkBg: '#1A1B2E',
+                        neon: '#B33CE0',
+                        bodyText: '#D1D5DB'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans SC', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Basic Setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container - Strict Dimensions */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #000000;
+            overflow: hidden;
+        }
+
+        /* Decorative Neon Gradient (Simulating the top-right wave) */
+        .neon-glow {
+            position: absolute;
+            top: -150px;
+            right: -100px;
+            width: 700px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(179, 60, 224, 0.4) 0%, rgba(27, 63, 155, 0.2) 40%, rgba(0,0,0,0) 70%);
+            border-radius: 50%;
+            filter: blur(60px);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* Decorative Line (Simulating the flow) */
+        .neon-line {
+            position: absolute;
+            top: 50px;
+            right: 0;
+            width: 600px;
+            height: 200px;
+            border-bottom: 2px solid rgba(140, 122, 230, 0.3);
+            border-radius: 100%;
+            transform: rotate(-15deg);
+            box-shadow: 0 0 15px rgba(140, 122, 230, 0.5);
+            z-index: 1;
+        }
+
+        /* Glassmorphism Card Style */
+        .team-card {
+            background: linear-gradient(135deg, #1A1B2E 0%, #10255a 100%);
+            border: 1px solid rgba(140, 122, 230, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        /* Image Masking */
+        .img-mask {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+        }
+
+        .img-mask img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Container -->
+    <div id="page_container">
+        
+        <!-- Ambient Background Effects -->
+        <div class="neon-glow"></div>
+        <div class="neon-line"></div>
+
+        <!-- Layout Container -->
+        <div class="relative z-10 flex flex-col justify-between h-full px-16 py-12">
+            
+            <!-- Header Section -->
+            <header class="mb-8">
+                <div class="border-l-4 border-primaryStart pl-6">
+                    <h1 class="text-6xl font-black text-white tracking-wide uppercase drop-shadow-md">
+                        Meet The Team
+                    </h1>
+                    <div class="mt-4 max-w-2xl">
+                        <p class="text-xl text-bodyText font-light">
+                            Thank you for your time! Reach out to us for questions.
+                        </p>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Team Grid Section -->
+            <main class="grid grid-cols-2 gap-x-12 gap-y-8 flex-grow">
+                
+                <!-- Card 01 -->
+                <div class="team-card rounded-2xl p-5 flex items-center gap-6">
+                    <div class="img-mask w-32 h-32 flex-shrink-0 border border-gray-600">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Dani Martinez">
+                        <!-- 128*128 -->
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <div class="flex items-center gap-2 mb-1">
+                            <i class="fa-solid fa-user-tie text-primaryStart text-xs"></i>
+                            <h2 class="text-2xl font-bold text-white tracking-tight">DANI MARTINEZ</h2>
+                        </div>
+                        <p class="text-primaryStart italic font-medium tracking-wide">Chief Executive Officer</p>
+                        <div class="w-12 h-0.5 bg-gray-600 mt-3 rounded-full"></div>
+                    </div>
+                </div>
+
+                <!-- Card 02 -->
+                <div class="team-card rounded-2xl p-5 flex items-center gap-6">
+                    <div class="img-mask w-32 h-32 flex-shrink-0 border border-gray-600">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Harper Russo">
+                        <!-- 128*128 -->
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <div class="flex items-center gap-2 mb-1">
+                            <i class="fa-solid fa-user-tie text-primaryStart text-xs"></i>
+                            <h2 class="text-2xl font-bold text-white tracking-tight">HARPER RUSSO</h2>
+                        </div>
+                        <p class="text-primaryStart italic font-medium tracking-wide">Chief Executive Officer</p>
+                        <div class="w-12 h-0.5 bg-gray-600 mt-3 rounded-full"></div>
+                    </div>
+                </div>
+
+                <!-- Card 03 -->
+                <div class="team-card rounded-2xl p-5 flex items-center gap-6">
+                    <div class="img-mask w-32 h-32 flex-shrink-0 border border-gray-600">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Morgan Maxwell">
+                        <!-- 128*128 -->
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <div class="flex items-center gap-2 mb-1">
+                            <i class="fa-solid fa-user-tie text-primaryStart text-xs"></i>
+                            <h2 class="text-2xl font-bold text-white tracking-tight">MORGAN MAXWELL</h2>
+                        </div>
+                        <p class="text-primaryStart italic font-medium tracking-wide">Chief Executive Officer</p>
+                        <div class="w-12 h-0.5 bg-gray-600 mt-3 rounded-full"></div>
+                    </div>
+                </div>
+
+                <!-- Card 04 -->
+                <div class="team-card rounded-2xl p-5 flex items-center gap-6">
+                    <div class="img-mask w-32 h-32 flex-shrink-0 border border-gray-600">
+                        <img src="https://images.unsplash.com/photo-1480429370139-e0132c086e2a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Neil Tran">
+                        <!-- 128*128 -->
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <div class="flex items-center gap-2 mb-1">
+                            <i class="fa-solid fa-briefcase text-primaryStart text-xs"></i>
+                            <h2 class="text-2xl font-bold text-white tracking-tight">NEIL TRAN</h2>
+                        </div>
+                        <p class="text-gray-300 italic font-medium tracking-wide">Director</p>
+                        <div class="w-12 h-0.5 bg-gray-600 mt-3 rounded-full"></div>
+                    </div>
+                </div>
+
+            </main>
+
+            <!-- Footer Section -->
+            <footer class="mt-8 border-t border-gray-800 pt-6">
+                <div class="flex justify-between items-center text-bodyText text-sm font-light tracking-wider">
+                    
+                    <!-- Website -->
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-full bg-darkBg flex items-center justify-center text-primaryStart border border-gray-700">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <p>www.reallygreatsite.com</p>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-full bg-darkBg flex items-center justify-center text-primaryStart border border-gray-700">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                        <p>hello@reallygreatsite.com</p>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-full bg-darkBg flex items-center justify-center text-primaryStart border border-gray-700">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <p>+123-456-7890</p>
+                    </div>
+
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+</body>
+</html>

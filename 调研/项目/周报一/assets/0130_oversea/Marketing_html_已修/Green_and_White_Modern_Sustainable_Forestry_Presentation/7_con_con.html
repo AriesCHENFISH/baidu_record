@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deforestation Drivers - Eco Keynote</title>
+    
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts via Domestic CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'eco-dark': '#1A2818',
+                        'eco-moss': '#5A6F41',
+                        'eco-light': '#7FA948',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Container Constraint */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #1A2818;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+            color: #FFFFFF;
+        }
+
+        /* Custom Scrollbar Hide */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Gradient Utilities */
+        .bg-overlay-gradient {
+            background: linear-gradient(90deg, #1A2818 0%, #1A2818 55%, rgba(26, 40, 24, 0.6) 100%);
+        }
+
+        .card-gradient {
+            background: linear-gradient(135deg, #5A6F41, #4A5C35);
+        }
+
+        /* Typography Enhancements */
+        .text-shadow-sm {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        /* CSS Wave Decoration (Simulated without SVG) */
+        .wave-line {
+            width: 60px;
+            height: 12px;
+            border-top: 2px solid rgba(255,255,255,0.5);
+            border-radius: 50%;
+            margin-bottom: -8px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <!-- 1. Background Layer: Forest Texture with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <!-- Background Image -->
+            <img src="https://images.unsplash.com/photo-1448375240586-dfd8d395ea6c?q=80&w=1280&auto=format&fit=crop" 
+                 alt="Forest Texture Background" 
+                 class="w-full h-full object-cover opacity-40 mix-blend-luminosity">
+            <!-- 1280*720 -->
+            
+            <!-- Dark Overlay (Color #1A2818) -->
+            <div class="absolute inset-0 bg-eco-dark/90 mix-blend-multiply"></div>
+            
+            <!-- Gradient Fade for Depth -->
+            <div class="absolute inset-0 bg-overlay-gradient"></div>
+        </div>
+
+        <!-- 2. Main Grid Layout -->
+        <div class="relative z-10 grid grid-cols-12 h-full w-full">
+            
+            <!-- Left Panel: Content List (Span 7) -->
+            <div class="col-span-7 pl-16 pr-8 flex flex-col justify-center h-full">
+                
+                <!-- Semantic List for Content -->
+                <ul class="flex flex-col gap-6">
+                    
+                    <!-- Item 01: Agriculture -->
+                    <li class="group relative pl-0">
+                        <!-- Card Container -->
+                        <div class="card-gradient p-6 rounded-tl-3xl rounded-br-3xl border border-white/20 shadow-lg relative overflow-hidden transition-all duration-300">
+                            <!-- Decorative Circle -->
+                            <div class="absolute -right-6 -top-6 w-20 h-20 bg-white/10 rounded-full blur-xl"></div>
+                            
+                            <div class="flex items-start gap-5">
+                                <!-- Number -->
+                                <div class="flex-shrink-0">
+                                    <span class="block text-4xl font-light opacity-60 font-serif">01.</span>
+                                </div>
+                                <!-- Text Content -->
+                                <div>
+                                    <h2 class="text-2xl font-bold mb-2 tracking-wide">Agriculture</h2>
+                                    <p class="text-sm font-light leading-relaxed text-white/90">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Item 02: Logging -->
+                    <li class="group relative pl-8">
+                        <div class="card-gradient p-6 rounded-tl-3xl rounded-br-3xl border border-white/20 shadow-lg relative overflow-hidden">
+                             <!-- Decorative Circle -->
+                             <div class="absolute -right-6 -top-6 w-20 h-20 bg-white/10 rounded-full blur-xl"></div>
+
+                            <div class="flex items-start gap-5">
+                                <div class="flex-shrink-0">
+                                    <span class="block text-4xl font-light opacity-60 font-serif">02.</span>
+                                </div>
+                                <div>
+                                    <h2 class="text-2xl font-bold mb-2 tracking-wide">Logging</h2>
+                                    <p class="text-sm font-light leading-relaxed text-white/90">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Item 03: Infrastructure -->
+                    <li class="group relative pl-0">
+                        <div class="card-gradient p-6 rounded-tl-3xl rounded-br-3xl border border-white/20 shadow-lg relative overflow-hidden">
+                             <!-- Decorative Circle -->
+                             <div class="absolute -right-6 -top-6 w-20 h-20 bg-white/10 rounded-full blur-xl"></div>
+
+                            <div class="flex items-start gap-5">
+                                <div class="flex-shrink-0">
+                                    <span class="block text-4xl font-light opacity-60 font-serif">03.</span>
+                                </div>
+                                <div>
+                                    <h2 class="text-2xl font-bold mb-2 tracking-wide">Infrastructure</h2>
+                                    <p class="text-sm font-light leading-relaxed text-white/90">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Right Panel: Visuals & Title (Span 5) -->
+            <div class="col-span-5 h-full relative flex flex-col">
+                
+                <!-- Hero Image Container (Top Right) -->
+                <!-- Organic Shape Masking via Border Radius -->
+                <div class="relative w-full h-[65%] overflow-hidden rounded-bl-[120px] shadow-2xl border-l-4 border-b-4 border-white/10">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb7d5b73?q=80&w=600&auto=format&fit=crop" 
+                         alt="Hands holding a seedling in soil" 
+                         class="w-full h-full object-cover transform scale-105">
+                    <!-- 600*500 -->
+                    
+                    <!-- Inner Shadow Overlay for Text Readability if needed -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-eco-dark/40 to-transparent"></div>
+                </div>
+
+                <!-- Large Typographic Title (Bottom Right) -->
+                <div class="flex-1 flex flex-col justify-center px-8 relative">
+                    
+                    <!-- Decorative line -->
+                    <div class="w-16 h-1 bg-eco-light mb-6"></div>
+
+                    <h1 class="text-7xl font-serif leading-tight text-shadow-sm">
+                        <span class="block text-white">Deforestation</span>
+                        <span class="block text-eco-light italic">Drivers</span>
+                    </h1>
+
+                    <!-- Arrows Decoration (Bottom Right Corner) -->
+                    <div class="absolute bottom-12 right-12 flex gap-2 text-white/40 text-xl">
+                        <i class="fa-solid fa-caret-right"></i>
+                        <i class="fa-solid fa-caret-right"></i>
+                        <i class="fa-solid fa-caret-right"></i>
+                        <i class="fa-solid fa-caret-right"></i>
+                        <i class="fa-solid fa-caret-right text-white"></i>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

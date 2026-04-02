@@ -1,0 +1,3411 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Responsive Merged HTML
+  </title>
+  <style>
+   body {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .page-wrapper {
+                width: 100%;
+                margin: 15px 0;
+                position: relative;
+            }
+            .page-title {
+                background: #f5f5f5;
+                padding: 5px 10px;
+                border-radius: 3px 3px 0 0;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+            }
+            .responsive-iframe {
+                border: none;
+                width: 100%;
+                display: block;
+            }
+  </style>
+ </head>
+ <body>
+  <!-- 内容将在这里插入 -->
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 1
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Stock Market Presentation&lt;/title&gt;
+    
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bg: '#0F1115',
+                        primary: '#FFFFFF',
+                        secondary: '#A0A5B0',
+                        accentLine: '#D65A63',
+                        borderDark: '#2A2E35'
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'Inter', 'Roboto', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'brand-gradient': 'linear-gradient(90deg, #E56B6F 0%, #9D4EDD 100%)',
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        /* Global Reset &amp; Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Slide Container */
+        .page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #0F1115;
+            overflow: hidden;
+            /* Box shadow is strictly forbidden per instructions */
+        }
+
+        /* Utility for Background Overlay */
+        .bg-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 17, 21, 0.85); /* Dark overlay to make text readable */
+            z-index: 1;
+        }
+
+        /* Content Layer */
+        .content-layer {
+            position: relative;
+            z-index: 10;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 48px 64px;
+        }
+
+        /* Geometric Decoration - Zig Zag */
+        .zigzag-deco {
+            width: 50px;
+            height: 50px;
+            border-left: 3px solid #D65A63;
+            border-bottom: 3px solid #D65A63;
+            position: absolute;
+        }
+        
+        .zigzag-deco::after {
+            content: '';
+            position: absolute;
+            top: -25px;
+            left: -3px; /* Align with border width */
+            width: 25px;
+            height: 25px;
+            border-left: 3px solid #D65A63;
+            border-bottom: 3px solid #D65A63;
+        }
+
+        /* --- 新增：顶部导航样式 (统一风格) --- */
+        .bg-brand-gradient {
+            background: linear-gradient(90deg, #E56B6F 0%, #9D4EDD 100%);
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            position: relative;
+            display: block;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: #FFFFFF;
+        }
+
+        /* 选中状态的小圆点 */
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 4px;
+            background-color: #E56B6F;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #E56B6F;
+        }
+
+        .icon-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.8);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .icon-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #FFFFFF;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div class=&quot;page_container&quot;&gt;
+        
+        &lt;div class=&quot;absolute inset-0 z-0&quot;&gt;
+            &lt;img src=&quot;https://images.unsplash.com/photo-1611974765270-ca1258634369?q=80&amp;w=1280&amp;auto=format&amp;fit=crop&quot; 
+                 alt=&quot;Stock Market Chart Background&quot; 
+                 class=&quot;w-full h-full object-cover opacity-60&quot;&gt;
+            &lt;/div&gt;
+
+        &lt;div class=&quot;bg-overlay&quot; style=&quot;background: linear-gradient(180deg, rgba(15,17,21,0.7) 0%, rgba(15,17,21,0.95) 100%);&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;content-layer&quot;&gt;
+            
+            &lt;header class=&quot;flex justify-between items-center w-full relative z-20&quot; style=&quot;padding-bottom: 20px;&quot;&gt;
+                &lt;div class=&quot;bg-brand-gradient rounded-full px-8 py-2.5 shadow-lg&quot;&gt;
+                    &lt;span class=&quot;text-white font-bold text-sm tracking-wide&quot;&gt;Thynk Unlimited&lt;/span&gt;
+                &lt;/div&gt;
+
+                &lt;div style=&quot;display: flex; gap: 16px; align-items: center;&quot;&gt;
+                    &lt;nav class=&quot;glass-panel&quot; style=&quot;display: flex; gap: 32px; border-radius: 50px; padding: 10px 36px; align-items: center; height: 48px;&quot;&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;nav-link active&quot;&gt;HOME&lt;/a&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;SERVICE&lt;/a&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;CONTACT&lt;/a&gt;
+                    &lt;/nav&gt;
+                    &lt;div class=&quot;glass-panel&quot; style=&quot;display: flex; gap: 8px; border-radius: 50px; padding: 6px; height: 48px; align-items: center;&quot;&gt;
+                        &lt;div class=&quot;icon-btn&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-magnifying-glass&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;icon-btn&quot; style=&quot;background: rgba(255,255,255,0.1);&quot;&gt;
+                            &lt;i class=&quot;fa-regular fa-user&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/header&gt;
+
+            &lt;main class=&quot;flex-grow flex flex-col justify-center items-center relative w-full&quot;&gt;
+                
+                &lt;div class=&quot;absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4&quot;&gt;
+                     &lt;div class=&quot;zigzag-deco opacity-80&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 flex flex-col gap-2&quot;&gt;
+                    &lt;div class=&quot;flex gap-2 justify-end&quot;&gt;
+                        &lt;div class=&quot;w-1.5 h-1.5 rounded-full bg-accentLine/40&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;w-1.5 h-1.5 rounded-full bg-accentLine/60&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;w-1.5 h-1.5 rounded-full bg-accentLine&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;flex gap-2 justify-end&quot;&gt;
+                        &lt;div class=&quot;w-1.5 h-1.5 rounded-full bg-accentLine/40&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;w-1.5 h-1.5 rounded-full bg-accentLine/60&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;w-1.5 h-1.5 rounded-full bg-accentLine&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;flex gap-2 justify-end&quot;&gt;
+                        &lt;div class=&quot;w-1.5 h-1.5 rounded-full bg-accentLine/40&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;w-1.5 h-1.5 rounded-full bg-accentLine/60&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;w-1.5 h-1.5 rounded-full bg-accentLine&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;text-center z-10&quot;&gt;
+                    &lt;h1 class=&quot;text-primary text-9xl font-black tracking-tighter mb-4 drop-shadow-2xl uppercase&quot; style=&quot;font-size: 8rem; line-height: 1;&quot;&gt;
+                        Stock Market
+                    &lt;/h1&gt;
+                    &lt;div class=&quot;w-24 h-1 bg-brand-gradient mx-auto mb-6 rounded-full&quot;&gt;&lt;/div&gt;
+                    &lt;p class=&quot;text-secondary text-2xl font-light tracking-wide&quot;&gt;
+                        Your Gateway to Financial Growth
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/main&gt;
+
+            &lt;footer class=&quot;flex justify-between items-end w-full&quot;&gt;
+                
+                &lt;div class=&quot;flex flex-col gap-1&quot;&gt;
+                    &lt;p class=&quot;text-secondary text-sm font-medium uppercase tracking-wider&quot;&gt;Presented by&lt;/p&gt;
+                    &lt;div class=&quot;flex items-center gap-3&quot;&gt;
+                        &lt;div class=&quot;w-10 h-10 rounded-full bg-gray-700 overflow-hidden border border-borderDark&quot;&gt;
+                            &lt;img src=&quot;https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&amp;w=100&amp;auto=format&amp;fit=crop&quot; 
+                                 alt=&quot;Jacqueline Thompson&quot; 
+                                 class=&quot;w-full h-full object-cover&quot;&gt;
+                            &lt;/div&gt;
+                        &lt;h3 class=&quot;text-primary text-lg font-bold&quot;&gt;Jacqueline Thompson&lt;/h3&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;flex flex-col gap-1 text-right&quot;&gt;
+                    &lt;p class=&quot;text-secondary text-sm font-medium uppercase tracking-wider&quot;&gt;Date&lt;/p&gt;
+                    &lt;h3 class=&quot;text-primary text-lg font-bold&quot;&gt;August 25&lt;sup&gt;th&lt;/sup&gt;, 2028&lt;/h3&gt;
+                &lt;/div&gt;
+            &lt;/footer&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 2
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Table of Contents&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        /* Base Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        /* Container */
+        #page_container { 
+            width: 1280px; 
+            height: 720px; 
+            background-color: #0F1115; 
+            position: relative; 
+            margin: 0 auto; 
+            overflow: hidden; 
+        }
+
+        /* Pure CSS Background */
+        .bg-gradient-depth {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 80% 20%, rgba(157, 78, 221, 0.08) 0%, transparent 40%),
+                        radial-gradient(circle at 20% 80%, rgba(229, 107, 111, 0.08) 0%, transparent 40%);
+            z-index: 1;
+        }
+
+        /* Brand Colors */
+        .brand-gradient-bg { background: linear-gradient(90deg, #E56B6F 0%, #9D4EDD 100%); }
+        .brand-gradient-text { background: linear-gradient(90deg, #E56B6F 0%, #9D4EDD 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+        /* Navigation Styles */
+        .glass-panel { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); }
+        .nav-link { text-decoration: none; color: rgba(255, 255, 255, 0.7); font-size: 13px; font-weight: 500; letter-spacing: 0.5px; transition: all 0.3s ease; position: relative; display: block; }
+        .nav-link:hover, .nav-link.active { color: #FFFFFF; }
+        .nav-link.active::after { content: ''; position: absolute; bottom: -6px; left: 50%; transform: translateX(-50%); width: 4px; height: 4px; background-color: #E56B6F; border-radius: 50%; box-shadow: 0 0 8px #E56B6F; }
+        .icon-btn { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: rgba(255, 255, 255, 0.8); transition: all 0.3s ease; cursor: pointer; }
+        .icon-btn:hover { background: rgba(255, 255, 255, 0.1); color: #FFFFFF; }
+
+        /* Content Layer */
+        .content-layer { position: relative; z-index: 10; height: 100%; display: flex; flex-direction: column; padding: 40px 60px; }
+
+        /* Decor Dots */
+        .decor-dots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; position: absolute; top: 160px; right: 60px; z-index: 5; }
+        .dot { width: 6px; height: 6px; border-radius: 50%; background-color: #E56B6F; opacity: 0.6; }
+
+        /* TOC List Styles */
+        .toc-list-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 80px;
+            row-gap: 0;
+            height: 100%;
+            padding-top: 10px;
+        }
+
+        .toc-item {
+            display: flex;
+            align-items: center;
+            padding: 14px 0;
+            /* 边框颜色更亮，不再依赖hover */
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            position: relative;
+        }
+
+        /* Large Number - Direct Color */
+        .toc-number {
+            font-size: 24px;
+            font-weight: 700;
+            /* 直接使用高亮颜色 */
+            color: #E56B6F; 
+            margin-right: 24px;
+            font-family: 'Noto Sans SC', sans-serif;
+            width: 40px;
+        }
+
+        .toc-text {
+            flex-grow: 1;
+        }
+
+        .toc-title {
+            color: #FFFFFF;
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .toc-desc {
+            color: #6B7280;
+            font-size: 12px;
+            margin-top: 2px;
+        }
+
+        /* Arrow - Always Visible */
+        .toc-arrow {
+            /* 不透明度设为1，颜色直接显现 */
+            opacity: 1;
+            color: #9D4EDD;
+            font-size: 14px;
+            transform: translateX(0); /* 移除位移 */
+        }
+
+        /* Vertical Line Decor */
+        .divider-line {
+            position: absolute;
+            left: 50%;
+            top: 220px;
+            bottom: 60px;
+            width: 1px;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.02), rgba(255,255,255,0.1), rgba(255,255,255,0.02));
+            transform: translateX(-50%);
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;!-- Pure CSS Background --&gt;
+        &lt;div class=&quot;bg-gradient-depth&quot;&gt;&lt;/div&gt;
+
+        &lt;!-- Decorative Dots --&gt;
+        &lt;div class=&quot;decor-dots&quot;&gt;
+            &lt;div class=&quot;dot&quot; style=&quot;opacity: 1;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot; style=&quot;opacity: 0.4;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot; style=&quot;opacity: 0.2;&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;content-layer&quot;&gt;
+            
+            &lt;!-- Header (Identical) --&gt;
+            &lt;header style=&quot;position: relative; z-index: 20; padding: 0px 0px 32px 0px; display: flex; justify-content: space-between; align-items: center;&quot;&gt;
+                &lt;div class=&quot;brand-gradient-bg&quot; style=&quot;padding: 10px 30px; border-radius: 50px;&quot;&gt;
+                    &lt;span style=&quot;color: #FFFFFF; font-weight: 500; font-size: 16px;&quot;&gt;Thynk Unlimited&lt;/span&gt;
+                &lt;/div&gt;
+
+                &lt;div style=&quot;display: flex; gap: 16px; align-items: center;&quot;&gt;
+                    &lt;nav class=&quot;glass-panel&quot; style=&quot;display: flex; gap: 32px; border-radius: 50px; padding: 10px 36px; align-items: center; height: 48px;&quot;&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;nav-link active&quot;&gt;HOME&lt;/a&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;SERVICE&lt;/a&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;CONTACT&lt;/a&gt;
+                    &lt;/nav&gt;
+                    &lt;div class=&quot;glass-panel&quot; style=&quot;display: flex; gap: 8px; border-radius: 50px; padding: 6px; height: 48px; align-items: center;&quot;&gt;
+                        &lt;div class=&quot;icon-btn&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-magnifying-glass&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;icon-btn&quot; style=&quot;background: rgba(255,255,255,0.1);&quot;&gt;
+                            &lt;i class=&quot;fa-regular fa-user&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/header&gt;
+
+            &lt;!-- Title Section --&gt;
+            &lt;div class=&quot;mb-10 relative&quot;&gt;
+                &lt;h1 class=&quot;text-white text-5xl font-bold tracking-tight mb-2&quot;&gt;
+                    Report &lt;span class=&quot;brand-gradient-text&quot;&gt;Contents&lt;/span&gt;
+                &lt;/h1&gt;
+                &lt;p class=&quot;text-[#A0A5B0] text-sm mt-2 font-light tracking-wide uppercase&quot;&gt;Overview of financial insights&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Central Divider --&gt;
+            &lt;div class=&quot;divider-line&quot;&gt;&lt;/div&gt;
+
+            &lt;!-- Table of Contents Grid --&gt;
+            &lt;div class=&quot;toc-list-container&quot;&gt;
+                
+                &lt;!-- Left Column (01-05) --&gt;
+                &lt;div class=&quot;flex flex-col justify-between h-[85%]&quot;&gt;
+                    &lt;!-- Item 01 --&gt;
+                    &lt;div class=&quot;toc-item&quot;&gt;
+                        &lt;span class=&quot;toc-number&quot;&gt;01&lt;/span&gt;
+                        &lt;div class=&quot;toc-text&quot;&gt;
+                            &lt;h3 class=&quot;toc-title&quot;&gt;Executive Summary&lt;/h3&gt;
+                            &lt;p class=&quot;toc-desc&quot;&gt;Key highlights and strategic vision&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;i class=&quot;fa-solid fa-arrow-right toc-arrow&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Item 02 --&gt;
+                    &lt;div class=&quot;toc-item&quot;&gt;
+                        &lt;span class=&quot;toc-number&quot;&gt;02&lt;/span&gt;
+                        &lt;div class=&quot;toc-text&quot;&gt;
+                            &lt;h3 class=&quot;toc-title&quot;&gt;Market Analysis&lt;/h3&gt;
+                            &lt;p class=&quot;toc-desc&quot;&gt;Global trends and economic indicators&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;i class=&quot;fa-solid fa-arrow-right toc-arrow&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Item 03 --&gt;
+                    &lt;div class=&quot;toc-item&quot;&gt;
+                        &lt;span class=&quot;toc-number&quot;&gt;03&lt;/span&gt;
+                        &lt;div class=&quot;toc-text&quot;&gt;
+                            &lt;h3 class=&quot;toc-title&quot;&gt;Asset Allocation&lt;/h3&gt;
+                            &lt;p class=&quot;toc-desc&quot;&gt;Distribution strategy across sectors&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;i class=&quot;fa-solid fa-arrow-right toc-arrow&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Item 04 --&gt;
+                    &lt;div class=&quot;toc-item&quot;&gt;
+                        &lt;span class=&quot;toc-number&quot;&gt;04&lt;/span&gt;
+                        &lt;div class=&quot;toc-text&quot;&gt;
+                            &lt;h3 class=&quot;toc-title&quot;&gt;Risk Management&lt;/h3&gt;
+                            &lt;p class=&quot;toc-desc&quot;&gt;Mitigation protocols and hedging&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;i class=&quot;fa-solid fa-arrow-right toc-arrow&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Item 05 --&gt;
+                    &lt;div class=&quot;toc-item&quot;&gt;
+                        &lt;span class=&quot;toc-number&quot;&gt;05&lt;/span&gt;
+                        &lt;div class=&quot;toc-text&quot;&gt;
+                            &lt;h3 class=&quot;toc-title&quot;&gt;Equity Performance&lt;/h3&gt;
+                            &lt;p class=&quot;toc-desc&quot;&gt;Stock market review and projections&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;i class=&quot;fa-solid fa-arrow-right toc-arrow&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Right Column (06-10) --&gt;
+                &lt;div class=&quot;flex flex-col justify-between h-[85%]&quot;&gt;
+                    &lt;!-- Item 06 --&gt;
+                    &lt;div class=&quot;toc-item&quot;&gt;
+                        &lt;span class=&quot;toc-number&quot;&gt;06&lt;/span&gt;
+                        &lt;div class=&quot;toc-text&quot;&gt;
+                            &lt;h3 class=&quot;toc-title&quot;&gt;Fixed Income&lt;/h3&gt;
+                            &lt;p class=&quot;toc-desc&quot;&gt;Bonds, treasury, and yield analysis&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;i class=&quot;fa-solid fa-arrow-right toc-arrow&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Item 07 --&gt;
+                    &lt;div class=&quot;toc-item&quot;&gt;
+                        &lt;span class=&quot;toc-number&quot;&gt;07&lt;/span&gt;
+                        &lt;div class=&quot;toc-text&quot;&gt;
+                            &lt;h3 class=&quot;toc-title&quot;&gt;Digital Assets&lt;/h3&gt;
+                            &lt;p class=&quot;toc-desc&quot;&gt;Cryptocurrency and blockchain outlook&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;i class=&quot;fa-solid fa-arrow-right toc-arrow&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Item 08 --&gt;
+                    &lt;div class=&quot;toc-item&quot;&gt;
+                        &lt;span class=&quot;toc-number&quot;&gt;08&lt;/span&gt;
+                        &lt;div class=&quot;toc-text&quot;&gt;
+                            &lt;h3 class=&quot;toc-title&quot;&gt;Global Opportunities&lt;/h3&gt;
+                            &lt;p class=&quot;toc-desc&quot;&gt;Emerging markets and FX strategy&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;i class=&quot;fa-solid fa-arrow-right toc-arrow&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Item 09 --&gt;
+                    &lt;div class=&quot;toc-item&quot;&gt;
+                        &lt;span class=&quot;toc-number&quot;&gt;09&lt;/span&gt;
+                        &lt;div class=&quot;toc-text&quot;&gt;
+                            &lt;h3 class=&quot;toc-title&quot;&gt;Future Outlook&lt;/h3&gt;
+                            &lt;p class=&quot;toc-desc&quot;&gt;Predictions for the next fiscal year&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;i class=&quot;fa-solid fa-arrow-right toc-arrow&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Item 10 --&gt;
+                    &lt;div class=&quot;toc-item&quot;&gt;
+                        &lt;span class=&quot;toc-number&quot;&gt;10&lt;/span&gt;
+                        &lt;div class=&quot;toc-text&quot;&gt;
+                            &lt;h3 class=&quot;toc-title&quot;&gt;Appendix &amp; Data&lt;/h3&gt;
+                            &lt;p class=&quot;toc-desc&quot;&gt;Methodology and detailed charts&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;i class=&quot;fa-solid fa-arrow-right toc-arrow&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 3
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Stocks: Ownership &amp; Returns&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        /* CSS Reset &amp; Basic Setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Font Family Application */
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Container Definition */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #0F1115;
+            overflow: hidden;
+        }
+
+        /* Brand Gradient Utility */
+        .bg-brand-gradient {
+            background: linear-gradient(90deg, #E56B6F 0%, #9D4EDD 100%);
+        }
+
+        /* Text Gradient (Optional for hover or emphasis) */
+        .text-brand-gradient {
+            background: linear-gradient(90deg, #E56B6F 0%, #9D4EDD 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Custom Scrollbar hide */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Specific Geometric Decorations */
+        .dot-pattern {
+            width: 4px;
+            height: 4px;
+            background-color: #D65A63;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 3px;
+        }
+
+        /* Layout Utilities */
+        .glass-card {
+            background: rgba(42, 46, 53, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        /* --- 新增：顶部导航样式 (统一风格) --- */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            position: relative;
+            display: block;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: #FFFFFF;
+        }
+
+        /* 选中状态的小圆点 */
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 4px;
+            background-color: #E56B6F;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #E56B6F;
+        }
+
+        .icon-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.8);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .icon-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #FFFFFF;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;absolute inset-0 z-0 opacity-20&quot;&gt;
+            &lt;img src=&quot;https://images.unsplash.com/photo-1611974765270-ca12586343bb?q=80&amp;w=1280&amp;auto=format&amp;fit=crop&quot; 
+                 alt=&quot;Stock Market Background&quot; 
+                 class=&quot;w-full h-full object-cover&quot;&gt;
+            &lt;/div&gt;
+
+        &lt;div class=&quot;absolute top-48 right-16 z-10 grid grid-cols-3 gap-1 opacity-80&quot;&gt;
+            &lt;div class=&quot;dot-pattern&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot-pattern&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot-pattern&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;dot-pattern&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot-pattern&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot-pattern&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;dot-pattern&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot-pattern&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot-pattern&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;header style=&quot;position: relative; z-index: 20; padding: 32px 60px; display: flex; justify-content: space-between; align-items: center;&quot;&gt;
+            &lt;div class=&quot;bg-brand-gradient&quot; style=&quot;padding: 10px 30px; border-radius: 50px;&quot;&gt;
+                &lt;span style=&quot;color: #FFFFFF; font-weight: 500; font-size: 16px;&quot;&gt;Thynk Unlimited&lt;/span&gt;
+            &lt;/div&gt;
+
+            &lt;div style=&quot;display: flex; gap: 16px; align-items: center;&quot;&gt;
+                &lt;nav class=&quot;glass-panel&quot; style=&quot;display: flex; gap: 32px; border-radius: 50px; padding: 10px 36px; align-items: center; height: 48px;&quot;&gt;
+                    &lt;a href=&quot;#&quot; class=&quot;nav-link active&quot;&gt;HOME&lt;/a&gt;
+                    &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;SERVICE&lt;/a&gt;
+                    &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;CONTACT&lt;/a&gt;
+                &lt;/nav&gt;
+                &lt;div class=&quot;glass-panel&quot; style=&quot;display: flex; gap: 8px; border-radius: 50px; padding: 6px; height: 48px; align-items: center;&quot;&gt;
+                    &lt;div class=&quot;icon-btn&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-magnifying-glass&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;icon-btn&quot; style=&quot;background: rgba(255,255,255,0.1);&quot;&gt;
+                        &lt;i class=&quot;fa-regular fa-user&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;div class=&quot;relative z-20 text-center mt-12 mb-20&quot;&gt;
+            &lt;h1 class=&quot;text-white text-5xl font-bold leading-tight tracking-tight&quot;&gt;
+                Stocks : Ownership &amp;&lt;br&gt;Returns
+            &lt;/h1&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;relative z-20 flex justify-center gap-16 px-24&quot;&gt;
+            
+            &lt;div class=&quot;glass-card w-[480px] rounded-3xl relative pt-16 pb-12 px-10 border border-[#2A2E35]&quot;&gt;
+                &lt;div class=&quot;absolute -top-10 left-1/2 transform -translate-x-1/2 bg-brand-gradient w-20 h-20 rounded-2xl flex items-center justify-center shadow-xl shadow-purple-900/30&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-hand-holding-dollar text-white text-3xl&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;text-center mt-4&quot;&gt;
+                    &lt;h2 class=&quot;text-white text-2xl font-bold mb-6&quot;&gt;Common Stocks&lt;/h2&gt;
+                    &lt;p class=&quot;text-[#A0A5B0] text-lg leading-relaxed font-light&quot;&gt;
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;glass-card w-[480px] rounded-3xl relative pt-16 pb-12 px-10 border border-[#2A2E35]&quot;&gt;
+                &lt;div class=&quot;absolute -top-10 left-1/2 transform -translate-x-1/2 bg-brand-gradient w-20 h-20 rounded-2xl flex items-center justify-center shadow-xl shadow-purple-900/30&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-sack-dollar text-white text-3xl&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;text-center mt-4&quot;&gt;
+                    &lt;h2 class=&quot;text-white text-2xl font-bold mb-6&quot;&gt;Preferred Stocks&lt;/h2&gt;
+                    &lt;p class=&quot;text-[#A0A5B0] text-lg leading-relaxed font-light&quot;&gt;
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute -bottom-20 -right-20 w-64 h-64 bg-purple-900 rounded-full blur-3xl opacity-20 pointer-events-none&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute -bottom-20 -left-20 w-64 h-64 bg-red-900 rounded-full blur-3xl opacity-10 pointer-events-none&quot;&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 4
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Major Stock Exchanges - Keynote Slide&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.css&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js&quot;&gt;&lt;/script&gt;
+
+    &lt;style&gt;
+        /* CSS Reset &amp; Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Gradient Definitions */
+        .brand-gradient-bg {
+            background: linear-gradient(90deg, #E56B6F 0%, #9D4EDD 100%);
+        }
+        
+        .brand-gradient-text {
+            background: linear-gradient(90deg, #E56B6F 0%, #9D4EDD 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Custom Font Application */
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        
+        /* --- 统一的顶部导航样式 --- */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            position: relative;
+            display: block;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: #FFFFFF;
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 4px;
+            background-color: #E56B6F;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #E56B6F;
+        }
+
+        .icon-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.8);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .icon-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #FFFFFF;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot; style=&quot;width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #0F1115; overflow: hidden;&quot;&gt;
+
+        &lt;div style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.05; background-image: url('https://images.unsplash.com/photo-1611974765270-ca12586343bb?q=80&amp;w=2000&amp;auto=format&amp;fit=crop'); background-size: cover; pointer-events: none;&quot;&gt;&lt;/div&gt;
+
+        &lt;div style=&quot;position: absolute; bottom: -150px; left: -100px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(157,78,221,0.15) 0%, rgba(0,0,0,0) 70%); pointer-events: none;&quot;&gt;&lt;/div&gt;
+
+        &lt;header style=&quot;position: relative; z-index: 20; padding: 32px 60px; display: flex; justify-content: space-between; align-items: center;&quot;&gt;
+            &lt;div class=&quot;brand-gradient-bg&quot; style=&quot;padding: 10px 30px; border-radius: 50px;&quot;&gt;
+                &lt;span style=&quot;color: #FFFFFF; font-weight: 500; font-size: 16px;&quot;&gt;Thynk Unlimited&lt;/span&gt;
+            &lt;/div&gt;
+
+            &lt;div style=&quot;display: flex; gap: 16px; align-items: center;&quot;&gt;
+                &lt;nav class=&quot;glass-panel&quot; style=&quot;display: flex; gap: 32px; border-radius: 50px; padding: 10px 36px; align-items: center; height: 48px;&quot;&gt;
+                    &lt;a href=&quot;#&quot; class=&quot;nav-link active&quot;&gt;HOME&lt;/a&gt;
+                    &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;SERVICE&lt;/a&gt;
+                    &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;CONTACT&lt;/a&gt;
+                &lt;/nav&gt;
+                &lt;div class=&quot;glass-panel&quot; style=&quot;display: flex; gap: 8px; border-radius: 50px; padding: 6px; height: 48px; align-items: center;&quot;&gt;
+                    &lt;div class=&quot;icon-btn&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-magnifying-glass&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;icon-btn&quot; style=&quot;background: rgba(255,255,255,0.1);&quot;&gt;
+                        &lt;i class=&quot;fa-regular fa-user&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;div style=&quot;display: grid; grid-template-columns: 5fr 7fr; gap: 60px; padding: 0 60px; height: 560px; align-items: center; position: relative; z-index: 10;&quot;&gt;
+
+            &lt;div style=&quot;padding-right: 20px;&quot;&gt;
+                
+                &lt;h1 style=&quot;font-size: 56px; font-weight: 700; color: #FFFFFF; line-height: 1.1; margin-bottom: 32px;&quot;&gt;
+                    Major Stock &lt;br&gt;
+                    &lt;span class=&quot;brand-gradient-text&quot;&gt;Exchanges&lt;/span&gt;
+                &lt;/h1&gt;
+
+                &lt;div style=&quot;margin-bottom: 32px;&quot;&gt;
+                    &lt;p style=&quot;color: #A0A5B0; font-size: 15px; line-height: 1.6; margin-bottom: 20px;&quot;&gt;
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    &lt;/p&gt;
+                    &lt;p style=&quot;color: #A0A5B0; font-size: 15px; line-height: 1.6;&quot;&gt;
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div&gt;
+                    &lt;button class=&quot;brand-gradient-bg&quot; style=&quot;border: none; padding: 16px 48px; border-radius: 30px; color: white; font-weight: 600; font-size: 14px; letter-spacing: 1px; cursor: pointer; box-shadow: 0 10px 25px rgba(229, 107, 111, 0.4); text-transform: uppercase; transition: transform 0.2s;&quot;&gt;
+                        Learn More
+                    &lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div style=&quot;position: relative; height: 420px; width: 100%;&quot;&gt;
+                
+                &lt;div style=&quot;width: 100%; height: 100%; border-radius: 24px; overflow: hidden; border: 1px solid #2A2E35; box-shadow: 0 20px 50px rgba(0,0,0,0.5);&quot;&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1642543492481-44e81e3914a7?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80&quot; 
+                         alt=&quot;Multiple monitors trading&quot; 
+                         style=&quot;width: 100%; height: 100%; object-fit: cover;&quot;&gt;
+                &lt;/div&gt;
+
+                &lt;div style=&quot;position: absolute; bottom: -30px; left: -30px; width: 160px; height: 160px; background: rgba(30, 30, 35, 0.85); backdrop-filter: blur(16px); border-radius: 24px; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3); display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 20;&quot;&gt;
+                    &lt;span style=&quot;font-size: 12px; color: #A0A5B0; margin-bottom: -10px; margin-top: 10px;&quot;&gt;Market Share&lt;/span&gt;
+                    
+                    &lt;div id=&quot;progressChart&quot; style=&quot;width: 120px; height: 120px;&quot;&gt;&lt;/div&gt;
+                    
+                    &lt;div style=&quot;position: absolute; top: 55%; left: 50%; transform: translate(-50%, -50%); color: white; font-weight: 700; font-size: 20px;&quot;&gt;83%&lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div style=&quot;position: absolute; top: -20px; right: -20px; z-index: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px;&quot;&gt;
+                    &lt;div style=&quot;width: 4px; height: 4px; background: #D65A63; border-radius: 50%;&quot;&gt;&lt;/div&gt;
+                    &lt;div style=&quot;width: 4px; height: 4px; background: #555; border-radius: 50%;&quot;&gt;&lt;/div&gt;
+                    &lt;div style=&quot;width: 4px; height: 4px; background: #555; border-radius: 50%;&quot;&gt;&lt;/div&gt;
+                    &lt;div style=&quot;width: 4px; height: 4px; background: #555; border-radius: 50%;&quot;&gt;&lt;/div&gt;
+                    &lt;div style=&quot;width: 4px; height: 4px; background: #555; border-radius: 50%;&quot;&gt;&lt;/div&gt;
+                    &lt;div style=&quot;width: 4px; height: 4px; background: #D65A63; border-radius: 50%;&quot;&gt;&lt;/div&gt;
+                    &lt;div style=&quot;width: 4px; height: 4px; background: #555; border-radius: 50%;&quot;&gt;&lt;/div&gt;
+                    &lt;div style=&quot;width: 4px; height: 4px; background: #555; border-radius: 50%;&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+    &lt;script&gt;
+        document.addEventListener('DOMContentLoaded', function () {
+            var chartDom = document.getElementById('progressChart');
+            var myChart = echarts.init(chartDom);
+            var option;
+
+            option = {
+                series: [
+                    {
+                        name: 'Progress',
+                        type: 'pie',
+                        radius: ['65%', '80%'], /* Slightly adjusted for smaller container */
+                        avoidLabelOverlap: false,
+                        label: {
+                            show: false,
+                            position: 'center'
+                        },
+                        emphasis: {
+                            scale: false
+                        },
+                        labelLine: {
+                            show: false
+                        },
+                        data: [
+                            { 
+                                value: 83, 
+                                name: 'Completed',
+                                itemStyle: {
+                                    color: {
+                                        type: 'linear',
+                                        x: 0,
+                                        y: 0,
+                                        x2: 1,
+                                        y2: 0,
+                                        colorStops: [{
+                                            offset: 0, color: '#E56B6F' // color at 0%
+                                        }, {
+                                            offset: 1, color: '#9D4EDD' // color at 100%
+                                        }],
+                                        global: false // default is false
+                                    },
+                                    borderRadius: 10
+                                }
+                            },
+                            { 
+                                value: 17, 
+                                name: 'Remaining',
+                                itemStyle: {
+                                    color: 'rgba(255,255,255,0.1)'
+                                }
+                            }
+                        ]
+                    }
+                ]
+            };
+
+            myChart.setOption(option);
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 5
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=1280, height=720, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=1280, height=720, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Market Trends &amp; Sentiments&lt;/title&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.2/echarts.min.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#0F1115',
+                        primaryText: '#FFFFFF',
+                        secondaryText: '#A0A5B0',
+                        accentLine: '#D65A63',
+                        borderCard: '#2A2E35',
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'brand-gradient': 'linear-gradient(90deg, #E56B6F 0%, #9D4EDD 100%)',
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        /* CSS Reset &amp; Basic Setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container Specs */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #0F1115;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Custom scrollbar hide just in case */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* --- 新增：顶部导航样式 (统一风格) --- */
+        .brand-gradient-bg {
+            background: linear-gradient(90deg, #E56B6F 0%, #9D4EDD 100%);
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            position: relative;
+            display: block;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: #FFFFFF;
+        }
+
+        /* 选中状态的小圆点 */
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 4px;
+            background-color: #E56B6F;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #E56B6F;
+        }
+
+        .icon-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.8);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .icon-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #FFFFFF;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;div class=&quot;absolute top-0 right-0 w-[600px] h-[600px] bg-[#9D4EDD] opacity-10 blur-[120px] rounded-full pointer-events-none&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#E56B6F] opacity-5 blur-[100px] rounded-full pointer-events-none&quot;&gt;&lt;/div&gt;
+
+        &lt;header style=&quot;position: relative; z-index: 20; padding: 32px 60px; display: flex; justify-content: space-between; align-items: center;&quot;&gt;
+            &lt;div class=&quot;brand-gradient-bg&quot; style=&quot;padding: 10px 30px; border-radius: 50px;&quot;&gt;
+                &lt;span style=&quot;color: #FFFFFF; font-weight: 500; font-size: 16px;&quot;&gt;Thynk Unlimited&lt;/span&gt;
+            &lt;/div&gt;
+
+            &lt;div style=&quot;display: flex; gap: 16px; align-items: center;&quot;&gt;
+                &lt;nav class=&quot;glass-panel&quot; style=&quot;display: flex; gap: 32px; border-radius: 50px; padding: 10px 36px; align-items: center; height: 48px;&quot;&gt;
+                    &lt;a href=&quot;#&quot; class=&quot;nav-link active&quot;&gt;HOME&lt;/a&gt;
+                    &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;SERVICE&lt;/a&gt;
+                    &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;CONTACT&lt;/a&gt;
+                &lt;/nav&gt;
+                &lt;div class=&quot;glass-panel&quot; style=&quot;display: flex; gap: 8px; border-radius: 50px; padding: 6px; height: 48px; align-items: center;&quot;&gt;
+                    &lt;div class=&quot;icon-btn&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-magnifying-glass&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;icon-btn&quot; style=&quot;background: rgba(255,255,255,0.1);&quot;&gt;
+                        &lt;i class=&quot;fa-regular fa-user&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;div class=&quot;absolute top-40 right-10 grid grid-cols-2 gap-2 opacity-80&quot;&gt;
+            &lt;div class=&quot;w-2 h-2 rounded-full bg-[#E56B6F]&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;w-2 h-2 rounded-full bg-[#E56B6F]/50&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;w-2 h-2 rounded-full bg-[#E56B6F]&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;w-2 h-2 rounded-full bg-[#E56B6F]/50&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;w-2 h-2 rounded-full bg-[#E56B6F]&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;w-2 h-2 rounded-full bg-[#E56B6F]/50&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;text-center mb-8 relative z-10 mt-4&quot;&gt;
+            &lt;h1 class=&quot;text-5xl font-bold text-white tracking-tight drop-shadow-md&quot;&gt;
+                Market Trends &amp; Sentiments
+            &lt;/h1&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;grid grid-cols-2 gap-12 px-20 h-[500px] w-full items-center&quot;&gt;
+            
+            &lt;div class=&quot;relative w-full h-[400px]&quot;&gt;
+                &lt;div class=&quot;absolute inset-0 border border-white/20 rounded-[36px] bg-[#0F1115]/80 backdrop-blur-sm z-0&quot;&gt;&lt;/div&gt;
+                
+                &lt;div id=&quot;chart-bull&quot; class=&quot;w-full h-full p-4 z-10 relative&quot;&gt;&lt;/div&gt;
+
+                &lt;div class=&quot;absolute -bottom-6 left-1/2 transform -translate-x-1/2 z-20&quot;&gt;
+                    &lt;div class=&quot;bg-brand-gradient px-12 py-3 rounded-full shadow-lg shadow-purple-900/40&quot;&gt;
+                        &lt;h3 class=&quot;text-white font-bold text-xl tracking-wide&quot;&gt;Bull Market&lt;/h3&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;relative w-full h-[400px]&quot;&gt;
+                &lt;div class=&quot;absolute inset-0 border border-white/20 rounded-[36px] bg-[#0F1115]/80 backdrop-blur-sm z-0&quot;&gt;&lt;/div&gt;
+                
+                &lt;div id=&quot;chart-bear&quot; class=&quot;w-full h-full p-4 z-10 relative&quot;&gt;&lt;/div&gt;
+
+                &lt;div class=&quot;absolute -bottom-6 left-1/2 transform -translate-x-1/2 z-20&quot;&gt;
+                    &lt;div class=&quot;bg-brand-gradient px-12 py-3 rounded-full shadow-lg shadow-purple-900/40&quot;&gt;
+                        &lt;h3 class=&quot;text-white font-bold text-xl tracking-wide&quot;&gt;Bear Market&lt;/h3&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute bottom-4 right-8 text-[#2A2E35] font-bold text-9xl opacity-20 pointer-events-none select-none&quot;&gt;
+            2025
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+    &lt;script&gt;
+        // Common Chart Options
+        const commonOptions = {
+            backgroundColor: 'transparent',
+            animation: false, // Strict no animation requirement
+            grid: {
+                top: '15%',
+                left: '10%',
+                right: '10%',
+                bottom: '15%',
+                containLabel: false
+            },
+            xAxis: {
+                type: 'category',
+                data: ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'],
+                axisLine: { show: false },
+                axisTick: { show: false },
+                axisLabel: {
+                    color: '#A0A5B0',
+                    fontSize: 14,
+                    margin: 15
+                }
+            },
+            yAxis: {
+                type: 'value',
+                min: 0,
+                max: 50,
+                interval: 10,
+                splitLine: {
+                    show: true,
+                    lineStyle: {
+                        color: 'rgba(160, 165, 176, 0.1)',
+                        width: 1
+                    }
+                },
+                axisLabel: {
+                    color: '#A0A5B0',
+                    fontSize: 14
+                }
+            }
+        };
+
+        // --- Bull Market Chart ---
+        const chartBull = echarts.init(document.getElementById('chart-bull'));
+        const bullOption = {
+            ...commonOptions,
+            series: [
+                {
+                    // Red Line (Mid Rise)
+                    name: 'Series A',
+                    type: 'line',
+                    smooth: true,
+                    showSymbol: true,
+                    symbolSize: 10,
+                    data: [18, 30, 25, 40, 42],
+                    lineStyle: { color: '#E56B6F', width: 3 },
+                    itemStyle: { color: '#E56B6F', borderColor: '#0F1115', borderWidth: 2 }
+                },
+                {
+                    // White Line (Sharp Rise)
+                    name: 'Series B',
+                    type: 'line',
+                    smooth: true,
+                    showSymbol: true,
+                    symbolSize: 10,
+                    data: [0, 12, 38, 30, 32],
+                    lineStyle: { color: '#FFFFFF', width: 3 },
+                    itemStyle: { color: '#FFFFFF', borderColor: '#0F1115', borderWidth: 2 }
+                },
+                {
+                    // Purple Line (Dip then Rise)
+                    name: 'Series C',
+                    type: 'line',
+                    smooth: true,
+                    showSymbol: true,
+                    symbolSize: 10,
+                    data: [12, 4, 20, 15, 50],
+                    lineStyle: { color: '#9D4EDD', width: 3 },
+                    itemStyle: { color: '#9D4EDD', borderColor: '#0F1115', borderWidth: 2 }
+                }
+            ]
+        };
+        chartBull.setOption(bullOption);
+
+        // --- Bear Market Chart ---
+        const chartBear = echarts.init(document.getElementById('chart-bear'));
+        const bearOption = {
+            ...commonOptions,
+            series: [
+                {
+                    // Red Line (Decline)
+                    name: 'Series A',
+                    type: 'line',
+                    smooth: true,
+                    showSymbol: true,
+                    symbolSize: 10,
+                    data: [42, 40, 25, 38, 30],
+                    lineStyle: { color: '#E56B6F', width: 3 },
+                    itemStyle: { color: '#E56B6F', borderColor: '#0F1115', borderWidth: 2 }
+                },
+                {
+                    // White Line (Volatility then Drop)
+                    name: 'Series B',
+                    type: 'line',
+                    smooth: true,
+                    showSymbol: true,
+                    symbolSize: 10,
+                    data: [32, 30, 38, 12, 0],
+                    lineStyle: { color: '#FFFFFF', width: 3 },
+                    itemStyle: { color: '#FFFFFF', borderColor: '#0F1115', borderWidth: 2 }
+                },
+                {
+                    // Purple Line (Sharp Drop)
+                    name: 'Series C',
+                    type: 'line',
+                    smooth: true,
+                    showSymbol: true,
+                    symbolSize: 10,
+                    data: [50, 15, 20, 4, 12],
+                    lineStyle: { color: '#9D4EDD', width: 3 },
+                    itemStyle: { color: '#9D4EDD', borderColor: '#0F1115', borderWidth: 2 }
+                }
+            ]
+        };
+        chartBear.setOption(bearOption);
+
+        // Resize handler
+        window.addEventListener('resize', () =&gt; {
+            chartBull.resize();
+            chartBear.resize();
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 6
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Starting Your Investment Journey&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        /* CSS Reset &amp; Structure */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* Fixed Slide Container */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #0F1115;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        /* Custom Utilities matching design system */
+        .brand-gradient {
+            background: linear-gradient(90deg, #E56B6F 0%, #9D4EDD 100%);
+        }
+
+        .brand-gradient-text {
+            background: linear-gradient(90deg, #E56B6F 0%, #9D4EDD 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Subtle Background Texture */
+        .bg-texture {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1611974765270-ca1258634369?q=80&amp;w=1280&amp;auto=format&amp;fit=crop');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.08; /* Very subtle to blend with #0F1115 */
+            mix-blend-mode: overlay;
+            z-index: 1;
+        }
+
+        /* Content Layer */
+        .content-layer {
+            position: relative;
+            z-index: 10;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 40px 60px;
+        }
+
+        /* Card Image container styling */
+        .card-img-container {
+            overflow: hidden;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        /* Typography spacing */
+        p {
+            line-height: 1.6;
+        }
+
+        /* Decorative Elements */
+        /* .decor-lines removed */
+
+        .decor-dots {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 6px;
+            position: absolute;
+            top: 200px;
+            right: 40px;
+            z-index: 5;
+        }
+
+        .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: #E56B6F;
+            opacity: 0.6;
+        }
+
+        /* --- 顶部导航样式 (统一风格) --- */
+        .brand-gradient-bg {
+            background: linear-gradient(90deg, #E56B6F 0%, #9D4EDD 100%);
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            position: relative;
+            display: block;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: #FFFFFF;
+        }
+
+        /* 选中状态的小圆点 */
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 4px;
+            background-color: #E56B6F;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #E56B6F;
+        }
+
+        .icon-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.8);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .icon-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #FFFFFF;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;bg-texture&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;decor-dots&quot;&gt;
+            &lt;div class=&quot;dot&quot; style=&quot;opacity: 1;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot; style=&quot;opacity: 0.4;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot; style=&quot;opacity: 0.2;&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;content-layer&quot;&gt;
+            
+            &lt;header style=&quot;position: relative; z-index: 20; padding: 0px 0px 32px 0px; display: flex; justify-content: space-between; align-items: center;&quot;&gt;
+                &lt;div class=&quot;brand-gradient-bg&quot; style=&quot;padding: 10px 30px; border-radius: 50px;&quot;&gt;
+                    &lt;span style=&quot;color: #FFFFFF; font-weight: 500; font-size: 16px;&quot;&gt;Thynk Unlimited&lt;/span&gt;
+                &lt;/div&gt;
+
+                &lt;div style=&quot;display: flex; gap: 16px; align-items: center;&quot;&gt;
+                    &lt;nav class=&quot;glass-panel&quot; style=&quot;display: flex; gap: 32px; border-radius: 50px; padding: 10px 36px; align-items: center; height: 48px;&quot;&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;nav-link active&quot;&gt;HOME&lt;/a&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;SERVICE&lt;/a&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;CONTACT&lt;/a&gt;
+                    &lt;/nav&gt;
+                    &lt;div class=&quot;glass-panel&quot; style=&quot;display: flex; gap: 8px; border-radius: 50px; padding: 6px; height: 48px; align-items: center;&quot;&gt;
+                        &lt;div class=&quot;icon-btn&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-magnifying-glass&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;icon-btn&quot; style=&quot;background: rgba(255,255,255,0.1);&quot;&gt;
+                            &lt;i class=&quot;fa-regular fa-user&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/header&gt;
+
+            &lt;div class=&quot;text-center mb-14 relative&quot;&gt;
+                &lt;h1 class=&quot;text-white text-6xl font-bold tracking-tight mb-2&quot;&gt;
+                    Starting Your &lt;span class=&quot;brand-gradient-text&quot;&gt;Investment Journey&lt;/span&gt;
+                &lt;/h1&gt;
+                &lt;p class=&quot;text-[#A0A5B0] text-lg mt-2 font-light&quot;&gt;Follow these three essential steps to build your portfolio&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;grid grid-cols-3 gap-10 px-12 h-full items-start&quot;&gt;
+                
+                &lt;div class=&quot;flex flex-col items-center group&quot;&gt;
+                    &lt;div class=&quot;card-img-container w-full aspect-[4/3] mb-[-24px] z-10 relative&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&amp;w=800&amp;auto=format&amp;fit=crop&quot; 
+                             alt=&quot;Financial Research&quot; 
+                             class=&quot;w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-300&quot;&gt;
+                        &lt;/div&gt;
+
+                    &lt;div class=&quot;brand-gradient z-20 px-8 py-3 rounded-full shadow-xl shadow-purple-900/30 flex items-center gap-3 w-[85%] justify-center mb-6&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-arrow-right text-white text-sm&quot;&gt;&lt;/i&gt;
+                        &lt;span class=&quot;text-white font-bold text-lg&quot;&gt;Research&lt;/span&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;text-center px-2&quot;&gt;
+                        &lt;p class=&quot;text-[#A0A5B0] text-sm leading-relaxed&quot;&gt;
+                            Analyze market trends and study financial reports. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;flex flex-col items-center&quot;&gt;
+                    &lt;div class=&quot;card-img-container w-full aspect-[4/3] mb-[-24px] z-10 relative&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&amp;w=800&amp;auto=format&amp;fit=crop&quot; 
+                             alt=&quot;Broker Meeting&quot; 
+                             class=&quot;w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-300&quot;&gt;
+                        &lt;/div&gt;
+
+                    &lt;div class=&quot;brand-gradient z-20 px-8 py-3 rounded-full shadow-xl shadow-purple-900/30 flex items-center gap-3 w-[85%] justify-center mb-6&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-arrow-right text-white text-sm&quot;&gt;&lt;/i&gt;
+                        &lt;span class=&quot;text-white font-bold text-lg&quot;&gt;Broker Account&lt;/span&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;text-center px-2&quot;&gt;
+                        &lt;p class=&quot;text-[#A0A5B0] text-sm leading-relaxed&quot;&gt;
+                            Open an account with a trusted partner. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;flex flex-col items-center&quot;&gt;
+                    &lt;div class=&quot;card-img-container w-full aspect-[4/3] mb-[-24px] z-10 relative&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1621504450168-38f64731993e?q=80&amp;w=800&amp;auto=format&amp;fit=crop&quot; 
+                             alt=&quot;Crypto Diversification&quot; 
+                             class=&quot;w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-300&quot;&gt;
+                        &lt;/div&gt;
+
+                    &lt;div class=&quot;brand-gradient z-20 px-8 py-3 rounded-full shadow-xl shadow-purple-900/30 flex items-center gap-3 w-[85%] justify-center mb-6&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-arrow-right text-white text-sm&quot;&gt;&lt;/i&gt;
+                        &lt;span class=&quot;text-white font-bold text-lg&quot;&gt;Diversification&lt;/span&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;text-center px-2&quot;&gt;
+                        &lt;p class=&quot;text-[#A0A5B0] text-sm leading-relaxed&quot;&gt;
+                            Spread risk across assets like Crypto &amp; Stocks. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 7
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Market Analysis&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; background-color: #0F1115; position: relative; margin: 0 auto; overflow: hidden; }
+        .brand-gradient { background: linear-gradient(90deg, #E56B6F 0%, #9D4EDD 100%); }
+        .brand-gradient-text { background: linear-gradient(90deg, #E56B6F 0%, #9D4EDD 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .bg-texture { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('https://images.unsplash.com/photo-1611974765270-ca1258634369?q=80&amp;w=1280&amp;auto=format&amp;fit=crop'); background-size: cover; background-position: center; opacity: 0.08; mix-blend-mode: overlay; z-index: 1; }
+        .content-layer { position: relative; z-index: 10; height: 100%; display: flex; flex-direction: column; padding: 40px 60px; }
+        
+        /* Specific Page Elements */
+        .decor-dots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; position: absolute; top: 200px; right: 40px; z-index: 5; }
+        .dot { width: 6px; height: 6px; border-radius: 50%; background-color: #E56B6F; opacity: 0.6; }
+        .brand-gradient-bg { background: linear-gradient(90deg, #E56B6F 0%, #9D4EDD 100%); }
+        .glass-panel { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); }
+        .nav-link { text-decoration: none; color: rgba(255, 255, 255, 0.7); font-size: 13px; font-weight: 500; letter-spacing: 0.5px; transition: all 0.3s ease; position: relative; display: block; }
+        .nav-link:hover, .nav-link.active { color: #FFFFFF; }
+        .nav-link.active::after { content: ''; position: absolute; bottom: -6px; left: 50%; transform: translateX(-50%); width: 4px; height: 4px; background-color: #E56B6F; border-radius: 50%; box-shadow: 0 0 8px #E56B6F; }
+        .icon-btn { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: rgba(255, 255, 255, 0.8); transition: all 0.3s ease; cursor: pointer; }
+        .icon-btn:hover { background: rgba(255, 255, 255, 0.1); color: #FFFFFF; }
+
+        /* Page Specific */
+        .glass-card-large {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 24px;
+            overflow: hidden;
+        }
+        .list-item-icon {
+            min-width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #E56B6F;
+            font-size: 12px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;bg-texture&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;decor-dots&quot;&gt;
+            &lt;div class=&quot;dot&quot; style=&quot;opacity: 1;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot; style=&quot;opacity: 0.4;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot; style=&quot;opacity: 0.2;&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;content-layer&quot;&gt;
+            &lt;!-- Identical Header --&gt;
+            &lt;header style=&quot;position: relative; z-index: 20; padding: 0px 0px 32px 0px; display: flex; justify-content: space-between; align-items: center;&quot;&gt;
+                &lt;div class=&quot;brand-gradient-bg&quot; style=&quot;padding: 10px 30px; border-radius: 50px;&quot;&gt;
+                    &lt;span style=&quot;color: #FFFFFF; font-weight: 500; font-size: 16px;&quot;&gt;Thynk Unlimited&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div style=&quot;display: flex; gap: 16px; align-items: center;&quot;&gt;
+                    &lt;nav class=&quot;glass-panel&quot; style=&quot;display: flex; gap: 32px; border-radius: 50px; padding: 10px 36px; align-items: center; height: 48px;&quot;&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;nav-link active&quot;&gt;HOME&lt;/a&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;SERVICE&lt;/a&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;CONTACT&lt;/a&gt;
+                    &lt;/nav&gt;
+                    &lt;div class=&quot;glass-panel&quot; style=&quot;display: flex; gap: 8px; border-radius: 50px; padding: 6px; height: 48px; align-items: center;&quot;&gt;
+                        &lt;div class=&quot;icon-btn&quot;&gt;&lt;i class=&quot;fa-solid fa-magnifying-glass&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                        &lt;div class=&quot;icon-btn&quot; style=&quot;background: rgba(255,255,255,0.1);&quot;&gt;&lt;i class=&quot;fa-regular fa-user&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/header&gt;
+
+            &lt;!-- New Layout: Split Left/Right --&gt;
+            &lt;div class=&quot;flex h-full gap-16 items-center&quot;&gt;
+                
+                &lt;!-- Left Column: Text &amp; Bullets --&gt;
+                &lt;div class=&quot;w-5/12 flex flex-col justify-center pl-4&quot;&gt;
+                    &lt;h1 class=&quot;text-white text-5xl font-bold tracking-tight mb-4 leading-tight&quot;&gt;
+                        Deep Dive &lt;br&gt;
+                        &lt;span class=&quot;brand-gradient-text&quot;&gt;Market Insights&lt;/span&gt;
+                    &lt;/h1&gt;
+                    &lt;p class=&quot;text-[#A0A5B0] text-base mb-8 font-light leading-relaxed&quot;&gt;
+                        Access real-time data and predictive analytics to stay ahead of the curve. Our tools provide the clarity you need.
+                    &lt;/p&gt;
+
+                    &lt;div class=&quot;flex flex-col gap-5&quot;&gt;
+                        &lt;div class=&quot;flex items-center gap-4&quot;&gt;
+                            &lt;div class=&quot;list-item-icon&quot;&gt;&lt;i class=&quot;fa-solid fa-chart-line&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                            &lt;div&gt;
+                                &lt;h4 class=&quot;text-white text-sm font-medium&quot;&gt;Real-time Analytics&lt;/h4&gt;
+                                &lt;p class=&quot;text-sm text-[#6B7280]&quot;&gt;Live updates on global indices&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;flex items-center gap-4&quot;&gt;
+                            &lt;div class=&quot;list-item-icon&quot;&gt;&lt;i class=&quot;fa-solid fa-bullseye&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                            &lt;div&gt;
+                                &lt;h4 class=&quot;text-white text-sm font-medium&quot;&gt;Risk Assessment&lt;/h4&gt;
+                                &lt;p class=&quot;text-sm text-[#6B7280]&quot;&gt;AI-driven volatility predictions&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;flex items-center gap-4&quot;&gt;
+                            &lt;div class=&quot;list-item-icon&quot;&gt;&lt;i class=&quot;fa-solid fa-globe&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                            &lt;div&gt;
+                                &lt;h4 class=&quot;text-white text-sm font-medium&quot;&gt;Global Coverage&lt;/h4&gt;
+                                &lt;p class=&quot;text-sm text-[#6B7280]&quot;&gt;Access to 50+ international markets&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;mt-10&quot;&gt;
+                        &lt;button class=&quot;brand-gradient text-white px-8 py-3 rounded-full font-medium text-sm hover:shadow-[0_0_20px_rgba(229,107,111,0.4)] transition-shadow&quot;&gt;
+                            View Full Report
+                        &lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Right Column: Large Glass Visual --&gt;
+                &lt;div class=&quot;w-7/12 h-[80%] relative&quot;&gt;
+                    &lt;div class=&quot;glass-card-large w-full h-full relative p-2&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1642543492481-44e81e3914a7?q=80&amp;w=1000&amp;auto=format&amp;fit=crop&quot; 
+                             alt=&quot;Analytics Dashboard&quot; 
+                             class=&quot;w-full h-full object-cover rounded-[20px] opacity-80&quot;&gt;
+                        
+                        &lt;!-- Floating Data Points --&gt;
+                        &lt;div class=&quot;absolute bottom-8 left-8 bg-[#0F1115] p-4 rounded-xl border border-white/10 shadow-2xl flex gap-6&quot;&gt;
+                            &lt;div&gt;
+                                &lt;p class=&quot;text-[#A0A5B0] text-sm uppercase tracking-wider&quot;&gt;Growth&lt;/p&gt;
+                                &lt;p class=&quot;text-[#E56B6F] font-bold text-xl&quot;&gt;+24.5%&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;w-[1px] bg-white/10&quot;&gt;&lt;/div&gt;
+                            &lt;div&gt;
+                                &lt;p class=&quot;text-[#A0A5B0] text-sm uppercase tracking-wider&quot;&gt;Volume&lt;/p&gt;
+                                &lt;p class=&quot;text-white font-bold text-xl&quot;&gt;8.2M&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 8
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Managing Investment Risks - Financial Keynote&lt;/title&gt;
+
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js&quot;&gt;&lt;/script&gt;
+
+    &lt;style&gt;
+        /* CSS Reset &amp; Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* Page Container - Strict 1280x720 Fixed Layout */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #0F1115; /* Background Color */
+            overflow: hidden;
+            color: #FFFFFF;
+        }
+
+        /* Utility for strictly compliant gradients */
+        .bg-brand-gradient {
+            background: linear-gradient(90deg, #E56B6F 0%, #9D4EDD 100%);
+        }
+        
+        /* Zigzag line using pure CSS/SVG approach logic within a div */
+        .zigzag-line {
+            width: 50px;
+            height: 80px;
+            border-left: 3px solid #D65A63;
+            border-bottom: 3px solid #D65A63;
+        }
+        
+        .zigzag-step {
+            width: 25px;
+            height: 25px;
+            border-top: 3px solid #D65A63;
+            border-right: 3px solid #D65A63;
+            margin-top: -3px;
+            margin-left: -3px;
+        }
+
+        /* --- 新增/修改的样式：顶部导航美化 --- */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: #FFFFFF;
+        }
+
+        /* 选中状态的小圆点 */
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 4px;
+            background-color: #E56B6F;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #E56B6F;
+        }
+
+        .icon-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.8);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .icon-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #FFFFFF;
+        }
+
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+
+        &lt;div style=&quot;position: absolute; bottom: 0; right: 0; width: 350px; height: 350px; border-top-left-radius: 20px; z-index: 1;&quot; class=&quot;bg-brand-gradient&quot;&gt;
+            &lt;div style=&quot;position: absolute; bottom: 30px; right: 30px; font-size: 24px; color: rgba(255,255,255,0.8);&quot;&gt;
+                &lt;i class=&quot;fa-solid fa-braille&quot;&gt;&lt;/i&gt;
+                &lt;i class=&quot;fa-solid fa-braille&quot; style=&quot;margin-left: -10px;&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div style=&quot;position: absolute; top: 220px; left: 40px; z-index: 10;&quot;&gt;
+             &lt;div style=&quot;display: flex; flex-direction: column; align-items: flex-start;&quot;&gt;
+                &lt;div style=&quot;width: 20px; height: 20px; border-left: 2px solid #D65A63; border-top: 2px solid #D65A63;&quot;&gt;&lt;/div&gt;
+                &lt;div style=&quot;width: 20px; height: 20px; border-right: 2px solid #D65A63; border-bottom: 2px solid #D65A63; margin-top: -2px; margin-left: 20px;&quot;&gt;&lt;/div&gt;
+                &lt;div style=&quot;width: 20px; height: 20px; border-left: 2px solid #D65A63; border-top: 2px solid #D65A63; margin-top: -2px;&quot;&gt;&lt;/div&gt;
+             &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;header style=&quot;position: relative; z-index: 20; padding: 40px 60px; display: flex; justify-content: space-between; align-items: center;&quot;&gt;
+            &lt;div class=&quot;bg-brand-gradient&quot; style=&quot;padding: 10px 30px; border-radius: 50px;&quot;&gt;
+                &lt;span style=&quot;color: #FFFFFF; font-weight: 500; font-size: 16px;&quot;&gt;Thynk Unlimited&lt;/span&gt;
+            &lt;/div&gt;
+
+            &lt;div style=&quot;display: flex; gap: 16px; align-items: center;&quot;&gt;
+                
+                &lt;nav class=&quot;glass-panel&quot; style=&quot;display: flex; gap: 32px; border-radius: 50px; padding: 10px 36px; align-items: center; height: 48px;&quot;&gt;
+                    &lt;a href=&quot;#&quot; class=&quot;nav-link active&quot;&gt;HOME&lt;/a&gt;
+                    &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;SERVICE&lt;/a&gt;
+                    &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;CONTACT&lt;/a&gt;
+                &lt;/nav&gt;
+
+                &lt;div class=&quot;glass-panel&quot; style=&quot;display: flex; gap: 8px; border-radius: 50px; padding: 6px; height: 48px; align-items: center;&quot;&gt;
+                    &lt;div class=&quot;icon-btn&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-magnifying-glass&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;icon-btn&quot; style=&quot;background: rgba(255,255,255,0.1);&quot;&gt;
+                        &lt;i class=&quot;fa-regular fa-user&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;main style=&quot;display: grid; grid-template-columns: repeat(12, 1fr); gap: 40px; padding: 0 60px; position: relative; z-index: 10; height: 560px;&quot;&gt;
+            
+            &lt;section style=&quot;grid-column: span 5; display: flex; flex-direction: column; justify-content: center; padding-right: 20px;&quot;&gt;
+                
+                &lt;h1 style=&quot;font-size: 56px; line-height: 1.1; font-weight: 700; margin-bottom: 30px; color: #FFFFFF;&quot;&gt;
+                    Managing &lt;br&gt;
+                    Investment Risks
+                &lt;/h1&gt;
+
+                &lt;p style=&quot;color: #A0A5B0; font-size: 16px; line-height: 1.6; margin-bottom: 24px;&quot;&gt;
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                &lt;/p&gt;
+
+                &lt;p style=&quot;color: #A0A5B0; font-size: 16px; line-height: 1.6; margin-bottom: 40px;&quot;&gt;
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                &lt;/p&gt;
+
+                &lt;div&gt;
+                    &lt;button class=&quot;bg-brand-gradient&quot; style=&quot;border: none; padding: 16px 48px; border-radius: 30px; color: white; font-weight: 600; font-size: 14px; cursor: pointer; letter-spacing: 1px;&quot;&gt;
+                        LEARN MORE
+                    &lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/section&gt;
+
+            &lt;section style=&quot;grid-column: span 7; position: relative; display: flex; flex-direction: column; justify-content: center; height: 100%;&quot;&gt;
+                
+                &lt;div style=&quot;width: 100%; height: 220px; border-radius: 20px; overflow: hidden; margin-bottom: 20px; position: relative; border: 1px solid #2A2E35;&quot;&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1611974765270-ca1258634369?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80&quot; 
+                          alt=&quot;Trader monitoring screens&quot; 
+                          style=&quot;width: 100%; height: 100%; object-fit: cover;&quot;&gt;
+                    &lt;/div&gt;
+
+                &lt;div style=&quot;width: 100%; height: 260px; border-radius: 20px; overflow: hidden; position: relative; border: 1px solid #2A2E35; margin-left: 40px;&quot;&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80&quot; 
+                          alt=&quot;Data analysis charts on paper&quot; 
+                          style=&quot;width: 100%; height: 100%; object-fit: cover;&quot;&gt;
+                    &lt;/div&gt;
+
+                &lt;div style=&quot;position: absolute; top: 50%; left: 20px; transform: translateY(-50%); width: 160px; height: 160px; border-radius: 24px; z-index: 30; box-shadow: 0 20px 40px rgba(0,0,0,0.4);&quot; class=&quot;bg-brand-gradient&quot;&gt;
+                    &lt;div id=&quot;gaugeChart&quot; style=&quot;width: 100%; height: 100%;&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/section&gt;
+
+        &lt;/main&gt;
+
+    &lt;/div&gt;
+
+    &lt;script&gt;
+        document.addEventListener(&quot;DOMContentLoaded&quot;, function() {
+            var chartDom = document.getElementById('gaugeChart');
+            var myChart = echarts.init(chartDom);
+            var option;
+
+            option = {
+                series: [
+                    {
+                        type: 'gauge',
+                        startAngle: 90,
+                        endAngle: -270,
+                        radius: '85%',
+                        pointer: {
+                            show: false
+                        },
+                        progress: {
+                            show: true,
+                            overlap: false,
+                            roundCap: true,
+                            clip: false,
+                            itemStyle: {
+                                color: '#FFFFFF'
+                            }
+                        },
+                        axisLine: {
+                            lineStyle: {
+                                width: 8,
+                                color: [[1, 'rgba(255,255,255,0.2)']]
+                            }
+                        },
+                        splitLine: {
+                            show: false
+                        },
+                        axisTick: {
+                            show: false
+                        },
+                        axisLabel: {
+                            show: false
+                        },
+                        data: [
+                            {
+                                value: 67,
+                                name: '',
+                                title: {
+                                    offsetCenter: ['0%', '0%']
+                                },
+                                detail: {
+                                    valueAnimation: false, // No animation
+                                    offsetCenter: ['0%', '0%']
+                                }
+                            }
+                        ],
+                        detail: {
+                            fontSize: 28,
+                            color: '#FFFFFF',
+                            fontFamily: 'Inter',
+                            fontWeight: 'bold',
+                            formatter: '{value}%'
+                        }
+                    }
+                ]
+            };
+
+            option &amp;&amp; myChart.setOption(option);
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 9
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Famous Investors &amp; Strategies&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        /* CSS Reset &amp; Reconstruction */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Page Container - Strict 1280x720 */
+        .page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #0F1115;
+            overflow: hidden;
+            /* No shadow allowed per instructions */
+        }
+
+        /* Gradient Definitions */
+        .bg-brand-gradient {
+            background: linear-gradient(90deg, #E56B6F 0%, #9D4EDD 100%);
+        }
+        
+        .text-brand-gradient {
+            background: linear-gradient(90deg, #E56B6F 0%, #9D4EDD 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* --- 新增：顶部导航样式 (统一风格) --- */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            position: relative;
+            display: block;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: #FFFFFF;
+        }
+
+        /* 选中状态的小圆点 */
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 4px;
+            background-color: #E56B6F;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #E56B6F;
+        }
+
+        .icon-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.8);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .icon-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #FFFFFF;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div class=&quot;page_container&quot;&gt;
+        
+        &lt;div style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; opacity: 0.15;&quot;&gt;
+            &lt;img src=&quot;https://images.unsplash.com/photo-1611974765270-ca125863436d?q=80&amp;w=1280&amp;auto=format&amp;fit=crop&quot; alt=&quot;Financial Background&quot; style=&quot;width: 100%; height: 100%; object-fit: cover;&quot;&gt;
+            &lt;/div&gt;
+
+        &lt;div style=&quot;position: relative; z-index: 10; height: 100%; display: flex; flex-direction: column; padding: 40px 60px;&quot;&gt;
+
+            &lt;header style=&quot;position: relative; z-index: 20; padding: 0px 0px 40px 0px; display: flex; justify-content: space-between; align-items: center;&quot;&gt;
+                &lt;div class=&quot;bg-brand-gradient&quot; style=&quot;padding: 10px 30px; border-radius: 50px;&quot;&gt;
+                    &lt;span style=&quot;color: #FFFFFF; font-weight: 500; font-size: 16px;&quot;&gt;Thynk Unlimited&lt;/span&gt;
+                &lt;/div&gt;
+
+                &lt;div style=&quot;display: flex; gap: 16px; align-items: center;&quot;&gt;
+                    &lt;nav class=&quot;glass-panel&quot; style=&quot;display: flex; gap: 32px; border-radius: 50px; padding: 10px 36px; align-items: center; height: 48px;&quot;&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;nav-link active&quot;&gt;HOME&lt;/a&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;SERVICE&lt;/a&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;CONTACT&lt;/a&gt;
+                    &lt;/nav&gt;
+                    &lt;div class=&quot;glass-panel&quot; style=&quot;display: flex; gap: 8px; border-radius: 50px; padding: 6px; height: 48px; align-items: center;&quot;&gt;
+                        &lt;div class=&quot;icon-btn&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-magnifying-glass&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;icon-btn&quot; style=&quot;background: rgba(255,255,255,0.1);&quot;&gt;
+                            &lt;i class=&quot;fa-regular fa-user&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/header&gt;
+
+            &lt;div style=&quot;display: grid; grid-template-columns: 35% 65%; gap: 40px; margin-bottom: 20px;&quot;&gt;
+                
+                &lt;div style=&quot;display: flex; align-items: flex-start; gap: 20px;&quot;&gt;
+                    &lt;div&gt;
+                        &lt;h1 style=&quot;color: #FFFFFF; font-size: 56px; line-height: 1.1; font-weight: 700;&quot;&gt;
+                            Famous &lt;br&gt;
+                            Investors &amp; &lt;br&gt;
+                            &lt;span class=&quot;text-brand-gradient&quot;&gt;Strategies&lt;/span&gt;
+                        &lt;/h1&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div style=&quot;display: grid; grid-template-columns: 1fr 1fr; gap: 30px;&quot;&gt;
+                    
+                    &lt;div&gt;
+                        &lt;div class=&quot;bg-brand-gradient&quot; style=&quot;border-radius: 99px; padding: 12px 24px; display: inline-flex; align-items: center; gap: 10px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(229, 107, 111, 0.3);&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-arrow-trend-up&quot; style=&quot;color: white; font-size: 14px;&quot;&gt;&lt;/i&gt;
+                            &lt;h3 style=&quot;color: white; font-weight: 700; font-size: 18px;&quot;&gt;Growth Investing&lt;/h3&gt;
+                        &lt;/div&gt;
+                        &lt;p style=&quot;color: #A0A5B0; font-size: 16px; line-height: 1.6;&quot;&gt;
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div&gt;
+                        &lt;div class=&quot;bg-brand-gradient&quot; style=&quot;border-radius: 99px; padding: 12px 24px; display: inline-flex; align-items: center; gap: 10px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(157, 78, 221, 0.3);&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-gem&quot; style=&quot;color: white; font-size: 14px;&quot;&gt;&lt;/i&gt;
+                            &lt;h3 style=&quot;color: white; font-weight: 700; font-size: 18px;&quot;&gt;Value Investing&lt;/h3&gt;
+                        &lt;/div&gt;
+                        &lt;p style=&quot;color: #A0A5B0; font-size: 16px; line-height: 1.6;&quot;&gt;
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div style=&quot;flex-grow: 1; position: relative; margin-top: 10px;&quot;&gt;
+                &lt;div style=&quot;position: absolute; right: 0; top: -50px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px;&quot;&gt;
+                    &lt;div style=&quot;width: 6px; height: 6px; background: #D65A63; border-radius: 50%;&quot;&gt;&lt;/div&gt;
+                    &lt;div style=&quot;width: 6px; height: 6px; background: #D65A63; border-radius: 50%; opacity: 0.5;&quot;&gt;&lt;/div&gt;
+                    &lt;div style=&quot;width: 6px; height: 6px; background: #D65A63; border-radius: 50%; opacity: 0.2;&quot;&gt;&lt;/div&gt;
+                    &lt;div style=&quot;width: 6px; height: 6px; background: #D65A63; border-radius: 50%;&quot;&gt;&lt;/div&gt;
+                    &lt;div style=&quot;width: 6px; height: 6px; background: #D65A63; border-radius: 50%; opacity: 0.5;&quot;&gt;&lt;/div&gt;
+                    &lt;div style=&quot;width: 6px; height: 6px; background: #D65A63; border-radius: 50%; opacity: 0.2;&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div id=&quot;mainChart&quot; style=&quot;width: 100%; height: 350px;&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script&gt;
+        document.addEventListener('DOMContentLoaded', function() {
+            var chartDom = document.getElementById('mainChart');
+            var myChart = echarts.init(chartDom);
+            var option;
+
+            option = {
+                // Remove default background to let CSS handle it
+                backgroundColor: 'transparent',
+                grid: {
+                    left: '10%',
+                    right: '4%',
+                    bottom: '10%',
+                    top: '5%',
+                    containLabel: true
+                },
+                xAxis: {
+                    type: 'value',
+                    splitLine: {
+                        show: true,
+                        lineStyle: {
+                            color: '#2A2E35', // Subtle grid line
+                            type: 'dashed'
+                        }
+                    },
+                    axisLabel: {
+                        color: '#A0A5B0',
+                        fontSize: 14,
+                        fontFamily: 'Noto Sans SC'
+                    }
+                },
+                yAxis: {
+                    type: 'category',
+                    data: ['Item 4', 'Item 3', 'Item 2', 'Item 1'], // Reversed for horizontal bar display order
+                    axisLine: { show: false },
+                    axisTick: { show: false },
+                    axisLabel: {
+                        color: '#FFFFFF',
+                        fontSize: 16,
+                        fontWeight: 500,
+                        fontFamily: 'Noto Sans SC',
+                        margin: 20
+                    }
+                },
+                series: [
+                    {
+                        name: 'Value',
+                        type: 'bar',
+                        barWidth: '25px',
+                        data: [
+                            // Item 4 - Red/Pink (Matching Theme)
+                            {
+                                value: 20,
+                                itemStyle: {
+                                    color: {
+                                        type: 'linear',
+                                        x: 0, y: 0, x2: 1, y2: 0,
+                                        colorStops: [{ offset: 0, color: '#E56B6F' }, { offset: 1, color: '#D65A63' }]
+                                    },
+                                    borderRadius: [0, 4, 4, 0]
+                                }
+                            },
+                            // Item 3 - Purple (Matching Theme)
+                            {
+                                value: 16,
+                                itemStyle: {
+                                    color: {
+                                        type: 'linear',
+                                        x: 0, y: 0, x2: 1, y2: 0,
+                                        colorStops: [{ offset: 0, color: '#9D4EDD' }, { offset: 1, color: '#7B2CBF' }]
+                                    },
+                                    borderRadius: [0, 4, 4, 0]
+                                }
+                            },
+                            // Item 2 - Cyan/Blue (Complimentary)
+                            {
+                                value: 12,
+                                itemStyle: {
+                                    color: {
+                                        type: 'linear',
+                                        x: 0, y: 0, x2: 1, y2: 0,
+                                        colorStops: [{ offset: 0, color: '#48CAE4' }, { offset: 1, color: '#0096C7' }]
+                                    },
+                                    borderRadius: [0, 4, 4, 0]
+                                }
+                            },
+                            // Item 1 - White (High Contrast)
+                            {
+                                value: 8,
+                                itemStyle: {
+                                    color: '#FFFFFF',
+                                    borderRadius: [0, 4, 4, 0]
+                                }
+                            }
+                        ],
+                        showBackground: true,
+                        backgroundStyle: {
+                            color: 'rgba(255, 255, 255, 0.05)',
+                            borderRadius: [0, 4, 4, 0]
+                        }
+                    }
+                ],
+                // Disable animation for strict PPT feel if needed, but smooth load looks better
+                animationDuration: 1000,
+                animationEasing: 'cubicOut'
+            };
+
+            myChart.setOption(option);
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 10
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Premium Services&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; background-color: #0F1115; position: relative; margin: 0 auto; overflow: hidden; }
+        .brand-gradient { background: linear-gradient(90deg, #E56B6F 0%, #9D4EDD 100%); }
+        .brand-gradient-text { background: linear-gradient(90deg, #E56B6F 0%, #9D4EDD 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .bg-texture { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('https://images.unsplash.com/photo-1611974765270-ca1258634369?q=80&amp;w=1280&amp;auto=format&amp;fit=crop'); background-size: cover; background-position: center; opacity: 0.08; mix-blend-mode: overlay; z-index: 1; }
+        .content-layer { position: relative; z-index: 10; height: 100%; display: flex; flex-direction: column; padding: 40px 60px; }
+        
+        .decor-dots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; position: absolute; top: 200px; right: 40px; z-index: 5; }
+        .dot { width: 6px; height: 6px; border-radius: 50%; background-color: #E56B6F; opacity: 0.6; }
+        .brand-gradient-bg { background: linear-gradient(90deg, #E56B6F 0%, #9D4EDD 100%); }
+        .glass-panel { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); }
+        .nav-link { text-decoration: none; color: rgba(255, 255, 255, 0.7); font-size: 13px; font-weight: 500; letter-spacing: 0.5px; transition: all 0.3s ease; position: relative; display: block; }
+        .nav-link:hover, .nav-link.active { color: #FFFFFF; }
+        .nav-link.active::after { content: ''; position: absolute; bottom: -6px; left: 50%; transform: translateX(-50%); width: 4px; height: 4px; background-color: #E56B6F; border-radius: 50%; box-shadow: 0 0 8px #E56B6F; }
+        .icon-btn { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: rgba(255, 255, 255, 0.8); transition: all 0.3s ease; cursor: pointer; }
+        .icon-btn:hover { background: rgba(255, 255, 255, 0.1); color: #FFFFFF; }
+
+        /* Page Specific */
+        .service-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 24px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .service-card:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(157, 78, 221, 0.3);
+            transform: translateY(-5px);
+        }
+        .icon-box {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(229,107,111,0.1) 0%, rgba(157,78,221,0.1) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            color: #E56B6F;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;bg-texture&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;decor-dots&quot;&gt;
+            &lt;div class=&quot;dot&quot; style=&quot;opacity: 1;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot; style=&quot;opacity: 0.4;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot; style=&quot;opacity: 0.2;&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;content-layer&quot;&gt;
+            &lt;!-- Identical Header --&gt;
+            &lt;header style=&quot;position: relative; z-index: 20; padding: 0px 0px 32px 0px; display: flex; justify-content: space-between; align-items: center;&quot;&gt;
+                &lt;div class=&quot;brand-gradient-bg&quot; style=&quot;padding: 10px 30px; border-radius: 50px;&quot;&gt;
+                    &lt;span style=&quot;color: #FFFFFF; font-weight: 500; font-size: 16px;&quot;&gt;Thynk Unlimited&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div style=&quot;display: flex; gap: 16px; align-items: center;&quot;&gt;
+                    &lt;nav class=&quot;glass-panel&quot; style=&quot;display: flex; gap: 32px; border-radius: 50px; padding: 10px 36px; align-items: center; height: 48px;&quot;&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;nav-link active&quot;&gt;HOME&lt;/a&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;SERVICE&lt;/a&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;CONTACT&lt;/a&gt;
+                    &lt;/nav&gt;
+                    &lt;div class=&quot;glass-panel&quot; style=&quot;display: flex; gap: 8px; border-radius: 50px; padding: 6px; height: 48px; align-items: center;&quot;&gt;
+                        &lt;div class=&quot;icon-btn&quot;&gt;&lt;i class=&quot;fa-solid fa-magnifying-glass&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                        &lt;div class=&quot;icon-btn&quot; style=&quot;background: rgba(255,255,255,0.1);&quot;&gt;&lt;i class=&quot;fa-regular fa-user&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/header&gt;
+
+            &lt;div class=&quot;text-center mb-8&quot;&gt;
+                &lt;h1 class=&quot;text-white text-6xl font-bold tracking-tight mb-2&quot;&gt;
+                    Premium &lt;span class=&quot;brand-gradient-text&quot;&gt;Wealth Services&lt;/span&gt;
+                &lt;/h1&gt;
+                &lt;p class=&quot;text-[#A0A5B0] text-lg mt-2 font-light&quot;&gt;Tailored solutions for sophisticated investors&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;!-- New Layout: 2x2 Grid --&gt;
+            &lt;div class=&quot;grid grid-cols-2 grid-rows-2 gap-6 px-12 h-full pb-8&quot;&gt;
+                
+                &lt;!-- Card 1 --&gt;
+                &lt;div class=&quot;service-card&quot;&gt;
+                    &lt;div&gt;
+                        &lt;div class=&quot;icon-box&quot;&gt;&lt;i class=&quot;fa-solid fa-scale-balanced text-xl&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                        &lt;h3 class=&quot;text-white text-xl font-bold mb-2&quot;&gt;Tax Optimization&lt;/h3&gt;
+                        &lt;p class=&quot;text-[#A0A5B0] text-sm leading-relaxed&quot;&gt;Strategic planning to minimize liabilities and maximize your after-tax returns efficiently.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Card 2 --&gt;
+                &lt;div class=&quot;service-card&quot;&gt;
+                    &lt;div&gt;
+                        &lt;div class=&quot;icon-box&quot;&gt;&lt;i class=&quot;fa-solid fa-shield-halved text-xl&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                        &lt;h3 class=&quot;text-white text-xl font-bold mb-2&quot;&gt;Asset Protection&lt;/h3&gt;
+                        &lt;p class=&quot;text-[#A0A5B0] text-sm leading-relaxed&quot;&gt;Safeguard your hard-earned wealth against unforeseen risks through legal structures.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Card 3 --&gt;
+                &lt;div class=&quot;service-card&quot;&gt;
+                    &lt;div&gt;
+                        &lt;div class=&quot;icon-box&quot;&gt;&lt;i class=&quot;fa-solid fa-hand-holding-dollar text-xl&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                        &lt;h3 class=&quot;text-white text-xl font-bold mb-2&quot;&gt;Estate Planning&lt;/h3&gt;
+                        &lt;p class=&quot;text-[#A0A5B0] text-sm leading-relaxed&quot;&gt;Ensure a smooth transfer of wealth to future generations with comprehensive planning.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Card 4 --&gt;
+                &lt;div class=&quot;service-card&quot;&gt;
+                    &lt;div&gt;
+                        &lt;div class=&quot;icon-box&quot;&gt;&lt;i class=&quot;fa-solid fa-coins text-xl&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                        &lt;h3 class=&quot;text-white text-xl font-bold mb-2&quot;&gt;Private Banking&lt;/h3&gt;
+                        &lt;p class=&quot;text-[#A0A5B0] text-sm leading-relaxed&quot;&gt;Exclusive banking services offering personalized credit lines and high-yield accounts.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 11
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;The Basics of Stock Markets - Keynote&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    
+    &lt;style&gt;
+        /* CSS Reset &amp; Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container - Fixed Dimensions 1280x720 */
+        .page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto; /* Centered */
+            position: relative;
+            background-color: #0F1115; /* Main Background */
+            overflow: hidden;
+        }
+
+        /* Gradient Definitions */
+        .brand-gradient-bg {
+            background: linear-gradient(90deg, #E56B6F 0%, #9D4EDD 100%);
+        }
+        
+        .brand-gradient-text {
+            background: linear-gradient(90deg, #E56B6F 0%, #9D4EDD 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Custom Scrollbar hide */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* --- 顶部导航样式 (保持统一) --- */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            position: relative;
+            display: block;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: #FFFFFF;
+        }
+
+        /* 选中状态的小圆点 */
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 4px;
+            background-color: #E56B6F;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #E56B6F;
+        }
+
+        .icon-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.8);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .icon-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #FFFFFF;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div class=&quot;page_container&quot;&gt;
+        
+        &lt;div style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.1; background-image: url('https://images.unsplash.com/photo-1611974765212-246f787480e8?q=80&amp;w=1280&amp;auto=format&amp;fit=crop'); background-size: cover; pointer-events: none; z-index: 0;&quot;&gt;&lt;/div&gt;
+
+        &lt;div style=&quot;position: absolute; bottom: -100px; left: -100px; width: 600px; height: 500px; background: linear-gradient(45deg, #E56B6F, #9D4EDD); filter: blur(120px); opacity: 0.25; z-index: 1; border-radius: 50%;&quot;&gt;&lt;/div&gt;
+
+        &lt;header style=&quot;position: relative; z-index: 20; padding: 32px 60px; display: flex; justify-content: space-between; align-items: center;&quot;&gt;
+            &lt;div class=&quot;brand-gradient-bg&quot; style=&quot;padding: 10px 30px; border-radius: 50px;&quot;&gt;
+                &lt;span style=&quot;color: #FFFFFF; font-weight: 500; font-size: 16px;&quot;&gt;Thynk Unlimited&lt;/span&gt;
+            &lt;/div&gt;
+
+            &lt;div style=&quot;display: flex; gap: 16px; align-items: center;&quot;&gt;
+                &lt;nav class=&quot;glass-panel&quot; style=&quot;display: flex; gap: 32px; border-radius: 50px; padding: 10px 36px; align-items: center; height: 48px;&quot;&gt;
+                    &lt;a href=&quot;#&quot; class=&quot;nav-link active&quot;&gt;HOME&lt;/a&gt;
+                    &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;SERVICE&lt;/a&gt;
+                    &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;CONTACT&lt;/a&gt;
+                &lt;/nav&gt;
+                &lt;div class=&quot;glass-panel&quot; style=&quot;display: flex; gap: 8px; border-radius: 50px; padding: 6px; height: 48px; align-items: center;&quot;&gt;
+                    &lt;div class=&quot;icon-btn&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-magnifying-glass&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;icon-btn&quot; style=&quot;background: rgba(255,255,255,0.1);&quot;&gt;
+                        &lt;i class=&quot;fa-regular fa-user&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;main class=&quot;relative z-10 grid grid-cols-12 gap-12 px-16 mt-4 h-full&quot;&gt;
+            
+            &lt;div class=&quot;col-span-5 flex flex-col justify-start&quot;&gt;
+                
+                &lt;h1 class=&quot;text-white text-6xl font-bold leading-tight mb-6&quot;&gt;
+                    The Basics of &lt;br&gt;
+                    &lt;span class=&quot;brand-gradient-text&quot;&gt;Stock Markets&lt;/span&gt;
+                &lt;/h1&gt;
+
+                &lt;p class=&quot;text-[#A0A5B0] text-sm leading-relaxed mb-8 pr-4&quot;&gt;
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                &lt;/p&gt;
+
+                &lt;div style=&quot;background-color: #2A2E35; padding: 6px;&quot; class=&quot;rounded-2xl shadow-2xl w-full&quot;&gt;
+                    &lt;div class=&quot;rounded-xl overflow-hidden relative&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&amp;w=800&amp;auto=format&amp;fit=crop&quot; alt=&quot;Stock Trading Mobile&quot; class=&quot;w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity duration-300&quot; style=&quot;height: 220px;&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+
+            &lt;div class=&quot;col-span-7 flex flex-col justify-start pl-8 pt-4&quot;&gt;
+                
+                &lt;div class=&quot;flex flex-col gap-10&quot;&gt;
+                    
+                    &lt;div class=&quot;flex items-start gap-6 group&quot;&gt;
+                        &lt;div class=&quot;brand-gradient-bg w-16 h-10 rounded-r-full rounded-tl-full flex items-center justify-center shrink-0 shadow-lg mt-1&quot;&gt;
+                            &lt;h5 class=&quot;text-white font-bold text-lg&quot;&gt;01.&lt;/h5&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;flex flex-col gap-2&quot;&gt;
+                            &lt;h3 class=&quot;text-white text-2xl font-bold&quot;&gt;Investors&lt;/h3&gt;
+                            &lt;p class=&quot;text-[#A0A5B0] text-sm leading-relaxed&quot;&gt;
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;flex items-start gap-6 group&quot;&gt;
+                        &lt;div class=&quot;brand-gradient-bg w-16 h-10 rounded-r-full rounded-tl-full flex items-center justify-center shrink-0 shadow-lg mt-1&quot;&gt;
+                            &lt;h5 class=&quot;text-white font-bold text-lg&quot;&gt;02.&lt;/h5&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;flex flex-col gap-2&quot;&gt;
+                            &lt;h3 class=&quot;text-white text-2xl font-bold&quot;&gt;Companies&lt;/h3&gt;
+                            &lt;p class=&quot;text-[#A0A5B0] text-sm leading-relaxed&quot;&gt;
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;flex items-start gap-6 group&quot;&gt;
+                        &lt;div class=&quot;brand-gradient-bg w-16 h-10 rounded-r-full rounded-tl-full flex items-center justify-center shrink-0 shadow-lg mt-1&quot;&gt;
+                            &lt;h5 class=&quot;text-white font-bold text-lg&quot;&gt;03.&lt;/h5&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;flex flex-col gap-2&quot;&gt;
+                            &lt;h3 class=&quot;text-white text-2xl font-bold&quot;&gt;Brokers&lt;/h3&gt;
+                            &lt;p class=&quot;text-[#A0A5B0] text-sm leading-relaxed&quot;&gt;
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;flex items-start gap-6 group&quot;&gt;
+                        &lt;div class=&quot;brand-gradient-bg w-16 h-10 rounded-r-full rounded-tl-full flex items-center justify-center shrink-0 shadow-lg mt-1&quot;&gt;
+                            &lt;h5 class=&quot;text-white font-bold text-lg&quot;&gt;04.&lt;/h5&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;flex flex-col gap-2&quot;&gt;
+                            &lt;h3 class=&quot;text-white text-2xl font-bold&quot;&gt;Brokers&lt;/h3&gt;
+                            &lt;p class=&quot;text-[#A0A5B0] text-sm leading-relaxed&quot;&gt;
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+
+                &lt;div class=&quot;absolute bottom-10 right-0 grid grid-cols-3 gap-2 opacity-60&quot;&gt;
+                    &lt;div class=&quot;w-1.5 h-1.5 rounded-full bg-[#D65A63]&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-1.5 h-1.5 rounded-full bg-[#A0A5B0]&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-1.5 h-1.5 rounded-full bg-[#A0A5B0]&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-1.5 h-1.5 rounded-full bg-[#A0A5B0]&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-1.5 h-1.5 rounded-full bg-[#D65A63]&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-1.5 h-1.5 rounded-full bg-[#A0A5B0]&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-1.5 h-1.5 rounded-full bg-[#A0A5B0]&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-1.5 h-1.5 rounded-full bg-[#A0A5B0]&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-1.5 h-1.5 rounded-full bg-[#D65A63]&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/main&gt;
+
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 12
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Global Strategy&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; background-color: #0F1115; position: relative; margin: 0 auto; overflow: hidden; }
+        .brand-gradient { background: linear-gradient(90deg, #E56B6F 0%, #9D4EDD 100%); }
+        .brand-gradient-text { background: linear-gradient(90deg, #E56B6F 0%, #9D4EDD 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .bg-texture { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('https://images.unsplash.com/photo-1611974765270-ca1258634369?q=80&amp;w=1280&amp;auto=format&amp;fit=crop'); background-size: cover; background-position: center; opacity: 0.08; mix-blend-mode: overlay; z-index: 1; }
+        .content-layer { position: relative; z-index: 10; height: 100%; display: flex; flex-direction: column; padding: 40px 60px; }
+        
+        .decor-dots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; position: absolute; top: 200px; right: 40px; z-index: 5; }
+        .dot { width: 6px; height: 6px; border-radius: 50%; background-color: #E56B6F; opacity: 0.6; }
+        .brand-gradient-bg { background: linear-gradient(90deg, #E56B6F 0%, #9D4EDD 100%); }
+        .glass-panel { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); }
+        .nav-link { text-decoration: none; color: rgba(255, 255, 255, 0.7); font-size: 13px; font-weight: 500; letter-spacing: 0.5px; transition: all 0.3s ease; position: relative; display: block; }
+        .nav-link:hover, .nav-link.active { color: #FFFFFF; }
+        .nav-link.active::after { content: ''; position: absolute; bottom: -6px; left: 50%; transform: translateX(-50%); width: 4px; height: 4px; background-color: #E56B6F; border-radius: 50%; box-shadow: 0 0 8px #E56B6F; }
+        .icon-btn { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: rgba(255, 255, 255, 0.8); transition: all 0.3s ease; cursor: pointer; }
+        .icon-btn:hover { background: rgba(255, 255, 255, 0.1); color: #FFFFFF; }
+
+        /* Page Specific */
+        .map-container {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.05);
+            height: 100%;
+        }
+        .map-point {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background-color: #E56B6F;
+            border-radius: 50%;
+            border: 2px solid white;
+            box-shadow: 0 0 15px #E56B6F;
+            z-index: 10;
+        }
+        .region-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+        .region-card:hover {
+            background: rgba(255, 255, 255, 0.06);
+            transform: translateX(5px);
+            border-left: 3px solid #9D4EDD;
+        }
+        .region-icon {
+            min-width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #E56B6F;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;bg-texture&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;decor-dots&quot;&gt;
+            &lt;div class=&quot;dot&quot; style=&quot;opacity: 1;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot; style=&quot;opacity: 0.4;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot; style=&quot;opacity: 0.2;&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;content-layer&quot;&gt;
+            &lt;!-- Header --&gt;
+            &lt;header style=&quot;position: relative; z-index: 20; padding: 0px 0px 32px 0px; display: flex; justify-content: space-between; align-items: center;&quot;&gt;
+                &lt;div class=&quot;brand-gradient-bg&quot; style=&quot;padding: 10px 30px; border-radius: 50px;&quot;&gt;
+                    &lt;span style=&quot;color: #FFFFFF; font-weight: 500; font-size: 16px;&quot;&gt;Thynk Unlimited&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div style=&quot;display: flex; gap: 16px; align-items: center;&quot;&gt;
+                    &lt;nav class=&quot;glass-panel&quot; style=&quot;display: flex; gap: 32px; border-radius: 50px; padding: 10px 36px; align-items: center; height: 48px;&quot;&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;nav-link active&quot;&gt;HOME&lt;/a&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;SERVICE&lt;/a&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;CONTACT&lt;/a&gt;
+                    &lt;/nav&gt;
+                    &lt;div class=&quot;glass-panel&quot; style=&quot;display: flex; gap: 8px; border-radius: 50px; padding: 6px; height: 48px; align-items: center;&quot;&gt;
+                        &lt;div class=&quot;icon-btn&quot;&gt;&lt;i class=&quot;fa-solid fa-magnifying-glass&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                        &lt;div class=&quot;icon-btn&quot; style=&quot;background: rgba(255,255,255,0.1);&quot;&gt;&lt;i class=&quot;fa-regular fa-user&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/header&gt;
+
+            &lt;div class=&quot;text-center mb-8&quot;&gt;
+                &lt;h1 class=&quot;text-white text-6xl font-bold tracking-tight mb-2&quot;&gt;
+                    Global &lt;span class=&quot;brand-gradient-text&quot;&gt;Market Strategy&lt;/span&gt;
+                &lt;/h1&gt;
+                &lt;p class=&quot;text-[#A0A5B0] text-lg mt-2 font-light&quot;&gt;Targeted approaches for key international regions&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Main Content Grid --&gt;
+            &lt;div class=&quot;flex gap-8 h-full px-8 pb-8&quot;&gt;
+                
+                &lt;!-- Left: Map Visual (60%) --&gt;
+                &lt;div class=&quot;w-3/5 h-full relative group&quot;&gt;
+                    &lt;div class=&quot;map-container relative&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&amp;w=1280&amp;auto=format&amp;fit=crop&quot; 
+                             alt=&quot;World Map Tech&quot; 
+                             class=&quot;w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500 group-hover:scale-105 transform&quot;&gt;
+                        &lt;div class=&quot;absolute inset-0 bg-[#0F1115] opacity-20&quot;&gt;&lt;/div&gt;
+                        
+                        &lt;!-- Pulse Points --&gt;
+                        &lt;div class=&quot;map-point&quot; style=&quot;top: 30%; left: 25%;&quot;&gt;&lt;/div&gt; &lt;!-- US --&gt;
+                        &lt;div class=&quot;map-point&quot; style=&quot;top: 25%; left: 48%;&quot;&gt;&lt;/div&gt; &lt;!-- EU --&gt;
+                        &lt;div class=&quot;map-point&quot; style=&quot;top: 40%; left: 75%;&quot;&gt;&lt;/div&gt; &lt;!-- Asia --&gt;
+                        
+                        &lt;!-- Overlay Text --&gt;
+                        &lt;div class=&quot;absolute bottom-6 left-6 bg-black/60 backdrop-blur-md px-6 py-4 rounded-xl border border-white/10&quot;&gt;
+                            &lt;p class=&quot;text-white font-bold&quot;&gt;Active Markets&lt;/p&gt;
+                            &lt;p class=&quot;text-[#E56B6F] text-sm&quot;&gt;Live Trading Session&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Right: Strategy List (40%) --&gt;
+                &lt;div class=&quot;w-2/5 flex flex-col gap-4 justify-center&quot;&gt;
+                    
+                    &lt;!-- Card 1 --&gt;
+                    &lt;div class=&quot;region-card&quot;&gt;
+                        &lt;div class=&quot;region-icon&quot;&gt;&lt;i class=&quot;fa-solid fa-flag-usa&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;h3 class=&quot;text-white font-bold text-lg&quot;&gt;North America&lt;/h3&gt;
+                            &lt;p class=&quot;text-[#A0A5B0] text-xs mt-1 leading-relaxed&quot;&gt;Focus on high-growth tech equities and sustainable energy sectors. projected yield: 8-12%.&lt;/p&gt;
+                            &lt;div class=&quot;mt-2 text-[#9D4EDD] text-xs font-semibold&quot;&gt;Status: Aggressive Growth&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Card 2 --&gt;
+                    &lt;div class=&quot;region-card&quot;&gt;
+                        &lt;div class=&quot;region-icon&quot;&gt;&lt;i class=&quot;fa-solid fa-euro-sign&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;h3 class=&quot;text-white font-bold text-lg&quot;&gt;European Union&lt;/h3&gt;
+                            &lt;p class=&quot;text-[#A0A5B0] text-xs mt-1 leading-relaxed&quot;&gt;Stabilizing assets in established markets with a focus on luxury goods and industrials.&lt;/p&gt;
+                            &lt;div class=&quot;mt-2 text-[#E56B6F] text-xs font-semibold&quot;&gt;Status: Defensive Hold&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Card 3 --&gt;
+                    &lt;div class=&quot;region-card&quot;&gt;
+                        &lt;div class=&quot;region-icon&quot;&gt;&lt;i class=&quot;fa-solid fa-yen-sign&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;h3 class=&quot;text-white font-bold text-lg&quot;&gt;Asia Pacific&lt;/h3&gt;
+                            &lt;p class=&quot;text-[#A0A5B0] text-xs mt-1 leading-relaxed&quot;&gt;Emerging market opportunities in fintech and manufacturing supply chains.&lt;/p&gt;
+                            &lt;div class=&quot;mt-2 text-[#9D4EDD] text-xs font-semibold&quot;&gt;Status: High Volatility&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 13
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Performance Dashboard&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; background-color: #0F1115; position: relative; margin: 0 auto; overflow: hidden; }
+        .brand-gradient { background: linear-gradient(90deg, #E56B6F 0%, #9D4EDD 100%); }
+        .brand-gradient-text { background: linear-gradient(90deg, #E56B6F 0%, #9D4EDD 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .bg-texture { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('https://images.unsplash.com/photo-1611974765270-ca1258634369?q=80&amp;w=1280&amp;auto=format&amp;fit=crop'); background-size: cover; background-position: center; opacity: 0.08; mix-blend-mode: overlay; z-index: 1; }
+        .content-layer { position: relative; z-index: 10; height: 100%; display: flex; flex-direction: column; padding: 40px 60px; }
+        
+        .decor-dots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; position: absolute; top: 200px; right: 40px; z-index: 5; }
+        .dot { width: 6px; height: 6px; border-radius: 50%; background-color: #E56B6F; opacity: 0.6; }
+        .brand-gradient-bg { background: linear-gradient(90deg, #E56B6F 0%, #9D4EDD 100%); }
+        .glass-panel { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); }
+        .nav-link { text-decoration: none; color: rgba(255, 255, 255, 0.7); font-size: 13px; font-weight: 500; letter-spacing: 0.5px; transition: all 0.3s ease; position: relative; display: block; }
+        .nav-link:hover, .nav-link.active { color: #FFFFFF; }
+        .nav-link.active::after { content: ''; position: absolute; bottom: -6px; left: 50%; transform: translateX(-50%); width: 4px; height: 4px; background-color: #E56B6F; border-radius: 50%; box-shadow: 0 0 8px #E56B6F; }
+        .icon-btn { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: rgba(255, 255, 255, 0.8); transition: all 0.3s ease; cursor: pointer; }
+        .icon-btn:hover { background: rgba(255, 255, 255, 0.1); color: #FFFFFF; }
+
+        /* Page Specific */
+        .dashboard-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 16px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* Simulated Chart Bars */
+        .chart-bar-container {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            height: 100%;
+            padding-bottom: 20px;
+            gap: 12px;
+        }
+        .chart-bar {
+            width: 100%;
+            border-radius: 4px 4px 0 0;
+            opacity: 0.8;
+            transition: height 1s ease;
+            position: relative;
+        }
+        .chart-bar:hover { opacity: 1; }
+        
+        /* Progress Bars */
+        .progress-track {
+            width: 100%;
+            height: 6px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 8px;
+        }
+        .progress-fill {
+            height: 100%;
+            border-radius: 10px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;bg-texture&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;decor-dots&quot;&gt;
+            &lt;div class=&quot;dot&quot; style=&quot;opacity: 1;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot; style=&quot;opacity: 0.4;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot; style=&quot;opacity: 0.2;&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;content-layer&quot;&gt;
+            &lt;!-- Header --&gt;
+            &lt;header style=&quot;position: relative; z-index: 20; padding: 0px 0px 32px 0px; display: flex; justify-content: space-between; align-items: center;&quot;&gt;
+                &lt;div class=&quot;brand-gradient-bg&quot; style=&quot;padding: 10px 30px; border-radius: 50px;&quot;&gt;
+                    &lt;span style=&quot;color: #FFFFFF; font-weight: 500; font-size: 16px;&quot;&gt;Thynk Unlimited&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div style=&quot;display: flex; gap: 16px; align-items: center;&quot;&gt;
+                    &lt;nav class=&quot;glass-panel&quot; style=&quot;display: flex; gap: 32px; border-radius: 50px; padding: 10px 36px; align-items: center; height: 48px;&quot;&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;nav-link active&quot;&gt;HOME&lt;/a&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;SERVICE&lt;/a&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;CONTACT&lt;/a&gt;
+                    &lt;/nav&gt;
+                    &lt;div class=&quot;glass-panel&quot; style=&quot;display: flex; gap: 8px; border-radius: 50px; padding: 6px; height: 48px; align-items: center;&quot;&gt;
+                        &lt;div class=&quot;icon-btn&quot;&gt;&lt;i class=&quot;fa-solid fa-magnifying-glass&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                        &lt;div class=&quot;icon-btn&quot; style=&quot;background: rgba(255,255,255,0.1);&quot;&gt;&lt;i class=&quot;fa-regular fa-user&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/header&gt;
+
+            &lt;div class=&quot;text-center mb-6&quot;&gt;
+                &lt;h1 class=&quot;text-white text-6xl font-bold tracking-tight mb-1&quot;&gt;
+                    Portfolio &lt;span class=&quot;brand-gradient-text&quot;&gt;Performance&lt;/span&gt;
+                &lt;/h1&gt;
+                &lt;p class=&quot;text-[#A0A5B0] text-sm font-light&quot;&gt;Real-time data visualization of your assets&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Dashboard Grid --&gt;
+            &lt;div class=&quot;flex flex-col gap-6 px-8 pb-8 h-full&quot;&gt;
+                
+                &lt;!-- Top Row: Chart &amp; Allocation --&gt;
+                &lt;div class=&quot;flex gap-6 h-[55%]&quot;&gt;
+                    
+                    &lt;!-- Main Chart (Growth) --&gt;
+                    &lt;div class=&quot;dashboard-card w-2/3&quot;&gt;
+                        &lt;div class=&quot;flex justify-between items-center mb-4&quot;&gt;
+                            &lt;h3 class=&quot;text-white font-medium&quot;&gt;Annual Yield&lt;/h3&gt;
+                            &lt;div class=&quot;text-xs text-[#A0A5B0] bg-white/5 px-2 py-1 rounded&quot;&gt;2024-2025&lt;/div&gt;
+                        &lt;/div&gt;
+                        
+                        &lt;div class=&quot;chart-bar-container border-b border-white/10&quot;&gt;
+                            &lt;!-- Simulated Bars --&gt;
+                            &lt;div class=&quot;chart-bar brand-gradient-bg&quot; style=&quot;height: 40%;&quot;&gt;&lt;/div&gt;
+                            &lt;div class=&quot;chart-bar brand-gradient-bg&quot; style=&quot;height: 55%;&quot;&gt;&lt;/div&gt;
+                            &lt;div class=&quot;chart-bar brand-gradient-bg&quot; style=&quot;height: 45%;&quot;&gt;&lt;/div&gt;
+                            &lt;div class=&quot;chart-bar brand-gradient-bg&quot; style=&quot;height: 70%;&quot;&gt;&lt;/div&gt;
+                            &lt;div class=&quot;chart-bar brand-gradient-bg&quot; style=&quot;height: 60%;&quot;&gt;&lt;/div&gt;
+                            &lt;div class=&quot;chart-bar brand-gradient-bg&quot; style=&quot;height: 85%;&quot;&gt;&lt;/div&gt;
+                            &lt;div class=&quot;chart-bar brand-gradient-bg&quot; style=&quot;height: 75%;&quot;&gt;&lt;/div&gt;
+                            &lt;div class=&quot;chart-bar bg-white&quot; style=&quot;height: 95%;&quot;&gt;&lt;/div&gt; &lt;!-- Highlighted --&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;flex justify-between text-[#6B7280] text-xs mt-2&quot;&gt;
+                            &lt;span&gt;Q1&lt;/span&gt;&lt;span&gt;Q2&lt;/span&gt;&lt;span&gt;Q3&lt;/span&gt;&lt;span&gt;Q4&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Asset Allocation --&gt;
+                    &lt;div class=&quot;dashboard-card w-1/3 justify-center gap-6&quot;&gt;
+                        &lt;h3 class=&quot;text-white font-medium mb-2&quot;&gt;Allocation&lt;/h3&gt;
+                        
+                        &lt;div&gt;
+                            &lt;div class=&quot;flex justify-between text-xs text-[#A0A5B0] mb-1&quot;&gt;
+                                &lt;span&gt;Equities&lt;/span&gt; &lt;span class=&quot;text-white&quot;&gt;45%&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;progress-track&quot;&gt;&lt;div class=&quot;progress-fill bg-[#E56B6F]&quot; style=&quot;width: 45%&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        
+                        &lt;div&gt;
+                            &lt;div class=&quot;flex justify-between text-xs text-[#A0A5B0] mb-1&quot;&gt;
+                                &lt;span&gt;Crypto&lt;/span&gt; &lt;span class=&quot;text-white&quot;&gt;30%&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;progress-track&quot;&gt;&lt;div class=&quot;progress-fill bg-[#9D4EDD]&quot; style=&quot;width: 30%&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;div&gt;
+                            &lt;div class=&quot;flex justify-between text-xs text-[#A0A5B0] mb-1&quot;&gt;
+                                &lt;span&gt;Cash / Bonds&lt;/span&gt; &lt;span class=&quot;text-white&quot;&gt;25%&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;progress-track&quot;&gt;&lt;div class=&quot;progress-fill bg-white/30&quot; style=&quot;width: 25%&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Bottom Row: KPI Cards --&gt;
+                &lt;div class=&quot;flex gap-6 h-[25%]&quot;&gt;
+                    
+                    &lt;div class=&quot;dashboard-card w-1/3 justify-center border-l-4 border-l-[#E56B6F]&quot;&gt;
+                        &lt;p class=&quot;text-[#A0A5B0] text-xs uppercase tracking-wider&quot;&gt;Total Balance&lt;/p&gt;
+                        &lt;p class=&quot;text-white text-3xl font-bold mt-2&quot;&gt;$2,405,000&lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;dashboard-card w-1/3 justify-center border-l-4 border-l-[#9D4EDD]&quot;&gt;
+                        &lt;p class=&quot;text-[#A0A5B0] text-xs uppercase tracking-wider&quot;&gt;YTD Profit&lt;/p&gt;
+                        &lt;div class=&quot;flex items-baseline gap-2 mt-2&quot;&gt;
+                            &lt;p class=&quot;text-white text-3xl font-bold&quot;&gt;+$124k&lt;/p&gt;
+                            &lt;span class=&quot;text-[#E56B6F] text-sm font-bold&quot;&gt;&lt;i class=&quot;fa-solid fa-arrow-trend-up&quot;&gt;&lt;/i&gt; 12%&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;dashboard-card w-1/3 justify-center border-l-4 border-l-white&quot;&gt;
+                        &lt;p class=&quot;text-[#A0A5B0] text-xs uppercase tracking-wider&quot;&gt;Active Trades&lt;/p&gt;
+                        &lt;p class=&quot;text-white text-3xl font-bold mt-2&quot;&gt;14&lt;/p&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 14
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Thynk Unlimited - Investment Strategy&lt;/title&gt;
+    
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: '#0F1115',
+                            text: '#A0A5B0',
+                            start: '#E56B6F',
+                            end: '#9D4EDD',
+                            accent: '#D65A63',
+                            border: '#2A2E35'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container - Fixed 1280x720 */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #0F1115;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+            display: flex; /* Changed to flex column for layout stability */
+            flex-direction: column;
+            /* Subtle background pattern */
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* Gradient Utilities */
+        .bg-brand-gradient {
+            background: linear-gradient(90deg, #E56B6F 0%, #9D4EDD 100%);
+        }
+        
+        .text-gradient {
+            background: linear-gradient(90deg, #E56B6F, #9D4EDD);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Geometric Dots Decoration */
+        .dots-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 6px;
+        }
+        .dot {
+            width: 6px;
+            height: 6px;
+            background-color: #E56B6F;
+            border-radius: 50%;
+            opacity: 0.6;
+        }
+
+        /* --- 顶部导航样式 (统一风格) --- */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            position: relative;
+            display: block;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: #FFFFFF;
+        }
+
+        /* 选中状态的小圆点 */
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 4px;
+            background-color: #E56B6F;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #E56B6F;
+        }
+
+        .icon-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.8);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .icon-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #FFFFFF;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;header style=&quot;position: relative; z-index: 20; padding: 32px 60px; display: flex; justify-content: space-between; align-items: center;&quot;&gt;
+            &lt;div class=&quot;bg-brand-gradient&quot; style=&quot;padding: 10px 30px; border-radius: 50px;&quot;&gt;
+                &lt;span style=&quot;color: #FFFFFF; font-weight: 500; font-size: 16px;&quot;&gt;Thynk Unlimited&lt;/span&gt;
+            &lt;/div&gt;
+
+            &lt;div style=&quot;display: flex; gap: 16px; align-items: center;&quot;&gt;
+                &lt;nav class=&quot;glass-panel&quot; style=&quot;display: flex; gap: 32px; border-radius: 50px; padding: 10px 36px; align-items: center; height: 48px;&quot;&gt;
+                    &lt;a href=&quot;#&quot; class=&quot;nav-link active&quot;&gt;HOME&lt;/a&gt;
+                    &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;SERVICE&lt;/a&gt;
+                    &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;CONTACT&lt;/a&gt;
+                &lt;/nav&gt;
+                &lt;div class=&quot;glass-panel&quot; style=&quot;display: flex; gap: 8px; border-radius: 50px; padding: 6px; height: 48px; align-items: center;&quot;&gt;
+                    &lt;div class=&quot;icon-btn&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-magnifying-glass&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;icon-btn&quot; style=&quot;background: rgba(255,255,255,0.1);&quot;&gt;
+                        &lt;i class=&quot;fa-regular fa-user&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;div class=&quot;grid grid-cols-12 flex-grow w-full h-full relative z-10&quot;&gt;
+            
+            &lt;div class=&quot;col-span-5 h-full relative flex items-center justify-center pl-12&quot;&gt;
+                
+                &lt;div class=&quot;absolute bottom-0 left-0 w-[80%] h-[60%] bg-gradient-to-tr from-[#E56B6F] to-[#9D4EDD] opacity-20 blur-3xl rounded-full z-0&quot;&gt;&lt;/div&gt;
+                
+                &lt;div class=&quot;absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-t from-[#E56B6F] to-transparent opacity-30 z-0&quot;&gt;&lt;/div&gt;
+
+                &lt;div class=&quot;relative z-10 w-[460px] h-[460px] rounded-[40px] overflow-hidden border-4 border-[#2A2E35] shadow-2xl shadow-black&quot;&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&amp;w=1000&amp;auto=format&amp;fit=crop&quot; 
+                         alt=&quot;Financial Analysis Strategy&quot; 
+                         class=&quot;w-full h-full object-cover&quot;&gt;
+                    &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;col-span-7 h-full flex flex-col justify-center pr-16 pl-8 relative z-10&quot;&gt;
+                
+                &lt;div class=&quot;absolute top-1/2 right-0 w-[400px] h-[400px] bg-purple-900/20 blur-[100px] rounded-full pointer-events-none&quot;&gt;&lt;/div&gt;
+
+                &lt;div class=&quot;mb-8&quot;&gt;
+                    &lt;h1 class=&quot;text-white text-[52px] font-bold leading-[1.1] mb-6 drop-shadow-lg&quot;&gt;
+                        The best time to &lt;br&gt;
+                        invest was yesterday.&lt;br&gt;
+                        &lt;span class=&quot;text-transparent bg-clip-text bg-gradient-to-r from-[#E56B6F] to-[#9D4EDD]&quot;&gt;The next best is now!&lt;/span&gt;
+                    &lt;/h1&gt;
+                    
+                    &lt;p class=&quot;text-[#A0A5B0] text-lg leading-relaxed max-w-2xl&quot;&gt;
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;flex flex-col space-y-5 w-full max-w-md&quot;&gt;
+                    
+                    &lt;div class=&quot;group flex items-center bg-brand-gradient p-[2px] rounded-full shadow-lg shadow-purple-900/30 transform transition-transform hover:scale-105 cursor-pointer&quot;&gt;
+                        &lt;div class=&quot;bg-brand-gradient w-full rounded-full flex items-center px-1 py-1&quot;&gt;
+                            &lt;div class=&quot;bg-white/20 w-10 h-10 rounded-full flex items-center justify-center mr-4 shrink-0&quot;&gt;
+                                &lt;i class=&quot;fa-solid fa-envelope text-white text-sm&quot;&gt;&lt;/i&gt;
+                            &lt;/div&gt;
+                            &lt;span class=&quot;text-white font-medium tracking-wide text-lg&quot;&gt;hello@reallygreatsite.com&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;group flex items-center bg-brand-gradient p-[2px] rounded-full shadow-lg shadow-purple-900/30 transform transition-transform hover:scale-105 cursor-pointer&quot;&gt;
+                        &lt;div class=&quot;bg-brand-gradient w-full rounded-full flex items-center px-1 py-1&quot;&gt;
+                            &lt;div class=&quot;bg-white/20 w-10 h-10 rounded-full flex items-center justify-center mr-4 shrink-0&quot;&gt;
+                                &lt;i class=&quot;fa-solid fa-globe text-white text-sm&quot;&gt;&lt;/i&gt;
+                            &lt;/div&gt;
+                            &lt;span class=&quot;text-white font-medium tracking-wide text-lg&quot;&gt;www.reallygreatsite.com&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;group flex items-center bg-brand-gradient p-[2px] rounded-full shadow-lg shadow-purple-900/30 w-3/4 transform transition-transform hover:scale-105 cursor-pointer&quot;&gt;
+                        &lt;div class=&quot;bg-brand-gradient w-full rounded-full flex items-center px-1 py-1&quot;&gt;
+                            &lt;div class=&quot;bg-white/20 w-10 h-10 rounded-full flex items-center justify-center mr-4 shrink-0&quot;&gt;
+                                &lt;i class=&quot;fa-solid fa-phone text-white text-sm&quot;&gt;&lt;/i&gt;
+                            &lt;/div&gt;
+                            &lt;span class=&quot;text-white font-medium tracking-wide text-lg&quot;&gt;+123-456-7890&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+
+                &lt;div class=&quot;absolute bottom-10 right-10&quot;&gt;
+                    &lt;div class=&quot;dots-grid&quot;&gt;
+                        &lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dot&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <script>
+   // 自动调整iframe高度
+    function resizeIframes() {
+        document.querySelectorAll('.responsive-iframe').forEach(iframe => {
+            try {
+                const doc = iframe.contentDocument || iframe.contentWindow.document;
+                const height = Math.max(
+                    doc.body.scrollHeight,
+                    doc.documentElement.scrollHeight,
+                    doc.body.offsetHeight,
+                    doc.documentElement.offsetHeight,
+                    doc.body.clientHeight,
+                    doc.documentElement.clientHeight
+                );
+                iframe.style.height = height + 'px';
+            } catch (e) {
+                console.log('无法调整iframe高度:', e);
+            }
+        });
+    }
+    
+    // 初始调整
+    window.addEventListener('load', resizeIframes);
+    
+    // 内容加载后调整
+    document.querySelectorAll('.responsive-iframe').forEach(iframe => {
+        iframe.addEventListener('load', function() {
+            resizeIframes();
+            // 对动态内容进行定期检查
+            setInterval(resizeIframes, 1000);
+        });
+    });
+  </script>
+ </body>
+</html>

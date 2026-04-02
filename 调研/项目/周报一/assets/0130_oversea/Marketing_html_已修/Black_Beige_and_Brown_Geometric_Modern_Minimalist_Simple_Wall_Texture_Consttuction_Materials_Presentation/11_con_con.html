@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architectural Keynote Slide</title>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryBg: '#0A0A0A',
+                        primaryText: '#FFFFFF',
+                        secondaryText: '#8C8C8C',
+                        accent: '#F2F2F2',
+                        brandAux: '#6E6C66'
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'Inter', 'sans-serif'],
+                        serif: ['Times New Roman', 'serif']
+                    },
+                    boxShadow: {
+                        'glow': '0 0 20px rgba(255, 255, 255, 0.05)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Page Container Definition */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #0A0A0A;
+            overflow: hidden;
+            /* Subtle Concrete Texture Overlay */
+            background-image: 
+                linear-gradient(rgba(10, 10, 10, 0.95), rgba(10, 10, 10, 0.95)),
+                url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz4KPC9zdmc+');
+        }
+
+        /* Utility for geometric lines */
+        .hairline {
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Typography overrides */
+        h1, h2, h3, h4, h5, h6 { line-height: 1.2; }
+        ::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body>
+
+    <div id="page_container" class="font-sans text-primaryText selection:bg-gray-700">
+
+        <div class="hairline w-px h-full left-12 top-0"></div> <div class="hairline w-px h-full right-12 top-0"></div> <div class="hairline w-full h-px left-0 top-24"></div> <div class="hairline w-full h-px left-0 bottom-16"></div> <header class="absolute top-0 left-0 w-full h-24 flex justify-between items-center px-12 z-50">
+            <div class="flex items-center gap-3">
+                <div class="bg-[#F2F2F2] rounded-full px-6 py-2 flex items-center gap-3 shadow-lg">
+                    <div class="w-3 h-3 rounded-full bg-[#6E6C66]"></div> 
+                    <h6 class="text-black font-bold text-sm tracking-wide uppercase">Ingoude Company</h6>
+                </div>
+            </div>
+
+            <nav class="flex items-center gap-4">
+                <div class="bg-[#333333] border border-[#444444] rounded-full px-6 py-2">
+                    <h6 class="text-white text-xs font-bold tracking-wider">HOME</h6>
+                </div>
+                <div class="border border-white/30 rounded-full px-6 py-2">
+                    <h6 class="text-white/70 text-xs font-medium tracking-wider">MATERIALS</h6>
+                </div>
+                <div class="border border-white/30 rounded-full px-6 py-2">
+                    <h6 class="text-white/70 text-xs font-medium tracking-wider">MORE</h6>
+                </div>
+                <div class="ml-2 text-white text-lg">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="absolute top-24 bottom-16 w-full flex flex-col">
+            
+            <div class="relative w-full h-[280px] overflow-hidden group">
+                <div class="absolute inset-0 bg-gradient-to-t from-primaryBg via-transparent to-transparent z-10 opacity-90"></div>
+                
+                <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2070&auto=format&fit=crop" 
+                     alt="Steel construction framework" 
+                     class="w-full h-full object-cover opacity-80 filter grayscale contrast-125 transform group-hover:scale-105 transition-transform duration-1000">
+
+                <div class="absolute left-0 bottom-0 w-24 h-32 bg-black z-20 flex items-center justify-center border-r border-t border-white/10">
+                    <i class="fa-solid fa-quote-left text-2xl text-white/20"></i>
+                </div>
+            </div>
+
+            <div class="flex-1 flex flex-col px-24 py-8 z-10">
+                
+                <div class="w-full mb-10 border-l-4 border-accent pl-6">
+                    <h1 class="text-5xl font-light text-primaryText tracking-tight">
+                        Conclusion <span class="font-serif italic text-secondaryText font-light mx-2">&</span> Key Takeaways
+                    </h1>
+                </div>
+
+                <div class="grid grid-cols-3 gap-12 w-full h-full items-start">
+                    
+                    <div class="flex flex-col gap-3 group">
+                        <div class="flex items-center gap-3 mb-2">
+                            <div class="w-2 h-2 bg-accent rounded-full"></div>
+                            <h3 class="text-lg font-bold text-accent uppercase tracking-widest">Summary</h3>
+                        </div>
+                        <p class="text-secondaryText text-sm leading-7 font-light text-justify border-t border-white/10 pt-4">
+                            Construction materials vary significantly in properties and applications. These variations directly impact the project's long-term durability, overall cost efficiency, and environmental sustainability standards.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col gap-3 group">
+                        <div class="flex items-center gap-3 mb-2">
+                            <div class="w-2 h-2 bg-brandAux rounded-full"></div>
+                            <h3 class="text-lg font-bold text-accent uppercase tracking-widest">Importance</h3>
+                        </div>
+                        <p class="text-secondaryText text-sm leading-7 font-light text-justify border-t border-white/10 pt-4">
+                            Selecting the correct material is not merely a design choice; it ensures structural integrity under load and fulfills critical environmental responsibilities required by modern building codes.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col gap-3 group">
+                        <div class="flex items-center gap-3 mb-2">
+                            <div class="w-2 h-2 bg-white rounded-full"></div>
+                            <h3 class="text-lg font-bold text-accent uppercase tracking-widest">Action</h3>
+                        </div>
+                        <p class="text-secondaryText text-sm leading-7 font-light text-justify border-t border-white/10 pt-4 mb-4">
+                            Explore specific material innovations designed for sustainable construction. Adopt new standards to minimize carbon footprint while maximizing lifespan.
+                        </p>
+                        <div class="self-end text-accent opacity-50">
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+        <footer class="absolute bottom-0 left-0 w-full h-16 px-12 flex justify-between items-center z-20 bg-[#0A0A0A]">
+            <div class="flex items-center gap-4">
+                <p class="text-secondaryText text-xs tracking-widest uppercase">
+                    <i class="fa-regular fa-copyright mr-1"></i> 2023 Structure Report
+                </p>
+            </div>
+
+            <div class="border border-white/30 rounded-full px-8 py-2 bg-[#0A0A0A] hover:bg-white/5 transition-colors">
+                <p class="text-primaryText font-bold text-sm tracking-widest">PAGE 11</p>
+            </div>
+        </footer>
+
+        <div class="absolute right-0 bottom-24 w-16 h-32 bg-brandAux opacity-20 z-0"></div>
+
+    </div>
+</body>
+</html>

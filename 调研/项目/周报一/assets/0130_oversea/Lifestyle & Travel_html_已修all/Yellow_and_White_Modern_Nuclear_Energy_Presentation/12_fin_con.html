@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear Energy - Thank You</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { brand: { yellow: '#FFEA4A', black: '#0A0A0A', accent: '#FF3D00' } },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'sans-serif'], mono: ['Courier New', 'monospace'] }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        #page_container { width: 1280px; height: 720px; position: relative; background-color: #FFEA4A; overflow: hidden; margin: 0 auto; font-family: "Noto Sans SC", sans-serif; }
+        .grid-bg { background-image: radial-gradient(rgba(0,0,0,0.2) 1px, transparent 0); background-size: 30px 30px; opacity: 0.3; }
+        #page_container::before, #page_container::after { content: ''; position: absolute; width: 40px; height: 40px; border: 2px solid rgba(0,0,0,0.2); z-index: 5; }
+        #page_container::before { top: 30px; left: 30px; border-right: 0; border-bottom: 0; }
+        #page_container::after { bottom: 30px; right: 30px; border-left: 0; border-top: 0; }
+        
+        .outline-text { -webkit-text-stroke: 1.5px #0A0A0A; color: transparent; text-transform: uppercase; }
+        
+        /* 文本设计块 1 */
+        .text-design-1 {
+            background: #0A0A0A;
+            color: #FFEA4A;
+            padding: 0.5rem 1rem;
+            display: inline-block;
+            transform: skewX(-12deg);
+        }
+        .text-design-1 span { transform: skewX(12deg); display: block; }
+
+        /* 联系方式卡片 */
+        .contact-card { border-left: 2px solid rgba(0,0,0,0.1); padding-left: 1.5rem; }
+
+        .img-scan { position: relative; }
+        .img-scan::after { 
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px; 
+            background: rgba(255, 61, 0, 0.5); box-shadow: 0 0 15px #FF3D00; 
+            animation: scan 4s linear infinite; 
+        }
+        @keyframes scan { 0% { top: 0; } 100% { top: 100%; } }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <!-- 背景装饰 -->
+        <div class="absolute inset-0 grid-bg"></div>
+        <div class="absolute -left-20 top-1/2 -translate-y-1/2 text-[300px] font-black opacity-[0.03] leading-none select-none tracking-tighter -rotate-90">
+            FINISH
+        </div>
+
+        <div class="relative z-10 w-full h-full p-16 flex flex-col">
+            
+            <!-- Header -->
+            <div class="flex justify-between items-center mb-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-black flex items-center justify-center">
+                        <i class="fa-solid fa-earth-americas text-brand-yellow text-2xl"></i>
+                    </div>
+                    <div>
+                        <h6 class="text-xs font-black uppercase tracking-widest text-brand-black">Giggling Platypus Co.</h6>
+                        <p class="text-[9px] font-bold opacity-50 uppercase tracking-tighter">Nuclear Research / Closing 2026</p>
+                    </div>
+                </div>
+                <div class="font-mono text-[10px] font-black opacity-40">SESSION_STATUS: COMPLETED</div>
+            </div>
+
+            <!-- Main Thank You Section -->
+            <div class="grid grid-cols-12 gap-12 flex-1 items-center">
+                
+                <!-- Left: Title & Two Sentences Design -->
+                <div class="col-span-7">
+                    <h1 class="text-[140px] leading-[0.8] font-[950] text-brand-black tracking-tighter uppercase mb-12">
+                        Thank<br>
+                        <span class="outline-text">You.</span>
+                    </h1>
+                    
+                    <!-- 文本设计 01: 核心口号 -->
+                    <div class="mb-6">
+                        <div class="text-design-1">
+                            <span class="text-2xl font-black uppercase tracking-tight">Sustainable waste management solutions</span>
+                        </div>
+                    </div>
+
+                    <!-- 文本设计 02: 愿景陈述 -->
+                    <div class="flex items-start gap-4 max-w-lg">
+                        <span class="text-brand-accent font-black text-2xl mt-1">//</span>
+                        <p class="text-xl font-bold text-brand-black/70 leading-tight italic">
+                            Redefining the global energy landscape through advanced atomic research and uncompromising safety standards.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right: Visual Image -->
+                <div class="col-span-5 flex flex-col justify-center">
+                    <div class="img-scan border-[3px] border-black shadow-[20px_20px_0px_0px_rgba(0,0,0,1)] bg-black overflow-hidden aspect-[4/5]">
+                        <img src="https://images.unsplash.com/photo-1611273426728-653638c4c36d?q=80&w=800&auto=format&fit=crop" 
+                             class="w-full h-full object-cover grayscale contrast-125 opacity-90">
+                        <div class="absolute bottom-4 left-4 bg-brand-yellow text-black px-2 py-1 font-mono text-[9px] font-bold">
+                            FINAL_REPORT_0x44
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer: Contact Grid -->
+            <div class="mt-8 grid grid-cols-3 gap-12 border-t-2 border-black/10 pt-8">
+                <div class="contact-card">
+                    <span class="block text-[10px] font-black opacity-40 uppercase mb-2">Portal Access</span>
+                    <span class="text-lg font-black font-mono border-b-2 border-brand-accent">www.reallygreatsite.com</span>
+                </div>
+
+                <div class="contact-card">
+                    <span class="block text-[10px] font-black opacity-40 uppercase mb-2">Encrypted Line</span>
+                    <span class="text-lg font-black font-mono">+123-456-7890</span>
+                </div>
+
+                <div class="contact-card border-r-0">
+                    <span class="block text-[10px] font-black opacity-40 uppercase mb-2">Internal Mail</span>
+                    <span class="text-lg font-black font-mono">hello@reallygreatsite.com</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

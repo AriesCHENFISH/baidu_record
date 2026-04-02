@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AARRR Funnel & Referral Metrics</title>
+
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryBg: '#FDF14F',    // Bright Yellow
+                        primaryText: '#234985',  // Navy Blue
+                        secondaryText: '#4A5D75', // Muted Blue-Grey
+                        cardBg: '#FFFFFF',       // White for contrast
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans SC', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'retro': '8px 8px 0px 0px #234985', // Hard shadow for pop-art/brutalist look
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Basic Setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container - Strict Dimensions */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FDF14F; /* Global Background */
+            overflow: hidden;
+            font-family: 'Inter', 'Noto Sans SC', sans-serif;
+            /* Flex column for layout stacking */
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Scrollbar hide (just in case) */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <div class="absolute top-[-50px] right-[-50px] w-64 h-64 rounded-full border-[20px] border-[#234985] opacity-10 pointer-events-none"></div>
+        <div class="absolute bottom-[-20px] left-[-20px] w-40 h-40 bg-[#234985] rounded-full opacity-5 pointer-events-none"></div>
+
+        <div class="w-full max-w-[1180px] px-10 mb-10 z-10 text-center flex flex-col items-center">
+            <h1 class="text-6xl font-extrabold text-primaryText tracking-tighter mb-4">
+                Growth Metrics Framework
+            </h1>
+            <p class="text-2xl text-secondaryText font-medium max-w-4xl leading-relaxed">
+                Analyzing the customer lifecycle through the lens of Acquisition, Revenue, Activation, and Referral to drive sustainable business growth.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-x-10 gap-y-6 w-full max-w-[1180px] px-10 z-10">
+
+            <div class="bg-white p-6 rounded-xl border-2 border-primaryText shadow-retro h-[190px] flex flex-col justify-between">
+                <div class="flex items-center gap-4 mb-2">
+                    <div class="w-10 h-10 flex items-center justify-center border-[3px] border-primaryText rounded-full shrink-0">
+                        <i class="fa-regular fa-circle text-primaryText text-lg font-bold"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-primaryText tracking-tight">Acquisition</h2>
+                </div>
+                <div class="flex-1">
+                    <p class="text-secondaryText text-sm leading-relaxed text-left">
+                        Where are your potential customers coming from? What channel is driving the most valuable traffic for your company? Examples: new leads, email subscribers, resource downloads, support and sales chats.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl border-2 border-primaryText shadow-retro h-[190px] flex flex-col justify-between">
+                <div class="flex items-center gap-4 mb-2">
+                    <div class="w-10 h-10 flex items-center justify-center bg-primaryText text-primaryBg rounded-full shrink-0">
+                        <i class="fa-solid fa-xmark text-xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-primaryText tracking-tight">Revenue</h2>
+                </div>
+                <div class="flex-1">
+                    <p class="text-secondaryText text-sm leading-relaxed text-left">
+                        How can you increase revenue? What’s your monetization plan? Examples: customer acquisition cost and customer lifetime value.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl border-2 border-primaryText shadow-retro h-[190px] flex flex-col justify-between">
+                <div class="flex items-center gap-4 mb-2">
+                    <div class="w-10 h-10 flex items-center justify-center bg-primaryText text-primaryBg rounded-full shrink-0">
+                        <i class="fa-solid fa-xmark text-xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-primaryText tracking-tight">Activation</h2>
+                </div>
+                <div class="flex-1">
+                    <p class="text-secondaryText text-sm leading-relaxed text-left">
+                        How will your potential customers try your product or service for the first time? How will you make them realize the true value of your product or service? Examples: new trial signups, product sales, activation after app download.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl border-2 border-primaryText shadow-retro h-[190px] flex flex-col justify-between">
+                <div class="flex items-center gap-4 mb-2">
+                    <div class="w-10 h-10 flex items-center justify-center border-[3px] border-primaryText rounded-full shrink-0">
+                        <i class="fa-regular fa-circle text-primaryText text-lg font-bold"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-primaryText tracking-tight">Referral</h2>
+                </div>
+                <div class="flex-1">
+                    <p class="text-secondaryText text-sm leading-relaxed text-left">
+                        How can you turn your customers into advocates? What’s your systematic process to generate referrals consistently? Examples: Net Promoter Score, referrals, and social shares.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

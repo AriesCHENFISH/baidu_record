@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cover Agenda - Cyberpunk Final</title>
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBlack: '#05020D',
+                        cyberViolet: '#7A3E9C',
+                        holoPink: '#FF99D6',
+                        auroraCyan: '#70F3FF',
+                        mistGrey: '#D1C7E0',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                        mono: ['"Courier New"', 'monospace'],
+                    },
+                    animation: {
+                        'scanline': 'scanline 10s linear infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        scanline: {
+                            '0%': { transform: 'translateY(-100%)' },
+                            '100%': { transform: 'translateY(100%)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative;
+            background-color: #05020D; overflow: hidden; font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Background Textures */
+        .bg-noise {
+            position: absolute; inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+            pointer-events: none; z-index: 1; mix-blend-mode: overlay;
+        }
+
+        .bg-scanlines {
+            position: absolute; inset: 0;
+            background: repeating-linear-gradient(to bottom, transparent 0px, transparent 2px, rgba(0,0,0,0.2) 3px, rgba(0,0,0,0.2) 4px);
+            pointer-events: none; z-index: 2;
+        }
+
+        /* Ambient Glows */
+        .bg-orb { position: absolute; border-radius: 50%; filter: blur(120px); z-index: 0; pointer-events: none; opacity: 0.4; }
+
+        /* --- Tech Item Styles (Modified for Permanent Visibility) --- */
+        .tech-item-container {
+            position: relative;
+            padding: 1rem 0.5rem;
+            border-left: 2px solid; /* Base solid border */
+            transition: all 0.3s ease;
+            /* No hover float effect */
+        }
+
+        /* Corner Markers - Always Visible */
+        .tech-item-container::before {
+            content: ''; position: absolute; top: 0; left: -2px; width: 10px; height: 10px;
+            border-top: 2px solid; border-left: 2px solid; opacity: 0.8;
+        }
+        .tech-item-container::after {
+            content: ''; position: absolute; bottom: 0; right: 0; width: 10px; height: 10px;
+            border-bottom: 2px solid; border-right: 2px solid; opacity: 0.8;
+        }
+        
+        /* Theme-specific Permanent Styles (Cyan) */
+        .tech-item-container.cyan {
+            border-color: rgba(112, 243, 255, 0.5);
+            background: linear-gradient(90deg, rgba(112, 243, 255, 0.05), transparent);
+            color: #70F3FF; /* For markers */
+        }
+        /* Theme-specific Permanent Styles (Pink) */
+        .tech-item-container.pink {
+            border-color: rgba(255, 153, 214, 0.5);
+            background: linear-gradient(90deg, rgba(255, 153, 214, 0.05), transparent);
+            color: #FF99D6;
+        }
+        /* Theme-specific Permanent Styles (Purple) */
+        .tech-item-container.purple {
+            border-color: rgba(122, 62, 156, 0.5);
+            background: linear-gradient(90deg, rgba(122, 62, 156, 0.05), transparent);
+            color: #7A3E9C;
+        }
+
+        /* Animated Tech Energy Bar (On Hover) */
+        .tech-bar {
+            height: 2px; width: 100%; background: rgba(255, 255, 255, 0.1); position: relative; overflow: hidden; margin-top: 0.5rem;
+        }
+        .tech-bar::after {
+            content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
+            background: currentColor; transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 0 10px currentColor;
+        }
+        .group:hover .tech-bar::after { left: 0; }
+
+        /* Text Glow Utilities for Hover */
+        .text-glow-cyan { text-shadow: 0 0 10px rgba(112, 243, 255, 0.7); }
+        .text-glow-pink { text-shadow: 0 0 10px rgba(255, 153, 214, 0.7); }
+        .text-glow-purple { text-shadow: 0 0 10px rgba(122, 62, 156, 0.7); }
+
+        /* Scrollbar hide */
+        ::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+
+        <div class="bg-noise"></div>
+        <div class="bg-scanlines"></div>
+        
+        <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+            <div class="absolute top-0 left-[20%] w-[1px] h-full bg-gradient-to-b from-transparent via-auroraCyan/20 to-transparent animate-scanline" style="animation-duration: 8s;"></div>
+            <div class="absolute top-0 left-[50%] w-[1px] h-full bg-gradient-to-b from-transparent via-holoPink/20 to-transparent animate-scanline" style="animation-duration: 12s; animation-delay: 2s;"></div>
+            <div class="absolute top-0 left-[80%] w-[1px] h-full bg-gradient-to-b from-transparent via-cyberViolet/20 to-transparent animate-scanline" style="animation-duration: 10s; animation-delay: 1s;"></div>
+        </div>
+        
+        <div class="bg-orb top-[-200px] right-[-150px] w-[700px] h-[700px]" style="background: radial-gradient(circle, rgba(122, 62, 156, 0.4) 0%, transparent 70%);"></div>
+        <div class="bg-orb bottom-[-200px] left-[-150px] w-[700px] h-[700px]" style="background: radial-gradient(circle, rgba(35, 21, 60, 0.5) 0%, transparent 70%);"></div>
+        <div class="bg-orb top-[20%] left-[30%] w-[400px] h-[400px]" style="background: radial-gradient(circle, rgba(112, 243, 255, 0.15) 0%, transparent 70%);"></div>
+
+
+        <div style="position: absolute; top: 60px; left: 80px; z-index: 50; display: flex; align-items: center; opacity: 0.9;">
+             <div style="width: 40px; height: 40px; border: 2px solid #FF99D6; border-radius: 4px; display: flex; align-items: center; justify-content: center; transform: rotate(45deg); box-shadow: 0 0 15px rgba(255,153,214,0.4);">
+                <div style="width: 20px; height: 20px; background-color: rgba(112, 243, 255, 0.8); border-radius: 2px;"></div>
+            </div>
+            <div style="display: flex; flex-direction: column; justify-content: center; margin-left: 16px;">
+                 <h6 style="color: #FFFFFF; font-size: 12px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; line-height: 1; margin-bottom: 4px;">Studio</h6>
+                 <h6 style="color: #D1C7E0; font-size: 12px; font-weight: 300; letter-spacing: 0.3em; text-transform: uppercase; line-height: 1;">Shodwe</h6>
+            </div>
+        </div>
+
+        <div class="relative z-10 w-full h-full flex flex-col pt-10 px-24">
+            
+            <div class="w-full text-center mb-12 pl-[40px] relative"> 
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2/3 h-20 bg-auroraCyan/5 blur-2xl -z-10"></div>
+                
+                <h1 class="text-5xl font-black text-white tracking-[0.1em] uppercase drop-shadow-[0_0_25px_rgba(112,243,255,0.5)] relative inline-block">
+                    Agenda <span class="text-transparent bg-clip-text bg-gradient-to-r from-auroraCyan to-holoPink">Overview</span>
+                    <span class="absolute top-0 left-[-20px] h-full w-[4px] bg-holoPink/50 skew-x-12"></span>
+                     <span class="absolute top-0 right-[-20px] h-full w-[4px] bg-auroraCyan/50 skew-x-12"></span>
+                </h1>
+                <p class="text-mistGrey tracking-[0.3em] text-sm mt-3 font-mono uppercase">System Protocol v2.025 // Executing...</p>
+            </div>
+
+            <div class="grid grid-cols-3 gap-x-20 gap-y-8 w-full pr-10">
+                
+                <div class="flex flex-col gap-6">
+                    <div class="group cursor-pointer">
+                        <div class="tech-item-container cyan">
+                            <div class="flex items-baseline gap-3 mb-1">
+                                <span class="text-auroraCyan font-mono text-2xl font-bold opacity-70 group-hover:opacity-100 transition-all group-hover:text-glow-cyan">01_</span>
+                                <h3 class="text-white font-bold text-lg uppercase tracking-wider leading-none group-hover:text-auroraCyan transition-colors">Executive Summary</h3>
+                            </div>
+                        </div>
+                        <div class="tech-bar text-auroraCyan"></div>
+                    </div>
+
+                    <div class="group cursor-pointer">
+                        <div class="tech-item-container cyan">
+                            <div class="flex items-baseline gap-3 mb-1">
+                                <span class="text-auroraCyan font-mono text-2xl font-bold opacity-70 group-hover:opacity-100 transition-all group-hover:text-glow-cyan">02_</span>
+                                <h3 class="text-white font-bold text-lg uppercase tracking-wider leading-none group-hover:text-auroraCyan transition-colors">Market Analysis</h3>
+                            </div>
+                        </div>
+                        <div class="tech-bar text-auroraCyan"></div>
+                    </div>
+
+                    <div class="group cursor-pointer">
+                        <div class="tech-item-container cyan">
+                            <div class="flex items-baseline gap-3 mb-1">
+                                <span class="text-auroraCyan font-mono text-2xl font-bold opacity-70 group-hover:opacity-100 transition-all group-hover:text-glow-cyan">03_</span>
+                                <h3 class="text-white font-bold text-lg uppercase tracking-wider leading-none group-hover:text-auroraCyan transition-colors">Problem Statement</h3>
+                            </div>
+                        </div>
+                        <div class="tech-bar text-auroraCyan"></div>
+                    </div>
+
+                    <div class="group cursor-pointer">
+                        <div class="tech-item-container cyan">
+                            <div class="flex items-baseline gap-3 mb-1">
+                                <span class="text-auroraCyan font-mono text-2xl font-bold opacity-70 group-hover:opacity-100 transition-all group-hover:text-glow-cyan">04_</span>
+                                <h3 class="text-white font-bold text-lg uppercase tracking-wider leading-none group-hover:text-auroraCyan transition-colors">Core Solutions</h3>
+                            </div>
+                        </div>
+                        <div class="tech-bar text-auroraCyan"></div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-6">
+                    <div class="group cursor-pointer">
+                        <div class="tech-item-container pink">
+                            <div class="flex items-baseline gap-3 mb-1">
+                                <span class="text-holoPink font-mono text-2xl font-bold opacity-70 group-hover:opacity-100 transition-all group-hover:text-glow-pink">05_</span>
+                                <h3 class="text-white font-bold text-lg uppercase tracking-wider leading-none group-hover:text-holoPink transition-colors">Product Demo</h3>
+                            </div>
+                        </div>
+                        <div class="tech-bar text-holoPink"></div>
+                    </div>
+
+                    <div class="group cursor-pointer">
+                        <div class="tech-item-container pink">
+                            <div class="flex items-baseline gap-3 mb-1">
+                                <span class="text-holoPink font-mono text-2xl font-bold opacity-70 group-hover:opacity-100 transition-all group-hover:text-glow-pink">06_</span>
+                                <h3 class="text-white font-bold text-lg uppercase tracking-wider leading-none group-hover:text-holoPink transition-colors">Tech Architecture</h3>
+                            </div>
+                        </div>
+                        <div class="tech-bar text-holoPink"></div>
+                    </div>
+
+                    <div class="group cursor-pointer">
+                        <div class="tech-item-container pink">
+                            <div class="flex items-baseline gap-3 mb-1">
+                                <span class="text-holoPink font-mono text-2xl font-bold opacity-70 group-hover:opacity-100 transition-all group-hover:text-glow-pink">07_</span>
+                                <h3 class="text-white font-bold text-lg uppercase tracking-wider leading-none group-hover:text-holoPink transition-colors">Business Model</h3>
+                            </div>
+                        </div>
+                        <div class="tech-bar text-holoPink"></div>
+                    </div>
+
+                    <div class="group cursor-pointer">
+                        <div class="tech-item-container pink">
+                            <div class="flex items-baseline gap-3 mb-1">
+                                <span class="text-holoPink font-mono text-2xl font-bold opacity-70 group-hover:opacity-100 transition-all group-hover:text-glow-pink">08_</span>
+                                <h3 class="text-white font-bold text-lg uppercase tracking-wider leading-none group-hover:text-holoPink transition-colors">Marketing Strategy</h3>
+                            </div>
+                        </div>
+                        <div class="tech-bar text-holoPink"></div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-6">
+                    <div class="group cursor-pointer">
+                        <div class="tech-item-container purple">
+                            <div class="flex items-baseline gap-3 mb-1">
+                                <span class="text-cyberViolet font-mono text-2xl font-bold opacity-70 group-hover:opacity-100 transition-all group-hover:text-glow-purple">09_</span>
+                                <h3 class="text-white font-bold text-lg uppercase tracking-wider leading-none group-hover:text-cyberViolet transition-colors">Financial Plan</h3>
+                            </div>
+                        </div>
+                        <div class="tech-bar text-cyberViolet"></div>
+                    </div>
+
+                    <div class="group cursor-pointer">
+                        <div class="tech-item-container purple">
+                            <div class="flex items-baseline gap-3 mb-1">
+                                <span class="text-cyberViolet font-mono text-2xl font-bold opacity-70 group-hover:opacity-100 transition-all group-hover:text-glow-purple">10_</span>
+                                <h3 class="text-white font-bold text-lg uppercase tracking-wider leading-none group-hover:text-cyberViolet transition-colors">Risk Analysis</h3>
+                            </div>
+                        </div>
+                        <div class="tech-bar text-cyberViolet"></div>
+                    </div>
+
+                    <div class="group cursor-pointer">
+                        <div class="tech-item-container purple">
+                            <div class="flex items-baseline gap-3 mb-1">
+                                <span class="text-cyberViolet font-mono text-2xl font-bold opacity-70 group-hover:opacity-100 transition-all group-hover:text-glow-purple">11_</span>
+                                <h3 class="text-white font-bold text-lg uppercase tracking-wider leading-none group-hover:text-cyberViolet transition-colors">Team & Partners</h3>
+                            </div>
+                        </div>
+                        <div class="tech-bar text-cyberViolet"></div>
+                    </div>
+
+                    <div class="group cursor-pointer">
+                        <div class="tech-item-container purple">
+                            <div class="flex items-baseline gap-3 mb-1">
+                                <span class="text-cyberViolet font-mono text-2xl font-bold opacity-70 group-hover:opacity-100 transition-all group-hover:text-glow-purple">12_</span>
+                                <h3 class="text-white font-bold text-lg uppercase tracking-wider leading-none group-hover:text-cyberViolet transition-colors">Future Roadmap</h3>
+                            </div>
+                        </div>
+                        <div class="tech-bar text-cyberViolet"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div style="position: absolute; bottom: 50px; left: 80px; z-index: 20;">
+            <div class="flex items-center gap-3">
+                <i class="fa-solid fa-microchip text-auroraCyan animate-pulse-slow"></i>
+                <p style="color: #FFFFFF; font-size: 14px; letter-spacing: 2px; font-weight: 700;">PAGE <span style="color: #70F3FF;">2 / 15</span></p>
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-auroraCyan/50 to-transparent opacity-50"></div>
+        <div class="absolute bottom-2 right-10 flex gap-2 opacity-30">
+            <div class="w-2 h-2 bg-holoPink rounded-full"></div>
+            <div class="w-2 h-2 bg-auroraCyan rounded-full"></div>
+            <div class="w-2 h-2 bg-cyberViolet rounded-full"></div>
+        </div>
+
+    </div>
+</body>
+</html>

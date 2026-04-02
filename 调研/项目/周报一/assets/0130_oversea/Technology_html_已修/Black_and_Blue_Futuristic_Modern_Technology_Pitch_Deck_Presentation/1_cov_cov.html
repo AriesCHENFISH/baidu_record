@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology Pitch Deck - Cover</title>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: {
+                            black: '#000000',
+                            white: '#FFFFFF',
+                            cyan: '#4DEEEA',
+                            text: '#94A3B8',
+                            darkblue: '#0F172A',
+                        }
+                    },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .page_container {
+            width: 1280px; height: 720px;
+            margin: 0 auto; position: relative;
+            background-color: #000000; overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* 统一背景网格 */
+        .bg-grid {
+            background-image: linear-gradient(rgba(77, 238, 234, 0.05) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(77, 238, 234, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            position: absolute; inset: 0; z-index: 5;
+            mask-image: radial-gradient(circle at 30% 50%, black, transparent 90%);
+        }
+
+        /* 动态扫描线 */
+        .scan-line {
+            position: absolute; width: 100%; height: 2px;
+            background: linear-gradient(90deg, transparent, #4DEEEA, transparent);
+            top: -2px; z-index: 10; opacity: 0.3;
+            animation: scan 8s linear infinite;
+        }
+        @keyframes scan { 0% { top: 0; } 100% { top: 100%; } }
+
+        /* 旋转HUD */
+        .hud-rotate { animation: spin 20s linear infinite; }
+        @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+        /* 统一装饰类 */
+        .marker-line { height: 4px; background: #4DEEEA; transform: skew(-20deg); margin-bottom: 4px; }
+        .glow-text { text-shadow: 0 0 20px rgba(77, 238, 234, 0.6); }
+        
+        .card-tag { 
+            background: #4DEEEA; color: #000; font-size: 12px; font-weight: 800; 
+            padding: 4px 12px; font-family: monospace; 
+            clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page_container">
+        <div class="scan-line"></div>
+        
+        <div class="absolute inset-0 z-0 opacity-60">
+            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1280&auto=format&fit=crop" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent"></div>
+        </div>
+        
+        <div class="bg-grid"></div>
+
+        <div class="absolute top-12 left-20 z-20">
+            <div class="marker-line w-16"></div>
+            <div class="marker-line w-10 opacity-60"></div>
+            <div class="text-[10px] text-cyber-cyan font-mono tracking-[0.5em] mt-2">SYSTEM_ID: X-9920</div>
+        </div>
+
+        <div class="absolute top-1/2 right-[-100px] transform -translate-y-1/2 w-[600px] h-[600px] opacity-20 z-10">
+            <div class="w-full h-full border border-cyber-cyan rounded-full hud-rotate"></div>
+            <div class="absolute inset-10 border border-dashed border-cyber-cyan/50 rounded-full hud-rotate" style="animation-direction: reverse;"></div>
+        </div>
+
+        <div class="relative z-30 flex flex-col justify-center h-full pl-20 pt-10">
+            <div class="absolute left-16 top-1/2 -translate-y-1/2 opacity-[0.03] pointer-events-none">
+                <h1 class="text-[240px] font-black tracking-tighter leading-none italic">PROTO</h1>
+            </div>
+
+            <div class="mb-2">
+                <span class="card-tag uppercase tracking-widest mb-4 inline-block">Future Digital Solution</span>
+                <h1 class="text-[120px] font-black text-white tracking-tighter leading-[0.9] italic">
+                    TECH<span class="text-cyber-cyan glow-text">NOLOGY</span>
+                </h1>
+            </div>
+
+            <div class="flex items-center gap-6 mt-6">
+                <div class="h-[2px] w-24 bg-cyber-cyan shadow-[0_0_10px_#4DEEEA]"></div>
+                <h2 class="text-4xl font-bold text-white tracking-[0.15em] uppercase italic">
+                    Pitch <span class="text-cyber-cyan">Deck</span>
+                </h2>
+            </div>
+
+            <div class="mt-12 max-w-lg border-l border-cyber-cyan/30 pl-8">
+                <p class="text-xl text-cyber-text font-light tracking-wide leading-relaxed">
+                    Transforming ideas into digital reality through neural networks and global connectivity protocols.
+                </p>
+                <div class="flex gap-8 mt-8 items-center">
+                    <div>
+                        <p class="text-[10px] text-cyber-cyan font-mono tracking-widest uppercase mb-1">Version</p>
+                        <p class="text-white font-bold font-mono">2026.REL_01</p>
+                    </div>
+                    <div class="w-[1px] h-8 bg-white/10"></div>
+                    <div>
+                        <p class="text-[10px] text-cyber-cyan font-mono tracking-widest uppercase mb-1">Status</p>
+                        <p class="text-white font-bold font-mono">READY_FOR_DEPLOY</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-12 left-20 z-30 flex items-center gap-4">
+            <div class="w-10 h-[2px] bg-cyber-cyan"></div>
+            <p class="text-sm font-bold tracking-[0.3em] text-white uppercase font-mono">
+                WWW.TECH-DECK-CORE.COM
+            </p>
+        </div>
+
+        <div class="absolute bottom-12 right-20 grid grid-cols-4 gap-1 opacity-40">
+            <div class="w-1 h-1 bg-cyber-cyan"></div><div class="w-1 h-1 bg-cyber-cyan"></div><div class="w-1 h-1 bg-cyber-cyan opacity-20"></div><div class="w-1 h-1 bg-cyber-cyan opacity-20"></div>
+            <div class="w-1 h-1 bg-cyber-cyan"></div><div class="w-1 h-1 bg-cyber-cyan"></div><div class="w-1 h-1 bg-cyber-cyan"></div><div class="w-1 h-1 bg-cyber-cyan"></div>
+        </div>
+    </div>
+
+</body>
+</html>

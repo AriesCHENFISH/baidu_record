@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Statement Analysis</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBg: '#05050F',
+                        glowAmbient: '#18123A',
+                        primaryText: '#DDFCF2',
+                        secondaryText: '#B0B0B0',
+                        chart1: '#C8F9E6',
+                        chart2: '#88DEE3',
+                        chart3: '#64B0CF',
+                        chart4: '#538AB8',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #05050F;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .glow-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            z-index: 0;
+            opacity: 0.6;
+        }
+        .glow-top-left { width: 500px; height: 500px; background: #18123A; top: -100px; left: -100px; }
+        .glow-bottom-right { width: 600px; height: 600px; background: radial-gradient(circle, #18123A 0%, rgba(5,5,15,0) 70%); bottom: -150px; right: -100px; }
+    </style>
+</head>
+<body>
+    <div class="page_container">
+        <div class="glow-orb glow-top-left"></div>
+        <div class="glow-orb glow-bottom-right"></div>
+
+        <div class="relative z-20 px-12 pt-8 w-full">
+            <nav class="flex items-center justify-between w-full h-20 px-10 rounded-full" style="background: linear-gradient(90deg, #6a44f0 0%, #1E1B33 40%, #1E1B33 100%); box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);">
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 flex items-center justify-center rounded-full bg-[#DDFCF2] text-[#05050F]">
+                        <i class="fa-solid fa-layer-group text-xl"></i>
+                    </div>
+                    <h2 class="text-[#DDFCF2] text-xl font-bold tracking-wide">Fradel Company</h2>
+                </div>
+                <ul class="flex items-center gap-12 list-none m-0 p-0">
+                    <li class="cursor-pointer"><b class="text-[#DDFCF2] text-sm tracking-widest hover:text-white transition-colors">HOME</b></li>
+                    <li class="cursor-pointer"><b class="text-[#B0B0B0] text-sm tracking-widest hover:text-[#DDFCF2] transition-colors">ABOUT</b></li>
+                    <li class="cursor-pointer"><b class="text-[#B0B0B0] text-sm tracking-widest hover:text-[#DDFCF2] transition-colors">MORE</b></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="relative z-10 flex-1 grid grid-cols-12 gap-8 px-16 items-center content-center h-full pb-12">
+            <div class="col-span-3 flex flex-col justify-center">
+                <h1 class="text-6xl font-bold text-primaryText mb-4">Income<br>Statement<br>Analysis</h1>
+                <div class="w-16 h-1.5 bg-chart2 rounded-full mt-2"></div>
+            </div>
+            <div class="col-span-5 h-full flex items-center justify-center relative">
+                <div id="mainChart" class="w-full h-[400px]"></div>
+            </div>
+            <div class="col-span-4 pl-4 flex flex-col justify-center gap-6">
+                <p class="text-secondaryText text-sm font-normal text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p class="text-secondaryText text-sm font-normal text-justify">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+                <div class="flex gap-2 mt-2">
+                    <div class="w-2 h-2 rounded-full bg-chart1"></div>
+                    <div class="w-2 h-2 rounded-full bg-secondaryText opacity-30"></div>
+                    <div class="w-2 h-2 rounded-full bg-secondaryText opacity-30"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var chartDom = document.getElementById('mainChart');
+        var myChart = echarts.init(chartDom);
+        const colors = ['#C8F9E6', '#88DEE3', '#64B0CF', '#538AB8'];
+        var option = {
+            backgroundColor: 'transparent',
+            legend: { top: '0%', icon: 'circle', textStyle: { color: '#B0B0B0', fontSize: 12 }, data: ['Item 1', 'Item 2', 'Item 3', 'Item 4'] },
+            grid: { left: '3%', right: '4%', bottom: '10%', top: '15%', containLabel: true },
+            xAxis: { type: 'category', data: ['Item 1', 'Item 2', 'Item 3', 'Item 4'], axisLine: { lineStyle: { color: '#333' } }, axisLabel: { color: '#B0B0B0' } },
+            yAxis: { type: 'value', splitLine: { lineStyle: { color: 'rgba(255, 255, 255, 0.05)' } }, axisLabel: { color: '#B0B0B0' } },
+            series: [
+                { name: 'Item 1', type: 'bar', barWidth: '22%', data: [8, null, null, null], itemStyle: { color: colors[0], borderRadius: [4, 4, 0, 0] } },
+                { name: 'Item 2', type: 'bar', barWidth: '22%', data: [null, 12, null, null], itemStyle: { color: colors[1], borderRadius: [4, 4, 0, 0] } },
+                { name: 'Item 3', type: 'bar', barWidth: '22%', data: [null, null, 16, null], itemStyle: { color: colors[2], borderRadius: [4, 4, 0, 0] } },
+                { name: 'Item 4', type: 'bar', barWidth: '22%', data: [null, null, null, 20], itemStyle: { color: colors[3], borderRadius: [4, 4, 0, 0] } }
+            ]
+        };
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

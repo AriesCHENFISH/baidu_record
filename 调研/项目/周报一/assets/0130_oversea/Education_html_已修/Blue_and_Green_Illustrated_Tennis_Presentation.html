@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Responsive Merged HTML
+  </title>
+  <style>
+   body {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .page-wrapper {
+                width: 100%;
+                margin: 15px 0;
+                position: relative;
+            }
+            .page-title {
+                background: #f5f5f5;
+                padding: 5px 10px;
+                border-radius: 3px 3px 0 0;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+            }
+            .responsive-iframe {
+                border: none;
+                width: 100%;
+                display: block;
+            }
+  </style>
+ </head>
+ <body>
+  <!-- 内容将在这里插入 -->
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 1
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;The World of Tennis - Cover Slide&lt;/title&gt;
+    
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;!-- Google Fonts --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        t_primary: '#3F6283',
+                        t_container: '#6292C2',
+                        t_accent: '#DDEE56',
+                        t_highlight: '#F0F4C3',
+                        t_shadow: '#324E68',
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #3F6283;
+            overflow: hidden;
+        }
+        .title-italic {
+            font-style: italic;
+            font-weight: 900;
+            letter-spacing: -0.02em;
+        }
+        .text-shadow-hard {
+            text-shadow: 6px 6px 0px #324E68;
+        }
+        /* 球场透视装饰 */
+        .court-mesh {
+            background-image: linear-gradient(rgba(255,255,255,0.1) 2px, transparent 2px),
+                              linear-gradient(90deg, rgba(255,255,255,0.1) 2px, transparent 2px);
+            background-size: 60px 60px;
+            transform: perspective(500px) rotateX(60deg);
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;!-- 统一页眉导航 --&gt;
+        &lt;header class=&quot;relative z-30 w-full h-[100px] bg-t_accent p-3 shadow-xl&quot;&gt;
+            &lt;div class=&quot;w-full h-full border-2 border-dashed border-white rounded-lg flex items-center justify-center gap-16&quot;&gt;
+                &lt;nav class=&quot;flex gap-12&quot;&gt;
+                    &lt;div class=&quot;bg-t_highlight px-10 py-2 rounded-full shadow-sm text-t_primary font-bold uppercase tracking-wide text-sm cursor-default&quot;&gt;home&lt;/div&gt;
+                    &lt;div class=&quot;bg-t_highlight px-10 py-2 rounded-full shadow-sm text-t_primary font-bold uppercase tracking-wide text-sm opacity-80 cursor-default&quot;&gt;content&lt;/div&gt;
+                    &lt;div class=&quot;bg-t_highlight px-10 py-2 rounded-full shadow-sm text-t_primary font-bold uppercase tracking-wide text-sm opacity-80 cursor-default&quot;&gt;contact&lt;/div&gt;
+                &lt;/nav&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;!-- 背景装饰：抽象球场线条 --&gt;
+        &lt;div class=&quot;absolute bottom-[-100px] right-[-100px] w-[800px] h-[600px] court-mesh opacity-40 z-0&quot;&gt;&lt;/div&gt;
+
+        &lt;main class=&quot;relative z-10 grid grid-cols-12 h-[620px] w-full px-20 items-center&quot;&gt;
+            
+            &lt;!-- 左侧内容区 --&gt;
+            &lt;div class=&quot;col-span-6 flex flex-col justify-center&quot;&gt;
+                &lt;!-- 副标题 --&gt;
+                &lt;div class=&quot;flex items-center gap-4 mb-4&quot;&gt;
+                    &lt;div class=&quot;w-16 h-1.5 bg-t_accent rounded-full&quot;&gt;&lt;/div&gt;
+                    &lt;span class=&quot;text-t_accent text-2xl font-bold italic tracking-widest uppercase&quot;&gt;Presentation&lt;/span&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 主标题 --&gt;
+                &lt;h1 class=&quot;text-white text-[110px] title-italic leading-[0.85] text-shadow-hard uppercase mb-12&quot;&gt;
+                    The World &lt;br&gt;&lt;span class=&quot;text-t_accent&quot;&gt;Of Tennis&lt;/span&gt;
+                &lt;/h1&gt;
+
+                &lt;!-- 汇报人信息栏 (Presenter Info) --&gt;
+                &lt;div class=&quot;flex items-center gap-8 bg-t_shadow/40 backdrop-blur-md p-6 rounded-2xl border-l-8 border-t_accent w-fit shadow-2xl&quot;&gt;
+                    &lt;div class=&quot;flex flex-col&quot;&gt;
+                        &lt;span class=&quot;text-t_accent/70 text-xs font-bold uppercase tracking-widest mb-1&quot;&gt;Presented by&lt;/span&gt;
+                        &lt;span class=&quot;text-white text-xl font-medium&quot;&gt;Zhang San&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;w-px h-10 bg-white/20&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;flex flex-col&quot;&gt;
+                        &lt;span class=&quot;text-t_accent/70 text-xs font-bold uppercase tracking-widest mb-1&quot;&gt;Date&lt;/span&gt;
+                        &lt;span class=&quot;text-white text-xl font-medium&quot;&gt;2026.01.07&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- 右侧视觉区 --&gt;
+            &lt;div class=&quot;col-span-6 relative flex items-center justify-center h-full&quot;&gt;
+                &lt;!-- 装饰性圆形背景 --&gt;
+                &lt;div class=&quot;absolute w-[500px] h-[500px] bg-t_container rounded-full opacity-20 animate-pulse&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;absolute w-[420px] h-[420px] border-2 border-dashed border-t_accent/30 rounded-full&quot;&gt;&lt;/div&gt;
+
+                &lt;!-- 网球主体 --&gt;
+                &lt;div class=&quot;relative z-20 group&quot;&gt;
+                    &lt;!-- 运动拖尾效果 --&gt;
+                    &lt;div class=&quot;absolute -top-10 -right-10 w-32 h-32 bg-t_accent/20 rounded-full blur-3xl&quot;&gt;&lt;/div&gt;
+                    
+                    &lt;div class=&quot;w-[380px] h-[380px] rounded-full border-[12px] border-white shadow-[0_0_80px_rgba(0,0,0,0.4)] overflow-hidden relative transform rotate-12 transition-transform group-hover:rotate-0 duration-700&quot;&gt;
+                        &lt;img 
+                            src=&quot;https://images.unsplash.com/photo-1613917094076-265b7d59182c?q=80&amp;w=800&amp;auto=format&amp;fit=crop&quot; 
+                            alt=&quot;Tennis Ball&quot; 
+                            class=&quot;w-full h-full object-cover scale-110&quot;
+                        &gt;
+                        &lt;!-- 覆盖一层渐变增强质感 --&gt;
+                        &lt;div class=&quot;absolute inset-0 bg-gradient-to-tr from-t_primary/40 to-transparent&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- 悬浮的小图标点缀 --&gt;
+                    &lt;div class=&quot;absolute -top-4 -left-4 w-16 h-16 bg-t_accent rounded-full flex items-center justify-center shadow-lg border-4 border-white&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-star text-t_primary text-xl&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 浮动的装饰性线条 --&gt;
+                &lt;div class=&quot;absolute top-20 right-0 w-32 h-1 bg-t_accent rounded-full rotate-45 opacity-60&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;absolute bottom-20 left-10 w-24 h-1 bg-white rounded-full -rotate-12 opacity-40&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/main&gt;
+
+        &lt;!-- 底部点缀线 --&gt;
+        &lt;div class=&quot;absolute bottom-0 left-0 w-full h-2 bg-t_accent opacity-50&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 2
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Contents - Tennis Presentation&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;script&gt;
+        tailwind.config = { 
+            theme: { 
+                extend: { 
+                    colors: { 
+                        t_primary: '#3F6283', 
+                        t_container: '#6292C2', 
+                        t_accent: '#DDEE56', 
+                        t_highlight: '#F0F4C3', 
+                        t_shadow: '#324E68' 
+                    }, 
+                    fontFamily: { sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'] } 
+                } 
+            } 
+        }
+    &lt;/script&gt;
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; background-color: #3F6283; position: relative; margin: 0 auto; overflow: hidden; }
+        .text-shadow-hard { text-shadow: 4px 4px 0px #324E68; }
+        .title-italic { font-style: italic; font-weight: 900; letter-spacing: -0.02em; }
+        /* 背景大文字水印 */
+        .bg-watermark {
+            position: absolute;
+            font-size: 260px;
+            font-weight: 900;
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.03);
+            line-height: 1;
+            z-index: 0;
+            pointer-events: none;
+            text-transform: uppercase;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;!-- 背景装饰：水印文字 --&gt;
+        &lt;div class=&quot;bg-watermark -bottom-10 -right-10&quot;&gt;AGENDA&lt;/div&gt;
+        &lt;div class=&quot;bg-watermark -top-10 -left-10&quot;&gt;TENNIS&lt;/div&gt;
+
+        &lt;!-- 统一页眉 --&gt;
+        &lt;header class=&quot;relative z-20 w-full h-[100px] bg-t_accent p-3&quot;&gt;
+            &lt;div class=&quot;w-full h-full border-2 border-dashed border-white rounded-lg flex items-center justify-center gap-16&quot;&gt;
+                &lt;nav class=&quot;flex gap-12&quot;&gt;
+                    &lt;div class=&quot;bg-t_highlight px-10 py-2 rounded-full shadow-sm text-t_primary font-bold uppercase tracking-wide text-sm cursor-default&quot;&gt;home&lt;/div&gt;
+                    &lt;div class=&quot;bg-t_highlight px-10 py-2 rounded-full shadow-sm text-t_primary font-bold uppercase tracking-wide text-sm opacity-80 cursor-default&quot;&gt;content&lt;/div&gt;
+                    &lt;div class=&quot;bg-t_highlight px-10 py-2 rounded-full shadow-sm text-t_primary font-bold uppercase tracking-wide text-sm opacity-80 cursor-default&quot;&gt;contact&lt;/div&gt;
+                &lt;/nav&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;main class=&quot;relative z-10 h-[620px] px-20 flex flex-col justify-center&quot;&gt;
+            &lt;!-- 标题部分 --&gt;
+            &lt;div class=&quot;mb-10 flex items-end gap-6&quot;&gt;
+                &lt;h1 class=&quot;text-8xl text-white title-italic uppercase text-shadow-hard&quot;&gt;Contents&lt;/h1&gt;
+                &lt;div class=&quot;h-2 flex-grow bg-t_accent mb-4 rounded-full opacity-50&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- 目录网格：8项 --&gt;
+            &lt;div class=&quot;grid grid-cols-2 gap-x-16 gap-y-6&quot;&gt;
+                &lt;!-- 01 --&gt;
+                &lt;div class=&quot;group flex items-center gap-6&quot;&gt;
+                    &lt;div class=&quot;text-4xl font-black italic text-t_accent text-shadow-hard w-16&quot;&gt;01&lt;/div&gt;
+                    &lt;div class=&quot;h-16 flex-grow bg-t_shadow/40 border-l-4 border-t_accent rounded-r-xl flex items-center px-6 transition-all hover:bg-t_shadow/60 hover:translate-x-2&quot;&gt;
+                        &lt;span class=&quot;text-white text-xl font-bold uppercase tracking-widest&quot;&gt;Introduction to Tennis&lt;/span&gt;
+                        &lt;i class=&quot;fa-solid fa-chevron-right ml-auto text-t_accent opacity-50&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 02 --&gt;
+                &lt;div class=&quot;group flex items-center gap-6&quot;&gt;
+                    &lt;div class=&quot;text-4xl font-black italic text-t_accent text-shadow-hard w-16&quot;&gt;02&lt;/div&gt;
+                    &lt;div class=&quot;h-16 flex-grow bg-t_shadow/40 border-l-4 border-t_accent rounded-r-xl flex items-center px-6 transition-all hover:bg-t_shadow/60 hover:translate-x-2&quot;&gt;
+                        &lt;span class=&quot;text-white text-xl font-bold uppercase tracking-widest&quot;&gt;Essential Equipment&lt;/span&gt;
+                        &lt;i class=&quot;fa-solid fa-chevron-right ml-auto text-t_accent opacity-50&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 03 --&gt;
+                &lt;div class=&quot;group flex items-center gap-6&quot;&gt;
+                    &lt;div class=&quot;text-4xl font-black italic text-t_accent text-shadow-hard w-16&quot;&gt;03&lt;/div&gt;
+                    &lt;div class=&quot;h-16 flex-grow bg-t_shadow/40 border-l-4 border-t_accent rounded-r-xl flex items-center px-6 transition-all hover:bg-t_shadow/60 hover:translate-x-2&quot;&gt;
+                        &lt;span class=&quot;text-white text-xl font-bold uppercase tracking-widest&quot;&gt;Techniques &amp; Skills&lt;/span&gt;
+                        &lt;i class=&quot;fa-solid fa-chevron-right ml-auto text-t_accent opacity-50&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 04 --&gt;
+                &lt;div class=&quot;group flex items-center gap-6&quot;&gt;
+                    &lt;div class=&quot;text-4xl font-black italic text-t_accent text-shadow-hard w-16&quot;&gt;04&lt;/div&gt;
+                    &lt;div class=&quot;h-16 flex-grow bg-t_shadow/40 border-l-4 border-t_accent rounded-r-xl flex items-center px-6 transition-all hover:bg-t_shadow/60 hover:translate-x-2&quot;&gt;
+                        &lt;span class=&quot;text-white text-xl font-bold uppercase tracking-widest&quot;&gt;Famous Players&lt;/span&gt;
+                        &lt;i class=&quot;fa-solid fa-chevron-right ml-auto text-t_accent opacity-50&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 05 --&gt;
+                &lt;div class=&quot;group flex items-center gap-6&quot;&gt;
+                    &lt;div class=&quot;text-4xl font-black italic text-t_accent text-shadow-hard w-16&quot;&gt;05&lt;/div&gt;
+                    &lt;div class=&quot;h-16 flex-grow bg-t_shadow/40 border-l-4 border-t_accent rounded-r-xl flex items-center px-6 transition-all hover:bg-t_shadow/60 hover:translate-x-2&quot;&gt;
+                        &lt;span class=&quot;text-white text-xl font-bold uppercase tracking-widest&quot;&gt;Major Tournaments&lt;/span&gt;
+                        &lt;i class=&quot;fa-solid fa-chevron-right ml-auto text-t_accent opacity-50&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 06 --&gt;
+                &lt;div class=&quot;group flex items-center gap-6&quot;&gt;
+                    &lt;div class=&quot;text-4xl font-black italic text-t_accent text-shadow-hard w-16&quot;&gt;06&lt;/div&gt;
+                    &lt;div class=&quot;h-16 flex-grow bg-t_shadow/40 border-l-4 border-t_accent rounded-r-xl flex items-center px-6 transition-all hover:bg-t_shadow/60 hover:translate-x-2&quot;&gt;
+                        &lt;span class=&quot;text-white text-xl font-bold uppercase tracking-widest&quot;&gt;Court Surfaces&lt;/span&gt;
+                        &lt;i class=&quot;fa-solid fa-chevron-right ml-auto text-t_accent opacity-50&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 07 --&gt;
+                &lt;div class=&quot;group flex items-center gap-6&quot;&gt;
+                    &lt;div class=&quot;text-4xl font-black italic text-t_accent text-shadow-hard w-16&quot;&gt;07&lt;/div&gt;
+                    &lt;div class=&quot;h-16 flex-grow bg-t_shadow/40 border-l-4 border-t_accent rounded-r-xl flex items-center px-6 transition-all hover:bg-t_shadow/60 hover:translate-x-2&quot;&gt;
+                        &lt;span class=&quot;text-white text-xl font-bold uppercase tracking-widest&quot;&gt;Scoring System&lt;/span&gt;
+                        &lt;i class=&quot;fa-solid fa-chevron-right ml-auto text-t_accent opacity-50&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 08 --&gt;
+                &lt;div class=&quot;group flex items-center gap-6&quot;&gt;
+                    &lt;div class=&quot;text-4xl font-black italic text-t_accent text-shadow-hard w-16&quot;&gt;08&lt;/div&gt;
+                    &lt;div class=&quot;h-16 flex-grow bg-t_shadow/40 border-l-4 border-t_accent rounded-r-xl flex items-center px-6 transition-all hover:bg-t_shadow/60 hover:translate-x-2&quot;&gt;
+                        &lt;span class=&quot;text-white text-xl font-bold uppercase tracking-widest&quot;&gt;Physical Benefits&lt;/span&gt;
+                        &lt;i class=&quot;fa-solid fa-chevron-right ml-auto text-t_accent opacity-50&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- 底部装饰条 --&gt;
+            &lt;div class=&quot;mt-12 flex gap-3&quot;&gt;
+                &lt;div class=&quot;w-12 h-1 bg-t_accent rounded-full&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;w-6 h-1 bg-t_accent rounded-full opacity-60&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;w-3 h-1 bg-t_accent rounded-full opacity-30&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/main&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 3
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Basic Rules of Tennis - Design Remake&lt;/title&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryBg: '#3F6283',
+                        containerBg: '#6292C2',
+                        accent: '#DDEE56',
+                        highlight: '#F0F4C3',
+                        detail: '#324E68',
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        /* CSS Reset &amp; Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container Definition */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background-color: #3F6283; /* Primary Background */
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Custom Utilities */
+        .text-shadow-lg {
+            text-shadow: 2px 4px 6px rgba(50, 78, 104, 0.4);
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+
+        &lt;header class=&quot;relative z-20 w-full h-[100px] bg-[#DDEE56] p-3&quot;&gt;
+            &lt;div class=&quot;w-full h-full border-2 border-dashed border-white rounded-lg flex items-center justify-center gap-16&quot;&gt;
+                &lt;nav class=&quot;flex gap-12&quot;&gt;
+                    &lt;div class=&quot;bg-[#F0F4C3] px-10 py-2 rounded-full shadow-sm text-[#3F6283] font-bold uppercase tracking-wide text-sm cursor-default&quot;&gt;
+                        home
+                    &lt;/div&gt;
+                    &lt;div class=&quot;bg-[#F0F4C3] px-10 py-2 rounded-full shadow-sm text-[#3F6283] font-bold uppercase tracking-wide text-sm opacity-80 cursor-default&quot;&gt;
+                        content
+                    &lt;/div&gt;
+                    &lt;div class=&quot;bg-[#F0F4C3] px-10 py-2 rounded-full shadow-sm text-[#3F6283] font-bold uppercase tracking-wide text-sm opacity-80 cursor-default&quot;&gt;
+                        contact
+                    &lt;/div&gt;
+                &lt;/nav&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;div class=&quot;w-full h-[calc(720px-100px)] flex items-center justify-center px-16 relative&quot;&gt;
+            
+            &lt;div class=&quot;absolute top-10 right-20 w-64 h-64 bg-white opacity-5 rounded-full blur-3xl&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;absolute bottom-10 left-20 w-48 h-48 bg-accent opacity-10 rounded-full blur-2xl&quot;&gt;&lt;/div&gt;
+
+            &lt;div class=&quot;w-full max-w-5xl h-[480px] bg-containerBg rounded-[40px] shadow-[0_20px_50px_rgba(50,78,104,0.5)] flex overflow-hidden relative border border-white/20&quot;&gt;
+                
+                &lt;div class=&quot;w-7/12 p-12 flex flex-col justify-center z-10 relative&quot;&gt;
+                    &lt;h1 class=&quot;text-6xl font-black text-white italic leading-tight mb-8 text-shadow-lg tracking-tight&quot;&gt;
+                        &lt;span&gt;Basic Rules&lt;/span&gt;&lt;br&gt;
+                        &lt;span class=&quot;text-accent&quot;&gt;of Tennis&lt;/span&gt;
+                    &lt;/h1&gt;
+
+                    &lt;div class=&quot;space-y-4&quot;&gt;
+                        &lt;p class=&quot;text-white text-lg leading-relaxed opacity-90 font-light&quot;&gt;
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit leo in felis ultrices, ut vulputate sem tincidunt.
+                        &lt;/p&gt;
+                        &lt;p class=&quot;text-white text-lg leading-relaxed opacity-90 font-light&quot;&gt;
+                            Etiam mattis venenatis nunc, in eleifend purus. Etiam tincidunt justo dui, non elementum sapien pretium id.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;mt-8 flex items-center gap-3&quot;&gt;
+                        &lt;i class=&quot;fas fa-table-tennis text-accent text-2xl&quot;&gt;&lt;/i&gt;
+                        &lt;span class=&quot;text-white/60 text-sm font-medium tracking-wide&quot;&gt;OFFICIAL GUIDELINES&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;w-5/12 relative h-full bg-detail/10&quot;&gt;
+                    &lt;div class=&quot;absolute inset-0 w-full h-full&quot;&gt;
+                        &lt;img 
+                            src=&quot;https://images.unsplash.com/photo-1627627447668-d142c35db834?q=80&amp;w=800&amp;auto=format&amp;fit=crop&quot; 
+                            alt=&quot;Tennis Racket and Ball on Court&quot; 
+                            class=&quot;w-full h-full object-cover opacity-90 mix-blend-overlay&quot;
+                        &gt;
+                    &lt;/div&gt;
+                    
+                    &lt;div class=&quot;absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-containerBg&quot;&gt;&lt;/div&gt;
+                    
+                    &lt;div class=&quot;absolute bottom-10 right-10 w-24 h-24 bg-accent rounded-full shadow-lg flex items-center justify-center border-4 border-white animate-pulse&quot;&gt;
+                        &lt;i class=&quot;fas fa-baseball-ball text-white text-5xl opacity-80 rotate-45&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+
+        &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 4
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc='&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;History of Tennis - Creative Keynote&lt;/title&gt;
+    &lt;script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"&gt;&lt;/script&gt;
+    &lt;link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css"&gt;
+    &lt;link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css"&gt;
+
+    &lt;style&gt;
+        /* CSS Reset &amp; Global Settings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Typography Utilities */
+        .text-shadow-hard {
+            text-shadow: 4px 4px 0px rgba(50, 78, 104, 0.5);
+        }
+        
+        /* Utility for strictly hiding scrollbars */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id="page_container" class="w-[1280px] h-[720px] bg-[#3F6283] relative mx-auto overflow-hidden shadow-none"&gt;
+        
+        &lt;header class="relative z-20 w-full h-[100px] bg-[#DDEE56] p-3"&gt;
+            &lt;div class="w-full h-full border-2 border-dashed border-white rounded-lg flex items-center justify-center gap-16"&gt;
+                &lt;nav class="flex gap-12"&gt;
+                    &lt;div class="bg-[#F0F4C3] px-10 py-2 rounded-full shadow-sm text-[#3F6283] font-bold uppercase tracking-wide text-sm cursor-default"&gt;
+                        home
+                    &lt;/div&gt;
+                    &lt;div class="bg-[#F0F4C3] px-10 py-2 rounded-full shadow-sm text-[#3F6283] font-bold uppercase tracking-wide text-sm opacity-80 cursor-default"&gt;
+                        content
+                    &lt;/div&gt;
+                    &lt;div class="bg-[#F0F4C3] px-10 py-2 rounded-full shadow-sm text-[#3F6283] font-bold uppercase tracking-wide text-sm opacity-80 cursor-default"&gt;
+                        contact
+                    &lt;/div&gt;
+                &lt;/nav&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;div class="w-full h-[620px] flex px-20 pt-16 pb-12"&gt;
+            
+            &lt;div class="w-7/12 pr-12 flex flex-col justify-center relative z-10"&gt;
+                &lt;h1 class="text-white text-8xl font-black italic tracking-tighter leading-[0.9] text-shadow-hard mb-10"&gt;
+                    History of&lt;br&gt;Tennis
+                &lt;/h1&gt;
+                
+                &lt;div class="w-24 h-2 bg-[#DDEE56] mb-8 rounded-full"&gt;&lt;/div&gt;
+
+                &lt;p class="text-white text-xl font-light leading-relaxed opacity-90 text-justify"&gt;
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit leo in felis ultrices, ut vulputate sem tincidunt. Etiam mattis venenatis nunc, in eleifend purus. Etiam tincidunt justo dui, non.
+                &lt;/p&gt;
+
+                &lt;/div&gt;
+
+            &lt;div class="w-5/12 flex items-center justify-center relative"&gt;
+                
+                &lt;div class="w-[420px] h-[480px] bg-[#6292C2] rounded-[40px] shadow-2xl relative flex items-end justify-center overflow-visible"&gt;
+                    
+                    &lt;div class="absolute inset-4 bg-[#3F6283] rounded-[32px] overflow-hidden"&gt;
+                        &lt;img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?q=80&amp;w=800&amp;auto=format&amp;fit=crop" 
+                             alt="Tennis Court Abstract" 
+                             class="w-full h-full object-cover opacity-80 mix-blend-overlay"&gt;
+                        
+                        &lt;div class="absolute bottom-6 left-6 text-white opacity-20"&gt;
+                            &lt;i class="fa-solid fa-table-tennis-paddle-ball text-6xl"&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class="absolute bottom-0 w-[280px] h-[360px] z-20"&gt;
+                         &lt;img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&amp;w=600&amp;auto=format&amp;fit=crop" 
+                              class="w-full h-full object-cover rounded-t-2xl shadow-lg border-4 border-[#F0F4C3]"
+                              alt="Tennis Umpire Chair View"&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class="absolute -top-10 -right-10 w-28 h-28 bg-[#DDEE56] rounded-full shadow-lg border-[6px] border-[#F0F4C3] flex items-center justify-center z-30"&gt;
+                        &lt;div class="w-20 h-20 border-r-[3px] border-white rounded-full opacity-60 transform rotate-45"&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class="absolute -top-4 -right-24 flex flex-col gap-2 z-10 opacity-60"&gt;
+                         &lt;div class="w-24 h-1 bg-white rounded-full"&gt;&lt;/div&gt;
+                         &lt;div class="w-32 h-1 bg-white rounded-full ml-4"&gt;&lt;/div&gt;
+                         &lt;div class="w-20 h-1 bg-white rounded-full ml-2"&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="absolute bottom-0 left-0 w-full h-full pointer-events-none overflow-hidden z-0"&gt;
+            &lt;div class="absolute -bottom-20 -left-20 text-[#324E68] opacity-10 transform rotate-12"&gt;
+                &lt;i class="fa-solid fa-baseball-bat-ball text-[400px]"&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;'>
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 5
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Court Surfaces - Tennis Presentation&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;script&gt;
+        tailwind.config = { theme: { extend: { colors: { t_primary: '#3F6283', t_container: '#6292C2', t_accent: '#DDEE56', t_highlight: '#F0F4C3', t_shadow: '#324E68' }, fontFamily: { sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'] } } } }
+    &lt;/script&gt;
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; background-color: #3F6283; position: relative; margin: 0 auto; overflow: hidden; }
+        .text-shadow-hard { text-shadow: 4px 4px 0px #324E68; }
+        .title-italic { font-style: italic; font-weight: 900; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;!-- 统一页眉 --&gt;
+        &lt;header class=&quot;relative z-20 w-full h-[100px] bg-t_accent p-3&quot;&gt;
+            &lt;div class=&quot;w-full h-full border-2 border-dashed border-white rounded-lg flex items-center justify-center gap-16&quot;&gt;
+                &lt;nav class=&quot;flex gap-12&quot;&gt;
+                    &lt;div class=&quot;bg-t_highlight px-10 py-2 rounded-full shadow-sm text-t_primary font-bold uppercase tracking-wide text-sm cursor-default&quot;&gt;home&lt;/div&gt;
+                    &lt;div class=&quot;bg-t_highlight px-10 py-2 rounded-full shadow-sm text-t_primary font-bold uppercase tracking-wide text-sm opacity-80 cursor-default&quot;&gt;content&lt;/div&gt;
+                    &lt;div class=&quot;bg-t_highlight px-10 py-2 rounded-full shadow-sm text-t_primary font-bold uppercase tracking-wide text-sm opacity-80 cursor-default&quot;&gt;contact&lt;/div&gt;
+                &lt;/nav&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;main class=&quot;h-[620px] px-16 pt-12&quot;&gt;
+            &lt;h1 class=&quot;text-6xl text-white title-italic uppercase text-center mb-12 text-shadow-hard&quot;&gt;
+                Playing &lt;span class=&quot;text-t_accent&quot;&gt;Surfaces&lt;/span&gt;
+            &lt;/h1&gt;
+            &lt;div class=&quot;grid grid-cols-3 gap-10&quot;&gt;
+                &lt;div class=&quot;bg-t_container/20 border-2 border-white/20 rounded-3xl p-6 relative overflow-hidden&quot;&gt;
+                    &lt;div class=&quot;w-16 h-16 bg-t_accent rounded-2xl mb-4 flex items-center justify-center text-t_primary text-3xl font-black italic&quot;&gt;G&lt;/div&gt;
+                    &lt;h3 class=&quot;text-white text-2xl font-black italic mb-2 uppercase&quot;&gt;Grass&lt;/h3&gt;
+                    &lt;p class=&quot;text-white/80 font-light text-sm mb-4 leading-relaxed&quot;&gt;Fastest surface, traditional choice for Wimbledon. Favors serve and volley styles.&lt;/p&gt;
+                    &lt;div class=&quot;h-32 rounded-xl overflow-hidden shadow-inner&quot;&gt;&lt;img src=&quot;https://images.unsplash.com/photo-1551773188-0801da13ddaf?q=80&amp;w=400&quot; class=&quot;w-full h-full object-cover&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;bg-t_container/20 border-2 border-white/20 rounded-3xl p-6 relative overflow-hidden translate-y-4&quot;&gt;
+                    &lt;div class=&quot;w-16 h-16 bg-t_accent rounded-2xl mb-4 flex items-center justify-center text-t_primary text-3xl font-black italic&quot;&gt;C&lt;/div&gt;
+                    &lt;h3 class=&quot;text-white text-2xl font-black italic mb-2 uppercase&quot;&gt;Clay&lt;/h3&gt;
+                    &lt;p class=&quot;text-white/80 font-light text-sm mb-4 leading-relaxed&quot;&gt;Slower bounce, high durability. Favors baseline specialists and long rallies.&lt;/p&gt;
+                    &lt;div class=&quot;h-32 rounded-xl overflow-hidden shadow-inner&quot;&gt;&lt;img src=&quot;https://images.unsplash.com/photo-1592709823125-a191f07a2a5e?q=80&amp;w=400&quot; class=&quot;w-full h-full object-cover&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;bg-t_container/20 border-2 border-white/20 rounded-3xl p-6 relative overflow-hidden&quot;&gt;
+                    &lt;div class=&quot;w-16 h-16 bg-t_accent rounded-2xl mb-4 flex items-center justify-center text-t_primary text-3xl font-black italic&quot;&gt;H&lt;/div&gt;
+                    &lt;h3 class=&quot;text-white text-2xl font-black italic mb-2 uppercase&quot;&gt;Hard&lt;/h3&gt;
+                    &lt;p class=&quot;text-white/80 font-light text-sm mb-4 leading-relaxed&quot;&gt;The most common surface. Provides a consistent bounce and balance of speed.&lt;/p&gt;
+                    &lt;div class=&quot;h-32 rounded-xl overflow-hidden shadow-inner&quot;&gt;&lt;img src=&quot;https://images.unsplash.com/photo-1622279457486-62dcc4a4977b?q=80&amp;w=400&quot; class=&quot;w-full h-full object-cover&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/main&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 6
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;The Tennis Court - Content Layout&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        /* Tennis Ball CSS Art */
+        .tennis-ball { background: #DDEE56; position: relative; overflow: hidden; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+        .tennis-ball::before, .tennis-ball::after { content: &quot;&quot;; position: absolute; border: 3px solid white; border-radius: 50%; width: 70%; height: 70%; top: 15%; left: 15%; opacity: 0.8; }
+        .tennis-ball::before { border-color: transparent transparent transparent white; transform: rotate(-45deg) scale(1.4) translate(-10%, -10%); }
+        .tennis-ball::after { border-color: white transparent transparent transparent; transform: rotate(-45deg) scale(1.4) translate(10%, 10%); }
+        
+        .title-shadow { text-shadow: 4px 4px 0px #324E68; }
+        
+        /* Custom Scrollbar hide */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    &lt;/style&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        t_primary: '#3F6283',
+                        t_container: '#6292C2',
+                        t_accent: '#DDEE56',
+                        t_highlight: '#F0F4C3',
+                        t_shadow: '#324E68',
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot; class=&quot;w-[1280px] h-[720px] mx-auto relative bg-t_primary overflow-hidden&quot;&gt;
+        
+        &lt;header class=&quot;relative z-30 w-full h-[100px] bg-t_accent p-3&quot;&gt;
+            &lt;div class=&quot;w-full h-full border-2 border-dashed border-white rounded-lg flex items-center justify-center gap-16&quot;&gt;
+                &lt;nav class=&quot;flex gap-12&quot;&gt;
+                    &lt;div class=&quot;bg-t_highlight px-10 py-2 rounded-full shadow-sm text-t_primary font-bold uppercase tracking-wide text-sm cursor-default&quot;&gt;home&lt;/div&gt;
+                    &lt;div class=&quot;bg-t_highlight px-10 py-2 rounded-full shadow-sm text-t_primary font-bold uppercase tracking-wide text-sm opacity-80 cursor-default&quot;&gt;content&lt;/div&gt;
+                    &lt;div class=&quot;bg-t_highlight px-10 py-2 rounded-full shadow-sm text-t_primary font-bold uppercase tracking-wide text-sm opacity-80 cursor-default&quot;&gt;contact&lt;/div&gt;
+                &lt;/nav&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;div class=&quot;absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none z-0&quot;&gt;
+            &lt;div class=&quot;absolute top-[20%] right-[-5%] w-[600px] h-[600px] border-[20px] border-white rounded-full opacity-20&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] bg-t_container rounded-full opacity-30 blur-3xl&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;relative z-10 w-full h-[calc(720px-100px)] flex px-16 py-10 gap-12 items-center&quot;&gt;
+            
+            &lt;div class=&quot;w-1/3 flex flex-col justify-center relative&quot;&gt;
+                &lt;div class=&quot;absolute -top-12 -left-8 w-20 h-20 rounded-full tennis-ball z-0 opacity-80 animate-bounce&quot; style=&quot;animation-duration: 3s;&quot;&gt;&lt;/div&gt;
+                
+                &lt;h1 class=&quot;relative z-10 text-7xl font-black italic text-white leading-[0.9] title-shadow mb-8 tracking-tight&quot;&gt;
+                    The&lt;br&gt;&lt;span class=&quot;text-t_accent&quot;&gt;Tennis&lt;/span&gt;&lt;br&gt;Court
+                &lt;/h1&gt;
+                
+                &lt;p class=&quot;text-white text-lg font-light leading-relaxed opacity-90 text-justify border-l-4 border-t_accent pl-6&quot;&gt;
+                    Understanding the dimensions and zones of a standard tennis court is essential for mastering the game's strategy and movement.
+                &lt;/p&gt;
+
+                &lt;div class=&quot;mt-8 flex flex-col gap-4&quot;&gt;
+                    &lt;div class=&quot;flex items-center gap-4 text-white/80&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-ruler-combined text-t_accent text-xl&quot;&gt;&lt;/i&gt;
+                        &lt;span class=&quot;text-sm font-medium tracking-wide uppercase&quot;&gt;23.77m Length&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;flex items-center gap-4 text-white/80&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-arrows-left-right text-t_accent text-xl&quot;&gt;&lt;/i&gt;
+                        &lt;span class=&quot;text-sm font-medium tracking-wide uppercase&quot;&gt;8.23m Width (Singles)&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;w-2/3 grid grid-cols-2 grid-rows-2 gap-6 h-full&quot;&gt;
+                
+                &lt;div class=&quot;w-full h-full bg-t_container/80 backdrop-blur-sm p-8 rounded-3xl border border-white/20 shadow-lg group hover:bg-t_container transition-all duration-300 flex flex-col justify-center&quot;&gt;
+                    &lt;div class=&quot;w-12 h-12 bg-t_shadow rounded-full flex items-center justify-center mb-4 text-t_accent text-2xl group-hover:scale-110 transition-transform&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-layer-group&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;h3 class=&quot;text-white text-xl font-bold mb-2&quot;&gt;Court Surfaces&lt;/h3&gt;
+                    &lt;p class=&quot;text-white/80 text-sm leading-relaxed&quot;&gt;
+                        Tennis is played on a variety of surfaces including grass and clay. Each surface affects the speed and bounce of the ball differently.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;w-full h-full bg-t_container/80 backdrop-blur-sm p-8 rounded-3xl border border-white/20 shadow-lg group hover:bg-t_container transition-all duration-300 flex flex-col justify-center&quot;&gt;
+                    &lt;div class=&quot;w-12 h-12 bg-t_shadow rounded-full flex items-center justify-center mb-4 text-t_accent text-2xl group-hover:scale-110 transition-transform&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-border-all&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;h3 class=&quot;text-white text-xl font-bold mb-2&quot;&gt;The Net&lt;/h3&gt;
+                    &lt;p class=&quot;text-white/80 text-sm leading-relaxed&quot;&gt;
+                        The net divides the court into two equal halves. It stands 3 feet (0.914 m) high at the center and 3.5 feet (1.07 m) at the posts.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;w-full h-full bg-t_container/80 backdrop-blur-sm p-8 rounded-3xl border border-white/20 shadow-lg group hover:bg-t_container transition-all duration-300 flex flex-col justify-center&quot;&gt;
+                    &lt;div class=&quot;w-12 h-12 bg-t_shadow rounded-full flex items-center justify-center mb-4 text-t_accent text-2xl group-hover:scale-110 transition-transform&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-bullseye&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;h3 class=&quot;text-white text-xl font-bold mb-2&quot;&gt;Service Zones&lt;/h3&gt;
+                    &lt;p class=&quot;text-white/80 text-sm leading-relaxed&quot;&gt;
+                        The service boxes are crucial for starting the point. Serving into the correct box diagonally is the first rule of play.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;w-full h-full bg-t_accent p-8 rounded-3xl shadow-lg flex flex-col justify-center items-center text-center relative overflow-hidden&quot;&gt;
+                    &lt;div class=&quot;absolute -right-4 -bottom-4 text-t_highlight opacity-40 text-8xl&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-table-tennis-paddle-ball&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;h3 class=&quot;text-t_shadow text-5xl font-black mb-1 z-10&quot;&gt;78&lt;span class=&quot;text-3xl&quot;&gt;ft&lt;/span&gt;&lt;/h3&gt;
+                    &lt;p class=&quot;text-t_shadow font-bold uppercase tracking-widest text-sm z-10&quot;&gt;Total Length&lt;/p&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;footer class=&quot;absolute bottom-4 left-0 w-full text-center z-30&quot;&gt;
+        &lt;/footer&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 7
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc='&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Techniques &amp; Skills - Tennis Keynote&lt;/title&gt;
+    &lt;script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"&gt;&lt;/script&gt;
+    &lt;link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css"&gt;
+    &lt;link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css"&gt;
+    
+    &lt;style&gt;
+        /* CSS Reset &amp; Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container Styles - Strictly 1280x720 */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #3F6283; /* Primary Background */
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+            /* No outer shadow as requested */
+        }
+
+        /* Typography Utilities */
+        .text-shadow-hard {
+            text-shadow: 4px 4px 0px #324E68;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id="page_container"&gt;
+        
+        &lt;header class="relative z-20 w-full h-[100px] bg-[#DDEE56] p-3"&gt;
+            &lt;div class="w-full h-full border-2 border-dashed border-white rounded-lg flex items-center justify-center gap-16"&gt;
+                &lt;nav class="flex gap-12"&gt;
+                    &lt;div class="bg-[#F0F4C3] px-10 py-2 rounded-full shadow-sm text-[#3F6283] font-bold uppercase tracking-wide text-sm cursor-default"&gt;
+                        home
+                    &lt;/div&gt;
+                    &lt;div class="bg-[#F0F4C3] px-10 py-2 rounded-full shadow-sm text-[#3F6283] font-bold uppercase tracking-wide text-sm opacity-80 cursor-default"&gt;
+                        content
+                    &lt;/div&gt;
+                    &lt;div class="bg-[#F0F4C3] px-10 py-2 rounded-full shadow-sm text-[#3F6283] font-bold uppercase tracking-wide text-sm opacity-80 cursor-default"&gt;
+                        contact
+                    &lt;/div&gt;
+                &lt;/nav&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;main class="grid grid-cols-12 gap-8 h-[calc(720px-100px)] w-full px-16 pt-12 pb-8"&gt;
+            
+            &lt;div class="col-span-6 flex flex-col justify-center pr-8 z-10"&gt;
+                &lt;div class="w-20 h-2 bg-[#DDEE56] mb-6 rounded-full"&gt;&lt;/div&gt;
+
+                &lt;h1 class="text-white text-8xl font-black italic leading-[0.9] tracking-tight mb-8 text-shadow-hard uppercase"&gt;
+                    Techniques &lt;br&gt;
+                    &lt;span class="text-[#DDEE56]"&gt; &amp; Skills&lt;/span&gt;
+                &lt;/h1&gt;
+
+                &lt;div class="bg-[#324E68]/30 p-6 rounded-lg border-l-4 border-[#DDEE56]"&gt;
+                    &lt;p class="text-white text-lg leading-relaxed font-light opacity-90"&gt;
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit leo in felis ultrices, ut vulputate sem tincidunt. Etiam mattis venenatis nunc, in eleifend purus. Etiam tincidunt justo dui, non.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+                
+                &lt;div class="mt-8 flex items-center gap-4"&gt;
+                    &lt;div class="w-12 h-12 rounded-full bg-[#DDEE56] flex items-center justify-center text-[#3F6283]"&gt;
+                        &lt;i class="fa-solid fa-play text-xl"&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;p class="text-white font-bold tracking-wide"&gt;WATCH TUTORIAL&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class="col-span-6 relative flex items-center justify-center"&gt;
+                
+                &lt;div class="absolute w-[450px] h-[480px] bg-[#6292C2] rounded-[40px] rotate-3 right-4 top-4 border-2 border-[#FFFFFF]/10 z-0"&gt;&lt;/div&gt;
+
+                &lt;div class="absolute left-[-40px] top-[40%] z-20 flex gap-2 opacity-60"&gt;
+                     &lt;div class="w-16 h-1 bg-white rounded-full"&gt;&lt;/div&gt;
+                     &lt;div class="w-10 h-1 bg-white rounded-full"&gt;&lt;/div&gt;
+                     &lt;div class="w-4 h-1 bg-white rounded-full"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                
+                &lt;div class="relative z-10 w-[420px] h-[520px] overflow-hidden rounded-[30px] border-4 border-white shadow-2xl rotate-[-2deg]"&gt;
+                    &lt;img src="https://images.unsplash.com/photo-1599474924187-334a4ae513ab?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" 
+                         alt="Professional Tennis Player Serving" 
+                         class="w-full h-full object-cover"&gt;
+                    
+                    &lt;div class="absolute inset-0 bg-gradient-to-t from-[#3F6283]/80 to-transparent"&gt;&lt;/div&gt;
+                    
+                    &lt;div class="absolute bottom-6 left-6"&gt;
+                        &lt;p class="text-[#DDEE56] font-bold uppercase text-sm tracking-widest mb-1"&gt;Pro Level&lt;/p&gt;
+                        &lt;p class="text-white font-medium text-lg"&gt;Serve Mastery&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class="absolute left-[-60px] top-[35%] w-24 h-24 bg-[#DDEE56] rounded-full shadow-lg border-4 border-white z-30 flex items-center justify-center text-[#3F6283]"&gt;
+                    &lt;i class="fa-solid fa-baseball text-5xl opacity-80 rotate-45"&gt;&lt;/i&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/main&gt;
+
+        &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;'>
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 8
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Tennis Keynote - Famous Players&lt;/title&gt;
+    
+    &lt;!-- Google Fonts --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        t_primary: '#3F6283',
+                        t_container: '#6292C2',
+                        t_accent: '#DDEE56',
+                        t_highlight: '#F0F4C3',
+                        t_white: '#FFFFFF',
+                        t_shadow: '#324E68',
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #3F6283;
+            overflow: hidden;
+        }
+        .text-depth { text-shadow: 4px 4px 0px #324E68; }
+        .title-italic { font-style: italic; font-weight: 800; letter-spacing: -0.02em; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;!-- Unified Header Section --&gt;
+        &lt;header class=&quot;relative z-20 w-full h-[100px] bg-t_accent p-3&quot;&gt;
+            &lt;div class=&quot;w-full h-full border-2 border-dashed border-white rounded-lg flex items-center justify-center gap-16&quot;&gt;
+                &lt;nav class=&quot;flex gap-12&quot;&gt;
+                    &lt;div class=&quot;bg-t_highlight px-10 py-2 rounded-full shadow-sm text-t_primary font-bold uppercase tracking-wide text-sm cursor-default&quot;&gt;home&lt;/div&gt;
+                    &lt;div class=&quot;bg-t_highlight px-10 py-2 rounded-full shadow-sm text-t_primary font-bold uppercase tracking-wide text-sm opacity-80 cursor-default&quot;&gt;content&lt;/div&gt;
+                    &lt;div class=&quot;bg-t_highlight px-10 py-2 rounded-full shadow-sm text-t_primary font-bold uppercase tracking-wide text-sm opacity-80 cursor-default&quot;&gt;contact&lt;/div&gt;
+                &lt;/nav&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;!-- Main Content Area --&gt;
+        &lt;main class=&quot;w-full h-[620px] flex items-center justify-center&quot;&gt;
+            &lt;div class=&quot;relative w-[900px] h-[420px] bg-t_container rounded-[40px] flex items-center shadow-[0_30px_60px_-10px_rgba(50,78,104,0.6)]&quot;&gt;
+                
+                &lt;div class=&quot;absolute -top-12 -left-12 text-t_accent opacity-20 text-9xl z-0&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-table-tennis-paddle-ball&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;w-5/12 h-full relative z-10 flex items-end justify-center&quot;&gt;
+                    &lt;div class=&quot;absolute bottom-0 left-0 w-[420px] h-[550px] overflow-hidden rounded-t-[100px] rounded-b-[40px] shadow-2xl transform -translate-x-12 translate-y-8 bg-white border-4 border-white&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1530915536962-d3a92994e431?q=80&amp;w=800&amp;auto=format&amp;fit=crop&quot; alt=&quot;Tennis Player Serving&quot; class=&quot;w-full h-full object-cover&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;absolute top-[-40px] right-[-20px] w-20 h-20 bg-t_accent rounded-full border-4 border-white shadow-lg flex items-center justify-center animate-bounce&quot;&gt;
+                         &lt;div class=&quot;w-full h-full rounded-full border-b-4 border-white opacity-50 absolute rotate-45&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;w-7/12 h-full flex flex-col justify-center pr-12 pl-4 z-10 text-right&quot;&gt;
+                    &lt;div class=&quot;mb-6&quot;&gt;
+                        &lt;h1 class=&quot;text-7xl text-white title-italic uppercase leading-none text-depth transform -rotate-1 origin-bottom-right&quot;&gt;
+                            Famous&lt;br&gt;Players
+                        &lt;/h1&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;text-white opacity-95&quot;&gt;
+                        &lt;p class=&quot;text-lg leading-relaxed font-medium mb-4&quot;&gt;
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit leo in felis ultrices, ut vulputate sem tincidunt.
+                        &lt;/p&gt;
+                        &lt;p class=&quot;text-base leading-relaxed font-light opacity-80&quot;&gt;
+                            Etiam mattis venenatis nunc, in eleifend purus. Etiam tincidunt justo dui, non vehicula est posuere at. Curabitur vitae ullamcorper.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;flex justify-end mt-6&quot;&gt;
+                        &lt;div class=&quot;h-2 w-24 bg-t_accent rounded-full&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/main&gt;
+
+        &lt;!-- Footer (URL Removed) --&gt;
+        &lt;footer class=&quot;absolute bottom-6 w-full text-center z-20&quot;&gt;&lt;/footer&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 9
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Major Tournaments - Tennis Keynote&lt;/title&gt;
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;!-- Google Fonts --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #3F6283; overflow: hidden; }
+        .text-shadow-lg { text-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+        .title-italic { font-style: italic; font-weight: 800; letter-spacing: -0.02em; }
+    &lt;/style&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        t_primary: '#3F6283',
+                        t_container: '#6292C2',
+                        t_accent: '#DDEE56',
+                        t_highlight: '#F0F4C3',
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;!-- Unified Header Section --&gt;
+        &lt;header class=&quot;relative z-20 w-full h-[100px] bg-t_accent p-3&quot;&gt;
+            &lt;div class=&quot;w-full h-full border-2 border-dashed border-white rounded-lg flex items-center justify-center gap-16&quot;&gt;
+                &lt;nav class=&quot;flex gap-12&quot;&gt;
+                    &lt;div class=&quot;bg-t_highlight px-10 py-2 rounded-full shadow-sm text-t_primary font-bold uppercase tracking-wide text-sm cursor-default&quot;&gt;home&lt;/div&gt;
+                    &lt;div class=&quot;bg-t_highlight px-10 py-2 rounded-full shadow-sm text-t_primary font-bold uppercase tracking-wide text-sm opacity-80 cursor-default&quot;&gt;content&lt;/div&gt;
+                    &lt;div class=&quot;bg-t_highlight px-10 py-2 rounded-full shadow-sm text-t_primary font-bold uppercase tracking-wide text-sm opacity-80 cursor-default&quot;&gt;contact&lt;/div&gt;
+                &lt;/nav&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;!-- Main Content Area --&gt;
+        &lt;div class=&quot;grid grid-cols-12 gap-8 h-[620px] px-20 items-center&quot;&gt;
+            &lt;div class=&quot;col-span-5 flex items-center justify-center relative&quot;&gt;
+                &lt;div class=&quot;absolute top-0 right-0 w-32 h-32 bg-t_accent rounded-full opacity-20 blur-2xl transform translate-x-1/2 -translate-y-1/2&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;bg-t_container p-8 rounded-3xl shadow-2xl relative w-full h-[420px] border border-white/10&quot;&gt;
+                    &lt;div class=&quot;absolute -top-6 -right-6 z-20 bg-t_accent rounded-full p-1 shadow-lg w-20 h-20 flex items-center justify-center&quot;&gt;
+                        &lt;i class=&quot;fas fa-baseball-ball text-4xl text-white opacity-80 rotate-45&quot;&gt;&lt;/i&gt; 
+                    &lt;/div&gt;
+                    &lt;div class=&quot;w-full h-full overflow-hidden rounded-2xl relative&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1627627256672-027a4613d528?q=80&amp;w=1000&amp;auto=format&amp;fit=crop&quot; class=&quot;w-full h-full object-cover&quot;&gt;
+                        &lt;div class=&quot;absolute inset-0 bg-gradient-to-t from-t_primary/80 to-transparent mix-blend-multiply&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;col-span-7 flex flex-col justify-center pl-8 pr-4&quot;&gt;
+                &lt;div class=&quot;w-16 h-2 bg-t_accent mb-6 rounded-full&quot;&gt;&lt;/div&gt;
+                &lt;h1 class=&quot;text-white text-7xl title-italic tracking-tight leading-none mb-8 text-shadow-lg&quot;&gt;
+                    Major &lt;br&gt;&lt;span class=&quot;text-t_accent&quot;&gt;Tournaments&lt;/span&gt;
+                &lt;/h1&gt;
+                &lt;div class=&quot;bg-t_container/30 p-6 rounded-xl border-l-4 border-t_accent backdrop-blur-sm&quot;&gt;
+                    &lt;p class=&quot;text-white text-lg font-light leading-relaxed opacity-90&quot;&gt;
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit leo in felis ultrices, ut vulputate sem tincidunt. Etiam mattis venenatis nunc, in eleifend purus.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;mt-8 flex items-center gap-4&quot;&gt;
+                     &lt;div class=&quot;w-10 h-10 rounded-full bg-t_highlight flex items-center justify-center text-t_primary&quot;&gt;
+                         &lt;i class=&quot;fas fa-arrow-right&quot;&gt;&lt;/i&gt;
+                     &lt;/div&gt;
+                     &lt;p class=&quot;text-t_highlight font-medium tracking-wide uppercase text-sm&quot;&gt;Explore Details&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Footer (URL Removed) --&gt;
+        &lt;footer class=&quot;absolute bottom-6 w-full text-center z-20&quot;&gt;&lt;/footer&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 10
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Grand Slams - Tennis Presentation&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;script&gt;
+        tailwind.config = { theme: { extend: { colors: { t_primary: '#3F6283', t_container: '#6292C2', t_accent: '#DDEE56', t_highlight: '#F0F4C3', t_shadow: '#324E68' }, fontFamily: { sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'] } } } }
+    &lt;/script&gt;
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; background-color: #3F6283; position: relative; margin: 0 auto; overflow: hidden; }
+        .text-shadow-hard { text-shadow: 4px 4px 0px #324E68; }
+        .title-italic { font-style: italic; font-weight: 900; }
+        /* Hide scrollbar */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;header class=&quot;relative z-20 w-full h-[100px] bg-t_accent p-3&quot;&gt;
+            &lt;div class=&quot;w-full h-full border-2 border-dashed border-white rounded-lg flex items-center justify-center gap-16&quot;&gt;
+                &lt;nav class=&quot;flex gap-12&quot;&gt;
+                    &lt;div class=&quot;bg-t_highlight px-10 py-2 rounded-full shadow-sm text-t_primary font-bold uppercase tracking-wide text-sm cursor-default&quot;&gt;home&lt;/div&gt;
+                    &lt;div class=&quot;bg-t_highlight px-10 py-2 rounded-full shadow-sm text-t_primary font-bold uppercase tracking-wide text-sm opacity-80 cursor-default&quot;&gt;content&lt;/div&gt;
+                    &lt;div class=&quot;bg-t_highlight px-10 py-2 rounded-full shadow-sm text-t_primary font-bold uppercase tracking-wide text-sm opacity-80 cursor-default&quot;&gt;contact&lt;/div&gt;
+                &lt;/nav&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;main class=&quot;h-[620px] px-12 pt-10&quot;&gt;
+            &lt;div class=&quot;text-center mb-10&quot;&gt;
+                &lt;h1 class=&quot;text-6xl text-white title-italic uppercase text-shadow-hard inline-block relative&quot;&gt;
+                    Grand &lt;span class=&quot;text-t_accent&quot;&gt;Slams&lt;/span&gt;
+                    &lt;div class=&quot;absolute -bottom-4 left-1/2 -translate-x-1/2 w-24 h-2 bg-white/20 rounded-full&quot;&gt;&lt;/div&gt;
+                &lt;/h1&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;grid grid-cols-4 gap-6 px-4&quot;&gt;
+                
+                &lt;div class=&quot;group bg-t_container/20 border-2 border-white/20 rounded-3xl p-5 relative overflow-hidden hover:-translate-y-3 transition-transform duration-300&quot;&gt;
+                    &lt;div class=&quot;absolute top-0 right-0 p-4 opacity-10 text-white text-6xl font-black italic&quot;&gt;01&lt;/div&gt;
+                    &lt;div class=&quot;w-12 h-12 bg-[#3498db] rounded-xl mb-4 flex items-center justify-center text-white text-xl shadow-lg&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-sun&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;h3 class=&quot;text-white text-xl font-black italic mb-1 uppercase&quot;&gt;Australian Open&lt;/h3&gt;
+                    &lt;p class=&quot;text-t_accent text-xs font-bold uppercase tracking-widest mb-3&quot;&gt;January • Hard Court&lt;/p&gt;
+                    &lt;div class=&quot;h-[250px] rounded-lg overflow-hidden border border-white/10&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1626245550570-71c4c6930096?q=80&amp;w=400&quot; class=&quot;w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;group bg-t_container/20 border-2 border-white/20 rounded-3xl p-5 relative overflow-hidden hover:-translate-y-3 transition-transform duration-300 delay-75&quot;&gt;
+                    &lt;div class=&quot;absolute top-0 right-0 p-4 opacity-10 text-white text-6xl font-black italic&quot;&gt;02&lt;/div&gt;
+                    &lt;div class=&quot;w-12 h-12 bg-[#e67e22] rounded-xl mb-4 flex items-center justify-center text-white text-xl shadow-lg&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-shoe-prints&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;h3 class=&quot;text-white text-xl font-black italic mb-1 uppercase&quot;&gt;French Open&lt;/h3&gt;
+                    &lt;p class=&quot;text-t_accent text-xs font-bold uppercase tracking-widest mb-3&quot;&gt;May • Clay Court&lt;/p&gt;
+                    &lt;div class=&quot;h-[250px] rounded-lg overflow-hidden border border-white/10&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1590416972767-f3177894a821?q=80&amp;w=400&quot; class=&quot;w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;group bg-t_container/20 border-2 border-white/20 rounded-3xl p-5 relative overflow-hidden hover:-translate-y-3 transition-transform duration-300 delay-150&quot;&gt;
+                    &lt;div class=&quot;absolute top-0 right-0 p-4 opacity-10 text-white text-6xl font-black italic&quot;&gt;03&lt;/div&gt;
+                    &lt;div class=&quot;w-12 h-12 bg-[#2ecc71] rounded-xl mb-4 flex items-center justify-center text-white text-xl shadow-lg&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-leaf&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;h3 class=&quot;text-white text-xl font-black italic mb-1 uppercase&quot;&gt;Wimbledon&lt;/h3&gt;
+                    &lt;p class=&quot;text-t_accent text-xs font-bold uppercase tracking-widest mb-3&quot;&gt;July • Grass Court&lt;/p&gt;
+                    &lt;div class=&quot;h-[250px] rounded-lg overflow-hidden border border-white/10&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1622279457486-62dcc4a4977b?q=80&amp;w=400&quot; class=&quot;w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;group bg-t_container/20 border-2 border-white/20 rounded-3xl p-5 relative overflow-hidden hover:-translate-y-3 transition-transform duration-300 delay-200&quot;&gt;
+                    &lt;div class=&quot;absolute top-0 right-0 p-4 opacity-10 text-white text-6xl font-black italic&quot;&gt;04&lt;/div&gt;
+                    &lt;div class=&quot;w-12 h-12 bg-[#2980b9] rounded-xl mb-4 flex items-center justify-center text-white text-xl shadow-lg&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-city&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;h3 class=&quot;text-white text-xl font-black italic mb-1 uppercase&quot;&gt;US Open&lt;/h3&gt;
+                    &lt;p class=&quot;text-t_accent text-xs font-bold uppercase tracking-widest mb-3&quot;&gt;August • Hard Court&lt;/p&gt;
+                    &lt;div class=&quot;h-[250px] rounded-lg overflow-hidden border border-white/10&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1589315181774-686414777a45?q=80&amp;w=400&quot; class=&quot;w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/main&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 11
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Scoring System - Tennis Presentation&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;script&gt;
+        tailwind.config = { theme: { extend: { colors: { t_primary: '#3F6283', t_container: '#6292C2', t_accent: '#DDEE56', t_highlight: '#F0F4C3', t_shadow: '#324E68' }, fontFamily: { sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'] } } } }
+    &lt;/script&gt;
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; background-color: #3F6283; position: relative; margin: 0 auto; overflow: hidden; }
+        .text-shadow-hard { text-shadow: 4px 4px 0px #324E68; }
+        .title-italic { font-style: italic; font-weight: 900; }
+        
+        /* Custom Scoreboard Font style */
+        .digital-font { font-family: monospace; letter-spacing: 0.1em; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;header class=&quot;relative z-20 w-full h-[100px] bg-t_accent p-3&quot;&gt;
+            &lt;div class=&quot;w-full h-full border-2 border-dashed border-white rounded-lg flex items-center justify-center gap-16&quot;&gt;
+                &lt;nav class=&quot;flex gap-12&quot;&gt;
+                    &lt;div class=&quot;bg-t_highlight px-10 py-2 rounded-full shadow-sm text-t_primary font-bold uppercase tracking-wide text-sm cursor-default&quot;&gt;home&lt;/div&gt;
+                    &lt;div class=&quot;bg-t_highlight px-10 py-2 rounded-full shadow-sm text-t_primary font-bold uppercase tracking-wide text-sm opacity-80 cursor-default&quot;&gt;content&lt;/div&gt;
+                    &lt;div class=&quot;bg-t_highlight px-10 py-2 rounded-full shadow-sm text-t_primary font-bold uppercase tracking-wide text-sm opacity-80 cursor-default&quot;&gt;contact&lt;/div&gt;
+                &lt;/nav&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;main class=&quot;h-[620px] px-16 pt-12 flex gap-10&quot;&gt;
+            
+            &lt;div class=&quot;w-5/12 flex flex-col justify-center&quot;&gt;
+                &lt;h1 class=&quot;text-8xl text-white title-italic uppercase text-shadow-hard mb-8 leading-[0.9]&quot;&gt;
+                    Scoring &lt;br&gt;&lt;span class=&quot;text-t_accent&quot;&gt;System&lt;/span&gt;
+                &lt;/h1&gt;
+                
+                &lt;div class=&quot;bg-black/40 p-6 rounded-3xl border-4 border-t_container relative shadow-2xl&quot;&gt;
+                    &lt;div class=&quot;absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-t_accent text-t_primary font-bold px-6 py-1 rounded-full uppercase text-xs tracking-widest border-2 border-white&quot;&gt;Live Match&lt;/div&gt;
+                    
+                    &lt;div class=&quot;flex justify-between items-center mb-4 border-b border-white/10 pb-4&quot;&gt;
+                        &lt;span class=&quot;text-white/60 font-bold uppercase text-sm&quot;&gt;Player&lt;/span&gt;
+                        &lt;div class=&quot;flex gap-6&quot;&gt;
+                            &lt;span class=&quot;text-white/60 font-bold uppercase text-sm w-8 text-center&quot;&gt;Set&lt;/span&gt;
+                            &lt;span class=&quot;text-white/60 font-bold uppercase text-sm w-8 text-center&quot;&gt;Game&lt;/span&gt;
+                            &lt;span class=&quot;text-t_accent font-bold uppercase text-sm w-12 text-center&quot;&gt;Point&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;flex justify-between items-center mb-2&quot;&gt;
+                        &lt;span class=&quot;text-white font-bold uppercase text-xl tracking-wider&quot;&gt;Federer&lt;/span&gt;
+                        &lt;div class=&quot;flex gap-6 digital-font&quot;&gt;
+                            &lt;span class=&quot;text-white font-bold text-2xl w-8 text-center&quot;&gt;1&lt;/span&gt;
+                            &lt;span class=&quot;text-white font-bold text-2xl w-8 text-center&quot;&gt;5&lt;/span&gt;
+                            &lt;span class=&quot;text-t_accent font-bold text-2xl w-12 text-center&quot;&gt;40&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;flex justify-between items-center&quot;&gt;
+                        &lt;span class=&quot;text-white/60 font-bold uppercase text-xl tracking-wider&quot;&gt;Nadal&lt;/span&gt;
+                        &lt;div class=&quot;flex gap-6 digital-font&quot;&gt;
+                            &lt;span class=&quot;text-white/60 font-bold text-2xl w-8 text-center&quot;&gt;1&lt;/span&gt;
+                            &lt;span class=&quot;text-white/60 font-bold text-2xl w-8 text-center&quot;&gt;5&lt;/span&gt;
+                            &lt;span class=&quot;text-white/60 font-bold text-2xl w-12 text-center&quot;&gt;30&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;w-7/12 flex flex-col gap-4 justify-center&quot;&gt;
+                
+                &lt;div class=&quot;bg-t_container/20 border-2 border-white/20 rounded-3xl p-6 flex items-center gap-6 group hover:bg-t_container/30 transition-colors&quot;&gt;
+                    &lt;div class=&quot;w-16 h-16 bg-t_highlight rounded-2xl flex-shrink-0 flex items-center justify-center text-t_primary text-3xl font-black italic shadow-md&quot;&gt;
+                        15
+                    &lt;/div&gt;
+                    &lt;div&gt;
+                        &lt;h3 class=&quot;text-t_accent text-xl font-black italic uppercase mb-1&quot;&gt;The Unique Scale&lt;/h3&gt;
+                        &lt;p class=&quot;text-white/90 text-sm font-light&quot;&gt;
+                            0 (Love) &amp;rarr; 15 &amp;rarr; 30 &amp;rarr; 40 &amp;rarr; Game. &lt;br&gt;
+                            If tied at 40-40, it's called &lt;b&gt;&quot;Deuce&quot;&lt;/b&gt;.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;bg-t_container/20 border-2 border-white/20 rounded-3xl p-6 flex items-center gap-6 group hover:bg-t_container/30 transition-colors&quot;&gt;
+                    &lt;div class=&quot;w-16 h-16 bg-t_container rounded-2xl flex-shrink-0 flex items-center justify-center text-white text-3xl font-black italic shadow-md border border-white/20&quot;&gt;
+                        06
+                    &lt;/div&gt;
+                    &lt;div&gt;
+                        &lt;h3 class=&quot;text-white text-xl font-black italic uppercase mb-1&quot;&gt;Winning a Game&lt;/h3&gt;
+                        &lt;p class=&quot;text-white/90 text-sm font-light&quot;&gt;
+                            First to win 4 points (leading by 2) wins the game.
+                            Winning 6 games wins a &lt;b&gt;Set&lt;/b&gt;.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;bg-t_container/20 border-2 border-white/20 rounded-3xl p-6 flex items-center gap-6 group hover:bg-t_container/30 transition-colors&quot;&gt;
+                    &lt;div class=&quot;w-16 h-16 bg-t_primary rounded-2xl flex-shrink-0 flex items-center justify-center text-t_accent text-3xl font-black italic shadow-md border border-white/20&quot;&gt;
+                        03
+                    &lt;/div&gt;
+                    &lt;div&gt;
+                        &lt;h3 class=&quot;text-white text-xl font-black italic uppercase mb-1&quot;&gt;The Match&lt;/h3&gt;
+                        &lt;p class=&quot;text-white/90 text-sm font-light&quot;&gt;
+                            Matches are usually &quot;Best of 3&quot; or &quot;Best of 5&quot; sets.
+                            &lt;br&gt;&lt;span class=&quot;opacity-60 text-xs&quot;&gt;Men's Grand Slams are always Best of 5.&lt;/span&gt;
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/main&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 12
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Grand Slams - Tennis Presentation&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;script&gt;
+        tailwind.config = { theme: { extend: { colors: { t_primary: '#3F6283', t_container: '#6292C2', t_accent: '#DDEE56', t_highlight: '#F0F4C3', t_shadow: '#324E68' }, fontFamily: { sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'] } } } }
+    &lt;/script&gt;
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; background-color: #3F6283; position: relative; margin: 0 auto; overflow: hidden; }
+        .text-shadow-hard { text-shadow: 4px 4px 0px #324E68; }
+        .title-italic { font-style: italic; font-weight: 900; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;!-- 统一页眉 --&gt;
+        &lt;header class=&quot;relative z-20 w-full h-[100px] bg-t_accent p-3&quot;&gt;
+            &lt;div class=&quot;w-full h-full border-2 border-dashed border-white rounded-lg flex items-center justify-center gap-16&quot;&gt;
+                &lt;nav class=&quot;flex gap-12&quot;&gt;
+                    &lt;div class=&quot;bg-t_highlight px-10 py-2 rounded-full shadow-sm text-t_primary font-bold uppercase tracking-wide text-sm cursor-default&quot;&gt;home&lt;/div&gt;
+                    &lt;div class=&quot;bg-t_highlight px-10 py-2 rounded-full shadow-sm text-t_primary font-bold uppercase tracking-wide text-sm opacity-80 cursor-default&quot;&gt;content&lt;/div&gt;
+                    &lt;div class=&quot;bg-t_highlight px-10 py-2 rounded-full shadow-sm text-t_primary font-bold uppercase tracking-wide text-sm opacity-80 cursor-default&quot;&gt;contact&lt;/div&gt;
+                &lt;/nav&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;main class=&quot;grid grid-cols-12 h-[620px] px-20 items-center gap-12&quot;&gt;
+            &lt;!-- 左侧标题区 --&gt;
+            &lt;div class=&quot;col-span-6&quot;&gt;
+                &lt;div class=&quot;w-20 h-2 bg-t_accent mb-6 rounded-full&quot;&gt;&lt;/div&gt;
+                &lt;h1 class=&quot;text-8xl text-white title-italic uppercase mb-6 text-shadow-hard leading-[0.85]&quot;&gt;
+                    The &lt;br&gt;&lt;span class=&quot;text-t_accent&quot;&gt;Grand Slams&lt;/span&gt;
+                &lt;/h1&gt;
+                &lt;p class=&quot;text-white text-xl font-light opacity-70 italic&quot;&gt;The pinnacle of professional tennis achievement.&lt;/p&gt;
+                &lt;div class=&quot;mt-8 flex gap-4 text-t_accent opacity-50 text-2xl&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-trophy&quot;&gt;&lt;/i&gt;
+                    &lt;i class=&quot;fa-solid fa-medal&quot;&gt;&lt;/i&gt;
+                    &lt;i class=&quot;fa-solid fa-star&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- 右侧卡片区 --&gt;
+            &lt;div class=&quot;col-span-6 grid grid-cols-2 gap-6&quot;&gt;
+                &lt;!-- Australian Open --&gt;
+                &lt;div class=&quot;bg-t_container p-6 rounded-3xl shadow-xl transform rotate-2 border border-white/20&quot;&gt;
+                    &lt;div class=&quot;flex justify-between items-start mb-2&quot;&gt;
+                        &lt;h4 class=&quot;text-white font-black italic text-xl border-b-2 border-t_accent/40 pb-1&quot;&gt;Australian Open&lt;/h4&gt;
+                        &lt;span class=&quot;text-t_accent text-sm font-bold uppercase&quot;&gt;Jan&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-white/90 text-sm font-bold mb-3&quot;&gt;Melbourne - Hard Court&lt;/p&gt;
+                    &lt;p class=&quot;text-white/70 text-gl leading-relaxed&quot;&gt;Known as the &quot;Happy Slam,&quot; it's the first major of the year, famous for its extreme heat and electric blue courts.&lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;!-- French Open --&gt;
+                &lt;div class=&quot;bg-t_shadow/50 p-6 rounded-3xl border border-white/10 backdrop-blur-md transform -rotate-1&quot;&gt;
+                    &lt;div class=&quot;flex justify-between items-start mb-2&quot;&gt;
+                        &lt;h4 class=&quot;text-t_accent font-black italic text-xl border-b-2 border-t_accent/40 pb-1&quot;&gt;French Open&lt;/h4&gt;
+                        &lt;span class=&quot;text-white/50 text-sm font-bold uppercase&quot;&gt;May&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-white/90 text-sm font-bold mb-3&quot;&gt;Paris - Clay Court&lt;/p&gt;
+                    &lt;p class=&quot;text-white/70 text-gl leading-relaxed&quot;&gt;Held at Roland-Garros, it's the world's premier clay-court event, demanding the highest physical endurance.&lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Wimbledon --&gt;
+                &lt;div class=&quot;bg-t_shadow/50 p-6 rounded-3xl border border-white/10 backdrop-blur-md transform rotate-1&quot;&gt;
+                    &lt;div class=&quot;flex justify-between items-start mb-2&quot;&gt;
+                        &lt;h4 class=&quot;text-t_accent font-black italic text-xl border-b-2 border-t_accent/40 pb-1&quot;&gt;Wimbledon&lt;/h4&gt;
+                        &lt;span class=&quot;text-white/50 text-sm font-bold uppercase&quot;&gt;July&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-white/90 text-sm font-bold mb-3&quot;&gt;London - Grass Court&lt;/p&gt;
+                    &lt;p class=&quot;text-white/70 text-gl leading-relaxed&quot;&gt;The oldest and most prestigious tournament. Famous for its grass courts and strict &quot;all-white&quot; dress code.&lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;!-- US Open --&gt;
+                &lt;div class=&quot;bg-t_container p-6 rounded-3xl shadow-xl transform -rotate-2 border border-white/20&quot;&gt;
+                    &lt;div class=&quot;flex justify-between items-start mb-2&quot;&gt;
+                        &lt;h4 class=&quot;text-white font-black italic text-xl border-b-2 border-t_accent/40 pb-1&quot;&gt;US Open&lt;/h4&gt;
+                        &lt;span class=&quot;text-t_accent text-sm font-bold uppercase&quot;&gt;Aug&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-white/90 text-sm font-bold mb-3&quot;&gt;New York - Hard Court&lt;/p&gt;
+                    &lt;p class=&quot;text-white/70 text-gl leading-relaxed&quot;&gt;Closing the Grand Slam season with high-energy night matches in the world's largest tennis stadium.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/main&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <script>
+   // 自动调整iframe高度
+    function resizeIframes() {
+        document.querySelectorAll('.responsive-iframe').forEach(iframe => {
+            try {
+                const doc = iframe.contentDocument || iframe.contentWindow.document;
+                const height = Math.max(
+                    doc.body.scrollHeight,
+                    doc.documentElement.scrollHeight,
+                    doc.body.offsetHeight,
+                    doc.documentElement.offsetHeight,
+                    doc.body.clientHeight,
+                    doc.documentElement.clientHeight
+                );
+                iframe.style.height = height + 'px';
+            } catch (e) {
+                console.log('无法调整iframe高度:', e);
+            }
+        });
+    }
+    
+    // 初始调整
+    window.addEventListener('load', resizeIframes);
+    
+    // 内容加载后调整
+    document.querySelectorAll('.responsive-iframe').forEach(iframe => {
+        iframe.addEventListener('load', function() {
+            resizeIframes();
+            // 对动态内容进行定期检查
+            setInterval(resizeIframes, 1000);
+        });
+    });
+  </script>
+ </body>
+</html>

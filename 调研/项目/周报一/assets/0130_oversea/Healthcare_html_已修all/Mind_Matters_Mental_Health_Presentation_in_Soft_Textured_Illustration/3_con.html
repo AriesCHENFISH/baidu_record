@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Presentation - Unified Style</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        /* --- Design System Variables (Synced with Reference) --- */
+        :root {
+            --bg-texture: #EAE5DE;
+            --primary-rose: #C97B88;
+            --accent-maroon: #9E5A65;
+            --text-ink: #1A1816;
+            --paper-white: #F2F0ED;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: var(--bg-texture);
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+            /* Reference Paper Texture */
+            background-image: 
+                radial-gradient(circle at 50% 50%, rgba(201, 123, 136, 0.15) 0%, transparent 60%),
+                repeating-linear-gradient(45deg, rgba(189, 186, 181, 0.1) 0px, rgba(189, 186, 181, 0.1) 1px, transparent 1px, transparent 10px);
+        }
+
+        /* --- Unified Torn Paper Footer (Strict Reference Sync) --- */
+        .torn-paper-footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 120px;
+            background-color: var(--paper-white);
+            z-index: 5;
+            clip-path: polygon(
+                0% 40%, 2% 45%, 4% 35%, 6% 48%, 8% 38%, 10% 46%, 
+                12% 35%, 15% 50%, 18% 38%, 21% 45%, 24% 35%, 27% 48%, 
+                30% 38%, 33% 45%, 36% 30%, 40% 50%, 43% 35%, 46% 45%, 
+                50% 32%, 54% 48%, 58% 36%, 62% 45%, 66% 30%, 70% 48%, 
+                75% 35%, 80% 45%, 85% 30%, 90% 48%, 95% 35%, 98% 45%, 
+                100% 40%, 100% 100%, 0% 100%
+            );
+        }
+        
+        .torn-paper-shadow {
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 130px;
+            background-color: rgba(0,0,0,0.2);
+            z-index: 4;
+            filter: blur(5px);
+            clip-path: polygon(
+                0% 40%, 2% 45%, 4% 35%, 6% 48%, 8% 38%, 10% 46%, 
+                12% 35%, 15% 50%, 18% 38%, 21% 45%, 24% 35%, 27% 48%, 
+                30% 38%, 33% 45%, 36% 30%, 40% 50%, 43% 35%, 46% 45%, 
+                50% 32%, 54% 48%, 58% 36%, 62% 45%, 66% 30%, 70% 48%, 
+                75% 35%, 80% 45%, 85% 30%, 90% 48%, 95% 35%, 98% 45%, 
+                100% 40%, 100% 100%, 0% 100%
+            );
+        }
+
+        /* Paper Note Style from Reference */
+        .paper-note {
+            background-color: var(--paper-white);
+            padding: 1.5rem;
+            position: relative;
+            box-shadow: 4px 4px 10px rgba(0,0,0,0.08);
+            border: 1px solid rgba(0,0,0,0.05);
+            border-radius: 2px 255px 3px 25px / 255px 5px 225px 5px;
+        }
+
+        .washi-tape {
+            background-color: rgba(220, 220, 200, 0.6);
+            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+            backdrop-filter: blur(1px);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <div class="relative z-10 w-full h-full flex flex-row p-12 items-center pb-32">
+            
+            <div class="w-5/12 flex items-center justify-center relative">
+                <div class="absolute w-[400px] h-[400px] rounded-full border-2 border-[var(--primary-rose)] opacity-20 border-dashed"></div>
+                
+                <div class="relative w-[380px] h-[480px] overflow-hidden rounded-tl-[60px] rounded-br-[60px] shadow-lg transform -rotate-2 bg-[var(--paper-white)]">
+                    <img src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=1000&auto=format&fit=crop" 
+                         class="w-full h-full object-cover sepia-[0.3] contrast-110 mix-blend-multiply">
+                </div>
+                <div class="absolute top-8 left-8 w-28 h-8 washi-tape transform -rotate-45 z-20"></div>
+            </div>
+
+            <div class="w-7/12 flex flex-col justify-center pl-10 pr-6">
+                
+                <header class="mb-8">
+                    <h1 class="text-[var(--text-ink)] text-[5rem] leading-[0.9] font-black uppercase">
+                        MENTAL <br>
+                        <span class="text-[var(--primary-rose)] italic font-serif text-[5.5rem]">HEALTH</span>
+                    </h1>
+                    <div class="h-3 w-48 bg-[var(--noise-grey)] opacity-40 mt-2 -skew-x-12"></div>
+                </header>
+
+                <div class="paper-note mb-8 transform rotate-1">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-16 h-6 washi-tape rotate-1"></div>
+                    <p class="text-[var(--text-ink)] text-lg leading-relaxed italic opacity-90">
+                        "Mental health encompasses cognitive, emotional, and behavioral functioning, as well as the ability to adapt to life's demands."
+                    </p>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-[var(--bg-texture)] border-2 border-[var(--text-ink)] flex items-center justify-center mr-4 shadow-sm">
+                            <i class="fa-solid fa-heart-pulse text-[var(--accent-maroon)] text-sm"></i>
+                        </div>
+                        <span class="text-2xl font-bold uppercase tracking-tight text-[var(--text-ink)]">Emotional regulation</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-[var(--bg-texture)] border-2 border-[var(--text-ink)] flex items-center justify-center mr-4 shadow-sm">
+                            <i class="fa-solid fa-shield-halved text-[var(--accent-maroon)] text-sm"></i>
+                        </div>
+                        <span class="text-2xl font-bold uppercase tracking-tight text-[var(--text-ink)]">Psychological resilience</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-[var(--bg-texture)] border-2 border-[var(--text-ink)] flex items-center justify-center mr-4 shadow-sm">
+                            <i class="fa-solid fa-brain text-[var(--accent-maroon)] text-sm"></i>
+                        </div>
+                        <span class="text-2xl font-bold uppercase tracking-tight text-[var(--text-ink)]">Cognitive function</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="torn-paper-shadow"></div>
+        <div class="torn-paper-footer flex items-end justify-center pb-5">
+            <span style="font-size: 0.75rem; color: var(--accent-maroon); text-transform: uppercase; letter-spacing: 3px; opacity: 0.7; font-weight: bold;">
+                Foundational Awareness & Core Guide
+            </span>
+        </div>
+
+        <div class="absolute inset-0 z-50 pointer-events-none opacity-[0.04]" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E');"></div>
+    </div>
+
+</body>
+</html>

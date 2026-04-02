@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Persona - Marceline Anderson</title>
+    
+    <!-- Google Fonts: Inter & Noto Sans SC (Per instructions) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+
+    <!-- Tailwind Config to match the Design System strictly -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgBlack: '#000000',
+                        textWhite: '#FFFFFF',
+                        textGrey: '#D1D1D1',
+                        accentGold: '#FBD57D',
+                        divider: '#4A4A4A',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans SC', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Global Restructure */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container Definition */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #000000;
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+            /* No external shadows as requested */
+        }
+
+        /* Custom Scrollbar hide just in case */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        
+        /* Utility for strictly text truncation if needed */
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Container -->
+    <div id="page_container" class="flex flex-col p-10 text-white">
+        
+        <!-- Decorative Elements: Soft Gold Gradient Orbs to break the pitch black -->
+        <div class="absolute top-[-100px] right-[-100px] w-[400px] h-[400px] rounded-full bg-accentGold opacity-10 blur-[80px] pointer-events-none"></div>
+        <div class="absolute bottom-[-150px] left-[-150px] w-[500px] h-[500px] rounded-full bg-[#333] opacity-20 blur-[100px] pointer-events-none"></div>
+
+        <!-- Top Section: Header & Bio Info -->
+        <div class="flex justify-between items-start mb-8 h-[200px]">
+            <!-- Left: Name & Title -->
+            <div class="w-1/2 flex flex-col justify-center">
+                <!-- Quote -->
+                <div class="mb-4 pl-4 border-l-2 border-accentGold">
+                    <p class="text-accentGold text-lg font-medium italic">
+                        "When a brand looks good, it feels good."
+                    </p>
+                </div>
+                
+                <!-- Name -->
+                <h1 class="text-7xl font-extrabold tracking-tight leading-tight mb-2">
+                    Marceline <br>
+                    <span class="text-transparent bg-clip-text bg-[linear-gradient(45deg,#FFFFFF,#D1D1D1)]">Anderson</span>
+                </h1>
+                
+                <!-- Age Tag -->
+                <div class="mt-2 flex items-center gap-2">
+                    <span class="px-3 py-1 border border-[#333] rounded-full text-textGrey text-sm">
+                        <i class="fa-solid fa-cake-candles mr-2 text-xs"></i>26 years old
+                    </span>
+                </div>
+            </div>
+
+            <!-- Right: Primary Demographics (Grid) -->
+            <div class="w-1/3 grid grid-cols-1 gap-6 text-sm">
+                <!-- Location -->
+                <div>
+                    <h3 class="text-textGrey uppercase text-xs tracking-widest mb-1">Location</h3>
+                    <p class="font-medium flex items-center gap-2">
+                        <i class="fa-solid fa-location-dot text-accentGold w-4"></i>
+                        123 Anywhere St., Any City
+                    </p>
+                </div>
+                <!-- Occupation -->
+                <div>
+                    <h3 class="text-textGrey uppercase text-xs tracking-widest mb-1">Occupation</h3>
+                    <p class="font-medium flex items-start gap-2">
+                        <i class="fa-solid fa-briefcase text-accentGold w-4 mt-1"></i>
+                        Junior Product Designer at Aldenaire & Associates
+                    </p>
+                </div>
+                <!-- Education -->
+                <div>
+                    <h3 class="text-textGrey uppercase text-xs tracking-widest mb-1">Education</h3>
+                    <p class="font-medium flex items-start gap-2">
+                        <i class="fa-solid fa-graduation-cap text-accentGold w-4 mt-1"></i>
+                        Bachelor’s in Industrial Design, Rimberio University
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Divider Line -->
+        <div class="w-full h-[1px] bg-divider mb-12"></div>
+
+        <!-- Main Content Grid -->
+        <div class="flex-1 grid grid-cols-12 gap-10">
+            
+            <!-- Column 1: Portrait Image (Left) -->
+            <div class="col-span-3 relative h-[325px]">
+                <div class="w-full h-full rounded-2xl overflow-hidden border border-[#333] relative group">
+                    <!-- Image Placeholder -->
+                    <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?q=80&w=600&auto=format&fit=crop" 
+                         alt="Marceline Anderson Portrait" 
+                         class="w-full h-[full] object-cover object-center opacity-90 group-hover:opacity-100 transition-opacity duration-500">
+                    <!-- w*h annotation as requested -->
+                    
+                    <!-- Overlay Gradient for text readability if needed -->
+                    <div class="absolute inset-0 bg-[linear-gradient(to_top,#000000aa,transparent)]"></div>
+                </div>
+            </div>
+
+            <!-- Column 2: Stats & Details (Right) -->
+            <div class="col-span-9 flex flex-col justify-between">
+                
+                <!-- Row 1: Key Metrics (4 Columns) -->
+                <div class="grid grid-cols-4 gap-6 mb-8">
+                    <!-- Income -->
+                    <div class="p-4 rounded-lg bg-[#111] border border-[#222]">
+                        <h4 class="text-textGrey text-xs uppercase mb-2">Income</h4>
+                        <p class="text-2xl font-bold text-white">$3,500<span class="text-sm font-normal text-textGrey">/mo</span></p>
+                    </div>
+
+                    <!-- Personality -->
+                    <div class="p-4 rounded-lg bg-[#111] border border-[#222]">
+                        <h4 class="text-textGrey text-xs uppercase mb-2">Personality</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-sm bg-[#222] px-2 py-1 rounded text-accentGold">Curious</span>
+                            <span class="text-sm bg-[#222] px-2 py-1 rounded text-white">Minimalist</span>
+                            <span class="text-sm bg-[#222] px-2 py-1 rounded text-white">Empathetic</span>
+                        </div>
+                    </div>
+
+                    <!-- Devices -->
+                    <div class="p-4 rounded-lg bg-[#111] border border-[#222]">
+                        <h4 class="text-textGrey text-xs uppercase mb-2">Devices</h4>
+                        <div class="flex gap-3 text-lg text-white">
+                            <i class="fa-solid fa-mobile-screen"></i>
+                            <i class="fa-solid fa-desktop"></i>
+                            <i class="fa-solid fa-tablet-screen-button"></i>
+                        </div>
+                    </div>
+
+                    <!-- Platforms -->
+                    <div class="p-4 rounded-lg bg-[#111] border border-[#222]">
+                        <h4 class="text-textGrey text-xs uppercase mb-2">Platforms</h4>
+                        <ul class="text-sm space-y-1">
+                            <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-accentGold"></div>Platform A</li>
+                            <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-[#444]"></div>Platform B</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Row 2: Deep Dive Information (Grid) -->
+                <div class="grid grid-cols-4 gap-8 border-t border-divider pt-6">
+                    
+                    <!-- Digital Behavior -->
+                    <div>
+                        <h3 class="text-accentGold font-bold mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-fingerprint"></i> Digital Behavior
+                        </h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-2 text-sm text-textGrey leading-relaxed">
+                                <i class="fa-solid fa-check text-[#333] mt-1 text-[10px]"></i>
+                                <span>Saves packaging references on Pinterest</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Goals -->
+                    <div>
+                        <h3 class="text-white font-bold mb-3">Goals</h3>
+                        <p class="text-sm text-textGrey leading-relaxed border-l-2 border-[#333] pl-3">
+                            Create product visuals that spark delight and emotional connection.
+                        </p>
+                    </div>
+
+                    <!-- Challenges -->
+                    <div>
+                        <h3 class="text-white font-bold mb-3">Challenges</h3>
+                        <p class="text-sm text-textGrey leading-relaxed border-l-2 border-[#333] pl-3">
+                            Balancing client briefs with personal creative vision.
+                        </p>
+                    </div>
+
+                    <!-- Brand Values -->
+                    <div>
+                        <h3 class="text-white font-bold mb-3">Brand Values</h3>
+                        <div class="flex flex-col gap-2">
+                            <div class="flex items-center gap-2 text-sm text-textGrey">
+                                <i class="fa-regular fa-circle text-accentGold text-[8px]"></i> Simplicity
+                            </div>
+                            <div class="flex items-center gap-2 text-sm text-textGrey">
+                                <i class="fa-regular fa-circle text-accentGold text-[8px]"></i> Sustainability
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spectrum TOC</title>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBlack: '#020204',
+                        // Defining the full spectrum used in previous pages
+                        cBlue: '#2A3C95', cCyan: '#22D3EE', cGreen: '#10B981', 
+                        cYellow: '#FACC15', cOrange: '#F97316', cRed: '#EF4444',
+                        cPink: '#FF7EB6', cPurple: '#9D50E6', cIndigo: '#6366F1'
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        .page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative;
+            background-color: #020204; overflow: hidden; color: #FFF;
+        }
+
+        .bg-grid {
+            background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        .item-box {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-left: 2px solid transparent;
+        }
+        
+        /* 
+           Specific hover effects for each color 
+           (In production CSS this would be generated, here doing inline/tailored style classes) 
+        */
+        .hover-blue:hover   { border-left-color: #2A3C95; background: linear-gradient(90deg, rgba(42,60,149,0.15), transparent); }
+        .hover-cyan:hover   { border-left-color: #22D3EE; background: linear-gradient(90deg, rgba(34,211,238,0.15), transparent); }
+        .hover-green:hover  { border-left-color: #10B981; background: linear-gradient(90deg, rgba(16,185,129,0.15), transparent); }
+        .hover-yellow:hover { border-left-color: #FACC15; background: linear-gradient(90deg, rgba(250,204,21,0.15), transparent); }
+        .hover-orange:hover { border-left-color: #F97316; background: linear-gradient(90deg, rgba(249,115,22,0.15), transparent); }
+        .hover-red:hover    { border-left-color: #EF4444; background: linear-gradient(90deg, rgba(239,68,68,0.15), transparent); }
+        .hover-pink:hover   { border-left-color: #FF7EB6; background: linear-gradient(90deg, rgba(255,126,182,0.15), transparent); }
+        .hover-purple:hover { border-left-color: #9D50E6; background: linear-gradient(90deg, rgba(157,80,230,0.15), transparent); }
+        .hover-indigo:hover { border-left-color: #6366F1; background: linear-gradient(90deg, rgba(99,102,241,0.15), transparent); }
+        .hover-white:hover  { border-left-color: #FFFFFF; background: linear-gradient(90deg, rgba(255,255,255,0.1), transparent); }
+
+    </style>
+</head>
+<body>
+    <div class="page_container bg-grid">
+        
+        <!-- Header -->
+        <div class="relative z-20 px-16 py-10 flex justify-between items-end mb-4 border-b border-white/10 pb-6 mx-16">
+            <div>
+                <div class="flex items-center gap-2 mb-2">
+                    <span class="w-2 h-2 rounded-full bg-cBlue"></span>
+                    <span class="w-2 h-2 rounded-full bg-cPink"></span>
+                    <span class="w-2 h-2 rounded-full bg-cYellow"></span>
+                    <span class="text-xs text-gray-400 font-mono ml-2 uppercase tracking-widest">Syllabus Overview</span>
+                </div>
+                <h1 class="text-5xl font-bold">Table of <span class="text-transparent bg-clip-text bg-gradient-to-r from-cBlue via-cPurple to-cPink">Contents</span></h1>
+            </div>
+            <!-- Decorative Color Bars -->
+            <div class="flex flex-col items-end gap-1">
+                <div class="w-16 h-1 bg-cCyan rounded-full"></div>
+                <div class="w-10 h-1 bg-cYellow rounded-full"></div>
+                <div class="w-4 h-1 bg-cPink rounded-full"></div>
+            </div>
+        </div>
+
+        <!-- Content Grid: 2 Cols x 5 Rows -->
+        <div class="relative z-10 px-24 py-6 w-full h-full">
+            <div class="grid grid-cols-2 gap-x-24 gap-y-5">
+                
+                <!-- Left Column -->
+                <div class="space-y-5">
+                    
+                    <!-- 01: Blue -->
+                    <div class="item-box hover-blue p-3 rounded-r-lg cursor-pointer group flex items-center">
+                        <span class="text-2xl font-mono font-bold text-cBlue w-12 opacity-60 group-hover:opacity-100">01</span>
+                        <div>
+                            <h3 class="text-lg font-bold text-white group-hover:text-cBlue transition-colors">Computer History</h3>
+                            <p class="text-[14px] text-gray-500 font-mono uppercase tracking-wider">Turing to Quantum</p>
+                        </div>
+                    </div>
+
+                    <!-- 02: Cyan -->
+                    <div class="item-box hover-cyan p-3 rounded-r-lg cursor-pointer group flex items-center">
+                        <span class="text-2xl font-mono font-bold text-cCyan w-12 opacity-60 group-hover:opacity-100">02</span>
+                        <div>
+                            <h3 class="text-lg font-bold text-white group-hover:text-cCyan transition-colors">Variables & Types</h3>
+                            <p class="text-[14px] text-gray-500 font-mono uppercase tracking-wider">Int, Float, String</p>
+                        </div>
+                    </div>
+
+                    <!-- 03: Green -->
+                    <div class="item-box hover-green p-3 rounded-r-lg cursor-pointer group flex items-center">
+                        <span class="text-2xl font-mono font-bold text-cGreen w-12 opacity-60 group-hover:opacity-100">03</span>
+                        <div>
+                            <h3 class="text-lg font-bold text-white group-hover:text-cGreen transition-colors">Logic & Loops</h3>
+                            <p class="text-[14px] text-gray-500 font-mono uppercase tracking-wider">Control Flow</p>
+                        </div>
+                    </div>
+
+                    <!-- 04: Yellow -->
+                    <div class="item-box hover-yellow p-3 rounded-r-lg cursor-pointer group flex items-center">
+                        <span class="text-2xl font-mono font-bold text-cYellow w-12 opacity-60 group-hover:opacity-100">04</span>
+                        <div>
+                            <h3 class="text-lg font-bold text-white group-hover:text-cYellow transition-colors">Functions</h3>
+                            <p class="text-[14px] text-gray-500 font-mono uppercase tracking-wider">Modular Code</p>
+                        </div>
+                    </div>
+
+                     <!-- 05: Orange -->
+                     <div class="item-box hover-orange p-3 rounded-r-lg cursor-pointer group flex items-center">
+                        <span class="text-2xl font-mono font-bold text-cOrange w-12 opacity-60 group-hover:opacity-100">05</span>
+                        <div>
+                            <h3 class="text-lg font-bold text-white group-hover:text-cOrange transition-colors">Data Structures</h3>
+                            <p class="text-[14px] text-gray-500 font-mono uppercase tracking-wider">Arrays & Objects</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="space-y-5">
+                    
+                    <!-- 06: Red -->
+                    <div class="item-box hover-red p-3 rounded-r-lg cursor-pointer group flex items-center">
+                        <span class="text-2xl font-mono font-bold text-cRed w-12 opacity-60 group-hover:opacity-100">06</span>
+                        <div>
+                            <h3 class="text-lg font-bold text-white group-hover:text-cRed transition-colors">OOP Principles</h3>
+                            <p class="text-[14px] text-gray-500 font-mono uppercase tracking-wider">Classes & Inheritance</p>
+                        </div>
+                    </div>
+
+                    <!-- 07: Pink -->
+                    <div class="item-box hover-pink p-3 rounded-r-lg cursor-pointer group flex items-center">
+                        <span class="text-2xl font-mono font-bold text-cPink w-12 opacity-60 group-hover:opacity-100">07</span>
+                        <div>
+                            <h3 class="text-lg font-bold text-white group-hover:text-cPink transition-colors">UI / UX Design</h3>
+                            <p class="text-[14px] text-gray-500 font-mono uppercase tracking-wider">Frontend Basics</p>
+                        </div>
+                    </div>
+
+                    <!-- 08: Purple -->
+                    <div class="item-box hover-purple p-3 rounded-r-lg cursor-pointer group flex items-center">
+                        <span class="text-2xl font-mono font-bold text-cPurple w-12 opacity-60 group-hover:opacity-100">08</span>
+                        <div>
+                            <h3 class="text-lg font-bold text-white group-hover:text-cPurple transition-colors">Algorithms</h3>
+                            <p class="text-[14px] text-gray-500 font-mono uppercase tracking-wider">Big O Notation</p>
+                        </div>
+                    </div>
+
+                    <!-- 09: Indigo -->
+                    <div class="item-box hover-indigo p-3 rounded-r-lg cursor-pointer group flex items-center">
+                        <span class="text-2xl font-mono font-bold text-cIndigo w-12 opacity-60 group-hover:opacity-100">09</span>
+                        <div>
+                            <h3 class="text-lg font-bold text-white group-hover:text-cIndigo transition-colors">Databases</h3>
+                            <p class="text-[14px] text-gray-500 font-mono uppercase tracking-wider">SQL & NoSQL</p>
+                        </div>
+                    </div>
+
+                     <!-- 10: White/Multi -->
+                     <div class="item-box hover-white p-3 rounded-r-lg cursor-pointer group flex items-center">
+                        <span class="text-2xl font-mono font-bold text-white w-12 opacity-60 group-hover:opacity-100">10</span>
+                        <div>
+                            <h3 class="text-lg font-bold text-white group-hover:text-gray-300 transition-colors">Security & AI</h3>
+                            <p class="text-[14px] text-gray-500 font-mono uppercase tracking-wider">Future Tech</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Background Decor (Subtle Spectrum) -->
+        <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-cBlue via-cYellow to-cPink opacity-50"></div>
+        <div class="absolute top-[20%] right-[-100px] w-[300px] h-[300px] bg-cPurple opacity-10 blur-[100px] pointer-events-none"></div>
+
+    </div>
+</body>
+</html>

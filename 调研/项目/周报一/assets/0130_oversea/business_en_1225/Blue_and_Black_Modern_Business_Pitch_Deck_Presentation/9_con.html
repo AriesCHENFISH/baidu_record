@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Performance Presentation Slide</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #A2D2F5 0%, #B8DFF9 60%, #C8E6FB 100%);
+        }
+
+        .text-primary { color: #232323; }
+        .text-body { color: #555555; }
+        ::-webkit-scrollbar { display: none; }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#232323',
+                        lightBlue: '#BCE4FA',
+                        bodyText: '#555555',
+                        borderDark: '#333333',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <header class="absolute top-[40px] left-[60px] right-[60px] flex justify-between items-center z-30">
+            <div class="h-[48px] px-6 border border-[#333333] rounded-full flex items-center justify-center bg-[#BCE4FA]/30 backdrop-blur-sm">
+                <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-shapes text-[#232323] text-lg"></i>
+                    <span class="text-[#232323] font-bold text-sm tracking-wide uppercase">Borcelle</span>
+                </div>
+            </div>
+            <div class="h-[48px] px-6 border border-[#333333] rounded-full flex items-center justify-center bg-[#BCE4FA]/30 backdrop-blur-sm min-w-[180px] justify-end">
+                <p class="text-[#232323] text-sm font-medium">July 23, 2025</p>
+            </div>
+        </header>
+
+        <div class="absolute top-[130px] left-[60px] right-[60px] bottom-[40px] grid grid-cols-12 gap-12">
+            
+            <div class="col-span-7 flex flex-col justify-center pr-8">
+                
+                <div class="mb-6">
+                    <h1 class="text-[6.2rem] leading-[0.85] font-black tracking-tighter text-dark uppercase">
+                        Our<br>Performance
+                    </h1>
+                </div>
+
+                <div class="mb-10 w-[90%]">
+                    <p class="text-body text-lg leading-relaxed font-normal">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl eu sem tristique, sit amet convallis ex aliquam. Maecenas varius lectus hendrerit augue blandit, ut posuere erat aliquam.
+                    </p>
+                </div>
+
+                <div class="flex flex-col gap-5 w-full">
+                    <div class="bg-dark rounded-full py-4 px-8 flex items-center gap-8 shadow-lg">
+                        <div class="min-w-[100px]">
+                            <h3 class="text-white text-4xl font-bold">70 K</h3>
+                        </div>
+                        <div class="border-l border-gray-600 pl-6">
+                            <p class="text-gray-300 text-sm italic leading-snug">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis que molestie nisl eu sem tristique.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border border-borderDark rounded-full py-4 px-8 flex items-center gap-8 shadow-sm">
+                        <div class="min-w-[100px]">
+                            <h3 class="text-dark text-4xl font-bold">60%</h3>
+                        </div>
+                        <div class="border-l border-gray-300 pl-6">
+                            <p class="text-body text-sm italic leading-snug">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis que molestie nisl eu sem tristique.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-span-5 flex flex-col justify-end pb-0 relative">
+                <div id="performanceChart" class="w-full h-[480px]"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var chartDom = document.getElementById('performanceChart');
+            var myChart = echarts.init(chartDom);
+            var option;
+
+            option = {
+                legend: {
+                    top: '0%',
+                    right: '0%',
+                    icon: 'circle',
+                    textStyle: {
+                        color: '#232323',
+                        fontSize: 14,
+                        fontFamily: '"Noto Sans SC", sans-serif'
+                    },
+                    data: ['Seri 1', 'Seri 2']
+                },
+                grid: {
+                    left: '0%',
+                    right: '2%', // 稍微留一点右边距
+                    bottom: '10%', // 【关键修改】增加底部留白，防止X轴被切
+                    top: '15%',
+                    containLabel: true // 自动计算标签区域
+                },
+                xAxis: {
+                    type: 'category',
+                    data: ['Item 1', 'Item 2'],
+                    axisLine: { 
+                        lineStyle: { color: '#888' } 
+                    },
+                    axisTick: { show: false },
+                    axisLabel: {
+                        color: '#232323',
+                        fontSize: 14,
+                        padding: [10, 0, 0, 0] // 增加标签文字的上间距
+                    }
+                },
+                yAxis: {
+                    type: 'value',
+                    min: 0,
+                    max: 12,
+                    interval: 2,
+                    splitLine: {
+                        show: true,
+                        lineStyle: { color: 'rgba(0,0,0,0.05)' }
+                    },
+                    axisLabel: { color: '#555' }
+                },
+                series: [
+                    {
+                        name: 'Seri 1',
+                        type: 'bar',
+                        data: [3, 12],
+                        barWidth: '35%',
+                        barGap: '15%',
+                        itemStyle: {
+                            color: '#FFFFFF',
+                            borderRadius: [4, 4, 0, 0],
+                            shadowColor: 'rgba(0, 0, 0, 0.05)',
+                            shadowBlur: 10
+                        }
+                    },
+                    {
+                        name: 'Seri 2',
+                        type: 'bar',
+                        data: [8, 10],
+                        barWidth: '35%',
+                        itemStyle: {
+                            color: '#232323',
+                            borderRadius: [4, 4, 0, 0]
+                        }
+                    }
+                ],
+                tooltip: {
+                    trigger: 'axis',
+                    backgroundColor: 'rgba(255,255,255,0.95)',
+                    borderColor: '#333',
+                    textStyle: { color: '#333' }
+                },
+                animationDuration: 1000,
+                animationEasing: 'cubicOut'
+            };
+
+            myChart.setOption(option);
+            window.addEventListener('resize', function() {
+                myChart.resize();
+            });
+        });
+    </script>
+</body>
+</html>

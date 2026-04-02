@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empathy Map - Keynote Slide</title>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts (Domestic Mirror as requested) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- Design System Configuration -->
+    <style>
+        /* CSS Reset & Basic Setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 
+         * Page Container 
+         * Strict 1280x720 dimensions, centered, no outer shadow.
+         */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FFFFFF;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Custom Utility Classes for gradients (if needed) & specific styles */
+        .glass-bubble {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div id="page_container">
+        
+        <!-- Grid Layout: 40% Text, 60% Visual -->
+        <div class="grid grid-cols-12 h-full w-full">
+
+            <!-- LEFT COLUMN: Content (Col-span-5) -->
+            <div class="col-span-5 flex flex-col justify-center pl-16 pr-8 relative z-10">
+                
+                <!-- Main Title -->
+                <!-- Uses Primary Black #000000 -->
+                <div class="mb-12">
+                    <h1 class="text-[#000000] text-7xl font-bold leading-[1.1] tracking-tight">
+                        Empathy<br>Map
+                    </h1>
+                    <!-- Decorative underline using Lavender Accent -->
+                    <div class="w-24 h-2 bg-[#E8D5EB] mt-4 rounded-full"></div>
+                </div>
+
+                <!-- Content Blocks -->
+                <div class="flex flex-col gap-6">
+
+                    <!-- Section: FEEL (Lavender Accent Card) -->
+                    <!-- Using #E8D5EB for differentiation as per design system -->
+                    <div class="bg-[#F2F2F2] p-6 rounded-2xl border-l-4 border-[#326B54]">
+                        <h3 class="text-[#666666] text-xs font-bold uppercase tracking-widest mb-2">
+                            <i class="fa-regular fa-heart mr-2"></i>Feel
+                        </h3>
+                        <p class="text-[#1A1A1A] text-lg leading-relaxed font-medium">
+                            Inspired to teach, but stressed by inefficient tools
+                        </p>
+                    </div>
+
+                    <!-- Grid for SAY and DO -->
+                    <div class="grid grid-cols-1 gap-6">
+                        
+                        <!-- Section: SAY (Neutral Gray Card) -->
+                        <div class="bg-[#F2F2F2] p-6 rounded-2xl relative group">
+                            <h3 class="text-[#666666] text-xs font-bold uppercase tracking-widest mb-3">
+                                <i class="fa-regular fa-comment mr-2"></i>Say
+                            </h3>
+                            <ul class="list-none space-y-3">
+                                <li class="text-[#1A1A1A] text-base italic leading-snug pl-4 border-l-2 border-[#E8D5EB]">
+                                    “This could work better with fewer clicks.”
+                                </li>
+                                <li class="text-[#1A1A1A] text-base italic leading-snug pl-4 border-l-2 border-[#E8D5EB]">
+                                    “Where’s the export option?”
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Section: DO (Deep Green Emphasis Card) -->
+                        <!-- Using #326B54 with White Text for contrast -->
+                        <div class="bg-[#326B54] p-6 rounded-2xl shadow-lg">
+                            <h3 class="text-white/80 text-xs font-bold uppercase tracking-widest mb-2">
+                                <i class="fa-solid fa-person-walking mr-2"></i>Do
+                            </h3>
+                            <p class="text-white text-base leading-relaxed">
+                                Reorganizes content layouts. Switches between 2–3 tools to complete a course
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN: Visuals (Col-span-7) -->
+            <div class="col-span-7 relative flex items-center justify-center h-full">
+                
+                <!-- Abstract Background Shape (Lavender Accent) -->
+                <!-- Positioned to frame the image -->
+                <div class="absolute right-0 top-0 bottom-0 w-[90%] bg-[#E8D5EB] rounded-l-[60px] z-0"></div>
+
+                <!-- Main Image Container -->
+                <div class="relative z-10 mr-12 mt-8">
+                    <!-- Image Styling: Large rounded corners, subtle shadow -->
+                    <div class="relative w-[480px] h-[580px] rounded-[40px] overflow-hidden shadow-2xl">
+                        <!-- Unsplash Source: Focus on technology/headphones/modern user -->
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=988&auto=format&fit=crop" 
+                             alt="User testing empathy scenario" 
+                             class="w-full h-full object-cover">
+                        <!-- 480*580 -->
+                    </div>
+
+                    <!-- Overlay Bubble 1 (Right) -->
+                    <div class="absolute top-[25%] -right-16 bg-white p-5 rounded-2xl rounded-bl-none shadow-[0_8px_30px_rgb(0,0,0,0.12)] max-w-[280px] animate-pulse-slow">
+                        <div class="flex items-start gap-3">
+                            <div class="text-[#326B54] text-xl pt-1"><i class="fa-solid fa-quote-left"></i></div>
+                            <p class="text-[#1A1A1A] text-lg font-medium leading-tight">
+                                Can my learners understand this flow?
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Overlay Bubble 2 (Left) -->
+                    <div class="absolute bottom-[20%] -left-16 bg-white p-5 rounded-2xl rounded-tr-none shadow-[0_8px_30px_rgb(0,0,0,0.12)] max-w-[300px]">
+                        <div class="flex items-start gap-3">
+                            <div class="text-[#326B54] text-xl pt-1"><i class="fa-solid fa-quote-left"></i></div>
+                            <p class="text-[#1A1A1A] text-lg font-medium leading-tight">
+                                Is this inclusive for all skill levels?
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Circular Icon Badge (Decorative) -->
+                    <div class="absolute -bottom-6 -right-6 w-20 h-20 bg-[#1A1A1A] rounded-full flex items-center justify-center text-white text-3xl shadow-xl border-4 border-white">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+
+                </div>
+
+                <!-- Decorative Pattern Dots (Top Right) -->
+                <div class="absolute top-12 right-12 grid grid-cols-4 gap-2 opacity-30">
+                    <div class="w-1.5 h-1.5 bg-[#326B54] rounded-full"></div>
+                    <div class="w-1.5 h-1.5 bg-[#326B54] rounded-full"></div>
+                    <div class="w-1.5 h-1.5 bg-[#326B54] rounded-full"></div>
+                    <div class="w-1.5 h-1.5 bg-[#326B54] rounded-full"></div>
+                    <div class="w-1.5 h-1.5 bg-[#326B54] rounded-full"></div>
+                    <div class="w-1.5 h-1.5 bg-[#326B54] rounded-full"></div>
+                    <div class="w-1.5 h-1.5 bg-[#326B54] rounded-full"></div>
+                    <div class="w-1.5 h-1.5 bg-[#326B54] rounded-full"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Larana Company - Our Performance</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- ECharts -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+
+    <style>
+        /* CSS Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        /* Page Container */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #050505;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Glassmorphism */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Ambient Glow */
+        .ambient-glow-1 {
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(26, 21, 32, 1) 0%, rgba(5, 5, 5, 0) 70%);
+            z-index: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <!-- Ambient BG -->
+        <div class="ambient-glow-1"></div>
+
+        <!-- Header Section (Unified) -->
+        <div class="relative z-20 flex justify-between items-center px-12 pt-8">
+            <!-- Logo -->
+            <div class="flex items-center gap-3">
+                <div class="text-[#F5C2D4] text-xl">
+                    <i class="fa-solid fa-shapes"></i>
+                </div>
+                <h2 class="text-white text-lg font-medium tracking-wide">Larana Company</h2>
+            </div>
+            <!-- Nav -->
+            <div class="glass-panel rounded-full p-1 pl-1 pr-6 flex items-center gap-6">
+                <div class="bg-[#F5C2D4] text-[#050505] px-6 py-2 rounded-full">
+                    <span class="text-sm font-bold tracking-tight">Pitch Deck Business Presentation</span>
+                </div>
+                <span class="text-[#D1D1D1] text-sm font-light tracking-widest">August 2025</span>
+            </div>
+        </div>
+
+        <!-- Main Content Grid -->
+        <div class="relative z-10 grid grid-cols-12 gap-12 px-12 mt-8 h-[580px]">
+            
+            <!-- Left Column: Chart (Span 5) -->
+            <div class="col-span-5 flex flex-col justify-center h-full pb-8">
+                <div class="glass-panel w-full h-full rounded-[32px] p-6 relative flex flex-col">
+                    <!-- Custom Legend -->
+                    <div class="flex justify-end gap-4 text-[10px] text-[#D1D1D1] mb-2 uppercase tracking-wide">
+                        <div class="flex items-center gap-1.5"><div class="w-2 h-2 rounded-full bg-[#FFFFFF]"></div>2023</div>
+                        <div class="flex items-center gap-1.5"><div class="w-2 h-2 rounded-full bg-[#F5C2D4]"></div>2024</div>
+                        <div class="flex items-center gap-1.5"><div class="w-2 h-2 rounded-full bg-[#E08FA8]"></div>2025</div>
+                    </div>
+                    <!-- Chart Area -->
+                    <div id="performanceChart" class="w-full flex-grow"></div>
+                </div>
+            </div>
+
+            <!-- Right Column: Text & Data (Span 7) -->
+            <!-- Adjusted: flex-col with strict left alignment (items-start) -->
+            <div class="col-span-7 flex flex-col justify-center h-full pb-8 pl-4 items-start text-left">
+                
+                <!-- Title -->
+                <div class="mb-6 w-full">
+                    <h1 class="text-white text-[80px] leading-[0.9] font-light tracking-tight">
+                        Our<br>
+                        <span class="font-bold">Performance</span>
+                    </h1>
+                </div>
+
+                <!-- Description -->
+                <div class="mb-10 w-full max-w-lg border-l border-white/10 pl-6">
+                    <p class="text-[#D1D1D1] text-sm leading-relaxed font-light text-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl eu sem tristique, sit amet convallis ex aliquam. Suspendisse potenti.
+                    </p>
+                </div>
+
+                <!-- Data Cards (Aligned Left) -->
+                <div class="w-full flex flex-col gap-4">
+                    
+                    <!-- Card 1: Pink Highlight -->
+                    <div class="bg-[#F5C2D4] rounded-2xl p-6 flex items-center gap-8 shadow-lg w-full transform transition-transform hover:translate-x-2 duration-300">
+                        <div class="w-[120px] shrink-0 border-r border-black/10 pr-6 text-right">
+                            <h3 class="text-5xl font-bold text-[#050505]">60%</h3>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="text-[#050505] text-sm leading-relaxed font-medium">
+                                Significant increase in market share retention due to strategic pivot in Q2.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: White Gradient -->
+                    <div class="rounded-2xl p-6 flex items-center gap-8 shadow-lg w-full transform transition-transform hover:translate-x-2 duration-300" 
+                         style="background: linear-gradient(90deg, #EAEAEA, #F5F5F5);">
+                        <div class="w-[120px] shrink-0 border-r border-black/10 pr-6 text-right">
+                            <h3 class="text-5xl font-bold text-[#050505]">85%</h3>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="text-[#050505] text-sm leading-relaxed font-medium opacity-80">
+                                Client satisfaction rating maintained above industry standards for consecutive years.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ECharts Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var chartDom = document.getElementById('performanceChart');
+            var myChart = echarts.init(chartDom);
+            var option = {
+                backgroundColor: 'transparent',
+                grid: { top: '10%', left: '0%', right: '5%', bottom: '5%', containLabel: true },
+                xAxis: {
+                    type: 'category',
+                    data: ['Q1', 'Q2', 'Q3', 'Q4'],
+                    axisLine: { show: true, lineStyle: { color: 'rgba(255,255,255,0.1)' } },
+                    axisTick: { show: false },
+                    axisLabel: { color: '#D1D1D1', fontSize: 12, margin: 15, fontFamily: 'Noto Sans SC' }
+                },
+                yAxis: {
+                    type: 'value',
+                    splitLine: { show: true, lineStyle: { type: 'dashed', color: 'rgba(255,255,255,0.05)' } },
+                    axisLabel: { color: '#D1D1D1', fontSize: 12, fontFamily: 'Noto Sans SC' }
+                },
+                series: [
+                    {
+                        name: '2023', type: 'bar', stack: 'total', barWidth: '40%',
+                        data: [120, 132, 101, 134], itemStyle: { color: '#FFFFFF' }
+                    },
+                    {
+                        name: '2024', type: 'bar', stack: 'total',
+                        data: [220, 182, 191, 234], itemStyle: { color: '#F5C2D4' }
+                    },
+                    {
+                        name: '2025', type: 'bar', stack: 'total',
+                        data: [150, 232, 201, 154], itemStyle: { color: '#E08FA8', borderRadius: [6, 6, 0, 0] }
+                    }
+                ]
+            };
+            myChart.setOption(option);
+            window.addEventListener('resize', function() { myChart.resize(); });
+        });
+    </script>
+</body>
+</html>

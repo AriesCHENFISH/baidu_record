@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warner & Spencer - A Smarter Way Forward</title>
+
+    <!-- Google Fonts (Domestic CDN as requested) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <!-- Tailwind Config to match Design System -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#0E1011',
+                        primary: '#B0E6DC',
+                        primaryDark: '#2C3E3A',
+                        textMain: '#FFFFFF',
+                        textSec: '#D1D5DB',
+                        accentLine: '#5A6B68',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'glow': '0 0 20px rgba(176, 230, 220, 0.15)',
+                        'card': '0 20px 40px -10px rgba(0, 0, 0, 0.5)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Core Standards */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* Page Container specific styles */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #0E1011;
+            overflow: hidden;
+            /* No external shadows as per instruction */
+        }
+
+        /* Utility for line gradient */
+        .diagonal-line {
+            background: linear-gradient(180deg, transparent, #5A6B68, transparent);
+        }
+        
+        /* Ensure images fit container perfectly */
+        .img-cover {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div id="page_container">
+        
+        <!-- ==================== Background Decorations ==================== -->
+        <!-- Decorative Circle: Top Right (Large Dark Variant) -->
+        <div class="absolute -top-[150px] -right-[100px] w-[600px] h-[600px] bg-primaryDark rounded-full opacity-60 z-0"></div>
+        
+        <!-- Decorative Circle: Top Right Accent (Small Mint) -->
+        <div class="absolute top-[80px] right-[40px] w-[120px] h-[120px] bg-primary rounded-full z-10 shadow-glow"></div>
+
+        <!-- Decorative Circle: Bottom Left (Subtle) -->
+        <div class="absolute bottom-[100px] -left-[50px] w-[150px] h-[150px] bg-primary opacity-20 rounded-full z-0"></div>
+
+        <!-- Decorative Diagonal Line 1 -->
+        <div class="absolute left-[15%] -top-[10%] w-[2px] h-[120%] diagonal-line transform -rotate-12 opacity-40 z-0"></div>
+        
+        <!-- Decorative Diagonal Line 2 (Subtle) -->
+        <div class="absolute left-[40%] top-[20%] w-[1px] h-[80%] diagonal-line transform -rotate-12 opacity-20 z-0"></div>
+
+
+        <!-- ==================== Main Layout Grid ==================== -->
+        <div class="relative z-20 w-full h-full p-16 grid grid-cols-12 gap-10 items-center">
+
+            <!-- Left Column: Typography & Content (5/12) -->
+            <div class="col-span-5 flex flex-col justify-between h-[80%]">
+                
+                <!-- Brand Header -->
+                <div>
+                    <h4 class="text-white text-lg font-bold tracking-widest uppercase mb-2 flex items-center gap-3">
+                        <i class="fa-solid fa-shapes text-primary"></i>
+                        Warner & Spencer
+                    </h4>
+                </div>
+
+                <!-- Main Title -->
+                <div class="my-auto">
+                    <h1 class="text-primary text-[86px] font-bold leading-[0.95] tracking-tight mb-8 drop-shadow-lg">
+                        A Smarter<br>
+                        <span class="text-white">Way</span><br>
+                        Forward
+                    </h1>
+                </div>
+
+                <!-- Text Content Block -->
+                <div class="border-l-4 border-primary pl-6">
+                    <h3 class="text-white text-2xl font-bold mb-3">Building for Tomorrow</h3>
+                    <p class="text-textSec text-lg leading-relaxed font-light">
+                        We envision a business ecosystem where technology, strategy, and innovation work hand in hand to drive sustainable growth.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Column: Imagery (7/12) -->
+            <div class="col-span-7 flex flex-col gap-6 h-full justify-center pl-8">
+                
+                <!-- Top Image: Business Meeting -->
+                <!-- Use grayscale filter for aesthetic consistency with dark mode -->
+                <div class="relative w-full h-[260px] rounded-[30px] overflow-hidden shadow-card border border-gray-800 group">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" 
+                         alt="Strategic meeting in a modern glass office" 
+                         class="img-cover filter grayscale contrast-125 hover:scale-105 transition-transform duration-700 ease-out">
+                    <!-- 680*260 -->
+                </div>
+
+                <!-- Bottom Image: Team & Badge -->
+                <div class="relative w-full h-[260px] rounded-[30px] overflow-hidden shadow-card border border-gray-800 group">
+                    
+                    <!-- Background Image -->
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" 
+                         alt="Professional team standing together" 
+                         class="img-cover filter grayscale contrast-110 sepia-[.2] hover:scale-105 transition-transform duration-700 ease-out">
+                    <!-- 680*260 -->
+
+                    <!-- Gradient Overlay for Readability if needed -->
+                    <div class="absolute inset-0 bg-black/20 z-0"></div>
+
+                    <!-- Floating Badge Card (Replicating the visual logic) -->
+                    <!-- Positioned bottom right, overlapping slightly -->
+                    <div class="absolute bottom-6 right-6 bg-primary p-6 rounded-2xl max-w-[280px] shadow-2xl z-20">
+                        <div class="flex items-start gap-3">
+                            <div class="mt-1">
+                                <i class="fa-solid fa-layer-group text-black text-xl"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-black font-bold text-lg leading-tight">
+                                    To create scalable solutions
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

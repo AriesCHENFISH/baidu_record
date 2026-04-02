@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Sports Keynote - Technology in Sports</title>
+    <!-- Domestic Google Fonts CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        lemon: '#F9FA5D',
+                        vibrantOrange: '#E05320',
+                        sportyBlue: '#3131C6',
+                        warmBrown: '#996633',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Global Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container - Strict 1280x720 */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #F9FA5D; /* Lemon Base */
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        /* Custom Typography Utilities */
+        .text-stroke {
+            -webkit-text-stroke: 2px #F9FA5D;
+            color: transparent;
+        }
+
+        /* Tape Pattern Helper */
+        .tape-text {
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        /* Retro Hard Shadow Utility */
+        .retro-shadow {
+            box-shadow: 8px 8px 0px rgba(0,0,0,0.8);
+        }
+        
+        .image-shadow {
+            box-shadow: 12px 12px 0px #E05320; 
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <!-- Header Section -->
+        <div class="absolute top-0 left-0 w-full px-12 py-8 flex justify-between items-center z-10">
+            <div>
+                <h3 class="text-vibrantOrange font-black text-2xl tracking-tighter uppercase">INNOVATION FOR</h3>
+            </div>
+            <div>
+                <h3 class="text-vibrantOrange font-black text-2xl tracking-tighter uppercase">A BETTER GAME</h3>
+            </div>
+        </div>
+
+        <!-- Main Content Grid (Top Half) -->
+        <div class="grid grid-cols-12 gap-10 px-12 pt-24 pb-10 h-[55%] items-center relative z-0">
+            
+            <!-- Left: Image Area -->
+            <div class="col-span-7 h-full relative flex items-center">
+                <!-- Decorative element behind image -->
+                <div class="absolute -left-4 -top-4 w-32 h-32 bg-sportyBlue rounded-full opacity-20 z-0"></div>
+                
+                <div class="w-full h-[320px] bg-black rounded-lg border-4 border-black image-shadow overflow-hidden relative z-10">
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1000&auto=format&fit=crop" 
+                         alt="Athlete lifting weights in a gym setting" 
+                         class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                    <!-- 700*320 -->
+                </div>
+            </div>
+
+            <!-- Right: Text Content -->
+            <div class="col-span-5 h-full flex flex-col justify-center pr-8">
+                <div class="bg-white/50 p-6 rounded-xl border-l-8 border-vibrantOrange backdrop-blur-sm">
+                    <p class="text-warmBrown text-lg font-medium leading-relaxed text-justify">
+                        Technology has transformed sports, improving training, performance analysis, and fan engagement. Wearable devices track fitness levels, video analysis enhances strategies, and virtual reality helps in skill development. Advances in sports science ensure athletes perform at their best while keeping the game fair.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dynamic Diagonal Tapes (Divider) -->
+        <div class="absolute top-[48%] left-[-5%] w-[110%] h-24 z-20 pointer-events-none">
+            <!-- Blue Tape (Back) -->
+            <div class="absolute top-4 left-0 w-full bg-sportyBlue text-white h-12 transform -rotate-2 border-y-2 border-white flex items-center justify-center overflow-hidden shadow-lg">
+                <p class="text-sm font-bold tracking-widest uppercase opacity-80 tape-text">
+                    SPORT PRESENTATION - SPORT PRESENTATION - SPORT PRESENTATION - SPORT PRESENTATION - SPORT PRESENTATION - SPORT PRESENTATION - SPORT PRESENTATION
+                </p>
+            </div>
+            <!-- White Tape (Front) -->
+            <div class="absolute top-0 left-0 w-full bg-white text-sportyBlue h-12 transform rotate-1 border-y-2 border-sportyBlue flex items-center justify-center overflow-hidden shadow-lg">
+                <p class="text-sm font-bold tracking-widest uppercase tape-text">
+                    SPORT PRESENTATION - SPORT PRESENTATION - SPORT PRESENTATION - SPORT PRESENTATION - SPORT PRESENTATION - SPORT PRESENTATION - SPORT PRESENTATION
+                </p>
+            </div>
+        </div>
+
+        <!-- Bottom Footer / Hero Section -->
+        <div class="absolute bottom-0 left-0 w-full h-[40%] bg-vibrantOrange flex flex-col justify-center items-center z-10 pt-10 clip-path-polygon">
+            
+            <!-- Subtitle -->
+            <div class="mb-2">
+                <h2 class="text-lemon font-bold text-3xl tracking-[0.2em] uppercase border-b-4 border-lemon pb-1">
+                    Technology In
+                </h2>
+            </div>
+
+            <!-- Main Title with Icons -->
+            <div class="flex items-center justify-center gap-8 w-full">
+                <!-- Left Star -->
+                <div class="text-lemon text-7xl animate-pulse">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+
+                <!-- Massive Typography -->
+                <div>
+                    <h1 class="text-lemon font-black text-[160px] leading-none tracking-tighter drop-shadow-lg" style="font-family: 'Arial Black', 'Noto Sans SC', sans-serif;">
+                        SPORTS
+                    </h1>
+                </div>
+
+                <!-- Right Star -->
+                <div class="text-lemon text-7xl animate-pulse">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+            
+            <!-- Decorative bottom line -->
+            <div class="absolute bottom-6 w-full flex justify-center space-x-2 opacity-50">
+                <div class="w-2 h-2 bg-lemon rounded-full"></div>
+                <div class="w-2 h-2 bg-lemon rounded-full"></div>
+                <div class="w-2 h-2 bg-lemon rounded-full"></div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

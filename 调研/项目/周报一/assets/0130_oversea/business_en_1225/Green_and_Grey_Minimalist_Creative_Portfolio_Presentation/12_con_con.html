@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Portfolio - Creative Keynote</title>
+    
+    <!-- Google Fonts (Domestic Mirror as requested) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#559C62',   // Retro Green (Background)
+                        white: '#FFFFFF',     // Text
+                        accent: '#EA8648',    // Persimmon (Orange)
+                        secondary: '#F7F4F0', // Off-white
+                        dark: '#333333',      // Dark details
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'], // Using Noto Sans as requested
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Structure */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container - Fixed Size */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #559C62; /* Primary Background Color */
+            overflow: hidden; /* Ensure no scrollbars */
+            font-family: 'Noto Sans SC', sans-serif;
+            color: #FFFFFF;
+        }
+
+        /* Custom Utility for Line Clamp if needed */
+        .line-clamp-6 {
+            display: -webkit-box;
+            -webkit-line-clamp: 6;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        /* Grid Pattern for the visual element */
+        .dot-pattern {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+        
+        .dot {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <!-- Decorative Background Element: Abstract Geometric Shape (Top Left) -->
+        <div class="absolute top-[-50px] left-[-50px] w-[200px] h-[200px] rounded-full bg-[#EA8648] opacity-20 blur-2xl z-0"></div>
+
+        <!-- Main Content Wrapper -->
+        <div class="relative z-10 flex flex-col h-full px-[60px] py-[50px]">
+            
+            <!-- HEADER SECTION -->
+            <!-- Layout: Flexbox for spacing (Left, Center, Right) -->
+            <header class="flex justify-between items-center text-xs font-bold tracking-[0.2em] uppercase mb-8 border-b border-white/20 pb-4">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-layer-group text-accent"></i>
+                    <span>Creative Presentation</span>
+                </div>
+                <div>
+                    <span>2025</span>
+                </div>
+                <div>
+                    <span>#0001</span>
+                </div>
+            </header>
+
+            <!-- IMAGE GALLERY SECTION (Visuals) -->
+            <!-- Layout: Grid 3 columns with specific aspect ratios -->
+            <div class="grid grid-cols-3 gap-6 h-[260px] mb-8">
+                <!-- Image 1 -->
+                <div class="relative w-full h-full overflow-hidden rounded-lg bg-dark/20 border border-secondary/20">
+                    <img src="https://images.unsplash.com/photo-1550614000-4b9519e02330?q=80&w=600&auto=format&fit=crop" 
+                         alt="Fashion Editorial Left" 
+                         class="w-full h-full object-cover opacity-90 mix-blend-normal">
+                    <!-- 370*260 -->
+                </div>
+                
+                <!-- Image 2 -->
+                <div class="relative w-full h-full overflow-hidden rounded-lg bg-dark/20 border border-secondary/20">
+                    <img src="https://images.unsplash.com/photo-1529139574466-a302d2052574?q=80&w=600&auto=format&fit=crop" 
+                         alt="Fashion Editorial Center" 
+                         class="w-full h-full object-cover opacity-90 mix-blend-normal">
+                    <!-- 370*260 -->
+                </div>
+
+                <!-- Image 3 -->
+                <div class="relative w-full h-full overflow-hidden rounded-lg bg-dark/20 border border-secondary/20">
+                    <img src="https://images.unsplash.com/photo-1509631179647-b8d92b950de0?q=80&w=600&auto=format&fit=crop" 
+                         alt="Fashion Editorial Right" 
+                         class="w-full h-full object-cover opacity-90 mix-blend-normal">
+                    <!-- 370*260 -->
+                </div>
+            </div>
+
+            <!-- TITLE SECTION -->
+            <!-- Typography: Massive, Bold, Tight Leading -->
+            <div class="mb-6 relative">
+                <!-- Decorative small line -->
+                <div class="w-16 h-1 bg-accent mb-4"></div>
+                <h1 class="text-[84px] leading-[0.85] font-black tracking-tighter uppercase text-white">
+                    Project<br>
+                    <span class="text-secondary">Portfolio</span>
+                </h1>
+            </div>
+
+            <!-- CONTENT & DATA SECTION -->
+            <!-- Layout: Flex Row to separate Text columns and Graphic Pattern -->
+            <div class="flex items-start justify-between gap-12 mt-auto">
+                
+                <!-- Text Column 1 -->
+                <div class="flex-1">
+                    <p class="text-sm font-light leading-relaxed text-white/90 text-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.
+                    </p>
+                </div>
+
+                <!-- Text Column 2 -->
+                <div class="flex-1">
+                    <p class="text-sm font-light leading-relaxed text-white/90 text-justify">
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.
+                    </p>
+                </div>
+
+                <!-- Graphic Pattern Area (Recreated from image using CSS/Divs) -->
+                <!-- The original had a grid of dots. We use the accent colors. -->
+                <div class="w-[180px] flex justify-end">
+                    <div class="dot-pattern">
+                        <!-- Row 1 -->
+                        <div class="dot bg-accent"></div>
+                        <div class="dot bg-accent"></div>
+                        <div class="dot bg-secondary"></div> <!-- Highlight dot -->
+                        <div class="dot bg-secondary"></div>
+                        
+                        <!-- Row 2 -->
+                        <div class="dot bg-accent"></div>
+                        <div class="dot bg-accent"></div>
+                        <div class="dot bg-secondary"></div>
+                        <div class="dot bg-secondary"></div>
+                        
+                        <!-- Row 3 -->
+                        <div class="dot bg-accent"></div>
+                        <div class="dot bg-secondary"></div> <!-- Variation -->
+                        <div class="dot bg-secondary"></div>
+                        <div class="dot bg-secondary"></div>
+                        
+                        <!-- Row 4 -->
+                        <div class="dot bg-accent"></div>
+                        <div class="dot bg-accent"></div>
+                        <div class="dot bg-secondary"></div>
+                        <div class="dot bg-secondary"></div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <!-- Footer Copyright / Subtle Element -->
+            <div class="absolute bottom-4 right-[60px] text-[10px] text-white/40 tracking-widest">
+                <span>© STUDIO 2025</span>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contents - Fixed Layout Refactor</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Noto Sans SC', sans-serif; }
+        
+        /* 固定尺寸容器，居中显示 */
+        #page_container { 
+            width: 1280px; height: 720px; 
+            margin: 0 auto; background: #FFF; 
+            overflow: hidden; position: relative;
+            display: grid; grid-template-columns: 400px 1fr 400px;
+            gap: 1px; background-color: #F0F0F0; /* 用背景色作为网格线 */
+        }
+
+        .col-content { background: #FFF; padding: 40px; display: flex; flex-direction: column; position: relative; }
+        .text-accent { color: #6B46E6; }
+        .bg-accent { background-color: #6B46E6; }
+        
+        /* 装饰性细节 */
+        .meta-tag { font-size: 9px; font-weight: 900; color: #999; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 8px; }
+        .vertical-id { position: absolute; right: 20px; top: 40px; writing-mode: vertical-rl; font-size: 10px; font-weight: 700; color: #DDD; }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        
+        <div class="col-content border-r border-gray-100">
+            <div class="vertical-id italic">REF: MED-2026-IDX</div>
+            <div class="mb-12">
+                <div class="w-12 h-2 bg-black mb-6"></div>
+                <h1 class="text-7xl font-black text-black leading-[0.8] uppercase tracking-tighter">
+                    AGENDA<br><span class="text-accent italic">INDEX</span>
+                </h1>
+            </div>
+
+            <div class="mt-auto space-y-8">
+                <div>
+                    <p class="meta-tag">Strategic Context</p>
+                    <p class="text-sm text-gray-500 leading-relaxed text-justify">
+                        This index categorizes the critical vectors of AI-driven medical evolution. From backend operational efficiency to frontline clinical diagnostics, each section is a prerequisite for system-wide optimization.
+                    </p>
+                </div>
+                <div class="bg-gray-50 p-6 border-l-4 border-purple-600">
+                    <p class="meta-tag text-purple-600">Primary KPI</p>
+                    <p class="text-xs font-bold text-black uppercase">Standardizing Multi-Omic Clinical Integration by Q4 2026.</p>
+                </div>
+                <div class="flex justify-between items-end border-t border-gray-100 pt-6">
+                    <p class="text-[9px] font-black text-gray-300 uppercase tracking-widest">Protocol v.8.4</p>
+                    <div class="flex gap-1">
+                        <span class="w-1 h-1 bg-purple-600"></span>
+                        <span class="w-1 h-1 bg-gray-200"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-content">
+            <div class="mb-10 flex justify-between items-end">
+                <p class="meta-tag">Section Group A</p>
+                <p class="text-[10px] font-bold text-gray-300 italic">Phase: Discovery</p>
+            </div>
+            
+            <div class="space-y-4 flex-1">
+                <div class="group border-b border-gray-50 pb-4 hover:bg-gray-50 transition-all cursor-pointer">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-black text-gray-100 group-hover:text-purple-600 transition-colors italic">01</span>
+                        <h2 class="text-xl font-black text-black uppercase tracking-tight">Executive Strategic View</h2>
+                    </div>
+                    <p class="text-xs text-gray-400 mt-2 pl-12">High-level alignment of medical and economic goals.</p>
+                </div>
+                <div class="group border-b border-gray-50 pb-4 hover:bg-gray-50 transition-all">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-black text-gray-100 group-hover:text-purple-600 transition-colors italic">02</span>
+                        <h2 class="text-xl font-black text-black uppercase tracking-tight">Biotech Synergy Framework</h2>
+                    </div>
+                    <p class="text-xs text-gray-400 mt-2 pl-12">Architecture for cross-platform biological integration.</p>
+                </div>
+                <div class="group border-b border-gray-50 pb-4 hover:bg-gray-50 transition-all">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-black text-gray-100 group-hover:text-purple-600 transition-colors italic italic">03</span>
+                        <h2 class="text-xl font-black text-black uppercase tracking-tight">Next-Gen Genetic Mapping</h2>
+                    </div>
+                    <p class="text-xs text-gray-400 mt-2 pl-12">Precision protocols for whole-exome sequencing.</p>
+                </div>
+                <div class="group border-b border-gray-50 pb-4 hover:bg-gray-50 transition-all">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-black text-gray-100 group-hover:text-purple-600 transition-colors italic">04</span>
+                        <h2 class="text-xl font-black text-black uppercase tracking-tight">Preventive Focus Models</h2>
+                    </div>
+                    <p class="text-xs text-gray-400 mt-2 pl-12">Shifting paradigms toward pre-symptomatic care.</p>
+                </div>
+                <div class="group border-b border-purple-100 pb-4 bg-purple-50 p-4 -mx-4 rounded-sm">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-3xl font-black text-purple-600 italic">05</span>
+                        <h2 class="text-xl font-black text-purple-600 uppercase tracking-tight">AI-Driven Diagnostics Core</h2>
+                    </div>
+                    <p class="text-xs text-purple-400 mt-2 pl-12">Neural processing units and diagnostic logic.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-content bg-gray-50">
+            <div class="mb-10">
+                <p class="meta-tag">Section Group B</p>
+                <p class="text-[10px] font-bold text-gray-300 italic">Phase: Implementation</p>
+            </div>
+
+            <div class="space-y-4 mb-12">
+                <div class="border-b border-gray-200 pb-4">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-xl font-black text-gray-300 italic">06</span>
+                        <h2 class="text-sm font-black text-black uppercase">Clinical Outcomes</h2>
+                    </div>
+                </div>
+                <div class="border-b border-gray-200 pb-4">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-xl font-black text-gray-300 italic">07</span>
+                        <h2 class="text-sm font-black text-black uppercase">Healthcare Scaling</h2>
+                    </div>
+                </div>
+                <div class="border-b border-gray-200 pb-4">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-xl font-black text-gray-300 italic">08</span>
+                        <h2 class="text-sm font-black text-black uppercase">Economic Impact</h2>
+                    </div>
+                </div>
+                <div class="border-b border-gray-200 pb-4">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-xl font-black text-gray-300 italic">09</span>
+                        <h2 class="text-sm font-black text-black uppercase italic">Conclusion</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-auto bg-black p-8 text-white -mx-10 mb-[-40px]">
+                <div class="flex justify-between items-end mb-6">
+                    <p class="text-[10px] font-black uppercase text-purple-500 tracking-[0.3em]">Network Growth</p>
+                    <span class="text-3xl font-black">+214%</span>
+                </div>
+                <p class="text-xs text-gray-400 leading-relaxed">
+                    Expansion of data-nodes across 12 global clinical territories. Verified secure endpoints: 4.2k
+                </p>
+                <div class="mt-8 flex justify-between items-center border-t border-gray-800 pt-6">
+                    <p class="text-[10px] font-bold text-gray-600 uppercase italic">Med-Presentation / 2026</p>
+                    <div class="w-8 h-8 bg-purple-600 flex items-center justify-center font-black italic text-xs">A</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

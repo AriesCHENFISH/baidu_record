@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear Energy - Medicine & Industry</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { brand: { yellow: '#FFEA4A', black: '#0A0A0A', accent: '#FF3D00' } },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'sans-serif'], mono: ['Courier New', 'monospace'] }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        #page_container { width: 1280px; height: 720px; position: relative; background-color: #FFEA4A; overflow: hidden; margin: 0 auto; font-family: "Noto Sans SC", sans-serif; }
+        .grid-bg { background-image: radial-gradient(rgba(0,0,0,0.2) 1px, transparent 0); background-size: 30px 30px; opacity: 0.3; }
+        #page_container::before, #page_container::after { content: ''; position: absolute; width: 40px; height: 40px; border: 2px solid rgba(0,0,0,0.2); z-index: 5; }
+        #page_container::before { top: 30px; left: 30px; border-right: 0; border-bottom: 0; }
+        #page_container::after { bottom: 30px; right: 30px; border-left: 0; border-top: 0; }
+        .outline-text { -webkit-text-stroke: 1.5px #0A0A0A; color: transparent; text-transform: uppercase; }
+        
+        .industrial-border { border: 2px solid #0A0A0A; }
+        .vertical-tag { writing-mode: vertical-rl; transform: rotate(180deg); }
+        
+        .img-scan { position: relative; }
+        .img-scan::after { 
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px; 
+            background: rgba(255, 234, 74, 0.5); box-shadow: 0 0 15px #FFEA4A; 
+            animation: scan 4s linear infinite; 
+        }
+        @keyframes scan { 0% { top: 0; } 100% { top: 100%; } }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <!-- 背景点阵 -->
+        <div class="absolute inset-0 grid-bg"></div>
+        
+        <!-- 背景装饰文字 -->
+        <div class="absolute right-10 top-10 text-[180px] font-black opacity-[0.03] leading-none select-none tracking-tighter">
+            APPLY_05
+        </div>
+
+        <div class="relative z-10 w-full h-full p-16 flex flex-col">
+            
+            <!-- Header -->
+            <div class="flex justify-between items-start mb-4">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-black flex items-center justify-center">
+                        <i class="fa-solid fa-earth-americas text-brand-yellow text-2xl"></i>
+                    </div>
+                    <div>
+                        <h6 class="text-xs font-black uppercase tracking-widest">Giggling Platypus Co.</h6>
+                        <p class="text-[9px] font-bold opacity-50 uppercase tracking-tighter">Nuclear Research / Archive 2026</p>
+                    </div>
+                </div>
+                <div class="font-mono text-[10px] font-black border-b-2 border-black pb-1">
+                    SYSTEM_ACCESS: GRANTED
+                </div>
+            </div>
+
+            <!-- 主标题区域：采用极简错位设计 -->
+            <div class="relative mb-12">
+                <h1 class="text-[100px] leading-[0.8] font-[950] text-brand-black tracking-tighter uppercase relative z-20">
+                    Nuclear <span class="outline-text">In</span><br>
+                    Medicine <span class="text-3xl font-mono align-middle bg-black text-brand-yellow px-4 py-1">&</span> Industry
+                </h1>
+            </div>
+
+            <!-- 核心内容网格 -->
+            <div class="grid grid-cols-12 gap-0 flex-1 relative">
+                
+                <!-- 模块一：Medicine (位于左上方，悬浮感) -->
+                <div class="col-span-5 self-start pt-4 relative z-20">
+                    <div class="bg-black text-brand-yellow p-8 shadow-[15px_15px_0px_0px_rgba(255,61,0,1)]">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-mono font-bold tracking-widest text-brand-accent">UNIT_01: MEDICAL</span>
+                            <span class="w-8 h-[1px] bg-brand-accent"></span>
+                        </div>
+                        <h3 class="text-3xl font-black uppercase mb-4">Precision Bio</h3>
+                        <p class="text-sm font-bold leading-relaxed opacity-80">
+                            Nuclear medicine uses radioactive tracers to diagnose and treat diseases like cancer with atomic-level accuracy. Radiotherapy remains a cornerstone of modern oncology.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 视觉横梁：图片 (贯穿中部的长方形) -->
+                <div class="absolute top-[20%] right-0 w-3/5 h-[320px] z-10">
+                    <div class="img-scan w-full h-full border-[3px] border-black bg-black overflow-hidden shadow-[20px_-20px_0px_0px_rgba(0,0,0,0.1)]">
+                        <img src="https://images.unsplash.com/photo-1628595351029-c2bf17511435?q=80&w=1200&auto=format&fit=crop" 
+                             class="w-full h-full object-cover grayscale brightness-90 hover:grayscale-0 transition-all duration-1000">
+                        <div class="absolute top-4 right-4 bg-brand-yellow text-black px-2 py-1 font-mono text-[9px] font-bold">
+                            IMG_REF: ISO_SCAN_88
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 模块二：Industry (位于右下方，对角呼应) -->
+                <div class="col-start-7 col-span-6 self-end pb-8 relative z-20">
+                    <div class="industrial-border bg-brand-yellow/90 backdrop-blur-sm p-8 flex gap-6">
+                        <div class="vertical-tag text-[10px] font-black border-l border-black pl-1">
+                            INDUSTRY_SECTOR
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="text-xs font-mono font-bold bg-black text-brand-yellow px-2 py-0.5">UNIT_02</span>
+                                <h3 class="text-3xl font-black uppercase">Heavy Systems</h3>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <p class="text-xs font-bold leading-relaxed border-t border-black/20 pt-2">
+                                    <span class="text-brand-accent font-black">//</span> Food Irradiation: Enhancing global food safety and shelf life.
+                                </p>
+                                <p class="text-xs font-bold leading-relaxed border-t border-black/20 pt-2">
+                                    <span class="text-brand-accent font-black">//</span> Material Testing: Non-destructive testing for aerospace integrity.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer Meta -->
+            <div class="mt-4 flex justify-between items-end">
+                <div class="text-[9px] font-black uppercase tracking-widest flex gap-8">
+                    <span>Part: Applications</span>
+                    <span>Status: Verified</span>
+                    <span>Class: Level_A</span>
+                </div>
+                <div class="font-mono text-3xl font-black italic">05.</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

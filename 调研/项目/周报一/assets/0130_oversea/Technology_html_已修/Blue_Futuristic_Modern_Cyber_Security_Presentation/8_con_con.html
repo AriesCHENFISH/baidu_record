@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Prevention Tactics</title>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts Mirror (Domestic) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                        mono: ['"Courier New"', 'Courier', 'monospace'],
+                    },
+                    colors: {
+                        deepVoid: '#0A111F',
+                        neonBlue: '#4FD1FF',
+                        techPale: '#A8C5E6',
+                        midnightNavy: '#142238',
+                        strokeBlue: '#2B4F81',
+                        terminalGreen: '#4CAF50',
+                        alertOrange: '#E65100',
+                    },
+                    boxShadow: {
+                        'neon-glow': '0 0 15px rgba(79, 209, 255, 0.4), 0 0 30px rgba(79, 209, 255, 0.1)',
+                        'box-depth': '0 10px 30px -5px rgba(0, 0, 0, 0.5)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* CSS Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* Page Container */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #0A111F;
+            overflow: hidden;
+            /* Subtle Tech Grid Background */
+            background-image: 
+                linear-gradient(rgba(20, 34, 56, 0.3) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(20, 34, 56, 0.3) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* Custom Text Effects */
+        .cyber-glitch-text {
+            text-shadow: 2px 2px 0px rgba(43, 79, 129, 0.5);
+        }
+
+        /* Polygon Shape for the Image */
+        .tech-hexagon-clip {
+            clip-path: polygon(
+                15% 0%, 85% 0%, 
+                100% 15%, 100% 85%, 
+                85% 100%, 15% 100%, 
+                0% 85%, 0% 15%
+            );
+        }
+
+        /* Decoration Lines */
+        .deco-line-vertical {
+            width: 1px;
+            background: linear-gradient(to bottom, transparent, #2B4F81, #4FD1FF, transparent);
+        }
+
+        /* Custom Scrollbar for code visual (hidden but functional logic) */
+        ::-webkit-scrollbar { width: 0; }
+    </style>
+</head>
+<body>
+
+    <!-- Main Container -->
+    <div id="page_container">
+        
+        <!-- Ambient Glow (Top Left) -->
+        <div class="absolute top-[-100px] left-[-100px] w-[500px] h-[500px] bg-neonBlue opacity-[0.05] rounded-full blur-[100px] pointer-events-none"></div>
+
+        <!-- Grid Layout -->
+        <div class="grid grid-cols-12 h-full w-full">
+
+            <!-- Left Column: Content (7 Cols) -->
+            <div class="col-span-7 pl-16 pr-8 flex flex-col justify-center relative z-10">
+                
+                <!-- Header Section -->
+                <div class="mb-12">
+                    <!-- Tech Decoration Element -->
+                    <div class="flex items-center gap-2 mb-4 opacity-70">
+                        <div class="w-2 h-2 bg-neonBlue rounded-full animate-pulse"></div>
+                        <div class="h-[1px] w-20 bg-neonBlue"></div>
+                        <b class="text-neonBlue text-xs tracking-[0.2em] font-mono">CYBER_DEFENSE_PROTOCOL_V.09</b>
+                    </div>
+
+                    <!-- Main Title -->
+                    <h1 class="text-6xl leading-[0.9] font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-neonBlue to-white uppercase cyber-glitch-text tracking-tight mb-4 drop-shadow-[0_0_10px_rgba(79,209,255,0.3)]">
+                        Prevention<br>Tactics
+                    </h1>
+
+                    <!-- Subtitle -->
+                    <h2 class="text-xl text-white font-light tracking-[0.25em] uppercase border-l-4 border-neonBlue pl-4 ml-1">
+                        Smart Steps To Prevent Attacks
+                    </h2>
+                </div>
+
+                <!-- Info Box (Chamfered Tech Box) -->
+                <div class="relative mt-4 group">
+                    <!-- Tech Border Construction -->
+                    <div class="absolute inset-0 border border-strokeBlue rounded-lg opacity-60"></div>
+                    <!-- Accent Top Bar -->
+                    <div class="absolute top-[-1px] left-10 right-10 h-[3px] bg-neonBlue shadow-[0_0_10px_#4FD1FF]"></div>
+                    <!-- Corner Accents -->
+                    <div class="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-neonBlue"></div>
+                    <div class="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-neonBlue"></div>
+
+                    <!-- Content -->
+                    <div class="p-10 bg-midnightNavy/80 backdrop-blur-sm relative rounded-lg">
+                        <div class="flex flex-col gap-6">
+                            <div class="flex gap-4 items-start">
+                                <div class="mt-1 text-neonBlue"><i class="fa-solid fa-shield-halved text-xl"></i></div>
+                                <p class="text-techPale text-gl leading-relaxed font-light">
+                                    <b class="text-white font-semibold">Effective Cybersecurity</b> involves regular software updates, device monitoring, and user training. Limiting system access, disabling unused services, and backing up data strengthen defense.
+                                </p>
+                            </div>
+                            
+                            <div class="w-full h-[1px] bg-strokeBlue/50"></div>
+
+                            <div class="flex gap-4 items-start">
+                                <div class="mt-1 text-terminalGreen"><i class="fa-solid fa-user-lock text-xl"></i></div>
+                                <p class="text-techPale text-gl leading-relaxed font-light">
+                                    <b class="text-white font-semibold">Awareness Campaigns</b> and a strong culture of caution can greatly reduce risks. Prevention is always cheaper and safer than recovery after an attack.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Arrow Deco -->
+                <div class="absolute bottom-16 right-16 text-neonBlue text-2xl animate-bounce">
+                    <i class="fa-solid fa-arrow-turn-down transform rotate-90"></i>
+                </div>
+            </div>
+
+            <!-- Right Column: Visuals (5 Cols) -->
+            <div class="col-span-5 relative flex items-center justify-center pr-12">
+                
+                <!-- Vertical Line Separator -->
+                <div class="absolute left-0 top-1/4 bottom-1/4 w-[1px] bg-gradient-to-b from-transparent via-strokeBlue to-transparent opacity-50"></div>
+
+                <!-- Image Container -->
+                <div class="relative w-full h-[550px] tech-hexagon-clip shadow-box-depth bg-black">
+                    <!-- Source Image -->
+                    <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1000&auto=format&fit=crop" 
+                         alt="Hacker typing code on laptop" 
+                         class="w-full h-full object-cover opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700">
+                    <!-- 500*600 -->
+
+                    <!-- Overlay Gradient -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-deepVoid via-transparent to-deepVoid/50"></div>
+
+                    <!-- Code Overlay Effect (Top part of image) -->
+                    <div class="absolute top-10 left-6 right-6 h-1/3 overflow-hidden opacity-80 pointer-events-none">
+                        <div class="font-mono text-[10px] leading-3 text-terminalGreen opacity-70">
+                            <p>> init_sequence(SECURE_CORE);</p>
+                            <p>> loading_modules... [OK]</p>
+                            <p>> bypass_firewall: false</p>
+                            <p>> user_auth: PENDING...</p>
+                            <p>> 01001010 11010100 00101010</p>
+                            <p>> Analyzing threat vectors...</p>
+                            <p class="text-alertOrange">> WARNING: UNKNOWN IP DETECTED</p>
+                            <p>> tracing_route(192.168.0.1);</p>
+                            <p>> establishing_uplink...</p>
+                        </div>
+                    </div>
+
+                    <!-- Tech UI Overlay on Image -->
+                    <div class="absolute bottom-8 left-0 w-full flex justify-center gap-4">
+                        <div class="flex flex-col items-center">
+                            <i class="fa-solid fa-fingerprint text-neonBlue text-2xl mb-2 drop-shadow-[0_0_5px_rgba(79,209,255,0.8)]"></i>
+                            <span class="text-[10px] text-techPale tracking-widest uppercase">Bio-Auth</span>
+                        </div>
+                        <div class="h-10 w-[1px] bg-white/20"></div>
+                        <div class="flex flex-col items-center">
+                            <i class="fa-solid fa-lock text-terminalGreen text-2xl mb-2 drop-shadow-[0_0_5px_rgba(76,175,80,0.8)]"></i>
+                            <span class="text-[10px] text-techPale tracking-widest uppercase">Encrypted</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Floating Abstract Tech Shapes behind image -->
+                <div class="absolute -z-10 right-4 top-20 w-32 h-32 border border-strokeBlue/30 rounded-full"></div>
+                <div class="absolute -z-10 right-20 bottom-32 w-48 h-48 border border-neonBlue/20 rounded-full border-dashed animate-[spin_10s_linear_infinite]"></div>
+
+            </div>
+        </div>
+
+        <!-- Footer / Bottom Bar -->
+        <div class="absolute bottom-0 left-0 w-full h-2 bg-[#0A111F] border-t border-[#1F3A5F] flex items-center justify-between px-6">
+            <div class="w-1/3 h-full bg-neonBlue/20"></div>
+            <div class="flex gap-1">
+                <div class="w-2 h-1 bg-alertOrange"></div>
+                <div class="w-2 h-1 bg-terminalGreen"></div>
+                <div class="w-2 h-1 bg-neonBlue"></div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

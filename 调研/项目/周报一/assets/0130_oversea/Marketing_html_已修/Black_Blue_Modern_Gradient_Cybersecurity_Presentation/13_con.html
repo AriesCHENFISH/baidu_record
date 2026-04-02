@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Trends & Data</title>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#040710',
+                        textPrimary: '#FFFFFF',
+                        textSecondary: '#B0B3B8',
+                        accentCyan: '#4FB0C0',
+                        accentBlue: '#2C6FCA',
+                        cardBg: '#1A1B1F',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'gradient-tech': 'linear-gradient(to right, #2C6FCA, #4FB0C0)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #040710;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background-image: 
+                linear-gradient(rgba(79, 176, 192, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(79, 176, 192, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        ::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body>
+
+    <div id="page_container" class="flex flex-col p-12">
+        
+        <div class="flex justify-between items-end mb-8 relative z-10">
+            <div>
+                <div class="w-16 h-1 bg-accentCyan mb-4"></div>
+                <h2 class="text-textSecondary text-xl font-light tracking-widest mb-1 uppercase">Annual Analysis</h2>
+                <h1 class="text-textPrimary text-5xl font-bold leading-tight uppercase">
+                    SECURITY <span class="text-accentCyan">TRENDS</span>
+                </h1>
+            </div>
+            <div class="text-right max-w-md">
+                <p class="text-textSecondary text-sm leading-relaxed">
+                    Visualizing the correlation between increasing attack vectors and our automated defense response rates over the last fiscal quarter.
+                </p>
+            </div>
+        </div>
+
+        <div class="flex-grow grid grid-cols-12 gap-8 h-full">
+            
+            <div class="col-span-4 flex flex-col justify-between py-2">
+                <div class="bg-cardBg border-l-4 border-accentBlue p-6 rounded-r-lg">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-textSecondary text-sm font-bold uppercase">Total Attacks</span>
+                        <i class="fa-solid fa-arrow-trend-up text-accentCyan"></i>
+                    </div>
+                    <div class="text-4xl font-bold text-textPrimary">
+                        84<span class="text-2xl text-textSecondary font-normal">%</span>
+                    </div>
+                    <p class="text-sm text-textSecondary mt-2">Year-over-year increase in attempted breaches.</p>
+                </div>
+
+                <div class="bg-cardBg border-l-4 border-accentCyan p-6 rounded-r-lg">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-textSecondary text-sm font-bold uppercase">Response Time</span>
+                        <i class="fa-solid fa-stopwatch text-accentBlue"></i>
+                    </div>
+                    <div class="text-4xl font-bold text-textPrimary">
+                        0.4<span class="text-2xl text-textSecondary font-normal">s</span>
+                    </div>
+                    <p class="text-sm text-textSecondary mt-2">Average automated mitigation speed.</p>
+                </div>
+
+                <div class="mt-2">
+                    <h3 class="text-textPrimary text-xl font-bold mb-3">Analysis Summary</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start text-textSecondary text-sm">
+                            <i class="fa-solid fa-check text-accentCyan mt-1 mr-3"></i>
+                            <span>Phishing attempts peaked in Q3, showing a 120% spike.</span>
+                        </li>
+                        <li class="flex items-start text-textSecondary text-sm">
+                            <i class="fa-solid fa-check text-accentCyan mt-1 mr-3"></i>
+                            <span>AI-driven defense systems successfully intercepted 99.9% of threats.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-span-8 relative">
+                <div class="w-full h-full bg-cardBg/50 rounded-xl border border-gray-800 p-4 relative backdrop-blur-sm flex flex-col">
+                    <div class="absolute top-0 left-0 w-2 h-2 border-t border-l border-accentCyan"></div>
+                    <div class="absolute top-0 right-0 w-2 h-2 border-t border-r border-accentCyan"></div>
+                    <div class="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-accentCyan"></div>
+                    <div class="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-accentCyan"></div>
+                    
+                    <div id="trendChart" class="w-full flex-grow" style="min-height: 400px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 确保 DOM 加载完成后再执行
+        document.addEventListener('DOMContentLoaded', function () {
+            var chartDom = document.getElementById('trendChart');
+            
+            // 检查 chartDom 是否存在
+            if (!chartDom) {
+                console.error("Chart container not found!");
+                return;
+            }
+
+            var myChart = echarts.init(chartDom);
+            var option;
+
+            option = {
+                // 背景透明
+                backgroundColor: 'transparent',
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {
+                        type: 'line',
+                        lineStyle: { color: '#4FB0C0', width: 1, type: 'dashed' }
+                    },
+                    backgroundColor: 'rgba(26, 27, 31, 0.9)',
+                    borderColor: '#4FB0C0',
+                    textStyle: { color: '#fff' }
+                },
+                legend: {
+                    data: ['Threats Detected', 'Threats Blocked'],
+                    right: 10,
+                    top: 0,
+                    textStyle: { color: '#B0B3B8' },
+                    icon: 'roundRect'
+                },
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    top: '15%',
+                    containLabel: true,
+                    borderColor: '#333',
+                    show: false 
+                },
+                xAxis: {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                    axisLine: { lineStyle: { color: '#333' } },
+                    axisLabel: { color: '#B0B3B8' },
+                    splitLine: { show: true, lineStyle: { color: 'rgba(255,255,255,0.05)' } }
+                },
+                yAxis: {
+                    type: 'value',
+                    axisLine: { show: false },
+                    axisLabel: { color: '#B0B3B8' },
+                    splitLine: { lineStyle: { color: 'rgba(255,255,255,0.05)' } }
+                },
+                series: [
+                    {
+                        name: 'Threats Detected',
+                        type: 'line',
+                        smooth: true,
+                        showSymbol: false,
+                        lineStyle: { width: 3, color: '#2C6FCA' },
+                        areaStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                                { offset: 0, color: 'rgba(44, 111, 202, 0.4)' },
+                                { offset: 1, color: 'rgba(44, 111, 202, 0.01)' }
+                            ])
+                        },
+                        data: [120, 132, 101, 134, 90, 230, 210, 180, 220, 250, 280, 310]
+                    },
+                    {
+                        name: 'Threats Blocked',
+                        type: 'line',
+                        smooth: true,
+                        showSymbol: false,
+                        lineStyle: { width: 3, color: '#4FB0C0' },
+                        areaStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                                { offset: 0, color: 'rgba(79, 176, 192, 0.4)' },
+                                { offset: 1, color: 'rgba(79, 176, 192, 0.01)' }
+                            ])
+                        },
+                        data: [118, 128, 99, 130, 88, 225, 208, 177, 218, 248, 278, 308]
+                    }
+                ]
+            };
+
+            myChart.setOption(option);
+            
+            // 窗口大小改变时重绘
+            window.addEventListener('resize', function() {
+                myChart.resize();
+            });
+        });
+    </script>
+</body>
+</html>

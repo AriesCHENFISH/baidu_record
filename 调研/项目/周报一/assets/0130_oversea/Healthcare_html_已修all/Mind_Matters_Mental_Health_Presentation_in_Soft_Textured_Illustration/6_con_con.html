@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warning Signs of Mental Health Challenges</title>
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts (Domestic Mirror) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        /* CSS Reset & Global Basics */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* --- Design System Variables --- */
+        :root {
+            --bg-texture: #EAE5DE;
+            --primary-rose: #C97B88;
+            --accent-maroon: #9E5A65;
+            --text-ink: #1A1816;
+            --paper-white: #F2F0ED;
+            --noise-grey: #BDBAB5;
+        }
+
+        /* --- Page Container (Strict 1280x720) --- */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            margin: 0 auto;
+            background-color: var(--bg-texture);
+            overflow: hidden;
+            /* Simulation of paper texture using a subtle noise pattern */
+            background-image: 
+                radial-gradient(circle at 50% 50%, rgba(201, 123, 136, 0.15) 0%, transparent 60%),
+                repeating-linear-gradient(45deg, rgba(189, 186, 181, 0.1) 0px, rgba(189, 186, 181, 0.1) 1px, transparent 1px, transparent 10px);
+        }
+
+        /* --- Typography Styles --- */
+        h1 {
+            font-family: 'Noto Sans SC', serif; /* Simulating a serif style with weight */
+            font-weight: 700;
+            color: var(--text-ink);
+            text-transform: uppercase;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-family: 'Noto Sans SC', sans-serif;
+            font-weight: 700;
+            color: #FFFFFF; /* White text on Maroon tape */
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 1.25rem;
+        }
+
+        p {
+            font-family: 'Noto Sans SC', sans-serif;
+            font-weight: 400;
+            color: var(--text-ink);
+            line-height: 1.5;
+            font-size: 1rem;
+        }
+
+        /* --- Custom Components --- */
+
+        /* 1. The "Tape" Header Style */
+        .tape-header {
+            background-color: var(--accent-maroon);
+            display: inline-block;
+            padding: 0.4rem 1.5rem;
+            position: relative;
+            margin-bottom: 0.8rem;
+            box-shadow: 2px 3px 5px rgba(0,0,0,0.2);
+            /* Rough edges via clip-path to look like torn tape */
+            clip-path: polygon(
+                0% 2px, 2% 0%, 98% 1px, 100% 3px, 
+                99% 98%, 97% 100%, 3% 99%, 0% 97%
+            );
+            transform: rotate(-1deg);
+        }
+
+        /* 2. The "Paper Note" Content Container */
+        .paper-note {
+            background-color: var(--paper-white);
+            padding: 1.2rem;
+            position: relative;
+            box-shadow: 4px 4px 10px rgba(0,0,0,0.08);
+            border: 1px solid rgba(0,0,0,0.05);
+            /* Slightly irregular border radius */
+            border-radius: 2px 255px 3px 25px / 255px 5px 225px 5px; 
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        /* 3. Central Visual Layout */
+        .center-collage {
+            position: absolute;
+            left: 50%;
+            top: 55%;
+            transform: translate(-50%, -50%);
+            width: 380px;
+            height: 480px;
+            z-index: 10;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Abstract Shape behind image */
+        .blob-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: var(--primary-rose);
+            opacity: 0.8;
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            filter: blur(40px);
+            z-index: -1;
+            mix-blend-mode: multiply;
+        }
+
+        /* 4. Bottom Torn Paper Effect */
+        .torn-paper-footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 120px;
+            background-color: var(--paper-white);
+            z-index: 5;
+            /* Complex polygon to simulate torn paper edge */
+            clip-path: polygon(
+                0% 40%, 2% 45%, 4% 35%, 6% 48%, 8% 38%, 10% 46%, 
+                12% 35%, 15% 50%, 18% 38%, 21% 45%, 24% 35%, 27% 48%, 
+                30% 38%, 33% 45%, 36% 30%, 40% 50%, 43% 35%, 46% 45%, 
+                50% 32%, 54% 48%, 58% 36%, 62% 45%, 66% 30%, 70% 48%, 
+                75% 35%, 80% 45%, 85% 30%, 90% 48%, 95% 35%, 98% 45%, 
+                100% 40%, 100% 100%, 0% 100%
+            );
+            box-shadow: 0 -10px 20px rgba(0,0,0,0.1); /* Note: shadow won't show on clip-path elements easily, simulated with pseudo element if needed, but omitted for simplicity */
+        }
+        
+        /* Add shadow specifically to the torn paper using a wrapper trick or filter */
+        .torn-paper-shadow {
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 130px;
+            background-color: rgba(0,0,0,0.2);
+            z-index: 4;
+            filter: blur(5px);
+             clip-path: polygon(
+                0% 40%, 2% 45%, 4% 35%, 6% 48%, 8% 38%, 10% 46%, 
+                12% 35%, 15% 50%, 18% 38%, 21% 45%, 24% 35%, 27% 48%, 
+                30% 38%, 33% 45%, 36% 30%, 40% 50%, 43% 35%, 46% 45%, 
+                50% 32%, 54% 48%, 58% 36%, 62% 45%, 66% 30%, 70% 48%, 
+                75% 35%, 80% 45%, 85% 30%, 90% 48%, 95% 35%, 98% 45%, 
+                100% 40%, 100% 100%, 0% 100%
+            );
+        }
+
+        /* 5. Grid Layout System */
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 1fr 400px 1fr;
+            height: 100%;
+            padding: 130px 60px 40px 60px; /* Top padding clears the title */
+            gap: 20px;
+            position: relative;
+            z-index: 20;
+        }
+
+        .col-left, .col-right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        /* Specific adjustments for visual balance */
+        .col-left { align-items: flex-end; text-align: right; }
+        .col-right { align-items: flex-start; text-align: left; }
+        
+        /* Helper for title positioning */
+        .main-title-container {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            z-index: 30;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <!-- === Main Title === -->
+        <header class="main-title-container">
+            <h1 class="text-5xl mb-2" style="font-weight: 300; font-size: 2.5rem;">WARNING SIGNS OF</h1>
+            <h1 class="text-6xl" style="font-size: 3.8rem; letter-spacing: -1px; text-shadow: 2px 2px 0px rgba(201, 123, 136, 0.4);">
+                MENTAL HEALTH CHALLENGES
+            </h1>
+        </header>
+
+        <!-- === Central Collage Visual === -->
+        <div class="center-collage">
+            <!-- Background Blob Effect -->
+            <div class="blob-bg"></div>
+            
+            <!-- Central Figure Image -->
+            <!-- Using a collage-style silhouette that represents internal struggle -->
+            <img src="https://images.unsplash.com/photo-1617791160505-6f00504e3519?q=80&w=1000&auto=format&fit=crop" 
+                 alt="Silhouette of person in distress" 
+                 class="relative object-cover"
+                 style="height: 100%; width: auto; mix-blend-mode: multiply; filter: contrast(1.2) sepia(0.3) grayscale(0.2); mask-image: linear-gradient(to bottom, black 80%, transparent 100%);">
+            <!-- 380*480 -->
+            
+            <!-- Decorative Hands (FontAwesome Icons simulated as background elements) -->
+            <!-- Left Hand -->
+            <i class="fa-solid fa-hand-holding-heart absolute text-9xl text-white opacity-20" style="left: -40px; top: 100px; transform: rotate(-45deg); color: var(--accent-maroon);"></i>
+            <!-- Right Hand -->
+            <i class="fa-solid fa-hands-helping absolute text-9xl text-white opacity-20" style="right: -40px; top: 200px; transform: rotate(45deg); color: var(--accent-maroon);"></i>
+        </div>
+
+        <!-- === Main Content Grid === -->
+        <div class="grid-layout">
+            
+            <!-- Left Column: Emotional & Behavioral -->
+            <div class="col-left">
+                
+                <!-- Item 1: Emotional -->
+                <div class="w-full flex flex-col items-end mb-8 relative group">
+                    <div class="tape-header" style="transform: rotate(-2deg);">
+                        <h2>Emotional</h2>
+                    </div>
+                    <div class="paper-note w-11/12">
+                        <p>Prolonged sadness, anxiety, irritability, and frequent mood swings.</p>
+                    </div>
+                </div>
+
+                <!-- Item 2: Behavioral -->
+                <div class="w-full flex flex-col items-end relative">
+                    <div class="tape-header" style="transform: rotate(1deg); background-color: #8a4d57;">
+                        <h2>Behavioral</h2>
+                    </div>
+                    <div class="paper-note w-11/12">
+                        <p>Social withdrawal, sudden drop in school performance, and risky behavior.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Middle Column (Spacer for Visual) -->
+            <div class="col-mid"></div>
+
+            <!-- Right Column: Cognitive & Physical -->
+            <div class="col-right">
+                
+                <!-- Item 3: Cognitive -->
+                <div class="w-full flex flex-col items-start mb-8 relative">
+                    <div class="tape-header" style="transform: rotate(2deg);">
+                        <h2>Cognitive</h2>
+                    </div>
+                    <div class="paper-note w-11/12">
+                        <p>Trouble focusing, negative self-talk, and feelings of hopelessness.</p>
+                    </div>
+                </div>
+
+                <!-- Item 4: Physical -->
+                <div class="w-full flex flex-col items-start relative">
+                    <div class="tape-header" style="transform: rotate(-1.5deg); background-color: #8a4d57;">
+                        <h2>Physical</h2>
+                    </div>
+                    <div class="paper-note w-11/12">
+                        <p>Sleep problems, changes in appetite, and unexplained aches.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- === Bottom Decoration (Torn Paper) === -->
+        <!-- Shadow Layer -->
+        <div class="torn-paper-shadow"></div>
+        <!-- White Paper Layer -->
+        <div class="torn-paper-footer flex items-end justify-center pb-4">
+            <!-- Optional subtle text in the footer paper -->
+            <span style="font-size: 0.7rem; color: #aaa; text-transform: uppercase; letter-spacing: 2px; opacity: 0.6;">
+                Awareness & Prevention Guide
+            </span>
+        </div>
+
+    </div>
+
+</body>
+</html>

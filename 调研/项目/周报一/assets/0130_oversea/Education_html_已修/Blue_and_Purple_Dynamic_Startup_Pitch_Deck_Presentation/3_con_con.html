@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction - Strategic Design</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts CDN (Specific Source) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        /* CSS Reset & Global Standards */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* 
+         * Page Container Logic 
+         * Fixed 1280x720 dimensions
+         * Centered
+         */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #000000;
+            overflow: hidden;
+        }
+
+        /* Custom Scrollbar hide just in case */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        
+        /* Utility for text-shadow to improve readability on gradients */
+        .text-shadow {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            purple: '#8C7AE6',
+                            blue: '#1B3F9B',
+                            dark: '#1A1B2E',
+                            neon: '#B33CE0'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans SC', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div id="page_container">
+        <!-- 
+            Decorative Background Elements 
+            Simulating the blue swirl/glow from the top right corner 
+        -->
+        <div class="absolute -top-32 -right-32 w-[600px] h-[600px] rounded-full opacity-60 blur-[80px] pointer-events-none"
+             style="background: radial-gradient(circle, rgba(27, 63, 155, 0.8) 0%, rgba(140, 122, 230, 0.2) 60%, transparent 100%);">
+        </div>
+        
+        <!-- Subtle accent on bottom left -->
+        <div class="absolute -bottom-20 -left-20 w-[400px] h-[400px] rounded-full opacity-20 blur-[60px] pointer-events-none"
+             style="background: radial-gradient(circle, rgba(179, 60, 224, 0.5) 0%, transparent 70%);">
+        </div>
+
+        <!-- Main Layout Wrapper with Padding -->
+        <div class="relative w-full h-full p-12 flex flex-col justify-between z-10">
+            
+            <!-- Header Section -->
+            <header class="mb-6">
+                <h1 class="text-white text-7xl font-bold tracking-tighter uppercase drop-shadow-lg">
+                    Introduction
+                </h1>
+                <!-- Decorative line under title -->
+                <div class="w-24 h-1.5 bg-gradient-to-r from-brand-purple to-brand-blue mt-4 rounded-full"></div>
+            </header>
+
+            <!-- Main Content Grid -->
+            <div class="flex-1 grid grid-cols-12 gap-8 items-end pb-8">
+                
+                <!-- Left Column: Primary Image (Laptop Mockup) -->
+                <div class="col-span-4 h-full relative group">
+                    <!-- Image Container with Hover/Depth Effect -->
+                    <div class="w-full h-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl relative">
+                         <!-- Background shape to simulate the purple backdrop in original -->
+                        <div class="absolute inset-0 bg-brand-purple/20 mix-blend-overlay z-10"></div>
+                        
+                        <img src="https://images.unsplash.com/photo-1531297461136-8208b501155b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Design Future Laptop Mockup" 
+                             class="w-full h-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-105">
+                        <!-- 400*500 -->
+                        
+                        <!-- Overlay Text mimicking the laptop screen content -->
+                        <div class="absolute bottom-8 left-6 right-6 z-20">
+                            <div class="bg-black/60 backdrop-blur-md p-4 rounded-lg border border-white/10">
+                                <h3 class="text-white font-bold text-lg leading-tight mb-1">DESIGN YOUR FUTURE</h3>
+                                <p class="text-gray-400 text-xs uppercase tracking-widest">With Us</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Content Blocks -->
+                <div class="col-span-8 flex flex-col justify-end h-full gap-6">
+                    
+                    <!-- Top Block: Gradient Text Card (Primary Message) -->
+                    <!-- Replaced the solid color with the requested gradient style -->
+                    <div class="w-full p-10 rounded-2xl shadow-2xl border border-white/10 relative overflow-hidden"
+                         style="background: linear-gradient(135deg, rgba(27, 63, 155, 0.9) 0%, rgba(140, 122, 230, 0.85) 100%);">
+                        
+                        <!-- Glassmorphism shine effect -->
+                        <div class="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-white/10 to-transparent pointer-events-none"></div>
+                        
+                        <!-- Decorative icon -->
+                        <div class="absolute top-6 right-8 text-white/10 text-6xl">
+                            <i class="fa-solid fa-quote-right"></i>
+                        </div>
+
+                        <p class="text-white text-lg leading-relaxed font-light text-shadow pr-8">
+                            We're your dedicated partners in propelling startups toward success. With a blend of expertise and innovation, we offer comprehensive solutions tailored to meet the specific needs of each venture we work with. From strategic guidance to brand development and digital marketing, we're committed to empowering startups to thrive in competitive markets.
+                        </p>
+                    </div>
+
+                    <!-- Bottom Block: Secondary Image + Text -->
+                    <div class="grid grid-cols-12 gap-6 items-center">
+                        
+                        <!-- Secondary Small Image -->
+                        <div class="col-span-4 h-32 relative">
+                             <div class="w-full h-full rounded-xl overflow-hidden border border-white/10 shadow-lg">
+                                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                     alt="Cyberpunk Laptop Glow" 
+                                     class="w-full h-full object-cover">
+                                <!-- 280*128 -->
+                             </div>
+                        </div>
+
+                        <!-- Secondary Text Description -->
+                        <div class="col-span-8 pl-2">
+                             <div class="border-l-2 border-brand-purple pl-6">
+                                <p class="text-gray-300 text-base leading-relaxed">
+                                    Our collaborative approach ensures that we're not just service providers but invested advocates for your growth. Let us be the catalyst for your startup's journey, guiding you towards achieving your goals and beyond.
+                                </p>
+                             </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Footer Section -->
+            <footer class="absolute bottom-10 right-12 z-20">
+                <p class="text-white font-medium text-lg tracking-wide italic opacity-80">
+                    Ingoude Company
+                </p>
+            </footer>
+
+        </div>
+    </div>
+
+</body>
+</html>

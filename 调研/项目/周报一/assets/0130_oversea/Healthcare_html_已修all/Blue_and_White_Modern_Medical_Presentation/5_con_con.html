@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Keynote - Refined Blue & White</title>
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome (CDN) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        /* 恢复顶部设计的颜色配置 */
+        .logo-text { color: #1E2B9D; }
+        .sub-logo-text { color: #64748B; }
+
+        /* 图片边框美化：三层呼吸阴影 */
+        .beautified-image-wrapper {
+            background: white;
+            padding: 10px;
+            border-radius: 40px;
+            box-shadow: 
+                0 4px 6px -1px rgba(0, 0, 0, 0.05), 
+                0 10px 20px -5px rgba(30, 43, 157, 0.1),
+                0 25px 50px -12px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(226, 232, 240, 0.5);
+        }
+
+        .beautified-image {
+            width: 440px;
+            height: 560px;
+            object-fit: cover;
+            border-radius: 30px;
+        }
+
+        /* 文本设计：模块化气泡 */
+        .text-bubble {
+            background: #F0F7FF;
+            border-radius: 20px;
+            padding: 18px 24px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .icon-box {
+            width: 48px;
+            height: 48px;
+            background: white;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1E2B9D;
+            box-shadow: 0 4px 10px rgba(30, 43, 157, 0.1);
+        }
+
+        .title-gradient {
+            background: linear-gradient(to right, #1E2B9D, #3B82F6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <!-- 保持之前的顶部设计 (Logo & 医院名称) -->
+        <div class="absolute top-12 right-16 z-20 flex items-center gap-4">
+            <div class="text-4xl logo-text">
+                <i class="fa-solid fa-staff-snake"></i>
+            </div>
+            <div class="flex flex-col items-start">
+                <h6 class="text-base font-bold tracking-widest uppercase logo-text">Borcelle Hospital</h6>
+                <p class="text-[10px] sub-logo-text tracking-widest uppercase font-medium">Care at Every Step</p>
+            </div>
+        </div>
+
+        <!-- 主布局 -->
+        <div class="grid grid-cols-12 h-full items-center px-20">
+            
+            <!-- 左侧：美化的配图 -->
+            <div class="col-span-5">
+                <div class="beautified-image-wrapper inline-block">
+                    <img 
+                        src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070&auto=format&fit=crop" 
+                        alt="Medical Specialist" 
+                        class="beautified-image"
+                    >
+                </div>
+            </div>
+
+            <!-- 右侧：美化的文本内容 -->
+            <div class="col-span-7 pl-10">
+                <div class="space-y-12">
+                    
+                    <!-- 主标题 -->
+                    <div class="space-y-3">
+                        <span class="text-xs font-black tracking-[0.4em] text-blue-400 uppercase">Health Awareness</span>
+                        <h1 class="text-7xl font-extrabold text-slate-900 leading-tight">
+                            Physical <span class="title-gradient">Activity</span> <br>
+                            <span class="font-light italic text-slate-400">and Well-being</span>
+                        </h1>
+                    </div>
+
+                    <!-- 模块化内容块 (取代长文本) -->
+                    <div class="space-y-4 max-w-lg">
+                        
+                        <div class="text-bubble">
+                            <div class="icon-box">
+                                <i class="fa-solid fa-heart-pulse text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-lg">Heart Health</h4>
+                                <p class="text-slate-500 text-sm">Strengthens the cardiovascular system effectively.</p>
+                            </div>
+                        </div>
+
+                        <div class="text-bubble">
+                            <div class="icon-box">
+                                <i class="fa-solid fa-person-running text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-lg">Active Living</h4>
+                                <p class="text-slate-500 text-sm">30 minutes of daily activity helps manage body weight.</p>
+                            </div>
+                        </div>
+
+                        <div class="text-bubble">
+                            <div class="icon-box">
+                                <i class="fa-solid fa-brain text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-lg">Mental Balance</h4>
+                                <p class="text-slate-500 text-sm">Supports muscle function and reduces stress levels.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 底部隐约可见的装饰标识 -->
+        <div class="absolute bottom-12 left-20 opacity-20">
+            <p class="text-xs font-bold tracking-[0.2em] text-slate-400 uppercase">Medical Education Series 2025</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

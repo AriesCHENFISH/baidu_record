@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overview Performance - Fradel Company</title>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDeep: '#05050F',
+                        bgGlow: '#18123A',
+                        textPrimary: '#DDFCF2',
+                        textSecondary: '#B0B0B0',
+                        cardBg: '#131128',
+                        chart1: '#C8F9E6',
+                        chart2: '#88DEE3',
+                        chart4: '#538AB8',
+                    },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background-color: #05050F;
+            background-image: 
+                radial-gradient(circle at 90% 10%, #18123A 0%, transparent 40%),
+                radial-gradient(circle at 10% 90%, #18123A 0%, transparent 30%);
+        }
+
+        .diagonal-image-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 45%;
+            height: 100%;
+            clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+            z-index: 10;
+        }
+
+        .diagonal-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.8) contrast(1.1);
+        }
+
+        /* 导航栏去圆点强制策略 */
+        .nav-list { list-style: none !important; }
+        .nav-list li::before { content: none !important; display: none !important; }
+
+        .dots-pattern {
+            background-image: radial-gradient(#64B0CF 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.2;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <div class="dots-pattern" style="position: absolute; top: 100px; right: 50px; width: 200px; height: 200px; z-index: 1;"></div>
+        
+        <div class="absolute top-8 left-1/2 transform -translate-x-1/2 w-[95%] z-50">
+            <nav class="flex items-center justify-between w-full h-20 px-10 rounded-full" 
+                 style="background: linear-gradient(90deg, #6a44f0 0%, #1E1B33 40%, #1E1B33 100%); box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);">
+                
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 flex items-center justify-center rounded-full bg-[#DDFCF2] text-[#05050F]">
+                        <i class="fa-solid fa-layer-group text-xl"></i>
+                    </div>
+                    <h2 class="text-[#DDFCF2] text-xl font-bold tracking-wide">Fradel Company</h2>
+                </div>
+
+                <ul class="nav-list flex items-center gap-12 m-0 p-0">
+                    <li class="cursor-pointer">
+                        <b class="text-[#DDFCF2] text-sm tracking-widest hover:text-white transition-colors">HOME</b>
+                    </li>
+                    <li class="cursor-pointer">
+                        <b class="text-[#B0B0B0] text-sm tracking-widest hover:text-[#DDFCF2] transition-colors">ABOUT</b>
+                    </li>
+                    <li class="cursor-pointer">
+                        <b class="text-[#B0B0B0] text-sm tracking-widest hover:text-[#DDFCF2] transition-colors">MORE</b>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="diagonal-image-container">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop" alt="Financial Analysis Papers">
+        </div>
+
+        <div style="position: absolute; top: 140px; right: 0; width: 55%; height: 580px; padding-right: 80px; padding-left: 20px; display: flex; flex-direction: column; justify-content: center; z-index: 20;">
+            
+            <div class="mb-10">
+                <h1 class="text-textPrimary text-6xl leading-tight mb-2">
+                    Overview <br>
+                    <span class="text-chart2">Performance</span>
+                </h1>
+                <div class="w-20 h-1.5 bg-gradient-to-r from-chart1 to-chart4 rounded-full mt-4"></div>
+            </div>
+
+            <div class="flex flex-col gap-6">
+                <div class="bg-cardBg rounded-3xl p-6 flex items-center gap-8 border border-white/5 relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-chart1"></div>
+                    <div id="chart-revenue" class="w-[120px] h-[120px] flex-shrink-0"></div>
+                    <div class="flex-1">
+                        <h3 class="text-textPrimary text-2xl mb-2">Total Revenue</h3>
+                        <p class="text-textSecondary text-sm font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+
+                <div class="bg-cardBg rounded-3xl p-6 flex items-center gap-8 border border-white/5 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-chart2"></div>
+                    <div id="chart-income" class="w-[120px] h-[120px] flex-shrink-0"></div>
+                    <div class="flex-1">
+                        <h3 class="text-textPrimary text-2xl mb-2">Net Income</h3>
+                        <p class="text-textSecondary text-sm font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const commonChartConfig = (color, value) => ({
+            animation: false,
+            series: [{
+                type: 'pie',
+                radius: ['70%', '85%'],
+                avoidLabelOverlap: false,
+                label: {
+                    show: true,
+                    position: 'center',
+                    formatter: '{c}%',
+                    fontSize: 24,
+                    fontWeight: 'bold',
+                    color: '#DDFCF2'
+                },
+                data: [
+                    { value: value, itemStyle: { color: color, shadowBlur: 10, shadowColor: color } },
+                    { value: 100 - value, itemStyle: { color: '#2A2645' }, label: { show: false } }
+                ]
+            }]
+        });
+
+        echarts.init(document.getElementById('chart-revenue')).setOption(commonChartConfig('#C8F9E6', 82));
+        echarts.init(document.getElementById('chart-income')).setOption(commonChartConfig('#88DEE3', 93));
+    </script>
+</body>
+</html>

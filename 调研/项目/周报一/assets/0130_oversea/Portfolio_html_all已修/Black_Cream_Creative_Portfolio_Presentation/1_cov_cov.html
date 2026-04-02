@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Portfolio - Cover Slide</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700;800&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#050505',
+                        primaryText: '#FDF6E3',
+                        secondaryText: '#9A9A9A',
+                        accent: '#D65DB1',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #050505;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* 背景装饰文字 */
+        .bg-watermark {
+            position: absolute;
+            font-size: 320px;
+            font-weight: 900;
+            color: #D65DB1;
+            opacity: 0.02;
+            z-index: 0;
+            white-space: nowrap;
+            pointer-events: none;
+            letter-spacing: -0.05em;
+        }
+
+        /* 动画效果 */
+        .fade-in-up {
+            animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .float {
+            animation: float 8s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(-15deg); }
+            50% { transform: translateY(-20px) rotate(-10deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <!-- 背景水印 -->
+        <div class="bg-watermark font-display top-[15%] -left-20">CONCEPT</div>
+        <div class="bg-watermark font-display bottom-[15%] -right-20">DESIGN</div>
+
+        <!-- 背景装饰：涂鸦 -->
+        <div class="absolute top-[15%] right-[10%] z-0 pointer-events-none opacity-30 float">
+            <svg width="500" height="400" viewBox="0 0 400 300" fill="none">
+                <path d="M50 250C50 250 20 150 100 120C180 90 200 150 150 200C100 250 50 100 150 50C250 0 350 50 350 150" 
+                      stroke="#D65DB1" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+
+        <!-- 顶部关键词设计块 (填补空旷感) -->
+        <div class="absolute top-12 left-0 w-full px-20 flex justify-between items-start z-20">
+            <!-- 左侧关键词：Innovation -->
+            <div class="flex flex-col fade-in-up" style="animation-delay: 0.2s;">
+                <div class="flex items-center gap-3 mb-2">
+                    <i class="fa-solid fa-circle-notch text-accent text-[8px]"></i>
+                    <h4 class="text-primaryText font-display font-bold text-xl tracking-[0.2em] uppercase">Innovation</h4>
+                </div>
+                <div class="h-[1px] w-full bg-gradient-to-r from-accent to-transparent"></div>
+                <p class="text-secondaryText text-[10px] mt-2 uppercase tracking-widest opacity-60">Future-proof digital solutions</p>
+            </div>
+
+            <!-- 右侧关键词：Strategy -->
+            <div class="flex flex-col items-end fade-in-up" style="animation-delay: 0.3s;">
+                <div class="flex items-center gap-3 mb-2">
+                    <h4 class="text-primaryText font-display font-bold text-xl tracking-[0.2em] uppercase">Strategy</h4>
+                    <i class="fa-solid fa-circle-notch text-accent text-[8px]"></i>
+                </div>
+                <div class="h-[1px] w-full bg-gradient-to-l from-accent to-transparent"></div>
+                <p class="text-secondaryText text-[10px] mt-2 uppercase tracking-widest opacity-60">User-centric design methodology</p>
+            </div>
+        </div>
+
+        <!-- 装饰星号 -->
+        <div class="absolute top-[28%] left-[18%] text-accent text-5xl animate-pulse z-0 opacity-40">
+            <i class="fa-solid fa-asterisk"></i>
+        </div>
+
+        <!-- 主标题区：居中 -->
+        <div class="relative z-10 text-center flex flex-col items-center fade-in-up" style="animation-delay: 0.1s;">
+            <p class="text-accent font-display font-bold text-sm tracking-[0.8em] uppercase mb-8">Creative Selection / 2027</p>
+
+            <div class="relative">
+                <!-- Creative -->
+                <h1 class="font-display font-black text-[155px] text-primaryText leading-[0.8] tracking-tighter uppercase italic">
+                    Creative
+                </h1>
+                
+                <!-- Portfolio -->
+                <div class="flex items-center mt-2">
+                    <div class="h-[2px] w-20 bg-accent/40 mr-8"></div>
+                    <h1 class="font-display font-black text-[155px] text-primaryText leading-[0.8] tracking-tighter uppercase">
+                        Portfolio
+                    </h1>
+                </div>
+
+                <!-- 标志性粉色斜杠 -->
+                <div class="absolute -right-20 top-1/2 -translate-y-1/2 font-display font-light text-[240px] text-accent opacity-80 select-none">/</div>
+            </div>
+        </div>
+
+        <!-- 汇报人信息区 -->
+        <div class="absolute bottom-16 w-full px-20 z-10 fade-in-up" style="animation-delay: 0.5s;">
+            <div class="grid grid-cols-12 items-end pt-10 border-t border-white/10">
+                
+                <!-- 汇报人姓名 -->
+                <div class="col-span-4">
+                    <div class="flex flex-col">
+                        <span class="text-accent font-display font-bold text-xs tracking-[0.3em] uppercase mb-3">Presented by</span>
+                        <h3 class="text-primaryText text-4xl font-display font-bold">Neil Tran</h3>
+                        <p class="text-secondaryText text-sm mt-2 font-light tracking-widest italic opacity-60">Senior Visual Designer & Art Director</p>
+                    </div>
+                </div>
+
+                <!-- 中间技能标签 -->
+                <div class="col-span-4 flex justify-center">
+                    <div class="flex flex-col border-l border-white/10 pl-10">
+                        <span class="text-secondaryText text-[10px] tracking-[0.3em] uppercase mb-4 opacity-50">Core Expertise</span>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white/5 rounded-full text-primaryText text-[9px] font-bold uppercase tracking-widest border border-white/10">Interface Design</span>
+                            <span class="px-3 py-1 bg-white/5 rounded-full text-primaryText text-[9px] font-bold uppercase tracking-widest border border-white/10">Motion</span>
+                            <span class="px-3 py-1 bg-white/5 rounded-full text-primaryText text-[9px] font-bold uppercase tracking-widest border border-white/10">Brand</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右侧联系 -->
+                <div class="col-span-4 text-right">
+                    <div class="flex flex-col items-end">
+                        <div class="flex gap-3 mb-6">
+                            <div class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-secondaryText hover:text-accent hover:border-accent transition-all cursor-pointer text-xs"><i class="fa-brands fa-dribbble"></i></div>
+                            <div class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-secondaryText hover:text-accent hover:border-accent transition-all cursor-pointer text-xs"><i class="fa-brands fa-behance"></i></div>
+                            <div class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-secondaryText hover:text-accent hover:border-accent transition-all cursor-pointer text-xs"><i class="fa-solid fa-link"></i></div>
+                        </div>
+                        <p class="text-primaryText text-sm font-light tracking-widest underline decoration-accent/40 underline-offset-4 mb-1">hello@reallygreatsite.com</p>
+                        <p class="text-secondaryText text-[10px] tracking-widest opacity-40 uppercase">Design. Create. Inspire.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

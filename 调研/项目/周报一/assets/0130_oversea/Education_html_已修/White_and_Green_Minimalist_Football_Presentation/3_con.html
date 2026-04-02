@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction - Liceria & Co.</title>
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts via Baidu CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        /* CSS Reset & Basics */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container - Strict 1280x720 Fixed Layout */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', 'Inter', sans-serif;
+            background-color: #2A4029;
+        }
+
+        /* 旋转动画 */
+        @keyframes rotate-text {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-rotate {
+            animation: rotate-text 20s linear infinite;
+        }
+
+        /* Progress bar stripes */
+        .striped-bar {
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 4px,
+                #E0E6DF 4px,
+                #E0E6DF 8px
+            );
+        }
+
+        .text-shadow-sm {
+            text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryBg: '#2A4029',
+                        contentBox: '#617360',
+                        textMain: '#FFFFFF',
+                        textBody: '#E0E6DF',
+                        lineColor: '#8C9B8A',
+                        accentRed: '#D9463E',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div id="page_container">
+
+        <!-- 1. Background Layer -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1529900748604-07564a03e7a6?q=80&w=2070&auto=format&fit=crop" 
+                 class="w-full h-full object-cover opacity-30 mix-blend-overlay" 
+                 alt="Grass Texture">
+        </div>
+
+        <!-- 2. Decorative Graphics -->
+        <div class="absolute top-[180px] left-0 w-full h-[1px] bg-lineColor z-10 opacity-30"></div>
+        <div class="absolute top-[-200px] right-[-100px] w-[800px] h-[800px] rounded-full border border-lineColor z-10 opacity-30 pointer-events-none"></div>
+
+        <!-- 3. Top Right Hero Image -->
+        <div class="absolute top-[-80px] right-[-50px] z-20 w-[600px] h-[600px] rounded-full overflow-hidden border-[8px] border-primaryBg shadow-2xl">
+            <img src="https://images.unsplash.com/photo-1614632537190-23e4146777db?q=80&w=1000&auto=format&fit=crop" 
+                 class="w-full h-full object-cover object-center transform scale-110" 
+                 alt="Soccer Ball">
+        </div>
+
+        <!-- 4. Content Wrapper -->
+        <div class="relative z-30 w-full h-full flex flex-col justify-between px-16 py-12">
+
+            <!-- [核心修改] 新版动态徽章 Logo 区域 -->
+            <div class="flex items-start gap-4">
+                <!-- 旋转徽章主体 -->
+                <div class="relative w-24 h-24 flex items-center justify-center">
+                    <!-- 旋转文字环 -->
+                    <svg class="absolute w-full h-full animate-rotate" viewBox="0 0 100 100">
+                        <defs>
+                            <path id="logoCirclePath" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" />
+                        </defs>
+                        <text fill="#FFFFFF" font-size="7.5" font-weight="500" letter-spacing="2.2" class="opacity-80 uppercase">
+                            <textPath xlink:href="#logoCirclePath">
+                                • LICERIA SPORTS & CO • PREMIUM CLUB
+                            </textPath>
+                        </text>
+                    </svg>
+                    <!-- 中心图标 -->
+                    <div class="w-12 h-12 bg-accentRed rounded-full border border-white/20 flex items-center justify-center shadow-lg backdrop-blur-sm">
+                        <i class="fa-solid fa-leaf text-white text-lg"></i>
+                    </div>
+                </div>
+
+                <!-- 品牌文字详情 -->
+                <div class="mt-4">
+                    <h6 class="text-textMain text-lg font-bold tracking-[0.25em] leading-none uppercase">Liceria</h6>
+                    <p class="text-lineColor text-[9px] tracking-[0.4em] font-light mt-1.5 uppercase pl-0.5">Global Football Management</p>
+                </div>
+            </div>
+
+            <!-- Main Title Section -->
+            <div class="mt-16 mb-8">
+                <h1 class="text-textMain text-[96px] leading-none font-light tracking-tight uppercase text-shadow-sm">
+                    Introduction
+                </h1>
+                
+                <div class="mt-6 flex items-center">
+                    <div class="h-[2px] w-12 bg-accentRed mr-4"></div>
+                    <h2 class="text-textMain text-3xl font-regular tracking-wide">
+                        A Global Phenomenon
+                    </h2>
+                </div>
+            </div>
+
+            <!-- Text Content Columns -->
+            <div class="grid grid-cols-2 gap-12 w-3/4 mb-auto">
+                <div class="bg-contentBox/10 backdrop-blur-sm p-6 rounded-lg border-l border-lineColor/30">
+                    <p class="text-textBody text-base leading-7 font-light text-justify italic">
+                        Football is more than just a game; it's a global language spoken by billions. Our management approach focuses on bridging the gap between historical heritage and modern sporting excellence.
+                    </p>
+                </div>
+
+                <div class="bg-contentBox/10 backdrop-blur-sm p-6 rounded-lg border-l border-lineColor/30">
+                    <p class="text-textBody text-base leading-7 font-light text-justify">
+                        Liceria & Co. stands at the forefront of this evolution. We provide the strategic vision required to navigate the complex landscape of professional football, from grassroots programs to elite club operations.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Footer / Navigation -->
+            <div class="absolute bottom-12 right-12 flex items-center gap-6">
+                <!-- Progress Indicator -->
+                <div class="flex flex-col items-end gap-2">
+                    <span class="text-textBody text-[9px] tracking-widest uppercase opacity-50">Slide 01</span>
+                    <div class="w-32 h-6 border border-textBody/30 p-1 flex items-center">
+                        <div class="w-1/4 h-full striped-bar opacity-80"></div>
+                    </div>
+                </div>
+
+                <!-- Next Slide Button -->
+                <div class="w-16 h-16 bg-textMain rounded-full flex items-center justify-center shadow-lg cursor-pointer group hover:bg-accentRed transition-all duration-300">
+                    <i class="fa-solid fa-arrow-right text-primaryBg group-hover:text-white text-2xl group-hover:translate-x-1 transition-transform"></i>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

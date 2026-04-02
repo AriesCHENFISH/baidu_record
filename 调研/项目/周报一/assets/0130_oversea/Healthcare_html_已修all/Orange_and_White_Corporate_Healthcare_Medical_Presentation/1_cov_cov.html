@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cover - Medical Healthcare Presentation (No Image)</title>
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #121212;
+            overflow: hidden;
+            color: #F5F5F5;
+        }
+
+        .font-serif-italic {
+            font-family: 'Georgia', serif;
+            font-style: italic;
+        }
+
+        .bg-primary-gradient {
+            background: linear-gradient(135deg, #B63914 0%, #D65A2C 100%);
+        }
+
+        /* 统一标准化Logo样式 - 固定左上角 */
+        .hospital-logo-box {
+            width: 52px;
+            height: 52px;
+            background: linear-gradient(135deg, #B63914 0%, #D65A2C 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* 统一背景设计：垂直巨型水印 */
+        .bg-text-vertical {
+            position: absolute;
+            font-size: 240px;
+            font-weight: 900;
+            color: rgba(214, 90, 44, 0.04);
+            line-height: 0.8;
+            z-index: 0;
+            writing-mode: vertical-rl;
+            right: 40px;
+            top: 0;
+            pointer-events: none;
+            letter-spacing: -10px;
+        }
+
+        /* 玻璃感装饰色块 */
+        .glass-accent {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(20px);
+            border-left: 4px solid #B63914;
+        }
+
+        .decoration-bar {
+            height: 2px;
+            background: linear-gradient(90deg, #B63914, transparent);
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container" class="relative">
+        
+        <!-- 背景设计：垂直水印与核心光晕 -->
+        <div class="bg-text-vertical uppercase">BORCELLE</div>
+        <div class="absolute top-[10%] right-[30%] w-[600px] h-[600px] bg-[#B63914] opacity-[0.08] blur-[160px] rounded-full"></div>
+        <div class="absolute bottom-[-10%] left-[10%] w-[500px] h-[500px] bg-[#D65A2C] opacity-[0.05] blur-[140px] rounded-full"></div>
+
+        <!-- 顶部：标准统一Logo区 -->
+        <div class="absolute top-16 left-20 z-50">
+            <div class="flex items-center gap-6">
+                <div class="hospital-logo-box shadow-2xl">
+                    <i class="fa-solid fa-plus text-white text-3xl"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-2xl font-black tracking-[0.25em] text-white leading-none">BORCELLE</span>
+                    <span class="text-xs font-bold tracking-[0.5em] text-[#D65A2C] uppercase mt-1">Medical Center</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 内容布局：全文字核心构图 -->
+        <div class="flex h-full w-full px-20 relative z-10">
+            
+            <!-- 左侧：主标题 (8/12) -->
+            <div class="w-8/12 h-full flex flex-col justify-center">
+                <div class="mb-4">
+                    <div class="flex items-center gap-4 mb-10">
+                        <div class="w-12 h-1 bg-primary-gradient"></div>
+                        <span class="text-sm font-bold tracking-[0.6em] text-[#D65A2C] uppercase">Annual Medical Presentation</span>
+                    </div>
+                    
+                    <h1 class="text-[140px] leading-[0.8] tracking-tighter flex flex-col">
+                        <span class="font-serif-italic text-[#D65A2C] text-[100px] mb-4">Medical</span>
+                        <span class="font-bold">HEALTHCARE</span>
+                        <span class="text-[60px] font-light tracking-[0.3em] opacity-30 mt-6 uppercase border-t border-white/10 pt-6">Presentation</span>
+                    </h1>
+                </div>
+
+                <div class="mt-12 flex gap-10">
+                    <div class="max-w-md">
+                        <p class="text-xl font-light leading-relaxed opacity-60 italic border-l-4 border-hospitalRed pl-8">
+                            "Systematic approach to clinical excellence and advanced healthcare management protocols."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部全局状态栏 -->
+        <div class="absolute bottom-16 left-20 right-20 z-20">
+            <div class="decoration-bar opacity-20 mb-8"></div>
+            <div class="flex justify-between items-center opacity-40 text-[10px] font-bold tracking-[0.5em] uppercase">
+                <div class="flex items-center gap-10">
+                    <span>Release v1.0.24</span>
+                    <div class="w-12 h-[1px] bg-white"></div>
+                    <span>Strategic Healthcare Document</span>
+                </div>
+                <div class="flex gap-12">
+                    <span>Confidential</span>
+                    <span>© 2024 Borcelle Medical</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

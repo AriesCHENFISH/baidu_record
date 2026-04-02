@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Table of Contents</title>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-bg': '#050505',
+                        'brand-accent': '#BCE46C',
+                        'brand-muted': 'rgba(188, 228, 108, 0.15)',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'Inter', 'sans-serif'],
+                        display: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px;
+            background-color: #050505;
+            position: relative; margin: 0 auto;
+            overflow: hidden;
+            font-family: 'Inter', "Noto Sans SC", sans-serif;
+        }
+
+        /* 动态背景网格 */
+        .grid-bg {
+            background-image: radial-gradient(circle at 2px 2px, rgba(188, 228, 108, 0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+
+        /* 目录项 Hover 效果 */
+        .toc-item {
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .toc-item:hover {
+            transform: translateX(10px) scale(1.01);
+            filter: brightness(1.1);
+        }
+        .toc-item-reverse:hover {
+            transform: translateX(-10px) scale(1.01);
+        }
+
+        /* 入场动画 */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-list > li {
+            animation: fadeInUp 0.6s ease-out forwards;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container" class="grid-bg">
+        
+        <div class="absolute top-16 left-20 z-30 group cursor-default">
+            <div class="flex flex-col">
+                <div class="flex items-baseline gap-2">
+                    <span class="text-3xl font-black tracking-tighter text-white">WARDIERE</span>
+                    <span class="text-3xl font-light tracking-tighter text-brand-accent italic">GROUP</span>
+                </div>
+                <div class="flex items-center gap-3 mt-1">
+                    <div class="h-[1px] w-8 bg-brand-accent transition-all group-hover:w-12"></div>
+                    <span class="text-[9px] tracking-[0.5em] text-gray-500 uppercase font-bold">Innovation Excellence</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full h-full grid grid-cols-12">
+            
+            <div class="col-span-4 h-full flex flex-col justify-center pl-20 relative">
+                <div class="space-y-0">
+                    <p class="text-brand-accent font-display font-bold tracking-[0.4em] text-xs mb-4 uppercase opacity-80">Index / Navigation</p>
+                    <h1 class="text-6xl font-light text-white leading-none">Table of</h1>
+                    <h1 class="text-8xl font-black text-brand-accent leading-none tracking-tighter">Content</h1>
+                </div>
+                <div class="mt-12 flex items-center gap-4 text-gray-600">
+                    <div class="w-12 h-[1px] bg-gray-800"></div>
+                    <span class="text-[10px] tracking-widest uppercase">Perspective Strategy 2026</span>
+                </div>
+                
+                <div class="absolute -left-20 top-1/2 -translate-y-1/2 w-64 h-64 bg-brand-accent rounded-full blur-[120px] opacity-10"></div>
+            </div>
+
+            <div class="col-span-8 h-full flex flex-col justify-center px-16">
+                <ul class="animate-list grid grid-cols-1 gap-3">
+                    
+                    <li class="toc-item flex items-center" style="animation-delay: 0.1s">
+                        <div class="bg-gradient-to-r from-brand-accent to-transparent p-[1px] rounded-l-full w-full max-w-[480px]">
+                            <div class="bg-brand-bg rounded-l-full py-3 px-6 flex items-center gap-6">
+                                <span class="font-display font-extrabold text-brand-accent text-xl">01</span>
+                                <span class="text-gray-300 font-bold tracking-widest uppercase text-sm">Brand Introduction</span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="toc-item toc-item-reverse flex items-center justify-end" style="animation-delay: 0.2s">
+                        <div class="bg-gradient-to-l from-brand-accent to-transparent p-[1px] rounded-r-full w-full max-w-[520px]">
+                            <div class="bg-brand-bg rounded-r-full py-3 px-6 flex items-center justify-end gap-6">
+                                <span class="text-gray-300 font-bold tracking-widest uppercase text-sm">Executive Summary</span>
+                                <span class="font-display font-extrabold text-brand-accent text-xl">02</span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="toc-item flex items-center" style="animation-delay: 0.3s">
+                        <div class="bg-brand-accent rounded-l-full py-3 px-6 flex items-center gap-6 w-full max-w-[500px]">
+                            <span class="font-display font-extrabold text-black text-xl">03</span>
+                            <span class="text-black font-black tracking-widest uppercase text-sm">Market Analysis</span>
+                        </div>
+                    </li>
+
+                    <li class="toc-item toc-item-reverse flex items-center justify-end" style="animation-delay: 0.4s">
+                        <div class="border-b border-brand-accent/30 py-3 px-6 flex items-center justify-end gap-6 w-full max-w-[480px]">
+                            <span class="text-gray-400 font-bold tracking-widest uppercase text-sm">Our Creative Process</span>
+                            <span class="font-display font-extrabold text-brand-accent text-xl underline underline-offset-8">04</span>
+                        </div>
+                    </li>
+
+                    <li class="toc-item flex items-center" style="animation-delay: 0.5s">
+                        <div class="bg-brand-muted border-l-4 border-brand-accent py-3 px-6 flex items-center gap-6 w-full max-w-[540px]">
+                            <span class="font-display font-extrabold text-brand-accent text-xl">05</span>
+                            <span class="text-white font-bold tracking-widest uppercase text-sm">Product Showcase</span>
+                        </div>
+                    </li>
+
+                    <li class="toc-item toc-item-reverse flex items-center justify-end" style="animation-delay: 0.6s">
+                        <div class="bg-gradient-to-l from-brand-accent to-transparent p-[1px] rounded-r-full w-full max-w-[460px]">
+                            <div class="bg-brand-bg rounded-r-full py-3 px-6 flex items-center justify-end gap-6">
+                                <span class="text-gray-300 font-bold tracking-widest uppercase text-sm">Tech Infrastructure</span>
+                                <span class="font-display font-extrabold text-brand-accent text-xl">06</span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="toc-item flex items-center" style="animation-delay: 0.7s">
+                        <div class="bg-brand-accent/10 hover:bg-brand-accent/20 transition-colors py-3 px-6 flex items-center gap-6 w-full max-w-[500px] rounded-full">
+                            <span class="font-display font-extrabold text-brand-accent text-xl">07</span>
+                            <span class="text-white font-bold tracking-widest uppercase text-sm">Financial Roadmap</span>
+                        </div>
+                    </li>
+
+                    <li class="toc-item toc-item-reverse flex items-center justify-end" style="animation-delay: 0.8s">
+                        <div class="bg-brand-accent rounded-r-full py-3 px-6 flex items-center justify-end gap-6 w-full max-w-[420px]">
+                            <span class="text-black font-black tracking-widest uppercase text-sm">Case Studies</span>
+                            <span class="font-display font-extrabold text-black text-xl">08</span>
+                        </div>
+                    </li>
+
+                    <li class="toc-item flex items-center mt-2" style="animation-delay: 0.9s">
+                        <div class="relative w-full max-w-[580px] group/item">
+                            <div class="absolute inset-0 bg-brand-accent/5 border border-brand-accent/30 rounded-lg transition-all duration-300 group-hover/item:border-brand-accent group-hover/item:bg-brand-accent/10"></div>
+                            <div class="relative py-4 px-8 flex items-center justify-between">
+                                <div class="flex items-center gap-5">
+                                    <div class="bg-brand-accent text-black font-black text-xs px-2 py-0.5 rounded shadow-[0_0_10px_rgba(188,228,108,0.3)]">FINAL</div>
+                                    <span class="text-white font-bold tracking-[0.2em] uppercase text-sm group-hover/item:text-brand-accent transition-colors">Contact & Information</span>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <div class="w-8 h-[1px] bg-brand-accent/50"></div>
+                                    <span class="font-display font-black text-brand-accent text-2xl tracking-tighter">09</span>
+                                </div>
+                            </div>
+                            <div class="absolute bottom-0 left-0 h-[2px] w-0 bg-brand-accent transition-all duration-500 group-hover/item:w-full"></div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="absolute -bottom-20 -right-20 w-80 h-80 bg-brand-accent rounded-full blur-[150px] opacity-10"></div>
+        <div class="absolute top-0 right-0 p-12 opacity-10">
+            <i class="fa-solid fa-layer-group text-brand-accent text-9xl"></i>
+        </div>
+    </div>
+
+</body>
+</html>

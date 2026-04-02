@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borcelle - Introduction</title>
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts (Domestic Mirror as requested) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        /* 1. CSS Reset & Global Settings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* 3. Page Container Configuration (Strict Adherence) */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FFFFFF;
+            overflow: hidden;
+        }
+
+        /* 4. Utility / Helper Classes for Specific Constraints */
+        .text-justify-last-left {
+            text-align: justify;
+            text-align-last: left;
+        }
+
+        /* Gradient definition strict adherence */
+        .bg-primary-gradient {
+            background: linear-gradient(135deg, #0A33B3, #2248C3);
+        }
+        
+        .shadow-elevation {
+            box-shadow: 0 20px 50px -12px rgba(10, 51, 179, 0.25);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main PPT Container -->
+    <div id="page_container">
+        
+        <!-- Decoration: Background Shape (Top Right) -->
+        <div class="absolute -top-20 -right-20 w-64 h-64 rounded-full opacity-10" style="background-color: #F0F4FF;"></div>
+        
+        <!-- Decoration: Background Shape (Bottom Left) -->
+        <div class="absolute -bottom-20 -left-20 w-80 h-80 rounded-full opacity-20" style="background-color: #F0F4FF;"></div>
+
+        <!-- Decoration: Floating Star (Bottom Left) -->
+        <div class="absolute bottom-10 left-10 text-[#0A33B3] text-4xl opacity-80 animate-pulse">
+            <i class="fa-solid fa-star"></i>
+        </div>
+
+        <!-- Main Content Card Wrapper -->
+        <!-- Using Flexbox to create the split layout. 
+             We add margin to center it visually within the 1280x720 s, 
+             creating a "floating card" effect typical of high-end Keynotes. -->
+        <div class="absolute inset-0 m-auto w-[1180px] h-[640px] rounded-[48px] overflow-hidden flex shadow-elevation">
+            
+            <!-- Left Column: Content (Primary Blue Background) -->
+            <!-- Width set to approx 65% to match visual proportion -->
+            <div class="w-[70%] h-full bg-primary-gradient relative flex flex-col justify-between p-16">
+                
+                <!-- Decorative Star inside Blue Area (Top Right) -->
+                <div class="absolute top-12 right-12 text-white opacity-80 text-3xl">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+
+                <!-- Header Section: Logo -->
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="w-10 h-10 bg-[#FCEE7D] rounded-lg flex items-center justify-center text-[#0A33B3]">
+                        <i class="fa-solid fa-layer-group text-xl"></i>
+                    </div>
+                    <span class="text-white font-medium text-xl tracking-wide">Borcelle</span>
+                </div>
+
+                <!-- Main Content Section -->
+                <div class="flex-1 flex flex-col justify-center">
+                    
+                    <!-- Title -->
+                    <h1 class="text-white text-6xl font-bold mb-8 tracking-tight leading-tight">
+                        Introduction
+                    </h1>
+
+                    <!-- First Paragraph -->
+                    <p class="text-white/80 text-gl leading-relaxed mb-10 text-justify-last-left max-w-[90%]">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar sit amet urna eget pulvinar. Donec faucibus diam non sem lacinia vulputate eu et enim. Pellentesque nec sem a ex consectetur hendrerit ac a mi.
+                    </p>
+
+                    <!-- Highlight Pill (Yellow Accent) -->
+                    <div class="flex mb-8">
+                        <div class="bg-[#FCEE7D] px-8 py-3 rounded-full shadow-lg transform transition hover:scale-105">
+                            <h3 class="text-[#0A33B3] font-bold text-xl tracking-tight">
+                                Definition of Content Marketing
+                            </h3>
+                        </div>
+                    </div>
+
+                    <!-- Second Paragraph -->
+                    <p class="text-white/80 text-gl leading-relaxed text-justify-last-left max-w-[95%]">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar sit amet urna eget pulvinar. Donec faucibus diam non sem lacinia vulputate eu et enim. Pellentesque nec sem a ex consectetur hendrerit ac a mi. Etiam mattis, nunc in condimentum ultricies, velit nisi dictum neque, non tincidunt nulla ex non enim. Sed eu aliquet libero, vitae vestibulum est.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Column: Image Area -->
+            <!-- Width set to remaining space -->
+            <div class="w-[30%] h-full relative bg-gray-100">
+                <!-- Using an Unsplash image of a professional meeting/strategy session to match context -->
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=800&auto=format&fit=crop" 
+                     class="w-full h-full object-cover object-center" 
+                     alt="Team discussing strategy on whiteboard">
+                <!-- 354*640 -->
+
+                <!-- Gradient Overlay for better blending (optional aesthetic touch) -->
+                <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(0,0,0,0.1), transparent);"></div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+</body>
+</html>

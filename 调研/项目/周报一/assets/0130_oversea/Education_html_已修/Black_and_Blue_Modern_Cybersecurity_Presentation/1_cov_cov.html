@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, initial-scale=1.0">
+    <title>CyberSecurity Cover - With Footer</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans SC', sans-serif; }
+
+        /* Main Container */
+        .page-container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #000000;
+            overflow: hidden;
+            /* Simple Linear Gradient per requirement */
+            background: linear-gradient(135deg, #050511, #0f0c29);
+        }
+
+        /* Unified Cyber Card Style */
+        .cyber-card {
+            background: rgba(30, 27, 75, 0.6); /* Fallback/Base */
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 40px;
+            /* Using a single box-shadow property as strictly as possible, though standard CSS allows multiples. 
+               If strict parsing is needed, we rely on the div structure. */
+            box-shadow: 0 0 60px rgba(76, 29, 149, 0.4); 
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Gradient Border Simulation using a child div or pseudo-element styling 
+           Since complex stacking might be an issue, we keep it simple on the card edge */
+        
+        .card-glow-border {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            z-index: -1;
+            margin: -2px;
+            border-radius: 42px;
+            /* Strict Gradient Syntax: Angle, Color1, Color2 */
+            background: linear-gradient(45deg, #4f46e5, #d946ef);
+            opacity: 0.5;
+            filter: blur(10px);
+        }
+
+        .glow-sphere {
+            position: absolute;
+            filter: blur(100px);
+            opacity: 0.6;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Gradient Accent Bar Class */
+        .gradient-bar {
+            /* Strict Gradient Syntax */
+            background: linear-gradient(180deg, #a855f7, #ec4899);
+        }
+
+        .gradient-btn {
+            background: linear-gradient(90deg, #6b21a8, #d946ef);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-container text-white flex flex-col justify-center items-center">
+
+        <div class="glow-sphere" style="background-color: #9333ea; width: 700px; height: 700px; top: -200px; left: -200px;"></div>
+        <div class="glow-sphere" style="background-color: #4f46e5; width: 800px; height: 800px; bottom: -300px; right: -200px;"></div>
+        
+        <div class="absolute top-0 w-full flex justify-between items-center px-16 pt-10 z-50">
+            <div class="flex flex-col">
+                <h1 class="text-2xl font-bold tracking-widest leading-none text-white">THYNK</h1>
+                <span class="text-[10px] font-light tracking-[0.3em] text-gray-500 mt-1">SECURITY.</span>
+            </div>
+            
+             <div class="gradient-btn px-6 py-2 rounded-full shadow-lg">
+                <span class="text-sm font-bold tracking-wide text-white">Page 01</span>
+            </div>
+        </div>
+
+        <div class="relative z-10 w-[1000px] h-[440px] mb-10">
+            
+            <div class="cyber-card w-full h-full flex flex-col items-center justify-center p-12 text-center">
+                <div class="card-glow-border"></div>
+                
+                <div class="relative z-10 flex flex-col items-center">
+                    <div class="mb-6 flex flex-col items-center gap-2">
+                        <div class="text-purple-400 tracking-[0.3em] text-sm font-bold uppercase mb-2">2026 Strategy Report</div>
+                        <div style="width: 60px; height: 4px; background-color: #a855f7; border-radius: 2px;"></div>
+                    </div>
+
+                    <h1 class="text-8xl font-extrabold tracking-tight text-white mb-6" style="text-shadow: 0 0 30px rgba(168,85,247,0.5);">
+                        CYBER<br>
+                        <span style="color: #e9d5ff;">SECURITY</span>
+                    </h1>
+
+                    <p class="text-gray-300 font-light text-lg max-w-2xl leading-relaxed mb-8">
+                        Defending the digital frontier with advanced intelligence and zero-trust architecture.
+                    </p>
+
+                    <div class="cursor-pointer bg-white/5 border border-white/10 px-12 py-4 rounded-full flex items-center gap-4">
+                        <span class="font-bold tracking-wide text-white">START BRIEFING</span>
+                        <i class="fa-solid fa-arrow-right text-purple-400"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-12 z-50">
+            <div class="flex items-center gap-12 bg-white/5 border border-white/10 px-12 py-4 rounded-full backdrop-blur-md shadow-lg">
+                
+                <div class="flex items-center gap-4">
+                     <div class="gradient-bar" style="width: 4px; height: 32px; border-radius: 4px;"></div>
+                     <div class="flex flex-col items-start">
+                         <span class="text-[10px] text-gray-400 uppercase tracking-widest font-light">Presenter</span>
+                         <span class="text-white font-bold text-lg tracking-wide">Alex Chen</span>
+                     </div>
+                </div>
+
+                <div style="width: 1px; height: 30px; background-color: rgba(255,255,255,0.2);"></div>
+
+                <div class="flex items-center gap-4">
+                     <div class="w-8 h-8 rounded-full bg-purple-900/50 flex items-center justify-center border border-purple-500/30">
+                        <i class="fa-regular fa-calendar text-purple-300 text-sm"></i>
+                     </div>
+                     <div class="flex flex-col items-start">
+                         <span class="text-[10px] text-gray-400 uppercase tracking-widest font-light">Date</span>
+                         <span class="text-white font-bold text-lg tracking-wide">May 20, 2026</span>
+                     </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

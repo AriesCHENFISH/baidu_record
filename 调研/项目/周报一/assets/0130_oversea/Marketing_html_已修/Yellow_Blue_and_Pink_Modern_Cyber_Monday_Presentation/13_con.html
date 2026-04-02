@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Performance - Dashboard Layout</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&family=Orbitron:wght@500;700&display=swap">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgBlack: '#000000',
+                        textWhite: '#FFFFFF',
+                        accentRed: '#D94545',
+                        textGrey: '#B0B0B0',
+                        darkPanel: '#0A0A0A'
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'Inter', 'sans-serif'],
+                        tech: ['"Orbitron"', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Basics */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .page-container {
+            width: 1280px;
+            height: 720px;
+            background-color: #000000;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            margin: 0 auto;
+            flex-direction: column;
+            padding: 3rem; /* p-12 equivalent */
+        }
+
+        /* Tech Borders */
+        .tech-border-top {
+            position: absolute; top: 0; left: 0; width: 100%; height: 2px;
+            background: linear-gradient(90deg, transparent, #D94545, transparent);
+            opacity: 0.5;
+        }
+        
+        .corner-bracket {
+            position: absolute; width: 20px; height: 20px;
+            border-color: #D94545; border-style: solid;
+            pointer-events: none;
+        }
+        .cb-tl { top: -1px; left: -1px; border-width: 2px 0 0 2px; }
+        .cb-tr { top: -1px; right: -1px; border-width: 2px 2px 0 0; }
+        .cb-bl { bottom: -1px; left: -1px; border-width: 0 0 2px 2px; }
+        .cb-br { bottom: -1px; right: -1px; border-width: 0 2px 2px 0; }
+
+        .grid-bg {
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-container">
+        <div class="absolute inset-0 grid-bg pointer-events-none"></div>
+
+        <div class="flex justify-between items-end mb-6 z-10">
+            <div>
+                <h1 class="text-white text-7xl font-black tracking-tighter uppercase leading-none">
+                    REAL-TIME PERFORMANCE
+                </h1>
+            </div>
+            <div class="text-right">
+                <div class="text-textGrey text-xs tracking-wider uppercase mb-1">Current Session</div>
+                <div class="text-white font-tech text-2xl">24:00:00</div>
+            </div>
+        </div>
+
+        <div class="relative flex-grow w-full bg-darkPanel/50 border border-white/10 mb-6 group">
+            <div class="corner-bracket cb-tl"></div>
+            <div class="corner-bracket cb-tr"></div>
+            <div class="corner-bracket cb-bl"></div>
+            <div class="corner-bracket cb-br"></div>
+            
+            <div class="tech-border-top"></div>
+
+            <div id="dashboardChart" class="w-full h-full p-4"></div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-6 h-[140px] z-10">
+            
+            <div class="bg-white/5 p-5 border-l-2 border-accentRed/50 hover:border-accentRed transition-colors duration-300">
+                <h3 class="text-white font-bold text-sm uppercase mb-3 flex items-center gap-2">
+                    <i class="fa-solid fa-arrow-trend-up text-accentRed text-xs"></i>
+                    Traffic Correlation
+                </h3>
+                <p class="text-textGrey text-xs leading-5 text-justify">
+                    Monitoring hourly trends reveals peak engagement times. The correlation between traffic spikes (Line) and actual sales revenue (Bars) helps in adjusting ad spend dynamically.
+                </p>
+            </div>
+
+            <div class="bg-white/5 p-5 border-l-2 border-accentRed/50 hover:border-accentRed transition-colors duration-300">
+                <h3 class="text-white font-bold text-sm uppercase mb-3 flex items-center gap-2">
+                    <i class="fa-solid fa-triangle-exclamation text-accentRed text-xs"></i>
+                    Conversion Gaps
+                </h3>
+                <p class="text-textGrey text-xs leading-5 text-justify">
+                    Significant gaps between high traffic and low sales indicate conversion issues during specific hours, warranting immediate investigation into site performance.
+                </p>
+            </div>
+
+            <div class="bg-accentRed/10 p-5 border border-accentRed/30 flex flex-col justify-center relative overflow-hidden">
+                <div class="absolute -right-4 -top-4 text-accentRed/10 text-8xl font-black font-tech z-0">
+                    $
+                </div>
+                <div class="relative z-10">
+                    <div class="text-accentRed text-xs font-bold tracking-widest uppercase mb-1">Peak Revenue Hour</div>
+                    <div class="text-white text-4xl font-tech font-bold mb-1">18:00</div>
+                    <div class="text-white/60 text-xs flex items-center gap-2">
+                        <span>$16,000 Generated</span>
+                        <span class="bg-accentRed text-white text-[10px] px-1 rounded">HIGH</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const chartDom = document.getElementById('dashboardChart');
+        const myChart = echarts.init(chartDom);
+        
+        // Data
+        const hours = Array.from({length: 24}, (_, i) => `${i}:00`);
+        const trafficData = [120, 80, 60, 40, 30, 50, 150, 300, 450, 500, 550, 600, 580, 500, 480, 520, 650, 800, 950, 900, 700, 500, 300, 200];
+        const revenueData = [2000, 1500, 800, 500, 300, 600, 2500, 5000, 7500, 8200, 9000, 9800, 9200, 8000, 7800, 8500, 11000, 13500, 16000, 15500, 12000, 8500, 5000, 3500];
+
+        const option = {
+            backgroundColor: 'transparent',
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: { type: 'cross', label: { backgroundColor: '#333' } },
+                backgroundColor: 'rgba(0,0,0,0.9)',
+                borderColor: '#333',
+                textStyle: { color: '#fff' }
+            },
+            legend: {
+                data: ['Traffic', 'Revenue'],
+                textStyle: { color: '#B0B0B0' },
+                top: 0,
+                right: 10
+            },
+            grid: {
+                top: '15%',
+                bottom: '10%',
+                left: '5%',
+                right: '5%',
+                containLabel: true
+            },
+            xAxis: {
+                type: 'category',
+                data: hours,
+                boundaryGap: true,
+                axisLine: { lineStyle: { color: '#333' } },
+                axisLabel: { color: '#888', margin: 15 },
+                axisTick: { show: false }
+            },
+            yAxis: [
+                {
+                    type: 'value',
+                    name: 'SESSIONS',
+                    position: 'right',
+                    splitLine: { show: false },
+                    axisLabel: { color: '#666' },
+                    nameTextStyle: { color: '#666', padding: [0, 0, 0, 20] }
+                },
+                {
+                    type: 'value',
+                    name: 'REVENUE ($)',
+                    position: 'left',
+                    splitLine: { lineStyle: { color: '#222', type: 'dashed' } },
+                    axisLabel: { color: '#D94545', fontWeight: 'bold' },
+                    nameTextStyle: { color: '#D94545', padding: [0, 20, 0, 0] }
+                }
+            ],
+            series: [
+                {
+                    name: 'Revenue',
+                    type: 'bar',
+                    yAxisIndex: 1,
+                    barWidth: '40%',
+                    itemStyle: {
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                            { offset: 0, color: '#D94545' },
+                            { offset: 1, color: 'rgba(217, 69, 69, 0.1)' }
+                        ]),
+                        borderRadius: [2, 2, 0, 0]
+                    },
+                    data: revenueData,
+                    animationDelay: (idx) => idx * 10
+                },
+                {
+                    name: 'Traffic',
+                    type: 'line',
+                    yAxisIndex: 0,
+                    smooth: true,
+                    symbol: 'none',
+                    lineStyle: { width: 3, color: '#FFFFFF' },
+                    areaStyle: {
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                            { offset: 0, color: 'rgba(255, 255, 255, 0.2)' },
+                            { offset: 1, color: 'rgba(255, 255, 255, 0)' }
+                        ])
+                    },
+                    data: trafficData,
+                    animationDelay: (idx) => idx * 10 + 100
+                }
+            ]
+        };
+
+        myChart.setOption(option);
+        
+        window.addEventListener('resize', function() {
+            myChart.resize();
+        });
+    </script>
+</body>
+</html>

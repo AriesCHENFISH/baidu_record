@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, height=720, initial-scale=1.0">
+    <title>Global Growth & Impact - ECharts Slide</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#000000',
+                        s: '#050505',
+                        accent: '#D8F550',
+                        pink: '#FF69B4',
+                        blue: '#2980B9',
+                        textMain: '#FFFFFF',
+                        textSec: '#7F8C8D',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans SC', 'sans-serif'],
+                    },
+                    spacing: {
+                        '1280': '1280px',
+                        '720': '720px',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+
+    <style>
+        /* CSS Reset & Structure */
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+        .page_container { width: 1280px; height: 720px; background-color: #050505; position: relative; overflow: hidden; margin: 0 auto; }
+        h1 { line-height: 0.9; letter-spacing: -0.04em; }
+        .bg-grid { background-size: 40px 40px; background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px); position: absolute; inset: 0; z-index: 0; }
+        ::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body>
+
+    <div class="page_container">
+        <div class="bg-grid"></div>
+
+        <div class="relative z-10 grid grid-cols-12 h-full w-full">
+            
+            <div class="col-span-2 flex flex-col justify-between p-12 border-r border-white/5 bg-white/0">
+                <div class="text-textMain text-sm font-medium tracking-widest opacity-80">
+                    <i class="fa-solid fa-layer-group text-accent mr-2"></i>Thynk Unlimited
+                </div>
+                <div class="flex-grow relative">
+                    <div class="absolute top-1/2 -left-4 transform -translate-y-1/2 -rotate-90 origin-center whitespace-nowrap">
+                        <p class="text-textSec text-lg uppercase tracking-[0.2em] font-bold">Growth Metrics</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-span-10 flex flex-col p-12 pl-16">
+                
+                <div class="flex justify-between items-start mb-10">
+                    <div>
+                        <h1 class="text-textMain text-7xl font-black uppercase mb-6">
+                            Global Growth <br>
+                            & Impact<span class="text-accent text-4xl align-top ml-2 font-light">07</span>
+                        </h1>
+                        <div class="w-20 h-1 bg-accent rounded-full mb-6"></div>
+                        <p class="text-gray-300 text-gl font-light leading-relaxed max-w-3xl">
+                            Our strategic initiatives have driven significant growth across all key sectors. The data reflects our commitment to innovation and market expansion.
+                        </p>
+                    </div>
+                    <div class="bg-accent w-16 h-16 flex items-center justify-center shadow-[4px_4px_0px_0px_rgba(255,255,255,0.2)]">
+                        <i class="fa-solid fa-arrow-right-long text-primary text-2xl transform -rotate-45"></i>
+                    </div>
+                </div>
+
+                <div id="growthChart" class="flex-grow w-full mt-4" style="min-height: 350px;"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ECharts Initialization
+        var chartDom = document.getElementById('growthChart');
+        var myChart = echarts.init(chartDom, 'dark');
+        var option;
+
+        option = {
+            backgroundColor: 'transparent',
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: { type: 'cross', label: { backgroundColor: '#2980B9' } }
+            },
+            legend: {
+                data: ['Revenue (M)', 'Users (K)', 'Market Share (%)'],
+                textStyle: { color: '#FFFFFF' },
+                bottom: 0
+            },
+            grid: {
+                left: '3%', right: '4%', bottom: '10%', top: '5%', containLabel: true
+            },
+            xAxis: [{
+                type: 'category',
+                boundaryGap: false,
+                data: ['Q1 23', 'Q2 23', 'Q3 23', 'Q4 23', 'Q1 24', 'Q2 24', 'Q3 24'],
+                axisLine: { lineStyle: { color: '#7F8C8D' } },
+                axisLabel: { color: '#FFFFFF' }
+            }],
+            yAxis: [{
+                type: 'value',
+                splitLine: { lineStyle: { color: '#ffffff10' } },
+                axisLabel: { color: '#FFFFFF' }
+            }],
+            series: [
+                {
+                    name: 'Revenue (M)',
+                    type: 'line',
+                    smooth: true,
+                    lineStyle: { width: 3, color: '#FF69B4' }, // Pink
+                    areaStyle: { opacity: 0.1, color: '#FF69B4' },
+                    data: [120, 132, 101, 134, 190, 230, 250]
+                },
+                {
+                    name: 'Users (K)',
+                    type: 'line',
+                    smooth: true,
+                    lineStyle: { width: 3, color: '#D8F550' }, // Accent Lime
+                    areaStyle: { opacity: 0.1, color: '#D8F550' },
+                    data: [220, 182, 191, 234, 290, 330, 380]
+                },
+                {
+                    name: 'Market Share (%)',
+                    type: 'line',
+                    smooth: true,
+                    lineStyle: { width: 3, color: '#2980B9' }, // Blue
+                    areaStyle: { opacity: 0.1, color: '#2980B9' },
+                    data: [15, 17, 19, 21, 24, 28, 32]
+                }
+            ]
+        };
+
+        option && myChart.setOption(option);
+    </script>
+
+</body>
+</html>

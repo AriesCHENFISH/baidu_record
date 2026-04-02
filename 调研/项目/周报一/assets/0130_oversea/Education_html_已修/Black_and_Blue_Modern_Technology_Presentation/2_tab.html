@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        #page_container { 
+            width: 1280px; height: 720px; 
+            margin: 0 auto; position: relative; 
+            background-color: #000000; 
+            overflow: hidden; 
+            font-family: 'Noto Sans SC', sans-serif; 
+        }
+
+        /* --- Unified Background Decoration --- */
+        .bg-aurora {
+            position: absolute; width: 1400px; height: 1000px; top: -400px; left: 200px;
+            background: radial-gradient(circle at 50% 50%, #0011FF, #00008B, transparent 70%);
+            opacity: 0.5; filter: blur(100px); z-index: 0; pointer-events: none;
+        }
+
+        .bg-aurora-secondary {
+            position: absolute; width: 800px; height: 800px; bottom: -200px; left: -200px;
+            background: radial-gradient(circle, #00008B, transparent);
+            opacity: 0.3; filter: blur(80px); z-index: 0; pointer-events: none;
+        }
+
+        .bg-icon-decoration {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            font-size: 600px; color: rgba(255, 255, 255, 0.02);
+            z-index: 0; pointer-events: none;
+        }
+        /* ------------------------------------- */
+
+        .list-item {
+            display: flex;
+            align-items: center;
+            padding: 18px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .list-item:hover {
+            border-bottom-color: rgba(59, 130, 246, 0.5);
+            padding-left: 10px;
+        }
+
+        .list-number {
+            font-family: monospace;
+            font-size: 1.25rem;
+            color: #3b82f6; /* Blue-500 */
+            margin-right: 1.5rem;
+            opacity: 0.8;
+        }
+
+        .list-title {
+            color: #ffffff;
+            font-size: 1.5rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+        }
+
+        .text-glow { text-shadow: 0 0 30px rgba(0, 17, 255, 0.6); }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <!-- Background Elements -->
+        <div class="bg-aurora"></div>
+        <div class="bg-aurora-secondary"></div>
+        <div class="bg-icon-decoration">
+            <i class="fa-solid fa-list-ol"></i>
+        </div>
+
+        <div class="relative z-10 flex flex-col h-full p-20">
+            
+            <!-- Header -->
+            <div class="mb-12 border-l-4 border-blue-600 pl-8">
+                <span class="text-blue-400 font-mono text-sm tracking-[0.3em] uppercase mb-2 block">Table of Contents</span>
+                <h1 class="text-6xl font-bold text-white leading-none tracking-tight text-glow">
+                    Strategic Agenda
+                </h1>
+            </div>
+
+            <!-- 2-Column List -->
+            <div class="grid grid-cols-2 gap-x-24 gap-y-2 flex-1">
+                
+                <!-- Left Column (1-5) -->
+                <div class="flex flex-col justify-start">
+                    <div class="list-item group">
+                        <span class="list-number">01</span>
+                        <span class="list-title group-hover:text-blue-300">Digital Era Overview</span>
+                    </div>
+                    <div class="list-item group">
+                        <span class="list-number">02</span>
+                        <span class="list-title group-hover:text-blue-300">Core Architecture</span>
+                    </div>
+                    <div class="list-item group">
+                        <span class="list-number">03</span>
+                        <span class="list-title group-hover:text-blue-300">Smart Contract Logic</span>
+                    </div>
+                    <div class="list-item group">
+                        <span class="list-number">04</span>
+                        <span class="list-title group-hover:text-blue-300">Sovereign Identity</span>
+                    </div>
+                    <div class="list-item group">
+                        <span class="list-number">05</span>
+                        <span class="list-title group-hover:text-blue-300">Web Evolution History</span>
+                    </div>
+                </div>
+
+                <!-- Right Column (6-10) -->
+                <div class="flex flex-col justify-start">
+                    <div class="list-item group">
+                        <span class="list-number">06</span>
+                        <span class="list-title group-hover:text-blue-300">Decentralized Ecosystem</span>
+                    </div>
+                    <div class="list-item group">
+                        <span class="list-number">07</span>
+                        <span class="list-title group-hover:text-blue-300">GameFi & Metaverse</span>
+                    </div>
+                    <div class="list-item group">
+                        <span class="list-number">08</span>
+                        <span class="list-title group-hover:text-blue-300">Global Growth Metrics</span>
+                    </div>
+                    <div class="list-item group">
+                        <span class="list-number">09</span>
+                        <span class="list-title group-hover:text-blue-300">Regulatory Landscape</span>
+                    </div>
+                    <div class="list-item group">
+                        <span class="list-number">10</span>
+                        <span class="list-title group-hover:text-blue-300">Future Roadmap</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer Decorative Line -->
+            <div class="w-full h-px bg-gradient-to-r from-transparent via-blue-900 to-transparent mt-4"></div>
+        </div>
+    </div>
+</body>
+</html>

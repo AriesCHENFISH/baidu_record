@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Presentation Slide</title>
+    
+    <!-- 1. Tailwind CSS (CDN) -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- 2. FontAwesome (Icons) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- 3. Google Fonts (via Baidu CDN as requested) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- 4. Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#20457C',       // Deep Blue
+                        secondary: '#3A5A6D',     // Dark Slate
+                        line: '#5A7A90',          // Muted Blue Line
+                        inverse: '#FFFFFF',       // White
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans SC', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- 5. Custom CSS Reset & Layout Rules -->
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container Styles */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FFFFFF;
+            overflow: hidden; /* Ensure no overflow */
+        }
+
+        /* Typography Enhancements */
+        p {
+            margin-bottom: 0; /* Tailwind controls margins usually, but good for reset */
+        }
+        
+        /* Utility for print-like text justification */
+        .text-justify-last-left {
+            text-align: justify;
+            text-align-last: left;
+        }
+    </style>
+</head>
+<body style=" display: flex; align-items: center; justify-content: center; min-height: 100vh;">
+
+    <!-- Main Slide Container -->
+    <div id="page_container">
+        
+        <!-- Grid Layout: 12 Columns -->
+        <div class="grid grid-cols-12 h-full w-full">
+
+            <!-- LEFT COLUMN: Visuals (Images) -->
+            <!-- Spans 4 columns (approx 33%) -->
+            <div class="col-span-4 h-full flex flex-col justify-center gap-6 px-10 py-16">
+                
+                <!-- Image Wrapper 1 -->
+                <div class="w-full h-1/3 overflow-hidden rounded-lg shadow-lg relative group">
+                    <img src="https://images.unsplash.com/photo-1558202543-569d67e85c73?q=80&w=600&auto=format&fit=crop" 
+                         alt="Water Texture 1" 
+                         class="w-full h-full object-cover transform transition-transform duration-700 hover:scale-105">
+                    <!-- 346*180 -->
+                </div>
+
+                <!-- Image Wrapper 2 -->
+                <div class="w-full h-1/3 overflow-hidden rounded-lg shadow-lg relative group">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=600&auto=format&fit=crop" 
+                         alt="Water Texture 2" 
+                         class="w-full h-full object-cover transform transition-transform duration-700 hover:scale-105">
+                    <!-- 346*180 -->
+                </div>
+
+                <!-- Image Wrapper 3 -->
+                <div class="w-full h-1/3 overflow-hidden rounded-lg shadow-lg relative group">
+                    <img src="https://images.unsplash.com/photo-1543360699-db4623a31c6a?q=80&w=600&auto=format&fit=crop" 
+                         alt="Water Texture 3" 
+                         class="w-full h-full object-cover transform transition-transform duration-700 hover:scale-105">
+                    <!-- 346*180 -->
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN: Content -->
+            <!-- Spans 8 columns (approx 66%) -->
+            <div class="col-span-8 h-full flex flex-col pt-20 pr-16 pl-4 relative">
+                
+                <!-- Header Section -->
+                <div class="mb-12">
+                    <!-- Main Title: Huge, Bold, Primary Color -->
+                    <h1 class="text-8xl font-bold text-primary tracking-tight mb-4">Portfolio</h1>
+                    
+                    <!-- Sub-header Meta Data -->
+                    <div class="flex justify-between items-center w-full border-b border-gray-100 pb-4">
+                        <h2 class="text-xl font-medium text-secondary">Graphic Designer</h2>
+                        <span class="text-xl font-medium text-secondary">2027</span>
+                    </div>
+                </div>
+
+                <!-- Body Content Section -->
+                <div class="flex flex-row h-full">
+                    
+                    <!-- Vertical Divider Line -->
+                    <div class="w-px bg-line h-[360px] mr-10 flex-shrink-0 opacity-70"></div>
+
+                    <!-- Text Content Area -->
+                    <div class="flex flex-col gap-6 max-w-2xl">
+                        
+                        <!-- Paragraph 1 -->
+                        <p class="text-secondary text-sm leading-7 text-justify">
+                            Presentations are communication tools that can be used as demonstration lectures, speeches, reports, and more. It is mostly presented before an audience. It serves a variety of purposes, making presentations powerful tools for convincing and teaching.
+                        </p>
+
+                        <!-- Bullet Point Section (Semantic List) -->
+                        <ul class="list-none m-0 p-0">
+                            <li class="flex gap-4 text-secondary text-sm leading-7 text-justify">
+                                <!-- Custom Bullet using FontAwesome -->
+                                <span class="text-primary mt-1.5 text-[8px]">
+                                    <i class="fa-solid fa-circle"></i>
+                                </span>
+                                <span>
+                                    Presentations are communication tools that can be used as demonstration lectures, speeches, reports, and more. It is mostly presented before an audience. It serves a variety of purposes, making presentations powerful tools for convincing and teaching.
+                                </span>
+                            </li>
+                        </ul>
+
+                        <!-- Paragraph 2 -->
+                        <p class="text-secondary text-sm leading-7 text-justify">
+                            Presentations are communication tools that can be used as demonstration lectures, speeches, reports, and more. It is mostly presented before an audience. It serves a variety of purposes, making presentations powerful tools for convincing and teaching.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Footer / Page Number -->
+                <!-- Absolute positioning relative to the Right Column or Page Container -->
+                <div class="absolute bottom-0 right-0 w-28 h-20 bg-primary flex items-center justify-center">
+                    <span class="text-inverse text-4xl font-bold tracking-widest">03</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

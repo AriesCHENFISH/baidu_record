@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingoude Library - Typography Edition</title>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        theme: {
+                            bg: '#0a0a0a',           // Deep Black
+                            text: '#E6E1D3',         // Ivory
+                            accent: '#D6C8B5',       // Khaki/Beige
+                            dim: '#333333',          // Dark Grey lines
+                            gold: '#967D54'          // Gold text
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                        serif: ['"Times New Roman"', 'Times', 'serif'],
+                        display: ['"Arial Black"', 'Impact', 'sans-serif'] // For heavy impact
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Global Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #0a0a0a;
+            overflow: hidden;
+            font-family: "Noto Sans SC", sans-serif;
+            /* Subtle Grid Background */
+            background-image: 
+                linear-gradient(#1a1a1a 1px, transparent 1px),
+                linear-gradient(90deg, #1a1a1a 1px, transparent 1px);
+            background-size: 160px 160px;
+        }
+
+        /* Artistic Typography */
+        .big-serif {
+            font-family: 'Times New Roman', serif;
+            letter-spacing: -0.05em;
+            line-height: 0.8;
+        }
+
+        /* Hollow Text Effect */
+        .stroke-text {
+            -webkit-text-stroke: 1px #333;
+            color: transparent;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <!-- ================= Layout Grid Lines ================= -->
+        <!-- These lines create the structure without needing images -->
+        <div class="absolute top-0 left-32 w-px h-full bg-theme-dim z-0"></div>
+        <div class="absolute top-0 right-32 w-px h-full bg-theme-dim z-0"></div>
+        <div class="absolute top-24 left-0 w-full h-px bg-theme-dim z-0"></div>
+        <div class="absolute bottom-24 left-0 w-full h-px bg-theme-dim z-0"></div>
+
+        <!-- ================= Header / Nav ================= -->
+        <nav class="absolute top-0 left-0 w-full h-24 px-12 flex justify-between items-center z-50">
+            <div class="flex items-center gap-4">
+                <div class="w-2 h-2 bg-theme-accent"></div>
+                <h2 class="text-sm font-bold tracking-[0.3em] text-theme-text uppercase">Ingoude.</h2>
+            </div>
+            
+            <div class="flex gap-12">
+                <span class="text-[10px] text-gray-500 uppercase tracking-widest cursor-pointer hover:text-theme-accent">Index</span>
+                <span class="text-[10px] text-gray-500 uppercase tracking-widest cursor-pointer hover:text-theme-accent">Search</span>
+                <span class="text-[10px] text-gray-500 uppercase tracking-widest cursor-pointer hover:text-theme-accent">Menu</span>
+            </div>
+        </nav>
+
+        <!-- ================= Main Typography Center ================= -->
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full text-center z-20">
+            
+            <!-- Background Decorative Text (Hollow) -->
+            <h1 class="stroke-text font-display text-[200px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-20 select-none whitespace-nowrap">
+                PUBLIC ARCHIVE
+            </h1>
+
+            <!-- Main Title (Solid) -->
+            <div class="relative mix-blend-difference">
+                <p class="text-theme-accent text-xs tracking-[0.8em] uppercase mb-4 pl-2">The Collection</p>
+                <h1 class="big-serif text-[160px] text-theme-text font-bold italic">
+                    LIBRARY
+                </h1>
+                
+                <!-- The "Red Seal" equivalent (Beige Square) -->
+                <div class="absolute -top-10 left-[62%] w-20 h-20 bg-theme-accent rounded-full flex items-center justify-center animate-spin-slow" style="animation-duration: 10s;">
+                     <i class="fa-solid fa-star text-black text-xl"></i>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ================= Information Columns (Replacing Long Text) ================= -->
+        <!-- Short, punchy data points situated on the bottom grid line -->
+        <div class="absolute bottom-0 left-0 w-full h-24 flex items-center z-40">
+            
+            <!-- Col 1 -->
+            <div class="w-32 h-full border-r border-theme-dim flex items-center justify-center bg-black">
+                <span class="text-theme-gold text-lg font-serif italic">01</span>
+            </div>
+
+            <!-- Col 2: Keywords -->
+            <div class="pl-12 flex gap-16">
+                <div>
+                    <h4 class="text-gray-500 text-[10px] uppercase tracking-widest mb-1">Status</h4>
+                    <p class="text-theme-text text-sm font-medium">Open 24/7</p>
+                </div>
+                <div>
+                    <h4 class="text-gray-500 text-[10px] uppercase tracking-widest mb-1">Location</h4>
+                    <p class="text-theme-text text-sm font-medium">Zone A, L-12</p>
+                </div>
+                <div>
+                    <h4 class="text-gray-500 text-[10px] uppercase tracking-widest mb-1">Volume</h4>
+                    <p class="text-theme-text text-sm font-medium">50,000+</p>
+                </div>
+            </div>
+
+            <!-- Col 3: CTA (Right aligned) -->
+            <div class="ml-auto w-64 h-full bg-theme-accent flex items-center justify-center cursor-pointer hover:bg-white transition-colors group">
+                <span class="text-black font-bold tracking-widest uppercase text-sm mr-2">Enter Now</span>
+                <i class="fa-solid fa-arrow-right text-black group-hover:translate-x-1 transition-transform"></i>
+            </div>
+
+        </div>
+
+        <!-- ================= Floating Elements ================= -->
+        
+        <!-- Left Vertical Label -->
+        <div class="absolute top-1/2 left-8 transform -translate-y-1/2 -rotate-90 origin-center">
+            <p class="text-[10px] text-gray-600 tracking-[0.5em] uppercase">Est. 2026 • Premium Studio</p>
+        </div>
+
+        <!-- Right Vertical Label -->
+        <div class="absolute top-1/2 right-8 transform -translate-y-1/2 rotate-90 origin-center">
+             <p class="text-[10px] text-gray-600 tracking-[0.5em] uppercase">Silence Required</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

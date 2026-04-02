@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Ocean Inspiring Facts - Refined</title>
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&family=Libre+Baskerville:ital@1&display=swap">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepOcean: '#020B26',
+                        accentBlue: '#4FBDF2',
+                        softGray: '#A0AEC0',
+                        coral: '#FF7F50',
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Libre Baskerville', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background: #020B26;
+            background: radial-gradient(circle at 15% 15%, #0A1E4D 0%, #020B26 100%);
+            overflow: hidden;
+            color: #FFFFFF;
+        }
+
+        /* 标题：延续第一页的半透明渐变衬线体 */
+        .main-title {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 80px;
+            background: linear-gradient(180deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.2) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+            letter-spacing: -2px;
+        }
+
+        /* 升级后的“泡泡”：异形毛玻璃卡片 */
+        .glass-bubble {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(79, 189, 242, 0.15);
+            transition: all 0.5s ease;
+        }
+        
+        .glass-bubble:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-color: rgba(79, 189, 242, 0.5);
+            transform: translateY(-10px);
+        }
+
+        /* 有机形状图片框：与第一页呼应 */
+        .visual-frame {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            box-shadow: 0 0 60px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .decorative-dot {
+            width: 10px;
+            height: 10px;
+            background: #4FBDF2;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 15px #4FBDF2;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page_container">
+        <div class="absolute -bottom-10 right-10 text-[220px] font-bold opacity-[0.02] pointer-events-none select-none italic font-serif">
+            Facts
+        </div>
+
+        <div class="relative z-10 w-full h-full p-20 flex flex-col">
+            
+            <div class="flex justify-between items-start mb-10">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <span class="w-12 h-[2px] bg-accentBlue mr-4"></span>
+                        <span class="text-accentBlue uppercase tracking-[0.3em] text-xs font-semibold">Scientific Discovery</span>
+                    </div>
+                    <h1 class="main-title italic">Inspiring Ocean Facts</h1>
+                </div>
+                <div class="text-right">
+                    <p class="text-[10px] text-softGray tracking-widest uppercase mb-1">Chapter</p>
+                    <p class="text-3xl font-light font-serif">02</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-12 gap-12 items-center flex-1">
+                
+                <div class="col-span-4 relative">
+                    <div class="visual-frame w-full aspect-[4/5] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=1000&auto=format&fit=crop" 
+                             class="w-full h-full object-cover scale-110" alt="Marine Life">
+                    </div>
+                    <div class="absolute -top-4 -right-4 bg-white text-deepOcean px-4 py-2 text-[10px] font-black uppercase tracking-widest shadow-xl">
+                        Salford & Co.
+                    </div>
+                </div>
+
+                <div class="col-span-8 grid grid-cols-2 gap-6">
+                    
+                    <div class="glass-bubble p-8 rounded-[40px] flex flex-col justify-center">
+                        <div class="mb-4"><span class="decorative-dot"></span></div>
+                        <h3 class="text-white font-bold text-lg mb-2 uppercase tracking-tighter">The Deepest Point</h3>
+                        <p class="text-softGray text-sm leading-relaxed font-light">
+                            The Mariana Trench is the deepest part of the ocean, plunging down <span class="text-white font-semibold">11,000 meters</span>.
+                        </p>
+                    </div>
+
+                    <div class="glass-bubble p-10 rounded-[60px] transform translate-y-12">
+                        <div class="text-coral mb-4">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        </div>
+                        <p class="text-white text-xl font-medium leading-tight mb-2">
+                            Oceans produce over <span class="text-coral font-bold text-3xl">50%</span>
+                        </p>
+                        <p class="text-softGray text-xs uppercase tracking-widest">Of the oxygen we breathe</p>
+                    </div>
+
+                    <div class="glass-bubble p-8 rounded-[40px] col-span-2 mt-10 flex items-center">
+                        <div class="w-16 h-16 rounded-full border border-accentBlue/30 flex items-center justify-center mr-8 flex-shrink-0">
+                            <span class="text-accentBlue font-serif italic text-2xl">!</span>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-bold text-lg mb-1 tracking-tight">Space vs. Sea</h3>
+                            <p class="text-softGray text-sm font-light">
+                                More humans have been to <span class="text-white">outer space</span> than have explored the deepest floor of our oceans.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journey - Borcelle Hospital</title>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { medical: { dark: '#01315B', primary: '#005BB7', light: '#F0F7FF', accent: '#22C55E' } }, fontFamily: { sans: ['"Noto Sans SC"', 'sans-serif'] } } }
+        }
+    </script>
+    <style>
+        .page_container { width: 1280px; height: 720px; background-color: #FDFDFD; position: relative; margin: 0 auto; overflow: hidden; display: flex; flex-direction: column; }
+        .accent-line { position: absolute; width: 4px; height: 80px; background: #22C55E; left: -20px; top: 8px; }
+        .step-circle { width: 100px; height: 100px; background: white; border: 2px dashed #005BB7; border-radius: 50%; display: flex; align-items: center; justify-content: center; position: relative; z-index: 10; }
+        .flow-line { position: absolute; top: 50%; left: 0; right: 0; height: 2px; background: #005BB7; opacity: 0.1; z-index: 0; }
+    </style>
+</head>
+<body>
+    <div class="page_container">
+        <header class="relative z-50 pt-10 px-20 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <div class="w-10 h-10 bg-medical-primary flex items-center justify-center rounded-xl shadow-md"><i class="fa-solid fa-hospital text-white text-xl"></i></div>
+                <div>
+                    <h2 class="text-xl font-black text-medical-dark tracking-tighter leading-none">BORCELLE</h2>
+                    <p class="text-[14px] text-medical-primary font-bold tracking-[0.1em] uppercase">Medical Excellence</p>
+                </div>
+            </div>
+            <p class="text-sm font-black text-gray-400 uppercase tracking-widest">Seamless Care Path</p>
+        </header>
+
+        <main class="flex-1 px-20 py-20 relative z-10 flex flex-col justify-center">
+            <div class="relative mb-16">
+                <div class="accent-line"></div>
+                <h2 class="text-[52px] font-black text-medical-dark tracking-tighter mb-4">Your Health <span class="text-medical-primary">Roadmap.</span></h2>
+                <p class="text-[18px] text-gray-500 max-w-2xl">We streamline your experience from the first appointment to recovery, ensuring zero wait times and personal support.</p>
+            </div>
+
+            <div class="relative grid grid-cols-4 gap-4 items-start">
+                <div class="flow-line"></div>
+                <!-- Step 1 -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="step-circle mb-6 bg-white"><span class="text-3xl font-black text-medical-dark">01</span></div>
+                    <h5 class="text-lg font-black text-medical-dark mb-2">Smart Intake</h5>
+                    <p class="text-sm text-gray-400 max-w-[200px]">Digital history collection and AI priority triage.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="step-circle mb-6 bg-medical-primary shadow-xl shadow-medical-primary/30 border-none"><span class="text-3xl font-black text-white">02</span></div>
+                    <h5 class="text-lg font-black text-medical-dark mb-2">Elite Consultation</h5>
+                    <p class="text-sm text-gray-400 max-w-[200px]">Direct access to board-certified specialists within 24h.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="step-circle mb-6 bg-white"><span class="text-3xl font-black text-medical-dark">03</span></div>
+                    <h5 class="text-lg font-black text-medical-dark mb-2">Precision Plan</h5>
+                    <p class="text-sm text-gray-400 max-w-[200px]">Multi-disciplinary team creates your recovery blueprint.</p>
+                </div>
+                <!-- Step 4 -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="step-circle mb-6 bg-medical-accent border-none"><i class="fa-solid fa-check text-3xl text-white"></i></div>
+                    <h5 class="text-lg font-black text-medical-dark mb-2">Active Recovery</h5>
+                    <p class="text-sm text-gray-400 max-w-[200px]">Continuous monitoring via our smart patient portal.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, height=720, initial-scale=1.0">
+    <title>Medical Healthcare Presentation</title>
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background-color: #FFFFFF;
+            font-family: 'Noto Sans SC', sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .font-tight {
+            letter-spacing: -0.04em;
+        }
+        
+        /* 胶囊浮动动画 */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(-15deg); }
+            50% { transform: translateY(-20px) rotate(-15deg); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* 隐藏滚动条 */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+
+        <!-- Header / Logo Section -->
+        <header class="w-full h-24 flex items-center justify-between px-16 z-20">
+            <!-- 美化后的 LOGO 设计 -->
+            <div class="flex items-center gap-3">
+                <div class="relative flex items-center">
+                    <!-- 药丸图形组合 LOGO -->
+                    <div class="w-10 h-10 bg-[#E8F85D] rounded-full border-2 border-black flex items-center justify-center z-10">
+                        <i class="fa-solid fa-plus text-black text-lg"></i>
+                    </div>
+                    <div class="w-14 h-10 bg-black rounded-r-full -ml-5 border-2 border-black flex items-center justify-end pr-3">
+                        <div class="w-2 h-2 bg-white rounded-full"></div>
+                    </div>
+                </div>
+                <div class="flex flex-col ml-1">
+                    <h2 class="text-black font-extrabold text-2xl leading-none tracking-tighter">BORCELLE</h2>
+                    <p class="text-black text-[10px] font-bold tracking-[0.2em] uppercase opacity-70">Medical Group</p>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <nav>
+                <ul class="flex items-center gap-10 list-none">
+                    <li><a href="#" class="text-black font-bold hover:opacity-60 transition-opacity">Home</a></li>
+                    <li><a href="#" class="text-black font-bold hover:opacity-60 transition-opacity">About Us</a></li>
+                    <li><a href="#" class="text-black font-bold hover:opacity-60 transition-opacity">Services</a></li>
+                    <li>
+                        <div class="bg-black text-white px-7 py-2.5 rounded-full cursor-pointer hover:bg-[#E8F85D] hover:text-black transition-all border-2 border-black font-bold text-sm shadow-[4px_4px_0px_0px_rgba(232,248,93,1)]">
+                            Contact Us
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-1 grid grid-cols-12 w-full h-full">
+            
+            <!-- Left Column: Typography -->
+            <div class="col-span-7 flex flex-col justify-center pl-16 pr-8 z-10">
+                <div class="mb-8">
+                    <div class="inline-block px-3 py-1 bg-black text-[#E8F85D] text-xs font-bold mb-4 tracking-widest uppercase">
+                        Healthcare Solution
+                    </div>
+                    <h1 class="text-[6.5rem] leading-[0.85] font-black text-black font-tight italic uppercase">
+                        Medical<br>
+                        Health<br>
+                        <span class="relative inline-block text-[#E8F85D] [-webkit-text-stroke:2px_black]">
+                            Care
+                        </span>
+                    </h1>
+                </div>
+
+                <div class="w-4/5">
+                    <p class="text-black text-xl font-medium leading-relaxed border-l-8 border-black pl-6">
+                        Experience the next generation of medical services with our patient-centric approach and advanced technology.
+                    </p>
+                </div>
+                
+                <div class="mt-12 flex gap-12">
+                    <div class="flex flex-col">
+                        <span class="text-4xl font-black text-black">24/7</span>
+                        <span class="text-xs font-bold uppercase tracking-widest opacity-60">Support Available</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-4xl font-black text-black">150+</span>
+                        <span class="text-xs font-bold uppercase tracking-widest opacity-60">Expert Doctors</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: 只保留黄色胶囊设计 -->
+            <div class="col-span-5 relative flex items-center justify-center overflow-hidden">
+                <!-- 背景装饰大圆（极淡） -->
+                <div class="absolute w-[600px] h-[600px] bg-[#E8F85D] rounded-full opacity-10 blur-3xl"></div>
+                
+                <!-- 核心视觉：巨大的黄色胶囊 -->
+                <div class="relative animate-float">
+                    <!-- 胶囊阴影 -->
+                    <div class="absolute -bottom-10 left-1/2 -translate-x-1/2 w-48 h-8 bg-black/10 rounded-full blur-xl"></div>
+                    
+                    <!-- 胶囊本体 -->
+                    <div class="w-48 h-[400px] bg-[#E8F85D] border-[6px] border-black rounded-full relative overflow-hidden flex flex-col shadow-[20px_20px_0px_0px_rgba(0,0,0,0.05)]">
+                        <!-- 胶囊上半部分 (黄色) -->
+                        <div class="flex-1 flex items-center justify-center">
+                             <div class="w-12 h-12 rounded-full border-4 border-black/20"></div>
+                        </div>
+                        <!-- 胶囊中间分割线 -->
+                        <div class="h-1.5 bg-black w-full"></div>
+                        <!-- 胶囊下半部分 (白色) -->
+                        <div class="flex-1 bg-white flex flex-col items-center justify-center gap-4">
+                             <div class="w-8 h-2 bg-black/10 rounded-full"></div>
+                             <div class="w-12 h-2 bg-black/10 rounded-full"></div>
+                             <div class="w-6 h-2 bg-black/10 rounded-full"></div>
+                        </div>
+                    </div>
+
+                    <!-- 胶囊装饰小标签 -->
+                    <div class="absolute top-1/2 -right-12 translate-y-4 bg-black text-[#E8F85D] px-4 py-2 font-bold text-xs uppercase tracking-tighter rotate-90 border-2 border-black">
+                        Pill-01
+                    </div>
+                </div>
+
+                <!-- 装饰性网点背景 (SVG) -->
+                <div class="absolute bottom-10 right-10 opacity-20">
+                    <svg width="100" height="100" viewBox="0 0 100 100">
+                        <circle cx="10" cy="10" r="2" fill="black" />
+                        <circle cx="30" cy="10" r="2" fill="black" />
+                        <circle cx="50" cy="10" r="2" fill="black" />
+                        <circle cx="10" cy="30" r="2" fill="black" />
+                        <circle cx="30" cy="30" r="2" fill="black" />
+                        <circle cx="50" cy="30" r="2" fill="black" />
+                        <circle cx="10" cy="50" r="2" fill="black" />
+                        <circle cx="30" cy="50" r="2" fill="black" />
+                        <circle cx="50" cy="50" r="2" fill="black" />
+                    </svg>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+</body>
+</html>

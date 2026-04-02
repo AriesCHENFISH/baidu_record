@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core Programming Languages - Redesigned</title>
+    
+    <!-- Import Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    
+    <!-- Import FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBlack: '#050505',
+                        cardBg: 'rgba(255, 255, 255, 0.03)',
+                        accentPurple: '#B265FF',
+                        accentBlue: '#4E8AFF',
+                        accentPink: '#FF7EB6',
+                        textGray: '#9CA3AF',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'Inter', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Basics */
+        body { margin: 0; padding: 0; overflow: hidden; }
+        
+        /* Custom Utilities for Glassmorphism */
+        .glass-card {
+            background: rgba(20, 20, 20, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        /* Subtle Grid Background Pattern */
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
+
+        /* Text Gradient Utility */
+        .text-gradient {
+            background: linear-gradient(135deg, #B265FF 0%, #FF7EB6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Container (1280x720) -->
+    <div class="relative w-[1280px] h-[720px] mx-auto bg-deepBlack text-white overflow-hidden font-sans">
+
+        <!-- =========================================
+             BACKGROUND LAYERS
+             ========================================= -->
+        
+        <!-- Grid Pattern -->
+        <div class="absolute inset-0 bg-grid z-0"></div>
+
+        <!-- Ambient Glow (Top Right - Pink/Purple) -->
+        <div class="absolute -top-[200px] -right-[200px] w-[800px] h-[800px] bg-accentPurple rounded-full opacity-20 blur-[120px] z-0"></div>
+
+        <!-- Ambient Glow (Bottom Left - Blue) -->
+        <div class="absolute -bottom-[300px] -left-[100px] w-[700px] h-[700px] bg-accentBlue rounded-full opacity-15 blur-[100px] z-0"></div>
+
+
+        <!-- =========================================
+             MAIN CONTENT GRID
+             ========================================= -->
+        <div class="relative z-10 w-full h-full flex items-center px-20">
+            
+            <div class="grid grid-cols-12 gap-16 w-full items-center">
+                
+                <!-- LEFT COLUMN: Typography & Intro (Col-5) -->
+                <div class="col-span-5 space-y-8">
+                    
+                    <!-- Decorative Tag -->
+                    <div class="inline-flex items-center space-x-2 border border-white/20 rounded-full px-4 py-1.5 bg-white/5 backdrop-blur-sm">
+                        <span class="w-2 h-2 rounded-full bg-accentPink animate-pulse"></span>
+                        <span class="text-xs font-semibold tracking-widest uppercase text-white/80">Tech Stack 2025</span>
+                    </div>
+
+                    <!-- Main Title -->
+                    <h1 class="text-7xl font-bold leading-tight tracking-tight">
+                        Core <br>
+                        <span class="font-light italic text-white/90">Programming</span> <br>
+                        <span class="text-gradient">Languages</span>
+                    </h1>
+
+                    <!-- Description -->
+                    <p class="text-lg text-textGray leading-relaxed font-light pr-4 border-l-2 border-white/10 pl-6">
+                        Building the future requires the right tools. We leverage a robust triad of languages to deliver high-performance, scalable, and intelligent solutions tailored to complex demands.
+                    </p>
+
+                    <!-- Decorative Signature/Detail -->
+                    <div class="pt-8 opacity-60">
+                         <div class="text-xs font-mono tracking-widest text-accentBlue">
+                             &lt;SYSTEM_READY&gt;
+                         </div>
+                    </div>
+                </div>
+
+
+                <!-- RIGHT COLUMN: Language Cards (Col-7) -->
+                <div class="col-span-7 flex flex-col gap-5 justify-center pl-8">
+                    
+                    <!-- CARD 1: Python -->
+                    <div class="glass-card rounded-2xl p-6 flex items-center space-x-6 hover:bg-white/5 group">
+                        <!-- Icon Container -->
+                        <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-600/20 to-yellow-500/20 flex items-center justify-center border border-white/10 group-hover:scale-105 transition-transform duration-300">
+                            <i class="fa-brands fa-python text-3xl text-white"></i>
+                        </div>
+                        <!-- Text -->
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-1">Python</h3>
+                            <p class="text-sm text-textGray">The backbone of our <span class="text-white/80">Data Science</span> & <span class="text-white/80">AI</span> initiatives. Unmatched versatility.</p>
+                        </div>
+                        <!-- Arrow visual -->
+                        <div class="ml-auto opacity-0 group-hover:opacity-100 transition-opacity -translate-x-4 group-hover:translate-x-0 duration-300">
+                            <i class="fa-solid fa-arrow-right text-white/50"></i>
+                        </div>
+                    </div>
+
+                    <!-- CARD 2: JavaScript -->
+                    <div class="glass-card rounded-2xl p-6 flex items-center space-x-6 hover:bg-white/5 group translate-x-4"> <!-- Offset for visual interest -->
+                        <!-- Icon Container -->
+                        <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-yellow-400/20 to-orange-500/20 flex items-center justify-center border border-white/10 group-hover:scale-105 transition-transform duration-300">
+                            <i class="fa-brands fa-js text-3xl text-yellow-400"></i>
+                        </div>
+                        <!-- Text -->
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-1">JavaScript</h3>
+                            <p class="text-sm text-textGray">Powering interactive <span class="text-white/80">Web Experiences</span>. The universal language of the browser.</p>
+                        </div>
+                        <div class="ml-auto opacity-0 group-hover:opacity-100 transition-opacity -translate-x-4 group-hover:translate-x-0 duration-300">
+                            <i class="fa-solid fa-arrow-right text-white/50"></i>
+                        </div>
+                    </div>
+
+                    <!-- CARD 3: C++ -->
+                    <div class="glass-card rounded-2xl p-6 flex items-center space-x-6 hover:bg-white/5 group">
+                        <!-- Icon Container -->
+                        <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-700/20 to-cyan-500/20 flex items-center justify-center border border-white/10 group-hover:scale-105 transition-transform duration-300">
+                            <!-- Using a code icon for C++ generic representation or text -->
+                            <span class="font-bold text-xl text-blue-400">C++</span>
+                        </div>
+                        <!-- Text -->
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-1">C++</h3>
+                            <p class="text-sm text-textGray">High-performance <span class="text-white/80">System Architecture</span>. For when speed and resource control matter most.</p>
+                        </div>
+                        <div class="ml-auto opacity-0 group-hover:opacity-100 transition-opacity -translate-x-4 group-hover:translate-x-0 duration-300">
+                            <i class="fa-solid fa-arrow-right text-white/50"></i>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Geometric Accent (Bottom Right Corner) -->
+        <div class="absolute bottom-10 right-10 flex gap-2">
+            <div class="w-2 h-2 rounded-full bg-white/20"></div>
+            <div class="w-2 h-2 rounded-full bg-white/40"></div>
+            <div class="w-2 h-2 rounded-full bg-accentPurple"></div>
+        </div>
+
+    </div>
+
+</body>
+</html>

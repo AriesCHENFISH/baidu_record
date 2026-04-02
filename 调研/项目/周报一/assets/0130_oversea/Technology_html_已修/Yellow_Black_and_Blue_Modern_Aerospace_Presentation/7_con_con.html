@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation & Avionics - High End Keynote</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#080808',
+                        accent: '#FCE67E',
+                        textWhite: '#EDEDED',
+                        decorGrey: '#333333',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                        mono: ['Courier New', 'monospace'],
+                    },
+                    backgroundImage: {
+                        'metal-gradient': 'linear-gradient(135deg, #FCE67E 0%, #FFFBEB 50%, #D4AF37 100%)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        ::-webkit-scrollbar { display: none; }
+        
+        /* Effects */
+        .halftone-bg {
+            background-image: radial-gradient(#333333 1.5px, transparent 1.5px);
+            background-size: 8px 8px;
+            opacity: 0.6;
+        }
+        .img-cover { width: 100%; height: 100%; object-fit: cover; }
+        
+        /* New Design Elements */
+        .text-glow { text-shadow: 0 0 20px rgba(252, 230, 126, 0.3); }
+        .tech-line-gradient {
+            background: linear-gradient(90deg, #FCE67E 0%, rgba(252, 230, 126, 0) 100%);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Page Container -->
+    <div id="page_container" class="w-[1280px] h-[720px] mx-auto relative bg-bgDark overflow-hidden font-sans text-textWhite">
+        
+        <!-- Grid Layout System: 12 Columns -->
+        <div class="grid grid-cols-12 h-full w-full">
+
+            <!-- LEFT COLUMN: Immersive Visual (Cols 1-4) -->
+            <div class="col-span-4 relative h-full border-r border-decorGrey/50">
+                <div class="w-full h-full relative">
+                    <img src="https://images.unsplash.com/photo-1541185933-710f50031e42?q=80&w=800&auto=format&fit=crop" 
+                         alt="Space Shuttle Transport" 
+                         class="img-cover filter grayscale contrast-125 opacity-80">
+                    <div class="absolute inset-0 bg-gradient-to-t from-bgDark via-transparent to-transparent"></div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-transparent to-bgDark/40"></div>
+                </div>
+
+                <div class="absolute bottom-10 left-8">
+                     <p class="text-accent text-xs tracking-[0.3em] font-bold uppercase mb-2">System Status</p>
+                     <p class="text-white text-3xl font-bold tracking-tighter">ORBITAL<br>READY</p>
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN: Content Area (Cols 5-12) -->
+            <div class="col-span-8 relative flex flex-col p-12">
+                
+                <!-- TOP SECTION: Header & Branding -->
+                <div class="flex justify-between items-start mb-4 relative z-10">
+                    <div class="w-2/3">
+                        <!-- Brand Logo (Unified New Design) -->
+                        <div class="flex items-center gap-3 mb-8 group">
+                            <!-- Icon -->
+                            <div class="relative w-8 h-8 flex items-center justify-center">
+                                <div class="absolute inset-0 border border-gray-600 rounded-full"></div>
+                                <div class="absolute inset-0 border border-dashed border-accent rounded-full animate-[spin_12s_linear_infinite] opacity-60"></div>
+                                <div class="w-2 h-2 bg-accent transform rotate-45 shadow-[0_0_10px_rgba(252,230,126,0.6)]"></div>
+                            </div>
+                            <!-- Text -->
+                            <div class="flex flex-col justify-center">
+                                <span class="text-xl font-black text-white leading-none tracking-widest uppercase">Salford</span>
+                                <div class="flex items-center w-full">
+                                    <span class="text-[9px] text-accent font-bold tracking-[0.1em] uppercase mr-1">& Co.</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Main Title (Unified New Design) -->
+                        <div class="flex items-center mb-1 space-x-2">
+                            <span class="text-xs font-mono text-gray-500 tracking-[0.3em] uppercase">Sys. Architecture</span>
+                        </div>
+                        <h1 class="text-6xl font-black italic uppercase leading-[0.9] tracking-tighter text-transparent bg-clip-text bg-metal-gradient text-glow mb-2">
+                            Navigation<br>
+                            <span class="text-white opacity-90">& Avionics</span>
+                        </h1>
+                        <!-- Tech Line Decoration -->
+                        <div class="w-full mt-6 relative flex items-center">
+                            <div class="h-[2px] w-24 tech-line-gradient"></div>
+                            <div class="h-[1px] w-full bg-[#222]"></div>
+                        </div>
+                    </div>
+
+                    <!-- Right Top Image (Unchanged) -->
+                    <div class="w-[220px] h-[280px] border border-decorGrey bg-bgDark relative overflow-hidden rounded-lg shadow-2xl">
+                         <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=400&auto=format&fit=crop" 
+                              alt="Satellite in Orbit" 
+                              class="img-cover opacity-90 hover:scale-105 transition-transform duration-700">
+                         <div class="absolute top-2 right-2">
+                             <i class="fa-solid fa-crosshairs text-accent text-xs opacity-70"></i>
+                         </div>
+                    </div>
+                </div>
+
+                <!-- DECORATIVE MIDDLE (Unchanged) -->
+                <div class="absolute top-[28%] right-0 w-[400px] h-[120px] halftone-bg -z-0 pointer-events-none fade-in"></div>
+
+                <!-- BOTTOM SECTION: Data List (Unchanged content) -->
+                <div class="mt-auto relative z-10">
+                    <div class="flex items-center gap-2 mb-6 opacity-50">
+                        <i class="fa-solid fa-microchip text-xs"></i>
+                        <span class="text-[10px] uppercase tracking-widest">Core Systems Manifest</span>
+                        <div class="h-[1px] bg-decorGrey flex-grow"></div>
+                    </div>
+
+                    <div class="flex flex-col gap-5">
+                        <!-- Item 01 -->
+                        <div class="group flex items-center gap-6 p-4 border border-transparent hover:border-decorGrey/50 hover:bg-white/5 rounded-xl transition-all duration-300">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full border border-decorGrey flex items-center justify-center group-hover:border-accent group-hover:text-bgDark group-hover:bg-accent transition-colors">
+                                <span class="font-mono font-bold text-lg">01</span>
+                            </div>
+                            <div class="flex-grow grid grid-cols-12 gap-4 items-center">
+                                <div class="col-span-4">
+                                    <h3 class="text-accent font-bold text-lg tracking-wide uppercase">GPS Navigation</h3>
+                                </div>
+                                <div class="col-span-8 border-l border-decorGrey pl-4">
+                                    <p class="text-textWhite text-sm font-light leading-relaxed opacity-90">
+                                        Satellite-based systems providing global positioning accuracy for mission-critical trajectory alignment.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 02 -->
+                        <div class="group flex items-center gap-6 p-4 border border-transparent hover:border-decorGrey/50 hover:bg-white/5 rounded-xl transition-all duration-300">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full border border-decorGrey flex items-center justify-center group-hover:border-accent group-hover:text-bgDark group-hover:bg-accent transition-colors">
+                                <span class="font-mono font-bold text-lg">02</span>
+                            </div>
+                            <div class="flex-grow grid grid-cols-12 gap-4 items-center">
+                                <div class="col-span-4">
+                                    <h3 class="text-accent font-bold text-lg tracking-wide uppercase">Flight Control</h3>
+                                </div>
+                                <div class="col-span-8 border-l border-decorGrey pl-4">
+                                    <p class="text-textWhite text-sm font-light leading-relaxed opacity-90">
+                                        High-performance computing units automating control surfaces to ensure stable atmospheric flight.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 03 -->
+                        <div class="group flex items-center gap-6 p-4 border border-transparent hover:border-decorGrey/50 hover:bg-white/5 rounded-xl transition-all duration-300">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full border border-decorGrey flex items-center justify-center group-hover:border-accent group-hover:text-bgDark group-hover:bg-accent transition-colors">
+                                <span class="font-mono font-bold text-lg">03</span>
+                            </div>
+                            <div class="flex-grow grid grid-cols-12 gap-4 items-center">
+                                <div class="col-span-4">
+                                    <h3 class="text-accent font-bold text-lg tracking-wide uppercase">Comm Systems</h3>
+                                </div>
+                                <div class="col-span-8 border-l border-decorGrey pl-4">
+                                    <p class="text-textWhite text-sm font-light leading-relaxed opacity-90">
+                                        Ensuring encrypted real-time data exchange between pilots, astronauts, and ground control centers.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        <!-- Decoration lines -->
+        <div class="absolute top-6 right-6 w-3 h-3 border-t border-r border-accent/50"></div>
+        <div class="absolute bottom-6 right-6 w-3 h-3 border-b border-r border-accent/50"></div>
+
+    </div>
+</body>
+</html>

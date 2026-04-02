@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Process - Rimberio</title>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBlack: '#050505',
+                        darkGrad: '#081014',
+                        cyanPrimary: '#2A6F8F',
+                        cyanHighlight: '#4FA4C1',
+                        textMain: '#FFFFFF',
+                        textSec: '#D1D5DB',
+                        borderStroke: '#333333',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans SC', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'gradient-main': 'linear-gradient(135deg, #050505, #081014)',
+                        'cyan-card': 'linear-gradient(90deg, #2A6F8F, #4FA4C1)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px; position: relative;
+            background-color: #050505; overflow: hidden; margin: 0 auto;
+        }
+        .bg-dark-card { background-color: #111111; border: 1px solid #333333; }
+        .glow-effect {
+            position: absolute; width: 800px; height: 800px;
+            background: radial-gradient(circle, rgba(42, 111, 143, 0.15), transparent 60%);
+            top: -400px; left: 240px; z-index: 0; pointer-events: none;
+        }
+        /* Defining connector lines */
+        .connector-line::after {
+            content: ''; position: absolute; top: 2rem; right: -50%;
+            width: 100%; height: 2px; background: linear-gradient(90deg, #2A6F8F, transparent);
+            z-index: 0; opacity: 0.5;
+        }
+        .last-connector::after { display: none; }
+    </style>
+</head>
+<body>
+
+    <div id="page_container" class="bg-gradient-main">
+        <div class="glow-effect"></div>
+
+        <div class="relative z-10 px-16 pt-14 h-full flex flex-col">
+            
+            <div class="flex justify-between items-end mb-16">
+                <div>
+                    <h4 class="text-cyanHighlight uppercase tracking-widest font-semibold mb-3">How We Work</h4>
+                    <h1 class="text-5xl text-textMain font-bold leading-tight">
+                        Our Streamlined<br> Path to <span class="text-cyanHighlight">Success</span>
+                    </h1>
+                </div>
+                <div class="border border-borderStroke rounded-full px-6 py-2 text-textMain font-semibold tracking-wide backdrop-blur-sm">
+                    Rimberio Methodology
+                </div>
+            </div>
+
+            <div class="grid grid-cols-4 gap-8 relative">
+                
+                <div class="relative z-10 flex flex-col gap-4 group connector-line">
+                    <div class="w-16 h-16 rounded-full bg-cyan-card flex items-center justify-center shadow-lg shadow-cyanPrimary/20 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-magnifying-glass text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-textMain text-xl font-bold mt-2">1. Discovery</h3>
+                    <p class="text-textSec text-sm leading-relaxed pr-4">
+                        We dive deep into your business model, challenges, and market position to uncover hidden opportunities.
+                    </p>
+                </div>
+
+                <div class="relative z-10 flex flex-col gap-4 group connector-line">
+                    <div class="w-16 h-16 rounded-full bg-dark-card border border-cyanPrimary flex items-center justify-center shadow-lg group-hover:bg-cyanPrimary/10 transition-colors">
+                        <i class="fa-solid fa-chess text-cyanHighlight text-2xl"></i>
+                    </div>
+                    <h3 class="text-textMain text-xl font-bold mt-2">2. Strategy</h3>
+                    <p class="text-textSec text-sm leading-relaxed pr-4">
+                        Crafting a custom-fit roadmap that leverages our integrated platform and expert insights specifically for you.
+                    </p>
+                </div>
+
+                <div class="relative z-10 flex flex-col gap-4 group connector-line">
+                    <div class="w-16 h-16 rounded-full bg-dark-card border border-cyanPrimary flex items-center justify-center shadow-lg group-hover:bg-cyanPrimary/10 transition-colors">
+                        <i class="fa-solid fa-rocket text-cyanHighlight text-2xl"></i>
+                    </div>
+                    <h3 class="text-textMain text-xl font-bold mt-2">3. Execution</h3>
+                    <p class="text-textSec text-sm leading-relaxed pr-4">
+                        Deploying solutions with precision backed by experienced professionals, ensuring smooth integration.
+                    </p>
+                </div>
+
+                <div class="relative z-10 flex flex-col gap-4 group last-connector">
+                    <div class="w-16 h-16 rounded-full bg-cyan-card flex items-center justify-center shadow-lg shadow-cyanPrimary/20 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-chart-line text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-textMain text-xl font-bold mt-2">4. Optimization</h3>
+                    <p class="text-textSec text-sm leading-relaxed pr-4">
+                        Continuous monitoring and affordable iterative improvements to sustain your competitive advantage.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyanPrimary/50 to-transparent opacity-30"></div>
+        </div>
+    </div>
+
+</body>
+</html>

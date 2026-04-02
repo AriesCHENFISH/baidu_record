@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Year-over-Year Comparison - Fradel Company</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBg: '#05050F',
+                        primaryText: '#DDFCF2',
+                        secondaryText: '#B0B0B0',
+                        chartLightest: '#C8F9E6',
+                        chartLight: '#88DEE3',
+                        chartMedium: '#64B0CF',
+                        chartDark: '#538AB8',
+                    },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #05050F; overflow: hidden; }
+        .ambient-glow { position: absolute; top: -200px; left: -200px; width: 800px; height: 800px; background: radial-gradient(circle, #18123A 0%, rgba(5, 5, 15, 0) 70%); opacity: 0.8; z-index: 0; }
+        .ambient-glow-right { position: absolute; bottom: -300px; right: -200px; width: 1000px; height: 1000px; background: radial-gradient(circle, #18123A 0%, rgba(5, 5, 15, 0) 70%); opacity: 0.6; z-index: 0; }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <div class="ambient-glow"></div>
+        <div class="ambient-glow-right"></div>
+
+        <div class="relative z-50 px-12 pt-8 w-full">
+            <nav class="flex items-center justify-between w-full h-20 px-10 rounded-full" style="background: linear-gradient(90deg, #6a44f0 0%, #1E1B33 40%, #1E1B33 100%); box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);">
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 flex items-center justify-center rounded-full bg-[#DDFCF2] text-[#05050F]">
+                        <i class="fa-solid fa-layer-group text-xl"></i>
+                    </div>
+                    <h2 class="text-[#DDFCF2] text-xl font-bold tracking-wide">Fradel Company</h2>
+                </div>
+                <ul class="flex items-center gap-12 list-none m-0 p-0">
+                    <li class="cursor-pointer"><b class="text-[#DDFCF2] text-sm tracking-widest hover:text-white transition-colors">HOME</b></li>
+                    <li class="cursor-pointer"><b class="text-[#B0B0B0] text-sm tracking-widest hover:text-[#DDFCF2] transition-colors">ABOUT</b></li>
+                    <li class="cursor-pointer"><b class="text-[#B0B0B0] text-sm tracking-widest hover:text-[#DDFCF2] transition-colors">MORE</b></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="relative z-10 px-24 pt-10 h-full flex flex-col">
+            <div class="text-center mb-10">
+                <h1 class="text-5xl font-bold text-primaryText tracking-tight drop-shadow-lg">Year-over-Year Comparison</h1>
+            </div>
+            <div class="grid grid-cols-2 gap-20 h-[450px]">
+                <div class="flex flex-col h-full">
+                    <div id="chart2024" class="w-full h-[300px] mb-6"></div>
+                    <div class="border-l-4 border-chartMedium pl-4">
+                        <h3 class="text-3xl font-bold text-primaryText mb-3">2024</h3>
+                        <p class="text-secondaryText text-sm leading-relaxed text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col h-full">
+                    <div id="chart2025" class="w-full h-[300px] mb-6"></div>
+                    <div class="border-l-4 border-chartLight pl-4">
+                        <h3 class="text-3xl font-bold text-primaryText mb-3">2025</h3>
+                        <p class="text-secondaryText text-sm leading-relaxed text-justify">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const colors = { lightest: '#C8F9E6', light: '#88DEE3', medium: '#64B0CF', dark: '#538AB8' };
+        function getChartOption(dataValues) {
+            return {
+                backgroundColor: 'transparent',
+                tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
+                legend: { data: ['Series 1', 'Series 2'], textStyle: { color: '#B0B0B0' }, top: 0, icon: 'circle' },
+                grid: { left: '0%', right: '0%', bottom: '0%', top: '15%', containLabel: true },
+                xAxis: { type: 'category', data: ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5', 'Item 6'], axisLine: { lineStyle: { color: '#333' } }, axisLabel: { color: '#B0B0B0' } },
+                yAxis: { type: 'value', splitLine: { lineStyle: { color: 'rgba(255,255,255,0.05)', type: 'dashed' } }, axisLabel: { color: '#B0B0B0' } },
+                series: [{ name: 'Main Data', type: 'bar', barWidth: '50%', data: dataValues, itemStyle: { borderRadius: [6, 6, 0, 0], color: function(params) {
+                    const colorList = [colors.lightest, colors.lightest, colors.light, colors.light, colors.medium, colors.dark];
+                    return colorList[params.dataIndex] || colors.dark;
+                }}}]
+            };
+        }
+        echarts.init(document.getElementById('chart2024')).setOption(getChartOption([5, 8, 12, 15, 18, 20]));
+        echarts.init(document.getElementById('chart2025')).setOption(getChartOption([6, 10, 14, 18, 22, 25]));
+    </script>
+</body>
+</html>

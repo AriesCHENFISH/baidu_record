@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defining Mountains Presentation</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        /* 1. CSS Reset & Global Config */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 2. Page Container (Strict 1280x720) */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FFFFFF;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+
+        }
+
+        /* 3. Custom Utility Classes & Color Variables */
+        :root {
+            --primary: #7695CE;
+            --secondary: #95ADD8;
+            --text-primary: #000000;
+            --text-body: #333333;
+            --text-inverse: #FFFFFF;
+        }
+
+        /* Gradient Utilities */
+        .bg-gradient-soft {
+            background: linear-gradient(135deg, rgba(118, 149, 206, 0.1), rgba(255, 255, 255, 0));
+        }
+
+        .bg-gradient-card {
+            background: linear-gradient(90deg, #F8FAFC, #FFFFFF);
+        }
+
+        /* Typography Utilities */
+        h1 { font-weight: 700; color: var(--text-primary); letter-spacing: -0.02em; }
+        h2 { font-weight: 600; color: var(--secondary); letter-spacing: 0.05em; text-transform: uppercase; }
+        h3 { font-weight: 600; color: var(--text-primary); }
+        p { color: var(--text-body); line-height: 1.6; }
+
+        /* Specific Component Styles */
+        .decoration-bar {
+            background-color: var(--primary);
+        }
+
+        .marker-dot {
+            width: 12px;
+            height: 12px;
+            background-color: #FFFFFF;
+            border: 3px solid var(--primary);
+            border-radius: 50%;
+            position: absolute;
+            z-index: 10;
+            box-shadow: 0 0 0 4px rgba(118, 149, 206, 0.3);
+        }
+
+        .marker-label {
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 6px 16px;
+            border-radius: 20px;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            z-index: 10;
+            white-space: nowrap;
+        }
+
+        .marker-line {
+            position: absolute;
+            background-color: #FFFFFF;
+            width: 2px;
+            z-index: 9;
+            opacity: 0.8;
+        }
+
+        /* List Styling */
+        .custom-list-item {
+            border-left: 4px solid var(--secondary);
+            padding-left: 16px;
+            margin-bottom: 16px;
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <div class="grid grid-cols-12 h-full w-full">
+            
+            <div class="col-span-5 h-full flex flex-col justify-center pl-16 pr-8 pt-0 relative z-10">
+                <div class="absolute top-0 left-0 w-full h-full bg-gradient-soft -z-10"></div>
+
+                <div class="mb-8">
+                    <h2 class="text-xl text-[#7695CE] mb-2 font-bold">What are Mountains?</h2>
+                    <h1 class="text-6xl mb-6 leading-tight">Defining<br>Mountains</h1>
+                    <div class="w-24 h-2 decoration-bar rounded-full"></div>
+                </div>
+
+                <div class="mb-10">
+                    <p class="text-gl text-slate-600 mb-4 text-justify">
+                        Mountains are significant landforms that rise substantially above their surrounding areas. They are characterized by their elevation, slope, and local relief.
+                    </p>
+                </div>
+
+                <div class="flex flex-col gap-4">
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-100 flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-full bg-[#7695CE] flex items-center justify-center shrink-0 text-white">
+                            <i class="fa-solid fa-arrow-up-right-dots"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-bold mb-1">High Relief</h3>
+                            <p class="text-xs text-slate-500">Elevated landforms with a high degree of relief.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-100 flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-full bg-[#95ADD8] flex items-center justify-center shrink-0 text-white">
+                            <i class="fa-solid fa-mountain"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-bold mb-1">Steep Slopes</h3>
+                            <p class="text-xs text-slate-500">Typically have steep slopes and a defined summit.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-100 flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-full bg-slate-400 flex items-center justify-center shrink-0 text-white">
+                            <i class="fa-solid fa-volcano"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-bold mb-1">Geological Origin</h3>
+                            <p class="text-xs text-slate-500">Formed by various geological processes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-span-7 h-full relative overflow-hidden">
+                <div class="absolute inset-0 w-full h-full bg-slate-100">
+                     <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" 
+                          alt="Majestic Mountain Range" 
+                          class="w-full h-full object-cover object-bottom opacity-90"
+                          style="filter: contrast(1.1) saturate(1.1);">
+                </div>
+
+                <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#7695CE] to-transparent opacity-30"></div>
+
+                <div style="top: 25%; left: 45%;">
+                    <div class="marker-dot"></div>
+                    <div class="marker-line" style="height: 60px; top: -60px; left: 4px;"></div>
+                    <div class="marker-label" style="top: -95px; left: -30px;">Summit</div>
+                </div>
+
+                <div style="top: 35%; left: 75%;">
+                    <div class="marker-dot"></div>
+                    <div class="marker-line" style="height: 40px; top: -40px; left: 4px;"></div>
+                    <div class="marker-label" style="top: -75px; left: -20px;">Peak</div>
+                </div>
+
+                <div style="top: 48%; left: 60%;">
+                    <div class="marker-dot"></div>
+                    <div class="marker-line" style="height: 30px; top: -30px; left: 4px;"></div>
+                    <div class="marker-label" style="top: -65px; left: -20px;">Saddle</div>
+                </div>
+
+                <div style="top: 40%; left: 30%;">
+                    <div class="marker-dot"></div>
+                    <div class="marker-line" style="height: 50px; top: -50px; left: 4px;"></div>
+                    <div class="marker-label" style="top: -85px; left: -20px;">Crest</div>
+                </div>
+
+                <div style="top: 55%; left: 20%;">
+                    <div class="marker-dot"></div>
+                    <div class="marker-line" style="height: 100px; top: -100px; left: 4px;"></div>
+                    <div class="marker-label" style="top: -135px; left: -20px;">Slope</div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="absolute bottom-8 right-8 bg-white/90 backdrop-blur-md px-6 py-3 rounded-lg shadow-lg border border-white/50 z-20">
+             <div class="flex items-center gap-3">
+                 <div class="text-[#7695CE] text-2xl">
+                     <i class="fa-solid fa-layer-group"></i>
+                 </div>
+                 <div>
+                     <p class="text-xs text-slate-500 uppercase font-bold tracking-wider">Elevation</p>
+                     <p class="text-sm font-bold text-slate-800">Above 600m</p>
+                 </div>
+             </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

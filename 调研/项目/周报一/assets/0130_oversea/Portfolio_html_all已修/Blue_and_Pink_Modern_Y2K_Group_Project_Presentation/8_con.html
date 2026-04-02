@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Members - Premium Y2K</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --y2k-pink: #E685B5; --y2k-blue: #5E7CB3; --y2k-yellow: #F2E96B; --y2k-dark: #1B2A59; }
+        body { font-family: 'Space+Grotesk', sans-serif; }
+        .font-sync { font-family: 'Syncopate', sans-serif; }
+        .bg-grid-pattern { background-size: 50px 50px; background-image: linear-gradient(to right, rgba(255, 255, 255, 0.15) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 1px, transparent 1px); }
+        .paper-overlay { background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"); opacity: 0.05; pointer-events: none; }
+        .shadow-y2k { box-shadow: 8px 8px 0px var(--y2k-dark); }
+        .glass-card { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(10px); border: 2px solid rgba(255, 255, 255, 0.5); }
+        .member-card:hover { transform: scale(1.02); transition: all 0.3s ease; }
+    </style>
+</head>
+<body>
+    <div id="page_container" class="relative overflow-hidden mx-auto bg-white" style="width: 1280px; height: 720px;">
+        <div class="absolute top-0 left-0 w-full h-1/2 bg-[#5E7CB3] z-0"></div>
+        <div class="absolute bottom-0 left-0 w-full h-1/2 bg-[#E685B5] bg-grid-pattern z-0"></div>
+        <div class="absolute inset-0 paper-overlay z-10"></div>
+
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[52%] w-[92%] h-[80%] glass-card rounded-2xl shadow-y2k z-20 flex flex-col p-10 border-4 border-white">
+            <div class="flex justify-between items-end mb-8">
+                <div class="bg-[#1B2A59] px-10 py-4 transform -rotate-1 shadow-[6px_6px_0px_#E685B5]">
+                    <h1 class="text-white text-5xl font-sync font-bold tracking-tighter">PHASE_04 <span class="text-[#F2E96B]">TEAM</span></h1>
+                </div>
+            </div>
+
+            <div class="flex flex-row gap-8 flex-1 overflow-hidden">
+                <!-- 左侧：团队成员列表 -->
+                <div class="w-1/2 flex flex-col gap-4">
+                    <div class="member-card bg-white p-4 border-2 border-[#1B2A59] shadow-y2k flex items-center gap-6">
+                        <div class="w-16 h-16 bg-[#F2E96B] border-2 border-[#1B2A59] flex items-center justify-center text-3xl"><i class="fa-solid fa-user-ninja"></i></div>
+                        <div>
+                            <h3 class="font-bold text-xl text-[#1B2A59]">Director. Zhao</h3>
+                            <p class="text-sm text-[#1B2A59]/70 italic">Core Creative Strategy & Project Management.</p>
+                        </div>
+                    </div>
+                    <div class="member-card bg-[#F2E96B] p-4 border-2 border-[#1B2A59] shadow-y2k flex items-center gap-6">
+                        <div class="w-16 h-16 bg-white border-2 border-[#1B2A59] flex items-center justify-center text-3xl"><i class="fa-solid fa-code"></i></div>
+                        <div>
+                            <h3 class="font-bold text-xl text-[#1B2A59]">Lead. Dev_Li</h3>
+                            <p class="text-sm text-[#1B2A59]/80 italic">Full-stack system architecture and performance tuning.</p>
+                        </div>
+                    </div>
+                    <div class="member-card bg-white p-4 border-2 border-[#1B2A59] shadow-y2k flex items-center gap-6">
+                        <div class="w-16 h-16 bg-[#E685B5] border-2 border-[#1B2A59] flex items-center justify-center text-white text-3xl"><i class="fa-solid fa-palette"></i></div>
+                        <div>
+                            <h3 class="font-bold text-xl text-[#1B2A59]">Artist. Wang</h3>
+                            <p class="text-sm text-[#1B2A59]/70 italic">UI/UX visual identity and motion graphics design.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右侧：配图区域（已更新） -->
+                <div class="flex-1 bg-[#1B2A59] rounded-xl border-4 border-white shadow-y2k relative overflow-hidden flex flex-col">
+                    <div class="bg-white px-4 py-1 flex justify-between font-mono text-[10px] font-black z-10">
+                        <span>TEAM_SYNC_VISUALIZER.SYS</span>
+                        <div class="flex gap-2"><span class="w-2 h-2 bg-[#E685B5]"></span><span class="w-2 h-2 bg-[#F2E96B]"></span></div>
+                    </div>
+                    
+                    <div class="flex-1 relative overflow-hidden flex items-center justify-center p-6">
+                        <!-- 背景装饰 -->
+                        <div class="absolute w-64 h-64 bg-gradient-to-tr from-[#5E7CB3] to-[#E685B5] rounded-full blur-3xl opacity-20"></div>
+                        
+                        <!-- 图片容器 -->
+                        <div class="relative w-full h-full border-2 border-[#F2E96B]/50 overflow-hidden bg-black/20">
+                            <!-- 在此处填入你的配图链接 -->
+                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800" 
+                                 alt="Team Work" 
+                                 class="w-full h-full object-cover opacity-80 mix-blend-screen hover:opacity-100 transition-opacity duration-500">
+                            
+                            <!-- 悬浮标签 -->
+                            <div class="absolute top-4 left-4 bg-[#F2E96B] text-[#1B2A59] px-3 py-1 font-black text-xs italic shadow-md">CORE_UNIT.IMG</div>
+                            
+                            <!-- 扫描线动画效果 -->
+                            <div class="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[length:100%_2px,3px_100%]"></div>
+                        </div>
+
+                        <!-- 装饰文字 -->
+                        <div class="absolute bottom-10 right-10 text-[#F2E96B] font-mono text-[10px] leading-tight text-right uppercase tracking-widest bg-[#1B2A59]/80 p-2">
+                            Status: Online<br>
+                            Syncing Assets... 100%<br>
+                            Unit_ID: 0xFF92
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部导航条 -->
+        <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 w-[90%] z-30">
+            <div class="bg-[#1B2A59] h-16 rounded-xl flex items-center justify-between px-8 shadow-y2k border-2 border-white/30">
+                <div class="flex items-center space-x-4">
+                    <div class="flex space-x-1"><div class="w-3 h-3 bg-[#E685B5] rounded-full"></div><div class="w-3 h-3 bg-[#F2E96B] rounded-full"></div><div class="w-3 h-3 bg-[#5E7CB3] rounded-full"></div></div>
+                    <span class="text-white/60 font-mono text-xs uppercase tracking-[0.3em]">Directory: root/project_v1</span>
+                </div>
+                <h4 class="text-white font-bold text-lg tracking-widest uppercase italic">NEXT: TIMELINE_LOG <i class="fa-solid fa-chevron-right ml-2 animate-pulse"></i></h4>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

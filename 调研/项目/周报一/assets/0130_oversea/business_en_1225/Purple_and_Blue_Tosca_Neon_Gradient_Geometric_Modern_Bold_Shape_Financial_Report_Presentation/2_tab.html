@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table of Contents - Fradel Company</title>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBg: '#05050F',
+                        primaryText: '#DDFCF2',
+                        secondaryText: '#B0B0B0',
+                        accentCyan: '#88DEE3',
+                        accentBlue: '#64B0CF',
+                        glassBg: 'rgba(30, 27, 51, 0.4)'
+                    },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background-color: #05050F;
+            /* 微弱的氛围光，不破坏纯净感 */
+            background-image: radial-gradient(circle at 50% 50%, #18123A 0%, transparent 80%);
+        }
+
+        /* 导航栏去圆点强制策略 */
+        .nav-list { list-style: none !important; }
+        .nav-list li::before { content: none !important; display: none !important; }
+
+        /* 目录项悬停效果 */
+        .toc-item:hover .toc-number {
+            color: #DDFCF2;
+            transform: translateX(10px);
+        }
+        .toc-item:hover .toc-line {
+            width: 60px;
+            background-color: #DDFCF2;
+        }
+
+        .toc-number { transition: all 0.3s ease; }
+        .toc-line { transition: all 0.3s ease; }
+    </style>
+</head>
+<body>
+
+    <div id="page_container" class="flex flex-col items-center">
+        
+        <div class="absolute top-8 left-1/2 transform -translate-x-1/2 w-[95%] z-50">
+            <nav class="flex items-center justify-between w-full h-20 px-10 rounded-full" 
+                 style="background: linear-gradient(90deg, #6a44f0 0%, #1E1B33 40%, #1E1B33 100%); box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);">
+                
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 flex items-center justify-center rounded-full bg-[#DDFCF2] text-[#05050F]">
+                        <i class="fa-solid fa-layer-group text-xl"></i>
+                    </div>
+                    <h2 class="text-[#DDFCF2] text-xl font-bold tracking-wide">Fradel Company</h2>
+                </div>
+
+                <ul class="nav-list flex items-center gap-12 m-0 p-0">
+                    <li class="cursor-pointer">
+                        <b class="text-[#DDFCF2] text-sm tracking-widest hover:text-white transition-colors">HOME</b>
+                    </li>
+                    <li class="cursor-pointer">
+                        <b class="text-[#B0B0B0] text-sm tracking-widest hover:text-[#DDFCF2] transition-colors">ABOUT</b>
+                    </li>
+                    <li class="cursor-pointer">
+                        <b class="text-[#B0B0B0] text-sm tracking-widest hover:text-[#DDFCF2] transition-colors">MORE</b>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="mt-44 w-full px-24 flex flex-col items-start">
+            
+            <div class="mb-16">
+                <h1 class="text-[#DDFCF2] text-7xl font-bold tracking-tight mb-4">CONTENTS</h1>
+                <div class="w-32 h-1.5 bg-gradient-to-r from-accentCyan to-accentBlue rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-x-20 gap-y-10 w-full">
+                
+                <div class="toc-item flex items-center gap-6 cursor-pointer">
+                    <span class="toc-number text-5xl font-bold text-accentCyan/40">01</span>
+                    <div class="toc-line w-8 h-px bg-accentCyan/30"></div>
+                    <h3 class="text-2xl text-primaryText font-medium tracking-wide">Financial Highlights</h3>
+                </div>
+
+                <div class="toc-item flex items-center gap-6 cursor-pointer">
+                    <span class="toc-number text-5xl font-bold text-accentCyan/40">02</span>
+                    <div class="toc-line w-8 h-px bg-accentCyan/30"></div>
+                    <h3 class="text-2xl text-primaryText font-medium tracking-wide">Income Statement</h3>
+                </div>
+
+                <div class="toc-item flex items-center gap-6 cursor-pointer">
+                    <span class="toc-number text-5xl font-bold text-accentCyan/40">03</span>
+                    <div class="toc-line w-8 h-px bg-accentCyan/30"></div>
+                    <h3 class="text-2xl text-primaryText font-medium tracking-wide">Balance Sheet Overview</h3>
+                </div>
+
+                <div class="toc-item flex items-center gap-6 cursor-pointer">
+                    <span class="toc-number text-5xl font-bold text-accentCyan/40">04</span>
+                    <div class="toc-line w-8 h-px bg-accentCyan/30"></div>
+                    <h3 class="text-2xl text-primaryText font-medium tracking-wide">Cash Flow Analysis</h3>
+                </div>
+
+                <div class="toc-item flex items-center gap-6 cursor-pointer">
+                    <span class="toc-number text-5xl font-bold text-accentCyan/40">05</span>
+                    <div class="toc-line w-8 h-px bg-accentCyan/30"></div>
+                    <h3 class="text-2xl text-primaryText font-medium tracking-wide">Profitability Metrics</h3>
+                </div>
+
+                <div class="toc-item flex items-center gap-6 cursor-pointer">
+                    <span class="toc-number text-5xl font-bold text-accentCyan/40">06</span>
+                    <div class="toc-line w-8 h-px bg-accentCyan/30"></div>
+                    <h3 class="text-2xl text-primaryText font-medium tracking-wide">Risks & Challenges</h3>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accentCyan/20 to-transparent"></div>
+    </div>
+
+</body>
+</html>

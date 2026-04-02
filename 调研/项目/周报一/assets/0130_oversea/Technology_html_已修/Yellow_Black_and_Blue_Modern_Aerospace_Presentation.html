@@ -1,0 +1,2344 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Responsive Merged HTML
+  </title>
+  <style>
+   body {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .page-wrapper {
+                width: 100%;
+                margin: 15px 0;
+                position: relative;
+            }
+            .page-title {
+                background: #f5f5f5;
+                padding: 5px 10px;
+                border-radius: 3px 3px 0 0;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+            }
+            .responsive-iframe {
+                border: none;
+                width: 100%;
+                display: block;
+            }
+  </style>
+ </head>
+ <body>
+  <!-- 内容将在这里插入 -->
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 1
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Aerospace Keynote Cover - Premium&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#050505',
+                        accent: '#FCE67E', // Gold
+                        accentHigh: '#FFFFE0', // Bright Gold highlight
+                        subtle: '#2a2a2a',
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'Inter', 'sans-serif'],
+                        mono: ['Courier New', 'monospace'],
+                    },
+                    backgroundImage: {
+                        'metal-gradient': 'linear-gradient(180deg, #FCE67E 10%, #FFFFFF 50%, #D4AF37 90%)',
+                        'void-gradient': 'radial-gradient(circle at 50% 40%, #1a1a1a 0%, #000000 80%)',
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        #page_container {
+            width: 1280px; height: 720px;
+            background-color: #050505;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 1. NOISE TEXTURE: Adds film/industrial grain */
+        .noise-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url(&quot;data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.07'/%3E%3C/svg%3E&quot;);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* 2. BACKGROUND GRID */
+        .tech-grid {
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 80px 80px;
+            mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+        }
+
+        /* 3. ANIMATIONS */
+        @keyframes slow-spin { 100% { transform: rotate(360deg); } }
+        @keyframes pulse-glow { 0%, 100% { opacity: 0.3; } 50% { opacity: 0.6; } }
+        @keyframes scanline { 0% { top: -10%; opacity: 0; } 50% { opacity: 1; } 100% { top: 110%; opacity: 0; } }
+
+        .spin-cw { animation: slow-spin 80s linear infinite; }
+        .spin-ccw { animation: slow-spin 60s linear reverse infinite; }
+        .pulse { animation: pulse-glow 4s ease-in-out infinite; }
+        
+        .scanline-bar {
+            position: absolute;
+            left: 0; width: 100%; height: 2px;
+            background: linear-gradient(90deg, transparent, #FCE67E, transparent);
+            opacity: 0.5;
+            animation: scanline 8s linear infinite;
+            z-index: 5;
+        }
+
+        /* 4. TEXT EFFECTS */
+        .title-glow { 
+            text-shadow: 0 0 30px rgba(252, 230, 126, 0.3), 0 0 10px rgba(252, 230, 126, 0.1); 
+        }
+        
+        /* 5. UI MARKERS */
+        .corner-bracket {
+            position: absolute; width: 40px; height: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s;
+        }
+        .corner-bracket::after {
+            content: ''; position: absolute; width: 8px; height: 8px; bg-accent;
+        }
+        
+        /* Top Left */
+        .tl { top: 30px; left: 30px; border-right: none; border-bottom: none; }
+        .tl::after { top: 0; left: 0; border-top: 2px solid #FCE67E; border-left: 2px solid #FCE67E; }
+        /* Top Right */
+        .tr { top: 30px; right: 30px; border-left: none; border-bottom: none; }
+        .tr::after { top: 0; right: 0; border-top: 2px solid #FCE67E; border-right: 2px solid #FCE67E; }
+        /* Bottom Left */
+        .bl { bottom: 30px; left: 30px; border-right: none; border-top: none; }
+        .bl::after { bottom: 0; left: 0; border-bottom: 2px solid #FCE67E; border-left: 2px solid #FCE67E; }
+        /* Bottom Right */
+        .br { bottom: 30px; right: 30px; border-left: none; border-top: none; }
+        .br::after { bottom: 0; right: 0; border-bottom: 2px solid #FCE67E; border-right: 2px solid #FCE67E; }
+
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot; class=&quot;bg-bgDark&quot;&gt;
+        
+        &lt;!-- LAYER 1: ATMOSPHERE &amp; TEXTURE --&gt;
+        &lt;div class=&quot;absolute inset-0 bg-void-gradient z-0&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;noise-overlay&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute inset-0 tech-grid opacity-40 z-0&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;scanline-bar&quot;&gt;&lt;/div&gt;
+
+        &lt;!-- Spotlight Effect at Top --&gt;
+        &lt;div class=&quot;absolute top-[-200px] left-1/2 transform -translate-x-1/2 w-[800px] h-[400px] bg-accent opacity-5 blur-[100px] z-0&quot;&gt;&lt;/div&gt;
+
+        &lt;!-- LAYER 2: ORBITAL RINGS (HUD) --&gt;
+        &lt;!-- Ring 1: Large faint outer --&gt;
+        &lt;div class=&quot;absolute w-[680px] h-[680px] border border-[#222] rounded-full opacity-30 z-0&quot;&gt;&lt;/div&gt;
+        
+        &lt;!-- Ring 2: Technical Dashed (Clockwise) --&gt;
+        &lt;div class=&quot;absolute w-[580px] h-[580px] rounded-full spin-cw z-0 opacity-40 border border-[#333]&quot; style=&quot;border-style: dashed;&quot;&gt;&lt;/div&gt;
+        
+        &lt;!-- Ring 3: Inner Accent (Counter-Clockwise) --&gt;
+        &lt;div class=&quot;absolute w-[420px] h-[420px] rounded-full spin-ccw z-0 opacity-60 border border-transparent border-t-accent/40 border-b-accent/10&quot;&gt;&lt;/div&gt;
+        
+        &lt;!-- Ring 4: Static Glow Core --&gt;
+        &lt;div class=&quot;absolute w-[300px] h-[300px] bg-gradient-to-b from-accent/5 to-transparent rounded-full blur-3xl z-0 pulse&quot;&gt;&lt;/div&gt;
+
+
+        &lt;!-- LAYER 3: CORNER UI --&gt;
+        &lt;div class=&quot;corner-bracket tl&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;corner-bracket tr&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;corner-bracket bl&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;corner-bracket br&quot;&gt;&lt;/div&gt;
+
+
+        &lt;!-- LAYER 4: BRANDING (Top Left) --&gt;
+        &lt;div class=&quot;absolute top-12 left-12 z-20 flex items-center gap-4&quot;&gt;
+            &lt;div class=&quot;relative w-10 h-10 flex items-center justify-center&quot;&gt;
+                &lt;div class=&quot;absolute inset-0 border border-gray-600 rounded-full&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;absolute inset-0 border border-dashed border-accent rounded-full animate-[spin_10s_linear_infinite] opacity-80&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;w-3 h-3 bg-accent transform rotate-45 shadow-[0_0_15px_rgba(252,230,126,1)]&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;h2 class=&quot;text-2xl font-black text-white leading-none tracking-widest uppercase&quot;&gt;Salford&lt;/h2&gt;
+                &lt;div class=&quot;flex items-center gap-2 mt-1&quot;&gt;
+                    &lt;div class=&quot;h-[1px] w-8 bg-accent&quot;&gt;&lt;/div&gt;
+                    &lt;span class=&quot;text-[9px] text-gray-400 font-bold uppercase tracking-[0.2em]&quot;&gt;Est. 2024&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- LAYER 5: DATE &amp; STATUS (Top Right) --&gt;
+        &lt;div class=&quot;absolute top-12 right-12 z-20 text-right&quot;&gt;
+            &lt;div class=&quot;flex items-center justify-end gap-2 mb-1&quot;&gt;
+                &lt;div class=&quot;w-2 h-2 bg-green-500 rounded-full animate-pulse shadow-[0_0_10px_rgba(34,197,94,0.5)]&quot;&gt;&lt;/div&gt;
+                &lt;span class=&quot;text-[10px] text-accent font-mono uppercase tracking-widest&quot;&gt;Live Feed&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;h3 class=&quot;text-white font-mono text-xs uppercase tracking-widest opacity-60&quot;&gt;Strategic Report // 2025-26&lt;/h3&gt;
+        &lt;/div&gt;
+
+
+        &lt;!-- LAYER 6: MAIN TITLE (Center) --&gt;
+        &lt;div class=&quot;relative z-30 flex flex-col items-center justify-center transform translate-y-[-10px]&quot;&gt;
+            &lt;!-- Subtle Top Label --&gt;
+            &lt;span class=&quot;text-accent/60 font-mono text-[10px] uppercase tracking-[0.5em] mb-4 border border-accent/20 px-3 py-1 rounded&quot;&gt;
+                Classified Level 4
+            &lt;/span&gt;
+            
+            &lt;!-- HUGE TITLE --&gt;
+            &lt;h1 class=&quot;text-[120px] font-black italic uppercase leading-[0.85] tracking-tighter text-transparent bg-clip-text bg-metal-gradient title-glow mix-blend-screen&quot;&gt;
+                Aerospace
+            &lt;/h1&gt;
+            
+            &lt;!-- Subtitle with lines --&gt;
+            &lt;div class=&quot;flex items-center gap-6 mt-4 opacity-90&quot;&gt;
+                &lt;div class=&quot;w-16 h-[1px] bg-gradient-to-r from-transparent to-accent&quot;&gt;&lt;/div&gt;
+                &lt;h2 class=&quot;text-4xl font-light text-white uppercase tracking-[0.3em]&quot;&gt;Keynote&lt;/h2&gt;
+                &lt;div class=&quot;w-16 h-[1px] bg-gradient-to-l from-transparent to-accent&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+
+        &lt;!-- LAYER 7: PRESENTER INFO (Bottom Left) --&gt;
+        &lt;div class=&quot;absolute bottom-12 left-12 z-20&quot;&gt;
+            &lt;div class=&quot;flex items-end gap-8 backdrop-blur-sm p-4 rounded-lg border border-white/5 bg-white/5&quot;&gt;
+                &lt;!-- Avatar Placeholder / Initials --&gt;
+                &lt;div class=&quot;w-12 h-12 bg-gradient-to-br from-accent to-[#886600] flex items-center justify-center text-black font-bold text-xl shadow-lg&quot;&gt;
+                    AV
+                &lt;/div&gt;
+                
+                &lt;!-- Info --&gt;
+                &lt;div class=&quot;flex gap-8&quot;&gt;
+                    &lt;div&gt;
+                        &lt;span class=&quot;block text-[9px] text-gray-400 font-mono uppercase tracking-widest mb-1&quot;&gt;Speaker&lt;/span&gt;
+                        &lt;h3 class=&quot;text-xl text-white font-bold tracking-wide&quot;&gt;Dr. Alex Vance&lt;/h3&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;border-l border-white/20 pl-6&quot;&gt;
+                        &lt;span class=&quot;block text-[9px] text-gray-400 font-mono uppercase tracking-widest mb-1&quot;&gt;Role&lt;/span&gt;
+                        &lt;h3 class=&quot;text-sm text-accent font-bold uppercase tracking-wider mt-1&quot;&gt;Chief Engineer&lt;/h3&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+
+        &lt;!-- LAYER 8: TECH SPECS (Bottom Right) --&gt;
+        &lt;div class=&quot;absolute bottom-12 right-12 z-20 text-right opacity-50 font-mono text-[9px] leading-relaxed text-gray-400&quot;&gt;
+            &lt;p&gt;SYS.CHECK: &lt;span class=&quot;text-accent&quot;&gt;PASS&lt;/span&gt;&lt;/p&gt;
+            &lt;p&gt;ORBIT: GEO-STATIONARY&lt;/p&gt;
+            &lt;p&gt;UPLINK: 450 TB/s&lt;/p&gt;
+            &lt;div class=&quot;w-full h-[1px] bg-gray-600 my-1&quot;&gt;&lt;/div&gt;
+            &lt;p&gt;V. 4.0.2&lt;/p&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 2
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Mission Manifest - Index&lt;/title&gt;
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;!-- Google Fonts --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#080808',
+                        accent: '#FCE67E',
+                        textMain: '#EDEDED',
+                        subtle: '#333333',
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'Inter', 'sans-serif'],
+                        mono: ['Courier New', 'monospace'],
+                    },
+                    backgroundImage: {
+                        'metal-gradient': 'linear-gradient(135deg, #FCE67E 0%, #FFFBEB 50%, #D4AF37 100%)',
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px;
+            background-color: #080808;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            padding: 48px 64px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* Background Tech Mesh */
+        .tech-bg {
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .text-glow { text-shadow: 0 0 30px rgba(252, 230, 126, 0.2); }
+        
+        /* Huge Watermark Numbers */
+        .watermark-num {
+            font-family: 'Inter', sans-serif;
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.03);
+            position: absolute;
+            right: 0;
+            top: -20px;
+            font-size: 80px;
+            line-height: 1;
+            z-index: 0;
+            transition: color 0.3s ease;
+        }
+        
+        .group:hover .watermark-num {
+            color: rgba(252, 230, 126, 0.1);
+        }
+
+        /* Hover Line Animation */
+        .hover-line {
+            width: 0;
+            height: 1px;
+            background-color: #FCE67E;
+            transition: width 0.4s ease;
+        }
+        .group:hover .hover-line { width: 100%; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;!-- Ambient Background Image (Hangar/Tech) --&gt;
+        &lt;div class=&quot;absolute inset-0 z-0&quot;&gt;
+            &lt;img src=&quot;https://images.unsplash.com/photo-1517976487492-5750f3195933?q=80&amp;w=1280&amp;auto=format&amp;fit=crop&quot; 
+                 class=&quot;w-full h-full object-cover opacity-20 grayscale mix-blend-overlay&quot;&gt;
+            &lt;div class=&quot;absolute inset-0 bg-gradient-to-t from-[#080808] via-[#080808]/90 to-[#080808]/80&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;absolute inset-0 tech-bg pointer-events-none&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- HEADER --&gt;
+        &lt;header class=&quot;flex justify-between items-end mb-16 relative z-10&quot;&gt;
+            &lt;div&gt;
+                &lt;div class=&quot;flex items-center gap-2 mb-2&quot;&gt;
+                    &lt;div class=&quot;w-2 h-2 bg-accent rounded-full animate-pulse&quot;&gt;&lt;/div&gt;
+                    &lt;span class=&quot;text-[#666] font-mono text-xs uppercase tracking-[0.4em]&quot;&gt;Confidential // Level 4&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;h1 class=&quot;text-7xl font-black uppercase tracking-tight leading-none text-transparent bg-clip-text bg-metal-gradient text-glow&quot;&gt;
+                    Mission &lt;br&gt; Manifest
+                &lt;/h1&gt;
+            &lt;/div&gt;
+            &lt;!-- Decorative Right Header --&gt;
+            &lt;div class=&quot;flex flex-col items-end opacity-60&quot;&gt;
+                &lt;div class=&quot;flex gap-1 mb-1&quot;&gt;
+                    &lt;div class=&quot;w-16 h-1 bg-[#333]&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-4 h-1 bg-accent&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;span class=&quot;text-xs font-mono text-gray-400 uppercase tracking-widest&quot;&gt;Total Modules: 09&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;!-- MAIN CONTENT: 3 Columns Layout --&gt;
+        &lt;div class=&quot;grid grid-cols-3 gap-12 relative z-10 flex-grow&quot;&gt;
+            
+            &lt;!-- COLUMN 1: Fundamentals --&gt;
+            &lt;div class=&quot;flex flex-col gap-6&quot;&gt;
+                &lt;div class=&quot;flex items-center gap-2 border-b border-[#333] pb-2 mb-2&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-plane-up text-accent text-xs&quot;&gt;&lt;/i&gt;
+                    &lt;span class=&quot;text-gray-500 font-bold text-xs uppercase tracking-widest&quot;&gt;Phase I: Aeronautics&lt;/span&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 01 --&gt;
+                &lt;div class=&quot;relative group cursor-pointer border-l-2 border-transparent hover:border-accent pl-4 transition-all duration-300&quot;&gt;
+                    &lt;span class=&quot;watermark-num&quot;&gt;01&lt;/span&gt;
+                    &lt;div class=&quot;relative z-10&quot;&gt;
+                        &lt;h3 class=&quot;text-xl font-bold text-white group-hover:text-accent transition-colors&quot;&gt;Flight Dynamics&lt;/h3&gt;
+                        &lt;p class=&quot;text-[10px] text-gray-500 mt-1 uppercase tracking-wide&quot;&gt;Stability &amp; Control Analysis&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 02 --&gt;
+                &lt;div class=&quot;relative group cursor-pointer border-l-2 border-transparent hover:border-accent pl-4 transition-all duration-300&quot;&gt;
+                    &lt;span class=&quot;watermark-num&quot;&gt;02&lt;/span&gt;
+                    &lt;div class=&quot;relative z-10&quot;&gt;
+                        &lt;h3 class=&quot;text-xl font-bold text-white group-hover:text-accent transition-colors&quot;&gt;Avionics&lt;/h3&gt;
+                        &lt;p class=&quot;text-[10px] text-gray-500 mt-1 uppercase tracking-wide&quot;&gt;Guidance &amp; Navigation&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 03 --&gt;
+                &lt;div class=&quot;relative group cursor-pointer border-l-2 border-transparent hover:border-accent pl-4 transition-all duration-300&quot;&gt;
+                    &lt;span class=&quot;watermark-num&quot;&gt;03&lt;/span&gt;
+                    &lt;div class=&quot;relative z-10&quot;&gt;
+                        &lt;h3 class=&quot;text-xl font-bold text-white group-hover:text-accent transition-colors&quot;&gt;Aerospace Mfg.&lt;/h3&gt;
+                        &lt;p class=&quot;text-[10px] text-gray-500 mt-1 uppercase tracking-wide&quot;&gt;Materials &amp; Assembly&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- COLUMN 2: Operations --&gt;
+            &lt;div class=&quot;flex flex-col gap-6&quot;&gt;
+                &lt;div class=&quot;flex items-center gap-2 border-b border-[#333] pb-2 mb-2&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-satellite text-accent text-xs&quot;&gt;&lt;/i&gt;
+                    &lt;span class=&quot;text-gray-500 font-bold text-xs uppercase tracking-widest&quot;&gt;Phase II: Operations&lt;/span&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 04 --&gt;
+                &lt;div class=&quot;relative group cursor-pointer border-l-2 border-transparent hover:border-accent pl-4 transition-all duration-300&quot;&gt;
+                    &lt;span class=&quot;watermark-num&quot;&gt;04&lt;/span&gt;
+                    &lt;div class=&quot;relative z-10&quot;&gt;
+                        &lt;h3 class=&quot;text-xl font-bold text-white group-hover:text-accent transition-colors&quot;&gt;Space Systems&lt;/h3&gt;
+                        &lt;p class=&quot;text-[10px] text-gray-500 mt-1 uppercase tracking-wide&quot;&gt;Orbital Infrastructure&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 05 --&gt;
+                &lt;div class=&quot;relative group cursor-pointer border-l-2 border-transparent hover:border-accent pl-4 transition-all duration-300&quot;&gt;
+                    &lt;span class=&quot;watermark-num&quot;&gt;05&lt;/span&gt;
+                    &lt;div class=&quot;relative z-10&quot;&gt;
+                        &lt;h3 class=&quot;text-xl font-bold text-white group-hover:text-accent transition-colors&quot;&gt;Mission Ops&lt;/h3&gt;
+                        &lt;p class=&quot;text-[10px] text-gray-500 mt-1 uppercase tracking-wide&quot;&gt;Command &amp; Control&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 06 --&gt;
+                &lt;div class=&quot;relative group cursor-pointer border-l-2 border-transparent hover:border-accent pl-4 transition-all duration-300&quot;&gt;
+                    &lt;span class=&quot;watermark-num&quot;&gt;06&lt;/span&gt;
+                    &lt;div class=&quot;relative z-10&quot;&gt;
+                        &lt;h3 class=&quot;text-xl font-bold text-white group-hover:text-accent transition-colors&quot;&gt;Adv. Materials&lt;/h3&gt;
+                        &lt;p class=&quot;text-[10px] text-gray-500 mt-1 uppercase tracking-wide&quot;&gt;Composites &amp; Alloys&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- COLUMN 3: Frontiers --&gt;
+            &lt;div class=&quot;flex flex-col gap-6&quot;&gt;
+                &lt;div class=&quot;flex items-center gap-2 border-b border-[#333] pb-2 mb-2&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-rocket text-accent text-xs&quot;&gt;&lt;/i&gt;
+                    &lt;span class=&quot;text-gray-500 font-bold text-xs uppercase tracking-widest&quot;&gt;Phase III: Frontiers&lt;/span&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 07 --&gt;
+                &lt;div class=&quot;relative group cursor-pointer border-l-2 border-transparent hover:border-accent pl-4 transition-all duration-300&quot;&gt;
+                    &lt;span class=&quot;watermark-num&quot;&gt;07&lt;/span&gt;
+                    &lt;div class=&quot;relative z-10&quot;&gt;
+                        &lt;h3 class=&quot;text-xl font-bold text-white group-hover:text-accent transition-colors&quot;&gt;Propulsion&lt;/h3&gt;
+                        &lt;p class=&quot;text-[10px] text-gray-500 mt-1 uppercase tracking-wide&quot;&gt;Chemical &amp; Ion Drives&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 08 --&gt;
+                &lt;div class=&quot;relative group cursor-pointer border-l-2 border-transparent hover:border-accent pl-4 transition-all duration-300&quot;&gt;
+                    &lt;span class=&quot;watermark-num&quot;&gt;08&lt;/span&gt;
+                    &lt;div class=&quot;relative z-10&quot;&gt;
+                        &lt;h3 class=&quot;text-xl font-bold text-white group-hover:text-accent transition-colors&quot;&gt;Orbital Habitats&lt;/h3&gt;
+                        &lt;p class=&quot;text-[10px] text-gray-500 mt-1 uppercase tracking-wide&quot;&gt;Life Support Systems&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- 09 (Special Highlight) --&gt;
+                &lt;div class=&quot;relative group cursor-pointer border-l-2 border-transparent hover:border-accent pl-4 transition-all duration-300&quot;&gt;
+                    &lt;span class=&quot;watermark-num text-accent opacity-20&quot;&gt;09&lt;/span&gt;
+                    &lt;div class=&quot;relative z-10&quot;&gt;
+                        &lt;h3 class=&quot;text-xl font-bold text-accent&quot;&gt;Future Outlook&lt;/h3&gt;
+                        &lt;p class=&quot;text-[10px] text-gray-500 mt-1 uppercase tracking-wide&quot;&gt;Strategic Vision 2050&lt;/p&gt;
+                        &lt;div class=&quot;hover-line mt-2&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+
+        &lt;!-- 3. BRANDING / LOGO (Unified New Design) --&gt;
+        &lt;div class=&quot;absolute bottom-12 right-12 z-20&quot;&gt;
+             &lt;div class=&quot;absolute -bottom-8 -right-8 w-40 h-24 bg-accent opacity-5 rounded-full blur-2xl pointer-events-none&quot;&gt;&lt;/div&gt;
+
+             &lt;div class=&quot;flex items-center group&quot;&gt;
+                &lt;!-- Icon --&gt;
+                &lt;div class=&quot;relative w-10 h-10 mr-4 flex items-center justify-center&quot;&gt;
+                    &lt;div class=&quot;absolute inset-0 border border-gray-600 rounded-full&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;absolute inset-0 border border-dashed border-accent rounded-full animate-[spin_12s_linear_infinite] opacity-60&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-4 h-4 bg-accent transform rotate-45 shadow-[0_0_15px_rgba(252,230,126,0.6)]&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Text --&gt;
+                &lt;div class=&quot;flex flex-col justify-center&quot;&gt;
+                    &lt;span class=&quot;text-2xl font-black text-white leading-none tracking-widest uppercase font-sans&quot;&gt;
+                        Salford
+                    &lt;/span&gt;
+                    &lt;div class=&quot;flex items-center w-full mt-1&quot;&gt;
+                        &lt;span class=&quot;text-[9px] text-accent font-bold tracking-[0.2em] uppercase mr-2&quot;&gt;&amp; Company&lt;/span&gt;
+                        &lt;div class=&quot;h-[1px] flex-grow bg-[#444]&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;!-- Bottom Deco Line --&gt;
+        &lt;div class=&quot;absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#333] to-transparent&quot;&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 3
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Fields of Specialization - Aerospace Keynote&lt;/title&gt;
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;!-- Google Fonts (via Baidu CDN) --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#080808',
+                        accent: '#FCE67E',
+                        textMain: '#EDEDED',
+                        subtle: '#333333',
+                        brandIcon: '#FFF3B0',
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'Inter', 'Roboto', 'sans-serif'],
+                        mono: ['&quot;Courier New&quot;', 'monospace'], // Added for tech feel
+                    },
+                    spacing: {
+                        '1280': '1280px',
+                        '720': '720px',
+                    },
+                    backgroundImage: {
+                        'metal-gradient': 'linear-gradient(135deg, #FCE67E 0%, #FFFBEB 50%, #D4AF37 100%)',
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+    &lt;style&gt;
+        /* Halftone Pattern Generator */
+        .halftone-pattern {
+            background-image: radial-gradient(#333333 1.5px, transparent 1.5px);
+            background-size: 8px 8px;
+            opacity: 0.6;
+        }
+
+        .halftone-accent {
+            background-image: radial-gradient(#FCE67E 1.5px, transparent 1.5px);
+            background-size: 6px 6px;
+            opacity: 0.4;
+        }
+
+        /* Page Container */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #080808;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 420px 1fr;
+        }
+
+        ::-webkit-scrollbar { display: none; }
+        h1, h2, h3, h4, h5, h6, p { margin: 0; }
+
+        /* Custom Text Effects for Beautification */
+        .text-glow {
+            text-shadow: 0 0 20px rgba(252, 230, 126, 0.4);
+        }
+        .tech-line-gradient {
+            background: linear-gradient(90deg, #FCE67E 0%, rgba(252, 230, 126, 0) 100%);
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;!-- LEFT PANEL: Visual Anchor (Unchanged) --&gt;
+        &lt;div class=&quot;relative h-full w-full bg-gray-900 border-r border-[#333]&quot;&gt;
+            &lt;img src=&quot;https://images.unsplash.com/photo-1519074069444-1ba4fff66d16?q=80&amp;w=1000&amp;auto=format&amp;fit=crop&quot; 
+                 alt=&quot;Aerospace Turbine Detail&quot; 
+                 class=&quot;w-full h-full object-cover filter grayscale contrast-125 brightness-75&quot;&gt;
+            &lt;div class=&quot;absolute inset-0 bg-gradient-to-t from-[#080808] via-transparent to-transparent opacity-80&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;absolute bottom-8 left-8&quot;&gt;
+                &lt;div class=&quot;w-12 h-1 bg-accent mb-2&quot;&gt;&lt;/div&gt;
+                &lt;p class=&quot;text-xs text-textMain tracking-[0.2em] uppercase opacity-70&quot;&gt;Turbine Section A-09&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- RIGHT PANEL: Content --&gt;
+        &lt;div class=&quot;relative h-full flex flex-col p-12 pl-16&quot;&gt;
+            
+            &lt;!-- decorative background elements --&gt;
+            &lt;div class=&quot;absolute top-0 right-0 w-32 h-32 halftone-pattern pointer-events-none&quot;&gt;&lt;/div&gt;
+
+            &lt;!-- HEADER (BEAUTIFIED) --&gt;
+            &lt;header class=&quot;mb-14 relative z-10&quot;&gt;
+                &lt;!-- Top technical label --&gt;
+                &lt;div class=&quot;flex items-center mb-1 space-x-2&quot;&gt;
+                    &lt;div class=&quot;w-2 h-2 bg-accent rounded-full animate-pulse&quot;&gt;&lt;/div&gt;
+                    &lt;span class=&quot;text-sm font-mono text-gray-400 tracking-[0.4em] uppercase&quot;&gt;Sector Analysis&lt;/span&gt;
+                &lt;/div&gt;
+                
+                &lt;!-- Main Title with Gradient and Contrast --&gt;
+                &lt;h1 class=&quot;leading-none&quot;&gt;
+                    &lt;span class=&quot;block text-4xl font-light text-white tracking-[0.1em] mb-1 opacity-90&quot;&gt;Fields of&lt;/span&gt;
+                    &lt;span class=&quot;block text-7xl font-black italic tracking-tighter text-transparent bg-clip-text bg-metal-gradient text-glow transform -translate-x-1&quot;&gt;
+                        SPECIALIZATION
+                    &lt;/span&gt;
+                &lt;/h1&gt;
+
+                &lt;!-- Decorative Line System --&gt;
+                &lt;div class=&quot;w-full mt-6 relative flex items-center&quot;&gt;
+                    &lt;div class=&quot;h-[2px] w-32 tech-line-gradient&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;h-[1px] w-full bg-[#222]&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;absolute right-0 top-[-4px] text-[10px] text-[#444] font-mono&quot;&gt;GEN-X SERIES&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/header&gt;
+
+            &lt;!-- MAIN GRID CONTENT (Unchanged Layout) --&gt;
+            &lt;div class=&quot;grid grid-cols-3 gap-x-12 gap-y-12 flex-grow relative z-10&quot;&gt;
+                
+                &lt;!-- Item 01 --&gt;
+                &lt;article class=&quot;flex flex-col group&quot;&gt;
+                    &lt;div class=&quot;flex items-center mb-4&quot;&gt;
+                        &lt;div class=&quot;border border-[#333] rounded-full w-8 h-8 flex items-center justify-center mr-3 group-hover:border-accent transition-colors duration-300&quot;&gt;
+                            &lt;span class=&quot;text-xs font-mono text-accent&quot;&gt;01&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;h-[1px] flex-grow bg-[#333]&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;h2 class=&quot;text-xl text-white font-bold mb-3 tracking-wide&quot;&gt;Flight Dynamics&lt;/h2&gt;
+                    &lt;p class=&quot;text-sm text-textMain opacity-70 leading-relaxed&quot;&gt;
+                        Studies how vehicles respond to aerodynamic forces to ensure stability and control.
+                    &lt;/p&gt;
+                &lt;/article&gt;
+
+                &lt;!-- Item 02 --&gt;
+                &lt;article class=&quot;flex flex-col group&quot;&gt;
+                    &lt;div class=&quot;flex items-center mb-4&quot;&gt;
+                        &lt;div class=&quot;border border-[#333] rounded-full w-8 h-8 flex items-center justify-center mr-3 group-hover:border-accent transition-colors duration-300&quot;&gt;
+                            &lt;span class=&quot;text-xs font-mono text-accent&quot;&gt;02&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;h-[1px] flex-grow bg-[#333]&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;h2 class=&quot;text-xl text-white font-bold mb-3 tracking-wide&quot;&gt;Avionics&lt;/h2&gt;
+                    &lt;p class=&quot;text-sm text-textMain opacity-70 leading-relaxed&quot;&gt;
+                        Develops onboard electronics, navigation, and communication systems.
+                    &lt;/p&gt;
+                &lt;/article&gt;
+
+                &lt;!-- Item 03 --&gt;
+                &lt;article class=&quot;flex flex-col group&quot;&gt;
+                    &lt;div class=&quot;flex items-center mb-4&quot;&gt;
+                        &lt;div class=&quot;border border-[#333] rounded-full w-8 h-8 flex items-center justify-center mr-3 group-hover:border-accent transition-colors duration-300&quot;&gt;
+                            &lt;span class=&quot;text-xs font-mono text-accent&quot;&gt;03&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;h-[1px] flex-grow bg-[#333]&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;h2 class=&quot;text-xl text-white font-bold mb-3 tracking-wide&quot;&gt;Aerospace Mfg.&lt;/h2&gt;
+                    &lt;p class=&quot;text-sm text-textMain opacity-70 leading-relaxed&quot;&gt;
+                        Produces precision components and assemblies using high-tech manufacturing processes.
+                    &lt;/p&gt;
+                &lt;/article&gt;
+
+                &lt;!-- Item 04 --&gt;
+                &lt;article class=&quot;flex flex-col group&quot;&gt;
+                    &lt;div class=&quot;flex items-center mb-4&quot;&gt;
+                        &lt;div class=&quot;border border-[#333] rounded-full w-8 h-8 flex items-center justify-center mr-3 group-hover:border-accent transition-colors duration-300&quot;&gt;
+                            &lt;span class=&quot;text-xs font-mono text-accent&quot;&gt;04&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;h-[1px] flex-grow bg-[#333]&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;h2 class=&quot;text-xl text-white font-bold mb-3 tracking-wide&quot;&gt;Space Systems&lt;/h2&gt;
+                    &lt;p class=&quot;text-sm text-textMain opacity-70 leading-relaxed&quot;&gt;
+                        Designs satellites, probes, and orbital infrastructure for scientific and commercial missions.
+                    &lt;/p&gt;
+                &lt;/article&gt;
+
+                &lt;!-- Item 05 --&gt;
+                &lt;article class=&quot;flex flex-col group&quot;&gt;
+                    &lt;div class=&quot;flex items-center mb-4&quot;&gt;
+                        &lt;div class=&quot;border border-[#333] rounded-full w-8 h-8 flex items-center justify-center mr-3 group-hover:border-accent transition-colors duration-300&quot;&gt;
+                            &lt;span class=&quot;text-xs font-mono text-accent&quot;&gt;05&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;h-[1px] flex-grow bg-[#333]&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;h2 class=&quot;text-xl text-white font-bold mb-3 tracking-wide&quot;&gt;Aerospace Ops&lt;/h2&gt;
+                    &lt;p class=&quot;text-sm text-textMain opacity-70 leading-relaxed&quot;&gt;
+                        Manages flight control, mission planning, and systems monitoring for air and space travel.
+                    &lt;/p&gt;
+                &lt;/article&gt;
+
+                &lt;!-- LOGO SECTION (BEAUTIFIED) --&gt;
+                &lt;div class=&quot;flex flex-col justify-end items-start relative&quot;&gt;
+                    &lt;div class=&quot;absolute bottom-16 right-0 w-full h-24 halftone-accent opacity-20 transform translate-x-4&quot;&gt;&lt;/div&gt;
+                    
+                    &lt;div class=&quot;flex items-center mt-auto z-10 group&quot;&gt;
+                        &lt;!-- Icon: Improved to look like a Thruster/Target --&gt;
+                        &lt;div class=&quot;relative w-12 h-12 mr-4 flex items-center justify-center&quot;&gt;
+                            &lt;!-- Outer pulsing ring --&gt;
+                            &lt;div class=&quot;absolute inset-0 border border-gray-600 rounded-full&quot;&gt;&lt;/div&gt;
+                            &lt;div class=&quot;absolute inset-0 border-2 border-dashed border-accent rounded-full animate-[spin_10s_linear_infinite] opacity-50&quot;&gt;&lt;/div&gt;
+                            &lt;!-- Inner diamond --&gt;
+                            &lt;div class=&quot;w-5 h-5 bg-accent transform rotate-45 shadow-[0_0_15px_rgba(252,230,126,0.8)] z-10&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;!-- Text: Improved Hierarchy --&gt;
+                        &lt;div class=&quot;flex flex-col justify-center&quot;&gt;
+                            &lt;span class=&quot;text-3xl font-black text-white leading-none tracking-widest uppercase font-sans&quot;&gt;
+                                Salford
+                            &lt;/span&gt;
+                            &lt;div class=&quot;flex items-center w-full mt-1&quot;&gt;
+                                &lt;span class=&quot;text-[10px] text-accent font-bold tracking-[0.2em] uppercase mr-2&quot;&gt;&amp; Company&lt;/span&gt;
+                                &lt;div class=&quot;h-[1px] flex-grow bg-[#444]&quot;&gt;&lt;/div&gt;
+                                &lt;span class=&quot;text-[10px] text-gray-500 font-mono ml-2&quot;&gt;EST.24&lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+
+            &lt;!-- Vertical Separator Lines (Unchanged) --&gt;
+            &lt;div class=&quot;absolute top-[160px] bottom-12 left-[33%] w-[1px] bg-gradient-to-b from-[#333] via-[#222] to-transparent pointer-events-none opacity-50 hidden lg:block&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;absolute top-[160px] bottom-12 left-[66%] w-[1px] bg-gradient-to-b from-[#333] via-[#222] to-transparent pointer-events-none opacity-50 hidden lg:block&quot;&gt;&lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 4
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Inside Earth's Atmosphere - Premium Keynote&lt;/title&gt;
+    
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;!-- Google Fonts --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#080808',
+                        accent: '#FCE67E',
+                        textMain: '#EDEDED',
+                        subtle: '#333333',
+                        brandIcon: '#FFF3B0',
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'Inter', 'Roboto', 'sans-serif'],
+                        mono: ['&quot;Courier New&quot;', 'monospace'],
+                    },
+                    spacing: {
+                        '1280': '1280px',
+                        '720': '720px',
+                    },
+                    backgroundImage: {
+                        'metal-gradient': 'linear-gradient(135deg, #FCE67E 0%, #FFFBEB 50%, #D4AF37 100%)',
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        /* Global Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        ::-webkit-scrollbar { display: none; }
+
+        /* Page Container */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #080808;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 420px 1fr; /* Same grid ratio as previous slide */
+        }
+
+        /* Halftone Patterns */
+        .halftone-pattern {
+            background-image: radial-gradient(#333333 1.5px, transparent 1.5px);
+            background-size: 8px 8px;
+            opacity: 0.6;
+        }
+        .halftone-accent {
+            background-image: radial-gradient(#FCE67E 1.5px, transparent 1.5px);
+            background-size: 6px 6px;
+            opacity: 0.4;
+        }
+
+        /* Text Effects */
+        .text-glow {
+            text-shadow: 0 0 20px rgba(252, 230, 126, 0.4);
+        }
+        .tech-line-gradient {
+            background: linear-gradient(90deg, #FCE67E 0%, rgba(252, 230, 126, 0) 100%);
+        }
+
+        /* Glassmorphism for Image Card */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;!-- LEFT PANEL: Visual Anchor (Main Image) --&gt;
+        &lt;div class=&quot;relative h-full w-full bg-gray-900 border-r border-[#333]&quot;&gt;
+            &lt;!-- Image 1: Earth View (The most impactful vertical image) --&gt;
+            &lt;img src=&quot;https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&amp;w=600&amp;auto=format&amp;fit=crop&quot; 
+                 alt=&quot;Earth View from Space&quot; 
+                 class=&quot;w-full h-full object-cover filter contrast-110 brightness-90&quot;&gt;
+            
+            &lt;!-- Overlay Gradient --&gt;
+            &lt;div class=&quot;absolute inset-0 bg-gradient-to-t from-[#080808] via-transparent to-transparent opacity-60&quot;&gt;&lt;/div&gt;
+            
+            &lt;!-- Technical Overlay Details --&gt;
+            &lt;div class=&quot;absolute top-8 left-8&quot;&gt;
+                 &lt;div class=&quot;w-2 h-2 bg-accent rounded-full animate-pulse mb-2&quot;&gt;&lt;/div&gt;
+                 &lt;p class=&quot;text-xs text-textMain tracking-[0.2em] font-mono uppercase opacity-70&quot;&gt;Alt: 100km&lt;/p&gt;
+                 &lt;p class=&quot;text-xs text-textMain tracking-[0.2em] font-mono uppercase opacity-70&quot;&gt;Lat: 34.5°N&lt;/p&gt;
+            &lt;/div&gt;
+            
+            &lt;div class=&quot;absolute bottom-8 left-8&quot;&gt;
+                &lt;div class=&quot;w-12 h-1 bg-accent mb-2&quot;&gt;&lt;/div&gt;
+                &lt;p class=&quot;text-xs text-textMain tracking-[0.2em] uppercase opacity-70&quot;&gt;Atmospheric Layer 01&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- RIGHT PANEL: Content --&gt;
+        &lt;div class=&quot;relative h-full flex flex-col p-12 pl-16&quot;&gt;
+            
+            &lt;!-- Decoration --&gt;
+            &lt;div class=&quot;absolute top-0 right-0 w-32 h-32 halftone-pattern pointer-events-none&quot;&gt;&lt;/div&gt;
+
+            &lt;!-- 1. HEADER (Unified Style) --&gt;
+            &lt;header class=&quot;mb-12 relative z-10&quot;&gt;
+                &lt;!-- Top Label --&gt;
+                &lt;div class=&quot;flex items-center mb-1 space-x-2&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-plane-up text-accent text-xs&quot;&gt;&lt;/i&gt;
+                    &lt;span class=&quot;text-sm font-mono text-gray-400 tracking-[0.4em] uppercase&quot;&gt;Aeronautics&lt;/span&gt;
+                &lt;/div&gt;
+                
+                &lt;!-- Main Title --&gt;
+                &lt;h1 class=&quot;leading-none&quot;&gt;
+                    &lt;span class=&quot;block text-4xl font-light text-white tracking-[0.1em] mb-1 opacity-90&quot;&gt;Inside Earth's&lt;/span&gt;
+                    &lt;span class=&quot;block text-7xl font-black italic tracking-tighter text-transparent bg-clip-text bg-metal-gradient text-glow transform -translate-x-1&quot;&gt;
+                        ATMOSPHERE
+                    &lt;/span&gt;
+                &lt;/h1&gt;
+
+                &lt;!-- Decorative Line System --&gt;
+                &lt;div class=&quot;w-full mt-6 relative flex items-center&quot;&gt;
+                    &lt;div class=&quot;h-[2px] w-32 tech-line-gradient&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;h-[1px] w-full bg-[#222]&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;absolute right-0 top-[-4px] text-[10px] text-[#444] font-mono&quot;&gt;SECT-B // FLIGHT&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/header&gt;
+
+            &lt;!-- 2. MAIN CONTENT AREA --&gt;
+            &lt;div class=&quot;flex flex-row gap-12 h-full relative z-10&quot;&gt;
+                
+                &lt;!-- Left Column: Text &amp; Context --&gt;
+                &lt;div class=&quot;flex-1 flex flex-col pt-2&quot;&gt;
+                    &lt;h2 class=&quot;text-2xl text-white font-bold mb-6 leading-tight&quot;&gt;
+                        The science of &lt;br&gt;
+                        &lt;span class=&quot;text-accent&quot;&gt;atmospheric flight.&lt;/span&gt;
+                    &lt;/h2&gt;
+                    
+                    &lt;div class=&quot;border-l-2 border-[#333] pl-6 mb-8&quot;&gt;
+                        &lt;p class=&quot;text-sm text-textMain opacity-70 leading-7 text-justify font-light&quot;&gt;
+                            Aeronautics focuses on the study, design, and operation of aircraft that navigate within Earth's atmosphere. It involves aerodynamic principles, propulsion systems, and the integration of advanced navigation.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Action Button (Styled) --&gt;
+                    &lt;div class=&quot;mt-auto mb-12 group cursor-pointer w-max&quot;&gt;
+                        &lt;div class=&quot;flex items-center gap-4&quot;&gt;
+                            &lt;div class=&quot;w-12 h-12 border border-accent rounded-full flex items-center justify-center group-hover:bg-accent group-hover:text-black text-accent transition-all duration-300 shadow-[0_0_10px_rgba(252,230,126,0.1)]&quot;&gt;
+                                &lt;i class=&quot;fa-solid fa-arrow-right text-lg&quot;&gt;&lt;/i&gt;
+                            &lt;/div&gt;
+                            &lt;span class=&quot;text-xs font-bold tracking-widest text-textMain uppercase group-hover:text-accent transition-colors&quot;&gt;Explore Dynamics&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Right Column: Visual Card (Image 2) --&gt;
+                &lt;div class=&quot;w-[280px] flex flex-col relative&quot;&gt;
+                    &lt;!-- Image Card --&gt;
+                    &lt;div class=&quot;relative w-full h-[240px] glass-panel p-2 mb-4 group&quot;&gt;
+                        &lt;div class=&quot;w-full h-full overflow-hidden relative&quot;&gt;
+                            &lt;img src=&quot;https://images.unsplash.com/photo-1534088568595-a066f410bcda?q=80&amp;w=800&amp;auto=format&amp;fit=crop&quot; 
+                                 alt=&quot;Storm Clouds&quot; 
+                                 class=&quot;w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 ease-out&quot;&gt;
+                            &lt;!-- Overlay Text on Image --&gt;
+                            &lt;div class=&quot;absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent&quot;&gt;
+                                &lt;p class=&quot;text-[10px] text-accent font-mono uppercase tracking-wider&quot;&gt;Met. Conditions&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- Corner Accents --&gt;
+                        &lt;div class=&quot;absolute top-0 left-0 w-2 h-2 border-t border-l border-accent opacity-50&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;absolute bottom-0 right-0 w-2 h-2 border-b border-r border-accent opacity-50&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Additional Data Points (Decorative) --&gt;
+                    &lt;div class=&quot;space-y-3&quot;&gt;
+                        &lt;div class=&quot;flex items-center justify-between border-b border-[#222] pb-2&quot;&gt;
+                            &lt;span class=&quot;text-xs text-gray-500 font-mono&quot;&gt;Drag Coeff.&lt;/span&gt;
+                            &lt;span class=&quot;text-xs text-white font-mono&quot;&gt;0.24 Cd&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;flex items-center justify-between border-b border-[#222] pb-2&quot;&gt;
+                            &lt;span class=&quot;text-xs text-gray-500 font-mono&quot;&gt;Pressure&lt;/span&gt;
+                            &lt;span class=&quot;text-xs text-white font-mono&quot;&gt;101.3 kPa&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- 3. BRANDING / LOGO (Unified New Design) --&gt;
+            &lt;div class=&quot;absolute bottom-12 right-12 z-20&quot;&gt;
+                 &lt;!-- Decorative Halftone under logo --&gt;
+                 &lt;div class=&quot;absolute -bottom-8 -right-8 w-40 h-24 halftone-accent opacity-10 pointer-events-none&quot;&gt;&lt;/div&gt;
+
+                 &lt;div class=&quot;flex items-center group&quot;&gt;
+                    &lt;!-- Icon: Thruster/Target Style --&gt;
+                    &lt;div class=&quot;relative w-10 h-10 mr-4 flex items-center justify-center&quot;&gt;
+                        &lt;div class=&quot;absolute inset-0 border border-gray-600 rounded-full&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;absolute inset-0 border border-dashed border-accent rounded-full animate-[spin_12s_linear_infinite] opacity-60&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;w-4 h-4 bg-accent transform rotate-45 shadow-[0_0_15px_rgba(252,230,126,0.6)]&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Text Hierarchy --&gt;
+                    &lt;div class=&quot;flex flex-col justify-center&quot;&gt;
+                        &lt;span class=&quot;text-2xl font-black text-white leading-none tracking-widest uppercase font-sans&quot;&gt;
+                            Salford
+                        &lt;/span&gt;
+                        &lt;div class=&quot;flex items-center w-full mt-1&quot;&gt;
+                            &lt;span class=&quot;text-[9px] text-accent font-bold tracking-[0.2em] uppercase mr-2&quot;&gt;&amp; Company&lt;/span&gt;
+                            &lt;div class=&quot;h-[1px] flex-grow bg-[#444]&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Vertical Separator Line (Visual) --&gt;
+            &lt;div class=&quot;absolute top-[160px] bottom-12 left-[55%] w-[1px] bg-gradient-to-b from-[#333] via-[#222] to-transparent pointer-events-none opacity-50 hidden lg:block&quot;&gt;&lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 5
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Astronautics Keynote&lt;/title&gt;
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;!-- Google Fonts --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#080808',
+                        accent: '#FCE67E',
+                        textMain: '#EDEDED',
+                        subtle: '#333333',
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'Inter', 'sans-serif'],
+                        mono: ['Courier New', 'monospace'],
+                    },
+                    backgroundImage: {
+                        'metal-gradient': 'linear-gradient(135deg, #FCE67E 0%, #FFFBEB 50%, #D4AF37 100%)',
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px;
+            background-color: #080808;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 440px 1fr;
+        }
+        .text-glow { text-shadow: 0 0 20px rgba(252, 230, 126, 0.3); }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(4px);
+        }
+        .halftone-accent {
+            background-image: radial-gradient(#FCE67E 1.5px, transparent 1.5px);
+            background-size: 6px 6px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;!-- LEFT: Hero Visual --&gt;
+        &lt;div class=&quot;relative h-full border-r border-[#222]&quot;&gt;
+            &lt;img src=&quot;https://images.unsplash.com/photo-1541873676-a18131494184?q=80&amp;w=800&amp;auto=format&amp;fit=crop&quot; 
+                 alt=&quot;Astronaut&quot; 
+                 class=&quot;w-full h-full object-cover filter contrast-125 brightness-90&quot;&gt;
+            
+            &lt;!-- Technical Overlay --&gt;
+            &lt;div class=&quot;absolute inset-0 bg-gradient-to-t from-bgDark via-transparent to-transparent opacity-80&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;absolute bottom-10 left-10&quot;&gt;
+                &lt;div class=&quot;flex items-center gap-2 mb-2&quot;&gt;
+                    &lt;div class=&quot;w-2 h-2 bg-accent rounded-full animate-pulse&quot;&gt;&lt;/div&gt;
+                    &lt;span class=&quot;text-accent font-mono text-sm tracking-widest uppercase&quot;&gt;EVA Status: Active&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;h2 class=&quot;text-white text-3xl font-bold leading-tight&quot;&gt;Human Spaceflight &lt;br&gt; Systems&lt;/h2&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- RIGHT: Content Area --&gt;
+        &lt;div class=&quot;flex flex-col p-12 relative&quot;&gt;
+            
+            &lt;!-- Decorative BG --&gt;
+            &lt;div class=&quot;absolute top-0 right-0 w-64 h-64 bg-accent opacity-5 rounded-full blur-[100px] pointer-events-none&quot;&gt;&lt;/div&gt;
+
+            &lt;!-- Header --&gt;
+            &lt;header class=&quot;mb-10&quot;&gt;
+                &lt;h1 class=&quot;text-7xl font-black italic uppercase tracking-tighter text-transparent bg-clip-text bg-metal-gradient text-glow mb-4&quot;&gt;
+                    Astronautics
+                &lt;/h1&gt;
+                &lt;div class=&quot;flex items-start justify-between border-t border-[#333] pt-6&quot;&gt;
+                    &lt;p class=&quot;text-textMain opacity-70 text-sm leading-relaxed max-w-lg&quot;&gt;
+                        Astronautics covers the design, construction, and operation of spacecraft and satellites, enabling both robotic and human exploration of the cosmos.
+                    &lt;/p&gt;
+                    &lt;div class=&quot;flex flex-col items-end&quot;&gt;
+                        &lt;span class=&quot;text-accent font-mono text-xl font-bold&quot;&gt;01&lt;/span&gt;
+                        &lt;span class=&quot;text-[#444] text-[10px] uppercase tracking-widest&quot;&gt;Chapter&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/header&gt;
+
+            &lt;!-- Grid Content --&gt;
+            &lt;div class=&quot;grid grid-cols-3 gap-6&quot;&gt;
+                
+                &lt;!-- Card 1 --&gt;
+                &lt;div class=&quot;glass-card p-4 rounded-lg flex flex-col group hover:bg-[#111] transition-colors duration-300&quot;&gt;
+                    &lt;div class=&quot;h-32 w-full overflow-hidden rounded mb-4 border border-[#333]&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1517976487492-5750f3195933?q=80&amp;w=400&amp;auto=format&amp;fit=crop&quot; class=&quot;w-full h-full object-cover group-hover:scale-110 transition-transform duration-500&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;h3 class=&quot;text-white font-bold text-lg mb-2&quot;&gt;Spacecraft Design&lt;/h3&gt;
+                    &lt;p class=&quot;text-gray-400 text-sm leading-5&quot;&gt;Thermal protection and structural integrity for reentry.&lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Card 2 --&gt;
+                &lt;div class=&quot;glass-card p-4 rounded-lg flex flex-col group hover:bg-[#111] transition-colors duration-300&quot;&gt;
+                    &lt;div class=&quot;h-32 w-full overflow-hidden rounded mb-4 border border-[#333]&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&amp;w=400&amp;auto=format&amp;fit=crop&quot; class=&quot;w-full h-full object-cover group-hover:scale-110 transition-transform duration-500&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;h3 class=&quot;text-white font-bold text-lg mb-2&quot;&gt;Satellite Ops&lt;/h3&gt;
+                    &lt;p class=&quot;text-gray-400 text-sm leading-5&quot;&gt;Global communication and earth observation grids.&lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Card 3 --&gt;
+                &lt;div class=&quot;glass-card p-4 rounded-lg flex flex-col group hover:bg-[#111] transition-colors duration-300&quot;&gt;
+                    &lt;div class=&quot;h-32 w-full overflow-hidden rounded mb-4 border border-[#333]&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1454789548728-85d2696cfbaf?q=80&amp;w=400&amp;auto=format&amp;fit=crop&quot; class=&quot;w-full h-full object-cover group-hover:scale-110 transition-transform duration-500&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;h3 class=&quot;text-white font-bold text-lg mb-2&quot;&gt;Orbital Mech&lt;/h3&gt;
+                    &lt;p class=&quot;text-gray-400 text-sm leading-5&quot;&gt;Trajectory calculations and propulsion maneuvers.&lt;/p&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 3. BRANDING / LOGO (Unified New Design) --&gt;
+        &lt;div class=&quot;absolute bottom-12 right-12 z-20&quot;&gt;
+             &lt;!-- Decorative Halftone under logo --&gt;
+             &lt;div class=&quot;absolute -bottom-8 -right-8 w-40 h-24 halftone-accent opacity-10 pointer-events-none&quot;&gt;&lt;/div&gt;
+
+             &lt;div class=&quot;flex items-center group&quot;&gt;
+                &lt;!-- Icon: Thruster/Target Style --&gt;
+                &lt;div class=&quot;relative w-10 h-10 mr-4 flex items-center justify-center&quot;&gt;
+                    &lt;div class=&quot;absolute inset-0 border border-gray-600 rounded-full&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;absolute inset-0 border border-dashed border-accent rounded-full animate-[spin_12s_linear_infinite] opacity-60&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-4 h-4 bg-accent transform rotate-45 shadow-[0_0_15px_rgba(252,230,126,0.6)]&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Text Hierarchy --&gt;
+                &lt;div class=&quot;flex flex-col justify-center&quot;&gt;
+                    &lt;span class=&quot;text-2xl font-black text-white leading-none tracking-widest uppercase font-sans&quot;&gt;
+                        Salford
+                    &lt;/span&gt;
+                    &lt;div class=&quot;flex items-center w-full mt-1&quot;&gt;
+                        &lt;span class=&quot;text-[9px] text-accent font-bold tracking-[0.2em] uppercase mr-2&quot;&gt;&amp; Company&lt;/span&gt;
+                        &lt;div class=&quot;h-[1px] flex-grow bg-[#444]&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 6
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Aerospace Materials Keynote&lt;/title&gt;
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;!-- Google Fonts --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#080808',
+                        accent: '#FCE67E',
+                        textMain: '#EDEDED',
+                        subtle: '#333333',
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'Inter', 'sans-serif'],
+                        mono: ['Courier New', 'monospace'],
+                    },
+                    backgroundImage: {
+                        'metal-gradient': 'linear-gradient(135deg, #FCE67E 0%, #FFFBEB 50%, #D4AF37 100%)',
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px;
+            background-color: #080808;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            padding: 48px;
+            display: flex;
+            flex-direction: column;
+        }
+        .halftone-pattern {
+            background-image: radial-gradient(#222 1.5px, transparent 1.5px);
+            background-size: 8px 8px;
+        }
+        .halftone-accent {
+            background-image: radial-gradient(#FCE67E 1.5px, transparent 1.5px);
+            background-size: 6px 6px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;!-- Decoration --&gt;
+        &lt;div class=&quot;absolute top-0 right-0 w-[400px] h-[300px] halftone-pattern pointer-events-none opacity-50&quot;&gt;&lt;/div&gt;
+        
+        &lt;!-- HEADER --&gt;
+        &lt;header class=&quot;flex justify-between items-end mb-12 relative z-10&quot;&gt;
+            &lt;div&gt;
+                &lt;div class=&quot;flex items-center gap-2 mb-2&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-layer-group text-accent text-sm&quot;&gt;&lt;/i&gt;
+                    &lt;span class=&quot;text-[#555] font-mono text-sm uppercase tracking-[0.3em]&quot;&gt;Material Science&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;h1 class=&quot;text-6xl font-black uppercase text-white tracking-tight leading-none&quot;&gt;
+                    Aerospace &lt;br&gt;
+                    &lt;span class=&quot;text-transparent bg-clip-text bg-metal-gradient&quot;&gt;Materials&lt;/span&gt;
+                &lt;/h1&gt;
+            &lt;/div&gt;
+            
+            &lt;!-- Intro Text --&gt;
+            &lt;div class=&quot;w-[400px] border-l border-[#333] pl-6&quot;&gt;
+                &lt;p class=&quot;text-textMain opacity-70 text-sm font-light leading-relaxed text-justify&quot;&gt;
+                    Advanced materials are the backbone of aerospace innovation, requiring exceptional strength-to-weight ratios, heat resistance, and smart adaptability.
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;!-- MAIN GRID --&gt;
+        &lt;div class=&quot;grid grid-cols-12 gap-8 h-full&quot;&gt;
+            
+            &lt;!-- Item 1: Aluminum (Left) --&gt;
+            &lt;div class=&quot;col-span-5 relative group h-full&quot;&gt;
+                &lt;div class=&quot;w-full h-full border border-[#222] rounded overflow-hidden relative&quot;&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1540962351574-72997f92e698?auto=format&amp;fit=crop&amp;w=800&amp;q=80&quot; 
+                         class=&quot;w-full h-full object-cover filter grayscale-[50%] group-hover:grayscale-0 transition-all duration-700&quot;&gt;
+                    
+                    &lt;div class=&quot;absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black via-black/80 to-transparent&quot;&gt;
+                        &lt;div class=&quot;w-8 h-1 bg-accent mb-3&quot;&gt;&lt;/div&gt;
+                        &lt;h3 class=&quot;text-2xl text-white font-bold mb-1&quot;&gt;Aluminum Alloys&lt;/h3&gt;
+                        &lt;p class=&quot;text-gray-400 text-sm leading-relaxed max-w-xs&quot;&gt;
+                            Lightweight structure backbone. Used for fuselage skin and wing ribs.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Right Side --&gt;
+            &lt;div class=&quot;col-span-7 flex flex-col gap-8&quot;&gt;
+                
+                &lt;!-- Item 2: Titanium (Top) --&gt;
+                &lt;div class=&quot;flex-1 flex gap-6 bg-[#111] border border-[#222] rounded p-1 group hover:border-accent/30 transition-colors&quot;&gt;
+                    &lt;div class=&quot;w-1/2 h-full overflow-hidden rounded-sm relative&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?auto=format&amp;fit=crop&amp;w=600&amp;q=80&quot; 
+                             class=&quot;w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;w-1/2 flex flex-col justify-center pr-6&quot;&gt;
+                        &lt;h3 class=&quot;text-xl text-white font-bold mb-2&quot;&gt;Titanium&lt;/h3&gt;
+                        &lt;p class=&quot;text-gray-400 text-sm leading-5 mb-4&quot;&gt;
+                            Exceptional heat resistance for jet engine turbines and high-stress structural components.
+                        &lt;/p&gt;
+                        &lt;div class=&quot;flex items-center gap-2&quot;&gt;
+                            &lt;span class=&quot;text-sm font-mono text-accent border border-accent px-2 py-1 rounded&quot;&gt;Ti-6Al-4V&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Item 3: Smart Materials (Bottom) --&gt;
+                &lt;!-- Layout Adjusted: Width restricted to 66% to leave space for Logo on the right --&gt;
+                &lt;div class=&quot;flex-1 flex gap-6 w-2/3 bg-[#111] border border-[#222] rounded p-1 group hover:border-accent/30 transition-colors&quot;&gt;
+                    &lt;div class=&quot;w-1/2 h-full overflow-hidden rounded-sm relative&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1581093458891-9f302295b8cd?q=80&amp;w=600&amp;auto=format&amp;fit=crop&quot; 
+                             class=&quot;w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;w-1/2 flex flex-col justify-center pr-4&quot;&gt;
+                        &lt;h3 class=&quot;text-xl text-white font-bold mb-2&quot;&gt;Smart Comp.&lt;/h3&gt;
+                        &lt;p class=&quot;text-gray-400 text-sm leading-tight mb-2&quot;&gt;
+                            Self-healing polymers and shape-shifting morphing wings.
+                        &lt;/p&gt;
+                        &lt;div class=&quot;w-6 h-6 rounded-full bg-[#222] flex items-center justify-center border border-[#444]&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-dna text-accent text-sm&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 3. BRANDING / LOGO (Unified New Design) --&gt;
+        &lt;!-- Placed in absolute position, bottom right. The grid content above is adjusted to clear this area. --&gt;
+        &lt;div class=&quot;absolute bottom-12 right-12 z-20&quot;&gt;
+             &lt;!-- Decorative Halftone under logo --&gt;
+             &lt;div class=&quot;absolute -bottom-8 -right-8 w-40 h-24 halftone-accent opacity-10 pointer-events-none&quot;&gt;&lt;/div&gt;
+
+             &lt;div class=&quot;flex items-center group&quot;&gt;
+                &lt;!-- Icon: Thruster/Target Style --&gt;
+                &lt;div class=&quot;relative w-10 h-10 mr-4 flex items-center justify-center&quot;&gt;
+                    &lt;div class=&quot;absolute inset-0 border border-gray-600 rounded-full&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;absolute inset-0 border border-dashed border-accent rounded-full animate-[spin_12s_linear_infinite] opacity-60&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-4 h-4 bg-accent transform rotate-45 shadow-[0_0_15px_rgba(252,230,126,0.6)]&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Text Hierarchy --&gt;
+                &lt;div class=&quot;flex flex-col justify-center&quot;&gt;
+                    &lt;span class=&quot;text-2xl font-black text-white leading-none tracking-widest uppercase font-sans&quot;&gt;
+                        Salford
+                    &lt;/span&gt;
+                    &lt;div class=&quot;flex items-center w-full mt-1&quot;&gt;
+                        &lt;span class=&quot;text-[9px] text-accent font-bold tracking-[0.2em] uppercase mr-2&quot;&gt;&amp; Company&lt;/span&gt;
+                        &lt;div class=&quot;h-[1px] flex-grow bg-[#444]&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 7
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Navigation &amp; Avionics - High End Keynote&lt;/title&gt;
+    
+    &lt;!-- Tailwind CSS CDN --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;!-- FontAwesome CDN --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;!-- Google Fonts --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;!-- Tailwind Config --&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#080808',
+                        accent: '#FCE67E',
+                        textWhite: '#EDEDED',
+                        decorGrey: '#333333',
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'],
+                        mono: ['Courier New', 'monospace'],
+                    },
+                    backgroundImage: {
+                        'metal-gradient': 'linear-gradient(135deg, #FCE67E 0%, #FFFBEB 50%, #D4AF37 100%)',
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        /* CSS Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        ::-webkit-scrollbar { display: none; }
+        
+        /* Effects */
+        .halftone-bg {
+            background-image: radial-gradient(#333333 1.5px, transparent 1.5px);
+            background-size: 8px 8px;
+            opacity: 0.6;
+        }
+        .img-cover { width: 100%; height: 100%; object-fit: cover; }
+        
+        /* New Design Elements */
+        .text-glow { text-shadow: 0 0 20px rgba(252, 230, 126, 0.3); }
+        .tech-line-gradient {
+            background: linear-gradient(90deg, #FCE67E 0%, rgba(252, 230, 126, 0) 100%);
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;!-- Page Container --&gt;
+    &lt;div id=&quot;page_container&quot; class=&quot;w-[1280px] h-[720px] mx-auto relative bg-bgDark overflow-hidden font-sans text-textWhite&quot;&gt;
+        
+        &lt;!-- Grid Layout System: 12 Columns --&gt;
+        &lt;div class=&quot;grid grid-cols-12 h-full w-full&quot;&gt;
+
+            &lt;!-- LEFT COLUMN: Immersive Visual (Cols 1-4) --&gt;
+            &lt;div class=&quot;col-span-4 relative h-full border-r border-decorGrey/50&quot;&gt;
+                &lt;div class=&quot;w-full h-full relative&quot;&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1541185933-710f50031e42?q=80&amp;w=800&amp;auto=format&amp;fit=crop&quot; 
+                         alt=&quot;Space Shuttle Transport&quot; 
+                         class=&quot;img-cover filter grayscale contrast-125 opacity-80&quot;&gt;
+                    &lt;div class=&quot;absolute inset-0 bg-gradient-to-t from-bgDark via-transparent to-transparent&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;absolute inset-0 bg-gradient-to-r from-transparent to-bgDark/40&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;absolute bottom-10 left-8&quot;&gt;
+                     &lt;p class=&quot;text-accent text-xs tracking-[0.3em] font-bold uppercase mb-2&quot;&gt;System Status&lt;/p&gt;
+                     &lt;p class=&quot;text-white text-3xl font-bold tracking-tighter&quot;&gt;ORBITAL&lt;br&gt;READY&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- RIGHT COLUMN: Content Area (Cols 5-12) --&gt;
+            &lt;div class=&quot;col-span-8 relative flex flex-col p-12&quot;&gt;
+                
+                &lt;!-- TOP SECTION: Header &amp; Branding --&gt;
+                &lt;div class=&quot;flex justify-between items-start mb-4 relative z-10&quot;&gt;
+                    &lt;div class=&quot;w-2/3&quot;&gt;
+                        &lt;!-- Brand Logo (Unified New Design) --&gt;
+                        &lt;div class=&quot;flex items-center gap-3 mb-8 group&quot;&gt;
+                            &lt;!-- Icon --&gt;
+                            &lt;div class=&quot;relative w-8 h-8 flex items-center justify-center&quot;&gt;
+                                &lt;div class=&quot;absolute inset-0 border border-gray-600 rounded-full&quot;&gt;&lt;/div&gt;
+                                &lt;div class=&quot;absolute inset-0 border border-dashed border-accent rounded-full animate-[spin_12s_linear_infinite] opacity-60&quot;&gt;&lt;/div&gt;
+                                &lt;div class=&quot;w-2 h-2 bg-accent transform rotate-45 shadow-[0_0_10px_rgba(252,230,126,0.6)]&quot;&gt;&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;!-- Text --&gt;
+                            &lt;div class=&quot;flex flex-col justify-center&quot;&gt;
+                                &lt;span class=&quot;text-xl font-black text-white leading-none tracking-widest uppercase&quot;&gt;Salford&lt;/span&gt;
+                                &lt;div class=&quot;flex items-center w-full&quot;&gt;
+                                    &lt;span class=&quot;text-[9px] text-accent font-bold tracking-[0.1em] uppercase mr-1&quot;&gt;&amp; Co.&lt;/span&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        
+                        &lt;!-- Main Title (Unified New Design) --&gt;
+                        &lt;div class=&quot;flex items-center mb-1 space-x-2&quot;&gt;
+                            &lt;span class=&quot;text-xs font-mono text-gray-500 tracking-[0.3em] uppercase&quot;&gt;Sys. Architecture&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;h1 class=&quot;text-6xl font-black italic uppercase leading-[0.9] tracking-tighter text-transparent bg-clip-text bg-metal-gradient text-glow mb-2&quot;&gt;
+                            Navigation&lt;br&gt;
+                            &lt;span class=&quot;text-white opacity-90&quot;&gt;&amp; Avionics&lt;/span&gt;
+                        &lt;/h1&gt;
+                        &lt;!-- Tech Line Decoration --&gt;
+                        &lt;div class=&quot;w-full mt-6 relative flex items-center&quot;&gt;
+                            &lt;div class=&quot;h-[2px] w-24 tech-line-gradient&quot;&gt;&lt;/div&gt;
+                            &lt;div class=&quot;h-[1px] w-full bg-[#222]&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Right Top Image (Unchanged) --&gt;
+                    &lt;div class=&quot;w-[220px] h-[280px] border border-decorGrey bg-bgDark relative overflow-hidden rounded-lg shadow-2xl&quot;&gt;
+                         &lt;img src=&quot;https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&amp;w=400&amp;auto=format&amp;fit=crop&quot; 
+                              alt=&quot;Satellite in Orbit&quot; 
+                              class=&quot;img-cover opacity-90 hover:scale-105 transition-transform duration-700&quot;&gt;
+                         &lt;div class=&quot;absolute top-2 right-2&quot;&gt;
+                             &lt;i class=&quot;fa-solid fa-crosshairs text-accent text-xs opacity-70&quot;&gt;&lt;/i&gt;
+                         &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- DECORATIVE MIDDLE (Unchanged) --&gt;
+                &lt;div class=&quot;absolute top-[28%] right-0 w-[400px] h-[120px] halftone-bg -z-0 pointer-events-none fade-in&quot;&gt;&lt;/div&gt;
+
+                &lt;!-- BOTTOM SECTION: Data List (Unchanged content) --&gt;
+                &lt;div class=&quot;mt-auto relative z-10&quot;&gt;
+                    &lt;div class=&quot;flex items-center gap-2 mb-6 opacity-50&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-microchip text-xs&quot;&gt;&lt;/i&gt;
+                        &lt;span class=&quot;text-[10px] uppercase tracking-widest&quot;&gt;Core Systems Manifest&lt;/span&gt;
+                        &lt;div class=&quot;h-[1px] bg-decorGrey flex-grow&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;flex flex-col gap-5&quot;&gt;
+                        &lt;!-- Item 01 --&gt;
+                        &lt;div class=&quot;group flex items-center gap-6 p-4 border border-transparent hover:border-decorGrey/50 hover:bg-white/5 rounded-xl transition-all duration-300&quot;&gt;
+                            &lt;div class=&quot;flex-shrink-0 w-12 h-12 rounded-full border border-decorGrey flex items-center justify-center group-hover:border-accent group-hover:text-bgDark group-hover:bg-accent transition-colors&quot;&gt;
+                                &lt;span class=&quot;font-mono font-bold text-lg&quot;&gt;01&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;flex-grow grid grid-cols-12 gap-4 items-center&quot;&gt;
+                                &lt;div class=&quot;col-span-4&quot;&gt;
+                                    &lt;h3 class=&quot;text-accent font-bold text-lg tracking-wide uppercase&quot;&gt;GPS Navigation&lt;/h3&gt;
+                                &lt;/div&gt;
+                                &lt;div class=&quot;col-span-8 border-l border-decorGrey pl-4&quot;&gt;
+                                    &lt;p class=&quot;text-textWhite text-sm font-light leading-relaxed opacity-90&quot;&gt;
+                                        Satellite-based systems providing global positioning accuracy for mission-critical trajectory alignment.
+                                    &lt;/p&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;!-- Item 02 --&gt;
+                        &lt;div class=&quot;group flex items-center gap-6 p-4 border border-transparent hover:border-decorGrey/50 hover:bg-white/5 rounded-xl transition-all duration-300&quot;&gt;
+                            &lt;div class=&quot;flex-shrink-0 w-12 h-12 rounded-full border border-decorGrey flex items-center justify-center group-hover:border-accent group-hover:text-bgDark group-hover:bg-accent transition-colors&quot;&gt;
+                                &lt;span class=&quot;font-mono font-bold text-lg&quot;&gt;02&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;flex-grow grid grid-cols-12 gap-4 items-center&quot;&gt;
+                                &lt;div class=&quot;col-span-4&quot;&gt;
+                                    &lt;h3 class=&quot;text-accent font-bold text-lg tracking-wide uppercase&quot;&gt;Flight Control&lt;/h3&gt;
+                                &lt;/div&gt;
+                                &lt;div class=&quot;col-span-8 border-l border-decorGrey pl-4&quot;&gt;
+                                    &lt;p class=&quot;text-textWhite text-sm font-light leading-relaxed opacity-90&quot;&gt;
+                                        High-performance computing units automating control surfaces to ensure stable atmospheric flight.
+                                    &lt;/p&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;!-- Item 03 --&gt;
+                        &lt;div class=&quot;group flex items-center gap-6 p-4 border border-transparent hover:border-decorGrey/50 hover:bg-white/5 rounded-xl transition-all duration-300&quot;&gt;
+                            &lt;div class=&quot;flex-shrink-0 w-12 h-12 rounded-full border border-decorGrey flex items-center justify-center group-hover:border-accent group-hover:text-bgDark group-hover:bg-accent transition-colors&quot;&gt;
+                                &lt;span class=&quot;font-mono font-bold text-lg&quot;&gt;03&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;flex-grow grid grid-cols-12 gap-4 items-center&quot;&gt;
+                                &lt;div class=&quot;col-span-4&quot;&gt;
+                                    &lt;h3 class=&quot;text-accent font-bold text-lg tracking-wide uppercase&quot;&gt;Comm Systems&lt;/h3&gt;
+                                &lt;/div&gt;
+                                &lt;div class=&quot;col-span-8 border-l border-decorGrey pl-4&quot;&gt;
+                                    &lt;p class=&quot;text-textWhite text-sm font-light leading-relaxed opacity-90&quot;&gt;
+                                        Ensuring encrypted real-time data exchange between pilots, astronauts, and ground control centers.
+                                    &lt;/p&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;!-- Decoration lines --&gt;
+        &lt;div class=&quot;absolute top-6 right-6 w-3 h-3 border-t border-r border-accent/50&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute bottom-6 right-6 w-3 h-3 border-b border-r border-accent/50&quot;&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 8
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Propulsion Systems - Aerospace Keynote&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#080808',
+                        accent: '#FCE67E',
+                        textMain: '#EDEDED',
+                        subtle: '#333333',
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'Inter', 'sans-serif'],
+                        mono: ['Courier New', 'monospace'],
+                    },
+                    backgroundImage: {
+                        'metal-gradient': 'linear-gradient(135deg, #FCE67E 0%, #FFFBEB 50%, #D4AF37 100%)',
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px;
+            background-color: #080808;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            padding: 48px;
+            display: flex;
+            flex-direction: column;
+        }
+        .tech-border { border: 1px solid #222; transition: border-color 0.3s; }
+        .tech-border:hover { border-color: rgba(252, 230, 126, 0.3); }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;!-- Header --&gt;
+        &lt;header class=&quot;flex justify-between items-end mb-8 relative z-10&quot;&gt;
+            &lt;div&gt;
+                &lt;div class=&quot;flex items-center gap-2 mb-2&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-fire-burner text-accent text-sm&quot;&gt;&lt;/i&gt;
+                    &lt;span class=&quot;text-[#555] font-mono text-sm uppercase tracking-[0.3em]&quot;&gt;Power Dynamics&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;h1 class=&quot;text-6xl font-black uppercase text-white tracking-tight leading-none&quot;&gt;
+                    Propulsion &lt;br&gt;
+                    &lt;span class=&quot;text-transparent bg-clip-text bg-metal-gradient&quot;&gt;Systems&lt;/span&gt;
+                &lt;/h1&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;w-[400px] border-l border-[#333] pl-6&quot;&gt;
+                &lt;p class=&quot;text-textMain opacity-70 text-sm font-light leading-relaxed text-justify&quot;&gt;
+                    From chemical rockets to ion drives, propulsion engineering focuses on maximizing thrust-to-weight ratios and specific impulse.
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;!-- Main Content: 5 (Image) | 7 (Content) Split --&gt;
+        &lt;div class=&quot;grid grid-cols-12 gap-8 h-full relative z-10&quot;&gt;
+            
+            &lt;!-- LEFT: Tall Visual (5 Cols) --&gt;
+            &lt;div class=&quot;col-span-5 h-full&quot;&gt;
+                &lt;div class=&quot;w-full h-full tech-border bg-[#111] rounded overflow-hidden relative group&quot;&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1517976487492-5750f3195933?q=80&amp;w=600&amp;auto=format&amp;fit=crop&quot; 
+                         class=&quot;w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700&quot;&gt;
+                    &lt;div class=&quot;absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black via-black/80 to-transparent&quot;&gt;
+                        &lt;div class=&quot;w-8 h-1 bg-accent mb-2&quot;&gt;&lt;/div&gt;
+                        &lt;h3 class=&quot;text-2xl text-white font-bold mb-1&quot;&gt;Liquid Fuel&lt;/h3&gt;
+                        &lt;p class=&quot;text-gray-400 text-sm&quot;&gt;High-thrust chemical combustion for orbital insertion.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- RIGHT: Content Stack (7 Cols) --&gt;
+            &lt;div class=&quot;col-span-7 flex flex-col gap-6 h-full&quot;&gt;
+                
+                &lt;!-- Top Row: 2 Cards Side-by-Side --&gt;
+                &lt;div class=&quot;h-[160px] grid grid-cols-2 gap-6&quot;&gt;
+                    &lt;!-- Ion Card --&gt;
+                    &lt;div class=&quot;tech-border bg-[#111] rounded p-4 flex flex-col justify-between group hover:bg-[#161616]&quot;&gt;
+                        &lt;div class=&quot;flex justify-between items-start&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-bolt text-accent text-xl&quot;&gt;&lt;/i&gt;
+                            &lt;span class=&quot;text-gray-600 font-mono text-xs&quot;&gt;ISP: 3000s&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;h4 class=&quot;text-white font-bold text-lg mb-1&quot;&gt;Ion Thrusters&lt;/h4&gt;
+                            &lt;p class=&quot;text-gray-500 text-sm leading-relaxed&quot;&gt;
+                                Electric propulsion utilizing accelerated ions for high-efficiency station keeping.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Nuclear Card --&gt;
+                    &lt;div class=&quot;tech-border bg-[#111] rounded p-4 flex flex-col justify-between group hover:bg-[#161616]&quot;&gt;
+                        &lt;div class=&quot;flex justify-between items-start&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-radiation text-accent text-xl&quot;&gt;&lt;/i&gt;
+                            &lt;span class=&quot;text-gray-600 font-mono text-xs&quot;&gt;EFF: 85%&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;h4 class=&quot;text-white font-bold text-lg mb-1&quot;&gt;Nuclear Thermal&lt;/h4&gt;
+                            &lt;p class=&quot;text-gray-500 text-sm leading-relaxed&quot;&gt;
+                                Heating hydrogen via fission reactor cores for interplanetary missions.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Bottom Row: Wide Metrics Box --&gt;
+                &lt;!-- Spans full width of the right column, plenty of space for text --&gt;
+                &lt;div class=&quot;flex-1 tech-border bg-[#111] p-6 rounded relative&quot;&gt;
+                    &lt;h3 class=&quot;text-accent text-xl font-bold mb-6 uppercase tracking-wide border-b border-[#222] pb-2 inline-block&quot;&gt;
+                        Performance Metrics
+                    &lt;/h3&gt;
+                    
+                    &lt;!-- Grid for text content within the box --&gt;
+                    &lt;div class=&quot;grid grid-cols-2 gap-x-8 gap-y-6&quot;&gt;
+                        &lt;div class=&quot;flex items-start gap-4&quot;&gt;
+                            &lt;div class=&quot;w-8 h-8 rounded bg-[#222] flex items-center justify-center text-gray-400 font-mono text-sm border border-[#333]&quot;&gt;01&lt;/div&gt;
+                            &lt;div&gt;
+                                &lt;span class=&quot;block text-white text-sm font-bold mb-1&quot;&gt;Delta-V Budget&lt;/span&gt;
+                                &lt;p class=&quot;text-gray-500 text-sm leading-relaxed&quot;&gt;
+                                    Total velocity change capacity determines mission range and payload capability.
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;flex items-start gap-4&quot;&gt;
+                            &lt;div class=&quot;w-8 h-8 rounded bg-[#222] flex items-center justify-center text-gray-400 font-mono text-sm border border-[#333]&quot;&gt;02&lt;/div&gt;
+                            &lt;div&gt;
+                                &lt;span class=&quot;block text-white text-sm font-bold mb-1&quot;&gt;Mass Flow Rate&lt;/span&gt;
+                                &lt;p class=&quot;text-gray-500 text-sm leading-relaxed&quot;&gt;
+                                    Precise propellant consumption monitoring ensures optimal burn duration.
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- Empty slot where logo sits visually outside --&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- LOGO (Unified) --&gt;
+        &lt;div class=&quot;absolute bottom-12 right-12 z-20&quot;&gt;
+             &lt;div class=&quot;absolute -bottom-8 -right-8 w-40 h-24 bg-accent opacity-5 rounded-full blur-xl pointer-events-none&quot;&gt;&lt;/div&gt;
+             &lt;div class=&quot;flex items-center group&quot;&gt;
+                &lt;div class=&quot;relative w-10 h-10 mr-4 flex items-center justify-center&quot;&gt;
+                    &lt;div class=&quot;absolute inset-0 border border-gray-600 rounded-full&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;absolute inset-0 border border-dashed border-accent rounded-full animate-[spin_12s_linear_infinite] opacity-60&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-4 h-4 bg-accent transform rotate-45 shadow-[0_0_15px_rgba(252,230,126,0.6)]&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;flex flex-col justify-center&quot;&gt;
+                    &lt;span class=&quot;text-2xl font-black text-white leading-none tracking-widest uppercase font-sans&quot;&gt;Salford&lt;/span&gt;
+                    &lt;div class=&quot;flex items-center w-full mt-1&quot;&gt;
+                        &lt;span class=&quot;text-[9px] text-accent font-bold tracking-[0.2em] uppercase mr-2&quot;&gt;&amp; Company&lt;/span&gt;
+                        &lt;div class=&quot;h-[1px] flex-grow bg-[#444]&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 9
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Commercial Aerospace - Salford &amp; Co.&lt;/title&gt;
+    
+    &lt;!-- Tailwind CSS CDN --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;!-- FontAwesome CDN --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;!-- Google Fonts --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;!-- Theme Configuration --&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#080808',
+                        accent: '#FCE67E',
+                        textMain: '#EDEDED',
+                        subtle: '#333333',
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'],
+                        mono: ['Courier New', 'monospace'],
+                    },
+                    backgroundImage: {
+                        'metal-gradient': 'linear-gradient(135deg, #FCE67E 0%, #FFFBEB 50%, #D4AF37 100%)',
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        .dot-matrix {
+            background-image: radial-gradient(circle, #333333 1.5px, transparent 1.5px);
+            background-size: 10px 10px;
+        }
+        .dot-matrix-accent {
+            background-image: radial-gradient(circle, #FCE67E 1.5px, transparent 1.5px);
+            background-size: 10px 10px;
+        }
+        .fade-mask-bottom { mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0)); }
+        .fade-mask-left { mask-image: linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0)); }
+        
+        /* New Design Elements */
+        .text-glow { text-shadow: 0 0 25px rgba(252, 230, 126, 0.35); }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;!-- Main Page Container --&gt;
+    &lt;div id=&quot;page_container&quot; class=&quot;bg-bgDark w-[1280px] h-[720px] mx-auto relative overflow-hidden flex flex-col justify-between font-sans&quot;&gt;
+
+        &lt;!-- DECORATION (Unchanged) --&gt;
+        &lt;div class=&quot;absolute top-0 left-16 w-12 h-64 dot-matrix fade-mask-bottom opacity-60 z-0&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute top-0 left-16 w-12 h-24 dot-matrix-accent opacity-80 z-0&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute top-48 right-0 w-64 h-24 dot-matrix fade-mask-left opacity-60 z-0&quot;&gt;&lt;/div&gt;
+        
+        &lt;!-- HEADER SECTION --&gt;
+        &lt;div class=&quot;relative w-full h-[45%] flex flex-col px-24 pt-12 z-10&quot;&gt;
+            
+            &lt;!-- Logo (Unified New Design, Position Preserved) --&gt;
+            &lt;div class=&quot;absolute top-12 right-16 flex items-center group&quot;&gt;
+                &lt;!-- Icon --&gt;
+                &lt;div class=&quot;relative w-10 h-10 mr-3 flex items-center justify-center&quot;&gt;
+                    &lt;div class=&quot;absolute inset-0 border border-gray-600 rounded-full&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;absolute inset-0 border border-dashed border-accent rounded-full animate-[spin_12s_linear_infinite] opacity-60&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-2.5 h-2.5 bg-accent transform rotate-45 shadow-[0_0_15px_rgba(252,230,126,0.6)]&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- Text --&gt;
+                &lt;div class=&quot;flex flex-col justify-center&quot;&gt;
+                    &lt;span class=&quot;text-xl font-black text-white leading-none tracking-widest uppercase&quot;&gt;Salford&lt;/span&gt;
+                    &lt;div class=&quot;flex items-center w-full mt-1&quot;&gt;
+                        &lt;span class=&quot;text-[9px] text-accent font-bold tracking-[0.2em] uppercase mr-2&quot;&gt;&amp; Company&lt;/span&gt;
+                        &lt;div class=&quot;h-[1px] flex-grow bg-[#444]&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Main Title Area (Design Updated) --&gt;
+            &lt;div class=&quot;flex-1 flex items-center justify-between mt-8&quot;&gt;
+                &lt;!-- Title Text --&gt;
+                &lt;div class=&quot;flex flex-col&quot;&gt;
+                    &lt;div class=&quot;flex items-center mb-2 space-x-2&quot;&gt;
+                         &lt;span class=&quot;text-sm font-mono text-gray-500 tracking-[0.4em] uppercase&quot;&gt;Sector Analysis&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;h1 class=&quot;text-7xl font-black italic uppercase tracking-tighter leading-[0.85] text-transparent bg-clip-text bg-metal-gradient text-glow&quot;&gt;
+                        Commercial
+                    &lt;/h1&gt;
+                    &lt;h1 class=&quot;text-7xl font-black italic uppercase tracking-tighter leading-[0.85] text-transparent bg-clip-text bg-metal-gradient text-glow&quot;&gt;
+                        Aerospace
+                    &lt;/h1&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Action Button (Unchanged) --&gt;
+                &lt;div class=&quot;w-16 h-16 bg-accent rounded-full flex items-center justify-center shadow-lg shadow-yellow-900/20 mr-12 hover:scale-110 transition-transform&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-arrow-right text-bgDark text-2xl transform -rotate-45&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- DIVIDER LINE (Unchanged) --&gt;
+        &lt;div class=&quot;w-full px-24&quot;&gt;
+            &lt;div class=&quot;w-full h-[1px] bg-[#333333]&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- CONTENT SECTION (Grid - Unchanged) --&gt;
+        &lt;div class=&quot;relative w-full h-[55%] px-24 py-10&quot;&gt;
+            &lt;div class=&quot;grid grid-cols-4 gap-8 h-full&quot;&gt;
+                
+                &lt;!-- Card 1 --&gt;
+                &lt;div class=&quot;flex flex-col h-full group&quot;&gt;
+                    &lt;div class=&quot;w-full h-40 rounded bg-[#1a1a1a] mb-5 overflow-hidden border border-transparent group-hover:border-[#333] transition-all&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1542296332-2e44a996aa0b?q=80&amp;w=600&amp;auto=format&amp;fit=crop&quot; 
+                             class=&quot;w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300 grayscale-[30%] group-hover:grayscale-0&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;h3 class=&quot;text-accent text-lg mb-3 tracking-wide font-bold&quot;&gt;Passenger Airlines&lt;/h3&gt;
+                    &lt;p class=&quot;text-textMain text-sm font-light leading-6 opacity-80&quot;&gt;
+                        Connecting the world through safe, efficient travel networks designed for the modern era.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Card 2 --&gt;
+                &lt;div class=&quot;flex flex-col h-full group&quot;&gt;
+                    &lt;div class=&quot;w-full h-40 rounded bg-[#1a1a1a] mb-5 overflow-hidden border border-transparent group-hover:border-[#333] transition-all&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1559627756-30232d3d37a5?q=80&amp;w=600&amp;auto=format&amp;fit=crop&quot; 
+                             class=&quot;w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300 grayscale-[30%] group-hover:grayscale-0&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;h3 class=&quot;text-accent text-lg mb-3 tracking-wide font-bold&quot;&gt;Cargo Transport&lt;/h3&gt;
+                    &lt;p class=&quot;text-textMain text-sm font-light leading-6 opacity-80&quot;&gt;
+                        Delivering goods globally with speed and reliability using advanced logistical air support.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Card 3 --&gt;
+                &lt;div class=&quot;flex flex-col h-full group&quot;&gt;
+                    &lt;div class=&quot;w-full h-40 rounded bg-[#1a1a1a] mb-5 overflow-hidden border border-transparent group-hover:border-[#333] transition-all&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1454789548728-85d2696cfbaf?q=80&amp;w=600&amp;auto=format&amp;fit=crop&quot; 
+                             class=&quot;w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300 grayscale-[30%] group-hover:grayscale-0&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;h3 class=&quot;text-accent text-lg mb-3 tracking-wide font-bold&quot;&gt;Space Tourism&lt;/h3&gt;
+                    &lt;p class=&quot;text-textMain text-sm font-light leading-6 opacity-80&quot;&gt;
+                        Providing civilian access to suborbital and orbital experiences beyond the atmosphere.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Card 4 --&gt;
+                &lt;div class=&quot;flex flex-col h-full group&quot;&gt;
+                    &lt;div class=&quot;w-full h-40 rounded bg-[#1a1a1a] mb-5 overflow-hidden border border-transparent group-hover:border-[#333] transition-all&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&amp;w=600&amp;auto=format&amp;fit=crop&quot; 
+                             class=&quot;w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300 grayscale-[30%] group-hover:grayscale-0&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;h3 class=&quot;text-accent text-lg mb-3 tracking-wide font-bold&quot;&gt;Aerospace Services&lt;/h3&gt;
+                    &lt;p class=&quot;text-textMain text-sm font-light leading-6 opacity-80&quot;&gt;
+                        Maintenance, repair, and operational support for fleets ensuring peak performance.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 10
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Orbital Habitats - Aerospace Keynote&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#080808',
+                        accent: '#FCE67E',
+                        textMain: '#EDEDED',
+                        subtle: '#333333',
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'Inter', 'sans-serif'],
+                        mono: ['Courier New', 'monospace'],
+                    },
+                    backgroundImage: {
+                        'metal-gradient': 'linear-gradient(135deg, #FCE67E 0%, #FFFBEB 50%, #D4AF37 100%)',
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px;
+            background-color: #080808;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            padding: 48px;
+            display: flex;
+            flex-direction: column;
+        }
+        .tech-border { border: 1px solid #222; }
+        .grid-pattern {
+            background-image: linear-gradient(to right, #222 1px, transparent 1px), linear-gradient(to bottom, #222 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;!-- Decoration: Blueprint Background --&gt;
+        &lt;div class=&quot;absolute inset-0 grid-pattern opacity-20 pointer-events-none z-0&quot;&gt;&lt;/div&gt;
+
+        &lt;!-- Header --&gt;
+        &lt;header class=&quot;flex justify-between items-end mb-10 relative z-10&quot;&gt;
+            &lt;div&gt;
+                &lt;div class=&quot;flex items-center gap-2 mb-2&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-satellite text-accent text-sm&quot;&gt;&lt;/i&gt;
+                    &lt;span class=&quot;text-[#555] font-mono text-sm uppercase tracking-[0.3em]&quot;&gt;Infrastructure&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;h1 class=&quot;text-6xl font-black uppercase text-white tracking-tight leading-none&quot;&gt;
+                    Orbital &lt;br&gt;
+                    &lt;span class=&quot;text-transparent bg-clip-text bg-metal-gradient&quot;&gt;Habitats&lt;/span&gt;
+                &lt;/h1&gt;
+            &lt;/div&gt;
+            &lt;!-- Removed the intro paragraph here to put it in the main content area for more &quot;text density&quot; --&gt;
+            &lt;div class=&quot;flex items-center gap-4&quot;&gt;
+                &lt;div class=&quot;text-right&quot;&gt;
+                    &lt;span class=&quot;block text-accent font-mono text-xl font-bold&quot;&gt;ISS-02&lt;/span&gt;
+                    &lt;span class=&quot;text-gray-600 text-[10px] uppercase&quot;&gt;Model Revision&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;w-12 h-12 border border-[#333] flex items-center justify-center&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-cube text-gray-500&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;!-- MAIN CONTENT: 7 (Text/Data) | 5 (Single Visual) --&gt;
+        &lt;div class=&quot;grid grid-cols-12 gap-10 h-full relative z-10&quot;&gt;
+            
+            &lt;!-- LEFT: Content Heavy Area (7 Cols) --&gt;
+            &lt;div class=&quot;col-span-7 flex flex-col h-full&quot;&gt;
+                
+                &lt;!-- Intro Paragraph with styling --&gt;
+                &lt;div class=&quot;mb-8 border-l-2 border-accent pl-6 py-2&quot;&gt;
+                    &lt;h3 class=&quot;text-white text-xl font-bold mb-2&quot;&gt;Sustainable Microgravity Living&lt;/h3&gt;
+                    &lt;p class=&quot;text-textMain opacity-80 text-sm font-light leading-relaxed text-justify&quot;&gt;
+                        Designing for long-term orbital residence requires closed-loop life support systems (ECLSS), active radiation shielding, and modular expandability. The focus shifts from survival to habitability and psychological well-being.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Feature Grid (Filling space with content, not images) --&gt;
+                &lt;div class=&quot;grid grid-cols-2 gap-4 mb-auto&quot;&gt;
+                    &lt;!-- Feature 1 --&gt;
+                    &lt;div class=&quot;bg-[#111] p-4 rounded border border-[#222]&quot;&gt;
+                        &lt;div class=&quot;flex items-center gap-3 mb-2&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-arrows-spin text-accent&quot;&gt;&lt;/i&gt;
+                            &lt;span class=&quot;text-white text-sm font-bold&quot;&gt;ECLSS Recycling&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;p class=&quot;text-gray-500 text-sm&quot;&gt;93% water recovery rate through condensate processing and urine distillation assemblies.&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;!-- Feature 2 --&gt;
+                    &lt;div class=&quot;bg-[#111] p-4 rounded border border-[#222]&quot;&gt;
+                        &lt;div class=&quot;flex items-center gap-3 mb-2&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-shield-halved text-accent&quot;&gt;&lt;/i&gt;
+                            &lt;span class=&quot;text-white text-sm font-bold&quot;&gt;Radiation Shield&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;p class=&quot;text-gray-500 text-sm&quot;&gt;High-density polyethylene layers protecting against Solar Particle Events (SPE).&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;!-- Feature 3 --&gt;
+                    &lt;div class=&quot;bg-[#111] p-4 rounded border border-[#222]&quot;&gt;
+                        &lt;div class=&quot;flex items-center gap-3 mb-2&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-weight-hanging text-accent&quot;&gt;&lt;/i&gt;
+                            &lt;span class=&quot;text-white text-sm font-bold&quot;&gt;Artificial Gravity&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;p class=&quot;text-gray-500 text-sm&quot;&gt;Rotating centrifugal sections to mitigate bone density loss (osteoporosis).&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;!-- Feature 4 --&gt;
+                    &lt;div class=&quot;bg-[#111] p-4 rounded border border-[#222]&quot;&gt;
+                        &lt;div class=&quot;flex items-center gap-3 mb-2&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-plug text-accent&quot;&gt;&lt;/i&gt;
+                            &lt;span class=&quot;text-white text-sm font-bold&quot;&gt;Modular Docking&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;p class=&quot;text-gray-500 text-sm&quot;&gt;International Docking System Standard (IDSS) compliant ports for expansion.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Bottom Data Strip --&gt;
+                &lt;div class=&quot;mt-6 border-t border-[#222] pt-4 flex gap-8&quot;&gt;
+                    &lt;div&gt;
+                        &lt;span class=&quot;block text-gray-600 text-[10px] font-mono uppercase&quot;&gt;Capacity&lt;/span&gt;
+                        &lt;span class=&quot;text-white text-lg font-mono&quot;&gt;12 Crew&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div&gt;
+                        &lt;span class=&quot;block text-gray-600 text-[10px] font-mono uppercase&quot;&gt;Pressurized Vol&lt;/span&gt;
+                        &lt;span class=&quot;text-white text-lg font-mono&quot;&gt;900 m³&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div&gt;
+                        &lt;span class=&quot;block text-gray-600 text-[10px] font-mono uppercase&quot;&gt;Orbit Alt&lt;/span&gt;
+                        &lt;span class=&quot;text-white text-lg font-mono&quot;&gt;400 km&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- RIGHT: Single Visual (5 Cols) --&gt;
+            &lt;!-- Reduced to one clean image to avoid clutter --&gt;
+            &lt;div class=&quot;col-span-5 h-full relative pb-20&quot;&gt; &lt;!-- pb-20 reserves space for logo visually --&gt;
+                &lt;div class=&quot;w-full h-full tech-border bg-[#111] rounded overflow-hidden relative group&quot;&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&amp;w=800&amp;auto=format&amp;fit=crop&quot; 
+                         class=&quot;w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-700&quot;&gt;
+                    
+                    &lt;!-- Image UI Overlay --&gt;
+                    &lt;div class=&quot;absolute top-4 right-4 bg-black/60 px-2 py-1 rounded backdrop-blur-sm border border-gray-700&quot;&gt;
+                        &lt;span class=&quot;text-[10px] text-accent font-mono uppercase&quot;&gt;Live Feed&lt;/span&gt;
+                    &lt;/div&gt;
+                    
+                    &lt;div class=&quot;absolute bottom-4 left-4&quot;&gt;
+                        &lt;h4 class=&quot;text-white font-bold text-lg drop-shadow-md&quot;&gt;Observation Cupola&lt;/h4&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+
+        &lt;!-- LOGO (Unified) --&gt;
+        &lt;div class=&quot;absolute bottom-12 right-12 z-20&quot;&gt;
+             &lt;div class=&quot;absolute -bottom-8 -right-8 w-40 h-24 halftone-accent opacity-10 pointer-events-none&quot;&gt;&lt;/div&gt;
+             &lt;div class=&quot;flex items-center group&quot;&gt;
+                &lt;div class=&quot;relative w-10 h-10 mr-4 flex items-center justify-center&quot;&gt;
+                    &lt;div class=&quot;absolute inset-0 border border-gray-600 rounded-full&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;absolute inset-0 border border-dashed border-accent rounded-full animate-[spin_12s_linear_infinite] opacity-60&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-4 h-4 bg-accent transform rotate-45 shadow-[0_0_15px_rgba(252,230,126,0.6)]&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;flex flex-col justify-center&quot;&gt;
+                    &lt;span class=&quot;text-2xl font-black text-white leading-none tracking-widest uppercase font-sans&quot;&gt;Salford&lt;/span&gt;
+                    &lt;div class=&quot;flex items-center w-full mt-1&quot;&gt;
+                        &lt;span class=&quot;text-[9px] text-accent font-bold tracking-[0.2em] uppercase mr-2&quot;&gt;&amp; Company&lt;/span&gt;
+                        &lt;div class=&quot;h-[1px] flex-grow bg-[#444]&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 11
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Future Outlook - Aerospace Keynote&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#080808',
+                        accent: '#FCE67E',
+                        textMain: '#EDEDED',
+                        subtle: '#333333',
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'Inter', 'sans-serif'],
+                        mono: ['Courier New', 'monospace'],
+                    },
+                    backgroundImage: {
+                        'metal-gradient': 'linear-gradient(135deg, #FCE67E 0%, #FFFBEB 50%, #D4AF37 100%)',
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px;
+            background-color: #080808;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            padding: 48px;
+            display: flex;
+            flex-direction: column;
+        }
+        .tech-border { border: 1px solid #222; transition: all 0.3s ease; }
+        .tech-border:hover { border-color: rgba(252, 230, 126, 0.4); background: rgba(255,255,255,0.02); }
+        .text-glow { text-shadow: 0 0 25px rgba(252, 230, 126, 0.3); }
+        .dashed-line {
+            background-image: linear-gradient(to bottom, #333 50%, transparent 50%);
+            background-size: 1px 10px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;!-- Header --&gt;
+        &lt;header class=&quot;flex justify-between items-end mb-12 relative z-10&quot;&gt;
+            &lt;div&gt;
+                &lt;div class=&quot;flex items-center gap-2 mb-2&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-rocket text-accent text-sm&quot;&gt;&lt;/i&gt;
+                    &lt;span class=&quot;text-[#555] font-mono text-sm uppercase tracking-[0.3em]&quot;&gt;Vision 2050&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;h1 class=&quot;text-6xl font-black uppercase text-white tracking-tight leading-none&quot;&gt;
+                    Future &lt;br&gt;
+                    &lt;span class=&quot;text-transparent bg-clip-text bg-metal-gradient text-glow&quot;&gt;Outlook&lt;/span&gt;
+                &lt;/h1&gt;
+            &lt;/div&gt;
+            
+            &lt;!-- Summary Text --&gt;
+            &lt;div class=&quot;w-[450px] border-l border-[#333] pl-6&quot;&gt;
+                &lt;p class=&quot;text-textMain opacity-70 text-sm font-light leading-relaxed text-justify&quot;&gt;
+                    The next era of aerospace transcends atmosphere. We are engineering the framework for multi-planetary civilization, sustainable supersonic travel, and autonomous deep-space logistics.
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;!-- Main Content --&gt;
+        &lt;div class=&quot;grid grid-cols-12 gap-10 h-full relative z-10&quot;&gt;
+            
+            &lt;!-- LEFT: Strategic Pillars (5 Cols) --&gt;
+            &lt;div class=&quot;col-span-5 flex flex-col gap-6 relative&quot;&gt;
+                &lt;!-- Timeline Line --&gt;
+                &lt;div class=&quot;absolute left-6 top-4 bottom-4 w-[1px] dashed-line -z-10&quot;&gt;&lt;/div&gt;
+
+                &lt;!-- Item 1 --&gt;
+                &lt;div class=&quot;tech-border bg-[#0e0e0e] p-5 rounded ml-0 relative group&quot;&gt;
+                    &lt;div class=&quot;absolute -left-[29px] top-6 w-3 h-3 bg-bgDark border border-accent rounded-full z-10&quot;&gt;&lt;/div&gt;
+                    &lt;h3 class=&quot;text-accent font-bold text-lg mb-2 flex items-center gap-2&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-mars&quot;&gt;&lt;/i&gt; Mars Colonization
+                    &lt;/h3&gt;
+                    &lt;p class=&quot;text-gray-400 text-sm leading-5&quot;&gt;
+                        Establishing permanent, self-sustaining habitats utilizing in-situ resource utilization (ISRU) for fuel and water.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Item 2 --&gt;
+                &lt;div class=&quot;tech-border bg-[#0e0e0e] p-5 rounded ml-0 relative group&quot;&gt;
+                    &lt;div class=&quot;absolute -left-[29px] top-6 w-3 h-3 bg-bgDark border border-gray-600 group-hover:border-accent rounded-full z-10 transition-colors&quot;&gt;&lt;/div&gt;
+                    &lt;h3 class=&quot;text-white font-bold text-lg mb-2 flex items-center gap-2&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-leaf&quot;&gt;&lt;/i&gt; Eco-Aviation
+                    &lt;/h3&gt;
+                    &lt;p class=&quot;text-gray-400 text-sm leading-5&quot;&gt;
+                        Transitioning to hydrogen-electric propulsion and Sustainable Aviation Fuels (SAF) to reach net-zero emissions.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Item 3 --&gt;
+                &lt;div class=&quot;tech-border bg-[#0e0e0e] p-5 rounded ml-0 relative group&quot;&gt;
+                    &lt;div class=&quot;absolute -left-[29px] top-6 w-3 h-3 bg-bgDark border border-gray-600 group-hover:border-accent rounded-full z-10 transition-colors&quot;&gt;&lt;/div&gt;
+                    &lt;h3 class=&quot;text-white font-bold text-lg mb-2 flex items-center gap-2&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-microchip&quot;&gt;&lt;/i&gt; AI Pilots
+                    &lt;/h3&gt;
+                    &lt;p class=&quot;text-gray-400 text-sm leading-5&quot;&gt;
+                        Fully autonomous flight control systems capable of managing complex orbital mechanics and swarm logistics.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- RIGHT: Concept Visual (7 Cols) --&gt;
+            &lt;div class=&quot;col-span-7 h-full relative&quot;&gt;
+                &lt;div class=&quot;w-full h-[340px] tech-border bg-[#111] rounded overflow-hidden relative group&quot;&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1614728853970-3027b9cb7047?q=80&amp;w=1000&amp;auto=format&amp;fit=crop&quot; 
+                         alt=&quot;Futuristic Space Station&quot; 
+                         class=&quot;w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-700&quot;&gt;
+                    
+                    &lt;!-- Overlay Gradient --&gt;
+                    &lt;div class=&quot;absolute inset-0 bg-gradient-to-t from-bgDark via-transparent to-transparent&quot;&gt;&lt;/div&gt;
+
+                    &lt;!-- Floating Data Points --&gt;
+                    &lt;div class=&quot;absolute top-1/3 right-12 flex flex-col items-end gap-1&quot;&gt;
+                        &lt;div class=&quot;h-[1px] w-12 bg-accent&quot;&gt;&lt;/div&gt;
+                        &lt;span class=&quot;text-accent text-[10px] uppercase font-mono tracking-widest&quot;&gt;Gateway Station&lt;/span&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Bottom Text --&gt;
+                    &lt;div class=&quot;absolute bottom-6 left-8&quot;&gt;
+                        &lt;h2 class=&quot;text-4xl font-bold text-white mb-2 tracking-tighter&quot;&gt;BEYOND &lt;br&gt; HORIZONS&lt;/h2&gt;
+                        &lt;p class=&quot;text-gray-400 text-xs uppercase tracking-widest font-mono&quot;&gt;Phase IV Expansion // 2040&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+
+        &lt;!-- LOGO (Unified) --&gt;
+        &lt;div class=&quot;absolute bottom-12 right-12 z-20&quot;&gt;
+             &lt;div class=&quot;absolute -bottom-8 -right-8 w-40 h-24 bg-accent opacity-5 rounded-full blur-xl pointer-events-none&quot;&gt;&lt;/div&gt;
+
+             &lt;div class=&quot;flex items-center group&quot;&gt;
+                &lt;div class=&quot;relative w-10 h-10 mr-4 flex items-center justify-center&quot;&gt;
+                    &lt;div class=&quot;absolute inset-0 border border-gray-600 rounded-full&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;absolute inset-0 border border-dashed border-accent rounded-full animate-[spin_12s_linear_infinite] opacity-60&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-4 h-4 bg-accent transform rotate-45 shadow-[0_0_15px_rgba(252,230,126,0.6)]&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;flex flex-col justify-center&quot;&gt;
+                    &lt;span class=&quot;text-2xl font-black text-white leading-none tracking-widest uppercase font-sans&quot;&gt;
+                        Salford
+                    &lt;/span&gt;
+                    &lt;div class=&quot;flex items-center w-full mt-1&quot;&gt;
+                        &lt;span class=&quot;text-[9px] text-accent font-bold tracking-[0.2em] uppercase mr-2&quot;&gt;&amp; Company&lt;/span&gt;
+                        &lt;div class=&quot;h-[1px] flex-grow bg-[#444]&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <script>
+   // 自动调整iframe高度
+    function resizeIframes() {
+        document.querySelectorAll('.responsive-iframe').forEach(iframe => {
+            try {
+                const doc = iframe.contentDocument || iframe.contentWindow.document;
+                const height = Math.max(
+                    doc.body.scrollHeight,
+                    doc.documentElement.scrollHeight,
+                    doc.body.offsetHeight,
+                    doc.documentElement.offsetHeight,
+                    doc.body.clientHeight,
+                    doc.documentElement.clientHeight
+                );
+                iframe.style.height = height + 'px';
+            } catch (e) {
+                console.log('无法调整iframe高度:', e);
+            }
+        });
+    }
+    
+    // 初始调整
+    window.addEventListener('load', resizeIframes);
+    
+    // 内容加载后调整
+    document.querySelectorAll('.responsive-iframe').forEach(iframe => {
+        iframe.addEventListener('load', function() {
+            resizeIframes();
+            // 对动态内容进行定期检查
+            setInterval(resizeIframes, 1000);
+        });
+    });
+  </script>
+ </body>
+</html>

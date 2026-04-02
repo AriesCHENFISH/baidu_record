@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mysteries of the Deep - Research Archive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { oceanDeep: '#081033', electricCyan: '#00E5FF' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Playfair Display', 'serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        #page_container { width: 1280px; height: 720px; position: relative; background: #081033; color: #FFFFFF; overflow: hidden; display: flex; flex-direction: column; margin: 0 auto; }
+        .text-outline { -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2); color: transparent; }
+        .img-mask-main { clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%); }
+        .vertical-text { writing-mode: vertical-rl; transform: rotate(180deg); }
+        .data-grid { background-image: radial-gradient(rgba(0, 229, 255, 0.1) 1px, transparent 1px); background-size: 20px 20px; }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <!-- Header -->
+        <header class="relative z-20 px-20 pt-12 flex items-center justify-between">
+            <div class="flex items-center gap-5">
+                <div class="w-12 h-12 border-2 border-electricCyan flex flex-col items-center justify-center gap-1">
+                    <div class="w-6 h-0.5 bg-white"></div>
+                    <div class="w-4 h-0.5 bg-electricCyan"></div>
+                    <div class="w-6 h-0.5 bg-white"></div>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-black tracking-widest uppercase leading-none">Abyssal</h2>
+                    <span class="text-[9px] tracking-[0.5em] text-electricCyan uppercase font-bold">Research Archive</span>
+                </div>
+            </div>
+            <div class="flex items-center gap-10">
+                <div class="text-[9px] tracking-[0.2em] text-white/40 uppercase text-right">
+                    <span class="block text-white font-bold italic font-serif text-[12px]">Hadal Exploration</span>
+                    <span>Zone 07 // Deep-Water</span>
+                </div>
+                <div class="text-electricCyan font-black text-3xl italic tracking-tighter">04</div>
+            </div>
+        </header>
+
+        <main class="flex-1 flex px-20 pt-6 relative z-10">
+            <!-- 文本设计 1: 超大描边背景标题 -->
+            <div class="absolute top-24 left-10 text-[240px] font-black text-outline pointer-events-none select-none z-0">
+                DEPTH
+            </div>
+
+            <!-- 左侧内容列 -->
+            <div class="w-5/12 flex flex-col justify-between pb-16 relative z-10">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-8 h-[1px] bg-electricCyan"></div>
+                        <span class="text-[10px] tracking-[0.4em] text-electricCyan font-bold uppercase">Sub-Surface Survey</span>
+                    </div>
+                    <h1 class="text-7xl font-serif italic mb-6">Mysteries <br><span class="font-sans not-italic font-black text-electricCyan uppercase">Of the Deep</span></h1>
+                    <p class="text-gray-300 text-sm font-light leading-relaxed max-w-sm mb-8">
+                        The ocean covers more than 70% of our planet. Of the tiny percentage that's not in the ocean, most is frozen in glaciers, leaving the abyss as the ultimate frontier.
+                    </p>
+                </div>
+
+                <!-- 文本设计 2: 技术参数矩阵 -->
+                <div class="bg-white/5 border border-white/10 p-6 backdrop-blur-md relative data-grid">
+                    <div class="grid grid-cols-2 gap-8">
+                        <div>
+                            <span class="block text-[8px] text-electricCyan uppercase tracking-widest mb-2 font-bold">Pressure Level</span>
+                            <div class="flex items-end gap-1">
+                                <span class="text-3xl font-light">1,086</span>
+                                <span class="text-[10px] text-white/40 mb-1 font-mono">BAR</span>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="block text-[8px] text-electricCyan uppercase tracking-widest mb-2 font-bold">Visibility</span>
+                            <div class="flex items-end gap-1">
+                                <span class="text-3xl font-light">0.02</span>
+                                <span class="text-[10px] text-white/40 mb-1 font-mono">LUX</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-white/10 flex items-center justify-between">
+                        <span class="text-[9px] font-mono text-white/40 tracking-widest">COORDS: 11.3N / 142.2E</span>
+                        <div class="w-2 h-2 bg-electricCyan animate-pulse"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右侧图片及引文 -->
+            <div class="w-7/12 flex items-center justify-end relative">
+                <!-- 文本设计 3: 垂直装饰性引文 -->
+                <div class="vertical-text absolute left-12 h-2/3 flex items-center gap-6 py-10 border-r border-white/10 pr-6">
+                    <p class="text-[11px] tracking-[0.3em] font-serif italic text-white/60">
+                        "The deep is not a place, but a dimension of secrets."
+                    </p>
+                    <span class="text-[9px] font-black uppercase tracking-[0.5em] text-electricCyan">Data Point 99X-Alpha</span>
+                </div>
+
+                <!-- 单张大图 -->
+                <div class="w-10/12 h-[480px] relative">
+                    <div class="absolute inset-0 border border-electricCyan/20 translate-x-4 translate-y-4"></div>
+                    <div class="w-full h-full overflow-hidden img-mask-main shadow-2xl border border-white/10">
+                        <img src="https://images.unsplash.com/photo-1582967788606-a171f1080ca8?q=80&w=1000" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000">
+                    </div>
+                    <!-- 浮动标签 -->
+                    <div class="absolute bottom-10 right-0 bg-electricCyan px-6 py-3 shadow-xl">
+                        <span class="text-oceanDeep font-black text-xs uppercase tracking-widest italic">Confidential Archive</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Feature Spotlight</title>
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bg: '#050505',
+                        primary: '#FFFFFF',
+                        secondary: '#A0A0A0',
+                        accent: '#8B5CF6',
+                        accentDeep: '#4C1D95',
+                        darkText: '#52525B',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    },
+                    spacing: {
+                        '1280': '1280px',
+                        '720': '720px',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset & Global Refactoring */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        h1, h2, h3, h4, h5, h6 { line-height: 1.1; }
+        p { line-height: 1.6; }
+
+        /* Page Container Styles */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #050505;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Custom Styles for this page */
+        .feature-list-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+        .feature-icon {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(139, 92, 246, 0.1); /* accent with opacity */
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            color: #8B5CF6; /* accent */
+            font-size: 1.2rem;
+        }
+
+        /* Image container with glow effect */
+        .image-glow-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .image-glow-container::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70%;
+            height: 70%;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.4) 0%, rgba(5, 5, 5, 0) 70%);
+            filter: blur(80px);
+            z-index: 0;
+        }
+        .featured-image {
+            position: relative;
+            z-index: 1;
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            /* Optional: Add a subtle tilt or effect */
+            transform: perspective(1000px) rotateY(-10deg);
+            transition: transform 0.5s ease;
+        }
+        .image-glow-container:hover .featured-image {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+
+        <div class="relative z-10 w-full h-full grid grid-cols-12 px-16 py-12">
+            
+            <div class="col-span-6 flex flex-col justify-center pr-12 z-10">
+                
+                <div class="mb-10">
+                    <div class="inline-block px-3 py-1 mb-4 text-sm font-semibold tracking-wider uppercase border rounded-full text-accent border-accent bg-accentDeep/20">
+                        New Feature
+                    </div>
+                    <h1 class="text-6xl font-bold tracking-tight text-primary mb-4 leading-tight">
+                        AI-Powered <br>
+                        <span class="text-accent">Analytics Engine</span>
+                    </h1>
+                    <p class="text-secondary text-lg text-justify max-w-xl">
+                        Unlock deeper insights with our next-generation analytics platform. Transform raw data into actionable intelligence in real-time, giving your team the competitive edge.
+                    </p>
+                </div>
+
+                <div class="flex flex-col">
+                    <div class="feature-list-item">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-primary mb-2">Real-Time Processing</h3>
+                            <p class="text-secondary text-base">
+                                Instant data ingestion and analysis. Decisions made on second-by-second updates.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="feature-list-item">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-primary mb-2">Predictive Modeling</h3>
+                            <p class="text-secondary text-base">
+                                Forecast future trends with high accuracy using advanced machine learning algorithms.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="feature-list-item mb-0">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-chart-simple"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-primary mb-2">Customizable Dashboards</h3>
+                            <p class="text-secondary text-base">
+                                Build drag-and-drop visualizations tailored to your specific KPIs and workflows.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-span-6 relative">
+                <div class="image-glow-container">
+                    <img src="https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=1000&auto=format&fit=crop" 
+                         alt="AI Analytics Interface Visualization" 
+                         class="featured-image">
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-[-150px] right-[-150px] w-[400px] h-[400px] rounded-full blur-[120px] z-0 pointer-events-none" 
+             style="background: linear-gradient(135deg, #4C1D95, transparent);">
+        </div>
+        <div class="absolute top-[-100px] left-[-100px] w-[300px] h-[300px] rounded-full blur-[100px] z-0 pointer-events-none opacity-50" 
+             style="background: linear-gradient(135deg, #8B5CF6, transparent);">
+        </div>
+
+    </div>
+
+</body>
+</html>

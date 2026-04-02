@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services We Offer - Keynote Slide</title>
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <!-- FontAwesome (Icons) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+
+    <!-- Google Fonts (Baidu Mirror as requested) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <!-- ECharts (CDN) - Included in case extension is needed, though primarily using CSS shapes for the design motif -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+
+    <style>
+        /* CSS Reset & Basic Setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* Page Container - Strict 1280x720 */
+        .page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #E5E5E5; /* Main Background Color */
+            position: relative;
+            overflow: hidden;
+            box-shadow: none; /* No shadow per requirements */
+            margin: 0 auto;
+        }
+
+        /* Typography Utilities */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            color: #000000; /* Primary Text */
+            line-height: 1.2;
+        }
+
+        p {
+            color: #333333; /* Secondary Text */
+            line-height: 1.6;
+        }
+
+        /* Custom Scrollbar hide */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    
+    <!-- Tailwind Configuration for Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#000000',
+                        secondary: '#333333',
+                        bgMain: '#E5E5E5',
+                        accent: '#6FE6AA',
+                        stroke: '#666666',
+                        glow: '#D6E8C7'
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div class="page_container">
+        
+        <!-- Background Decor: Top Left Glow -->
+        <div class="absolute top-[-150px] left-[-150px] w-[600px] h-[600px] rounded-full opacity-60 pointer-events-none"
+             style="background: radial-gradient(circle, #D6E8C7 0%, rgba(229, 229, 229, 0) 70%);">
+        </div>
+
+        <!-- Background Decor: Bottom Right Glow -->
+        <div class="absolute bottom-[-200px] right-[-100px] w-[700px] h-[700px] rounded-full opacity-50 pointer-events-none"
+             style="background: radial-gradient(circle, #D6E8C7 0%, rgba(229, 229, 229, 0) 70%);">
+        </div>
+
+        <!-- Content Grid Wrapper -->
+        <div class="relative w-full h-full flex flex-col px-20 py-16 justify-between z-10">
+
+            <!-- Top Section: Process Indicators (The Circles) -->
+            <!-- Using Semantic List for the visual steps -->
+            <div class="w-full flex justify-between items-center mb-10 pl-2 pr-2">
+                <ul class="flex w-full justify-between items-center list-none m-0 p-0 gap-6">
+                    <!-- Standard Step -->
+                    <li class="w-24 h-24 rounded-full border-[2px] border-stroke flex items-center justify-center opacity-40"></li>
+                    <li class="w-24 h-24 rounded-full border-[2px] border-stroke flex items-center justify-center opacity-40"></li>
+                    <li class="w-24 h-24 rounded-full border-[2px] border-stroke flex items-center justify-center opacity-40"></li>
+                    <li class="w-24 h-24 rounded-full border-[2px] border-stroke flex items-center justify-center opacity-40"></li>
+                    <!-- Active Step (Highlighted) -->
+                    <li class="w-24 h-24 rounded-full bg-accent shadow-lg shadow-accent/20 flex items-center justify-center scale-110 transition-transform">
+                        <!-- Optional icon inside active step for detail -->
+                        <i class="fa-solid fa-check text-primary text-2xl opacity-50"></i>
+                    </li>
+                    <li class="w-24 h-24 rounded-full border-[2px] border-stroke flex items-center justify-center opacity-40"></li>
+                    <li class="w-24 h-24 rounded-full border-[2px] border-stroke flex items-center justify-center opacity-40"></li>
+                </ul>
+            </div>
+
+            <!-- Main Content Area -->
+            <div class="flex flex-row w-full h-full mt-4 gap-16">
+                
+                <!-- Left Column: Title & Introduction -->
+                <div class="w-5/12 flex flex-col justify-end pb-8">
+                    <!-- Decorative line -->
+                    <div class="w-16 h-1 bg-primary mb-8"></div>
+                    
+                    <h1 class="text-8xl font-bold tracking-tight mb-8 leading-[0.9]">
+                        Services<br>
+                        <span class="font-light">We Offer</span>
+                    </h1>
+                    
+                    <div class="pr-8">
+                        <p class="text-secondary text-lg font-light text-justify">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl eu sem tristique, sit amet convallis ex aliquam. Maecenas varius lectus hendrerit augue blandit, ut posuere erat aliquam. Praesent auctor tellus eget nisl blandit, at varius purus elementum.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Column: Service List -->
+                <div class="w-7/12 flex flex-col justify-end pb-4">
+                    <ul class="flex flex-col gap-0 w-full">
+                        
+                        <!-- Service 01 -->
+                        <li class="group flex flex-row items-center py-8 border-b border-stroke/30">
+                            <!-- Icon Container -->
+                            <div class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center shadow-sm mr-8 shrink-0 relative overflow-hidden">
+                                <div class="absolute inset-0 bg-accent opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                                <i class="fa-solid fa-chart-line text-4xl text-primary"></i>
+                            </div>
+                            <!-- Text Content -->
+                            <div class="flex flex-col">
+                                <h3 class="text-3xl mb-2 flex items-center gap-3">
+                                    Service 01
+                                    <i class="fa-solid fa-arrow-right -rotate-45 text-accent text-xl opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                                </h3>
+                                <p class="text-sm text-secondary opacity-80">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl eu sem tristique, sit amet convallis ex aliquam.
+                                </p>
+                            </div>
+                        </li>
+
+                        <!-- Service 02 -->
+                        <li class="group flex flex-row items-center py-8 border-b border-stroke/30">
+                            <!-- Icon Container -->
+                            <div class="w-20 h-20 bg-accent rounded-2xl flex items-center justify-center shadow-lg shadow-accent/20 mr-8 shrink-0">
+                                <i class="fa-solid fa-laptop-code text-4xl text-primary"></i>
+                            </div>
+                            <!-- Text Content -->
+                            <div class="flex flex-col">
+                                <h3 class="text-3xl mb-2">Service 02</h3>
+                                <p class="text-sm text-secondary opacity-80">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl eu sem tristique, sit amet convallis ex aliquam.
+                                </p>
+                            </div>
+                        </li>
+
+                        <!-- Service 03 -->
+                        <li class="group flex flex-row items-center py-8 border-b border-transparent">
+                            <!-- Icon Container -->
+                            <div class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center shadow-sm mr-8 shrink-0 relative overflow-hidden">
+                                <div class="absolute inset-0 bg-accent opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                                <i class="fa-solid fa-bullseye text-4xl text-primary"></i>
+                            </div>
+                            <!-- Text Content -->
+                            <div class="flex flex-col">
+                                <h3 class="text-3xl mb-2 flex items-center gap-3">
+                                    Service 03
+                                    <i class="fa-solid fa-arrow-right -rotate-45 text-accent text-xl opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                                </h3>
+                                <p class="text-sm text-secondary opacity-80">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl eu sem tristique, sit amet convallis ex aliquam.
+                                </p>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

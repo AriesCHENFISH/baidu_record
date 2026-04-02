@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Problem - Salford & Co.</title>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: '#F4F8F9',        // Background Base
+                            bgAccent: '#E0EFF3',  // Background Gradient Accent
+                            primary: '#333333',   // Primary Text
+                            secondary: '#555555', // Secondary Text
+                            muted: '#777777',     // Muted Text
+                            dark: '#707070',      // Dark Graphic
+                            medium: '#8E8E8E',    // Medium Graphic
+                            teal: '#BDE0E2',      // Accent
+                            line: '#2F2F2F',      // Divider
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'soft': '0 20px 40px -10px rgba(0, 0, 0, 0.1)',
+                        'card': '0 10px 30px -5px rgba(51, 51, 51, 0.05)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container Configuration */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #F4F8F9;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+            /* No shadow allowed on container per rules */
+        }
+
+        /* Custom shape utility for the image */
+        .organic-shape {
+            border-radius: 40px 160px 40px 40px;
+        }
+        
+        /* Gradient Background Wrapper */
+        .bg-gradient-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 0% 0%, #E0EFF3 0%, transparent 40%), 
+                        radial-gradient(circle at 100% 100%, #E0EFF3 0%, transparent 40%);
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <div class="bg-gradient-overlay"></div>
+
+        <div class="relative z-10 grid grid-cols-12 h-full w-full">
+            
+            <div class="col-span-5 h-full flex items-center justify-center p-12 pr-0">
+                <div class="relative w-full h-full max-h-[600px] organic-shape overflow-hidden shadow-soft group">
+                    <div class="absolute inset-0 bg-gray-900/10 z-10"></div>
+                    
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1280&auto=format&fit=crop" 
+                         alt="Modern Architecture" 
+                         class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105">
+                    </div>
+            </div>
+
+            <div class="col-span-7 h-full flex flex-col justify-center px-16 py-12">
+                
+                <div class="mb-6">
+                    <h1 class="text-brand-primary text-6xl font-bold tracking-tight leading-tight">
+                        The Problem
+                    </h1>
+                </div>
+
+                <div class="mb-8">
+                    <p class="text-brand-secondary text-lg leading-relaxed max-w-2xl">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae elit sed est dapibus mattis est nisi arcu mauris diam. Vel luctus tristique, massa ligula pulvinar sapien, vitae imperdiet nibh risus sit amet erat.
+                    </p>
+                </div>
+
+                <div class="w-16 h-1 bg-brand-line mb-10"></div>
+
+                <div class="grid grid-cols-2 gap-10">
+                    
+                    <div class="flex flex-col items-start">
+                        <div class="mb-4 relative">
+                            <div class="w-12 h-12 bg-brand-teal rounded-full flex items-center justify-center shadow-sm">
+                                <i class="fa-solid fa-file-invoice-dollar text-brand-primary text-xl"></i>
+                            </div>
+                        </div>
+                        
+                        <h3 class="text-brand-primary text-2xl font-bold mb-3 leading-tight">
+                            Complicated loan processes
+                        </h3>
+                        
+                        <p class="text-brand-secondary text-base leading-relaxed text-sm">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae elit sed est dapibus mattis est nisi arcu mauris diam.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col items-start">
+                        <div class="mb-4 relative">
+                            <div class="w-12 h-12 bg-brand-teal rounded-full flex items-center justify-center shadow-sm">
+                                <i class="fa-solid fa-hand-holding-dollar text-brand-primary text-xl"></i>
+                            </div>
+                        </div>
+                        
+                        <h3 class="text-brand-primary text-2xl font-bold mb-3 leading-tight">
+                            Lack of digital financial literacy
+                        </h3>
+                        
+                        <p class="text-brand-secondary text-base leading-relaxed text-sm">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae elit sed est dapibus mattis est nisi arcu mauris diam.
+                        </p>
+                    </div>
+
+                </div>
+                </div>
+            </div>
+    </div>
+
+</body>
+</html>

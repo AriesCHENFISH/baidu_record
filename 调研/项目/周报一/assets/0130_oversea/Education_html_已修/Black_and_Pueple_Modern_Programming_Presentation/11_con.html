@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 02 - Tech Architecture</title>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { deepBlack: '#020204', accentPurple: '#9D50E6', accentBlue: '#2A3C95', cardBg: 'rgba(255,255,255,0.03)' },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { margin: 0; padding: 0; overflow: hidden; }
+        .glass-panel {
+            background: rgba(20, 20, 20, 0.6);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+        }
+        .glow-text { text-shadow: 0 0 20px rgba(157, 80, 230, 0.5); }
+    </style>
+</head>
+<body>
+    <div class="relative w-[1280px] h-[720px] mx-auto bg-deepBlack text-white overflow-hidden font-sans">
+        
+        <!-- Background Decor -->
+        <div class="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
+        <div class="absolute -top-40 -left-40 w-[600px] h-[600px] bg-accentPurple rounded-full opacity-10 blur-[120px]"></div>
+        <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-accentBlue rounded-full opacity-10 blur-[100px]"></div>
+
+        <!-- Content Container -->
+        <div class="relative z-10 p-16 h-full flex flex-col justify-between">
+            
+            <!-- Header Section -->
+            <div class="flex justify-between items-end mb-8">
+                <div>
+                    <div class="flex items-center gap-3 mb-4 opacity-70">
+                        <span class="h-px w-12 bg-white"></span>
+                        <span class="text-sm tracking-[0.3em] uppercase">Ecosystem Overview</span>
+                    </div>
+                    <h1 class="text-7xl font-bold leading-none tracking-tight">
+                        Integrated<br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-accentPurple glow-text">Architecture</span>
+                    </h1>
+                </div>
+                <div class="max-w-md text-gray-400 text-sm leading-relaxed text-right border-r-2 border-white/20 pr-6">
+                    Orchestrating a seamless flow between user interactions and data logic through our four-pillar system design.
+                </div>
+            </div>
+
+            <!-- Cards Container -->
+            <div class="grid grid-cols-4 gap-6 mt-auto h-[340px]">
+                
+                <!-- Frontend Card -->
+                <div class="glass-panel rounded-2xl p-6 relative overflow-hidden flex flex-col">
+                    <div class="absolute top-0 right-0 p-24 bg-purple-500/10 rounded-full blur-2xl -mr-12 -mt-12"></div>
+                    <div class="relative z-10 flex flex-col h-full">
+                        <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center mb-4 shadow-lg">
+                            <i class="fa-solid fa-code text-xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Frontend</h3>
+                        <p class="text-gray-400 text-xs mb-4 flex-grow leading-relaxed">User-centric interfaces built with React and Next.js.</p>
+                        
+                        <div class="w-full bg-white/5 h-1.5 rounded-full mb-2">
+                            <div class="w-[98%] h-full bg-purple-400 rounded-full shadow-[0_0_10px_#A78BFA]"></div>
+                        </div>
+                        <span class="text-xs text-purple-300 font-mono text-right">SPEED: 98%</span>
+                    </div>
+                </div>
+
+                <!-- Backend Card -->
+                <div class="glass-panel rounded-2xl p-6 relative overflow-hidden flex flex-col">
+                    <div class="absolute top-0 right-0 p-24 bg-blue-500/10 rounded-full blur-2xl -mr-12 -mt-12"></div>
+                    <div class="relative z-10 flex flex-col h-full">
+                        <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-600 to-indigo-500 flex items-center justify-center mb-4 shadow-lg">
+                            <i class="fa-solid fa-gears text-xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Backend</h3>
+                        <p class="text-gray-400 text-xs mb-4 flex-grow leading-relaxed">Robust server-side logic and API orchestration.</p>
+                        
+                        <div class="w-full bg-white/5 h-1.5 rounded-full mb-2">
+                            <div class="w-[100%] h-full bg-blue-400 rounded-full shadow-[0_0_10px_#60A5FA]"></div>
+                        </div>
+                        <span class="text-xs text-blue-300 font-mono text-right">LOAD: MAX</span>
+                    </div>
+                </div>
+
+                <!-- Database Card -->
+                <div class="glass-panel rounded-2xl p-6 relative overflow-hidden flex flex-col">
+                    <div class="absolute top-0 right-0 p-24 bg-yellow-500/10 rounded-full blur-2xl -mr-12 -mt-12"></div>
+                    <div class="relative z-10 flex flex-col h-full">
+                        <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-yellow-500 to-orange-500 flex items-center justify-center mb-4 shadow-lg">
+                            <i class="fa-solid fa-database text-xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Database</h3>
+                        <p class="text-gray-400 text-xs mb-4 flex-grow leading-relaxed">Distributed storage clusters with real-time sync.</p>
+                        
+                        <div class="w-full bg-white/5 h-1.5 rounded-full mb-2">
+                            <div class="w-[85%] h-full bg-yellow-400 rounded-full shadow-[0_0_10px_#FACC15]"></div>
+                        </div>
+                        <span class="text-xs text-yellow-200 font-mono text-right">IOPS: 85K</span>
+                    </div>
+                </div>
+
+                <!-- Cloud Card -->
+                <div class="glass-panel rounded-2xl p-6 relative overflow-hidden flex flex-col">
+                    <div class="absolute top-0 right-0 p-24 bg-cyan-500/10 rounded-full blur-2xl -mr-12 -mt-12"></div>
+                    <div class="relative z-10 flex flex-col h-full">
+                        <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-cyan-500 to-teal-400 flex items-center justify-center mb-4 shadow-lg">
+                            <i class="fa-solid fa-cloud-bolt text-xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Cloud Native</h3>
+                        <p class="text-gray-400 text-xs mb-4 flex-grow leading-relaxed">Automated deployment pipelines and scaling.</p>
+                        
+                        <div class="w-full bg-white/5 h-1.5 rounded-full mb-2">
+                            <div class="w-[95%] h-full bg-cyan-400 rounded-full shadow-[0_0_10px_#22D3EE]"></div>
+                        </div>
+                        <span class="text-xs text-cyan-200 font-mono text-right">AUTO: ACTIVE</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

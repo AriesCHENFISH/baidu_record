@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 08 - Data Stats (No Cards)</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css" rel="stylesheet">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: '#20457C', secondary: '#3A5A6D', line: '#5A7A90', accent: '#F0F4F8' },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'sans-serif'], mono: ['"Courier New"', 'monospace'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #20457C; overflow: hidden; font-family: 'Noto Sans SC', sans-serif; }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <div class="absolute -right-20 -bottom-40 w-[600px] h-[600px] rounded-full bg-white opacity-[0.03] pointer-events-none"></div>
+        <div class="absolute right-40 top-20 w-[200px] h-[200px] rounded-full bg-white opacity-[0.02] pointer-events-none"></div>
+
+        <div class="absolute top-0 left-0 w-24 h-24 flex items-center justify-center z-20">
+            <h2 class="text-4xl font-bold text-white/20">08</h2>
+        </div>
+
+        <div class="absolute top-[50px] right-[80px] flex items-center gap-4 z-20">
+            <div class="flex flex-col items-end text-white">
+                <span class="text-sm font-bold tracking-[0.2em] uppercase opacity-90">Data Analysis</span>
+                <span class="text-xs tracking-wider opacity-60">Strategic Report 2027</span>
+            </div>
+            <div class="w-[3px] h-[35px] bg-white opacity-50"></div>
+        </div>
+
+        <div class="relative z-10 w-full h-full px-[80px] pt-[100px] pb-[60px] grid grid-cols-12 gap-12">
+            
+            <div class="col-span-4 flex flex-col justify-between h-full text-white pt-4">
+                
+                <div>
+                    <div class="relative mb-10">
+                        <h1 class="text-[64px] font-bold leading-[0.9] tracking-tight drop-shadow-md">
+                            Market<br>Trends
+                        </h1>
+                        <div class="w-12 h-1 bg-white/50 mt-6 rounded-full"></div>
+                    </div>
+                    
+                    <p class="text-white/70 text-sm leading-relaxed font-light mb-8 text-justify">
+                        Our analysis indicates a significant uptrend in user engagement across all primary sectors. The data visualizes the correlation between new feature rollouts and quarterly retention rates.
+                    </p>
+                </div>
+
+                <div class="space-y-8">
+                    <div class="group">
+                        <div class="flex items-baseline gap-3 mb-1">
+                            <span class="text-5xl font-bold font-mono text-white tracking-tighter">84%</span>
+                            <i class="fa-solid fa-arrow-trend-up text-green-400 text-sm"></i>
+                        </div>
+                        <h4 class="text-white/60 text-xs font-bold uppercase tracking-widest mb-1">Retention Rate</h4>
+                        <p class="text-white/40 text-xs font-light">Consistent growth over Q3</p>
+                    </div>
+
+                    <div class="group">
+                        <div class="flex items-baseline gap-3 mb-1">
+                            <span class="text-5xl font-bold font-mono text-white tracking-tighter">$2.4M</span>
+                        </div>
+                        <h4 class="text-white/60 text-xs font-bold uppercase tracking-widest mb-1">Total Revenue</h4>
+                        <p class="text-white/40 text-xs font-light">Exceeding projections by 15%</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-span-8 h-full flex items-center relative">
+                <div class="absolute left-0 top-0 bottom-0 w-px bg-white/10"></div>
+                
+                <div id="main_chart" class="w-full h-[500px]"></div>
+
+                <div class="absolute top-0 right-0 text-white/30 text-xs font-mono">
+                    <i class="fa-solid fa-chart-area mr-2"></i>Live Data Source
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var chartDom = document.getElementById('main_chart');
+        var myChart = echarts.init(chartDom);
+        var option;
+
+        option = {
+            backgroundColor: 'transparent', // Transparent background to blend with blue
+            tooltip: {
+                trigger: 'axis',
+                backgroundColor: 'rgba(32, 69, 124, 0.9)', // Match primary color
+                borderColor: '#fff',
+                textStyle: {
+                    color: '#fff'
+                }
+            },
+            grid: {
+                left: '5%',
+                right: '5%',
+                bottom: '5%',
+                top: '10%',
+                containLabel: true,
+                show: false // No border around grid
+            },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+                axisLine: {
+                    lineStyle: {
+                        color: 'rgba(255, 255, 255, 0.3)' // White axis line
+                    }
+                },
+                axisLabel: {
+                    color: 'rgba(255, 255, 255, 0.7)', // White text
+                    fontFamily: 'Noto Sans SC'
+                },
+                axisTick: { show: false }
+            },
+            yAxis: {
+                type: 'value',
+                splitLine: {
+                    lineStyle: {
+                        color: 'rgba(255, 255, 255, 0.05)', // Very subtle grid lines
+                        type: 'dashed'
+                    }
+                },
+                axisLabel: {
+                    color: 'rgba(255, 255, 255, 0.5)',
+                    fontFamily: 'Noto Sans SC'
+                }
+            },
+            series: [
+                {
+                    name: 'Growth',
+                    type: 'line',
+                    smooth: true,
+                    symbol: 'circle',
+                    symbolSize: 8,
+                    itemStyle: {
+                        color: '#fff' // White points
+                    },
+                    lineStyle: {
+                        color: '#fff', // White line
+                        width: 3
+                    },
+                    areaStyle: {
+                        opacity: 0.3,
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                            {
+                                offset: 0,
+                                color: 'rgba(255, 255, 255, 0.5)' // Top: White
+                            },
+                            {
+                                offset: 1,
+                                color: 'rgba(32, 69, 124, 0.01)' // Bottom: Transparent
+                            }
+                        ])
+                    },
+                    data: [120, 132, 101, 134, 90, 230, 210]
+                },
+                {
+                    name: 'Target',
+                    type: 'line',
+                    smooth: true,
+                    symbol: 'none', // No points for target line
+                    lineStyle: {
+                        color: '#5A7A90', // Secondary color line
+                        width: 2,
+                        type: 'dashed'
+                    },
+                    data: [100, 110, 120, 130, 140, 150, 160]
+                }
+            ]
+        };
+
+        option && myChart.setOption(option);
+        
+        // Resize chart on window resize
+        window.addEventListener('resize', function() {
+            myChart.resize();
+        });
+    </script>
+</body>
+</html>

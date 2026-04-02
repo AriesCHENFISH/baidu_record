@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campaign Strategy - High End Keynote</title>
+    
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryPink: '#D66D92',     /* 外部主背景粉 */
+                        paperWhite: '#F8F6F1',      /* 内部纸张白 */
+                        brandGreen: '#589157',      /* 标题绿 */
+                        brandPink: '#C95C85',       /* 标题粉 */
+                        bodyText: '#4A6354',
+                        accentYellow: '#F6C845',
+                    },
+                    fontFamily: {
+                        sans: ['Roboto', 'Noto Sans SC', 'sans-serif'],
+                        serif: ['Abril Fatface', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #D66D92; /* 外部主色调 */
+            overflow: hidden;
+        }
+
+        /* 内部白纸页设计 */
+        .paper-sheet {
+            background-color: #FBF9F6;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+            background-image: radial-gradient(#d1cfc8 0.5px, transparent 0.5px);
+            background-size: 20px 20px;
+        }
+
+        /* 贴纸文字效果：绿色版 */
+        .sticker-green {
+            color: #589157;
+            -webkit-text-stroke: 8px white;
+            paint-order: stroke fill;
+            text-shadow: 5px 5px 0px rgba(0,0,0,0.1);
+        }
+
+        /* 贴纸文字效果：粉色版 */
+        .sticker-pink {
+            color: #C95C85;
+            -webkit-text-stroke: 8px white;
+            paint-order: stroke fill;
+            text-shadow: 5px 5px 0px rgba(0,0,0,0.1);
+        }
+
+        /* 数字圆圈 */
+        .step-circle {
+            width: 48px;
+            height: 48px;
+            background-color: #589157;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 900;
+            font-size: 24px;
+            box-shadow: 4px 4px 0px #F6C845;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container" class="flex items-center justify-center">
+        
+        <!-- 主白纸内容区域 -->
+        <div class="paper-sheet w-[1150px] h-[640px] relative rounded-sm p-16 flex flex-col justify-between">
+            
+            <!-- 装饰性大符号（背景层） -->
+            <div class="absolute top-[20px] left-[60px] text-brandPink opacity-10 text-[300px] rotate-[-15deg] pointer-events-none">
+                <i class="fa-solid fa-asterisk"></i>
+            </div>
+            <div class="absolute top-[40px] right-[100px] text-brandGreen opacity-5 text-[350px] pointer-events-none">
+                <i class="fa-solid fa-leaf"></i>
+            </div>
+
+            <!-- 上半部分：主标题排版 -->
+            <div class="relative z-10 flex items-start justify-between">
+                <div class="flex flex-col">
+                    <!-- 副标题标识 -->
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="w-12 h-1 bg-accentYellow"></span>
+                        <span class="text-brandGreen font-bold tracking-[0.3em] text-sm uppercase">2024 Collection Strategy</span>
+                    </div>
+                    
+                    <!-- 主标题：绿色+粉色 拼贴样式 -->
+                    <h1 class="font-sans font-black text-8xl leading-[0.85] tracking-tighter">
+                        <span class="sticker-green block transform -rotate-3">Campaign</span>
+                        <span class="sticker-pink block ml-24 transform rotate-2">Strategy</span>
+                    </h1>
+                </div>
+
+                <!-- 右侧大型视觉装饰（代替配图） -->
+                <div class="mt-12 mr-10 relative">
+                    <!-- 旋转的星形图标 -->
+                    <div class="text-accentYellow text-[120px] animate-[spin_15s_linear_infinite]">
+                        <i class="fa-solid fa-star-of-life"></i>
+                    </div>
+                    <!-- 浮动文字环绕感 -->
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brandGreen text-white px-4 py-1 font-black text-xs uppercase tracking-widest whitespace-nowrap rotate-[-10deg] shadow-lg">
+                        Think Future
+                    </div>
+                </div>
+            </div>
+
+            <!-- 下半部分：三列文本内容（无边框排版） -->
+            <div class="grid grid-cols-3 gap-16 relative z-10">
+                
+                <!-- 第一列 -->
+                <div class="flex flex-col gap-4">
+                    <div class="flex items-center gap-4">
+                        <div class="step-circle">1</div>
+                        <h3 class="text-brandGreen font-black text-2xl uppercase tracking-tighter">Raise<br>Awareness</h3>
+                    </div>
+                    <p class="text-bodyText text-lg leading-relaxed font-medium">
+                        Educate the public about the <span class="text-brandPink font-bold">environmental benefits</span> of adopting sustainable fashion practices.
+                    </p>
+                </div>
+
+                <!-- 第二列 -->
+                <div class="flex flex-col gap-4">
+                    <div class="flex items-center gap-4">
+                        <div class="step-circle">2</div>
+                        <h3 class="text-brandGreen font-black text-2xl uppercase tracking-tighter">Eco-Friendly<br>Choices</h3>
+                    </div>
+                    <p class="text-bodyText text-lg leading-relaxed font-medium">
+                        Encourage the use of <span class="text-brandPink font-bold">sustainable materials</span> and circular manufacturing to reduce global impact.
+                    </p>
+                </div>
+
+                <!-- 第三列 -->
+                <div class="flex flex-col gap-4 relative">
+                    <div class="flex items-center gap-4">
+                        <div class="step-circle">3</div>
+                        <h3 class="text-brandGreen font-black text-2xl uppercase tracking-tighter">Conscious<br>Consumption</h3>
+                    </div>
+                    <p class="text-bodyText text-lg leading-relaxed font-medium">
+                        Advocate for <span class="text-brandPink font-bold">mindful shopping</span>, focusing on quality, durability, and reducing overconsumption.
+                    </p>
+                    
+                    <!-- 底部小点缀 -->
+                    <div class="absolute -bottom-8 right-0 text-accentYellow text-4xl">
+                        <i class="fa-solid fa-sparkles"></i>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- 外部背景装饰符号（粉色区域） -->
+        <div class="absolute top-10 right-10 text-white opacity-20 text-4xl">
+            <i class="fa-solid fa-quote-right"></i>
+        </div>
+        <div class="absolute bottom-10 left-10 text-white opacity-20 text-4xl">
+            <i class="fa-solid fa-circle-nodes"></i>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Solutions Layout</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FFFFFF;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        .bg-blob {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(210, 240, 80, 0.15) 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <!-- Background Decor -->
+        <div class="bg-blob -top-48 -left-24"></div>
+        <div class="bg-blob -bottom-24 -right-24"></div>
+
+        <!-- Main Content Grid -->
+        <div class="relative z-10 w-full h-full p-[60px] flex flex-col justify-between">
+            
+            <!-- Top Section: Headline (Left) & Image (Right) -->
+            <div class="flex justify-between items-start h-[300px]">
+                <div class="w-1/2 self-end pb-8">
+                    <div class="w-16 h-2 bg-[#D2F050] mb-6"></div>
+                    <h1 class="text-7xl font-black text-black leading-[0.9] uppercase tracking-tighter">
+                        Innovative<br>
+                        Health Solutions
+                    </h1>
+                </div>
+                
+                <!-- [Top Right] Image Section -->
+                <div class="w-[500px] h-[280px] rounded-[32px] overflow-hidden shadow-2xl border-8 border-white">
+                    <img 
+                        src="https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=1000&auto=format&fit=crop" 
+                        alt="Modern Clinic" 
+                        class="w-full h-full object-cover"
+                    >
+                </div>
+            </div>
+
+            <!-- Bottom Section: 1x2 Yellow Text Boxes -->
+            <div class="grid grid-cols-2 gap-10 h-[280px]">
+                
+                <!-- Left Box (1 of 1x2) -->
+                <div class="bg-[#D2F050] rounded-[32px] p-10 flex flex-col justify-between shadow-sm relative overflow-hidden group">
+                    <div class="flex flex-col">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i class="fa-solid fa-microscope text-black text-2xl"></i>
+                            <p class="text-[20px] font-medium italic text-black">Advanced Technology</p>
+                        </div>
+                        <div class="w-full h-[2px] bg-black mb-6 opacity-20"></div>
+                        <p class="text-[24px] font-bold text-black leading-tight">
+                            Utilizing AI-driven diagnostics for faster medical results.
+                        </p>
+                    </div>
+                    <div class="mt-auto">
+                        <div class="w-fit bg-black text-white rounded-full py-3 px-8 flex items-center gap-4 cursor-pointer hover:bg-zinc-800 transition-all">
+                            <span class="font-bold">Discover Tech</span>
+                            <i class="fa-solid fa-arrow-right -rotate-45"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Box (2 of 1x2) -->
+                <div class="bg-[#D2F050] rounded-[32px] p-10 flex flex-col justify-between shadow-sm relative overflow-hidden group">
+                    <div class="flex flex-col">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i class="fa-solid fa-user-shield text-black text-2xl"></i>
+                            <p class="text-[20px] font-medium italic text-black">Patient Security</p>
+                        </div>
+                        <div class="w-full h-[2px] bg-black mb-6 opacity-20"></div>
+                        <p class="text-[24px] font-bold text-black leading-tight">
+                            Your data and privacy are protected by global standards.
+                        </p>
+                    </div>
+                    <div class="mt-auto">
+                        <div class="w-fit bg-black text-white rounded-full py-3 px-8 flex items-center gap-4 cursor-pointer hover:bg-zinc-800 transition-all">
+                            <span class="font-bold">View Privacy</span>
+                            <i class="fa-solid fa-arrow-right -rotate-45"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer Decor -->
+        <div class="absolute bottom-8 left-[60px] text-gray-400 text-xs font-bold tracking-[0.2em] uppercase">
+            Future Medical Systems // 2025
+        </div>
+    </div>
+
+</body>
+</html>

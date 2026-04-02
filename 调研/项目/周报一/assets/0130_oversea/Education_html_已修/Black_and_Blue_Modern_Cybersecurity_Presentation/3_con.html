@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Threat Landscape - Refined</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background-color: #000000;
+            margin: 0 auto;
+            overflow: hidden;
+            /* Deep Space Background consistent with reference */
+            background: radial-gradient(circle at 50% 120%, #1e1b4b 0%, #000000 70%);
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* * Refined Cyber Card Style 
+         * Based on the "Page 10" .cyber-card-large design
+         */
+        .cyber-card {
+            /* Darker, glassier background */
+            background: linear-gradient(160deg, rgba(30, 27, 75, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%);
+            backdrop-filter: blur(20px);
+            /* Purple border accent */
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            /* Increased radius */
+            border-radius: 40px;
+            /* Stronger glow shadow */
+            box-shadow: 0 0 60px rgba(76, 29, 149, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.05);
+            position: relative;
+            overflow: hidden; /* Needed for the internal glow effect */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Hover effect - Subtle lift and increased shadow */
+        .cyber-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 80px rgba(139, 92, 246, 0.6), inset 0 0 30px rgba(255, 255, 255, 0.1);
+        }
+
+        /* Animated Glowing Border Background */
+        .cyber-card::after {
+            content: '';
+            position: absolute;
+            top: -2px; left: -2px; right: -2px; bottom: -2px;
+            /* Dynamic gradient from reference */
+            background: linear-gradient(45deg, #4f46e5, #d946ef, #4f46e5);
+            z-index: -1;
+            border-radius: 42px;
+            background-size: 400%;
+            opacity: 0.5;
+            filter: blur(10px);
+            /* Continuous animation */
+            animation: borderGlow 10s linear infinite;
+        }
+
+        @keyframes borderGlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .btn-gradient {
+            background: linear-gradient(90deg, #6b21a8 0%, #d946ef 100%);
+        }
+
+        .glow-sphere {
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.25) 0%, rgba(0, 0, 0, 0) 70%);
+            filter: blur(80px);
+            position: absolute;
+            pointer-events: none;
+        }
+        
+        .nav-button {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s;
+        }
+        .nav-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(217, 70, 239, 0.5);
+            box-shadow: 0 0 15px rgba(217, 70, 239, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+
+        <div class="glow-sphere" style="top: -100px; left: -100px; width: 600px; height: 600px;"></div>
+        <div class="glow-sphere" style="bottom: -200px; right: -100px; width: 800px; height: 600px; background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, rgba(0, 0, 0, 0) 70%);"></div>
+
+        <div class="absolute top-0 w-full flex justify-end items-center px-16 pt-12 pb-4 z-50">
+            <div class="btn-gradient px-8 py-3 rounded-full text-white font-bold shadow-lg" style="box-shadow: 0 4px 20px rgba(217, 70, 239, 0.4);">
+                Page 03
+            </div>
+        </div>
+
+        <div class="relative w-full h-full flex flex-col items-center justify-center z-20 pt-10 px-16">
+            
+            <div class="text-center mb-16">
+                <h1 class="text-6xl font-extrabold text-white mb-6 drop-shadow-xl tracking-tight leading-tight">
+                    Cyber Threat <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-fuchsia-400">Landscape</span>
+                </h1>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="flex flex-row justify-center gap-12 w-full max-w-6xl">
+                
+                <div class="cyber-card flex-1 p-10 flex flex-col justify-center h-80 group">
+                    <div class="relative z-10">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 rounded-full bg-indigo-900/50 flex items-center justify-center border border-indigo-500/30 mr-4 shadow-[0_0_15px_rgba(99,102,241,0.3)]">
+                                <i class="fa-solid fa-triangle-exclamation text-indigo-400 text-xl"></i>
+                            </div>
+                            <h3 class="text-white text-2xl font-bold tracking-wide drop-shadow-md">THE CHALLENGE</h3>
+                        </div>
+                        <p class="text-gray-300 text-lg leading-relaxed font-light">
+                            Cyber threats are constantly evolving, from phishing and ransomware to sophisticated malware. Hackers exploit vulnerabilities in software, systems, and human behavior constantly.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="cyber-card flex-1 p-10 flex flex-col justify-center h-80 group">
+                    <div class="relative z-10">
+                        <div class="flex items-center mb-6">
+                             <div class="w-12 h-12 rounded-full bg-fuchsia-900/50 flex items-center justify-center border border-fuchsia-500/30 mr-4 shadow-[0_0_15px_rgba(217,70,239,0.3)]">
+                                <i class="fa-solid fa-shield-halved text-fuchsia-400 text-xl"></i>
+                            </div>
+                            <h3 class="text-white text-2xl font-bold tracking-wide drop-shadow-md">STRATEGIC DEFENSE</h3>
+                        </div>
+                        <p class="text-gray-300 text-lg leading-relaxed font-light">
+                            Effective defense requires a proactive approach. Organizations must implement zero-trust architectures and real-time monitoring to mitigate risks before they cause irreversible damage.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="absolute bottom-12 right-16 z-30">
+            <div class="nav-button w-14 h-14 rounded-full flex items-center justify-center cursor-pointer">
+                <i class="fa-solid fa-arrow-right text-white text-xl"></i>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

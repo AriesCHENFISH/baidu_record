@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table of Contents</title>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            yellow: '#FDF14F',
+                            navy: '#234985',
+                            accent: '#1A3663'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FDF14F;
+            overflow: hidden;
+        }
+
+        /* Hard Shadow Utility */
+        .solid-shadow {
+            box-shadow: 6px 6px 0px #234985;
+        }
+        
+        /* Smaller Shadow for cards */
+        .card-shadow {
+            box-shadow: 4px 4px 0px #234985;
+            transition: all 0.2s ease;
+        }
+
+        /* Hover effect: Move up and increase shadow */
+        .toc-card:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px #234985;
+        }
+
+        /* Scrollbar hide */
+        ::-webkit-scrollbar { width: 0; }
+    </style>
+</head>
+<body>
+
+    <div id="page_container" class="flex flex-col p-12">
+        
+        <div class="absolute top-0 right-0 w-[400px] h-full border-l-2 border-brand-navy opacity-10 pointer-events-none" style="background-image: radial-gradient(#234985 2px, transparent 2px); background-size: 30px 30px;"></div>
+        <div class="absolute bottom-[-50px] left-[-50px] w-64 h-64 bg-brand-navy rounded-full opacity-5 pointer-events-none"></div>
+
+        <div class="flex justify-between items-end mb-10 z-10 shrink-0">
+            <div>
+                <div class="flex items-center gap-3 mb-2">
+                    <div class="w-4 h-4 bg-brand-navy"></div>
+                    <p class="font-bold text-brand-navy tracking-widest uppercase">Presentation Outline</p>
+                </div>
+                <h1 class="text-6xl font-extrabold text-brand-navy uppercase leading-none tracking-tight">
+                    Table of Contents
+                </h1>
+            </div>
+            
+            <div class="bg-white border-2 border-brand-navy px-6 py-3 solid-shadow transform rotate-2">
+                <p class="text-brand-navy font-bold text-lg">10 Key Sections</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-x-16 gap-y-5 flex-grow z-10">
+
+            <div class="flex flex-col gap-5">
+                
+                <div class="toc-card bg-white border-[3px] border-brand-navy p-3 flex items-center gap-4 card-shadow cursor-default">
+                    <div class="w-12 h-12 bg-brand-navy flex items-center justify-center shrink-0">
+                        <span class="text-brand-yellow font-black text-xl">01</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <h3 class="text-lg font-bold text-brand-navy uppercase leading-none">Introduction</h3>
+                        <p class="text-xs text-brand-navy opacity-70 mt-1">Project overview and objectives</p>
+                    </div>
+                </div>
+
+                <div class="toc-card bg-white border-[3px] border-brand-navy p-3 flex items-center gap-4 card-shadow cursor-default">
+                    <div class="w-12 h-12 bg-brand-navy flex items-center justify-center shrink-0">
+                        <span class="text-brand-yellow font-black text-xl">02</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <h3 class="text-lg font-bold text-brand-navy uppercase leading-none">Market Analysis</h3>
+                        <p class="text-xs text-brand-navy opacity-70 mt-1">Current trends and opportunities</p>
+                    </div>
+                </div>
+
+                <div class="toc-card bg-white border-[3px] border-brand-navy p-3 flex items-center gap-4 card-shadow cursor-default">
+                    <div class="w-12 h-12 bg-brand-navy flex items-center justify-center shrink-0">
+                        <span class="text-brand-yellow font-black text-xl">03</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <h3 class="text-lg font-bold text-brand-navy uppercase leading-none">Problem Statement</h3>
+                        <p class="text-xs text-brand-navy opacity-70 mt-1">Identifying core customer pain points</p>
+                    </div>
+                </div>
+
+                <div class="toc-card bg-white border-[3px] border-brand-navy p-3 flex items-center gap-4 card-shadow cursor-default">
+                    <div class="w-12 h-12 bg-brand-navy flex items-center justify-center shrink-0">
+                        <span class="text-brand-yellow font-black text-xl">04</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <h3 class="text-lg font-bold text-brand-navy uppercase leading-none">Target Audience</h3>
+                        <p class="text-xs text-brand-navy opacity-70 mt-1">Demographics and psychographics</p>
+                    </div>
+                </div>
+
+                <div class="toc-card bg-white border-[3px] border-brand-navy p-3 flex items-center gap-4 card-shadow cursor-default">
+                    <div class="w-12 h-12 bg-brand-navy flex items-center justify-center shrink-0">
+                        <span class="text-brand-yellow font-black text-xl">05</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <h3 class="text-lg font-bold text-brand-navy uppercase leading-none">Persona Definition</h3>
+                        <p class="text-xs text-brand-navy opacity-70 mt-1">Detailed buyer profiles</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="flex flex-col gap-5">
+
+                <div class="toc-card bg-white border-[3px] border-brand-navy p-3 flex items-center gap-4 card-shadow cursor-default">
+                    <div class="w-12 h-12 bg-white border-2 border-brand-navy flex items-center justify-center shrink-0">
+                        <span class="text-brand-navy font-black text-xl">06</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <h3 class="text-lg font-bold text-brand-navy uppercase leading-none">Research Data</h3>
+                        <p class="text-xs text-brand-navy opacity-70 mt-1">Qualitative and quantitative findings</p>
+                    </div>
+                </div>
+
+                <div class="toc-card bg-white border-[3px] border-brand-navy p-3 flex items-center gap-4 card-shadow cursor-default">
+                    <div class="w-12 h-12 bg-white border-2 border-brand-navy flex items-center justify-center shrink-0">
+                        <span class="text-brand-navy font-black text-xl">07</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <h3 class="text-lg font-bold text-brand-navy uppercase leading-none">Strategy Synthesis</h3>
+                        <p class="text-xs text-brand-navy opacity-70 mt-1">Connecting data to action</p>
+                    </div>
+                </div>
+
+                <div class="toc-card bg-white border-[3px] border-brand-navy p-3 flex items-center gap-4 card-shadow cursor-default">
+                    <div class="w-12 h-12 bg-white border-2 border-brand-navy flex items-center justify-center shrink-0">
+                        <span class="text-brand-navy font-black text-xl">08</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <h3 class="text-lg font-bold text-brand-navy uppercase leading-none">Implementation</h3>
+                        <p class="text-xs text-brand-navy opacity-70 mt-1">Roadmap and timeline</p>
+                    </div>
+                </div>
+
+                <div class="toc-card bg-white border-[3px] border-brand-navy p-3 flex items-center gap-4 card-shadow cursor-default">
+                    <div class="w-12 h-12 bg-white border-2 border-brand-navy flex items-center justify-center shrink-0">
+                        <span class="text-brand-navy font-black text-xl">09</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <h3 class="text-lg font-bold text-brand-navy uppercase leading-none">Budget & KPIs</h3>
+                        <p class="text-xs text-brand-navy opacity-70 mt-1">Financials and success metrics</p>
+                    </div>
+                </div>
+
+                <div class="toc-card bg-white border-[3px] border-brand-navy p-3 flex items-center gap-4 card-shadow cursor-default">
+                    <div class="w-12 h-12 bg-white border-2 border-brand-navy flex items-center justify-center shrink-0">
+                        <span class="text-brand-navy font-black text-xl">10</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <h3 class="text-lg font-bold text-brand-navy uppercase leading-none">Q&A / Next Steps</h3>
+                        <p class="text-xs text-brand-navy opacity-70 mt-1">Discussion and closing remarks</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="absolute bottom-6 right-8">
+            <p class="text-brand-navy font-bold text-lg opacity-50">02 / 24</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

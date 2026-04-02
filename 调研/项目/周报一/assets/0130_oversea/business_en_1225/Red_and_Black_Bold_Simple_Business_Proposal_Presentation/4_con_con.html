@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Shodwe Services Keynote</title>
+    
+    <!-- Fonts: Noto Sans SC (Domestic Mirror per instructions) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <!-- Tailwind Config for Design System Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBlack: '#000000',
+                        pureWhite: '#FFFFFF',
+                        accentRed: '#8B1C1C',
+                        softGray: '#DCDCDC',
+                        highlightBrown: '#8B4513',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                        display: ['"Noto Sans SC"', 'sans-serif'], // Using Noto Sans as primary, treating weights differently
+                    },
+                    fontSize: {
+                        '10xl': '10rem',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Outline Text Effect Utility */
+        .text-outline {
+            -webkit-text-stroke: 2px #FFFFFF;
+            color: transparent;
+        }
+        .text-outline-red {
+            -webkit-text-stroke: 1px #8B1C1C;
+            color: transparent;
+        }
+
+        /* Specific container styles per instruction */
+        .page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #000000;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Glassmorphism for text boxes */
+        .glass-box {
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(4px);
+            border: 1px solid #DCDCDC;
+        }
+        
+        /* Gradient Mask for Image blending */
+        .image-gradient-mask {
+            background: linear-gradient(to bottom, transparent 0%, #000000 90%);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Container -->
+    <div class="page_container">
+
+        <!-- Background/Hero Image Layer -->
+        <!-- Using a cinematic, moody portrait similar to the original reference -->
+        <div class="absolute inset-0 z-0 flex justify-center items-start pt-10">
+            <!-- Image Container -->
+            <div class="relative w-[500px] h-[600px]">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop" 
+                     alt="Cinematic Portrait" 
+                     class="w-full h-full object-cover opacity-90 rounded-t-full">
+                <!-- 500*600 -->
+                
+                <!-- Gradient Overlay to blend image into black background at the bottom -->
+                <div class="absolute bottom-0 left-0 w-full h-64 image-gradient-mask"></div>
+            </div>
+        </div>
+
+        <!-- Grid Layout for Content -->
+        <div class="absolute inset-0 z-10 grid grid-cols-12 grid-rows-6 gap-4 p-12">
+
+            <!-- 1. Text Box: Top Left -->
+            <div class="col-span-4 row-span-2 flex items-center">
+                <div class="glass-box p-6 rounded-2xl relative group transition-all duration-300">
+                    <!-- Decorative accent line -->
+                    <div class="absolute left-0 top-6 w-1 h-8 bg-accentRed rounded-r"></div>
+                    <p class="text-white text-sm font-light leading-relaxed tracking-wide opacity-90 pl-3">
+                        A business proposal is a detailed document that outlines a company's plan to offer its products or services to potential clients or partners.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Spacer for Center Image visibility -->
+            <div class="col-span-4"></div>
+
+            <!-- 2. Text Box: Top Right -->
+            <div class="col-span-4 row-span-2 flex items-center justify-end">
+                <div class="glass-box p-6 rounded-2xl relative text-right">
+                    <!-- Decorative accent line -->
+                    <div class="absolute right-0 top-6 w-1 h-8 bg-accentRed rounded-l"></div>
+                    <p class="text-white text-sm font-light leading-relaxed tracking-wide opacity-90 pr-3">
+                        A business proposal is a detailed document that outlines a company's plan to offer its products or services to potential clients or partners.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-span-3 row-start-3 row-span-2 flex items-start mt-4">
+                <div class="glass-box p-6 rounded-2xl relative">
+                    <p class="text-white text-xs font-light leading-relaxed opacity-80">
+                        <i class="fa-solid fa-quote-left text-accentRed mb-2 block text-lg"></i>
+                        A business proposal is a detailed document that outlines a company's plan to offer its products or services to potential clients or partners.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-span-3 col-start-10 row-start-3 row-span-2 flex items-start mt-4">
+                <div class="glass-box p-6 rounded-2xl relative text-right">
+                    <p class="text-white text-xs font-light leading-relaxed opacity-80">
+                        <i class="fa-solid fa-quote-right text-accentRed mb-2 block text-lg"></i>
+                        A business proposal is a detailed document that outlines a company's plan to offer its products or services to potential clients or partners.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Empty Space for Image -->
+            <div class="col-span-9"></div>
+
+            <!-- 4. Typography Layer: Main Title -->
+            <!-- Positioning this absolutely within the container to overlap grid slightly for visual impact -->
+            <div class="absolute bottom-0 left-0 w-full flex flex-col items-center justify-end pb-4 z-20 pointer-events-none">
+                
+                <!-- "OUR" Text - Stylized -->
+                <h2 class="text-5xl font-bold italic tracking-widest uppercase mb-[-1rem] relative z-10 translate-x-24">
+                    <span class="text-outline drop-shadow-lg">OUR</span>
+                </h2>
+
+                <!-- "SERVICES" Text - Massive -->
+                <h1 class="text-[160px] font-black text-white leading-none tracking-tighter uppercase drop-shadow-2xl mix-blend-screen">
+                    SERVICES
+                </h1>
+            </div>
+
+            <!-- 5. Footer Info: Bottom Left -->
+            <div class="absolute bottom-10 left-12 z-30">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-[2px] bg-accentRed"></div>
+                    <h3 class="text-white font-medium tracking-widest text-sm uppercase">Studio Shodwe</h3>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Decorative Elements -->
+        <!-- Subtle red glow behind the subject -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accentRed rounded-full blur-[120px] opacity-20 pointer-events-none z-0"></div>
+
+    </div>
+
+</body>
+</html>

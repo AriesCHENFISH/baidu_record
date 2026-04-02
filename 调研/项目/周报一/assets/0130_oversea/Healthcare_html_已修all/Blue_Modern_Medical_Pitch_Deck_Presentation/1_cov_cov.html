@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keitston Medical - Cover Page</title>
+    
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        midnight: '#121C38',
+                        medicalBlue: '#3B82F6',
+                        softBlue: '#F0F7FF',
+                        slateGrey: '#4A5568',
+                        borderBlue: '#CFE1F3'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FFFFFF;
+            overflow: hidden;
+        }
+
+        /* 延续内容页 Logo 样式 */
+        .brand-text-main {
+            font-size: 24px;
+            font-weight: 900;
+            letter-spacing: 0.15em;
+            color: #121C38;
+            line-height: 1;
+            text-transform: uppercase;
+        }
+        .brand-text-sub {
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 0.45em;
+            color: #3B82F6;
+            margin-top: 4px;
+            text-transform: uppercase;
+        }
+
+        /* 点阵背景 */
+        .dot-pattern {
+            background-image: radial-gradient(#CBD5E0 1.5px, transparent 1.5px);
+            background-size: 40px 40px;
+            opacity: 0.15;
+        }
+
+        /* 延续内容页的偏移阴影设计 */
+        .box-offset-shadow {
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            width: 100%;
+            height: 100%;
+            border: 2.5px solid #121C38;
+            border-radius: 100px 0 100px 0;
+            z-index: -1;
+            opacity: 0.08;
+        }
+
+        /* 核心标题框（背景色参考内容页） */
+        .title-card {
+            background-color: #F0F7FF;
+            border: 1px solid #CFE1F3;
+            border-radius: 100px 0 100px 0;
+            padding: 80px 110px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .meta-label {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.3em;
+            color: #3B82F6;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .meta-value {
+            font-size: 20px;
+            font-weight: 500;
+            color: #121C38;
+            letter-spacing: 0.05em;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container" class="flex items-center justify-center">
+        
+        <!-- 背景修饰 -->
+        <div class="dot-pattern absolute inset-0"></div>
+        
+        <!-- 左上角品牌标识 -->
+        <div class="absolute top-12 left-12">
+            <div class="brand-text-main">Keitston</div>
+            <div class="brand-text-sub">Medical Group</div>
+        </div>
+
+        <!-- 主标题区域 -->
+        <div class="relative">
+            <!-- 偏移边框 -->
+            <div class="box-offset-shadow"></div>
+
+            <!-- 浅蓝色主背景框 -->
+            <div class="title-card flex flex-col items-center text-center">
+                
+                <!-- 顶部标识标签 -->
+                <div class="px-6 py-1.5 bg-[#3B82F6] text-white text-[11px] font-bold tracking-[0.4em] uppercase mb-12">
+                    Internal Strategy
+                </div>
+
+                <!-- 主标题 -->
+                <h1 class="text-midnight text-[90px] font-black tracking-tighter leading-[0.9] mb-16">
+                    MEDICAL<br>
+                    <span class="text-medicalBlue">HEALTHCARE</span>
+                </h1>
+
+                <!-- 汇报人与时间信息区 -->
+                <div class="flex gap-20 items-start">
+                    <!-- 汇报人 -->
+                    <div class="flex flex-col items-center">
+                        <div class="meta-label">Presented by</div>
+                        <div class="meta-value">Dr. Alexander Keitston</div>
+                    </div>
+
+                    <!-- 分隔点（非横杠设计） -->
+                    <div class="w-1.5 h-1.5 rounded-full bg-borderBlue mt-8"></div>
+
+                    <!-- 时间 -->
+                    <div class="flex flex-col items-center">
+                        <div class="meta-label">Release Date</div>
+                        <div class="meta-value">October 24, 2026</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 右下角补充信息 -->
+        <div class="absolute bottom-12 right-12 text-right">
+            <div class="text-slateGrey/40 text-[10px] tracking-[0.2em] font-bold uppercase leading-relaxed">
+                Future-Ready Systems<br>
+                Digital Transformation Framework
+            </div>
+        </div>
+
+        <!-- 装饰背景大字 -->
+        <div class="absolute -bottom-16 -left-10 font-black text-[#121C38] text-[300px] opacity-[0.02] select-none pointer-events-none">
+            2026
+        </div>
+
+    </div>
+
+</body>
+</html>

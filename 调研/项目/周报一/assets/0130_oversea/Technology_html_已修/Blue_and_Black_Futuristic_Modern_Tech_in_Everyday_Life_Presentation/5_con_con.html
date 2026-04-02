@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, height=720, initial-scale=1.0">
+    <title>Technology in Business - Keynote Slide</title>
+
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBlack: '#050813',
+                        cyberBlue: '#73C5FF',
+                        holoCyan: '#00F0FF',
+                        quantumWhite: '#F0F4F8',
+                    },
+                    fontFamily: {
+                        tech: ['Rajdhani', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        #page_container {
+            width: 1280px; height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #050813;
+            overflow: hidden;
+            color: #F0F4F8;
+        }
+
+        /* Perspective Grid Floor */
+        .cyber-grid {
+            position: absolute;
+            width: 200%; height: 100%;
+            bottom: -50%; left: -50%;
+            background-image: 
+                linear-gradient(rgba(0, 240, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 240, 255, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            transform: perspective(500px) rotateX(65deg);
+            opacity: 0.2;
+            z-index: 1;
+        }
+
+        /* Content Box with Clipped Corners */
+        .tech-card {
+            background: rgba(44, 62, 80, 0.4);
+            border: 1px solid rgba(115, 197, 255, 0.3);
+            clip-path: polygon(0 0, 95% 0, 100% 15%, 100% 100%, 5% 100%, 0 85%);
+            backdrop-filter: blur(10px);
+            position: relative;
+        }
+
+        .tech-card::after {
+            content: "DATA_CORE // 04";
+            position: absolute;
+            bottom: 5px; right: 20px;
+            font-family: 'Rajdhani';
+            font-size: 10px;
+            color: #73C5FF;
+            letter-spacing: 2px;
+            opacity: 0.5;
+        }
+
+        .text-glow { text-shadow: 0 0 20px rgba(115, 197, 255, 0.6); }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <div class="cyber-grid"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-deepBlack via-transparent to-deepBlack opacity-80 z-[2]"></div>
+
+        <div class="relative z-10 h-full flex flex-col p-[60px] px-[80px]">
+            
+            <div class="flex justify-center mb-[40px] relative">
+                <div class="absolute left-[-20px] top-1/2 -translate-y-1/2 w-10 h-16 border-l-4 border-y-2 border-cyberBlue"></div>
+                <div class="absolute right-[-20px] top-1/2 -translate-y-1/2 w-10 h-16 border-r-4 border-y-2 border-cyberBlue"></div>
+                
+                <div class="px-16 py-3 border-y border-cyberBlue/30 bg-gradient-to-r from-transparent via-deepBlack/80 to-transparent">
+                    <h1 class="text-6xl font-tech font-bold text-quantumWhite tracking-wider uppercase text-glow">
+                        Technology in <span class="text-cyberBlue">Business</span>
+                    </h1>
+                </div>
+            </div>
+
+            <div class="flex-grow grid grid-cols-12 gap-12 items-center">
+                
+                <div class="col-span-5 flex flex-col justify-center">
+                    <div class="tech-card p-10 pt-12">
+                        <div class="absolute top-0 left-10 w-20 h-1 bg-cyberBlue shadow-[0_0_10px_#73C5FF]"></div>
+                        
+                        <h2 class="font-tech text-cyberBlue text-2xl tracking-[0.2em] mb-4 uppercase">Executive Summary</h2>
+                        <p class="text-quantumWhite/80 text-lg leading-relaxed text-justify font-light">
+                            Digital transformation acts as the primary catalyst for modern enterprise growth. By integrating high-frequency data analytics and automated workflows, businesses bridge the gap between human strategy and machine efficiency, creating sustainable competitive advantages in an increasingly volatile global market.
+                        </p>
+                    </div>
+
+                    <div class="mt-8 flex items-center gap-6 opacity-60">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-microchip text-cyberBlue"></i>
+                            <span class="font-tech text-xs tracking-widest uppercase">System: Active</span>
+                        </div>
+                        <div class="h-4 w-[1px] bg-mechaGrey"></div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-signal text-cyberBlue"></i>
+                            <span class="font-tech text-xs tracking-widest uppercase">Stream: Optimized</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-span-7 h-[450px] relative">
+                    <div class="absolute inset-0 bg-cyberBlue/5 filter blur-[100px] rounded-full"></div>
+                    <div id="main-chart" class="w-full h-full"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const chartDom = document.getElementById('main-chart');
+            const myChart = echarts.init(chartDom);
+            
+            const categories = ['Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6'];
+            const dataValues = [45, 72, 60, 85, 110, 145];
+
+            const option = {
+                backgroundColor: 'transparent',
+                grid: { left: '10%', right: '10%', bottom: '15%', top: '15%', containLabel: true },
+                xAxis: {
+                    type: 'category',
+                    data: categories,
+                    axisLine: { lineStyle: { color: 'rgba(115,197,255,0.3)' } },
+                    axisLabel: { color: '#8B9BB4', fontFamily: 'Rajdhani', fontSize: 14, margin: 15 }
+                },
+                yAxis: {
+                    type: 'value',
+                    splitLine: { lineStyle: { color: 'rgba(44,62,80,0.2)', type: 'dashed' } },
+                    axisLabel: { show: false }
+                },
+                series: [{
+                    name: 'Market Growth',
+                    type: 'bar',
+                    barWidth: '40%',
+                    data: dataValues,
+                    // Dynamic Labels on Bars
+                    label: {
+                        show: true,
+                        position: 'top',
+                        distance: 10,
+                        color: '#73C5FF',
+                        fontFamily: 'Rajdhani',
+                        fontSize: 18,
+                        fontWeight: 'bold',
+                        formatter: '{c}%'
+                    },
+                    itemStyle: {
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                            { offset: 0, color: '#00F0FF' },
+                            { offset: 1, color: 'rgba(115,197,255,0.05)' }
+                        ]),
+                        borderRadius: [5, 5, 0, 0]
+                    },
+                    // Visual Glow Effect
+                    emphasis: {
+                        itemStyle: {
+                            color: '#73C5FF',
+                            shadowBlur: 15,
+                            shadowColor: 'rgba(0, 240, 255, 0.8)'
+                        }
+                    }
+                }, {
+                    type: 'line',
+                    data: dataValues,
+                    smooth: true,
+                    symbolSize: 10,
+                    lineStyle: { width: 4, color: '#FFFFFF', shadowBlur: 10, shadowColor: '#73C5FF' },
+                    itemStyle: { color: '#FFFFFF', borderColor: '#73C5FF', borderWidth: 2 }
+                }]
+            };
+
+            myChart.setOption(option);
+            window.addEventListener('resize', () => myChart.resize());
+        });
+    </script>
+</body>
+</html>

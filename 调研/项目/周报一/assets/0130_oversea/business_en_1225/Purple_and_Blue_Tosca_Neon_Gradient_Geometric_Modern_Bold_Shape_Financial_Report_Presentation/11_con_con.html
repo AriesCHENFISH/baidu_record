@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risks and Challenges Analysis - Fradel Company</title>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBg: '#05050F',
+                        primaryText: '#DDFCF2',
+                        bodyText: '#B0B0B0',
+                        chart2: '#88DEE3',
+                        chart3: '#64B0CF',
+                        chart4: '#538AB8',
+                    },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        /* Page Container - Strict 1280x720 */
+        #page_container { 
+            width: 1280px; 
+            height: 720px; 
+            position: relative; 
+            background-color: #05050F; 
+            overflow: hidden; 
+            margin: 0 auto; 
+        }
+
+        /* Diagonal Clip Path for Right Image */
+        .image-clip-shape { 
+            clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%); 
+        }
+
+        /* Glassmorphism Card Style */
+        .glass-card { 
+            background: rgba(24, 18, 58, 0.6); 
+            backdrop-filter: blur(12px); 
+            border: 1px solid rgba(221, 252, 242, 0.1); 
+        }
+
+        /* 列表项圆点仅用于左侧卡片内容，通过 class 严格限制 */
+        .card-list li { 
+            list-style: none; 
+            position: relative; 
+            padding-left: 1.5rem; 
+            margin-bottom: 0.75rem; 
+            color: #B0B0B0; 
+        }
+
+        .card-list li::before { 
+            content: '\f111'; 
+            font-family: 'FontAwesome'; 
+            position: absolute; 
+            left: 0; 
+            top: 4px; 
+            font-size: 0.5rem; 
+            color: #88DEE3; 
+        }
+
+        /* 导航栏样式：彻底移除列表样式 */
+        .nav-list {
+            list-style: none !important;
+            display: flex;
+            align-items: center;
+        }
+        .nav-list li::before {
+            display: none !important; /* 强制确保没有 FontAwesome 圆点注入 */
+            content: none !important;
+        }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        
+        <div class="absolute top-8 left-1/2 transform -translate-x-1/2 w-[95%] z-50">
+            <nav class="flex items-center justify-between w-full h-20 px-10 rounded-full" 
+                 style="background: linear-gradient(90deg, #6a44f0 0%, #1E1B33 40%, #1E1B33 100%); box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);">
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 flex items-center justify-center rounded-full bg-[#DDFCF2] text-[#05050F]">
+                        <i class="fa-solid fa-layer-group text-xl"></i>
+                    </div>
+                    <h2 class="text-[#DDFCF2] text-xl font-bold tracking-wide">Fradel Company</h2>
+                </div>
+                <ul class="nav-list gap-12 m-0 p-0">
+                    <li class="cursor-pointer"><b class="text-[#DDFCF2] text-sm tracking-widest hover:text-white transition-colors">HOME</b></li>
+                    <li class="cursor-pointer"><b class="text-[#B0B0B0] text-sm tracking-widest hover:text-[#DDFCF2] transition-colors">ABOUT</b></li>
+                    <li class="cursor-pointer"><b class="text-[#B0B0B0] text-sm tracking-widest hover:text-[#DDFCF2] transition-colors">MORE</b></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="absolute top-44 left-20 w-[600px] z-20 flex flex-col justify-start">
+            <h1 class="text-6xl font-bold mb-12 leading-tight tracking-tight text-[#DDFCF2]">
+                Risks and <br>Challenges
+            </h1>
+
+            <div class="flex gap-6 w-full mb-10">
+                <div class="flex-1 glass-card rounded-2xl p-6 relative">
+                    <div class="absolute top-0 left-6 right-6 h-1 rounded-b-lg bg-[#64B0CF]"></div>
+                    <h3 class="text-xl font-bold mb-4 mt-2 text-[#DDFCF2]">Key Risks</h3>
+                    <ul class="card-list">
+                        <li>Economic uncertainty</li>
+                        <li>Regulatory changes</li>
+                        <li>Supply chain volatility</li>
+                    </ul>
+                </div>
+
+                <div class="flex-1 glass-card rounded-2xl p-6 relative">
+                    <div class="absolute top-0 left-6 right-6 h-1 rounded-b-lg bg-[#C8F9E6]"></div>
+                    <h3 class="text-xl font-bold mb-4 mt-2 text-[#DDFCF2]">Mitigation Strategies</h3>
+                    <ul class="card-list">
+                        <li>Diversified supply chain</li>
+                        <li>Cost optimization</li>
+                        <li>Compliance monitoring</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pr-4">
+                <p class="text-sm leading-relaxed text-justify opacity-80 text-[#B0B0B0]">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+                </p>
+            </div>
+        </div>
+
+        <div class="absolute top-0 right-0 h-full w-[45%] z-10">
+            <div class="w-full h-full image-clip-shape relative overflow-hidden">
+                <div class="absolute inset-0 z-10 pointer-events-none" style="background: linear-gradient(120deg, rgba(5,5,15,0.4), rgba(24,18,58,0.2));"></div>
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2670&auto=format&fit=crop" class="w-full h-full object-cover">
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

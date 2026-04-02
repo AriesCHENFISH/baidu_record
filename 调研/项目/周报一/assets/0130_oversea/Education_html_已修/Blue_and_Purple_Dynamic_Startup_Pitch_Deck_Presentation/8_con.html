@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strategic Performance - Data Analytics</title>
+    
+    <!-- Google Fonts: Noto Sans SC & Inter -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <!-- ECharts CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBlack: '#000000',
+                        primaryStart: '#8C7AE6',
+                        primaryEnd: '#1B3F9B',
+                        darkBg: '#1A1B2E',
+                        neon: '#B33CE0',
+                        bodyText: '#D1D5DB'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans SC', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #000000;
+            overflow: hidden;
+            font-family: 'Inter', 'Noto Sans SC', sans-serif;
+        }
+
+        /* 延续团队页的霓虹装饰 */
+        .neon-glow {
+            position: absolute;
+            top: -100px;
+            left: -100px;
+            width: 800px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(27, 63, 155, 0.25) 0%, rgba(140, 122, 230, 0.15) 30%, rgba(0,0,0,0) 70%);
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: 1;
+        }
+
+        .neon-line {
+            position: absolute;
+            bottom: 50px;
+            left: -100px;
+            width: 800px;
+            height: 300px;
+            border-top: 1px solid rgba(179, 60, 224, 0.3);
+            border-radius: 100%;
+            transform: rotate(5deg);
+            z-index: 1;
+        }
+
+        /* 玻璃拟态数据卡片 */
+        .data-card {
+            background: linear-gradient(135deg, rgba(26, 27, 46, 0.8) 0%, rgba(16, 37, 90, 0.4) 100%);
+            border: 1px solid rgba(140, 122, 230, 0.2);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+        }
+
+        .metric-highlight {
+            background: linear-gradient(to right, #ffffff, #8C7AE6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+
+        /* 侧边点阵装饰 */
+        .dot-grid {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            display: grid;
+            grid-template-columns: repeat(5, 4px);
+            gap: 12px;
+            opacity: 0.3;
+        }
+        .dot { width: 4px; height: 4px; background: white; border-radius: 50%; }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <!-- 背景环境 -->
+        <div class="neon-glow"></div>
+        <div class="neon-line"></div>
+        <div class="dot-grid">
+            <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+            <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+            <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+        </div>
+
+        <div class="relative z-10 flex flex-col h-full px-16 py-12">
+            
+            <!-- 头部标题：延续团队页风格 -->
+            <header class="mb-10 flex justify-between items-end">
+                <div class="border-l-4 border-neon pl-6">
+                    <h1 class="text-5xl font-black text-white tracking-tight uppercase">
+                        Strategic Growth <span class="text-primaryStart">&</span> Performance
+                    </h1>
+                    <p class="text-lg text-bodyText font-light mt-2 tracking-wide uppercase">
+                        Fiscal Year 2025 Market Expansion Analysis
+                    </p>
+                </div>
+                <div class="text-right">
+                    <span class="text-xs text-white/40 tracking-[0.3em] uppercase">Confidential Report</span>
+                </div>
+            </header>
+
+            <!-- 主内容区：左图右表布局 -->
+            <main class="grid grid-cols-12 gap-8 flex-grow">
+                
+                <!-- 左侧：大型图表卡片 (占 8 列) -->
+                <div class="col-span-8 flex flex-col">
+                    <div class="data-card rounded-3xl p-8 h-full flex flex-col">
+                        <div class="flex justify-between items-center mb-6">
+                            <h3 class="text-white font-bold text-xl flex items-center gap-3">
+                                <i class="fa-solid fa-chart-area text-neon"></i>
+                                Revenue Stream by Region
+                            </h3>
+                            <div class="flex gap-4 text-xs text-bodyText">
+                                <span class="flex items-center gap-1"><i class="fa-solid fa-circle text-[#8C7AE6]"></i> Domestic</span>
+                                <span class="flex items-center gap-1"><i class="fa-solid fa-circle text-[#B33CE0]"></i> International</span>
+                            </div>
+                        </div>
+                        <!-- 图表容器 -->
+                        <div id="growthChart" class="w-full flex-grow"></div>
+                    </div>
+                </div>
+
+                <!-- 右侧：KPI 磁贴 & 描述 (占 4 列) -->
+                <div class="col-span-4 flex flex-col gap-6">
+                    
+                    <!-- KPI 1 -->
+                    <div class="data-card rounded-2xl p-6 flex flex-col justify-between">
+                        <p class="text-gray-400 text-sm font-medium mb-1">Total Market Share</p>
+                        <div class="flex items-baseline gap-2">
+                            <span class="metric-highlight text-5xl">38.4%</span>
+                            <span class="text-green-400 text-sm font-bold"><i class="fa-solid fa-caret-up"></i> 12%</span>
+                        </div>
+                        <div class="w-full bg-white/10 h-1 mt-4 rounded-full overflow-hidden">
+                            <div class="bg-neon h-full w-[38%] shadow-[0_0_10px_#B33CE0]"></div>
+                        </div>
+                    </div>
+
+                    <!-- KPI 2 -->
+                    <div class="data-card rounded-2xl p-6 flex flex-col justify-between">
+                        <p class="text-gray-400 text-sm font-medium mb-1">Customer Retention</p>
+                        <div class="flex items-baseline gap-2">
+                            <span class="metric-highlight text-5xl">92.8%</span>
+                            <span class="text-green-400 text-sm font-bold"><i class="fa-solid fa-caret-up"></i> 4.2%</span>
+                        </div>
+                    </div>
+
+                    <!-- 战略总结文本 -->
+                    <div class="flex-grow bg-white/5 border border-white/10 rounded-2xl p-6 mt-2">
+                        <h4 class="text-primaryStart font-bold uppercase text-xs tracking-widest mb-3">Executive Summary</h4>
+                        <p class="text-bodyText text-sm leading-relaxed">
+                            Our strategic expansion into Asian markets has yielded a 25% increase in quarterly revenue.
+                        </p>
+                        <ul class="mt-4 space-y-2">
+                            <li class="flex items-center gap-2 text-xs text-gray-300">
+                                <i class="fa-solid fa-check text-neon"></i> Scaled production in Tier-1 regions
+                            </li>
+                            <li class="flex items-center gap-2 text-xs text-gray-300">
+                                <i class="fa-solid fa-check text-neon"></i> Partnership with global logistics
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </main>
+
+            <!-- 底部：延续团队页页脚 -->
+            <footer class="mt-10 border-t border-white/10 pt-6">
+                <div class="flex justify-between items-center text-bodyText/60 text-[10px] tracking-[0.2em] uppercase">
+                    <div class="flex gap-12">
+                        <span>Project: Horizon 2026</span>
+                        <span>Department: Strategy & Finance</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-2 h-2 rounded-full bg-neon animate-pulse"></div>
+                        Live Data Synchronization Active
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- ECharts 初始化 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const chartDom = document.getElementById('growthChart');
+            const myChart = echarts.init(chartDom);
+            
+            const option = {
+                backgroundColor: 'transparent',
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: { type: 'shadow' },
+                    backgroundColor: 'rgba(26, 27, 46, 0.9)',
+                    borderColor: '#8C7AE6',
+                    textStyle: { color: '#fff' }
+                },
+                grid: {
+                    top: '10%',
+                    left: '3%',
+                    right: '4%',
+                    bottom: '5%',
+                    containLabel: true
+                },
+                xAxis: {
+                    type: 'category',
+                    data: ['Q1', 'Q2', 'Q3', 'Q4', 'Q1-25'],
+                    axisLine: { lineStyle: { color: 'rgba(255,255,255,0.2)' } },
+                    axisLabel: { color: '#888', fontSize: 11 }
+                },
+                yAxis: {
+                    type: 'value',
+                    splitLine: { lineStyle: { color: 'rgba(255,255,255,0.05)' } },
+                    axisLine: { show: false },
+                    axisLabel: { color: '#888', fontSize: 11 }
+                },
+                series: [
+                    {
+                        name: 'Domestic',
+                        type: 'bar',
+                        barWidth: '20%',
+                        itemStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                                { offset: 0, color: '#8C7AE6' },
+                                { offset: 1, color: '#1B3F9B' }
+                            ]),
+                            borderRadius: [4, 4, 0, 0]
+                        },
+                        data: [320, 450, 410, 580, 620]
+                    },
+                    {
+                        name: 'International',
+                        type: 'bar',
+                        barWidth: '20%',
+                        itemStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                                { offset: 0, color: '#B33CE0' },
+                                { offset: 1, color: '#8C7AE6' }
+                            ]),
+                            borderRadius: [4, 4, 0, 0]
+                        },
+                        data: [150, 230, 310, 420, 510]
+                    },
+                    {
+                        name: 'Trend',
+                        type: 'line',
+                        smooth: true,
+                        showSymbol: false,
+                        lineStyle: { width: 3, color: '#fff', shadowBlur: 10, shadowColor: 'rgba(255,255,255,0.5)' },
+                        data: [235, 340, 360, 500, 565]
+                    }
+                ]
+            };
+
+            myChart.setOption(option);
+
+            window.addEventListener('resize', () => {
+                myChart.resize();
+            });
+        });
+    </script>
+</body>
+</html>

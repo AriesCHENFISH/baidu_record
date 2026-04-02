@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 03 - Infrastructure (Refined)</title>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { deepBlack: '#020204', accentPurple: '#9D50E6', accentBlue: '#2A3C95' },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .page_container {
+            width: 1280px; height: 720px; margin: 0 auto;
+            position: relative; background-color: #000000;
+            overflow: hidden; font-family: 'Noto Sans SC', sans-serif; color: #FFFFFF;
+        }
+        /* Applied Page 1 Card Style */
+        .data-card { 
+            background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, transparent 100%); 
+            border: 1px solid rgba(255,255,255,0.1); 
+        }
+        .glow-text { text-shadow: 0 0 20px rgba(42, 60, 149, 0.5); }
+    </style>
+</head>
+<body>
+    <div class="page_container flex flex-col">
+        
+        <!-- Header -->
+        <div class="relative z-20 pt-12 px-16 flex justify-between items-end">
+            <div>
+                <h1 class="text-5xl font-bold mb-2 tracking-tight">System <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-cyan-400">Architecture</span></h1>
+                <p class="text-gray-500 text-sm tracking-wider uppercase font-mono">Global Distribution Network</p>
+            </div>
+            <div class="flex gap-4">
+                <span class="px-3 py-1 rounded border border-white/10 text-cyan-400 text-xs bg-cyan-900/10 font-mono">● System Online</span>
+                <span class="px-3 py-1 rounded border border-white/10 text-gray-500 text-xs font-mono">v4.2.0 Stable</span>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="relative z-10 px-16 mt-10 h-full pb-12 flex flex-col">
+            
+            <!-- Large Central Visual (Map/Data) -->
+            <!-- Changed styling to data-card and rounded-3xl -->
+            <div class="data-card w-full flex-grow rounded-3xl relative overflow-hidden">
+                <!-- Background Image -->
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2000&auto=format&fit=crop" 
+                     alt="Global Network" 
+                     class="absolute inset-0 w-full h-full object-cover opacity-50 mix-blend-screen grayscale-[30%]">
+                
+                <!-- Map Overlay Gradient -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+
+                <!-- HUD Overlay Elements -->
+                <div class="absolute top-8 left-8">
+                    <div class="text-xs font-mono text-blue-400 mb-1">DATA FLOW INGESTION</div>
+                    <div class="text-3xl font-bold font-mono text-white">84.2 TB/s</div>
+                </div>
+
+                <div class="absolute bottom-8 right-8 text-right">
+                    <div class="flex gap-1 justify-end mb-1">
+                        <div class="w-1 h-4 bg-cyan-400"></div>
+                        <div class="w-1 h-3 bg-cyan-400/50"></div>
+                        <div class="w-1 h-5 bg-cyan-400"></div>
+                        <div class="w-1 h-2 bg-cyan-400/30"></div>
+                    </div>
+                    <div class="text-xs font-mono text-gray-500">ACTIVE NODES: 4,203</div>
+                </div>
+                
+                <!-- Central Animated Ring -->
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-blue-500/20 rounded-full flex items-center justify-center">
+                    <div class="w-48 h-48 border border-accentPurple/50 rounded-full animate-ping opacity-20"></div>
+                    <i class="fa-solid fa-globe text-6xl text-white/10"></i>
+                </div>
+            </div>
+
+            <!-- Bottom Stats Grid -->
+            <!-- Updated to match Page 1's grid spacing and card style -->
+            <div class="grid grid-cols-3 gap-8 mt-8 h-[140px]">
+                
+                <!-- Stat Card 1: Latency (Blue - Matches Page 1 Responsiveness) -->
+                <div class="data-card p-6 rounded-3xl flex items-center justify-between group">
+                    <div>
+                        <div class="text-blue-400 text-xs font-mono mb-2">/ LATENCY</div>
+                        <div class="text-4xl font-bold text-white">12<span class="text-xl text-gray-500 font-normal ml-1">ms</span></div>
+                    </div>
+                    <div class="w-12 h-12 bg-blue-900/10 rounded-full flex items-center justify-center border border-blue-500/20">
+                        <i class="fa-solid fa-bolt text-blue-400"></i>
+                    </div>
+                </div>
+
+                <!-- Stat Card 2: Uptime (Purple - Matches Page 1 Stability) -->
+                <!-- Added border-b-4 to match Page 1 style -->
+                <div class="data-card p-6 rounded-3xl flex items-center justify-between group border-b-4 border-b-[#9D50E6]">
+                    <div>
+                        <div class="text-[#9D50E6] text-xs font-mono mb-2">/ UPTIME</div>
+                        <div class="text-4xl font-bold text-white">99.99<span class="text-xl text-gray-500 font-normal ml-1">%</span></div>
+                    </div>
+                    <div class="w-12 h-12 bg-purple-900/10 rounded-full flex items-center justify-center border border-purple-500/20">
+                        <i class="fa-solid fa-server text-[#9D50E6]"></i>
+                    </div>
+                </div>
+
+                <!-- Stat Card 3: Security (Cyan - Matches Page 1 Efficiency/Gradient) -->
+                <div class="data-card p-6 rounded-3xl flex items-center justify-between group">
+                    <div>
+                        <div class="text-cyan-400 text-xs font-mono mb-2">/ SECURITY</div>
+                        <div class="text-3xl font-bold text-white">AES-256</div>
+                    </div>
+                    <div class="w-12 h-12 bg-cyan-900/10 rounded-full flex items-center justify-center border border-cyan-500/20">
+                        <i class="fa-solid fa-shield-halved text-cyan-400"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

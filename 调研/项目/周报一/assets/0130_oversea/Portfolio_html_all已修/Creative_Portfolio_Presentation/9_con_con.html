@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Testimonials - Vintage Cinematic Keynote</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts (Domestic Mirror) -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1B3A3E',
+                        secondary: '#2F4F52',
+                        accent: '#B23A26',
+                        cream: '#E8E2D2',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                        serif: ['"Times New Roman"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            background-color: #1B3A3E;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        /* 电影胶片感边框 */
+        .film-frame {
+            border: 1px solid rgba(232, 226, 210, 0.2);
+            position: absolute;
+            inset: 40px;
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        .testimonial-card {
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            /* 高度减少 50px 的关键：限制内容区高度 */
+            height: 420px; 
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+        }
+
+        /* 颗粒纹理 */
+        .grain::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+            opacity: 0.03;
+            pointer-events: none;
+            z-index: 50;
+        }
+    </style>
+</head>
+<body class="grain">
+
+    <div id="page_container">
+        <!-- 装饰背景 -->
+        <div class="film-frame"></div>
+        <div class="absolute top-0 right-0 w-[400px] h-[400px] bg-secondary opacity-20 rounded-full blur-[100px]"></div>
+
+        <div class="w-full h-full flex flex-col px-20 py-16 relative z-10">
+
+            <!-- 标题区域 -->
+            <header class="flex justify-between items-end mb-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-2">
+                        <div class="w-10 h-[2px] bg-accent"></div>
+                        <span class="text-accent text-xs tracking-[0.4em] uppercase font-bold">Success Stories</span>
+                    </div>
+                    <h1 class="text-white text-6xl leading-none">
+                        <span class="font-serif italic text-decorative font-light opacity-80">Client</span> 
+                        <span class="font-bold">Testimonials</span>
+                        <i class="fa-solid fa-star-of-life text-accent text-xl align-top ml-2"></i>
+                    </h1>
+                </div>
+                <!-- 装饰性评分 -->
+                <div class="flex gap-1 text-accent text-sm mb-2">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </header>
+
+            <!-- 评价卡片网格 -->
+            <div class="grid grid-cols-3 gap-10">
+
+                <!-- 卡片 1: Margarita Perez -->
+                <article class="testimonial-card flex flex-col group">
+                    <div class="w-full h-[180px] overflow-hidden rounded-t-2xl relative"> <!-- 图片高度从240降至190左右 -->
+                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=600&auto=format&fit=crop" 
+                             class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                        <div class="absolute inset-0 bg-primary/20"></div>
+                    </div>
+                    
+                    <div class="flex-1 bg-secondary/30 backdrop-blur-md p-6 rounded-b-2xl border-x border-b border-cream/10 relative">
+                        <div class="absolute -top-5 right-6 w-10 h-10 bg-accent rounded-full flex items-center justify-center text-white shadow-xl">
+                            <i class="fa-solid fa-quote-right text-xs"></i>
+                        </div>
+                        <h3 class="text-cream text-lg font-bold font-serif mb-1 tracking-wide">Margarita Perez</h3>
+                        <p class="text-accent text-sm uppercase tracking-widest mb-4 font-bold">Brand Strategy</p>
+                        <p class="text-white/80 text-sm leading-relaxed italic font-light">
+                            "Their branding gave our business a fresh, modern, and highly marketable identity."
+                        </p>
+                        <!-- 关键词替换页码 -->
+                        <span class="absolute bottom-4 right-6 text-[10px] text-cream/20 font-bold tracking-[0.3em] uppercase">Growth</span>
+                    </div>
+                </article>
+
+                <!-- 卡片 2: Avery Davis (错位视觉) -->
+                <article class="testimonial-card flex flex-col group mt-6"> 
+                    <div class="w-full h-[180px] overflow-hidden rounded-t-2xl relative">
+                        <img src="https://images.unsplash.com/photo-1556155092-490a1ba16284?q=80&w=600&auto=format&fit=crop" 
+                             class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                        <div class="absolute inset-0 bg-primary/20"></div>
+                    </div>
+                    
+                    <div class="flex-1 bg-secondary/30 backdrop-blur-md p-6 rounded-b-2xl border-x border-b border-cream/10 relative">
+                        <div class="absolute -top-5 right-6 w-10 h-10 bg-accent rounded-full flex items-center justify-center text-white shadow-xl">
+                            <i class="fa-solid fa-quote-right text-xs"></i>
+                        </div>
+                        <h3 class="text-cream text-lg font-bold font-serif mb-1 tracking-wide">Avery Davis</h3>
+                        <p class="text-accent text-sm uppercase tracking-widest mb-4 font-bold">Sales Director</p>
+                        <p class="text-white/80 text-sm leading-relaxed italic font-light">
+                            "Innovative solutions led to a <span class="text-accent font-normal">30% sales increase</span>. Highly recommended!"
+                        </p>
+                        <span class="absolute bottom-4 right-6 text-[10px] text-cream/20 font-bold tracking-[0.3em] uppercase">Results</span>
+                    </div>
+                </article>
+
+                <!-- 卡片 3: Hannah Morales -->
+                <article class="testimonial-card flex flex-col group">
+                    <div class="w-full h-[180px] overflow-hidden rounded-t-2xl relative">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=600&auto=format&fit=crop" 
+                             class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                        <div class="absolute inset-0 bg-primary/20"></div>
+                    </div>
+                    
+                    <div class="flex-1 bg-secondary/30 backdrop-blur-md p-6 rounded-b-2xl border-x border-b border-cream/10 relative">
+                        <div class="absolute -top-5 right-6 w-10 h-10 bg-accent rounded-full flex items-center justify-center text-white shadow-xl">
+                            <i class="fa-solid fa-quote-right text-xs"></i>
+                        </div>
+                        <h3 class="text-cream text-lg font-bold font-serif mb-1 tracking-wide">Hannah Morales</h3>
+                        <p class="text-accent text-sm uppercase tracking-widest mb-4 font-bold">Marketing Lead</p>
+                        <p class="text-white/80 text-sm leading-relaxed italic font-light">
+                            "Consistently delivers outstanding results, boosting our brand's market presence."
+                        </p>
+                        <span class="absolute bottom-4 right-6 text-[10px] text-cream/20 font-bold tracking-[0.3em] uppercase">Impact</span>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- 底部装饰条 -->
+            <footer class="mt-auto flex justify-between items-center border-t border-cream/10 pt-8">
+                <div class="flex items-center gap-4">
+                    <p class="text-white font-bold text-lg tracking-tighter">Fradel & Spies</p>
+                    <div class="w-1 h-1 bg-accent rounded-full"></div>
+                    <p class="text-cream/40 text-[10px] tracking-[0.3em] uppercase">Trust & Partnership Report</p>
+                </div>
+                <div class="text-cream/30 text-[10px] tracking-widest uppercase italic">
+                    "Driven by excellence"
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+</body>
+</html>

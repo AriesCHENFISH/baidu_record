@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Market Share - Wardiere Inc.</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Noto Sans SC', sans-serif; }
+        #page_container { 
+            width: 1280px; height: 720px; 
+            margin: 0 auto; position: relative; 
+            background-color: #0E1014; overflow: hidden; color: white; 
+        }
+
+        .brand-gradient-text {
+            background: linear-gradient(135deg, #FFFFFF 40%, #5D3EFF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900;
+        }
+
+        .wide-headline {
+            font-size: 80px; font-weight: 900; letter-spacing: -0.04em; line-height: 0.9; text-transform: uppercase;
+        }
+
+        /* ECharts 容器保持原位置和大小 */
+        #main-chart {
+            width: 550px;
+            height: 550px;
+        }
+
+        .chart-overlay-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            pointer-events: none;
+        }
+
+        .legend-box { width: 16px; height: 16px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <div id="page_container" class="flex flex-col">
+        <div class="flex justify-between items-start px-16 pt-12 z-20">
+            <div class="flex flex-col leading-none">
+                <h2 class="brand-gradient-text text-3xl uppercase font-black tracking-tighter">Wardiere</h2>
+                <span class="text-white text-[9px] font-bold tracking-[0.5em] opacity-40 mt-1 uppercase">Market Data</span>
+            </div>
+            <div class="text-right">
+                <p class="text-[10px] text-[#5D3EFF] font-black tracking-widest uppercase mb-1">Module</p>
+                <p class="text-5xl font-black brand-gradient-text">09</p>
+            </div>
+        </div>
+
+        <div class="flex-1 grid grid-cols-12 px-16 pt-8 gap-12 items-center relative z-10">
+            
+            <div class="col-span-5 flex flex-col justify-center">
+                <div class="mb-12">
+                    <p class="text-[#5D3EFF] text-xs font-black tracking-[0.5em] uppercase mb-4">Sector Distribution</p>
+                    <h1 class="wide-headline">
+                        GLOBAL<br>
+                        <span class="brand-gradient-text">MARKET SHARE</span>
+                    </h1>
+                </div>
+
+                <div class="space-y-8 border-l border-white/10 pl-8">
+                    <div>
+                        <div class="flex items-center gap-4 mb-2">
+                            <div class="legend-box bg-[#5D3EFF] shadow-[0_0_10px_#5D3EFF]"></div>
+                            <h4 class="text-white text-xl font-bold tracking-wide">45% Commercial Aviation</h4>
+                        </div>
+                        <p class="text-[#888888] text-sm pl-8">Primary revenue driver, focusing on next-gen fleet renewal.</p>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-4 mb-2">
+                            <div class="legend-box bg-[#3b27b3]"></div>
+                            <h4 class="text-white text-xl font-bold tracking-wide">30% Defense & Security</h4>
+                        </div>
+                        <p class="text-[#888888] text-sm pl-8">Stable growth driven by next-generation air dominance systems.</p>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-4 mb-2">
+                            <div class="legend-box bg-[#D1D1D1]"></div>
+                            <h4 class="text-white text-lg font-bold tracking-wide">15% Space Systems</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-span-7 flex justify-center items-center relative">
+                <div class="absolute w-[500px] h-[500px] border-2 border-dashed border-white/5 rounded-full pointer-events-none"></div>
+                
+                <div id="main-chart"></div>
+
+                <div class="chart-overlay-center">
+                    <p class="text-[#888888] text-xs font-bold tracking-widest uppercase mb-2">Total Market Val.</p>
+                    <p class="brand-gradient-text text-5xl font-black italic">$860B</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="px-16 pb-12 flex justify-between items-center opacity-30 text-[8px] font-mono tracking-[0.4em]">
+            <p>DATA_SOURCE: Q4_FISCAL_ANALYSIS</p>
+            <div class="w-32 h-[1px] bg-white/20"></div>
+        </div>
+    </div>
+
+    <script>
+        const chartDom = document.getElementById('main-chart');
+        const myChart = echarts.init(chartDom);
+
+        const option = {
+            backgroundColor: 'transparent',
+            tooltip: { trigger: 'item', show: false }, // 保持简洁，不显示默认提示
+            series: [
+                {
+                    name: 'Market Share',
+                    type: 'pie',
+                    radius: ['62%', '85%'], // 环形厚度
+                    avoidLabelOverlap: false,
+                    itemStyle: {
+                        borderRadius: 0,
+                        borderColor: '#0E1014',
+                        borderWidth: 6
+                    },
+                    label: { show: false },
+                    emphasis: {
+                        scale: true,
+                        scaleSize: 10,
+                        itemStyle: {
+                            shadowBlur: 30,
+                            shadowColor: 'rgba(93, 62, 255, 0.5)'
+                        }
+                    },
+                    data: [
+                        { 
+                            value: 45, 
+                            name: 'Commercial',
+                            itemStyle: { color: '#5D3EFF' } 
+                        },
+                        { 
+                            value: 30, 
+                            name: 'Defense',
+                            itemStyle: { color: '#3b27b3' } 
+                        },
+                        { 
+                            value: 15, 
+                            name: 'Space',
+                            itemStyle: { color: '#D1D1D1' } 
+                        },
+                        { 
+                            value: 10, 
+                            name: 'Other',
+                            itemStyle: { color: '#2D2F34' } 
+                        }
+                    ],
+                    // 初始入场动画
+                    animationType: 'expansion',
+                    animationDuration: 2000,
+                    animationEasing: 'cubicOut'
+                }
+            ]
+        };
+
+        myChart.setOption(option);
+
+        // 响应式处理（虽然容器是固定的，但保证渲染正确）
+        window.addEventListener('resize', () => myChart.resize());
+    </script>
+</body>
+</html>

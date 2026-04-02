@@ -1,0 +1,1410 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Responsive Merged HTML
+  </title>
+  <style>
+   body {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .page-wrapper {
+                width: 100%;
+                margin: 15px 0;
+                position: relative;
+            }
+            .page-title {
+                background: #f5f5f5;
+                padding: 5px 10px;
+                border-radius: 3px 3px 0 0;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+            }
+            .responsive-iframe {
+                border: none;
+                width: 100%;
+                display: block;
+            }
+  </style>
+ </head>
+ <body>
+  <!-- 内容将在这里插入 -->
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 1
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Estelle Darcy - Typography Cover&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Allura&amp;family=Inter:wght@300;400;500;600&amp;family=Oswald:wght@400;700;800&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+    
+    &lt;style&gt;
+        /* 核心配色变量 */
+        :root {
+            --bg-pink: #FFEBEB;
+            --navy: #1A235F;
+            --accent: #B04E78;
+            --metallic: #A6A9B6;
+            --text-grey: #4A4A6A;
+        }
+
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto;
+            background-color: var(--bg-pink);
+            font-family: 'Inter', sans-serif;
+            overflow: hidden; position: relative;
+            /* subtle gradient background base */
+            background: linear-gradient(to bottom right, #FFF5F5, #FFEBEB);
+        }
+
+        .font-display { font-family: 'Oswald', sans-serif; }
+        .font-script { font-family: 'Allura', cursive; }
+
+        /* 镂空文字效果 */
+        .outline-text {
+            -webkit-text-stroke: 3px var(--navy);
+            color: transparent;
+            /* 稍微降低透明度增加层次感 */
+            opacity: 0.5; 
+        }
+
+        /* 噪点纹理叠加 */
+        .texture-overlay {
+            position: absolute; inset: 0;
+            background-image: url(&quot;data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E&quot;);
+            pointer-events: none; z-index: 50; mix-blend-mode: overlay;
+        }
+
+        /* 金属渐变文字/图标 */
+        .metallic-gradient {
+            background: linear-gradient(135deg, #A6A9B6 0%, #FFFFFF 50%, #7a7d8a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0px 2px 4px rgba(26, 35, 95, 0.2));
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot; class=&quot;flex flex-col justify-between p-14 relative&quot;&gt;
+        &lt;div class=&quot;texture-overlay&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;absolute top-[-200px] left-[-100px] w-[700px] h-[700px] rounded-full bg-[#B04E78] opacity-10 blur-[120px] z-0&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute bottom-[-200px] right-[-100px] w-[800px] h-[800px] rounded-full bg-[#1A235F] opacity-15 blur-[150px] z-0&quot;&gt;&lt;/div&gt;
+
+        &lt;header class=&quot;flex justify-between items-start z-40 relative&quot;&gt;
+            &lt;div class=&quot;flex flex-col&quot;&gt;
+                &lt;h2 class=&quot;text-[#1A235F] font-display font-bold text-3xl tracking-wider uppercase leading-none&quot;&gt;Estelle Darcy&lt;/h2&gt;
+                &lt;span class=&quot;text-[#B04E78] font-script text-3xl -mt-2 ml-1&quot;&gt;Visual Designer&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;text-right border-r-4 border-[#B04E78] pr-4&quot;&gt;
+                &lt;p class=&quot;text-[#1A235F] text-sm uppercase tracking-[0.3em] font-bold&quot;&gt;Portfolio&lt;/p&gt;
+                &lt;p class=&quot;text-[#4A4A6A] text-xs uppercase tracking-[0.2em]&quot;&gt;Vol. 25 — 2025&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;main class=&quot;absolute inset-0 flex flex-col items-center justify-center z-10 pointer-events-none select-none&quot;&gt;
+            
+            &lt;div class=&quot;relative text-center w-full transform -translate-y-8&quot;&gt;
+                
+                &lt;div class=&quot;absolute top-[35%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 z-30 rotate-[-5deg]&quot;&gt;
+                    &lt;span class=&quot;font-script text-[150px] text-[#B04E78] whitespace-nowrap drop-shadow-xl opacity-90&quot; style=&quot;text-shadow: 3px 3px 0px rgba(255,235,235,0.8);&quot;&gt;
+                        Curated Collection
+                    &lt;/span&gt;
+                &lt;/div&gt;
+
+                &lt;h1 class=&quot;relative z-20 font-display text-[220px] leading-[0.85] font-extrabold text-[#1A235F] uppercase tracking-tighter drop-shadow-2xl&quot;&gt;
+                    Creative
+                &lt;/h1&gt;
+
+                &lt;h1 class=&quot;relative z-10 font-display text-[220px] leading-[0.85] font-extrabold outline-text uppercase tracking-tighter -mt-[100px] ml-[150px]&quot;&gt;
+                    Portfolio
+                &lt;/h1&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;absolute bottom-[15%] left-[10%] text-7xl animate-pulse z-20 opacity-80&quot;&gt;
+                &lt;i class=&quot;fa-solid fa-star-of-life metallic-gradient&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;absolute top-[18%] right-[12%] text-5xl z-20 opacity-60 fa-spin-slow&quot;&gt;
+                &lt;i class=&quot;fa-solid fa-star metallic-gradient&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/main&gt;
+
+        &lt;footer class=&quot;flex justify-between items-end z-40 relative&quot;&gt;
+            &lt;div class=&quot;flex flex-col items-start&quot;&gt;
+                 &lt;p class=&quot;text-[#4A4A6A] text-xs uppercase tracking-[0.2em] mb-2 font-bold&quot;&gt;Specialization&lt;/p&gt;
+                 &lt;div class=&quot;flex gap-6 text-[#1A235F] font-display uppercase tracking-wider text-sm font-bold&quot;&gt;
+                     &lt;span&gt;Brand Identity&lt;/span&gt;
+                     &lt;span class=&quot;text-[#B04E78]&quot;&gt;•&lt;/span&gt;
+                     &lt;span&gt;UI/UX Design&lt;/span&gt;
+                     &lt;span class=&quot;text-[#B04E78]&quot;&gt;•&lt;/span&gt;
+                     &lt;span&gt;Art Direction&lt;/span&gt;
+                 &lt;/div&gt;
+            &lt;/div&gt;
+            
+            &lt;div class=&quot;flex items-center gap-4&quot;&gt;
+                &lt;div class=&quot;text-right&quot;&gt;
+                    &lt;p class=&quot;text-[#1A235F] font-bold text-base&quot;&gt;hello@estelle.design&lt;/p&gt;
+                    &lt;p class=&quot;text-[#4A4A6A] text-sm&quot;&gt;Available for freelance&lt;/p&gt;
+                &lt;/div&gt;
+                 &lt;div class=&quot;w-12 h-12 bg-[#1A235F] rounded-full flex items-center justify-center text-[#FFEBEB] text-xl&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-arrow-right -rotate-45&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/div&gt;
+
+    &lt;style&gt;
+        /* 添加一个缓慢旋转的动画给小星星 */
+        .fa-spin-slow {
+            animation: fa-spin 10s infinite linear;
+        }
+    &lt;/style&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 2
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Estelle Darcy - Table of Contents&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Allura&amp;family=Inter:wght@300;400;500;600&amp;family=Oswald:wght@400;500;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+    
+    &lt;style&gt;
+        :root {
+            --bg-pink: #FFEBEB;
+            --navy: #1A235F;
+            --accent: #B04E78;
+            --metallic: #A6A9B6;
+            --text-grey: #4A4A6A;
+        }
+
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto;
+            background-color: var(--bg-pink);
+            font-family: 'Inter', sans-serif;
+            overflow: hidden; position: relative;
+        }
+
+        .font-display { font-family: 'Oswald', sans-serif; }
+        .font-script { font-family: 'Allura', cursive; }
+
+        /* 目录项悬停效果 */
+        .toc-item {
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            border-bottom: 1px solid rgba(26, 35, 95, 0.1);
+        }
+        .toc-item:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+            transform: translateX(10px);
+            border-bottom: 1px solid var(--accent);
+        }
+        
+        .toc-number {
+            font-family: 'Oswald', sans-serif;
+            -webkit-text-stroke: 1px var(--metallic);
+            color: transparent;
+            font-size: 3rem;
+            line-height: 1;
+            opacity: 0.5;
+            transition: all 0.3s;
+        }
+        .toc-item:hover .toc-number {
+            color: var(--accent);
+            -webkit-text-stroke: 0px;
+            opacity: 1;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot; class=&quot;flex p-16 relative&quot;&gt;
+        
+        &lt;div class=&quot;w-1/3 flex flex-col justify-center relative z-20 border-r border-[#1A235F]/10 pr-12&quot;&gt;
+            &lt;div class=&quot;absolute top-0 left-0 -ml-10 -mt-10 opacity-10 pointer-events-none&quot;&gt;
+                &lt;span class=&quot;font-script text-[200px] text-[#1A235F]&quot;&gt;Index&lt;/span&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;relative&quot;&gt;
+                &lt;p class=&quot;text-[#B04E78] font-bold tracking-[0.4em] uppercase text-sm mb-4&quot;&gt;Overview&lt;/p&gt;
+                &lt;h1 class=&quot;font-display text-[#1A235F] text-7xl font-bold uppercase leading-none mb-6&quot;&gt;
+                    Table of&lt;br&gt;Contents
+                &lt;/h1&gt;
+                &lt;p class=&quot;text-[#4A4A6A] text-sm leading-relaxed mb-8&quot;&gt;
+                    A curated selection of works spanning brand identity, digital interfaces, and visual storytelling. Each section represents a key pillar of my creative practice.
+                &lt;/p&gt;
+                
+                &lt;div class=&quot;text-[#B04E78] text-3xl animate-bounce&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-arrow-right-long&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;w-2/3 pl-16 flex items-center z-20&quot;&gt;
+            &lt;div class=&quot;grid grid-cols-3 gap-x-8 gap-y-8 w-full&quot;&gt;
+                
+                &lt;div class=&quot;toc-item py-4 cursor-pointer group&quot;&gt;
+                    &lt;span class=&quot;toc-number block mb-2&quot;&gt;01&lt;/span&gt;
+                    &lt;h3 class=&quot;text-[#1A235F] font-bold text-lg uppercase tracking-wide group-hover:text-[#B04E78]&quot;&gt;Brand Identity&lt;/h3&gt;
+                    &lt;p class=&quot;text-[#4A4A6A] text-xs mt-1&quot;&gt;Logo &amp; Systems&lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;toc-item py-4 cursor-pointer group&quot;&gt;
+                    &lt;span class=&quot;toc-number block mb-2&quot;&gt;02&lt;/span&gt;
+                    &lt;h3 class=&quot;text-[#1A235F] font-bold text-lg uppercase tracking-wide group-hover:text-[#B04E78]&quot;&gt;Strategy&lt;/h3&gt;
+                    &lt;p class=&quot;text-[#4A4A6A] text-xs mt-1&quot;&gt;Market Positioning&lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;toc-item py-4 cursor-pointer group&quot;&gt;
+                    &lt;span class=&quot;toc-number block mb-2&quot;&gt;03&lt;/span&gt;
+                    &lt;h3 class=&quot;text-[#1A235F] font-bold text-lg uppercase tracking-wide group-hover:text-[#B04E78]&quot;&gt;Social Media&lt;/h3&gt;
+                    &lt;p class=&quot;text-[#4A4A6A] text-xs mt-1&quot;&gt;Content Creation&lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;toc-item py-4 cursor-pointer group&quot;&gt;
+                    &lt;span class=&quot;toc-number block mb-2&quot;&gt;04&lt;/span&gt;
+                    &lt;h3 class=&quot;text-[#1A235F] font-bold text-lg uppercase tracking-wide group-hover:text-[#B04E78]&quot;&gt;Packaging&lt;/h3&gt;
+                    &lt;p class=&quot;text-[#4A4A6A] text-xs mt-1&quot;&gt;Product Design&lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;toc-item py-4 cursor-pointer group&quot;&gt;
+                    &lt;span class=&quot;toc-number block mb-2&quot;&gt;05&lt;/span&gt;
+                    &lt;h3 class=&quot;text-[#1A235F] font-bold text-lg uppercase tracking-wide group-hover:text-[#B04E78]&quot;&gt;Web Design&lt;/h3&gt;
+                    &lt;p class=&quot;text-[#4A4A6A] text-xs mt-1&quot;&gt;UI/UX Interfaces&lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;toc-item py-4 cursor-pointer group&quot;&gt;
+                    &lt;span class=&quot;toc-number block mb-2&quot;&gt;06&lt;/span&gt;
+                    &lt;h3 class=&quot;text-[#1A235F] font-bold text-lg uppercase tracking-wide group-hover:text-[#B04E78]&quot;&gt;Editorial&lt;/h3&gt;
+                    &lt;p class=&quot;text-[#4A4A6A] text-xs mt-1&quot;&gt;Print Layouts&lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;toc-item py-4 cursor-pointer group&quot;&gt;
+                    &lt;span class=&quot;toc-number block mb-2&quot;&gt;07&lt;/span&gt;
+                    &lt;h3 class=&quot;text-[#1A235F] font-bold text-lg uppercase tracking-wide group-hover:text-[#B04E78]&quot;&gt;Photography&lt;/h3&gt;
+                    &lt;p class=&quot;text-[#4A4A6A] text-xs mt-1&quot;&gt;Art Direction&lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;toc-item py-4 cursor-pointer group&quot;&gt;
+                    &lt;span class=&quot;toc-number block mb-2&quot;&gt;08&lt;/span&gt;
+                    &lt;h3 class=&quot;text-[#1A235F] font-bold text-lg uppercase tracking-wide group-hover:text-[#B04E78]&quot;&gt;Motion&lt;/h3&gt;
+                    &lt;p class=&quot;text-[#4A4A6A] text-xs mt-1&quot;&gt;Animation&lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;toc-item py-4 cursor-pointer group&quot;&gt;
+                    &lt;span class=&quot;toc-number block mb-2&quot;&gt;09&lt;/span&gt;
+                    &lt;h3 class=&quot;text-[#1A235F] font-bold text-lg uppercase tracking-wide group-hover:text-[#B04E78]&quot;&gt;Personal&lt;/h3&gt;
+                    &lt;p class=&quot;text-[#4A4A6A] text-xs mt-1&quot;&gt;Experimental&lt;/p&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-[#B04E78] opacity-5 blur-[80px] z-0&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 3
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Estelle Darcy - Minimalist Pink Portfolio&lt;/title&gt;
+    
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FFF5F5; /* 更浅的粉白底色，增加呼吸感 */
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+            color: #4A4A6A; /* 正文使用中性深灰，避免死黑或深蓝 */
+        }
+
+        .layout-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 32px;
+            padding: 80px;
+            height: 100%;
+        }
+
+        /* 主色调：粉色 */
+        .text-accent { color: #B04E78; }
+        .bg-accent { background-color: #B04E78; }
+
+        /* 手写体设置 */
+        .font-script {
+            font-family: 'Brush Script MT', 'cursive', serif;
+            font-weight: 400;
+        }
+
+        /* 移除深蓝，仅保留极细的辅助线 */
+        .decoration-line {
+            height: 1px;
+            background: #B04E78;
+            opacity: 0.3;
+        }
+
+        /* 图片装饰 */
+        .image-wrapper {
+            position: relative;
+            z-index: 10;
+        }
+        .image-wrapper::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            right: -20px;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #B04E78;
+            opacity: 0.2;
+            z-index: -1;
+            border-radius: 12px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;absolute -top-10 -left-10 select-none pointer-events-none&quot;&gt;
+            &lt;h1 class=&quot;font-script text-accent opacity-5 text-[20rem]&quot;&gt;Estelle&lt;/h1&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;layout-grid&quot;&gt;
+            
+            &lt;div style=&quot;grid-column: span 5; display: flex; flex-direction: column; justify-content: center;&quot;&gt;
+                &lt;div class=&quot;image-wrapper&quot;&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&amp;w=900&amp;auto=format&amp;fit=crop&quot; 
+                         alt=&quot;Estelle&quot; 
+                         class=&quot;w-full h-[450px] object-cover rounded-xl shadow-sm&quot;&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;mt-8&quot;&gt;
+                    &lt;p class=&quot;text-accent text-sm tracking-[0.4em] font-bold uppercase&quot;&gt;Creative Identity 2025&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div style=&quot;grid-column: span 7; display: flex; flex-direction: column; justify-content: center; padding-left: 20px;&quot;&gt;
+                
+                &lt;div class=&quot;mb-12&quot;&gt;
+                    &lt;p class=&quot;text-accent text-xl font-bold italic mb-2&quot;&gt;Hello, I am&lt;/p&gt;
+                    &lt;h1 class=&quot;font-script text-accent text-8xl leading-[0.7] -ml-4&quot;&gt;
+                        Estelle Darcy
+                    &lt;/h1&gt;
+                    &lt;div class=&quot;decoration-line w-32 mt-10&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;space-y-10&quot;&gt;
+                    &lt;div class=&quot;max-w-md&quot;&gt;
+                        &lt;h3 class=&quot;text-accent text-sm font-black uppercase tracking-widest mb-4&quot;&gt;About Me&lt;/h3&gt;
+                        &lt;p class=&quot;text-sm leading-relaxed text-justify opacity-90&quot;&gt;
+                            A passionate graphic designer with a focus on minimalist aesthetics and meaningful visual communication. I believe that every pixel should serve a purpose and every design should tell a story that resonates with its audience.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;flex gap-16&quot;&gt;
+                        &lt;div&gt;
+                            &lt;h3 class=&quot;text-accent text-sm font-black uppercase tracking-widest mb-4&quot;&gt;Education&lt;/h3&gt;
+                            &lt;p class=&quot;text-sm font-bold&quot;&gt;Borcelle University&lt;/p&gt;
+                            &lt;p class=&quot;text-sm opacity-80 mt-1&quot;&gt;Bachelor of Arts in Graphic Design&lt;/p&gt;
+                            &lt;p class=&quot;text-xs text-accent font-bold mt-1&quot;&gt;CLASS OF 2020&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;h3 class=&quot;text-accent text-sm font-black uppercase tracking-widest mb-4&quot;&gt;Expertise&lt;/h3&gt;
+                            &lt;ul class=&quot;text-sm space-y-2&quot;&gt;
+                                &lt;li class=&quot;flex items-center gap-2 font-medium&quot;&gt;
+                                    &lt;span class=&quot;w-1.5 h-1.5 bg-accent rounded-full&quot;&gt;&lt;/span&gt; Visual Brand Identity
+                                &lt;/li&gt;
+                                &lt;li class=&quot;flex items-center gap-2 font-medium&quot;&gt;
+                                    &lt;span class=&quot;w-1.5 h-1.5 bg-accent rounded-full&quot;&gt;&lt;/span&gt; Editorial Design
+                                &lt;/li&gt;
+                                &lt;li class=&quot;flex items-center gap-2 font-medium&quot;&gt;
+                                    &lt;span class=&quot;w-1.5 h-1.5 bg-accent rounded-full&quot;&gt;&lt;/span&gt; Art Direction
+                                &lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 4
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Digital Projects - New Layout&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;style&gt;
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #FFF5F5; overflow: hidden; font-family: 'Noto Sans SC', sans-serif; }
+        .text-primary { color: #1A235F; }
+        .text-accent { color: #B04E78; }
+        .font-script { font-family: 'Brush Script MT', 'cursive', serif; }
+        
+        /* 卡片悬停微动效 */
+        .project-card { transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .project-card:hover { transform: translateY(-8px); }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot; class=&quot;p-16 flex items-center&quot;&gt;
+        &lt;div class=&quot;grid grid-cols-12 gap-10 w-full h-full&quot;&gt;
+            
+            &lt;div class=&quot;col-span-5 flex flex-col justify-between py-4&quot;&gt;
+                
+                &lt;div class=&quot;relative z-10&quot;&gt;
+                    &lt;p class=&quot;text-primary font-bold tracking-widest uppercase mb-2 text-sm border-b-2 border-accent/20 w-16 pb-2&quot;&gt;Portfolio&lt;/p&gt;
+                    &lt;h1 class=&quot;font-script text-accent text-[9rem] leading-[0.8] -ml-4 whitespace-nowrap&quot;&gt;Digital&lt;br&gt;Works&lt;/h1&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;space-y-6&quot;&gt;
+                    &lt;h3 class=&quot;text-primary font-bold text-xl uppercase tracking-wide&quot;&gt;UI/UX Solutions&lt;/h3&gt;
+                    &lt;p class=&quot;text-sm text-gray-600 leading-relaxed text-justify pr-8&quot;&gt;
+                        Our design process is iterative and user-centered. We focus on creating cohesive digital ecosystems that adapt to user needs. From wireframing to high-fidelity prototyping, every pixel serves a strategic purpose.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;bg-white/60 rounded-2xl p-5 border border-white shadow-sm flex items-center gap-4 w-full&quot;&gt;
+                    &lt;div id=&quot;projectChart&quot; style=&quot;width: 100px; height: 100px;&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;flex-1&quot;&gt;
+                        &lt;div class=&quot;flex justify-between items-end mb-1&quot;&gt;
+                            &lt;span class=&quot;text-primary font-bold text-lg&quot;&gt;92%&lt;/span&gt;
+                            &lt;span class=&quot;text-xs text-gray-500 uppercase&quot;&gt;Satisfaction&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;w-full bg-gray-200 rounded-full h-1.5&quot;&gt;
+                            &lt;div class=&quot;bg-accent h-1.5 rounded-full&quot; style=&quot;width: 92%&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;p class=&quot;text-xs text-gray-500 mt-2&quot;&gt;Based on client feedback from 2024-2025 projects.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;col-span-7 grid grid-cols-2 gap-6 h-full&quot;&gt;
+                
+                &lt;div class=&quot;project-card relative h-full rounded-3xl overflow-hidden shadow-lg group cursor-pointer&quot;&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&amp;fit=crop&amp;w=600&quot; class=&quot;w-full h-full object-cover&quot;&gt;
+                    &lt;div class=&quot;absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity&quot;&gt;&lt;/div&gt;
+                    
+                    &lt;div class=&quot;absolute bottom-0 left-0 p-8 w-full&quot;&gt;
+                        &lt;div class=&quot;bg-accent/20 backdrop-blur-md w-10 h-10 rounded-full flex items-center justify-center text-white mb-4&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-mobile-screen&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;h4 class=&quot;text-white font-bold text-2xl mb-1&quot;&gt;FinTech App&lt;/h4&gt;
+                        &lt;p class=&quot;text-white/70 text-sm&quot;&gt;Mobile Experience&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;project-card relative h-full rounded-3xl overflow-hidden shadow-lg group cursor-pointer mt-12 mb-[-48px]&quot;&gt; &lt;img src=&quot;https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&amp;fit=crop&amp;w=600&quot; class=&quot;w-full h-full object-cover&quot;&gt;
+                    &lt;div class=&quot;absolute inset-0 bg-gradient-to-t from-accent/90 via-accent/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity&quot;&gt;&lt;/div&gt;
+                    
+                    &lt;div class=&quot;absolute bottom-0 left-0 p-8 w-full&quot;&gt;
+                        &lt;div class=&quot;bg-white/20 backdrop-blur-md w-10 h-10 rounded-full flex items-center justify-center text-white mb-4&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-laptop&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;h4 class=&quot;text-white font-bold text-2xl mb-1&quot;&gt;Analytics&lt;/h4&gt;
+                        &lt;p class=&quot;text-white/70 text-sm&quot;&gt;Web Dashboard&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script&gt;
+        var chartDom = document.getElementById('projectChart');
+        var myChart = echarts.init(chartDom);
+        var option = {
+            animation: false,
+            color: ['#B04E78', '#E5E7EB'],
+            series: [
+                {
+                    name: 'Access From',
+                    type: 'pie',
+                    radius: ['70%', '90%'],
+                    avoidLabelOverlap: false,
+                    label: { show: false, position: 'center' },
+                    emphasis: { label: { show: false } },
+                    labelLine: { show: false },
+                    data: [
+                        { value: 92, name: 'Completed' },
+                        { value: 8, name: 'Ongoing' }
+                    ]
+                }
+            ]
+        };
+        myChart.setOption(option);
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 5
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Illustration - Refined&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;style&gt;
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #FFF5F5; overflow: hidden; font-family: 'Noto Sans SC', sans-serif; }
+        .text-primary { color: #1A235F; }
+        .text-accent { color: #B04E78; }
+        .font-script { font-family: 'Brush Script MT', 'cursive', serif; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot; class=&quot;p-20 flex items-center&quot;&gt;
+        &lt;div class=&quot;grid grid-cols-12 gap-12 w-full h-full items-center&quot;&gt;
+            
+            &lt;div class=&quot;col-span-5 space-y-8&quot;&gt;
+                &lt;img src=&quot;https://images.unsplash.com/photo-1579762715118-a6f1d4b934f1?auto=format&amp;fit=crop&amp;w=600&quot; class=&quot;w-full h-72 object-cover rounded-3xl shadow-xl&quot;&gt;
+                
+                &lt;div class=&quot;flex gap-6 items-center bg-white/60 p-6 rounded-2xl border border-accent/10 shadow-sm backdrop-blur-sm&quot;&gt;
+                    &lt;div id=&quot;styleChart&quot; style=&quot;width:120px; height:120px;&quot;&gt;&lt;/div&gt;
+                    &lt;div&gt;
+                        &lt;h3 class=&quot;text-primary font-bold text-lg mb-1&quot;&gt;Visual Styles&lt;/h3&gt;
+                        &lt;p class=&quot;text-sm text-gray-600 leading-tight&quot;&gt;Diverse portfolio spanning editorial to flat vector art.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;col-span-7 pl-10&quot;&gt;
+                &lt;div class=&quot;mb-10&quot;&gt;
+                    &lt;p class=&quot;text-accent text-sm font-bold tracking-[0.4em] mb-4 uppercase italic&quot;&gt;Visual Arts&lt;/p&gt;
+                    &lt;h1 class=&quot;font-script text-accent text-[11rem] leading-[0.8] -ml-6 whitespace-nowrap&quot;&gt;Illustration&lt;/h1&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;space-y-10&quot;&gt;
+                    &lt;div&gt;
+                        &lt;h3 class=&quot;text-primary font-bold text-lg uppercase tracking-wider mb-4 border-b border-primary/10 pb-2&quot;&gt;Artistic Direction&lt;/h3&gt;
+                        &lt;p class=&quot;text-sm text-gray-700 leading-relaxed text-justify&quot;&gt;
+                            Illustration transcends language. It creates an emotional connection that standard photography often cannot achieve. Our work focuses on vibrant storytelling, using color and composition to turn complex concepts into accessible, engaging visuals.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;grid grid-cols-2 gap-8&quot;&gt;
+                        &lt;div&gt;
+                            &lt;h4 class=&quot;text-primary font-bold text-lg mb-2&quot;&gt;Editorial&lt;/h4&gt;
+                            &lt;p class=&quot;text-sm text-gray-700 leading-relaxed&quot;&gt;
+                                Compelling imagery for magazines and digital publications.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;h4 class=&quot;text-primary font-bold text-lg mb-2&quot;&gt;Commercial&lt;/h4&gt;
+                            &lt;p class=&quot;text-sm text-gray-700 leading-relaxed&quot;&gt;
+                                Brand assets that add personality and warmth to corporate identities.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script&gt;
+        var chartDom = document.getElementById('styleChart');
+        var myChart = echarts.init(chartDom);
+        var option = {
+            animation: false,
+            color: ['#1A235F', '#B04E78', '#E5E7EB'],
+            series: [{
+                type: 'pie',
+                radius: ['40%', '70%'],
+                itemStyle: { borderRadius: 5, borderColor: '#fff', borderWidth: 2 },
+                label: { show: false },
+                data: [
+                    { value: 40, name: 'Vector' },
+                    { value: 35, name: 'Hand-drawn' },
+                    { value: 25, name: '3D' }
+                ]
+            }]
+        };
+        myChart.setOption(option);
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 6
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Introduction - Refined&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;style&gt;
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #FFF5F5; overflow: hidden; font-family: 'Noto Sans SC', sans-serif; }
+        .text-primary { color: #1A235F; }
+        .text-accent { color: #B04E78; }
+        .font-script { font-family: 'Brush Script MT', 'cursive', serif; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot; class=&quot;p-20 flex items-center&quot;&gt;
+        &lt;div class=&quot;grid grid-cols-12 gap-12 w-full h-full items-center&quot;&gt;
+            
+            &lt;div class=&quot;col-span-5 h-[480px]&quot;&gt;
+                &lt;div class=&quot;relative w-full h-full&quot;&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&amp;fit=crop&amp;w=600&quot; class=&quot;w-full h-full object-cover rounded-3xl shadow-xl grayscale&quot;&gt;
+                    
+                    &lt;div class=&quot;absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-lg border border-accent/10&quot;&gt;
+                        &lt;p class=&quot;text-accent font-bold text-2xl tracking-widest leading-none text-center&quot;&gt;EST.&lt;/p&gt;
+                        &lt;p class=&quot;text-primary font-bold text-2xl tracking-widest leading-none text-center mt-1&quot;&gt;2025&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;col-span-7 pl-10&quot;&gt;
+                &lt;div class=&quot;mb-10&quot;&gt;
+                    &lt;p class=&quot;text-accent text-sm font-bold tracking-[0.4em] mb-4 uppercase italic&quot;&gt;About Me&lt;/p&gt;
+                    &lt;h1 class=&quot;font-script text-accent text-[11rem] leading-[0.8] -ml-6 whitespace-nowrap&quot;&gt;Introduction&lt;/h1&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;space-y-10&quot;&gt;
+                    &lt;div&gt;
+                        &lt;h3 class=&quot;text-primary font-bold text-lg uppercase tracking-wider mb-4 border-b border-primary/10 pb-2&quot;&gt;Estelle Darcy&lt;/h3&gt;
+                        &lt;p class=&quot;text-sm text-gray-700 leading-relaxed text-justify&quot;&gt;
+                            I am a multidisciplinary designer with a passion for creating meaningful visual systems. With a background in both fine arts and digital media, I bridge the gap between traditional aesthetics and modern technology. My goal is to craft brand experiences that are not only visually stunning but also deeply strategic.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;grid grid-cols-2 gap-8&quot;&gt;
+                        &lt;div&gt;
+                            &lt;h4 class=&quot;text-primary font-bold text-lg mb-2&quot;&gt;Vision&lt;/h4&gt;
+                            &lt;p class=&quot;text-sm text-gray-700 leading-relaxed&quot;&gt;
+                                To simplify complexity through design, creating clarity and beauty in a chaotic world.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;h4 class=&quot;text-primary font-bold text-lg mb-2&quot;&gt;Connect&lt;/h4&gt;
+                            &lt;ul class=&quot;text-sm text-gray-700 space-y-1&quot;&gt;
+                                &lt;li&gt;&lt;i class=&quot;fa-solid fa-envelope text-accent mr-2&quot;&gt;&lt;/i&gt;hello@estelle.design&lt;/li&gt;
+                                &lt;li&gt;&lt;i class=&quot;fa-brands fa-linkedin text-accent mr-2&quot;&gt;&lt;/i&gt;/in/estelledarcy&lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 7
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Estelle Darcy - Digital Projects&lt;/title&gt;
+    
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        /* --- 核心复用样式 --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative;
+            background-color: #FFF5F5; overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif; color: #4A4A6A;
+        }
+        .layout-grid {
+            display: grid; grid-template-columns: repeat(12, 1fr); gap: 32px;
+            padding: 80px; height: 100%; grid-template-rows: auto 1fr;
+        }
+        .text-accent { color: #B04E78; }
+        .bg-accent { background-color: #B04E78; }
+        .font-script { font-family: 'Brush Script MT', 'cursive', serif; font-weight: 400; }
+        .decoration-line { height: 1px; background: #B04E78; opacity: 0.3; }
+
+        /* --- 图片装饰风格 (参考页复用) --- */
+        .project-card img {
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        .project-card:hover img {
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px rgba(176, 78, 120, 0.15);
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;absolute -top-10 -left-10 select-none pointer-events-none&quot;&gt;
+            &lt;h1 class=&quot;font-script text-accent opacity-5 text-[20rem]&quot;&gt;Digital&lt;/h1&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;layout-grid&quot;&gt;
+            
+            &lt;div style=&quot;grid-column: span 12;&quot;&gt;
+                 &lt;p class=&quot;text-accent text-xl font-bold italic mb-2&quot;&gt;Selected Works&lt;/p&gt;
+                 &lt;h2 class=&quot;font-script text-accent text-[5rem] leading-[0.8] -ml-2&quot;&gt;Digital Projects&lt;/h2&gt;
+                 &lt;div class=&quot;decoration-line w-24 mt-6 mb-8&quot;&gt;&lt;/div&gt;
+                 &lt;p class=&quot;max-w-2xl text-sm leading-relaxed opacity-80 text-justify&quot;&gt;
+                    Exploring the intersection of functionality and aesthetics through user-centric interface design. Here are key case studies focusing on web and mobile experiences.
+                 &lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div style=&quot;grid-column: span 12;&quot; class=&quot;grid grid-cols-3 gap-10 items-start mt-4&quot;&gt;
+                
+                &lt;div class=&quot;project-card&quot;&gt;
+                    &lt;div class=&quot;h-[200px] overflow-hidden rounded-lg mb-6 relative&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1572044162444-ad60f128bdea?q=80&amp;w=600&amp;auto=format&amp;fit=crop&quot; 
+                             class=&quot;w-full h-full object-cover&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;h3 class=&quot;text-lg font-bold uppercase tracking-wider mb-2 text-accent&quot;&gt;Design Workshop&lt;/h3&gt;
+                    &lt;div class=&quot;decoration-line w-8 mb-3 opacity-50&quot;&gt;&lt;/div&gt;
+                    &lt;p class=&quot;text-xs font-bold uppercase tracking-widest opacity-60 mb-2&quot;&gt;Client: Studio Shodwe&lt;/p&gt;
+                    &lt;p class=&quot;text-sm leading-relaxed opacity-80&quot;&gt;
+                        Interactive workshops designed to foster creativity and streamline the prototyping process.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;project-card&quot;&gt;
+                    &lt;div class=&quot;h-[200px] overflow-hidden rounded-lg mb-6 relative&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&amp;w=600&amp;auto=format&amp;fit=crop&quot; 
+                             class=&quot;w-full h-full object-cover&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;h3 class=&quot;text-lg font-bold uppercase tracking-wider mb-2 text-accent&quot;&gt;Mobile UX&lt;/h3&gt;
+                    &lt;div class=&quot;decoration-line w-8 mb-3 opacity-50&quot;&gt;&lt;/div&gt;
+                    &lt;p class=&quot;text-xs font-bold uppercase tracking-widest opacity-60 mb-2&quot;&gt;Client: FinTech Co.&lt;/p&gt;
+                    &lt;p class=&quot;text-sm leading-relaxed opacity-80&quot;&gt;
+                        A seamless mobile application interface focusing on accessibility and user retention.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;project-card&quot;&gt;
+                    &lt;div class=&quot;h-[200px] overflow-hidden rounded-lg mb-6 relative&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1629739884942-887f6b0f5c1d?q=80&amp;w=600&amp;auto=format&amp;fit=crop&quot; 
+                             class=&quot;w-full h-full object-cover&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;h3 class=&quot;text-lg font-bold uppercase tracking-wider mb-2 text-accent&quot;&gt;Packaging&lt;/h3&gt;
+                    &lt;div class=&quot;decoration-line w-8 mb-3 opacity-50&quot;&gt;&lt;/div&gt;
+                    &lt;p class=&quot;text-xs font-bold uppercase tracking-widest opacity-60 mb-2&quot;&gt;Client: Organic Life&lt;/p&gt;
+                    &lt;p class=&quot;text-sm leading-relaxed opacity-80&quot;&gt;
+                        Sustainable packaging design concepts visualized through 3D modeling and rendering.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+    
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 8
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Estelle Darcy - Illustration&lt;/title&gt;
+    
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        /* --- 核心复用样式 --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative;
+            background-color: #FFF5F5; overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif; color: #4A4A6A;
+        }
+        .layout-grid {
+            display: grid; grid-template-columns: repeat(12, 1fr); gap: 32px;
+            padding: 80px; height: 100%; grid-template-rows: auto 1fr;
+        }
+        .text-accent { color: #B04E78; }
+        .bg-accent { background-color: #B04E78; }
+        .font-script { font-family: 'Brush Script MT', 'cursive', serif; font-weight: 400; }
+        .decoration-line { height: 1px; background: #B04E78; opacity: 0.3; }
+
+        /* --- 图片边框装饰 (参考页复用) --- */
+        .image-wrapper { position: relative; z-index: 10; height: 100%; }
+        .image-wrapper::after {
+            content: ''; position: absolute; top: 20px; right: -20px;
+            width: 100%; height: 100%; border: 1px solid #B04E78;
+            opacity: 0.2; z-index: -1; border-radius: 12px;
+        }
+        
+        /* --- 文本卡片样式 --- */
+        .text-card {
+            background: #FFFFFF;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(176, 78, 120, 0.05);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;absolute -top-10 -left-10 select-none pointer-events-none&quot;&gt;
+            &lt;h1 class=&quot;font-script text-accent opacity-5 text-[20rem]&quot;&gt;Artistry&lt;/h1&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;layout-grid&quot;&gt;
+            
+            &lt;div style=&quot;grid-column: span 12;&quot;&gt;
+                 &lt;p class=&quot;text-accent text-xl font-bold italic mb-2&quot;&gt;Visual Storytelling&lt;/p&gt;
+                 &lt;h2 class=&quot;font-script text-accent text-[5rem] leading-[0.8] -ml-2&quot;&gt;Illustration&lt;/h2&gt;
+                 &lt;div class=&quot;decoration-line w-24 mt-6 mb-8&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div style=&quot;grid-column: span 12;&quot; class=&quot;grid grid-cols-12 gap-10 h-full pb-8&quot;&gt;
+                
+                &lt;div class=&quot;col-span-4 h-full pt-4&quot;&gt;
+                    &lt;div class=&quot;text-card relative&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-quote-left text-4xl text-accent opacity-20 mb-6&quot;&gt;&lt;/i&gt;
+                        
+                        &lt;h3 class=&quot;text-accent text-xl font-bold uppercase tracking-wider mb-4&quot;&gt;Creative Insight&lt;/h3&gt;
+                        &lt;div class=&quot;decoration-line w-12 mb-6&quot;&gt;&lt;/div&gt;
+                        
+                        &lt;p class=&quot;text-sm leading-relaxed text-justify opacity-80 mb-8&quot;&gt;
+                            &quot;Every masterpiece begins with a simple line. We focus on the initial sketching phase to capture the raw emotion before digitizing the final mural concept. It is about translating the abstract into the tangible.&quot;
+                        &lt;/p&gt;
+                        
+                        &lt;div class=&quot;mt-auto&quot;&gt;
+                            &lt;p class=&quot;text-xs font-bold uppercase tracking-widest text-accent&quot;&gt;Phase 01: Ideation&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;col-span-8 h-full pt-4&quot;&gt;
+                    &lt;div class=&quot;image-wrapper h-full&quot;&gt;
+                         &lt;img src=&quot;https://images.unsplash.com/photo-1549887552-93f27ea6b705?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80&quot; 
+                              class=&quot;w-full h-full object-cover rounded-xl shadow-sm&quot;&gt;
+                        
+                        &lt;div class=&quot;absolute bottom-6 left-6 bg-white/90 backdrop-blur px-4 py-2 rounded-full shadow-sm&quot;&gt;
+                            &lt;p class=&quot;text-xs font-bold uppercase text-accent tracking-wider&quot;&gt;Final Mural Concept&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 9
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Estelle Darcy - Client Testimonials&lt;/title&gt;
+    
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        /* --- 核心基础样式 (保持不变) --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative;
+            background-color: #FFF5F5; overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif; color: #4A4A6A;
+        }
+        .layout-grid {
+            display: grid; grid-template-columns: repeat(12, 1fr); gap: 32px;
+            padding: 80px 80px 40px 80px; /* 调整了底部padding */
+            height: 100%;
+        }
+        .text-accent { color: #B04E78; }
+        .bg-accent { background-color: #B04E78; }
+        .font-script { font-family: 'Brush Script MT', 'cursive', serif; font-weight: 400; }
+        .decoration-line { height: 1px; background: #B04E78; opacity: 0.3; }
+        .image-wrapper { position: relative; z-index: 10; }
+        .image-wrapper::after {
+            content: ''; position: absolute; top: 15px; right: -15px; /* 稍微调整了偏移量以适应小图 */
+            width: 100%; height: 100%; border: 1px solid #B04E78;
+            opacity: 0.2; z-index: -1; border-radius: 8px;
+        }
+
+        /* --- 本页特定样式 --- */
+        .quote-icon {
+            font-size: 4rem;
+            line-height: 1;
+            opacity: 0.2;
+            margin-bottom: -20px;
+        }
+        .client-photo-small {
+            width: 64px; height: 64px; object-fit: cover; border-radius: 8px;
+        }
+        /* 调整小图的wrapper偏移 */
+        .image-wrapper.small::after { top: 8px; right: -8px; border-radius: 8px; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;absolute -top-10 -left-10 select-none pointer-events-none&quot;&gt;
+            &lt;h1 class=&quot;font-script text-accent opacity-5 text-[20rem]&quot;&gt;Stories&lt;/h1&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;layout-grid grid-rows-[auto_1fr]&quot;&gt;
+            
+            &lt;div style=&quot;grid-column: span 12;&quot; class=&quot;mb-8&quot;&gt;
+                 &lt;p class=&quot;text-accent text-xl font-bold italic mb-2&quot;&gt;Kind Words&lt;/p&gt;
+                 &lt;h2 class=&quot;font-script text-accent text-[5rem] leading-[0.8] -ml-2&quot;&gt;Client Testimonials&lt;/h2&gt;
+                 &lt;div class=&quot;decoration-line w-24 mt-6&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div style=&quot;grid-column: span 5; padding-right: 20px;&quot; class=&quot;flex flex-col justify-between h-full&quot;&gt;
+                &lt;div&gt;
+                    &lt;h3 class=&quot;text-accent text-sm font-black uppercase tracking-widest mb-6&quot;&gt;Valued Relationships&lt;/h3&gt;
+                    &lt;p class=&quot;text-sm leading-relaxed text-justify opacity-90 mb-10&quot;&gt;
+                        I define success not just by the quality of the work, but by the strength of the partnerships built along the way. Here is what some of my incredible clients have to say about our collaboration.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;image-wrapper w-3/4 self-start mb-12&quot;&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&amp;w=500&amp;auto=format&amp;fit=crop&quot; 
+                         alt=&quot;Working atmosphere&quot; 
+                         class=&quot;w-full h-[200px] object-cover rounded-lg shadow-sm opacity-90&quot;&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div style=&quot;grid-column: span 7;&quot; class=&quot;flex flex-col gap-10&quot;&gt;
+                
+                &lt;div class=&quot;relative pl-8&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-quote-left text-accent quote-icon absolute top-0 left-0&quot;&gt;&lt;/i&gt;
+                    &lt;div class=&quot;relative z-10&quot;&gt;
+                        &lt;p class=&quot;text-sm font-medium italic leading-relaxed opacity-90 mb-6&quot;&gt;
+                            “Estelle transformed our vague ideas into a sophisticated and powerful brand identity. Her minimalist approach was exactly what we needed to stand out. The process was seamless and genuinely enjoyable.”
+                        &lt;/p&gt;
+                        &lt;div class=&quot;flex items-center gap-4&quot;&gt;
+                            &lt;div class=&quot;image-wrapper small&quot;&gt;
+                                &lt;img src=&quot;https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&amp;w=200&amp;auto=format&amp;fit=crop&quot; alt=&quot;Client 1&quot; class=&quot;client-photo-small shadow-sm&quot;&gt;
+                            &lt;/div&gt;
+                            &lt;div&gt;
+                                &lt;p class=&quot;text-sm font-bold text-accent&quot;&gt;Sarah Jenkins&lt;/p&gt;
+                                &lt;p class=&quot;text-xs opacity-70 uppercase tracking-wider&quot;&gt;Founder, Bloom &amp; Co.&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                
+                &lt;div class=&quot;decoration-line w-full opacity-20&quot;&gt;&lt;/div&gt;
+
+                 &lt;div class=&quot;grid grid-cols-2 gap-8&quot;&gt;
+                    &lt;div&gt;
+                        &lt;p class=&quot;text-sm leading-relaxed opacity-85 mb-4 italic&quot;&gt;
+                            “An absolute pleasure to work with. Estelle's eye for editorial layout is unmatched. She delivered our annual report ahead of schedule and it looked stunning.”
+                        &lt;/p&gt;
+                        &lt;div class=&quot;flex items-center gap-3&quot;&gt;
+                             &lt;div class=&quot;image-wrapper small&quot;&gt;
+                                &lt;img src=&quot;https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&amp;w=200&amp;auto=format&amp;fit=crop&quot; alt=&quot;Client 2&quot; class=&quot;client-photo-small shadow-sm&quot;&gt;
+                            &lt;/div&gt;
+                            &lt;div&gt;
+                                &lt;p class=&quot;text-sm font-bold text-accent&quot;&gt;David Chen&lt;/p&gt;
+                                &lt;p class=&quot;text-xs opacity-70 uppercase tracking-wider&quot;&gt;Art Director, Nexus Media&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                     &lt;div&gt;
+                        &lt;p class=&quot;text-sm leading-relaxed opacity-85 mb-4 italic&quot;&gt;
+                            “She captured the essence of our luxury product line perfectly through her art direction. Highly professional and incredibly talented.”
+                        &lt;/p&gt;
+                        &lt;div class=&quot;flex items-center gap-3&quot;&gt;
+                             &lt;div class=&quot;image-wrapper small&quot;&gt;
+                                &lt;img src=&quot;https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&amp;w=200&amp;auto=format&amp;fit=crop&quot; alt=&quot;Client 3&quot; class=&quot;client-photo-small shadow-sm&quot;&gt;
+                            &lt;/div&gt;
+                            &lt;div&gt;
+                                &lt;p class=&quot;text-sm font-bold text-accent&quot;&gt;Elara Vance&lt;/p&gt;
+                                &lt;p class=&quot;text-xs opacity-70 uppercase tracking-wider&quot;&gt;CEO, Vance Interiors&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 10
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Estelle Darcy - Services &amp; Process&lt;/title&gt;
+    
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        /* --- 核心基础样式 (保持不变) --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative;
+            background-color: #FFF5F5; overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif; color: #4A4A6A;
+        }
+        .layout-grid {
+            display: grid; grid-template-columns: repeat(12, 1fr); gap: 32px;
+            padding: 80px; height: 100%; grid-template-rows: auto 1fr auto; /* 定义行高 */
+        }
+        .text-accent { color: #B04E78; }
+        .bg-accent { background-color: #B04E78; }
+        .font-script { font-family: 'Brush Script MT', 'cursive', serif; font-weight: 400; }
+        .decoration-line { height: 1px; background: #B04E78; opacity: 0.3; }
+        
+        /* --- 本页特定样式 --- */
+        .service-icon { font-size: 2.5rem; color: #B04E78; margin-bottom: 1.5rem; opacity: 0.8; }
+        .service-list li {
+            display: flex; align-items: center; gap: 10px;
+            font-size: 0.875rem; font-weight: 500; margin-bottom: 0.75rem; opacity: 0.9;
+        }
+        .service-list li::before {
+            content: ''; width: 6px; height: 6px;
+            background-color: #B04E78; border-radius: 50%; display: block;
+        }
+        .process-step { position: relative; }
+        .process-step::after {
+            content: ''; position: absolute; top: 24px; right: -50%; width: 80%; height: 1px;
+            background: #B04E78; opacity: 0.2; z-index: 0;
+        }
+        .process-step:last-child::after { display: none; }
+        .step-number {
+            font-family: 'Brush Script MT', 'cursive'; font-size: 3rem; color: #B04E78; opacity: 0.25;
+            line-height: 1; margin-bottom: -10px; position: relative; z-index: 1;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;absolute -top-10 -left-10 select-none pointer-events-none&quot;&gt;
+            &lt;h1 class=&quot;font-script text-accent opacity-5 text-[20rem]&quot;&gt;Expertise&lt;/h1&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;layout-grid&quot;&gt;
+            
+            &lt;div style=&quot;grid-column: span 12;&quot;&gt;
+                 &lt;p class=&quot;text-accent text-xl font-bold italic mb-2&quot;&gt;What I Do&lt;/p&gt;
+                 &lt;h2 class=&quot;font-script text-accent text-[5rem] leading-[0.8] -ml-2&quot;&gt;My Services&lt;/h2&gt;
+                 &lt;div class=&quot;decoration-line w-24 mt-6 mb-12&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div style=&quot;grid-column: span 12;&quot; class=&quot;grid grid-cols-3 gap-12 items-start&quot;&gt;
+                
+                &lt;div&gt;
+                    &lt;i class=&quot;fa-solid fa-gem service-icon&quot;&gt;&lt;/i&gt;
+                    &lt;h3 class=&quot;text-lg font-bold uppercase tracking-wider mb-4&quot;&gt;Brand Identity&lt;/h3&gt;
+                    &lt;div class=&quot;decoration-line w-12 mb-6 opacity-50&quot;&gt;&lt;/div&gt;
+                    &lt;p class=&quot;text-sm leading-relaxed opacity-80 mb-6 text-justify&quot;&gt;
+                        Crafting cohesive visual systems that define your business and resonate with your target audience.
+                    &lt;/p&gt;
+                    &lt;ul class=&quot;service-list&quot;&gt;
+                        &lt;li&gt;Logo Design &amp; Variations&lt;/li&gt;
+                        &lt;li&gt;Color Palette &amp; Typography&lt;/li&gt;
+                        &lt;li&gt;Brand Guidelines Book&lt;/li&gt;
+                        &lt;li&gt;Stationery Suite&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+
+                &lt;div&gt;
+                    &lt;i class=&quot;fa-solid fa-book-open service-icon&quot;&gt;&lt;/i&gt;
+                    &lt;h3 class=&quot;text-lg font-bold uppercase tracking-wider mb-4&quot;&gt;Editorial &amp; Print&lt;/h3&gt;
+                    &lt;div class=&quot;decoration-line w-12 mb-6 opacity-50&quot;&gt;&lt;/div&gt;
+                    &lt;p class=&quot;text-sm leading-relaxed opacity-80 mb-6 text-justify&quot;&gt;
+                        Translating content into beautiful, tangible experiences through thoughtful layout and typography.
+                    &lt;/p&gt;
+                    &lt;ul class=&quot;service-list&quot;&gt;
+                        &lt;li&gt;Magazines &amp; Lookbooks&lt;/li&gt;
+                        &lt;li&gt;Annual Reports&lt;/li&gt;
+                        &lt;li&gt;Book Cover Design&lt;/li&gt;
+                        &lt;li&gt;Packaging Graphics&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+
+                &lt;div&gt;
+                    &lt;i class=&quot;fa-solid fa-layer-group service-icon&quot;&gt;&lt;/i&gt;
+                    &lt;h3 class=&quot;text-lg font-bold uppercase tracking-wider mb-4&quot;&gt;Art Direction&lt;/h3&gt;
+                    &lt;div class=&quot;decoration-line w-12 mb-6 opacity-50&quot;&gt;&lt;/div&gt;
+                    &lt;p class=&quot;text-sm leading-relaxed opacity-80 mb-6 text-justify&quot;&gt;
+                        Guiding the visual narrative across platforms to ensure consistency and high aesthetic impact.
+                    &lt;/p&gt;
+                    &lt;ul class=&quot;service-list&quot;&gt;
+                        &lt;li&gt;Photoshoot Concepting&lt;/li&gt;
+                        &lt;li&gt;Social Media Aesthetics&lt;/li&gt;
+                        &lt;li&gt;Web Design Consulting&lt;/li&gt;
+                        &lt;li&gt;Visual Strategy&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+
+            &lt;div style=&quot;grid-column: span 12;&quot; class=&quot;mt-8 pt-8 border-t border-accent border-opacity-10&quot;&gt;
+                &lt;h3 class=&quot;text-accent text-sm font-black uppercase tracking-widest mb-8&quot;&gt;The Process&lt;/h3&gt;
+                &lt;div class=&quot;grid grid-cols-4 gap-8&quot;&gt;
+                    &lt;div class=&quot;process-step&quot;&gt;
+                        &lt;div class=&quot;step-number&quot;&gt;01&lt;/div&gt;
+                        &lt;h4 class=&quot;font-bold mb-2&quot;&gt;Discovery&lt;/h4&gt;
+                        &lt;p class=&quot;text-xs opacity-70 leading-relaxed&quot;&gt;Research, briefing, and understanding your core goals.&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;process-step&quot;&gt;
+                        &lt;div class=&quot;step-number&quot;&gt;02&lt;/div&gt;
+                        &lt;h4 class=&quot;font-bold mb-2&quot;&gt;Strategy&lt;/h4&gt;
+                        &lt;p class=&quot;text-xs opacity-70 leading-relaxed&quot;&gt;Defining the creative direction and concept development.&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;process-step&quot;&gt;
+                        &lt;div class=&quot;step-number&quot;&gt;03&lt;/div&gt;
+                        &lt;h4 class=&quot;font-bold mb-2&quot;&gt;Design&lt;/h4&gt;
+                        &lt;p class=&quot;text-xs opacity-70 leading-relaxed&quot;&gt;Iterative creation, refinement, and feedback loops.&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;process-step&quot;&gt;
+                        &lt;div class=&quot;step-number&quot;&gt;04&lt;/div&gt;
+                        &lt;h4 class=&quot;font-bold mb-2&quot;&gt;Delivery&lt;/h4&gt;
+                        &lt;p class=&quot;text-xs opacity-70 leading-relaxed&quot;&gt;Final file preparation and launch support.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 11
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Estelle Darcy - Introduction&lt;/title&gt;
+    
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        /* --- 核心复用样式 --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative;
+            background-color: #FFF5F5; overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif; color: #4A4A6A;
+        }
+        .layout-grid {
+            display: grid; grid-template-columns: repeat(12, 1fr); gap: 32px;
+            padding: 80px; height: 100%; grid-template-rows: auto 1fr;
+        }
+        .text-accent { color: #B04E78; }
+        .bg-accent { background-color: #B04E78; }
+        .font-script { font-family: 'Brush Script MT', 'cursive', serif; font-weight: 400; }
+        .decoration-line { height: 1px; background: #B04E78; opacity: 0.3; }
+
+        /* --- 图片边框装饰 (参考页复用) --- */
+        .image-wrapper { position: relative; z-index: 10; }
+        .image-wrapper::after {
+            content: ''; position: absolute; top: 20px; right: -20px;
+            width: 100%; height: 100%; border: 1px solid #B04E78;
+            opacity: 0.2; z-index: -1; border-radius: 12px;
+        }
+
+        /* --- 列表样式 (复用参考页的圆点风格) --- */
+        .custom-list li {
+            display: flex; align-items: center; gap: 12px;
+            font-size: 0.95rem; margin-bottom: 1rem; opacity: 0.9;
+        }
+        .custom-list li::before {
+            content: ''; width: 6px; height: 6px;
+            background-color: #B04E78; border-radius: 50%; display: block;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;absolute -top-10 -left-10 select-none pointer-events-none&quot;&gt;
+            &lt;h1 class=&quot;font-script text-accent opacity-5 text-[20rem]&quot;&gt;Hello&lt;/h1&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;layout-grid&quot;&gt;
+            
+            &lt;div style=&quot;grid-column: span 12;&quot;&gt;
+                 &lt;p class=&quot;text-accent text-xl font-bold italic mb-2&quot;&gt;About Me&lt;/p&gt;
+                 &lt;h2 class=&quot;font-script text-accent text-[5rem] leading-[0.8] -ml-2&quot;&gt;Introduction&lt;/h2&gt;
+                 &lt;div class=&quot;decoration-line w-24 mt-6 mb-8&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div style=&quot;grid-column: span 12;&quot; class=&quot;grid grid-cols-12 gap-12 items-center h-full pb-8&quot;&gt;
+                
+                &lt;div class=&quot;col-span-6 pr-8 flex flex-col justify-center h-full&quot;&gt;
+                    &lt;div class=&quot;mb-10&quot;&gt;
+                        &lt;h3 class=&quot;text-accent text-sm font-black uppercase tracking-widest mb-4&quot;&gt;Welcome Message&lt;/h3&gt;
+                        &lt;p class=&quot;text-sm leading-relaxed text-justify opacity-80&quot;&gt;
+                            I'm Estelle Darcy, a passionate designer focused on minimalist aesthetics and meaningful visual communication. I believe that every pixel should serve a purpose and every design should tell a story that resonates with its audience.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div&gt;
+                        &lt;h3 class=&quot;text-accent text-sm font-black uppercase tracking-widest mb-4&quot;&gt;Key Objectives&lt;/h3&gt;
+                        &lt;ul class=&quot;custom-list&quot;&gt;
+                            &lt;li&gt;Demonstrate Design Proficiency&lt;/li&gt;
+                            &lt;li&gt;Showcase Creative Process&lt;/li&gt;
+                            &lt;li&gt;Present Past Client Success&lt;/li&gt;
+                            &lt;li&gt;Explore Visual Strategy&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;col-span-6 h-full flex items-center&quot;&gt;
+                    &lt;div class=&quot;image-wrapper w-full&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1520173043194-dc6b2a237fee?q=80&amp;w=1280&amp;auto=format&amp;fit=crop&quot; 
+                             class=&quot;w-full h-[400px] object-cover rounded-xl shadow-sm&quot;&gt;
+                        
+                        &lt;div class=&quot;absolute -bottom-8 left-0&quot;&gt;
+                            &lt;p class=&quot;font-script text-accent text-3xl opacity-40&quot;&gt;Creativity first&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <script>
+   // 自动调整iframe高度
+    function resizeIframes() {
+        document.querySelectorAll('.responsive-iframe').forEach(iframe => {
+            try {
+                const doc = iframe.contentDocument || iframe.contentWindow.document;
+                const height = Math.max(
+                    doc.body.scrollHeight,
+                    doc.documentElement.scrollHeight,
+                    doc.body.offsetHeight,
+                    doc.documentElement.offsetHeight,
+                    doc.body.clientHeight,
+                    doc.documentElement.clientHeight
+                );
+                iframe.style.height = height + 'px';
+            } catch (e) {
+                console.log('无法调整iframe高度:', e);
+            }
+        });
+    }
+    
+    // 初始调整
+    window.addEventListener('load', resizeIframes);
+    
+    // 内容加载后调整
+    document.querySelectorAll('.responsive-iframe').forEach(iframe => {
+        iframe.addEventListener('load', function() {
+            resizeIframes();
+            // 对动态内容进行定期检查
+            setInterval(resizeIframes, 1000);
+        });
+    });
+  </script>
+ </body>
+</html>

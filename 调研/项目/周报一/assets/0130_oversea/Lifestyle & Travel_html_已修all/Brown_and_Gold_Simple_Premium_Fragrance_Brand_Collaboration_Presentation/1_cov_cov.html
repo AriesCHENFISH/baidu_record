@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Collaboration - Luxury Proposal</title>
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #F8F7F5; /* 更柔和的高级米白 */
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* 抽象几何背景 - 模拟高定纸张折痕与光影 */
+        .abstract-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        .shadow-line {
+            position: absolute;
+            background: linear-gradient(to bottom, transparent, rgba(74, 53, 32, 0.03), transparent);
+            width: 1px;
+            height: 150%;
+            transform: rotate(35deg);
+        }
+
+        /* 核心标题渐入效果 */
+        .title-reveal {
+            animation: reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+
+        @keyframes reveal {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* 装饰用边框细线 */
+        .frame-line {
+            position: absolute;
+            border: 1px solid rgba(74, 53, 32, 0.1);
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container" class="flex flex-col items-center justify-between py-20">
+        
+        <div class="abstract-bg">
+            <div class="shadow-line" style="left: 20%; top: -20%;"></div>
+            <div class="shadow-line" style="left: 25%; top: -20%;"></div>
+            <div class="shadow-line" style="left: 80%; top: -20%;"></div>
+            
+            <div class="frame-line" style="top: 40px; left: 40px; right: 40px; bottom: 40px;"></div>
+        </div>
+
+        <div class="relative z-10 flex flex-col items-center">
+            <div class="text-[#4A3520] text-3xl mb-4">
+                <i class="fa-solid fa-clover"></i>
+            </div>
+            <div class="tracking-[0.5em] text-[#4A3520] text-sm font-light uppercase">
+                Hanover and Tyke
+            </div>
+        </div>
+
+        <div class="relative z-10 text-center title-reveal">
+            <div class="mb-4 flex items-center justify-center gap-4">
+                <div class="h-[1px] w-12 bg-[#8B6D51]"></div>
+                <span class="text-[#8B6D51] tracking-[0.3em] text-xs font-bold uppercase">Proposal</span>
+                <div class="h-[1px] w-12 bg-[#8B6D51]"></div>
+            </div>
+            
+            <h1 class="text-[#4A3520] text-[110px] font-bold leading-none tracking-tighter mb-6">
+                Brand<br>
+                <span class="font-light italic">Collaboration</span>
+            </h1>
+            
+            <p class="text-[#5C5248] text-lg tracking-[0.2em] font-light uppercase">
+                Premium Fragrance Partnership 2026
+            </p>
+        </div>
+
+        <div class="relative z-10 w-full px-20 flex justify-between items-end">
+            <div class="flex flex-col gap-2 border-l border-[#8B6D51] pl-6">
+                <div class="flex items-center gap-3 text-[#5C5248] text-xs">
+                    <i class="fa-regular fa-envelope text-[#8B6D51]"></i>
+                    <span>hello@reallygreatsite.com</span>
+                </div>
+                <div class="flex items-center gap-3 text-[#5C5248] text-xs">
+                    <i class="fa-solid fa-globe text-[#8B6D51]"></i>
+                    <span>www.reallygreatsite.com</span>
+                </div>
+            </div>
+
+            <div class="text-right">
+                <div class="text-[#4A3520] text-5xl font-serif italic leading-none mb-1">97</div>
+                <div class="text-[#8B6D51] text-[10px] font-bold tracking-widest uppercase">Est. Portfolio</div>
+            </div>
+        </div>
+
+        <div class="absolute top-1/2 left-10 -translate-y-1/2 -rotate-90 pointer-events-none opacity-[0.03] select-none text-[120px] font-bold text-[#4A3520]">
+            HERITAGE
+        </div>
+        <div class="absolute top-1/2 right-10 -translate-y-1/2 rotate-90 pointer-events-none opacity-[0.03] select-none text-[120px] font-bold text-[#4A3520]">
+            ESSENCE
+        </div>
+
+    </div>
+
+</body>
+</html>

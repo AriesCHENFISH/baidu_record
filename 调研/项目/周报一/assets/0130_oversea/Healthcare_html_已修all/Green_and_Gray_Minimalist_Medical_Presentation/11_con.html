@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resource Insights - Page 11</title>
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <!-- ECharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.2/echarts.min.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Noto Sans SC', sans-serif; }
+        
+        /* 页面容器 1280x720 */
+        #page_container { 
+            width: 1280px; 
+            height: 720px; 
+            margin: 0 auto; 
+            position: relative; 
+            overflow: hidden; 
+            background-color: #FFFFFF; 
+            display: flex; 
+        }
+
+        /* 品牌色定义 */
+        .bg-brand-green { background-color: #CDEE9E; }
+        .text-primary-dark { color: #3C3A32; }
+        .bg-primary-dark { background-color: #3C3A32; }
+        
+        /* 统一Logo文字样式 */
+        .logo-text { letter-spacing: 0.15em; display: flex; align-items: center; }
+        .logo-divider { width: 1px; height: 16px; background-color: #3C3A32; margin: 0 12px; opacity: 0.3; }
+
+        /* 右侧数据卡片下划线 */
+        .data-box { border-bottom: 2px solid #CDEE9E; }
+
+        /* 自定义文本框阴影与样式 */
+        .custom-text-box {
+            box-shadow: 10px 10px 0px rgba(60, 58, 50, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div id="page_container">
+        <!-- 左侧：标题区 (42%) -->
+        <div class="w-[42%] h-full bg-brand-green flex flex-col justify-between p-16 z-10">
+            <!-- 统一 Logo -->
+            <div class="logo-text">
+                <span class="font-bold text-xl text-primary-dark">BORCELLE</span>
+                <div class="logo-divider"></div>
+                <span class="font-light text-lg text-primary-dark opacity-80 uppercase tracking-widest">Medical Group</span>
+            </div>
+
+            <!-- 标题内容区 -->
+            <div class="mb-12">
+                <div class="w-16 h-1.5 bg-primary-dark mb-10"></div>
+
+                <!-- 文本框设计的一句话 -->
+                <div class="bg-primary-dark p-5 pr-8 rounded-r-lg border-l-4 border-white mb-8 custom-text-box max-w-[360px]">
+                    <p class="text-white text-sm font-medium leading-relaxed tracking-wide">
+                        Analyzing the global distribution of health investments to ensure sustainable and impactful growth.
+                    </p>
+                </div>
+
+                <h1 class="text-primary-dark text-[84px] font-bold leading-[1.05] tracking-tighter italic">Resource<br>Insights.</h1>
+                <p class="text-primary-dark text-xl font-medium mt-6 opacity-60 tracking-widest uppercase">Budget Allocation</p>
+            </div>
+            
+            <!-- 装饰元素 -->
+            <div class="absolute -bottom-10 -right-10 w-40 h-40 border-8 border-white opacity-20 rounded-full"></div>
+        </div>
+
+        <!-- 右侧：饼图数据区 (58%) -->
+        <div class="w-[58%] h-full bg-white relative flex flex-col p-20">
+            <!-- 统一页码 -->
+            <div class="absolute top-12 right-12">
+                <span class="text-5xl font-bold text-primary-dark opacity-10">11</span>
+            </div>
+
+            <!-- 副标题 -->
+            <div class="flex items-center gap-4 mb-4">
+                <div class="w-2 h-2 rounded-full bg-primary-dark"></div>
+                <h3 class="text-primary-dark text-sm font-bold tracking-[0.3em] uppercase">Global Healthcare Investment</h3>
+            </div>
+
+            <!-- 饼图容器 -->
+            <div id="pie-chart" class="w-full h-full flex-grow"></div>
+
+            <!-- 底部数据说明卡片 -->
+            <div class="grid grid-cols-2 gap-12 mt-6">
+                <div class="data-box pb-4">
+                    <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Core Priority</span>
+                    <p class="text-2xl font-bold text-primary-dark italic mt-1">Research & Dev</p>
+                </div>
+                <div class="data-box pb-4">
+                    <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Infrastructure</span>
+                    <p class="text-2xl font-bold text-primary-dark italic mt-1">Sustainable Growth</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var chartDom = document.getElementById('pie-chart');
+            var myChart = echarts.init(chartDom);
+            var option = {
+                color: ['#3C3A32', '#CDEE9E', '#8CA864', '#BCCF9E'],
+                tooltip: { 
+                    trigger: 'item',
+                    backgroundColor: '#3C3A32',
+                    textStyle: { color: '#fff' }
+                },
+                legend: { 
+                    top: '5%', 
+                    left: 'center', 
+                    itemGap: 30, 
+                    icon: 'circle',
+                    textStyle: { fontWeight: 'bold', color: '#3C3A32' } 
+                },
+                series: [{
+                    name: 'Budget Usage',
+                    type: 'pie',
+                    radius: ['45%', '72%'],
+                    avoidLabelOverlap: false,
+                    itemStyle: { 
+                        borderRadius: 12, 
+                        borderColor: '#fff', 
+                        borderWidth: 6 
+                    },
+                    label: { show: false },
+                    emphasis: { 
+                        label: { 
+                            show: true, 
+                            fontSize: 24, 
+                            fontWeight: 'bold',
+                            color: '#3C3A32'
+                        } 
+                    },
+                    data: [
+                        { value: 45, name: 'Medical Research' },
+                        { value: 25, name: 'Hospital Operations' },
+                        { value: 20, name: 'Staff Training' },
+                        { value: 10, name: 'Innovation Lab' }
+                    ]
+                }]
+            };
+            myChart.setOption(option);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The World of Tennis - Cover Slide</title>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        t_primary: '#3F6283',
+                        t_container: '#6292C2',
+                        t_accent: '#DDEE56',
+                        t_highlight: '#F0F4C3',
+                        t_shadow: '#324E68',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #3F6283;
+            overflow: hidden;
+        }
+        .title-italic {
+            font-style: italic;
+            font-weight: 900;
+            letter-spacing: -0.02em;
+        }
+        .text-shadow-hard {
+            text-shadow: 6px 6px 0px #324E68;
+        }
+        /* 球场透视装饰 */
+        .court-mesh {
+            background-image: linear-gradient(rgba(255,255,255,0.1) 2px, transparent 2px),
+                              linear-gradient(90deg, rgba(255,255,255,0.1) 2px, transparent 2px);
+            background-size: 60px 60px;
+            transform: perspective(500px) rotateX(60deg);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        
+        <!-- 统一页眉导航 -->
+        <header class="relative z-30 w-full h-[100px] bg-t_accent p-3 shadow-xl">
+            <div class="w-full h-full border-2 border-dashed border-white rounded-lg flex items-center justify-center gap-16">
+                <nav class="flex gap-12">
+                    <div class="bg-t_highlight px-10 py-2 rounded-full shadow-sm text-t_primary font-bold uppercase tracking-wide text-sm cursor-default">home</div>
+                    <div class="bg-t_highlight px-10 py-2 rounded-full shadow-sm text-t_primary font-bold uppercase tracking-wide text-sm opacity-80 cursor-default">content</div>
+                    <div class="bg-t_highlight px-10 py-2 rounded-full shadow-sm text-t_primary font-bold uppercase tracking-wide text-sm opacity-80 cursor-default">contact</div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- 背景装饰：抽象球场线条 -->
+        <div class="absolute bottom-[-100px] right-[-100px] w-[800px] h-[600px] court-mesh opacity-40 z-0"></div>
+
+        <main class="relative z-10 grid grid-cols-12 h-[620px] w-full px-20 items-center">
+            
+            <!-- 左侧内容区 -->
+            <div class="col-span-6 flex flex-col justify-center">
+                <!-- 副标题 -->
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-16 h-1.5 bg-t_accent rounded-full"></div>
+                    <span class="text-t_accent text-2xl font-bold italic tracking-widest uppercase">Presentation</span>
+                </div>
+
+                <!-- 主标题 -->
+                <h1 class="text-white text-[110px] title-italic leading-[0.85] text-shadow-hard uppercase mb-12">
+                    The World <br><span class="text-t_accent">Of Tennis</span>
+                </h1>
+
+                <!-- 汇报人信息栏 (Presenter Info) -->
+                <div class="flex items-center gap-8 bg-t_shadow/40 backdrop-blur-md p-6 rounded-2xl border-l-8 border-t_accent w-fit shadow-2xl">
+                    <div class="flex flex-col">
+                        <span class="text-t_accent/70 text-xs font-bold uppercase tracking-widest mb-1">Presented by</span>
+                        <span class="text-white text-xl font-medium">Zhang San</span>
+                    </div>
+                    <div class="w-px h-10 bg-white/20"></div>
+                    <div class="flex flex-col">
+                        <span class="text-t_accent/70 text-xs font-bold uppercase tracking-widest mb-1">Date</span>
+                        <span class="text-white text-xl font-medium">2026.01.07</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右侧视觉区 -->
+            <div class="col-span-6 relative flex items-center justify-center h-full">
+                <!-- 装饰性圆形背景 -->
+                <div class="absolute w-[500px] h-[500px] bg-t_container rounded-full opacity-20 animate-pulse"></div>
+                <div class="absolute w-[420px] h-[420px] border-2 border-dashed border-t_accent/30 rounded-full"></div>
+
+                <!-- 网球主体 -->
+                <div class="relative z-20 group">
+                    <!-- 运动拖尾效果 -->
+                    <div class="absolute -top-10 -right-10 w-32 h-32 bg-t_accent/20 rounded-full blur-3xl"></div>
+                    
+                    <div class="w-[380px] h-[380px] rounded-full border-[12px] border-white shadow-[0_0_80px_rgba(0,0,0,0.4)] overflow-hidden relative transform rotate-12 transition-transform group-hover:rotate-0 duration-700">
+                        <img 
+                            src="https://images.unsplash.com/photo-1613917094076-265b7d59182c?q=80&w=800&auto=format&fit=crop" 
+                            alt="Tennis Ball" 
+                            class="w-full h-full object-cover scale-110"
+                        >
+                        <!-- 覆盖一层渐变增强质感 -->
+                        <div class="absolute inset-0 bg-gradient-to-tr from-t_primary/40 to-transparent"></div>
+                    </div>
+
+                    <!-- 悬浮的小图标点缀 -->
+                    <div class="absolute -top-4 -left-4 w-16 h-16 bg-t_accent rounded-full flex items-center justify-center shadow-lg border-4 border-white">
+                        <i class="fa-solid fa-star text-t_primary text-xl"></i>
+                    </div>
+                </div>
+
+                <!-- 浮动的装饰性线条 -->
+                <div class="absolute top-20 right-0 w-32 h-1 bg-t_accent rounded-full rotate-45 opacity-60"></div>
+                <div class="absolute bottom-20 left-10 w-24 h-1 bg-white rounded-full -rotate-12 opacity-40"></div>
+            </div>
+
+        </main>
+
+        <!-- 底部点缀线 -->
+        <div class="absolute bottom-0 left-0 w-full h-2 bg-t_accent opacity-50"></div>
+    </div>
+
+</body>
+</html>

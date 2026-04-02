@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fueling the Fire - Design Keynote</title>
+    
+    <!-- Import Fonts: Noto Sans SC as requested -->
+    <link href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css" rel="stylesheet">
+    
+    <!-- Import FontAwesome -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <!-- Global Styles & Reset -->
+    <style>
+        /* CSS Reset as requested */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container Configuration */
+        .page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #F5F7FA; /* Main Background Color */
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        /* Typography Utilities */
+        h1, h2, h3, h4, h5, h6 {
+            line-height: 1.1;
+        }
+        
+        /* Custom Gradient Utilities that Tailwind doesn't strictly cover in the requested format */
+        .gradient-orb-blue {
+            background: linear-gradient(135deg, #2E5CBE, #89C4F4);
+        }
+        
+        .gradient-sidebar {
+            background: linear-gradient(90deg, transparent, rgba(137, 196, 244, 0.2), rgba(46, 92, 190, 0.4));
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Slide Container -->
+    <div class="page_container">
+
+        <!-- ========================================= -->
+        <!-- BACKGROUND LAYER (Decorations)            -->
+        <!-- ========================================= -->
+        
+        <!-- Top Left Blurry Orb: Creates the "Fueling" atmosphere -->
+        <div class="gradient-orb-blue absolute -top-32 -left-20 w-[600px] h-[600px] rounded-full opacity-60 blur-[120px] pointer-events-none z-0"></div>
+
+        <!-- Bottom Right Blurry Orb: Creates contrast for the "03" number -->
+        <div class="gradient-orb-blue absolute -bottom-40 -right-20 w-[700px] h-[700px] rounded-full opacity-70 blur-[100px] pointer-events-none z-0"></div>
+
+        <!-- Right Side Vertical Gradient Strip (Subtle Depth) -->
+        <div class="gradient-sidebar absolute top-0 right-0 w-[180px] h-full pointer-events-none z-0"></div>
+
+
+        <!-- ========================================= -->
+        <!-- HEADER / NAVIGATION LAYER                 -->
+        <!-- ========================================= -->
+        
+        <!-- Top Navigation Pill Container -->
+        <div class="absolute top-12 right-24 z-20">
+            <!-- Pill Shape Border Container -->
+            <div class="border border-[#4A6FA5] rounded-full px-12 py-3 w-[600px] flex justify-between items-center backdrop-blur-sm bg-white/20">
+                <!-- Nav Item 1 -->
+                <span class="text-[#666666] text-sm tracking-wide font-medium uppercase">Studio Shodwe</span>
+                <!-- Nav Item 2 -->
+                <span class="text-[#666666] text-sm tracking-wide font-medium uppercase">Project.</span>
+                <!-- Nav Item 3 -->
+                <span class="text-[#666666] text-sm tracking-wide font-medium uppercase">2024</span>
+            </div>
+        </div>
+
+
+        <!-- ========================================= -->
+        <!-- CONTENT LAYER                             -->
+        <!-- ========================================= -->
+
+        <!-- Main Content Wrapper -->
+        <div class="absolute top-[180px] left-[100px] w-[800px] z-10">
+            
+            <!-- Main Title -->
+            <!-- Utilizing dark grey text, heavy weight, and tight spacing for impact -->
+            <h1 class="text-[#333333] text-[84px] font-bold tracking-tight uppercase mb-4 leading-none">
+                Fueling The Fire
+            </h1>
+
+            <!-- Subtitle -->
+            <!-- Lighter grey, uppercase, moderate tracking -->
+            <h2 class="text-[#666666] text-[42px] font-normal uppercase tracking-wide mb-12">
+                Sources of Inspiration and<br>Creativity
+            </h2>
+
+            <!-- Text Content Grid -->
+            <!-- Two paragraphs layout using flex/grid -->
+            <div class="flex flex-col gap-8 w-[90%]">
+                <!-- Paragraph 1 -->
+                <p class="text-[#333333] text-gl leading-relaxed font-light text-justify">
+                    Culpa ullamco qui in occaecat qui magna elit proident duis ut dolore aute enim proident fugiat elit amet consequat excepteur Lorem quis dolore in nulla amet sunt veniam sit ex sunt aliqua consequat ea laborum veniam adipisicing incididunt veniam veniam occaecat.
+                </p>
+
+                <!-- Paragraph 2 -->
+                <p class="text-[#333333] text-gl leading-relaxed font-light text-justify">
+                    Duis ut dolore aute enim proident fugiat elit amet consequat excepteur Lorem quis dolore in nulla amet sunt veniam sit ex sunt aliqua consequat ea laborum veniam adipisicing incididunt veniam veniam occaecat.
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- ========================================= -->
+        <!-- FOOTER / DECORATION LAYER                 -->
+        <!-- ========================================= -->
+
+        <!-- Large Decorative Number "03" -->
+        <!-- Placed over the blue blur in the bottom right, white color for negative space effect -->
+        <div class="absolute bottom-[-90px] right-[-20px] z-20 pointer-events-none">
+            <h3 class="text-white text-[420px] font-bold leading-none select-none drop-shadow-sm opacity-95">
+                03
+            </h3>
+        </div>
+
+    </div>
+
+</body>
+</html>

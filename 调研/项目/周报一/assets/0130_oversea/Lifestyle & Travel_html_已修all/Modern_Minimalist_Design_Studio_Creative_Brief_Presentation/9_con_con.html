@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, height=720, initial-scale=1.0">
+    <title>Visual Style - Design System</title>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#D94530',      // Flame Red
+                        bgBone: '#F2F2F0',       // Bone White
+                        bgDeep: '#3E1515',       // Deep Red/Brown
+                        accent: '#FF6B52',       // Coral Orange
+                        highlight: '#B8B8D1',    // Soft Lavender
+                        textDark: '#1A1A1A',     // Charcoal
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px;
+            margin: 0 auto; position: relative;
+            background-color: #F2F2F0;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        .kerning-tight { letter-spacing: -0.04em; }
+        .huge-text { font-size: 10rem; line-height: 0.85; }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-accent to-primary opacity-10 rounded-bl-full filter blur-3xl translate-x-1/4 -translate-y-1/4"></div>
+        <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-highlight opacity-20 rounded-tr-full filter blur-2xl -translate-x-1/4 translate-y-1/4"></div>
+
+        <div class="relative z-10 grid grid-cols-12 h-full p-16 content-between">
+
+            <div class="col-span-12 flex flex-col justify-start mt-8">
+                <div class="mb-6 flex items-center gap-3">
+                    <div class="w-8 h-1 bg-primary"></div>
+                    <p class="text-textDark font-bold tracking-[0.3em] text-xs uppercase">Chapter Introduction</p>
+                </div>
+
+                <h1 class="font-black text-primary huge-text kerning-tight uppercase drop-shadow-sm">
+                    Visual<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Style</span>
+                </h1>
+            </div>
+
+            <div class="absolute top-0 right-0 h-full w-[420px] overflow-hidden">
+                <div class="h-full w-full relative">
+                    <div class="absolute inset-0 bg-gradient-to-l from-transparent to-bgBone z-10"></div>
+                    
+                    <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=800&auto=format&fit=crop" 
+                         alt="Abstract visual style texture" 
+                         class="h-full w-full object-cover opacity-60 mix-blend-multiply grayscale contrast-125">
+
+                    <div class="absolute inset-y-0 right-16 flex flex-col justify-center gap-12 z-20 text-right max-w-[280px]">
+                        
+                        <div>
+                            <h3 class="text-textDark font-bold text-lg mb-2 uppercase tracking-wide">
+                                Creative Vision
+                            </h3>
+                            <p class="text-gray-600 text-sm font-medium leading-relaxed">
+                                Empowering brands through innovative visual languages and consistent design principles.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-textDark font-bold text-lg mb-2 uppercase tracking-wide">
+                                Minimalist Logic
+                            </h3>
+                            <p class="text-gray-600 text-sm font-medium leading-relaxed">
+                                Stripping away the unnecessary to reveal the core essence of every visual element.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-span-12 flex justify-between items-end pb-4 border-t border-gray-300 pt-8 mt-auto z-20">
+                <div class="flex flex-col">
+                    <div class="text-primary text-8xl font-black leading-none tracking-tighter opacity-90">
+                        (7)
+                    </div>
+                </div>
+
+                <div class="mb-4 text-accent opacity-50">
+                    <i class="fa-solid fa-feather-pointed text-4xl"></i>
+                </div>
+
+                <div class="text-right max-w-md">
+                    <h2 class="text-textDark font-bold text-lg mb-2 uppercase tracking-wide">
+                        Identity & Aesthetics
+                    </h2>
+                    <p class="text-gray-600 text-sm font-medium leading-relaxed">
+                        A glimpse into the visual identity and aesthetic direction. 
+                        Defining the core language of our design system through color, typography, and texture.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="absolute inset-0 opacity-[0.03] pointer-events-none z-50" 
+             style="background-image: url('data:image/svg+xml,%3Csvg width=\'6\' height=\'6\' viewBox=\'0 0 6 6\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23000000\' fill-opacity=\'1\' fill-rule=\'evenodd\'%3E%3Cpath d=\'M5 0h1v1H5V0zM0 5h1v1H0V5z\'/%3E%3C/g%3E%3C/svg%3E');">
+        </div>
+    </div>
+
+</body>
+</html>

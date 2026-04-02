@@ -1,0 +1,2171 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Responsive Merged HTML
+  </title>
+  <style>
+   body {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .page-wrapper {
+                width: 100%;
+                margin: 15px 0;
+                position: relative;
+            }
+            .page-title {
+                background: #f5f5f5;
+                padding: 5px 10px;
+                border-radius: 3px 3px 0 0;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+            }
+            .responsive-iframe {
+                border: none;
+                width: 100%;
+                display: block;
+            }
+  </style>
+ </head>
+ <body>
+  <!-- 内容将在这里插入 -->
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 1
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Creative Portfolio Keynote&lt;/title&gt;
+    
+    &lt;!-- Tailwind CSS CDN --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;!-- FontAwesome CDN --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;!-- Google Fonts CDN (Specific Link) --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;!-- Custom Config for Tailwind to match specific colors --&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#20457C',
+                        secondary: '#3A5A6D',
+                        line: '#5A7A90',
+                        bgWhite: '#FFFFFF',
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'],
+                    },
+                    spacing: {
+                        '1280': '1280px',
+                        '720': '720px',
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        /* CSS Reset &amp; Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Enforcing the Page Container Constraints */
+        .page-container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FFFFFF;
+            overflow: hidden; /* Ensure content doesn't spill out */
+            display: grid;
+            grid-template-rows: 72% 28%; /* Visual Split */
+        }
+
+        /* Text Utilities override to ensure no span block issues */
+        p, h1, h2, h3, h4, h5, h6 {
+            margin: 0;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;!-- Main Slide Container --&gt;
+    &lt;div class=&quot;page-container&quot;&gt;
+
+        &lt;!-- Top Section: Hero Image &amp; Title --&gt;
+        &lt;!-- Using a grid cell to hold the image and overlay content --&gt;
+        &lt;div class=&quot;relative w-full h-full bg-slate-200 overflow-hidden group&quot;&gt;
+            
+            &lt;!-- Background Image: Ocean Texture --&gt;
+            &lt;img src=&quot;https://images.unsplash.com/photo-1518837695005-2083093ee35b?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&quot; 
+                 alt=&quot;Deep Blue Ocean Texture&quot; 
+                 class=&quot;absolute inset-0 w-full h-full object-cover opacity-95&quot;&gt;
+            &lt;!-- 1280*518 --&gt;
+
+            &lt;!-- Gradient Overlay for Legibility --&gt;
+            &lt;div class=&quot;absolute inset-0&quot; style=&quot;background: linear-gradient(180deg, rgba(32,69,124,0.2) 0%, rgba(32,69,124,0.4) 100%);&quot;&gt;&lt;/div&gt;
+
+            &lt;!-- Decorative Frame Line (Abstracting the original curved line) --&gt;
+            &lt;!-- Creating a sophisticated border effect --&gt;
+            &lt;div class=&quot;absolute top-8 left-8 bottom-0 right-auto w-24 border-l-4 border-t-4 border-white/80 rounded-tl-[60px]&quot;&gt;&lt;/div&gt;
+
+            &lt;!-- Content Wrapper --&gt;
+            &lt;div class=&quot;relative z-10 w-full h-full flex flex-col justify-center items-center&quot;&gt;
+                &lt;!-- Main Title --&gt;
+                &lt;div class=&quot;text-center&quot;&gt;
+                    &lt;h1 class=&quot;text-white font-black text-[130px] leading-[0.85] tracking-tighter uppercase drop-shadow-xl&quot; style=&quot;text-shadow: 0 4px 30px rgba(0,0,0,0.3);&quot;&gt;
+                        Creative
+                    &lt;/h1&gt;
+                    &lt;h1 class=&quot;text-white font-black text-[130px] leading-[0.85] tracking-tighter uppercase drop-shadow-xl&quot; style=&quot;text-shadow: 0 4px 30px rgba(0,0,0,0.3);&quot;&gt;
+                        Portfolio
+                    &lt;/h1&gt;
+                &lt;/div&gt;
+                
+                &lt;!-- Decorative Icon separator --&gt;
+                &lt;div class=&quot;mt-6 text-white/80 text-2xl&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-water&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Bottom Section: Info Footer --&gt;
+        &lt;!-- Using flexbox for columnar layout --&gt;
+        &lt;div class=&quot;w-full h-full bg-white px-16 py-0 flex items-center justify-between&quot;&gt;
+            
+            &lt;!-- Left Column: Role &amp; Credit --&gt;
+            &lt;div class=&quot;flex flex-col justify-center items-start gap-1 w-1/3 border-l-4 border-primary pl-6&quot;&gt;
+                &lt;h2 class=&quot;text-primary font-bold text-3xl tracking-tight&quot;&gt;Graphic Designer&lt;/h2&gt;
+                &lt;div class=&quot;flex items-center gap-2 text-secondary text-sm font-medium uppercase tracking-widest mt-1&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-pen-nib text-xs&quot;&gt;&lt;/i&gt;
+                    &lt;span&gt;Designed by: Olivia Wilson&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Center Column: Date &amp; Meta --&gt;
+            &lt;div class=&quot;flex flex-col justify-center items-center w-1/3&quot;&gt;
+                &lt;h2 class=&quot;text-primary font-black text-5xl tracking-widest&quot; style=&quot;font-variant-numeric: tabular-nums;&quot;&gt;
+                    30&lt;span class=&quot;text-line mx-2 font-light&quot;&gt;-&lt;/span&gt;04&lt;span class=&quot;text-line mx-2 font-light&quot;&gt;-&lt;/span&gt;27
+                &lt;/h2&gt;
+                &lt;p class=&quot;text-secondary text-sm font-semibold uppercase tracking-[0.2em] mt-2 opacity-80&quot;&gt;
+                    Presentations Template
+                &lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Right Column: Description Text --&gt;
+            &lt;div class=&quot;flex flex-col justify-center items-end w-1/3 text-right&quot;&gt;
+                &lt;div class=&quot;max-w-xs&quot;&gt;
+                    &lt;p class=&quot;text-secondary text-sm leading-relaxed font-normal&quot;&gt;
+                        Presentations are communication tools that can be used as demonstration lectures, speeches, reports, and more. It is mostly presented before an audience.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 2
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Table of Contents - Static Blue&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot; rel=&quot;stylesheet&quot;&gt;
+    
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#20457C',   /* Deep Ocean Blue */
+                        secondary: '#3A5A6D',
+                        accent: '#5A7A90',
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'],
+                        mono: ['&quot;Courier New&quot;', 'monospace']
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+    &lt;style&gt;
+        #page_container { 
+            width: 1280px; 
+            height: 720px; 
+            margin: 0 auto; 
+            position: relative; 
+            background-color: #20457C; 
+            overflow: hidden; 
+            font-family: 'Noto Sans SC', sans-serif; 
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+
+        &lt;div class=&quot;absolute -left-[50px] top-[100px] text-[300px] font-bold text-white opacity-[0.03] leading-none select-none pointer-events-none tracking-widest&quot;&gt;
+            CONT&lt;br&gt;ENTS
+        &lt;/div&gt;
+        
+        &lt;div class=&quot;absolute top-0 right-[35%] w-px h-full bg-white/10 pointer-events-none&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute top-[120px] left-0 w-32 h-[2px] bg-white/20 pointer-events-none&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;w-full h-full flex&quot;&gt;
+            
+            &lt;div class=&quot;w-[35%] h-full flex flex-col justify-center px-16 relative z-10&quot;&gt;
+                &lt;div class=&quot;mb-6&quot;&gt;
+                    &lt;span class=&quot;text-white/80 text-sm font-bold tracking-[0.3em] uppercase block mb-2&quot;&gt;Agenda&lt;/span&gt;
+                    &lt;div class=&quot;w-12 h-[2px] bg-white&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                
+                &lt;h1 class=&quot;text-white text-[80px] font-bold leading-[1] tracking-tight mb-8&quot;&gt;
+                    Table of&lt;br&gt;Contents
+                &lt;/h1&gt;
+
+                &lt;p class=&quot;text-white/70 text-sm leading-relaxed font-light text-justify pr-8&quot;&gt;
+                    This presentation covers our strategic vision and detailed roadmap for the fiscal year 2027.
+                &lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;w-[65%] h-full flex flex-col justify-center px-20 space-y-10 relative z-10&quot;&gt;
+                
+                &lt;div class=&quot;flex items-center border-b border-white/30 pb-4&quot;&gt;
+                    &lt;div class=&quot;text-4xl font-mono font-bold text-white mr-8&quot;&gt;01&lt;/div&gt;
+                    &lt;div class=&quot;flex-1&quot;&gt;
+                        &lt;h3 class=&quot;text-2xl text-white font-bold mb-1&quot;&gt;Introduction &amp; Vision&lt;/h3&gt;
+                        &lt;p class=&quot;text-white/60 text-xs font-light&quot;&gt;Overview of our strategic goals and mission statement.&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;w-10 h-10 rounded-full border border-white/40 flex items-center justify-center bg-white/10 text-white&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-arrow-right text-sm&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;flex items-center border-b border-white/30 pb-4&quot;&gt;
+                    &lt;div class=&quot;text-4xl font-mono font-bold text-white mr-8&quot;&gt;02&lt;/div&gt;
+                    &lt;div class=&quot;flex-1&quot;&gt;
+                        &lt;h3 class=&quot;text-2xl text-white font-bold mb-1&quot;&gt;Process Workflow&lt;/h3&gt;
+                        &lt;p class=&quot;text-white/60 text-xs font-light&quot;&gt;Methodology and timeline for project execution.&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;w-10 h-10 rounded-full border border-white/40 flex items-center justify-center bg-white/10 text-white&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-arrow-right text-sm&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;flex items-center border-b border-white/30 pb-4&quot;&gt;
+                    &lt;div class=&quot;text-4xl font-mono font-bold text-white mr-8&quot;&gt;03&lt;/div&gt;
+                    &lt;div class=&quot;flex-1&quot;&gt;
+                        &lt;h3 class=&quot;text-2xl text-white font-bold mb-1&quot;&gt;Data Analysis&lt;/h3&gt;
+                        &lt;p class=&quot;text-white/60 text-xs font-light&quot;&gt;Key performance metrics and future projections.&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;w-10 h-10 rounded-full border border-white/40 flex items-center justify-center bg-white/10 text-white&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-arrow-right text-sm&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+               &lt;div class=&quot;flex items-center border-b border-white/30 pb-4&quot;&gt;
+                    &lt;div class=&quot;text-4xl font-mono font-bold text-white mr-8&quot;&gt;04&lt;/div&gt;
+                    &lt;div class=&quot;flex-1&quot;&gt;
+                        &lt;h3 class=&quot;text-2xl text-white font-bold mb-1&quot;&gt;Data Analysis&lt;/h3&gt;
+                        &lt;p class=&quot;text-white/60 text-xs font-light&quot;&gt;Key performance metrics and future projections.&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;w-10 h-10 rounded-full border border-white/40 flex items-center justify-center bg-white/10 text-white&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-arrow-right text-sm&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute bottom-0 left-0 bg-white w-24 h-24 flex items-center justify-center shadow-lg z-20&quot;&gt;
+            &lt;span class=&quot;text-primary text-3xl font-bold tracking-tighter&quot;&gt;02&lt;/span&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute top-[50px] right-[80px] flex items-center gap-4 z-20&quot;&gt;
+            &lt;div class=&quot;flex flex-col items-end text-white&quot;&gt;
+                &lt;span class=&quot;text-sm font-bold tracking-[0.2em] uppercase opacity-90&quot;&gt;Overview&lt;/span&gt;
+                &lt;span class=&quot;text-xs tracking-wider opacity-60&quot;&gt;Strategic Report 2027&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;w-[3px] h-[35px] bg-white opacity-50&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 3
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Intro - Portfolio Presentation&lt;/title&gt;
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;!-- Tailwind CSS (CDN) --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;!-- Google Fonts (Domestic CDN) --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        /* CSS Reset &amp; Global Standards */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Font Family Application */
+        body {
+            font-family: 'Noto Sans SC', 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Utility for line clamping if text is too long */
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* Custom Scrollbar hide */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    &lt;/style&gt;
+    
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#20457C',   /* Deep Ocean Blue */
+                        secondary: '#3A5A6D', /* Dark Slate */
+                        accent: '#5A7A90',    /* Muted Blue Line */
+                        bgWhite: '#FFFFFF',
+                    },
+                    spacing: {
+                        '1280': '1280px',
+                        '720': '720px',
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;!-- Main Page Container --&gt;
+    &lt;!-- Dimensions: 1280x720, Centered, No Shadow, Relative Positioning --&gt;
+    &lt;div class=&quot;page_container w-[1280px] h-[720px] m-auto relative bg-white overflow-hidden flex&quot;&gt;
+
+        &lt;!-- Left Content Section (Grid Column 1) --&gt;
+        &lt;!-- Design Logic: High whitespace, strong typography hierarchy --&gt;
+        &lt;div class=&quot;w-[780px] h-full flex flex-col justify-center pl-20 pr-12 relative z-10&quot;&gt;
+            
+            &lt;!-- Header Group --&gt;
+            &lt;div class=&quot;mb-12 border-l-4 border-primary pl-8&quot;&gt;
+                &lt;!-- Title --&gt;
+                &lt;h1 class=&quot;text-[120px] leading-[0.9] font-bold text-primary tracking-tight mb-4&quot;&gt;
+                    Intro
+                &lt;/h1&gt;
+                
+                &lt;!-- Subtitle Meta Info --&gt;
+                &lt;div class=&quot;flex items-center justify-between w-full max-w-md mt-4&quot;&gt;
+                    &lt;h2 class=&quot;text-xl font-medium text-secondary uppercase tracking-widest&quot;&gt;
+                        Graphic Designer
+                    &lt;/h2&gt;
+                    &lt;span class=&quot;text-xl font-bold text-primary&quot;&gt;2027&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Body Content Wrapper --&gt;
+            &lt;!-- Using grid gap for semantic separation of text blocks --&gt;
+            &lt;div class=&quot;flex flex-col gap-8 text-secondary pr-8&quot;&gt;
+                
+                &lt;!-- Paragraph 1 --&gt;
+                &lt;p class=&quot;text-sm leading-relaxed font-light text-justify&quot;&gt;
+                    Presentations are communication tools that can be used as demonstration lectures, speeches, reports, and more. It is mostly presented before an audience. It serves a variety of purposes, making presentations powerful tools for convincing and teaching.
+                &lt;/p&gt;
+
+                &lt;!-- Bullet Point Section (Styled as a block) --&gt;
+                &lt;ul class=&quot;list-none border-l border-accent pl-6 py-1&quot;&gt;
+                    &lt;li class=&quot;relative&quot;&gt;
+                        &lt;!-- Decorative Bullet Icon using FontAwesome --&gt;
+                        &lt;i class=&quot;fa-solid fa-water absolute -left-[34px] top-1 text-primary text-sm opacity-60&quot;&gt;&lt;/i&gt;
+                        &lt;p class=&quot;text-sm leading-relaxed font-normal text-primary&quot;&gt;
+                            Presentations are communication tools that can be used as demonstration lectures, speeches, reports, and more. It is mostly presented before an audience. It serves a variety of purposes, making presentations powerful tools for convincing and teaching.
+                        &lt;/p&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+
+                &lt;!-- Paragraph 2 --&gt;
+                &lt;p class=&quot;text-sm leading-relaxed font-light text-justify opacity-80&quot;&gt;
+                    Presentations are communication tools that can be used as demonstration lectures, speeches, reports, and more. It is mostly presented before an audience. It serves a variety of purposes, making presentations powerful tools for convincing and teaching.
+                &lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Page Number (Absolute Bottom Left of Content Area) --&gt;
+            &lt;!-- Design: High contrast block to anchor the page --&gt;
+            &lt;div class=&quot;absolute bottom-0 left-0 bg-primary w-24 h-24 flex items-center justify-center&quot;&gt;
+                &lt;span class=&quot;text-white text-3xl font-bold tracking-tighter&quot;&gt;02&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Right Visual Section --&gt;
+        &lt;!-- Design Logic: Organic Shape (Arch) to contrast strict typography --&gt;
+        &lt;div class=&quot;flex-1 h-full relative&quot;&gt;
+            &lt;!-- Background Shape Container --&gt;
+            &lt;!-- The shape mimics a window looking out to the ocean, cleaner than the original pill shape --&gt;
+            &lt;div class=&quot;absolute top-12 right-12 bottom-12 left-0 rounded-tl-[300px] rounded-bl-[300px] rounded-tr-[20px] rounded-br-[20px] overflow-hidden shadow-none transform translate-x-0&quot;&gt;
+                
+                &lt;!-- Image Overlay for Mood --&gt;
+                &lt;div class=&quot;absolute inset-0 bg-primary opacity-10 z-10 mix-blend-multiply&quot;&gt;&lt;/div&gt;
+                
+                &lt;!-- Main Image --&gt;
+                &lt;!-- High quality ocean texture to match theme --&gt;
+                &lt;img 
+                    src=&quot;https://images.unsplash.com/photo-1549221568-7c85675c2e17?q=80&amp;w=1000&amp;auto=format&amp;fit=crop&quot; 
+                    alt=&quot;Abstract Blue Ocean Texture&quot; 
+                    class=&quot;w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-700 ease-out&quot;
+                &gt;
+                &lt;!-- 500*720 --&gt;
+
+                &lt;!-- Decorative Geometric Overlay --&gt;
+                &lt;!-- Adds a layer of 'design' feel without clutter --&gt;
+                &lt;div class=&quot;absolute bottom-12 right-12 w-24 h-24 border border-white/30 rounded-full z-20&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;absolute top-1/2 left-12 w-1 h-24 bg-white/20 z-20&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 4
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc='&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Portfolio - About Me&lt;/title&gt;
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"&gt;&lt;/script&gt;
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css"&gt;
+    &lt;!-- Google Fonts Mirror (Required) --&gt;
+    &lt;link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css"&gt;
+
+    &lt;style&gt;
+        /* CSS Reset &amp; Basics */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* Main Container Styling */
+        .page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FFFFFF;
+            overflow: hidden;
+            /* No box-shadow as requested */
+        }
+
+        /* Custom Utilities */
+        .text-primary {
+            color: #20457C;
+        }
+        .text-secondary {
+            color: #3A5A6D;
+        }
+        .bg-primary {
+            background-color: #20457C;
+        }
+        .line-color {
+            border-color: #5A7A90;
+        }
+        
+        /* Smooth Font Rendering */
+        .antialiased {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;!-- Main Slide Container --&gt;
+    &lt;div class="page_container antialiased"&gt;
+        
+        &lt;!-- 1. Background Image Layer (Creates the Ocean "L" shape visual) --&gt;
+        &lt;!-- We use a full size image, but the white content box will cover the top-right part --&gt;
+        &lt;div class="absolute inset-0 z-0"&gt;
+            &lt;!-- Unsplash Ocean Texture: Clean, Professional, Blue Tones --&gt;
+            &lt;img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?q=80&amp;w=2070&amp;auto=format&amp;fit=crop" 
+                 alt="Ocean Texture" 
+                 class="w-full h-full object-cover opacity-90"&gt;
+            &lt;!-- 1280*720 --&gt;
+            
+            &lt;!-- Dark Overlay Gradient for better image depth at the bottom --&gt;
+            &lt;div class="absolute inset-0" style="background: linear-gradient(to top, rgba(32, 69, 124, 0.4), transparent);"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 2. Main White Content Block (The Overlay) --&gt;
+        &lt;!-- Positioned Top-Right to create the negative space on Left and Bottom --&gt;
+        &lt;div class="absolute top-0 right-0 z-10 bg-white shadow-none" 
+             style="width: 72%; height: 75%; border-bottom-left-radius: 40px;"&gt;
+            
+            &lt;!-- Internal Grid Layout for Content --&gt;
+            &lt;div class="w-full h-full p-16 grid grid-cols-12 gap-8"&gt;
+                
+                &lt;!-- Left Column of White Box: Title area --&gt;
+                &lt;div class="col-span-5 flex flex-col justify-between relative"&gt;
+                    &lt;!-- Title --&gt;
+                    &lt;div class="mt-4"&gt;
+                        &lt;h1 class="text-8xl font-bold text-primary tracking-tight leading-[0.85]"&gt;
+                            About&lt;br&gt;Me
+                        &lt;/h1&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Decorative small line --&gt;
+                    &lt;div class="w-16 h-1 bg-[#5A7A90] mt-8 mb-auto"&gt;&lt;/div&gt;
+
+                    &lt;!-- Bottom Info Row --&gt;
+                    &lt;div class="flex justify-between items-end border-t border-[#5A7A90] pt-4 w-full"&gt;
+                        &lt;p class="text-secondary font-medium text-lg tracking-wide uppercase"&gt;
+                            Graphic Designer
+                        &lt;/p&gt;
+                        &lt;p class="text-secondary font-bold text-lg"&gt;
+                            2027
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Right Column of White Box: Name &amp; Content --&gt;
+                &lt;div class="col-span-7 pl-8 flex flex-col pt-8"&gt;
+                    &lt;!-- Name Section --&gt;
+                    &lt;div class="flex justify-end mb-16"&gt;
+                        &lt;div class="text-right"&gt;
+                            &lt;h2 class="text-3xl font-bold text-primary mb-2"&gt;
+                                Olivia Wilson
+                            &lt;/h2&gt;
+                            &lt;div class="w-full h-[2px] bg-[#5A7A90]"&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Content List --&gt;
+                    &lt;div class="space-y-10"&gt;
+                        &lt;!-- Item 01 --&gt;
+                        &lt;div class="flex items-start gap-6 group"&gt;
+                            &lt;div class="shrink-0"&gt;
+                                &lt;h3 class="text-3xl font-bold text-primary group-hover:scale-110 transition-transform duration-300"&gt;01.&lt;/h3&gt;
+                            &lt;/div&gt;
+                            &lt;div&gt;
+                                &lt;p class="text-secondary text-sm leading-relaxed text-justify"&gt;
+                                    Presentations are communication tools that can be usedas demonstration slectures, speeches, reports, and more.It is mostly presented before an audience. 
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;!-- Item 02 --&gt;
+                        &lt;div class="flex items-start gap-6 group"&gt;
+                            &lt;div class="shrink-0"&gt;
+                                &lt;h3 class="text-3xl font-bold text-primary group-hover:scale-110 transition-transform duration-300"&gt;02.&lt;/h3&gt;
+                            &lt;/div&gt;
+                            &lt;div&gt;
+                                &lt;p class="text-secondary text-sm leading-relaxed text-justify"&gt;
+                                    Presentations are communication tools that can be usedas demonstration slectures, speeches, reports, and more.It is mostly presented before an audience. 
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 3. Page Number Badge --&gt;
+        &lt;!-- Top right corner, pinned to edge --&gt;
+        &lt;div class="absolute top-0 right-0 z-20 bg-primary w-24 h-24 flex items-center justify-center"&gt;
+            &lt;h2 class="text-white text-4xl font-bold"&gt;01&lt;/h2&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 4. Decorative Element (Optional Aesthetic Touch) --&gt;
+        &lt;!-- A subtle white line on the water to connect the layout visually --&gt;
+        &lt;div class="absolute bottom-16 left-16 z-10 w-32 h-[1px] bg-white opacity-60"&gt;&lt;/div&gt;
+        &lt;div class="absolute bottom-12 left-16 z-10"&gt;
+            &lt;i class="fa-solid fa-water text-white text-2xl opacity-80"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;'>
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 5
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Page 07 - Timeline (Static)&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: '#20457C', secondary: '#3A5A6D', line: '#5A7A90', accent: '#F0F4F8' },
+                    fontFamily: { sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'], mono: ['&quot;Courier New&quot;', 'monospace'] }
+                }
+            }
+        }
+    &lt;/script&gt;
+    &lt;style&gt;
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #20457C; overflow: hidden; font-family: 'Noto Sans SC', sans-serif; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;absolute -right-20 -bottom-40 w-[600px] h-[600px] rounded-full bg-white opacity-[0.03] pointer-events-none&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute right-40 top-20 w-[200px] h-[200px] rounded-full bg-white opacity-[0.02] pointer-events-none&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;absolute top-0 left-0 bg-white w-24 h-24 flex items-center justify-center z-20 shadow-lg&quot;&gt;
+            &lt;h2 class=&quot;text-4xl font-bold text-primary&quot;&gt;07&lt;/h2&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute top-[50px] right-[80px] flex items-center gap-4 z-20&quot;&gt;
+            &lt;div class=&quot;flex flex-col items-end text-white&quot;&gt;
+                &lt;span class=&quot;text-sm font-bold tracking-[0.2em] uppercase opacity-90&quot;&gt;Roadmap Flow&lt;/span&gt;
+                &lt;span class=&quot;text-xs tracking-wider opacity-60&quot;&gt;Strategic Report 2027&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;w-[3px] h-[35px] bg-white opacity-50&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;relative z-10 w-full h-full px-[80px] pt-[110px] pb-[60px] grid grid-cols-12 gap-10&quot;&gt;
+            &lt;div class=&quot;col-span-4 flex flex-col pt-4 text-white&quot;&gt;
+                &lt;div class=&quot;relative&quot;&gt;
+                    &lt;h1 class=&quot;text-[72px] font-bold leading-[0.9] tracking-tight drop-shadow-md&quot;&gt;Next&lt;br&gt;Steps&lt;/h1&gt;
+                    &lt;div class=&quot;w-4 h-4 bg-white/80 rounded-full mt-4 ml-2&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-[60px] h-[2px] bg-white/50 ml-4 mt-[-9px]&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;mt-12 pl-2 border-l-2 border-white/20&quot;&gt;
+                    &lt;p class=&quot;text-white/70 text-sm leading-relaxed font-light&quot;&gt;
+                        Strategic planning for&lt;br&gt;the upcoming quarters.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;col-span-8 h-full flex items-center pl-10&quot;&gt;
+                &lt;div class=&quot;relative w-full py-4&quot;&gt;
+                    &lt;div class=&quot;absolute left-[24px] top-0 bottom-0 w-[2px] bg-white/20&quot;&gt;&lt;/div&gt;
+
+                    &lt;div class=&quot;relative flex items-start mb-12&quot;&gt;
+                        &lt;div class=&quot;z-10 flex-shrink-0 w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary font-bold shadow-lg&quot;&gt;01&lt;/div&gt;
+                        &lt;div class=&quot;ml-8 pt-1 text-white&quot;&gt;
+                            &lt;h4 class=&quot;text-white/50 text-xs font-bold uppercase tracking-widest mb-1&quot;&gt;Quarter 1&lt;/h4&gt;
+                            &lt;h3 class=&quot;text-2xl font-bold mb-2 tracking-wide&quot;&gt;Concept &amp; Research&lt;/h3&gt;
+                            &lt;p class=&quot;text-white/70 text-sm w-[450px] font-light leading-relaxed&quot;&gt;Initial market analysis and feasibility studies to establish a solid foundation for the product lifecycle.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;relative flex items-start mb-12&quot;&gt;
+                        &lt;div class=&quot;z-10 flex-shrink-0 w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary font-bold shadow-lg&quot;&gt;02&lt;/div&gt;
+                        &lt;div class=&quot;ml-8 pt-1 text-white&quot;&gt;
+                            &lt;h4 class=&quot;text-white/50 text-xs font-bold uppercase tracking-widest mb-1&quot;&gt;Quarter 2&lt;/h4&gt;
+                            &lt;h3 class=&quot;text-2xl font-bold mb-2 tracking-wide&quot;&gt;Prototype Development&lt;/h3&gt;
+                            &lt;p class=&quot;text-white/70 text-sm w-[450px] font-light leading-relaxed&quot;&gt;Iterative design process creating high-fidelity mockups for stakeholder review and user testing.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;relative flex items-start&quot;&gt;
+                        &lt;div class=&quot;z-10 flex-shrink-0 w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary font-bold shadow-lg&quot;&gt;03&lt;/div&gt;
+                        &lt;div class=&quot;ml-8 pt-1 text-white&quot;&gt;
+                            &lt;h4 class=&quot;text-white/50 text-xs font-bold uppercase tracking-widest mb-1&quot;&gt;Quarter 3&lt;/h4&gt;
+                            &lt;h3 class=&quot;text-2xl font-bold mb-2 tracking-wide&quot;&gt;Launch &amp; Scaling&lt;/h3&gt;
+                            &lt;p class=&quot;text-white/70 text-sm w-[450px] font-light leading-relaxed&quot;&gt;Official deployment to production, execution of the marketing campaign, and initial user onboarding.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 6
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Our Vision - Strategic Keynote Refined&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#20457C',   // Deep Ocean Blue
+                        secondary: '#3A5A6D', // Dark Slate
+                        line: '#5A7A90',      // Decorative Line
+                        accent: '#F0F4F8',    // Light Gray Blue Background
+                    },
+                    fontFamily: {
+                        sans: ['&quot;Noto Sans SC&quot;', 'Inter', 'Roboto', 'sans-serif'],
+                        mono: ['&quot;Courier New&quot;', 'monospace'],
+                    },
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;
+        /* CSS Reset &amp; Basic Setup */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        /* Page Container Logic: Strict 1280x720 */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FFFFFF;
+            overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        
+        /* Utility */
+        .text-justify-last-left { text-align: justify; text-align-last: left; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+
+        &lt;div class=&quot;absolute top-0 right-0 w-[60%] h-full bg-accent/30 skew-x-[-12deg] origin-top z-0 transform translate-x-20&quot;&gt;&lt;/div&gt;
+        
+        &lt;div class=&quot;absolute bottom-[50px] left-[50px] w-[200px] h-[200px] border-l-[4px] border-b-[4px] border-primary/20 rounded-bl-[40px] z-0 pointer-events-none&quot;&gt;&lt;/div&gt;
+
+
+        &lt;div class=&quot;absolute top-0 left-[60px] bg-primary w-[90px] h-[100px] flex flex-col items-center justify-end pb-4 z-20 shadow-lg rounded-b-lg&quot;&gt;
+            &lt;span class=&quot;text-white/60 text-xs font-bold uppercase tracking-wider mb-1&quot;&gt;Page&lt;/span&gt;
+            &lt;span class=&quot;text-white text-4xl font-bold leading-none&quot;&gt;05&lt;/span&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;relative z-10 w-full h-full px-[80px] pt-[110px] pb-[60px] flex flex-col&quot;&gt;
+            
+            &lt;div class=&quot;absolute top-[50px] right-[80px] flex items-center gap-4&quot;&gt;
+                &lt;div class=&quot;flex flex-col items-end&quot;&gt;
+                    &lt;span class=&quot;text-secondary text-sm font-bold tracking-[0.2em] uppercase&quot;&gt;Graphic Designer&lt;/span&gt;
+                    &lt;span class=&quot;text-primary/60 text-xs tracking-wider&quot;&gt;Strategic Report 2027&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;w-[3px] h-[35px] bg-primary&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;flex-1 grid grid-cols-12 gap-10&quot;&gt;
+                
+                &lt;div class=&quot;col-span-4 flex flex-col pt-4&quot;&gt;
+                    &lt;div class=&quot;relative&quot;&gt;
+                        &lt;h1 class=&quot;text-primary text-8xl font-bold leading-[0.9] tracking-tight&quot;&gt;
+                            Our&lt;br&gt;Vision
+                        &lt;/h1&gt;
+                        &lt;div class=&quot;w-4 h-4 bg-secondary rounded-full mt-4 ml-2&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;w-[60px] h-[2px] bg-line ml-4 mt-[-9px]&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;mt-12 pl-2 border-l-2 border-line/30&quot;&gt;
+                        &lt;p class=&quot;text-secondary/80 text-sm leading-relaxed font-medium&quot;&gt;
+                            Focusing on the future of design&lt;br&gt;
+                            and communication strategies.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;col-span-8 flex flex-col h-full&quot;&gt;
+                    
+                    &lt;div class=&quot;grid grid-cols-2 gap-8 mb-8&quot;&gt;
+                        &lt;div class=&quot;flex flex-col gap-3&quot;&gt;
+                            &lt;div class=&quot;flex items-center gap-3 border-b border-line/20 pb-2&quot;&gt;
+                                &lt;span class=&quot;text-primary text-xl font-bold font-mono&quot;&gt;01&lt;/span&gt;
+                                &lt;h3 class=&quot;text-secondary font-bold text-2xl&quot;&gt;Communication&lt;/h3&gt;
+                            &lt;/div&gt;
+                            &lt;p class=&quot;text-secondary/80 text-sm leading-relaxed text-justify&quot;&gt;
+                                Presentations are communication tools that can be used as demonstration lectures. It serves a variety of purposes.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                        
+                        &lt;div class=&quot;flex flex-col gap-3&quot;&gt;
+                            &lt;div class=&quot;flex items-center gap-3 border-b border-line/20 pb-2&quot;&gt;
+                                &lt;span class=&quot;text-primary text-xl font-bold font-mono&quot;&gt;02&lt;/span&gt;
+                                &lt;h3 class=&quot;text-secondary font-bold text-2xl&quot;&gt;Education&lt;/h3&gt;
+                            &lt;/div&gt;
+                            &lt;p class=&quot;text-secondary/80 text-sm leading-relaxed text-justify&quot;&gt;
+                                Making presentations powerful tools for convincing and teaching. Effective visual aids enhance the learning process.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;mt-auto grid grid-cols-3 gap-5 h-[220px]&quot;&gt;
+                        
+                        &lt;div class=&quot;relative overflow-hidden rounded-lg shadow-sm group h-full&quot;&gt;
+                            &lt;img src=&quot;https://images.unsplash.com/photo-1518837695005-2083093ee35b?q=80&amp;w=400&amp;auto=format&amp;fit=crop&quot; 
+                                 class=&quot;w-full h-full object-cover transition-transform duration-700 group-hover:scale-110&quot;&gt;
+                            &lt;div class=&quot;absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-300&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class=&quot;relative overflow-hidden rounded-lg shadow-sm group h-full&quot;&gt;
+                            &lt;img src=&quot;https://images.unsplash.com/photo-1468581264429-2548ef9eb732?q=80&amp;w=400&amp;auto=format&amp;fit=crop&quot; 
+                                 class=&quot;w-full h-full object-cover transition-transform duration-700 group-hover:scale-110&quot;&gt;
+                            &lt;div class=&quot;absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-300&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class=&quot;relative overflow-hidden rounded-lg shadow-sm group h-full&quot;&gt;
+                            &lt;img src=&quot;https://images.unsplash.com/photo-1559827291-72ee739d0d9a?q=80&amp;w=400&amp;auto=format&amp;fit=crop&quot; 
+                                 class=&quot;w-full h-full object-cover transition-transform duration-700 group-hover:scale-110&quot;&gt;
+                            &lt;div class=&quot;absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-300&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 7
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Our Mission - Keynote 06&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans SC', sans-serif; }
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FFFFFF;
+            overflow: hidden;
+        }
+        .text-primary { color: #20457C; }
+        .bg-primary { background-color: #20457C; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;absolute top-0 right-0 w-[500px] h-full bg-[#f8fafc] -z-0&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;absolute top-12 left-16 right-16 flex justify-between items-center z-50&quot;&gt;
+            &lt;div class=&quot;flex items-center gap-3&quot;&gt;
+                &lt;div class=&quot;w-12 h-[2px] bg-primary&quot;&gt;&lt;/div&gt;
+                &lt;h6 class=&quot;text-[#3A5A6D] text-sm font-bold tracking-[0.2em] uppercase&quot;&gt;Brand Strategy 2027&lt;/h6&gt;
+            &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;div class=&quot;grid grid-cols-12 h-full w-full relative z-10&quot;&gt;
+            
+            &lt;div class=&quot;col-span-6 h-full flex flex-col justify-center pl-24 pr-12&quot;&gt;
+                &lt;div class=&quot;mb-12&quot;&gt;
+                    &lt;h1 class=&quot;text-[110px] leading-[0.95] font-bold text-primary tracking-tighter mb-8&quot;&gt;
+                        Our&lt;br&gt;Mission
+                    &lt;/h1&gt;
+                    &lt;div class=&quot;w-20 h-2 bg-primary mb-8&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;space-y-10&quot;&gt;
+                    &lt;div class=&quot;flex gap-6&quot;&gt;
+                        &lt;span class=&quot;text-2xl font-bold text-primary opacity-30 italic&quot;&gt;01&lt;/span&gt;
+                        &lt;p class=&quot;text-[#4A628A] text-base leading-relaxed text-justify&quot;&gt;
+                            Presentations are communication tools that can be used as demonstration lectures, speeches, reports, and more. It serves a variety of purposes, making presentations powerful tools for convincing and teaching.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;flex gap-6&quot;&gt;
+                        &lt;span class=&quot;text-2xl font-bold text-primary opacity-30 italic&quot;&gt;02&lt;/span&gt;
+                        &lt;p class=&quot;text-[#4A628A] text-base leading-relaxed text-justify&quot;&gt;
+                            Our goal is to create impactful visual narratives that resonate with the audience, blending strategic insights with creative excellence to drive meaningful results.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;col-span-6 flex items-center justify-center relative&quot;&gt;
+                &lt;div class=&quot;relative w-[480px] h-[540px]&quot;&gt;
+                    
+                    &lt;div class=&quot;absolute -top-6 -left-6 w-full h-full border-2 border-[#20457C]/20 rounded-[40px] z-0&quot;&gt;&lt;/div&gt;
+                    
+                    &lt;div class=&quot;relative w-full h-full rounded-[40px] overflow-hidden shadow-2xl z-10&quot;&gt;
+                        &lt;img src=&quot;https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&amp;w=800&quot; alt=&quot;Ocean&quot; class=&quot;object-cover w-full h-full&quot;&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;absolute -bottom-8 -left-12 w-44 h-44 bg-primary rounded-[32px] z-20 flex flex-col items-center justify-center shadow-2xl border-8 border-white&quot;&gt;
+                        &lt;span class=&quot;text-white/40 text-sm font-bold tracking-widest uppercase mb-1&quot;&gt;Page&lt;/span&gt;
+                        &lt;h2 class=&quot;text-white text-7xl font-bold tracking-tighter&quot;&gt;06&lt;/h2&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute bottom-0 left-0 w-full h-2 bg-primary&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 8
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Statistic Presentation Slide&lt;/title&gt;
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;!-- Google Fonts (Domestic CDN) --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+    &lt;!-- ECharts --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js&quot;&gt;&lt;/script&gt;
+
+    &lt;style&gt;
+        /* CSS Reset &amp; Global Settings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Font Configuration */
+        body, #page_container {
+            font-family: 'Noto Sans SC', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Page Container - Strict 1280x720 */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #20457C; /* Primary Color */
+            overflow: hidden;
+        }
+
+        /* Decorative Elements */
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Chart Container adjustments */
+        #chart_panel {
+            background-color: #FFFFFF;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        }
+    &lt;/style&gt;
+    
+    &lt;!-- Tailwind Configuration for Custom Colors --&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#20457C',
+                        secondary: '#3A5A6D',
+                        accent: '#5A7A90',
+                        light: '#FFFFFF',
+                        chart1: '#5470C6',
+                        chart2: '#91CC75',
+                        chart3: '#FAC858'
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;!-- Main Slide Container --&gt;
+    &lt;div id=&quot;page_container&quot; class=&quot;flex flex-col&quot;&gt;
+
+        &lt;!-- Decorative Background Circle --&gt;
+        &lt;div class=&quot;absolute -right-20 -bottom-40 w-[600px] h-[600px] rounded-full bg-white opacity-[0.03] pointer-events-none&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute right-40 top-20 w-[200px] h-[200px] rounded-full bg-white opacity-[0.02] pointer-events-none&quot;&gt;&lt;/div&gt;
+
+        &lt;!-- Layout Grid --&gt;
+        &lt;div class=&quot;flex h-full w-full&quot;&gt;
+            
+            &lt;!-- Left Side: Chart Card (White Area) --&gt;
+            &lt;!-- Using relative positioning to replicate the inset look --&gt;
+            &lt;div class=&quot;w-[45%] h-full relative z-10 pl-16 py-12 flex flex-col justify-center&quot;&gt;
+                
+                &lt;!-- Page Number Tag (Floating visually connected to the white theme) --&gt;
+                &lt;div class=&quot;absolute top-0 left-0 bg-white w-24 h-24 flex items-center justify-center z-20 shadow-lg&quot;&gt;
+                    &lt;h2 class=&quot;text-4xl font-bold text-[#20457C]&quot;&gt;07&lt;/h2&gt;
+                &lt;/div&gt;
+
+                &lt;!-- The White Chart Card --&gt;
+                &lt;div id=&quot;chart_panel&quot; class=&quot;w-full h-[540px] rounded-2xl p-6 relative flex flex-col justify-between&quot;&gt;
+                    &lt;!-- Chart Title / Legend Area placeholder (handled by Echarts) --&gt;
+                    &lt;div id=&quot;main_chart&quot; class=&quot;w-full h-full&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Right Side: Content (Dark Blue Area) --&gt;
+            &lt;div class=&quot;w-[55%] h-full pl-16 pr-20 py-16 flex flex-col justify-center text-white relative z-10&quot;&gt;
+                
+                &lt;!-- Header Info --&gt;
+                &lt;div class=&quot;flex justify-between items-center mb-16 border-b border-white/20 pb-4&quot;&gt;
+                    &lt;h3 class=&quot;text-sm font-medium tracking-[0.2em] uppercase opacity-80&quot;&gt;Graphic Designer&lt;/h3&gt;
+                    &lt;span class=&quot;text-sm font-medium tracking-widest opacity-80&quot;&gt;2027&lt;/span&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Main Title --&gt;
+                &lt;div class=&quot;mb-10&quot;&gt;
+                    &lt;h1 class=&quot;text-8xl font-bold tracking-tight leading-none drop-shadow-lg&quot;&gt;
+                        Statistic
+                    &lt;/h1&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Text Content --&gt;
+                &lt;div class=&quot;space-y-6&quot;&gt;
+                    &lt;div class=&quot;flex&quot;&gt;
+                        &lt;!-- Vertical Accent Line --&gt;
+                        &lt;div class=&quot;w-[2px] bg-[#5A7A90] mr-6 shrink-0 h-auto self-stretch&quot;&gt;&lt;/div&gt;
+                        &lt;p class=&quot;text-sm leading-relaxed text-gray-200 font-light text-justify&quot;&gt;
+                            Presentations are communication tools that can be used as demonstration lectures, speeches, reports, and more. It is mostly presented before an audience. It serves a variety of purposes, making presentations powerful tools for convincing and teaching.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                    
+                    &lt;div class=&quot;flex&quot;&gt;
+                        &lt;!-- Invisible placeholder to align text --&gt;
+                        &lt;div class=&quot;w-[2px] mr-6 shrink-0&quot;&gt;&lt;/div&gt;
+                        &lt;p class=&quot;text-sm leading-relaxed text-gray-300 font-light text-justify opacity-80&quot;&gt;
+                            Presentations are communication tools that can be used as demonstration lectures, speeches, reports, and more. It is mostly presented before an audience. It serves a variety of purposes, making presentations powerful tools for convincing and teaching.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Decorative Icon/Element at bottom right --&gt;
+                &lt;div class=&quot;absolute bottom-12 right-12 opacity-20&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-chart-line text-6xl&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- ECharts Configuration --&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+        // Initialize chart
+        var chartDom = document.getElementById('main_chart');
+        var myChart = echarts.init(chartDom);
+        var option;
+
+        // Color Palette derived from design system &amp; image context
+        // Blue (Series 1), Light Blue (Series 2), Slate (Series 3)
+        const colors = ['#20457C', '#5A7A90', '#8AB6D6'];
+
+        option = {
+            backgroundColor: 'transparent',
+            // Legend
+            legend: {
+                data: ['Series 1', 'Series 2', 'Series 3'],
+                top: '5%',
+                icon: 'rect',
+                itemWidth: 16,
+                itemHeight: 16,
+                textStyle: {
+                    color: '#3A5A6D',
+                    fontSize: 14,
+                    fontFamily: 'Noto Sans SC'
+                }
+            },
+            // Grid
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                top: '15%',
+                containLabel: true
+            },
+            // Tooltip
+            tooltip: {
+                trigger: 'axis'
+            },
+            // X-Axis
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'],
+                axisLine: {
+                    lineStyle: {
+                        color: '#E0E6ED'
+                    }
+                },
+                axisLabel: {
+                    color: '#20457C', // Dark blue text
+                    fontSize: 14,
+                    margin: 15,
+                    fontFamily: 'Noto Sans SC'
+                },
+                axisTick: {
+                    show: false
+                }
+            },
+            // Y-Axis
+            yAxis: {
+                type: 'value',
+                min: 0,
+                max: 50,
+                interval: 10,
+                splitLine: {
+                    lineStyle: {
+                        color: '#F0F4F8',
+                        type: 'solid'
+                    }
+                },
+                axisLabel: {
+                    color: '#3A5A6D',
+                    fontSize: 14,
+                    fontFamily: 'Noto Sans SC'
+                }
+            },
+            // Data Series
+            series: [
+                {
+                    name: 'Series 1',
+                    type: 'line',
+                    smooth: false, // Straight lines as per original image
+                    symbol: 'circle',
+                    symbolSize: 8,
+                    data: [18, 30, 25, 40, 42], // Estimated from image
+                    itemStyle: {
+                        color: colors[0]
+                    },
+                    lineStyle: {
+                        width: 3
+                    }
+                },
+                {
+                    name: 'Series 2',
+                    type: 'line',
+                    smooth: false,
+                    symbol: 'circle',
+                    symbolSize: 8,
+                    data: [12, 4, 20, 15, 50], // Estimated (The fluctuating one)
+                    itemStyle: {
+                        color: colors[1]
+                    },
+                    lineStyle: {
+                        width: 3
+                    }
+                },
+                {
+                    name: 'Series 3',
+                    type: 'line',
+                    smooth: false,
+                    symbol: 'circle',
+                    symbolSize: 8,
+                    data: [0, 12, 38, 30, 32], // Estimated
+                    itemStyle: {
+                        color: colors[2]
+                    },
+                    lineStyle: {
+                        width: 3
+                    }
+                }
+            ]
+        };
+
+        option &amp;&amp; myChart.setOption(option);
+
+        // Make chart responsive just in case
+        window.addEventListener('resize', function() {
+            myChart.resize();
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 9
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Process - Blue Style Refined&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans SC', 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+        ::-webkit-scrollbar { display: none; }
+    &lt;/style&gt;
+    
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#20457C',
+                        secondary: '#3A5A6D',
+                        accent: '#5A7A90',
+                    },
+                    spacing: { '1280': '1280px', '720': '720px' }
+                }
+            }
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div class=&quot;page_container w-[1280px] h-[720px] m-auto relative bg-primary overflow-hidden flex flex-col px-20 py-16 text-white&quot;&gt;
+
+        &lt;div class=&quot;absolute top-0 right-32 w-px h-[40%] bg-white/10 pointer-events-none&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute top-[40%] right-0 w-32 h-px bg-white/10 pointer-events-none&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute bottom-24 left-0 w-full h-px bg-white/5 pointer-events-none&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;w-full flex justify-between items-start h-[320px]&quot;&gt;
+            
+            &lt;div class=&quot;flex flex-col justify-center h-full max-w-[600px] z-10&quot;&gt;
+                &lt;div class=&quot;flex items-center gap-4 mb-6 opacity-60&quot;&gt;
+                    &lt;div class=&quot;w-8 h-[2px] bg-white&quot;&gt;&lt;/div&gt;
+                    &lt;span class=&quot;text-sm tracking-[0.3em] uppercase&quot;&gt;Workflow Methodology&lt;/span&gt;
+                &lt;/div&gt;
+                
+                &lt;h1 class=&quot;text-[90px] leading-[0.9] font-bold tracking-tight mb-8&quot;&gt;
+                    Our&lt;br&gt;Process
+                &lt;/h1&gt;
+                
+                &lt;p class=&quot;text-white/80 text-sm leading-relaxed font-light w-[480px] border-l-2 border-white/20 pl-6&quot;&gt;
+                    We follow a structured yet flexible methodology to ensure consistency and quality across all projects. From initial discovery to final delivery.
+                &lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;relative w-[300px] h-[300px] group&quot;&gt;
+                &lt;div class=&quot;absolute inset-0 rounded-full border border-white/10 scale-110&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;absolute inset-0 rounded-full border border-white/5 scale-125&quot;&gt;&lt;/div&gt;
+                
+                &lt;div class=&quot;relative w-full h-full rounded-full overflow-hidden border-4 border-white/20 shadow-2xl bg-primary&quot;&gt;
+                    &lt;img 
+                        src=&quot;https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&amp;w=1000&amp;auto=format&amp;fit=crop&quot; 
+                        alt=&quot;Blue canyon water&quot; 
+                        class=&quot;w-full h-full object-cover opacity-90 group-hover:scale-110 transition-transform duration-1000&quot;
+                    &gt;
+                    &lt;div class=&quot;absolute inset-0 bg-primary/20 mix-blend-multiply&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+
+        &lt;div class=&quot;flex-1 flex items-end pb-8 relative z-10&quot;&gt;
+            
+            &lt;div class=&quot;w-full relative&quot;&gt;
+                &lt;div class=&quot;absolute top-[26px] left-[5%] w-[90%] h-[2px] bg-white/10&quot;&gt;&lt;/div&gt;
+
+                &lt;div class=&quot;grid grid-cols-4 gap-4&quot;&gt;
+                    
+                    &lt;div class=&quot;flex flex-col items-start group&quot;&gt;
+                        &lt;div class=&quot;w-14 h-14 rounded-full bg-white text-primary flex items-center justify-center font-bold text-xl mb-6 shadow-lg z-10 group-hover:scale-110 transition-transform&quot;&gt;01&lt;/div&gt;
+                        &lt;h3 class=&quot;text-2xl font-bold mb-3&quot;&gt;Discovery&lt;/h3&gt;
+                        &lt;p class=&quot;text-white/60 text-sm font-light leading-relaxed pr-8&quot;&gt;
+                            Deep dive into requirements, stakeholder interviews, and market research.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;flex flex-col items-start group&quot;&gt;
+                        &lt;div class=&quot;w-14 h-14 rounded-full bg-primary border-2 border-white text-white flex items-center justify-center font-bold text-xl mb-6 shadow-lg z-10 group-hover:bg-white group-hover:text-primary transition-colors&quot;&gt;02&lt;/div&gt;
+                        &lt;h3 class=&quot;text-2xl font-bold mb-3&quot;&gt;Strategy&lt;/h3&gt;
+                        &lt;p class=&quot;text-white/60 text-sm font-light leading-relaxed pr-8&quot;&gt;
+                            Defining the roadmap, user personas, and technical architecture.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;flex flex-col items-start group&quot;&gt;
+                        &lt;div class=&quot;w-14 h-14 rounded-full bg-primary border-2 border-white text-white flex items-center justify-center font-bold text-xl mb-6 shadow-lg z-10 group-hover:bg-white group-hover:text-primary transition-colors&quot;&gt;03&lt;/div&gt;
+                        &lt;h3 class=&quot;text-2xl font-bold mb-3&quot;&gt;Design&lt;/h3&gt;
+                        &lt;p class=&quot;text-white/60 text-sm font-light leading-relaxed pr-8&quot;&gt;
+                            Visual exploration, prototyping, and iterative user testing cycles.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;flex flex-col items-start group&quot;&gt;
+                        &lt;div class=&quot;w-14 h-14 rounded-full bg-primary border-2 border-white text-white flex items-center justify-center font-bold text-xl mb-6 shadow-lg z-10 group-hover:bg-white group-hover:text-primary transition-colors&quot;&gt;04&lt;/div&gt;
+                        &lt;h3 class=&quot;text-2xl font-bold mb-3&quot;&gt;Launch&lt;/h3&gt;
+                        &lt;p class=&quot;text-white/60 text-sm font-light leading-relaxed pr-8&quot;&gt;
+                            Final QA, deployment to production, and performance monitoring.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute bottom-0 right-0 bg-white w-24 h-24 flex items-center justify-center shadow-lg z-20&quot;&gt;
+            &lt;span class=&quot;text-primary text-3xl font-bold tracking-tighter&quot;&gt;04&lt;/span&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 10
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Break Slide - Portfolio Re-design&lt;/title&gt;
+    &lt;!-- FontAwesome --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;!-- Tailwind CSS --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;!-- Custom Font (Mandated Source) --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        /* CSS Reset &amp; Global Settings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Font Family Setting */
+        body {
+            font-family: 'Noto Sans SC', 'Inter', 'Roboto', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Page Container - Strict 1280x720 */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FFFFFF;
+            overflow: hidden;
+        }
+
+        /* Custom Utility for Line Clamp if needed */
+        .line-clamp-4 {
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    &lt;/style&gt;
+    
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#20457C',    /* Deep Ocean Blue */
+                        secondary: '#3A5A6D',  /* Dark Slate */
+                        accent: '#5A7A90',     /* Line Color */
+                        surface: '#FFFFFF',    /* Background */
+                        imgTone: '#3B6B9B'     /* Image Tone Reference */
+                    },
+                    spacing: {
+                        '18': '4.5rem',
+                        '22': '5.5rem',
+                    },
+                    fontSize: {
+                        '8xl': '6rem',
+                        '9xl': '8rem',
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;!-- Main Layout: Grid 12 Columns --&gt;
+        &lt;div class=&quot;grid grid-cols-12 h-full w-full&quot;&gt;
+            
+            &lt;!-- Left Column: Visual Area (4/12) --&gt;
+            &lt;div class=&quot;col-span-4 h-full relative bg-gray-100&quot;&gt;
+                &lt;!-- Abstract Ocean Texture Image --&gt;
+                &lt;!-- Using an image that reflects the 'Image Tone #3B6B9B' and ocean theme --&gt;
+                &lt;div class=&quot;absolute inset-0 w-full h-full overflow-hidden&quot;&gt;
+                     &lt;img src=&quot;https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&amp;w=1280&amp;auto=format&amp;fit=crop&quot; 
+                          alt=&quot;Abstract Deep Blue Ocean Texture&quot; 
+                          class=&quot;w-full h-full object-cover opacity-90 brightness-90&quot;&gt;
+                     &lt;!-- 427*720 --&gt;
+                &lt;/div&gt;
+                
+                &lt;!-- Overlay Gradient for Depth --&gt;
+                &lt;div class=&quot;absolute inset-0 bg-gradient-to-b from-primary/20 to-primary/40 mix-blend-multiply&quot;&gt;&lt;/div&gt;
+
+                &lt;!-- Decoration: Subtle geometrical shape --&gt;
+                &lt;div class=&quot;absolute bottom-10 left-10 w-24 h-1 bg-white/30&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Right Column: Content Area (8/12) --&gt;
+            &lt;div class=&quot;col-span-8 h-full relative flex flex-col justify-between p-16 pl-20&quot;&gt;
+                
+                &lt;!-- Top Section: Header --&gt;
+                &lt;header class=&quot;flex flex-col items-start space-y-2 mt-4&quot;&gt;
+                    &lt;!-- Giant Typography Title --&gt;
+                    &lt;h1 class=&quot;text-8xl font-bold text-primary leading-[0.9] tracking-tight&quot;&gt;
+                        &lt;span class=&quot;block&quot;&gt;Break&lt;/span&gt;
+                        &lt;span class=&quot;block&quot;&gt;Slide&lt;/span&gt;
+                    &lt;/h1&gt;
+                    
+                    &lt;!-- Decorative subtle element under title --&gt;
+                    &lt;div class=&quot;w-20 h-2 bg-accent mt-6 rounded-full opacity-60&quot;&gt;&lt;/div&gt;
+                &lt;/header&gt;
+
+                &lt;!-- Middle Section: Context &amp; Description --&gt;
+                &lt;!-- Layout: Flex Row with Vertical Line Separator as per Design System --&gt;
+                &lt;div class=&quot;flex flex-row items-start space-x-8 mb-auto mt-20&quot;&gt;
+                    &lt;!-- The Vertical Line --&gt;
+                    &lt;div class=&quot;w-[3px] h-32 bg-accent rounded-full opacity-70&quot;&gt;&lt;/div&gt;
+                    
+                    &lt;!-- Text Content --&gt;
+                    &lt;div class=&quot;flex flex-col space-y-4 max-w-2xl&quot;&gt;
+                        &lt;!-- Role / Subtitle --&gt;
+                        &lt;h2 class=&quot;text-3xl font-medium text-secondary tracking-wide&quot;&gt;
+                            Graphic Designer
+                        &lt;/h2&gt;
+                        
+                        &lt;!-- Body Paragraph --&gt;
+                        &lt;p class=&quot;text-sm text-secondary leading-relaxed font-light opacity-90 text-justify&quot;&gt;
+                            Presentations are communication tools that can be used as demonstration lectures, speeches, reports, and more. It is mostly presented before an audience. It serves a variety of purposes, making presentations powerful tools for convincing and teaching.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Bottom Section: Footer Info --&gt;
+                &lt;footer class=&quot;flex items-end justify-between w-full border-t border-gray-100 pt-8&quot;&gt;
+                    &lt;!-- Author Name --&gt;
+                    &lt;div class=&quot;flex flex-col&quot;&gt;
+                        &lt;span class=&quot;text-xs text-accent uppercase tracking-widest font-semibold mb-1&quot;&gt;Presented by&lt;/span&gt;
+                        &lt;p class=&quot;text-2xl font-bold text-primary tracking-tight&quot;&gt;
+                            Olivia Wilson
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Page Number Block --&gt;
+                    &lt;!-- Positioned absolutely to hug the corner or layout grid --&gt;
+                    &lt;div class=&quot;absolute bottom-0 right-0 w-24 h-24 bg-primary flex items-center justify-center&quot;&gt;
+                        &lt;span class=&quot;text-4xl font-bold text-white&quot;&gt;04&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/footer&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 11
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Portfolio Presentation Slide&lt;/title&gt;
+    
+    &lt;!-- 1. Tailwind CSS (CDN) --&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;!-- 2. FontAwesome (Icons) --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    
+    &lt;!-- 3. Google Fonts (via Baidu CDN as requested) --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;!-- 4. Tailwind Configuration --&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#20457C',       // Deep Blue
+                        secondary: '#3A5A6D',     // Dark Slate
+                        line: '#5A7A90',          // Muted Blue Line
+                        inverse: '#FFFFFF',       // White
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans SC', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;!-- 5. Custom CSS Reset &amp; Layout Rules --&gt;
+    &lt;style&gt;
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Container Styles */
+        #page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FFFFFF;
+            overflow: hidden; /* Ensure no overflow */
+        }
+
+        /* Typography Enhancements */
+        p {
+            margin-bottom: 0; /* Tailwind controls margins usually, but good for reset */
+        }
+        
+        /* Utility for print-like text justification */
+        .text-justify-last-left {
+            text-align: justify;
+            text-align-last: left;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body style=&quot; display: flex; align-items: center; justify-content: center; min-height: 100vh;&quot;&gt;
+
+    &lt;!-- Main Slide Container --&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+        
+        &lt;!-- Grid Layout: 12 Columns --&gt;
+        &lt;div class=&quot;grid grid-cols-12 h-full w-full&quot;&gt;
+
+            &lt;!-- LEFT COLUMN: Visuals (Images) --&gt;
+            &lt;!-- Spans 4 columns (approx 33%) --&gt;
+            &lt;div class=&quot;col-span-4 h-full flex flex-col justify-center gap-6 px-10 py-16&quot;&gt;
+                
+                &lt;!-- Image Wrapper 1 --&gt;
+                &lt;div class=&quot;w-full h-1/3 overflow-hidden rounded-lg shadow-lg relative group&quot;&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1558202543-569d67e85c73?q=80&amp;w=600&amp;auto=format&amp;fit=crop&quot; 
+                         alt=&quot;Water Texture 1&quot; 
+                         class=&quot;w-full h-full object-cover transform transition-transform duration-700 hover:scale-105&quot;&gt;
+                    &lt;!-- 346*180 --&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Image Wrapper 2 --&gt;
+                &lt;div class=&quot;w-full h-1/3 overflow-hidden rounded-lg shadow-lg relative group&quot;&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&amp;w=600&amp;auto=format&amp;fit=crop&quot; 
+                         alt=&quot;Water Texture 2&quot; 
+                         class=&quot;w-full h-full object-cover transform transition-transform duration-700 hover:scale-105&quot;&gt;
+                    &lt;!-- 346*180 --&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Image Wrapper 3 --&gt;
+                &lt;div class=&quot;w-full h-1/3 overflow-hidden rounded-lg shadow-lg relative group&quot;&gt;
+                    &lt;img src=&quot;https://images.unsplash.com/photo-1543360699-db4623a31c6a?q=80&amp;w=600&amp;auto=format&amp;fit=crop&quot; 
+                         alt=&quot;Water Texture 3&quot; 
+                         class=&quot;w-full h-full object-cover transform transition-transform duration-700 hover:scale-105&quot;&gt;
+                    &lt;!-- 346*180 --&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- RIGHT COLUMN: Content --&gt;
+            &lt;!-- Spans 8 columns (approx 66%) --&gt;
+            &lt;div class=&quot;col-span-8 h-full flex flex-col pt-20 pr-16 pl-4 relative&quot;&gt;
+                
+                &lt;!-- Header Section --&gt;
+                &lt;div class=&quot;mb-12&quot;&gt;
+                    &lt;!-- Main Title: Huge, Bold, Primary Color --&gt;
+                    &lt;h1 class=&quot;text-8xl font-bold text-primary tracking-tight mb-4&quot;&gt;Portfolio&lt;/h1&gt;
+                    
+                    &lt;!-- Sub-header Meta Data --&gt;
+                    &lt;div class=&quot;flex justify-between items-center w-full border-b border-gray-100 pb-4&quot;&gt;
+                        &lt;h2 class=&quot;text-xl font-medium text-secondary&quot;&gt;Graphic Designer&lt;/h2&gt;
+                        &lt;span class=&quot;text-xl font-medium text-secondary&quot;&gt;2027&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Body Content Section --&gt;
+                &lt;div class=&quot;flex flex-row h-full&quot;&gt;
+                    
+                    &lt;!-- Vertical Divider Line --&gt;
+                    &lt;div class=&quot;w-px bg-line h-[360px] mr-10 flex-shrink-0 opacity-70&quot;&gt;&lt;/div&gt;
+
+                    &lt;!-- Text Content Area --&gt;
+                    &lt;div class=&quot;flex flex-col gap-6 max-w-2xl&quot;&gt;
+                        
+                        &lt;!-- Paragraph 1 --&gt;
+                        &lt;p class=&quot;text-secondary text-sm leading-7 text-justify&quot;&gt;
+                            Presentations are communication tools that can be used as demonstration lectures, speeches, reports, and more. It is mostly presented before an audience. It serves a variety of purposes, making presentations powerful tools for convincing and teaching.
+                        &lt;/p&gt;
+
+                        &lt;!-- Bullet Point Section (Semantic List) --&gt;
+                        &lt;ul class=&quot;list-none m-0 p-0&quot;&gt;
+                            &lt;li class=&quot;flex gap-4 text-secondary text-sm leading-7 text-justify&quot;&gt;
+                                &lt;!-- Custom Bullet using FontAwesome --&gt;
+                                &lt;span class=&quot;text-primary mt-1.5 text-[8px]&quot;&gt;
+                                    &lt;i class=&quot;fa-solid fa-circle&quot;&gt;&lt;/i&gt;
+                                &lt;/span&gt;
+                                &lt;span&gt;
+                                    Presentations are communication tools that can be used as demonstration lectures, speeches, reports, and more. It is mostly presented before an audience. It serves a variety of purposes, making presentations powerful tools for convincing and teaching.
+                                &lt;/span&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+
+                        &lt;!-- Paragraph 2 --&gt;
+                        &lt;p class=&quot;text-secondary text-sm leading-7 text-justify&quot;&gt;
+                            Presentations are communication tools that can be used as demonstration lectures, speeches, reports, and more. It is mostly presented before an audience. It serves a variety of purposes, making presentations powerful tools for convincing and teaching.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Footer / Page Number --&gt;
+                &lt;!-- Absolute positioning relative to the Right Column or Page Container --&gt;
+                &lt;div class=&quot;absolute bottom-0 right-0 w-28 h-20 bg-primary flex items-center justify-center&quot;&gt;
+                    &lt;span class=&quot;text-inverse text-4xl font-bold tracking-widest&quot;&gt;03&lt;/span&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 12
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Page 08 - Data Stats (No Cards)&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/echarts.min_5.4.3.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: '#20457C', secondary: '#3A5A6D', line: '#5A7A90', accent: '#F0F4F8' },
+                    fontFamily: { sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'], mono: ['&quot;Courier New&quot;', 'monospace'] }
+                }
+            }
+        }
+    &lt;/script&gt;
+    &lt;style&gt;
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #20457C; overflow: hidden; font-family: 'Noto Sans SC', sans-serif; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;absolute -right-20 -bottom-40 w-[600px] h-[600px] rounded-full bg-white opacity-[0.03] pointer-events-none&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute right-40 top-20 w-[200px] h-[200px] rounded-full bg-white opacity-[0.02] pointer-events-none&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;absolute top-0 left-0 w-24 h-24 flex items-center justify-center z-20&quot;&gt;
+            &lt;h2 class=&quot;text-4xl font-bold text-white/20&quot;&gt;08&lt;/h2&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute top-[50px] right-[80px] flex items-center gap-4 z-20&quot;&gt;
+            &lt;div class=&quot;flex flex-col items-end text-white&quot;&gt;
+                &lt;span class=&quot;text-sm font-bold tracking-[0.2em] uppercase opacity-90&quot;&gt;Data Analysis&lt;/span&gt;
+                &lt;span class=&quot;text-xs tracking-wider opacity-60&quot;&gt;Strategic Report 2027&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;w-[3px] h-[35px] bg-white opacity-50&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;relative z-10 w-full h-full px-[80px] pt-[100px] pb-[60px] grid grid-cols-12 gap-12&quot;&gt;
+            
+            &lt;div class=&quot;col-span-4 flex flex-col justify-between h-full text-white pt-4&quot;&gt;
+                
+                &lt;div&gt;
+                    &lt;div class=&quot;relative mb-10&quot;&gt;
+                        &lt;h1 class=&quot;text-[64px] font-bold leading-[0.9] tracking-tight drop-shadow-md&quot;&gt;
+                            Market&lt;br&gt;Trends
+                        &lt;/h1&gt;
+                        &lt;div class=&quot;w-12 h-1 bg-white/50 mt-6 rounded-full&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                    
+                    &lt;p class=&quot;text-white/70 text-sm leading-relaxed font-light mb-8 text-justify&quot;&gt;
+                        Our analysis indicates a significant uptrend in user engagement across all primary sectors. The data visualizes the correlation between new feature rollouts and quarterly retention rates.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;space-y-8&quot;&gt;
+                    &lt;div class=&quot;group&quot;&gt;
+                        &lt;div class=&quot;flex items-baseline gap-3 mb-1&quot;&gt;
+                            &lt;span class=&quot;text-5xl font-bold font-mono text-white tracking-tighter&quot;&gt;84%&lt;/span&gt;
+                            &lt;i class=&quot;fa-solid fa-arrow-trend-up text-green-400 text-sm&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;h4 class=&quot;text-white/60 text-xs font-bold uppercase tracking-widest mb-1&quot;&gt;Retention Rate&lt;/h4&gt;
+                        &lt;p class=&quot;text-white/40 text-xs font-light&quot;&gt;Consistent growth over Q3&lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;group&quot;&gt;
+                        &lt;div class=&quot;flex items-baseline gap-3 mb-1&quot;&gt;
+                            &lt;span class=&quot;text-5xl font-bold font-mono text-white tracking-tighter&quot;&gt;$2.4M&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;h4 class=&quot;text-white/60 text-xs font-bold uppercase tracking-widest mb-1&quot;&gt;Total Revenue&lt;/h4&gt;
+                        &lt;p class=&quot;text-white/40 text-xs font-light&quot;&gt;Exceeding projections by 15%&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;col-span-8 h-full flex items-center relative&quot;&gt;
+                &lt;div class=&quot;absolute left-0 top-0 bottom-0 w-px bg-white/10&quot;&gt;&lt;/div&gt;
+                
+                &lt;div id=&quot;main_chart&quot; class=&quot;w-full h-[500px]&quot;&gt;&lt;/div&gt;
+
+                &lt;div class=&quot;absolute top-0 right-0 text-white/30 text-xs font-mono&quot;&gt;
+                    &lt;i class=&quot;fa-solid fa-chart-area mr-2&quot;&gt;&lt;/i&gt;Live Data Source
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script type=&quot;text/javascript&quot;&gt;
+        var chartDom = document.getElementById('main_chart');
+        var myChart = echarts.init(chartDom);
+        var option;
+
+        option = {
+            backgroundColor: 'transparent', // Transparent background to blend with blue
+            tooltip: {
+                trigger: 'axis',
+                backgroundColor: 'rgba(32, 69, 124, 0.9)', // Match primary color
+                borderColor: '#fff',
+                textStyle: {
+                    color: '#fff'
+                }
+            },
+            grid: {
+                left: '5%',
+                right: '5%',
+                bottom: '5%',
+                top: '10%',
+                containLabel: true,
+                show: false // No border around grid
+            },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+                axisLine: {
+                    lineStyle: {
+                        color: 'rgba(255, 255, 255, 0.3)' // White axis line
+                    }
+                },
+                axisLabel: {
+                    color: 'rgba(255, 255, 255, 0.7)', // White text
+                    fontFamily: 'Noto Sans SC'
+                },
+                axisTick: { show: false }
+            },
+            yAxis: {
+                type: 'value',
+                splitLine: {
+                    lineStyle: {
+                        color: 'rgba(255, 255, 255, 0.05)', // Very subtle grid lines
+                        type: 'dashed'
+                    }
+                },
+                axisLabel: {
+                    color: 'rgba(255, 255, 255, 0.5)',
+                    fontFamily: 'Noto Sans SC'
+                }
+            },
+            series: [
+                {
+                    name: 'Growth',
+                    type: 'line',
+                    smooth: true,
+                    symbol: 'circle',
+                    symbolSize: 8,
+                    itemStyle: {
+                        color: '#fff' // White points
+                    },
+                    lineStyle: {
+                        color: '#fff', // White line
+                        width: 3
+                    },
+                    areaStyle: {
+                        opacity: 0.3,
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                            {
+                                offset: 0,
+                                color: 'rgba(255, 255, 255, 0.5)' // Top: White
+                            },
+                            {
+                                offset: 1,
+                                color: 'rgba(32, 69, 124, 0.01)' // Bottom: Transparent
+                            }
+                        ])
+                    },
+                    data: [120, 132, 101, 134, 90, 230, 210]
+                },
+                {
+                    name: 'Target',
+                    type: 'line',
+                    smooth: true,
+                    symbol: 'none', // No points for target line
+                    lineStyle: {
+                        color: '#5A7A90', // Secondary color line
+                        width: 2,
+                        type: 'dashed'
+                    },
+                    data: [100, 110, 120, 130, 140, 150, 160]
+                }
+            ]
+        };
+
+        option &amp;&amp; myChart.setOption(option);
+        
+        // Resize chart on window resize
+        window.addEventListener('resize', function() {
+            myChart.resize();
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 13
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Services - Blue Style&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot;&gt;
+
+    &lt;style&gt;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans SC', 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+        ::-webkit-scrollbar { display: none; }
+    &lt;/style&gt;
+    
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#20457C',   /* Deep Ocean Blue */
+                        secondary: '#3A5A6D', /* Dark Slate */
+                        accent: '#5A7A90',    /* Muted Blue Line */
+                    },
+                    spacing: { '1280': '1280px', '720': '720px' }
+                }
+            }
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div class=&quot;page_container w-[1280px] h-[720px] m-auto relative bg-primary overflow-hidden flex&quot;&gt;
+
+        &lt;div class=&quot;w-[580px] h-full flex flex-col justify-center pl-20 pr-12 relative z-10 text-white&quot;&gt;
+            
+            &lt;div class=&quot;mb-12 border-l-4 border-white pl-8&quot;&gt;
+                &lt;h1 class=&quot;text-[100px] leading-[0.9] font-bold tracking-tight mb-4&quot;&gt;
+                    What&lt;br&gt;We Do
+                &lt;/h1&gt;
+                &lt;div class=&quot;flex items-center justify-between w-full max-w-md mt-8&quot;&gt;
+                    &lt;h2 class=&quot;text-lg font-medium opacity-80 uppercase tracking-widest&quot;&gt;
+                        Core Services
+                    &lt;/h2&gt;
+                    &lt;div class=&quot;h-px w-24 bg-white opacity-50&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;flex flex-col gap-6 pr-8 opacity-90&quot;&gt;
+                &lt;p class=&quot;text-sm leading-relaxed font-light text-justify&quot;&gt;
+                    We specialize in translating complex ideas into compelling visual narratives. Our approach combines strategic thinking with exceptional design execution.
+                &lt;/p&gt;
+                &lt;p class=&quot;text-sm leading-relaxed font-light text-justify&quot;&gt;
+                    From branding to digital experiences, presentations are powerful tools for convincing and teaching when crafted correctly.
+                &lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;absolute bottom-0 left-0 bg-white w-24 h-24 flex items-center justify-center shadow-lg&quot;&gt;
+                &lt;span class=&quot;text-primary text-3xl font-bold tracking-tighter&quot;&gt;03&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;flex-1 h-full relative&quot;&gt;
+            &lt;div class=&quot;absolute top-12 right-12 bottom-12 left-0 rounded-tl-[60px] rounded-bl-[200px] rounded-tr-[20px] rounded-br-[80px] bg-white overflow-hidden shadow-2xl p-12 flex flex-col justify-center&quot;&gt;
+                
+                &lt;div class=&quot;absolute top-12 right-12 w-12 h-12 border-t-2 border-r-2 border-primary opacity-30 rounded-tr-xl&quot;&gt;&lt;/div&gt;
+
+                &lt;div class=&quot;grid grid-cols-1 gap-8 text-primary&quot;&gt;
+                    
+                    &lt;div class=&quot;flex items-start group&quot;&gt;
+                        &lt;div class=&quot;w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mr-6 transition-colors group-hover:bg-primary group-hover:text-white&quot;&gt;
+                           &lt;i class=&quot;fa-solid fa-pen-ruler text-2xl&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;h3 class=&quot;text-xl font-bold mb-2&quot;&gt;Brand Strategy&lt;/h3&gt;
+                            &lt;p class=&quot;text-sm leading-relaxed font-light text-secondary w-3/4&quot;&gt;Defining your voice and visual identity for maximum market impact.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;flex items-start group&quot;&gt;
+                        &lt;div class=&quot;w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mr-6 transition-colors group-hover:bg-primary group-hover:text-white&quot;&gt;
+                             &lt;i class=&quot;fa-solid fa-layer-group text-2xl&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;h3 class=&quot;text-xl font-bold mb-2&quot;&gt;UI/UX Design&lt;/h3&gt;
+                            &lt;p class=&quot;text-sm leading-relaxed font-light text-secondary w-3/4&quot;&gt;Creating intuitive digital experiences that drive user engagement.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;flex items-start group&quot;&gt;
+                       &lt;div class=&quot;w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mr-6 transition-colors group-hover:bg-primary group-hover:text-white&quot;&gt;
+                            &lt;i class=&quot;fa-solid fa-bullhorn text-2xl&quot;&gt;&lt;/i&gt;
+                       &lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;h3 class=&quot;text-xl font-bold mb-2&quot;&gt;Presentation Design&lt;/h3&gt;
+                            &lt;p class=&quot;text-sm leading-relaxed font-light text-secondary w-3/4&quot;&gt;Turning data and ideas into persuasive visual stories for audiences.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <div class="page-wrapper">
+   <div class="page-title">
+    页面 14
+   </div>
+   <iframe class="responsive-iframe" data-viewport="width=device-width, initial-scale=1.0" frameborder="0" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight + 'px';" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-downloads" scrolling="no" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Page 06 - Services (Blue Theme)&lt;/title&gt;
+    &lt;script src=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css&quot;&gt;
+    &lt;link href=&quot;https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: '#20457C', secondary: '#3A5A6D', line: '#5A7A90', accent: '#F0F4F8' },
+                    fontFamily: { sans: ['&quot;Noto Sans SC&quot;', 'sans-serif'], mono: ['&quot;Courier New&quot;', 'monospace'] }
+                }
+            }
+        }
+    &lt;/script&gt;
+    &lt;style&gt;
+        #page_container { width: 1280px; height: 720px; margin: 0 auto; position: relative; background-color: #20457C; overflow: hidden; font-family: 'Noto Sans SC', sans-serif; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;page_container&quot;&gt;
+        &lt;div class=&quot;absolute -right-20 -bottom-40 w-[600px] h-[600px] rounded-full bg-white opacity-[0.03] pointer-events-none&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;absolute right-40 top-20 w-[200px] h-[200px] rounded-full bg-white opacity-[0.02] pointer-events-none&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;absolute top-0 left-0 bg-white w-24 h-24 flex items-center justify-center z-20 shadow-lg&quot;&gt;
+            &lt;h2 class=&quot;text-4xl font-bold text-primary&quot;&gt;06&lt;/h2&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute top-[50px] right-[80px] flex items-center gap-4 z-20&quot;&gt;
+            &lt;div class=&quot;flex flex-col items-end text-white&quot;&gt;
+                &lt;span class=&quot;text-sm font-bold tracking-[0.2em] uppercase opacity-90&quot;&gt;Core Services&lt;/span&gt;
+                &lt;span class=&quot;text-xs tracking-wider opacity-60&quot;&gt;Strategic Report 2027&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;w-[3px] h-[35px] bg-white opacity-50&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;relative z-10 w-full h-full px-[80px] pt-[110px] pb-[60px] grid grid-cols-12 gap-10&quot;&gt;
+            &lt;div class=&quot;col-span-4 flex flex-col pt-4 text-white&quot;&gt;
+                &lt;div class=&quot;relative&quot;&gt;
+                    &lt;h1 class=&quot;text-[72px] font-bold leading-[0.9] tracking-tight drop-shadow-md&quot;&gt;Core&lt;br&gt;Areas&lt;/h1&gt;
+                    &lt;div class=&quot;w-4 h-4 bg-white/80 rounded-full mt-4 ml-2&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-[60px] h-[2px] bg-white/50 ml-4 mt-[-9px]&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;mt-12 pl-2 border-l-2 border-white/20&quot;&gt;
+                    &lt;p class=&quot;text-white/70 text-sm leading-relaxed font-light&quot;&gt;
+                        Delivering excellence through&lt;br&gt;specialized domains.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;col-span-8 grid grid-cols-3 gap-6 h-full items-center&quot;&gt;
+                
+                &lt;div class=&quot;bg-white h-[340px] p-8 rounded-xl shadow-2xl flex flex-col group hover:-translate-y-2 transition-transform duration-300&quot;&gt;
+                    &lt;div class=&quot;w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary transition-colors&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-pen-ruler text-primary text-2xl group-hover:text-white transition-colors&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;h3 class=&quot;text-primary text-2xl font-bold mb-3&quot;&gt;UI Design&lt;/h3&gt;
+                    &lt;p class=&quot;text-secondary text-sm leading-relaxed opacity-80&quot;&gt;Crafting intuitive interfaces that users love to engage with.&lt;/p&gt;
+                    &lt;div class=&quot;mt-auto w-8 h-1 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;bg-white h-[340px] p-8 rounded-xl shadow-2xl flex flex-col group hover:-translate-y-2 transition-transform duration-300 relative overflow-hidden ring-4 ring-white/10&quot;&gt;
+                    &lt;div class=&quot;absolute top-0 left-0 w-full h-1 bg-primary&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary transition-colors&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-code text-primary text-2xl group-hover:text-white transition-colors&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;h3 class=&quot;text-primary text-2xl font-bold mb-3&quot;&gt;Development&lt;/h3&gt;
+                    &lt;p class=&quot;text-secondary text-sm leading-relaxed opacity-80&quot;&gt;Robust frontend architecture ensuring performance and scale.&lt;/p&gt;
+                    &lt;div class=&quot;mt-auto w-8 h-1 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;bg-white h-[340px] p-8 rounded-xl shadow-2xl flex flex-col group hover:-translate-y-2 transition-transform duration-300&quot;&gt;
+                    &lt;div class=&quot;w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary transition-colors&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-bullhorn text-primary text-2xl group-hover:text-white transition-colors&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;h3 class=&quot;text-primary text-2xl font-bold mb-3&quot;&gt;Marketing&lt;/h3&gt;
+                    &lt;p class=&quot;text-secondary text-sm leading-relaxed opacity-80&quot;&gt;Data-driven strategies to reach the right audience effectively.&lt;/p&gt;
+                    &lt;div class=&quot;mt-auto w-8 h-1 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;">
+   </iframe>
+  </div>
+  <script>
+   // 自动调整iframe高度
+    function resizeIframes() {
+        document.querySelectorAll('.responsive-iframe').forEach(iframe => {
+            try {
+                const doc = iframe.contentDocument || iframe.contentWindow.document;
+                const height = Math.max(
+                    doc.body.scrollHeight,
+                    doc.documentElement.scrollHeight,
+                    doc.body.offsetHeight,
+                    doc.documentElement.offsetHeight,
+                    doc.body.clientHeight,
+                    doc.documentElement.clientHeight
+                );
+                iframe.style.height = height + 'px';
+            } catch (e) {
+                console.log('无法调整iframe高度:', e);
+            }
+        });
+    }
+    
+    // 初始调整
+    window.addEventListener('load', resizeIframes);
+    
+    // 内容加载后调整
+    document.querySelectorAll('.responsive-iframe').forEach(iframe => {
+        iframe.addEventListener('load', function() {
+            resizeIframes();
+            // 对动态内容进行定期检查
+            setInterval(resizeIframes, 1000);
+        });
+    });
+  </script>
+ </body>
+</html>

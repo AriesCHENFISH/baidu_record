@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shower Regularly - Text Design Layout</title>
+
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+
+    <!-- Custom Font CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        /* Global Settings */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative; overflow: hidden;
+            background-color: #F3F5F7; font-family: 'Noto Sans SC', sans-serif; color: #2D3236;
+        }
+
+        /* Card Hover Effects */
+        .feature-card {
+            background: white;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-left: 4px solid transparent;
+        }
+        .feature-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 20px rgba(113, 183, 197, 0.15);
+            border-left: 4px solid #71B7C5;
+        }
+
+        /* Background Watermark */
+        .watermark-icon {
+            position: absolute;
+            left: -50px;
+            bottom: -50px;
+            font-size: 400px;
+            color: #71B7C5;
+            opacity: 0.05;
+            z-index: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container" class="flex flex-col px-16 py-12">
+        
+        <!-- Background Decorations -->
+        <div class="watermark-icon"><i class="fa-solid fa-droplet"></i></div>
+        <div class="absolute top-0 right-[30%] w-[1px] h-full bg-gradient-to-b from-transparent via-[#71B7C5] to-transparent opacity-30"></div>
+
+        <!-- Header (Simplified for Text Focus) -->
+        <header class="flex justify-between items-center mb-10 relative z-10">
+            <div class="flex items-center gap-3">
+                <div class="text-3xl text-[#2D3236]"><i class="fa-solid fa-shower"></i></div>
+                <h2 class="text-2xl font-bold tracking-tight text-[#2D3236]">Fauget.</h2>
+            </div>
+            <!-- Breadcrumb style nav -->
+            <div class="flex items-center gap-2 text-sm text-gray-400">
+                <span>Personal Hygiene</span>
+                <i class="fa-solid fa-chevron-right text-xs"></i>
+                <span class="text-[#71B7C5] font-bold">Shower Habits</span>
+            </div>
+        </header>
+
+        <!-- Main Content Grid -->
+        <div class="grid grid-cols-12 gap-16 h-full relative z-10">
+            
+            <!-- Left Column: Big Title & Intro (5 Cols) -->
+            <div class="col-span-5 flex flex-col justify-center">
+                
+                <!-- Topic Tag -->
+                <div class="inline-block bg-[#EAF4F6] text-[#71B7C5] px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-6 w-max">
+                    Daily Routine
+                </div>
+
+                <!-- Title -->
+                <h1 class="text-6xl font-extrabold text-[#2D3236] leading-none mb-8">
+                    Shower <br>
+                    <span class="text-[#71B7C5]">Regularly</span>
+                </h1>
+
+                <!-- Core Description -->
+                <p class="text-lg text-gray-600 leading-relaxed mb-10 text-justify border-l-2 border-gray-200 pl-6">
+                    Bathing is more than just cleaning dirt; it's a reset button for your body. It removes dead skin cells, unclogs pores, and washes away the bacteria that cause body odor and skin infections.
+                </p>
+
+                <!-- Pro Tip Box (Temperature Guide) -->
+                <div class="bg-[#2D3236] text-white p-6 rounded-2xl shadow-lg mt-auto">
+                    <div class="flex items-center gap-3 mb-3 border-b border-gray-600 pb-3">
+                        <i class="fa-solid fa-temperature-half text-[#71B7C5]"></i>
+                        <span class="font-bold text-sm uppercase tracking-wide">Temperature Guide</span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <span class="text-[#71B7C5] text-xs font-bold block mb-1">Warm Water</span>
+                            <p class="text-sm text-gray-400">Opens pores, relaxes muscles, reduces anxiety.</p>
+                        </div>
+                        <div>
+                            <span class="text-[#71B7C5] text-xs font-bold block mb-1">Cool Water</span>
+                            <p class="text-sm text-gray-400">Tightens skin, improves alertness, stimulates circulation.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Column: Detailed Info Cards (7 Cols) -->
+            <div class="col-span-7 flex flex-col justify-center gap-5">
+                
+                <!-- Card 1: Hygiene -->
+                <div class="feature-card p-6 rounded-xl flex items-start gap-5 shadow-sm">
+                    <div class="w-14 h-14 rounded-full bg-[#EAF4F6] flex items-center justify-center text-[#71B7C5] text-xl flex-shrink-0">
+                        <i class="fa-solid fa-soap"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-[#2D3236] mb-2">Remove Buildup</h3>
+                        <p class="text-sm text-gray-500 leading-6">
+                            Sweat, oil, and dead skin cells accumulate daily. Regular washing prevents clogged pores which lead to acne and blackheads.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Odor Control -->
+                <div class="feature-card p-6 rounded-xl flex items-start gap-5 shadow-sm">
+                    <div class="w-14 h-14 rounded-full bg-[#EAF4F6] flex items-center justify-center text-[#71B7C5] text-xl flex-shrink-0">
+                        <i class="fa-solid fa-bacteria"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-[#2D3236] mb-2">Target Sweat Zones</h3>
+                        <p class="text-sm text-gray-500 leading-6">
+                            Bacteria thrive in warm, damp areas. Focus scrubbing on underarms, groin, and feet to neutralize the bacteria responsible for body odor.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Mental Health -->
+                <div class="feature-card p-6 rounded-xl flex items-start gap-5 shadow-sm">
+                    <div class="w-14 h-14 rounded-full bg-[#EAF4F6] flex items-center justify-center text-[#71B7C5] text-xl flex-shrink-0">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-[#2D3236] mb-2">Mental Refresh</h3>
+                        <p class="text-sm text-gray-500 leading-6">
+                            Showering isn't just physical. The sensation of water can reduce cortisol levels (stress hormone) and boost mood and energy.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

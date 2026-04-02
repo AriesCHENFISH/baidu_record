@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estelle Darcy - Introduction</title>
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <style>
+        /* --- 核心复用样式 --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative;
+            background-color: #FFF5F5; overflow: hidden;
+            font-family: 'Noto Sans SC', sans-serif; color: #4A4A6A;
+        }
+        .layout-grid {
+            display: grid; grid-template-columns: repeat(12, 1fr); gap: 32px;
+            padding: 80px; height: 100%; grid-template-rows: auto 1fr;
+        }
+        .text-accent { color: #B04E78; }
+        .bg-accent { background-color: #B04E78; }
+        .font-script { font-family: 'Brush Script MT', 'cursive', serif; font-weight: 400; }
+        .decoration-line { height: 1px; background: #B04E78; opacity: 0.3; }
+
+        /* --- 图片边框装饰 (参考页复用) --- */
+        .image-wrapper { position: relative; z-index: 10; }
+        .image-wrapper::after {
+            content: ''; position: absolute; top: 20px; right: -20px;
+            width: 100%; height: 100%; border: 1px solid #B04E78;
+            opacity: 0.2; z-index: -1; border-radius: 12px;
+        }
+
+        /* --- 列表样式 (复用参考页的圆点风格) --- */
+        .custom-list li {
+            display: flex; align-items: center; gap: 12px;
+            font-size: 0.95rem; margin-bottom: 1rem; opacity: 0.9;
+        }
+        .custom-list li::before {
+            content: ''; width: 6px; height: 6px;
+            background-color: #B04E78; border-radius: 50%; display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container">
+        <div class="absolute -top-10 -left-10 select-none pointer-events-none">
+            <h1 class="font-script text-accent opacity-5 text-[20rem]">Hello</h1>
+        </div>
+
+        <div class="layout-grid">
+            
+            <div style="grid-column: span 12;">
+                 <p class="text-accent text-xl font-bold italic mb-2">About Me</p>
+                 <h2 class="font-script text-accent text-[5rem] leading-[0.8] -ml-2">Introduction</h2>
+                 <div class="decoration-line w-24 mt-6 mb-8"></div>
+            </div>
+
+            <div style="grid-column: span 12;" class="grid grid-cols-12 gap-12 items-center h-full pb-8">
+                
+                <div class="col-span-6 pr-8 flex flex-col justify-center h-full">
+                    <div class="mb-10">
+                        <h3 class="text-accent text-sm font-black uppercase tracking-widest mb-4">Welcome Message</h3>
+                        <p class="text-sm leading-relaxed text-justify opacity-80">
+                            I'm Estelle Darcy, a passionate designer focused on minimalist aesthetics and meaningful visual communication. I believe that every pixel should serve a purpose and every design should tell a story that resonates with its audience.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-accent text-sm font-black uppercase tracking-widest mb-4">Key Objectives</h3>
+                        <ul class="custom-list">
+                            <li>Demonstrate Design Proficiency</li>
+                            <li>Showcase Creative Process</li>
+                            <li>Present Past Client Success</li>
+                            <li>Explore Visual Strategy</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-span-6 h-full flex items-center">
+                    <div class="image-wrapper w-full">
+                        <img src="https://images.unsplash.com/photo-1520173043194-dc6b2a237fee?q=80&w=1280&auto=format&fit=crop" 
+                             class="w-full h-[400px] object-cover rounded-xl shadow-sm">
+                        
+                        <div class="absolute -bottom-8 left-0">
+                            <p class="font-script text-accent text-3xl opacity-40">Creativity first</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

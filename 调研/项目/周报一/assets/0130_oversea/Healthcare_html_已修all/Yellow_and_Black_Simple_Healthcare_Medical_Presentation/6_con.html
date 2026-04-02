@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healing Environment - Healthcare Excellence</title>
+    
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#D6F847', // 酸性绿
+                        dark: '#1A1A1A',    // 墨黑
+                        accent: '#2E5AAC',  // 钴蓝
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #page_container {
+            width: 1280px; height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background-color: #D6F847;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        .sticker-shadow { box-shadow: 10px 10px 0px #1A1A1A; }
+        .inner-line { position: relative; }
+        .inner-line::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100px;
+            height: 6px;
+            background-color: #2E5AAC;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container" class="p-16 flex flex-col justify-between">
+        
+        <!-- 头部装饰 -->
+        <div class="flex justify-between items-center z-10">
+            <div class="flex items-center gap-3">
+                <div class="h-1 w-12 bg-dark"></div>
+                <span class="text-dark font-black uppercase tracking-widest text-sm italic">Patient Experience Report</span>
+            </div>
+        </div>
+
+        <!-- 主标题 (单行展示) -->
+        <div class="z-10 mt-8">
+            <h1 class="text-dark text-[86px] font-black uppercase leading-none tracking-tighter">
+                PURE & <span class="text-accent italic">HEALING</span> ECOSYSTEM
+            </h1>
+        </div>
+
+        <!-- 中间内容层 -->
+        <div class="grid grid-cols-12 gap-8 flex-grow mt-12 items-start">
+            
+            <!-- 左侧：文字描述 -->
+            <div class="col-span-5 space-y-8">
+                <div class="bg-white/40 border-2 border-dark rounded-[32px] p-8 relative">
+                    <p class="text-dark text-[18px] font-bold leading-relaxed italic">
+                        "Our facility is designed to promote comfort and recovery. Clean rooms and calming atmospheres help reduce stress and create a setting where healing happens naturally."
+                    </p>
+                </div>
+                
+                <!-- 特性列表 -->
+                <div class="flex flex-wrap gap-4">
+                    <div class="flex items-center gap-2 bg-dark text-white px-5 py-2 rounded-full text-xs font-black uppercase tracking-widest">
+                        <i class="fa-solid fa-leaf text-primary"></i> Zero Stress
+                    </div>
+                    <div class="flex items-center gap-2 bg-white/60 border border-dark/20 px-5 py-2 rounded-full text-xs font-black uppercase tracking-widest text-accent">
+                        <i class="fa-solid fa-wind"></i> Air Purity
+                    </div>
+                    <div class="flex items-center gap-2 bg-white/60 border border-dark/20 px-5 py-2 rounded-full text-xs font-black uppercase tracking-widest text-accent">
+                        <i class="fa-solid fa-moon"></i> Quiet Zones
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右侧：图片与数据 -->
+            <div class="col-span-7 flex gap-8 items-center justify-end">
+                
+                <!-- 缩小后的配图容器 -->
+                <div class="w-[360px] h-[360px] border-4 border-dark rounded-[40px] overflow-hidden sticker-shadow rotate-2 relative bg-accent">
+                    <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=800&auto=format&fit=crop" 
+                         alt="Healing Environment"
+                         class="w-full h-full object-cover grayscale brightness-110 opacity-80" />
+                    <!-- 图片叠加层 -->
+                    <div class="absolute inset-0 border-8 border-white/20 rounded-[36px] pointer-events-none"></div>
+                </div>
+
+                <!-- 浮动数据卡片 -->
+                <div class="flex flex-col gap-4 -translate-y-4">
+                    <div class="bg-accent text-white p-8 rounded-[40px] border-4 border-dark sticker-shadow -rotate-3">
+                        <div class="text-[64px] font-black leading-none mb-1">92%</div>
+                        <p class="text-[10px] font-bold uppercase tracking-[0.2em] opacity-80">Calmness Rating</p>
+                    </div>
+                    
+                    <div class="bg-dark text-primary p-6 rounded-[30px] flex items-center justify-center">
+                        <i class="fa-solid fa-arrow-trend-up text-3xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 装饰笑脸与底部 -->
+        <div class="absolute bottom-12 right-12 w-[110px] h-[110px] bg-accent rounded-full border-[4px] border-dark flex items-center justify-center rotate-12 sticker-shadow z-20">
+            <i class="fa-solid fa-face-smile text-primary text-[70px]"></i>
+        </div>
+
+        <div class="flex items-center gap-4 mt-4">
+            <div class="h-[2px] w-24 bg-dark/20"></div>
+            <p class="text-xs font-black text-dark/40 uppercase tracking-widest">Scientific Comfort Management System</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

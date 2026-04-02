@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Experience Refactored - Giggling Platypus</title>
+
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgMain: '#F4F4F4',
+                        textPrimary: '#1A1A1A',
+                        textSecondary: '#4D4D4D',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    },
+                    letterSpacing: {
+                        tightest: '-0.06em',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        #page_container {
+            width: 1280px; height: 720px; margin: 0 auto; position: relative;
+            background-color: #F4F4F4; overflow: hidden;
+            font-family: "Noto Sans SC", sans-serif;
+            display: flex; flex-direction: column; justify-content: space-between;
+        }
+
+        /* 统一背景噪点与网格 */
+        #page_container::before {
+            content: ""; position: absolute; inset: 0;
+            background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+            opacity: 0.2; pointer-events: none; z-index: 1;
+        }
+        .grid-bg {
+            position: absolute; inset: 0;
+            background-image: radial-gradient(#d1d1d1 1px, transparent 1px);
+            background-size: 40px 40px;
+            mask-image: linear-gradient(to bottom, transparent, black, transparent);
+            opacity: 0.3; z-index: 0;
+        }
+
+        .text-outline { -webkit-text-stroke: 1.5px #1A1A1A; color: transparent; }
+
+        /* 严格禁止阴影，使用错位边框替代 */
+        .offset-frame {
+            border: 1px solid #d1d1d1;
+            position: absolute;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page_container" class="p-12">
+        <div class="grid-bg"></div>
+        <div class="absolute -top-20 -left-20 w-96 h-96 bg-blue-50 rounded-full blur-[100px] opacity-60 z-0"></div>
+        <div class="absolute -bottom-20 -right-20 w-96 h-96 bg-orange-50 rounded-full blur-[100px] opacity-40 z-0"></div>
+        <div class="absolute top-0 left-1/2 w-px h-20 bg-gray-300 z-10"></div>
+        <div class="absolute bottom-0 left-1/2 w-px h-20 bg-gray-300 z-10"></div>
+
+        <div class="w-full h-12 flex justify-between items-end z-20 relative">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-textPrimary flex items-center justify-center rounded-sm">
+                    <i class="fa-solid fa-chart-simple text-white text-xs"></i>
+                </div>
+                <h5 class="text-textPrimary font-bold text-base tracking-tighter uppercase">GIGGLING PLATYPUS CO.</h5>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <div class="text-[10px] text-textSecondary tracking-[0.3em] uppercase font-bold mb-1 text-center">Career Milestone</div>
+                <div class="h-[2px] w-12 bg-textPrimary"></div>
+            </div>
+
+            <div class="text-textPrimary font-black text-lg italic">
+                <span>'26</span>
+            </div>
+        </div>
+
+        <div class="flex-grow grid grid-cols-12 gap-12 items-center mt-6 mb-6 relative z-10">
+            
+            <div class="col-span-5 flex flex-col">
+                <span class="text-xs font-bold tracking-[0.5em] text-gray-400 uppercase mb-4 block">Track Record</span>
+                <h1 class="text-textPrimary text-8xl font-black tracking-tightest leading-[0.85] mb-8 uppercase">
+                    MY<br><span class="text-outline">JOURNEY.</span>
+                </h1>
+                
+                <p class="text-textSecondary text-sm leading-relaxed font-medium mb-10 pr-6">
+                    A comprehensive background in driving digital transformation, combining analytical precision with creative strategy to deliver consistent ROI across global markets.
+                </p>
+
+                <div class="grid grid-cols-2 gap-4 border-t border-gray-200 pt-6">
+                    <div>
+                        <h4 class="text-2xl font-black text-textPrimary leading-none">12+</h4>
+                        <p class="text-[10px] uppercase tracking-widest text-textSecondary font-bold mt-1">Years Experience</p>
+                    </div>
+                    <div>
+                        <h4 class="text-2xl font-black text-textPrimary leading-none">450k</h4>
+                        <p class="text-[10px] uppercase tracking-widest text-textSecondary font-bold mt-1">Avg. Reach/Mo</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-span-7 grid grid-cols-2 gap-6 relative">
+                
+                <div class="bg-white/80 backdrop-blur-sm p-5 border-l-4 border-textPrimary">
+                    <h3 class="text-base font-black text-textPrimary uppercase mb-2">Strategic Leadership</h3>
+                    <p class="text-sm text-textSecondary leading-relaxed">Led cross-functional teams of 20+ professionals to deliver consistent 15% YoY growth in market share through integrated channel strategies.</p>
+                </div>
+
+                <div class="bg-white/80 backdrop-blur-sm p-5 border-l-4 border-textPrimary">
+                    <h3 class="text-base font-black text-textPrimary uppercase mb-2">Digital Innovation</h3>
+                    <p class="text-sm text-textSecondary leading-relaxed">Integrated AI-driven consumer sentiment analysis into CRM workflows, reducing customer acquisition costs by 22% within the first year.</p>
+                </div>
+
+                <div class="bg-white/80 backdrop-blur-sm p-5 border-l-4 border-textPrimary">
+                    <h3 class="text-base font-black text-textPrimary uppercase mb-2">Global Campaigns</h3>
+                    <p class="text-sm text-textSecondary leading-relaxed">Managed multi-million dollar ad spend across EMEA and APAC regions, maintaining brand consistency while optimizing for local cultural nuances.</p>
+                </div>
+
+                <div class="relative group">
+                    <div class="offset-frame -inset-2 translate-x-3 translate-y-3"></div>
+                    <div class="relative w-full h-[150px] bg-gray-200 overflow-hidden border border-gray-300 z-10">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200" alt="Workspace" class="w-full h-full object-cover grayscale-[15%] group-hover:grayscale-0 transition-all duration-500">
+                        <div class="absolute bottom-2 left-2 bg-white/90 px-2 py-1 text-[8px] font-black tracking-tighter uppercase">Operations HQ</div>
+                    </div>
+                    <p class="text-[12px] text-textSecondary italic mt-5 pl-2">Professional workspace dedicated to analytical deep-dives and creative strategy execution.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="w-full grid grid-cols-12 gap-8 border-t-2 border-textPrimary pt-8 relative z-20">
+            
+            <div class="col-span-4 flex flex-col">
+                <div class="flex items-center gap-2 mb-2">
+                    <span class="w-2 h-2 bg-textPrimary rounded-full"></span>
+                    <h6 class="text-textSecondary text-[10px] uppercase tracking-widest font-bold">Project Identification</h6>
+                </div>
+                <p class="text-textPrimary font-black text-lg uppercase tracking-tight">Marketing Portfolio</p>
+            </div>
+
+            <div class="col-span-4 flex flex-col items-center border-x border-gray-300">
+                <h6 class="text-textSecondary text-[10px] uppercase tracking-widest font-bold mb-2">Lead Strategist</h6>
+                <p class="text-textPrimary font-bold text-base underline decoration-2 underline-offset-4">Hannah Morales</p>
+            </div>
+
+            <div class="col-span-4 flex flex-col items-end text-right">
+                <h6 class="text-textSecondary text-[10px] uppercase tracking-widest font-bold mb-2">Exclusive For</h6>
+                <div class="flex items-center gap-2">
+                    <p class="text-textPrimary font-bold text-base">Margarita Perez</p>
+                    <i class="fa-solid fa-arrow-right-long text-textPrimary"></i>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

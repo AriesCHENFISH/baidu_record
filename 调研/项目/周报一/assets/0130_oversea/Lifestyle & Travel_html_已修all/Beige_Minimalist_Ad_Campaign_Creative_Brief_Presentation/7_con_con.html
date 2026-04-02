@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Messaging - Creative Brief</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/tailwindcss_3.4.16.js"></script>
+    
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/font-awesome/6.4.0/css/font-awesome_all.min_6.4.0.css">
+    
+    <!-- Google Fonts: Noto Sans SC (Domestic CDN as requested) -->
+    <link href="https://edu-wenku.bdimg.com/v1/genflow2025/report_resource/Noto%2BSans%2BSC-wght%40300%3B400%3B500%3B700%26display%3Dswap.css" rel="stylesheet">
+
+    <style>
+        /* CSS Reset & Global Config */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* Page Container - Strict 1280x720 Dimensions */
+        .page_container {
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #F9F9F5; /* Global Background */
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            color: #333333; /* Primary Text */
+        }
+
+        /* Utility for specific border color */
+        .border-theme {
+            border-color: #A0A0A0;
+        }
+        
+        /* Utility for text colors */
+        .text-primary {
+            color: #333333;
+        }
+        .text-secondary {
+            color: #555555;
+        }
+        
+        /* Custom scrollbar hiding if content overflows slightly (though it shouldn't) */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    
+    <!-- Tailwind Config for specific colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#F9F9F5',
+                        charcoal: '#333333',
+                        stone: '#555555',
+                        divider: '#A0A0A0',
+                        mist: '#B0A898'
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans SC', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Main Container -->
+    <div class="page_container">
+
+        <!-- 1. Header Area -->
+        <!-- Purpose: Top navigation/context label -->
+        <header class="h-12 w-full flex items-center justify-end px-10">
+            <h6 class="text-stone text-xs font-bold tracking-[0.15em] uppercase">Creative Brief</h6>
+        </header>
+
+        <!-- 2. Main Content Area (Split Layout) -->
+        <!-- Purpose: Core visual and information display -->
+        <main class="flex-1 flex border-t border-b border-divider">
+            
+            <!-- Left Column: Visual / Mood Image -->
+            <!-- Layout: 32% width to match the visual weight of the original design -->
+            <aside class="w-[32%] relative border-r border-divider h-full overflow-hidden group">
+                <!-- Image Overlay for Tinting (Matches #B0A898 mood) -->
+                <div class="absolute inset-0 bg-mist opacity-10 mix-blend-multiply z-10 pointer-events-none"></div>
+                
+                <!-- Main Visual Image -->
+                <img 
+                    src="https://images.unsplash.com/photo-1594125311687-3b1b3eeb8372?q=80&w=800&auto=format&fit=crop" 
+                    alt="Abstract minimalist perfume bottle behind misty glass" 
+                    class="w-full h-full object-cover filter grayscale-[20%] contrast-[90%] brightness-105"
+                >
+                <!-- 410*600 -->
+            </aside>
+
+            <!-- Right Column: Content Grid -->
+            <!-- Layout: 68% width, Flex column for vertical distribution -->
+            <section class="w-[68%] flex flex-col h-full">
+                
+                <!-- 2.1 Title Section -->
+                <div class="h-[25%] flex items-center justify-center px-16">
+                    <h1 class="text-6xl font-light text-charcoal tracking-wide text-center">
+                        BRAND MESSAGING
+                    </h1>
+                </div>
+
+                <!-- Divider -->
+                <div class="w-full h-px bg-divider"></div>
+
+                <!-- 2.2 Slogans / Interactive Elements -->
+                <div class="h-[35%] flex flex-col justify-center items-center gap-5 px-20 py-8 bg-[#FDFDFB]">
+                    <!-- Slogan Pill 1 -->
+                    <div class="w-full border border-divider rounded-full py-4 px-8 flex items-center justify-center transition-colors">
+                        <span class="text-stone text-sm uppercase tracking-widest font-medium">
+                            Add your brand slogan or phrase to be used in your campaign
+                        </span>
+                    </div>
+                    <!-- Slogan Pill 2 -->
+                    <div class="w-full border border-divider rounded-full py-4 px-8 flex items-center justify-center transition-colors">
+                        <span class="text-stone text-sm uppercase tracking-widest font-medium">
+                            Add your brand slogan or phrase to be used in your campaign
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Divider -->
+                <div class="w-full h-px bg-divider"></div>
+
+                <!-- 2.3 Brand Voice Section -->
+                <div class="flex-1 p-12 flex flex-col justify-start">
+                    <!-- Label Pill -->
+                    <div class="self-start mb-6">
+                        <div class="border border-divider rounded-full px-8 py-2 inline-flex items-center justify-center bg-cream">
+                            <span class="text-stone text-xs font-bold uppercase tracking-widest">Brand Voice</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Paragraph Content -->
+                    <article>
+                        <p class="text-stone text-sm leading-7 font-light text-justify pr-8">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis erat et quam iaculis faucibus at sit amet nibh. 
+                            Vestibulum dignissim lectus in ligula rhoncus, et bibendum risus dictum. Lorem ipsum dolor sit amet, consectetur 
+                            adipiscing elit. Donec quis erat et quam iaculis faucibus at sit amet nibh.
+                        </p>
+                    </article>
+                </div>
+
+            </section>
+        </main>
+
+        <!-- 3. Footer Area -->
+        <!-- Purpose: Page navigation and credits -->
+        <footer class="h-16 w-full flex items-center justify-between px-10">
+            <!-- Left: Page Number & Date -->
+            <div class="flex items-center gap-6">
+                <!-- Page Number Circle -->
+                <div class="w-8 h-8 rounded-full border border-divider flex items-center justify-center">
+                    <span class="text-xs text-stone font-medium">7</span>
+                </div>
+                <!-- Date -->
+                <span class="text-xs text-stone font-bold uppercase tracking-widest">January 2030</span>
+            </div>
+
+            <!-- Right: Presenter Info -->
+            <div class="text-right">
+                <span class="text-xs text-stone tracking-widest uppercase">
+                    Presented by: <b class="text-charcoal font-bold">Harper Russo</b>
+                </span>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>
